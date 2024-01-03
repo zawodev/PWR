@@ -1,0 +1,37 @@
+2023.09.18 00:00:46 INFO  Started: Metals version 1.0.1 in folders '/home/student/test/hello-ocaml' for client Visual Studio Code 1.82.2.[0m
+wrz 18, 2023 12:00:46 AM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+wrz 18, 2023 12:00:46 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+wrz 18, 2023 12:00:46 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+wrz 18, 2023 12:00:47 AM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:/home/student/test/hello-ocaml/.metals/metals (H2 2.1)
+wrz 18, 2023 12:00:47 AM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory allAppliedMigrations
+INFO: Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+wrz 18, 2023 12:00:47 AM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.012s)
+wrz 18, 2023 12:00:47 AM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory create
+INFO: Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+wrz 18, 2023 12:00:47 AM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": << Empty Schema >>
+wrz 18, 2023 12:00:47 AM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "1 - Create tables"
+wrz 18, 2023 12:00:47 AM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "2 - Server discovery"
+wrz 18, 2023 12:00:47 AM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "3 - Jar symbols"
+wrz 18, 2023 12:00:47 AM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "4 - Fingerprints"
+wrz 18, 2023 12:00:47 AM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.016s)
+2023.09.18 00:00:47 INFO  time: initialize in 0.44s[0m
+2023.09.18 00:00:47 WARN  Build server is not auto-connectable.[0m
+2023.09.18 00:00:47 WARN  no build tool detected in workspace '/home/student/test/hello-ocaml'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+2023.09.18 00:04:17 INFO  [0m
+2023.09.18 00:04:17 INFO  Template applied in /home/student/test/./hello-scala[0m
+2023.09.18 00:04:17 INFO  [0m
+2023.09.18 00:04:17 INFO  time: ran 'giter8.Giter8' in 4.66s[0m
+2023.09.18 00:07:27 INFO  Shutting down server[0m
+2023.09.18 00:07:27 INFO  shutting down Metals[0m
+2023.09.18 00:07:27 INFO  Exiting server[0m

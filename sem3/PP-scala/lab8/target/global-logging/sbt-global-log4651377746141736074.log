@@ -1,0 +1,50 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.9.7 (Private Build Java 1.8.0_382)
+[debug] Load.defaultLoad until apply took 306.696872ms
+[debug]           Load.loadUnit: plugins took 180.748353ms
+[debug]           Load.loadUnit: defsScala took 0.459461ms
+[debug] [Loading] Scanning directory /home/student/Dokumenty/GitHub/paradygmatyPWR-2023/lab8/project
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/student/Dokumenty/GitHub/paradygmatyPWR-2023/lab8/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 157.535681 ms
+[debug]               Load.resolveProject(lab8-build) took 154.46848ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id lab8-build, base: /home/student/Dokumenty/GitHub/paradygmatyPWR-2023/lab8/project, plugins: List(<none>))) took 665.191617ms
+[debug] [Loading] Done in /home/student/Dokumenty/GitHub/paradygmatyPWR-2023/lab8/project, returning: (lab8-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 795.273287ms
+[debug]           Load.loadUnit: cleanEvalClasses took 1.300361ms
+[debug]         Load.loadUnit(file:/home/student/Dokumenty/GitHub/paradygmatyPWR-2023/lab8/project/, ...) took 993.959622ms
+[debug]       Load.apply: load took 2549.121932ms
+[debug]       Load.apply: resolveProjects took 161.009606ms
+[debug]       Load.apply: finalTransforms took 510.202321ms
+[debug]       Load.apply: config.delegates took 44.232528ms
+[debug]       Load.apply: Def.make(settings)... took 2967.041712ms
+[debug]       Load.apply: structureIndex took 570.698874ms
+[debug]       Load.apply: mkStreams took 7.320979ms
+[info] loading project definition from /home/student/Dokumenty/GitHub/paradygmatyPWR-2023/lab8/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 17829.131566ms
+[debug]     Load.loadUnit: defsScala took 0.009623ms
+[debug] [Loading] Scanning directory /home/student/Dokumenty/GitHub/paradygmatyPWR-2023/lab8
+[debug]       Load.loadUnit: mkEval took 37.666761ms

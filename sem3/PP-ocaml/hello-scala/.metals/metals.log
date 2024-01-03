@@ -1,0 +1,230 @@
+2023.09.18 00:04:27 INFO  Started: Metals version 1.0.1 in folders '/home/student/test/hello-scala' for client Visual Studio Code 1.82.2.[0m
+wrz 18, 2023 12:04:27 AM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+wrz 18, 2023 12:04:27 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+wrz 18, 2023 12:04:27 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+wrz 18, 2023 12:04:27 AM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:/home/student/test/hello-scala/.metals/metals (H2 2.1)
+wrz 18, 2023 12:04:27 AM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory allAppliedMigrations
+INFO: Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+wrz 18, 2023 12:04:27 AM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.009s)
+wrz 18, 2023 12:04:27 AM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory create
+INFO: Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+wrz 18, 2023 12:04:27 AM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": << Empty Schema >>
+wrz 18, 2023 12:04:27 AM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "1 - Create tables"
+wrz 18, 2023 12:04:27 AM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "2 - Server discovery"
+wrz 18, 2023 12:04:27 AM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "3 - Jar symbols"
+wrz 18, 2023 12:04:27 AM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "4 - Fingerprints"
+wrz 18, 2023 12:04:27 AM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.012s)
+2023.09.18 00:04:28 INFO  time: initialize in 0.51s[0m
+2023.09.18 00:04:28 WARN  Build server is not auto-connectable.[0m
+wrz 18, 2023 12:04:28 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: /home/student/test/hello-scala/src/main/scala/Main.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: /home/student/test/hello-scala/src/main/scala/Main.scala
+	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
+	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
+	at java.util.concurrent.CompletableFuture.uniAccept(CompletableFuture.java:661)
+	at java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:646)
+	at java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:686)
+	at java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2014)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: /home/student/test/hello-scala/src/main/scala/Main.scala
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:470)
+	at scala.meta.internal.metals.debug.DebugProvider.runCommandDiscovery(DebugProvider.scala:420)
+	at scala.meta.internal.metals.MetalsLspService.discoverMainClasses(MetalsLspService.scala:1676)
+	at scala.meta.internal.metals.WorkspaceLspService.executeCommand(WorkspaceLspService.scala:686)
+	at scala.meta.metals.lsp.DelegatingScalaService.executeCommand(DelegatingScalaService.scala:169)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2023.09.18 00:04:28 WARN  no build target for: /home/student/test/hello-scala/src/main/scala/Main.scala[0m
+2023.09.18 00:04:39 INFO  no build target found for /home/student/test/hello-scala/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.0[0m
+2023.09.18 00:04:40 INFO  time: code lens generation in 12s[0m
+2023.09.18 00:04:43 WARN  no build target for: /home/student/test/hello-scala/src/main/scala/Main.scala[0m
+2023.09.18 00:06:56 INFO  Shutting down server[0m
+2023.09.18 00:06:56 INFO  shutting down Metals[0m
+2023.09.18 00:06:56 INFO  Exiting server[0m
+2023.09.18 00:07:09 INFO  Started: Metals version 1.0.1 in folders '/home/student/test/hello-scala' for client Visual Studio Code 1.82.2.[0m
+wrz 18, 2023 12:07:09 AM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+wrz 18, 2023 12:07:09 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+wrz 18, 2023 12:07:09 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+wrz 18, 2023 12:07:10 AM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:/home/student/test/hello-scala/.metals/metals (H2 2.1)
+wrz 18, 2023 12:07:10 AM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.019s)
+wrz 18, 2023 12:07:10 AM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+wrz 18, 2023 12:07:10 AM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.09.18 00:07:10 INFO  time: initialize in 0.41s[0m
+2023.09.18 00:07:10 WARN  Build server is not auto-connectable.[0m
+2023.09.18 00:07:12 INFO  running '/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals519060582327774819/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+2023.09.18 00:07:12 WARN  no build target for: /home/student/test/hello-scala/project/metals.sbt[0m
+2023.09.18 00:07:12 INFO  skipping build import with status 'Started'[0m
+2023.09.18 00:07:14 INFO  [info] welcome to sbt 1.9.3 (Private Build Java 1.8.0_382)[0m
+2023.09.18 00:07:15 INFO  no build target found for /home/student/test/hello-scala/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.3.0[0m
+2023.09.18 00:07:17 INFO  [info] loading settings for project hello-scala-build-build from metals.sbt ...[0m
+2023.09.18 00:07:17 INFO  [info] loading project definition from /home/student/test/hello-scala/project/project[0m
+2023.09.18 00:07:20 INFO  [info] loading settings for project hello-scala-build from metals.sbt ...[0m
+2023.09.18 00:07:20 INFO  [info] loading project definition from /home/student/test/hello-scala/project[0m
+2023.09.18 00:07:24 INFO  [success] Generated .bloop/hello-scala-build.json[0m
+2023.09.18 00:07:24 INFO  [success] Total time: 3 s, completed 2023-09-18 00:07:24[0m
+2023.09.18 00:07:25 INFO  [info] loading settings for project hello-scala from build.sbt ...[0m
+2023.09.18 00:07:25 INFO  [info] set current project to hello-world (in build file:/home/student/test/hello-scala/)[0m
+2023.09.18 00:07:26 INFO  [success] Generated .bloop/hello-scala-test.json[0m
+2023.09.18 00:07:26 INFO  [success] Generated .bloop/hello-scala.json[0m
+2023.09.18 00:07:26 INFO  [success] Total time: 1 s, completed 2023-09-18 00:07:26[0m
+2023.09.18 00:07:27 INFO  Shutting down server[0m
+2023.09.18 00:07:27 INFO  shutting down Metals[0m
+2023.09.18 00:07:27 INFO  Exiting server[0m
+2023.09.18 00:08:03 INFO  Started: Metals version 1.0.1 in folders '/home/student/test/hello-scala' for client Visual Studio Code 1.82.2.[0m
+wrz 18, 2023 12:08:03 AM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+wrz 18, 2023 12:08:03 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+wrz 18, 2023 12:08:03 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+wrz 18, 2023 12:08:04 AM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:/home/student/test/hello-scala/.metals/metals (H2 2.1)
+wrz 18, 2023 12:08:04 AM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.017s)
+wrz 18, 2023 12:08:04 AM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+wrz 18, 2023 12:08:04 AM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.09.18 00:08:04 INFO  time: initialize in 0.58s[0m
+2023.09.18 00:08:04 INFO  Attempting to connect to the build server...[0m
+2023.09.18 00:08:04 INFO  Setting up current java home /usr/lib/jvm/java-8-openjdk-amd64/jre in /home/student/.bloop/bloop.json[0m
+2023.09.18 00:08:04 INFO  skipping build import with status 'Started'[0m
+2023.09.18 00:08:13 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/student/test/hello-scala/.metals/bsp.trace.json or /home/student/.cache/metals/bsp.trace.json[0m
+2023.09.18 00:08:16 INFO  Attempting to connect to the build server...[0m
+2023.09.18 00:08:16 INFO  Bloop uses /usr/lib/jvm/java-8-openjdk-amd64/jre defined at /home/student/.bloop/bloop.json[0m
+2023.09.18 00:08:16 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/student/test/hello-scala/project/.metals/bsp.trace.json or /home/student/.cache/metals/bsp.trace.json[0m
+2023.09.18 00:08:18 INFO  time: Connected to build server in 13s[0m
+2023.09.18 00:08:18 INFO  Connected to Build server: Bloop v1.5.8[0m
+2023.09.18 00:08:18 INFO  time: Imported build in 0.12s[0m
+2023.09.18 00:08:23 WARN  Could not find java sources in /usr/lib/jvm/java-8-openjdk-amd64/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/src.zip. Java symbols will not be available.[0m
+2023.09.18 00:08:24 WARN  Could not find java sources in /usr/lib/jvm/java-8-openjdk-amd64/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/src.zip. Java symbols will not be available.[0m
+2023.09.18 00:08:24 WARN  Could not find java sources in /usr/lib/jvm/java-8-openjdk-amd64/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/src.zip. Java symbols will not be available.[0m
+2023.09.18 00:08:24 INFO  time: indexed workspace in 6.46s[0m
+2023.09.18 00:08:29 INFO  compiling hello-scala (1 scala source)[0m
+2023.09.18 00:08:31 INFO  Cancelling compilation on Bloop server[0m
+2023.09.18 00:08:31 INFO  compilation cancelled[0m
+2023.09.18 00:08:39 INFO  time: compiled hello-scala in 9.54s[0m
+2023.09.18 00:09:34 INFO  running '/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /tmp/metals3414592259908364219/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'[0m
+2023.09.18 00:09:36 INFO  [info] welcome to sbt 1.9.3 (Private Build Java 1.8.0_382)[0m
+2023.09.18 00:09:36 INFO  [info] loading settings for project hello-scala-build-build from metals.sbt ...[0m
+2023.09.18 00:09:37 INFO  [info] loading project definition from /home/student/test/hello-scala/project/project[0m
+2023.09.18 00:09:37 INFO  [info] loading settings for project hello-scala-build from metals.sbt ...[0m
+2023.09.18 00:09:38 INFO  [info] loading project definition from /home/student/test/hello-scala/project[0m
+2023.09.18 00:09:40 INFO  [success] Generated .bloop/hello-scala-build.json[0m
+2023.09.18 00:09:40 INFO  [success] Total time: 2 s, completed 2023-09-18 00:09:40[0m
+2023.09.18 00:09:40 INFO  [info] loading settings for project hello-scala from build.sbt ...[0m
+2023.09.18 00:09:40 INFO  [info] set current project to hello-world (in build file:/home/student/test/hello-scala/)[0m
+2023.09.18 00:09:40 INFO  [success] Generated .bloop/hello-scala-test.json[0m
+2023.09.18 00:09:40 INFO  [success] Generated .bloop/hello-scala.json[0m
+2023.09.18 00:09:40 INFO  [success] Total time: 0 s, completed 2023-09-18 00:09:41[0m
+2023.09.18 00:09:41 INFO  time: ran 'sbt bloopInstall' in 6.77s[0m
+2023.09.18 00:09:41 INFO  Disconnecting from Bloop session...[0m
+2023.09.18 00:09:41 INFO  Shut down connection with build server.[0m
+2023.09.18 00:09:41 INFO  Shut down connection with build server.[0m
+2023.09.18 00:09:41 INFO  Attempting to connect to the build server...[0m
+2023.09.18 00:09:41 INFO  Bloop uses /usr/lib/jvm/java-8-openjdk-amd64/jre defined at /home/student/.bloop/bloop.json[0m
+2023.09.18 00:09:41 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/student/test/hello-scala/.metals/bsp.trace.json or /home/student/.cache/metals/bsp.trace.json[0m
+2023.09.18 00:09:41 INFO  Attempting to connect to the build server...[0m
+2023.09.18 00:09:41 INFO  Bloop uses /usr/lib/jvm/java-8-openjdk-amd64/jre defined at /home/student/.bloop/bloop.json[0m
+2023.09.18 00:09:41 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/student/test/hello-scala/project/.metals/bsp.trace.json or /home/student/.cache/metals/bsp.trace.json[0m
+2023.09.18 00:09:41 INFO  time: Connected to build server in 0.2s[0m
+2023.09.18 00:09:41 INFO  Connected to Build server: Bloop v1.5.8[0m
+2023.09.18 00:09:42 WARN  Could not find java sources in /usr/lib/jvm/java-8-openjdk-amd64/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/src.zip. Java symbols will not be available.[0m
+2023.09.18 00:09:42 WARN  Could not find java sources in /usr/lib/jvm/java-8-openjdk-amd64/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/src.zip. Java symbols will not be available.[0m
+2023.09.18 00:09:42 WARN  Could not find java sources in /usr/lib/jvm/java-8-openjdk-amd64/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/src.zip. Java symbols will not be available.[0m
+2023.09.18 00:09:42 INFO  time: indexed workspace in 0.3s[0m
+2023.09.18 00:09:42 INFO  compiling hello-scala (1 scala source)[0m
+2023.09.18 00:09:44 INFO  time: compiled hello-scala in 1.83s[0m
+2023.09.18 00:11:54 INFO  Shutting down server[0m
+2023.09.18 00:11:54 INFO  shutting down Metals[0m
+2023.09.18 00:11:54 INFO  Shut down connection with build server.[0m
+2023.09.18 00:11:54 INFO  Shut down connection with build server.[0m
+2023.09.18 00:11:54 INFO  Exiting server[0m
+2023.09.18 00:16:35 INFO  Started: Metals version 1.0.1 in folders '/home/student/test/hello-scala' for client Visual Studio Code 1.82.2.
+wrz 18, 2023 12:16:35 AM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+wrz 18, 2023 12:16:35 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+wrz 18, 2023 12:16:35 AM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+wrz 18, 2023 12:16:35 AM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:/home/student/test/hello-scala/.metals/metals (H2 2.1)
+wrz 18, 2023 12:16:35 AM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.017s)
+wrz 18, 2023 12:16:35 AM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+wrz 18, 2023 12:16:35 AM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.09.18 00:16:36 INFO  time: initialize in 0.5s
+2023.09.18 00:16:36 INFO  Attempting to connect to the build server...
+2023.09.18 00:16:36 INFO  Bloop uses /usr/lib/jvm/java-8-openjdk-amd64/jre defined at /home/student/.bloop/bloop.json
+2023.09.18 00:16:36 INFO  skipping build import with status 'Installed'
+2023.10.12 14:27:35 INFO  Started: Metals version 1.0.1 in folders '/home/student/test/hello-scala' for client Visual Studio Code 1.82.2.
+paź 12, 2023 2:27:36 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.21.2 by Redgate
+paź 12, 2023 2:27:36 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+paź 12, 2023 2:27:36 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+paź 12, 2023 2:27:38 PM org.flywaydb.core.FlywayExecutor execute
+INFO: Database: jdbc:h2:file:/home/student/test/hello-scala/.metals/metals (H2 2.1)
+paź 12, 2023 2:27:38 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.068s)
+paź 12, 2023 2:27:38 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+paź 12, 2023 2:27:38 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.10.12 14:27:39 INFO  time: initialize in 3.23s
+2023.10.12 14:27:43 INFO  Attempting to connect to the build server...
+2023.10.12 14:27:43 INFO  skipping build import with status 'Installed'
+2023.10.12 14:27:43 INFO  Bloop uses /usr/lib/jvm/java-8-openjdk-amd64/jre defined at /home/student/.bloop/bloop.json
+2023.10.12 14:27:55 INFO  no build target found for /home/student/test/hello-scala/src/main/scala/Main.scala. Using presentation compiler with project's scala-library version: 3.3.0
+2023.10.12 14:28:06 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/student/test/hello-scala/.metals/bsp.trace.json or /home/student/.cache/metals/bsp.trace.json
+2023.10.12 14:28:09 INFO  Attempting to connect to the build server...
+2023.10.12 14:28:09 INFO  Bloop uses /usr/lib/jvm/java-8-openjdk-amd64/jre defined at /home/student/.bloop/bloop.json
+2023.10.12 14:28:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/student/test/hello-scala/project/.metals/bsp.trace.json or /home/student/.cache/metals/bsp.trace.json
+2023.10.12 14:28:09 INFO  time: Connected to build server in 26s
+2023.10.12 14:28:09 INFO  Connected to Build server: Bloop v1.5.8
+2023.10.12 14:28:11 INFO  time: Imported build in 1.95s
+2023.10.12 14:28:18 INFO  time: code lens generation in 20s
+2023.10.12 14:28:25 WARN  Could not find java sources in /usr/lib/jvm/java-8-openjdk-amd64/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/src.zip. Java symbols will not be available.
+2023.10.12 14:28:27 WARN  Could not find java sources in /usr/lib/jvm/java-8-openjdk-amd64/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/src.zip. Java symbols will not be available.
+2023.10.12 14:28:27 WARN  Could not find java sources in /usr/lib/jvm/java-8-openjdk-amd64/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/lib/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/src.zip, /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/src.zip. Java symbols will not be available.
+2023.10.12 14:28:27 INFO  time: indexed workspace in 15s
+2023.10.12 14:28:35 INFO  compiling hello-scala (1 scala source)
+2023.10.12 14:28:58 INFO  time: compiled hello-scala in 23s

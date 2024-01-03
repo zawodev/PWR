@@ -1,0 +1,2 @@
+ocamlc -o hello hello.ml
+./hello
