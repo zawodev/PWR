@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/aids-lab.iml" filepath="$PROJECT_DIR$/.idea/aids-lab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aids1/aids1.iml" filepath="$PROJECT_DIR$/aids1/aids1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aids3/aids3.iml" filepath="$PROJECT_DIR$/aids3/aids3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aids4/aids4.iml" filepath="$PROJECT_DIR$/aids4/aids4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aids6/aids6.iml" filepath="$PROJECT_DIR$/aids6/aids6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aisd6/aisd6.iml" filepath="$PROJECT_DIR$/aisd6/aisd6.iml" />
+    </modules>
+  </component>
+</project>

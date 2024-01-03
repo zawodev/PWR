@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5fd1fa12-e1fa-4f5a-96e7-2d0f54f0853a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/aids6/src/FullStackException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aids6/src/IStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aids6/src/ListStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aids6/src/ONP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aisd6/aisd5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aisd6/src/sorters/BinarySearchInsertSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aisd6/src/sorters/InsertSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aisd6/src/sorters/MinMaxSelectSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aisd6/src/sorters/ShakerSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../so-lab/src/Page2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aids1/aids1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aids3/aids3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aids4/aids4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aisd6/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/aisd6.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/BubbleSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/MyComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/SorterClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/core/SortingAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/counting/Counter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/counting/CountingComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/counting/CountingSwapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/testing/ListChecker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/testing/MarkedValue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/testing/MarkedValueComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/testing/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/testing/RunResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/testing/Tester.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/testing/generation/Generator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/testing/generation/array/MarkedValueArrayGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/testing/generation/array/OrderedMarkedIntegerArrayGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/testing/generation/array/RandomMarkedIntegerArrayGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/testing/generation/array/ReversedMarkedIntegerArrayGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/testing/generation/array/ShuffledMarkedIntegerArrayGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/testing/generation/linked/MarkedValueLinkedGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/testing/generation/linked/OrderedMarkedIntegerLinkedGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/testing/generation/linked/RandomMarkedIntegerLinkedGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/testing/generation/linked/ReversedMarkedIntegerLinkedGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/out/production/aisd6/testing/generation/linked/ShuffledMarkedIntegerLinkedGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/src/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/aisd6/src/sorters/BubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/aisd6/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/src/SorterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/aisd6/src/SorterClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aisd6/src/testing/MarkedValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/aisd6/src/testing/MarkedValue.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2PnmZhtYpgAlHdRSTS90P3d6WCJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/aliks/Desktop/zawo/code/github/Code/java/sem2/aids-lab/aisd6"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5fd1fa12-e1fa-4f5a-96e7-2d0f54f0853a" name="Changes" comment="" />
+      <created>1684101277365</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684101277365</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

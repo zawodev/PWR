@@ -1,0 +1,6 @@
+Surname: Brudzewski, Num: 1, Normal Amount: 13.0, Amount After Discount: 11.7
+Surname: Epsilon, Num: 4, Normal Amount: 22.02, Amount After Discount: 19.82
+Surname: Gierczak, Num: 6, Normal Amount: 76.23, Amount After Discount: 68.61
+Surname: Hojny, Num: 7, Normal Amount: 11.11, Amount After Discount: 10.0
+Surname: Igła, Num: 8, Normal Amount: 65.23, Amount After Discount: 58.71
+Surname: Hojny, Num: 7, Normal Amount: 17.99, Amount After Discount: 16.19
