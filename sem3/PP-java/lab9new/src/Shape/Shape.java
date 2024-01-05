@@ -1,12 +1,13 @@
 package Shape;
 
 import Item.PrimitiveItem;
-import java.awt.Graphics;
+import Point.*;
 
 public abstract class Shape extends PrimitiveItem {
-    private boolean filled;
-    public Shape() {
-        super();
+    protected boolean filled;
+    public Shape(Point center, boolean filled) {
+        super(center);
+        this.filled = filled;
     }
     public boolean getFilled() { return filled; }
 }

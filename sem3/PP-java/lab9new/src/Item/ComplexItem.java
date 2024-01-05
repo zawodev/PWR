@@ -2,15 +2,15 @@ package Item;
 
 import java.awt.Graphics;
 import java.util.*;
-import Point.Point;
+import Point.*;
 
 public class ComplexItem extends Item{
     private ArrayList<Item> children;
     public ArrayList<Item> getChildren() {
         return children;
     }
-    public ComplexItem(ArrayList<Item> children) {
-        super();
+    public ComplexItem(Point center, ArrayList<Item> children) {
+        super(center);
         this.children = children;
     }
     public String getItemInfo() {

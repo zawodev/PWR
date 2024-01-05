@@ -1,9 +1,9 @@
 package Item;
 
-import java.awt.Graphics;
+import Point.*;
 
 public abstract class PrimitiveItem extends Item {
-    public PrimitiveItem() {
-        super();
+    public PrimitiveItem (Point center) {
+        super(center);
     }
 }

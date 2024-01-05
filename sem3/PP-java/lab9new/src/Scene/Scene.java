@@ -41,6 +41,10 @@ public class Scene {
         items.add(item);
         drawnItemListPanel.refresh();
     }
+    public void removeItem(Item item) {
+        items.remove(item);
+        drawnItemListPanel.refresh();
+    }
     public void setItems(ArrayList<Item> items) {
         this.items = items;
         drawnItemListPanel.refresh();
@@ -51,5 +55,6 @@ public class Scene {
     }
     public void draw() {
         window.repaint();
+        window.revalidate();
     }
 }

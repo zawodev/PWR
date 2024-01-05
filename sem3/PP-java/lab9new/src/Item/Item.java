@@ -6,11 +6,12 @@ import Point.*;
 import javax.swing.*;
 
 public abstract class Item extends JComponent {
-    public BoundingBox boundingBox;
-    public Point center;
+    protected BoundingBox boundingBox;
+    protected Point center;
 
-    public Item () {
-        boundingBox = new BoundingBox(new Point(0,0), new Point(0,0)); //domyslnie pusty bounding box
+    public Item (Point center) {
+        this.center = center;
+        //this.boundingBox = ???;
     }
     public Point getPosition(){
         return center;

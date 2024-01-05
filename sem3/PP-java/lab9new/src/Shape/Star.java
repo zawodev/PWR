@@ -7,11 +7,11 @@ import java.awt.*;
 import java.awt.geom.*;
 
 public class Star extends Shape {
-    private int innerRadius;
-    private int outerRadius;
-    private int n;
-    public Star(Point center, int innerRadius, int outerRadius, int n) {
-        super();
+    protected int innerRadius;
+    protected int outerRadius;
+    protected int n;
+    public Star(Point center, boolean filled, int innerRadius, int outerRadius, int n) {
+        super(center, filled);
         this.center = center;
         this.innerRadius = innerRadius;
         this.outerRadius = outerRadius;
@@ -34,6 +34,7 @@ public class Star extends Shape {
     @Override
     public void translate(Point p) {
         super.translate(p);
+        System.out.println("Star translate");
     }
     @Override
     public void draw(Graphics g) {

@@ -6,9 +6,9 @@ import java.awt.Graphics;
 import java.awt.Color;
 
 public class Segment extends PrimitiveItem {
-    private Point start;
-    private Point end;
-    private int length;
+    protected Point start;
+    protected Point end;
+    protected int length;
     public Point getStart() {
         return start;
     }
@@ -19,7 +19,7 @@ public class Segment extends PrimitiveItem {
         return length;
     }
     public Segment(Point start, Point end) {
-        super();
+        super(new Point((start.getX() + end.getX()) / 2, (start.getY() + end.getY()) / 2));
         this.start = start;
         this.end = end;
         this.length = (int) Math.sqrt(Math.pow(end.getX() - start.getX(), 2) + Math.pow(end.getY() - start.getY(), 2));

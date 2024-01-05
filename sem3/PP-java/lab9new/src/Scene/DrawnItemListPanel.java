@@ -5,30 +5,29 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import Item.*;
 class DrawnItemListPanel extends JPanel {
-    private Scene scene;
-
+    protected Scene scene;
     public DrawnItemListPanel(Scene scene) {
         this.scene = scene;
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        setPreferredSize(new Dimension(170, 0));
+        setBackground(Color.LIGHT_GRAY);
         createButtons();
     }
 
     // Tworzenie przycisków dla każdego przedmiotu
     private void createButtons() {
-        removeAll();
-        System.out.println(scene.getItems().size());
+        removeAll();//lepiej by było gdyby usuwać tylko te które się zmieniły i nie są już na scenie
+        add(new JLabel("Drawn Items:"));
         for (Item item : scene.getItems()) {
             JButton itemButton = new JButton(item.getItemInfo());
             itemButton.addActionListener(e -> {
-                // Akcja po kliknięciu przycisku - wyświetlenie panelu edycji
                 showEditPanel(item);
                 //scene.draw();
             });
 
-            // Dodawanie przycisków do panelu
             add(itemButton);
         }
-        //repaint();
+        repaint();
         revalidate();
     }
 

@@ -5,14 +5,12 @@ import java.util.*;
 import Point.Point;
 
 public class TextItem extends Item{
-    private Point position;
     private String text;
     public String getText() {
         return text;
     }
-    public TextItem(Point position, String text) {
-        super();
-        this.position = position;
+    public TextItem(Point center, String text) {
+        super(center);
         this.text = text;
     }
     public String getItemInfo() {
