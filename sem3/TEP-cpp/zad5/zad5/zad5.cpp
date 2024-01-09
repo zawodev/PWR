@@ -56,7 +56,7 @@ public:
 	Int& operator=(const Int& other);
 	Int& operator=(Int&& other);//reguła pieciu
 
-	Int operator+(const Int& rhs) const; //right hand 
+	Int operator+(const Int& rhs) const; //right hand side
 	Int operator+(const Int& rhs) &&;
 private:
 	int* xPtr;

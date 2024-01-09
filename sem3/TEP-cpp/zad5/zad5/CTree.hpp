@@ -55,14 +55,15 @@ public:
 
 	CTree() : rootNode(nullptr), variables({}) {};
 	CTree(const CTree& other) : rootNode(copyTree(other.rootNode)), variables({}) { copyCount++; };
-	CTree(CTree&& other) : rootNode(other.rootNode), variables({}) { moveCount++; other.rootNode = nullptr; }; //regu³a 5
+	//CTree(CTree&& other) : rootNode(nullptr), variables({}) { *this = std::move(other); };
+	CTree(CTree&& other) : rootNode(other.rootNode), variables({}) { other.rootNode = nullptr; }; //regu³a 5
+	~CTree() { deleteTree(rootNode); };
 
 	CTree<T> operator+(const CTree<T>& other);
+	//CTree<T> operator+(const CTree<T>& other) &&;
 
-	//CTree<T>& operator=(const CTree<T>& other);
 	CTree<T> operator=(const CTree<T>& other);
-	//CTree<T>& operator=(CTree<T>&& other);
-	CTree<T> operator=(CTree<T>&& other); //regu³a 5
+	CTree<T>& operator=(CTree<T>&& other); //regu³a 5
 
 	void enter(std::vector<std::string> words);
 	void vars();
@@ -264,6 +265,7 @@ template<typename T> inline bool CTree<T>::isIntNumber(std::string str) {
 	if (str.size() == 0) return false;
 	if (std::count(str.begin(), str.end(), '.') > 0) return false;
 	if (!std::isdigit(str[0]) && str[0] != '-') return false;
+	if (str[0] == '-' && str.size() == 1) return false;
 
 	for (int i = 1; i < str.size(); i++) {
 		if (!std::isdigit(str[i])) return false;
@@ -290,44 +292,35 @@ template<typename T>inline bool CTree<T>::isString(std::string str) {
 
 //========================= PUBLIC =========================
 
-template<typename T> inline CTree<T> CTree<T>::operator+(const CTree& other) {
-	CTree result;
+template<typename T> inline CTree<T> CTree<T>::operator+(const CTree<T>& other) {
+	std::cout << "operator+" << std::endl;
+	CTree<T> result;
 	result.rootNode = mergeTrees(rootNode, other.rootNode);
 	return result;
 }
 
-/*
-template<typename T> inline CTree<T>& CTree<T>::operator=(const CTree<T>& other) {
+template<typename T> inline CTree<T> CTree<T>::operator=(const CTree<T>& other) {
+	std::cout << "& operator=" << std::endl;
 	if (this != &other) {
 		deleteTree(rootNode);
 		rootNode = copyTree(other.rootNode);
 	}
-	return *this;
+	CTree<T> result(*this);
+	return result;
 }
 
 template<typename T> inline CTree<T>& CTree<T>::operator=(CTree<T>&& other) {
+	std::cout << "&& operator=" << std::endl;
+	moveCount++;
 	if (this != &other) {
 		deleteTree(rootNode);
-		rootNode = other.rootNode; //rootNode = std::exchange(other.rootNode, nullptr);
+
+		//rootNode = std::exchange(other.rootNode, nullptr); //same as below
+		rootNode = other.rootNode;
 		other.rootNode = nullptr;
 	}
-	return *this;
-}
-*/
-
-template<typename T> inline CTree<T> CTree<T>::operator=(const CTree<T>& other) {
-	if (this != &other) {
-		deleteTree(rootNode);
-		rootNode = copyTree(other.rootNode);
-	}
-	return *this;
-}
-
-template<typename T> inline CTree<T> CTree<T>::operator=(CTree<T>&& other) {
-	if (this != &other) {
-		deleteTree(rootNode);
-		rootNode = std::exchange(other.rootNode, nullptr);
-	}
+	//CTree<T> result(*this);
+	//return result;
 	return *this;
 }
 
