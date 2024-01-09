@@ -1,5 +1,5 @@
 ﻿  CTree.cpp
   main.cpp
-C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad5\zad5\main.cpp(11,46): warning C4305: "inicjowanie": obcięcie z "double" do "float"
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad5\zad5\main.cpp(12,46): warning C4305: "inicjowanie": obcięcie z "double" do "float"
   Generowanie kodu...
   zad5.vcxproj -> C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad5\x64\Debug\zad5.exe

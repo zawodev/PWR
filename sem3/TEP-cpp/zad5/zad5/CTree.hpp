@@ -54,16 +54,16 @@ public:
 	//------------ functions ------------
 
 	CTree() : rootNode(nullptr), variables({}) {};
-	CTree(const CTree& other) : rootNode(copyTree(other.rootNode)), variables({}) { copyCount++; };
+	CTree(const CTree& other) : rootNode(copyTree(other.rootNode)), variables({}) { };
 	//CTree(CTree&& other) : rootNode(nullptr), variables({}) { *this = std::move(other); };
-	CTree(CTree&& other) : rootNode(other.rootNode), variables({}) { other.rootNode = nullptr; }; //regu³a 5
+	CTree(CTree&& other) : rootNode(other.rootNode), variables({}) { moveCount++; other.rootNode = nullptr; }; //regu³a 5
 	~CTree() { deleteTree(rootNode); };
 
 	CTree<T> operator+(const CTree<T>& other);
 	//CTree<T> operator+(const CTree<T>& other) &&;
 
 	CTree<T> operator=(const CTree<T>& other);
-	CTree<T>& operator=(CTree<T>&& other); //regu³a 5
+	CTree<T> operator=(CTree<T>&& other); //regu³a 5
 
 	void enter(std::vector<std::string> words);
 	void vars();
@@ -216,6 +216,7 @@ template<typename T> inline void CTree<T>::fixTree(CNode* node) {
 
 template<typename T> inline CNode* CTree<T>::copyTree(const CNode* node) const {
 	if (!node) return nullptr;
+	copyCount++;
 
 	CNode* newNode = new CNode(node->val);
 	for (const auto& child : node->children) {
@@ -307,9 +308,10 @@ template<typename T> inline CTree<T> CTree<T>::operator=(const CTree<T>& other) 
 	}
 	CTree<T> result(*this);
 	return result;
+	//return *this;
 }
 
-template<typename T> inline CTree<T>& CTree<T>::operator=(CTree<T>&& other) {
+template<typename T> inline CTree<T> CTree<T>::operator=(CTree<T>&& other) {
 	std::cout << "&& operator=" << std::endl;
 	moveCount++;
 	if (this != &other) {
@@ -319,9 +321,9 @@ template<typename T> inline CTree<T>& CTree<T>::operator=(CTree<T>&& other) {
 		rootNode = other.rootNode;
 		other.rootNode = nullptr;
 	}
-	//CTree<T> result(*this);
-	//return result;
-	return *this;
+	CTree<T> result(std::move(*this));
+	return result;
+	//return *this;
 }
 
 
