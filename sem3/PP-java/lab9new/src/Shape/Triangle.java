@@ -1,9 +1,9 @@
 package Shape;
 
+import Point.*;
 import Point.Point;
-import java.util.*;
-import java.awt.Graphics;
-import java.awt.Color;
+import java.awt.*;
+import java.awt.geom.GeneralPath;
 
 public class Triangle extends Shape {
     protected Point p1;
@@ -28,8 +28,10 @@ public class Triangle extends Shape {
         return "Triangle - P1: (" + p1.getX() + ", " + p1.getY() + "), P2: (" + p2.getX() + ", " + p2.getY() + "), P3: (" + p3.getX() + ", " + p3.getY() + ")";
     }
     @Override
-    public void updateBoundingBox() {
-
+    public BoundingBox calculateBoundingBox() {
+        Point minPoint = new Point(Math.min(p1.getX(), Math.min(p2.getX(), p3.getX())), Math.min(p1.getY(), Math.min(p2.getY(), p3.getY())));
+        Point maxPoint = new Point(Math.max(p1.getX(), Math.max(p2.getX(), p3.getX())), Math.max(p1.getY(), Math.max(p2.getY(), p3.getY())));
+        return new BoundingBox(minPoint, maxPoint);
     }
     @Override
     public void translate(Point p) {
@@ -39,10 +41,18 @@ public class Triangle extends Shape {
         p3.translate(p);
     }
     @Override
-    public void draw(Graphics g) {
+    public void draw(Graphics2D g) {
         g.setColor(Color.RED);
-        g.drawLine(p1.getX(), p1.getY(), p2.getX(), p2.getY());
-        g.drawLine(p2.getX(), p2.getY(), p3.getX(), p3.getY());
-        g.drawLine(p3.getX(), p3.getY(), p1.getX(), p1.getY());
+
+        GeneralPath triangle = new GeneralPath();
+        triangle.moveTo(p1.getX(), p1.getY());
+        triangle.lineTo(p3.getX(), p3.getY());
+        triangle.lineTo(p2.getX(), p2.getY());
+        triangle.lineTo(p1.getX(), p1.getY());
+        triangle.closePath();
+
+        if(filled) g.fill(triangle);
+        else g.draw(triangle);
     }
+
 }

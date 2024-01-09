@@ -17,7 +17,9 @@ class DrawnItemListPanel extends JPanel {
     // Tworzenie przycisków dla każdego przedmiotu
     private void createButtons() {
         removeAll();//lepiej by było gdyby usuwać tylko te które się zmieniły i nie są już na scenie
+
         add(new JLabel("Drawn Items:"));
+
         for (Item item : scene.getItems()) {
             JButton itemButton = new JButton(item.getItemInfo());
             itemButton.addActionListener(e -> {

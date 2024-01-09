@@ -11,6 +11,15 @@ public class Scene {
     private DrawnItemListPanel drawnItemListPanel;
     private DrawPanel drawPanel;
     private JFrame window;
+    private boolean boundingBoxVisible;
+
+    public boolean getBoundingBoxVisible(){
+        return boundingBoxVisible;
+    }
+    public void toggleBoundingBoxVisible(){
+        boundingBoxVisible = !boundingBoxVisible;
+        draw();
+    }
     public Scene () {
         items = new ArrayList<>();
 
@@ -18,7 +27,7 @@ public class Scene {
         //window.setLayout(new BorderLayout());
         window.setVisible(true);
         window.setTitle("Shape Drawing");
-        window.setSize(800, 500);
+        window.setSize(900, 600);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setLocationRelativeTo(null);
 
@@ -30,7 +39,7 @@ public class Scene {
         drawnItemListPanel.setVisible(true);
         window.getContentPane().add(drawnItemListPanel, BorderLayout.WEST);
 
-        drawPanel = new DrawPanel(items);
+        drawPanel = new DrawPanel(this);
         drawPanel.setVisible(true);
         window.getContentPane().add(drawPanel, BorderLayout.CENTER);
     }

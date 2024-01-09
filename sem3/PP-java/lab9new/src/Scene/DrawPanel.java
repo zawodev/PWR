@@ -4,17 +4,22 @@ import java.util.*;
 import Item.Item;
 import javax.swing.*;
 public class DrawPanel extends JPanel {
-    private final ArrayList<Item> items;
-    public DrawPanel(ArrayList<Item> items) {
+    //private final ArrayList<Item> items;
+    protected Scene scene;
+    public DrawPanel(Scene scene) {
         super();
-        this.items = items;
+        this.scene = scene;
     }
     @Override
     public void paintComponent(Graphics g) {
-        super.paintComponent(g);
         Graphics2D g2d = (Graphics2D)g;
-        for (Item item : items) {
+        super.paintComponent(g);
+        for (Item item : scene.getItems()) {
             item.draw(g2d);
+            if(scene.getBoundingBoxVisible()) {
+                item.setBoundingBox(item.calculateBoundingBox());
+                item.getBoundingBox().draw(g);
+            }
         }
     }
 }

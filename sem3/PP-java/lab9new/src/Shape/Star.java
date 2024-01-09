@@ -1,16 +1,17 @@
-
 package Shape;
 
+import Point.*;
 import Point.Point;
-
 import java.awt.*;
-import java.awt.geom.*;
+import java.awt.geom.GeneralPath;
+import java.util.ArrayList;
 
 public class Star extends Shape {
     protected int innerRadius;
     protected int outerRadius;
     protected int n;
-    public Star(Point center, boolean filled, int innerRadius, int outerRadius, int n) {
+    protected ArrayList<Point> points;
+    public Star(Point center, int innerRadius, int outerRadius, int n, boolean filled) {
         super(center, filled);
         this.center = center;
         this.innerRadius = innerRadius;
@@ -28,8 +29,18 @@ public class Star extends Shape {
     }
 
     @Override
-    public void updateBoundingBox() {
+    public BoundingBox calculateBoundingBox() {
+        Point minPoint = new Point(points.getFirst().getX(), points.getFirst().getY());
+        Point maxPoint = new Point(points.getFirst().getX(), points.getFirst().getY());
 
+        for(Point point : points){
+            minPoint.setX(Math.min(minPoint.getX(), point.getX()));
+            minPoint.setY(Math.min(minPoint.getY(), point.getY()));
+            maxPoint.setX(Math.max(maxPoint.getX(), point.getX()));
+            maxPoint.setY(Math.max(maxPoint.getY(), point.getY()));
+        }
+
+        return new BoundingBox(minPoint, maxPoint);
     }
     @Override
     public void translate(Point p) {
@@ -37,26 +48,30 @@ public class Star extends Shape {
         System.out.println("Star translate");
     }
     @Override
-    public void draw(Graphics g) {
-        Graphics2D g2d = (Graphics2D) g;
+    public void draw(Graphics2D g) {
+        g.setColor(Color.BLUE);
+        GeneralPath star = drawStarToFill();
+
+        if(filled) g.fill(star);
+        else g.draw(star);
+    }
+
+    private GeneralPath drawStarToFill() {
+        GeneralPath star = new GeneralPath();
+        points = new ArrayList<>();
 
         double angle = Math.PI / n;
-        GeneralPath star = new GeneralPath();
         for (int i = 0; i < 2 * n; i++) {
             double r = (i % 2 == 0) ? outerRadius : innerRadius;
-            double xPoint = center.getX() + r * Math.cos(i * angle);
-            double yPoint = center.getY() + r * Math.sin(i * angle);
+            int xPoint = (int)(center.getX() + r * Math.cos(i * angle));
+            int yPoint = (int)(center.getY() + r * Math.sin(i * angle));
+            points.add(new Point(xPoint, yPoint));
 
-            if (i == 0) {
-                star.moveTo(xPoint, yPoint);
-            } else {
-                star.lineTo(xPoint, yPoint);
-            }
+            if (i == 0) star.moveTo(xPoint, yPoint);
+            else star.lineTo(xPoint, yPoint);
         }
 
         star.closePath();
-
-        g2d.setColor(Color.BLUE);
-        g2d.fill(star);
+        return star;
     }
 }

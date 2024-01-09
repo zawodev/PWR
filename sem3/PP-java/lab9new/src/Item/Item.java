@@ -1,8 +1,10 @@
 package Item;
 
-import java.awt.Graphics;
+import java.awt.*;
 
 import Point.*;
+import Point.Point;
+
 import javax.swing.*;
 
 public abstract class Item extends JComponent {
@@ -11,7 +13,7 @@ public abstract class Item extends JComponent {
 
     public Item (Point center) {
         this.center = center;
-        //this.boundingBox = ???;
+        this.boundingBox = new BoundingBox(new Point(0, 0), new Point(0, 0));
     }
     public Point getPosition(){
         return center;
@@ -24,9 +26,9 @@ public abstract class Item extends JComponent {
     }
 
     public abstract String getItemInfo();
-    public abstract void updateBoundingBox();
+    public abstract BoundingBox calculateBoundingBox();
     public void translate(Point p){
         center.translate(p);
     }
-    public abstract void draw(Graphics g);
+    public abstract void draw(Graphics2D g);
 }

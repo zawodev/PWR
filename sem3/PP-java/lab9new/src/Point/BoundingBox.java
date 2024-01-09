@@ -1,12 +1,28 @@
 package Point;
 
+import java.awt.*;
+
 public class BoundingBox {
-    private Point bottomLeft;
-    private Point topRight;
-    public BoundingBox(Point bottomLeft, Point topRight) {
-        this.bottomLeft = bottomLeft;
-        this.topRight = topRight;
+    protected Point topLeft;
+    protected Point bottomRight;
+    public BoundingBox(Point topLeft, Point bottomRight) {
+        this.topLeft = topLeft;
+        this.bottomRight = bottomRight;
     }
-    public Point getBottomLeft() { return bottomLeft; }
-    public Point getTopRight() { return topRight; }
+    public Point getTopLeft() { return topLeft; }
+    public Point getBottomRight() { return bottomRight; }
+    public void draw(Graphics g){
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setColor(Color.BLACK);
+
+        var prevStroke = g2d.getStroke();
+        Stroke dashed = new BasicStroke(3, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 0, new float[]{9}, 0);
+        g2d.setStroke(dashed);
+
+        int width = bottomRight.getX() - topLeft.getX();
+        int height = bottomRight.getY() - topLeft.getY();
+        g2d.drawRect(topLeft.getX(), topLeft.getY(), width, height);
+
+        g2d.setStroke(prevStroke);
+    }
 }

@@ -1,9 +1,10 @@
 package Shape;
 
 import Point.Point;
-import java.awt.Graphics;
-import java.awt.Color;
-import java.util.*;
+import Point.*;
+import java.awt.*;
+import java.awt.geom.GeneralPath;
+
 public class Circle extends Shape {
     private int radius;
     public int getRadius() { return radius; }
@@ -15,16 +16,17 @@ public class Circle extends Shape {
         return "Circle - Radius: " + radius;
     }
     @Override
-    public void updateBoundingBox() {
-
+    public BoundingBox calculateBoundingBox() {
+        return new BoundingBox(new Point(center.getX(), center.getY()), new Point(center.getX() + radius, center.getY() + radius));
     }
     @Override
     public void translate(Point p) {
         super.translate(p);
     }
     @Override
-    public void draw(Graphics g) {
-        g.setColor(Color.RED);
-        g.fillOval(center.getX(), center.getY(), radius, radius);
+    public void draw(Graphics2D g) {
+        g.setColor(Color.ORANGE);
+        if(filled) g.fillOval(center.getX(), center.getY(), radius, radius);
+        else g.drawOval(center.getX(), center.getY(), radius, radius);
     }
 }

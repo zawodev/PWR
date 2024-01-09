@@ -2,8 +2,8 @@ package Shape;
 
 import Point.*;
 import Point.Point;
-import java.awt.Graphics;
-import java.awt.Color;
+
+import java.awt.*;
 
 public class Rect extends Shape {
     protected Point leftTop;
@@ -40,8 +40,8 @@ public class Rect extends Shape {
         return "Rect - Width: " + width + ", Height: " + height;
     }
     @Override
-    public void updateBoundingBox() {
-        setBoundingBox(new BoundingBox(leftTop, rightBottom));
+    public BoundingBox calculateBoundingBox() {
+        return new BoundingBox(leftTop, rightBottom);
     }
     @Override
     public void translate(Point p) {
@@ -50,8 +50,10 @@ public class Rect extends Shape {
         rightBottom.translate(p);
     }
     @Override
-    public void draw(Graphics g) {
-        g.setColor(Color.BLUE);
-        g.fillRect(leftTop.getX(), leftTop.getY(), width, height);
+    public void draw(Graphics2D g) {
+        g.setColor(Color.GREEN);
+        if(filled) g.fillRect(leftTop.getX(), leftTop.getY(), width, height);
+        else g.drawRect(leftTop.getX(), leftTop.getY(), width, height);
     }
+
 }
