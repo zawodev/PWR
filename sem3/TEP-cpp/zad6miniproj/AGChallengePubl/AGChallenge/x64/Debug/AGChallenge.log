@@ -1,0 +1,86 @@
+﻿  Evaluator.cpp
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(188): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(203): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(206): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(209): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(212): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(260): warning C4305: "return": obcięcie z "int" do "bool"
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(301): warning C4305: "return": obcięcie z "int" do "bool"
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(332): warning C4305: "return": obcięcie z "int" do "bool"
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(346): warning C4305: "return": obcięcie z "int" do "bool"
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(311): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(422): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(433): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(443): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(457): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(483): error C2440: "typ rzutowania": nie można konwertować z "ATL::CString" na "LPCSTR"
+  c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(483): note: Nie jest dostępny żaden operator konwersji zdefiniowany przez użytkownika, który mógłby wykonać tę konwersję lub operator nie może zostać wywołany
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(522): error C2440: "typ rzutowania": nie można konwertować z "ATL::CString" na "LPCSTR"
+  c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(522): note: Nie jest dostępny żaden operator konwersji zdefiniowany przez użytkownika, który mógłby wykonać tę konwersję lub operator nie może zostać wywołany
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(492): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(495): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(503): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(526): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(559): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(565): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(580): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(590): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(718): error C2440: "typ rzutowania": nie można konwertować z "ATL::CString" na "LPCSTR"
+  c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(718): note: Nie jest dostępny żaden operator konwersji zdefiniowany przez użytkownika, który mógłby wykonać tę konwersję lub operator nie może zostać wywołany
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(724): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(779): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(784): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(1887): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(1904): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(1929): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(1952): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\evaluator.cpp(2142): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1197): note: zobacz deklarację „fscanf”
+  fitness.cpp
+  list.cpp
+  Main.cpp
+  MyMath.cpp
+  NETsimulator.cpp
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\netsimulator.cpp(1002): error C2440: "typ rzutowania": nie można konwertować z "ATL::CString" na "LPCSTR"
+  c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\netsimulator.cpp(1002): note: Nie jest dostępny żaden operator konwersji zdefiniowany przez użytkownika, który mógłby wykonać tę konwersję lub operator nie może zostać wywołany
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\netsimulator.cpp(1121): error C2440: "typ rzutowania": nie można konwertować z "ATL::CString" na "LPCSTR"
+  c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\netsimulator.cpp(1121): note: Nie jest dostępny żaden operator konwersji zdefiniowany przez użytkownika, który mógłby wykonać tę konwersję lub operator nie może zostać wywołany
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\netsimulator.cpp(2448): error C2440: "typ rzutowania": nie można konwertować z "ATL::CString" na "LPCSTR"
+  c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\netsimulator.cpp(2448): note: Nie jest dostępny żaden operator konwersji zdefiniowany przez użytkownika, który mógłby wykonać tę konwersję lub operator nie może zostać wywołany
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\netsimulator.cpp(2492): error C2440: "typ rzutowania": nie można konwertować z "ATL::CString" na "LPCSTR"
+  c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\netsimulator.cpp(2492): note: Nie jest dostępny żaden operator konwersji zdefiniowany przez użytkownika, który mógłby wykonać tę konwersję lub operator nie może zostać wywołany
+  Optimizer.cpp
+  Timer.cpp
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\timer.cpp(34): warning C4244: "=": konwersja z "LONGLONG" do "double", możliwa utrata danych
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\timer.cpp(51): warning C4244: "=": konwersja z "double" do "LONGLONG", możliwa utrata danych
+  Tools.cpp
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\tools.cpp(17): error C2664: „void ATL::CStringT<wchar_t,ATL::StrTraitATL<wchar_t,ATL::ChTraitsCRT<wchar_t>>>::Format(UINT,...)”: nie można dokonać konwersji argumentu 1 z „const char [3]” do „const wchar_t *”
+  c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\tools.cpp(17): note: Wskazane typy nie są powiązane; konwersja wymaga operatora reinterpret_cast, rzutowania w stylu języka C lub rzutowania w stylu funkcji
+c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\tools.cpp(26): error C2664: „void ATL::CStringT<wchar_t,ATL::StrTraitATL<wchar_t,ATL::ChTraitsCRT<wchar_t>>>::Format(UINT,...)”: nie można dokonać konwersji argumentu 1 z „const char [7]” do „const wchar_t *”
+  c:\users\aliks\documents\github\pwr\sem3\tep-cpp\zad6miniproj\agchallengepubl\agchallenge\tools.cpp(26): note: Wskazane typy nie są powiązane; konwersja wymaga operatora reinterpret_cast, rzutowania w stylu języka C lub rzutowania w stylu funkcji
+  Generowanie kodu...

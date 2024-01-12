@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# duze pliki cpp (tep sem3 miniproj)
+*.ipch
