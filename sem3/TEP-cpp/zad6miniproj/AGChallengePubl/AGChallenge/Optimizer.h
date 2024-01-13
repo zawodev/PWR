@@ -7,10 +7,13 @@
 
 using namespace std;
 
-class COptimizer
-{
+class COptimizer {
 public:
-	COptimizer(CLFLnetEvaluator &cEvaluator);
+	COptimizer(CLFLnetEvaluator& cEvaluator) : c_evaluator(cEvaluator) {
+		random_device c_seed_generator;
+		c_rand_engine.seed(c_seed_generator());
+		d_current_best_fitness = 0;
+	}
 
 	void vInitialize();
 	void vRunIteration();
@@ -18,12 +21,15 @@ public:
 	vector<int> *pvGetCurrentBest() { return &v_current_best; }
 
 private:
+	CLFLnetEvaluator& c_evaluator; //dont change
+	vector<int> v_current_best; //dont change
+
 	void v_fill_randomly(vector<int> &vSolution);
-
-	CLFLnetEvaluator &c_evaluator;
-
 	double d_current_best_fitness;
-	vector<int> v_current_best;
-
 	mt19937 c_rand_engine;
-};//class COptimizer
+
+	//moje metody
+
+	void quicksort(vector<pair<double, vector<int>>>& generation, int left, int right);
+	void COptimizer::evaluateOsobnik(pair<double, vector<int>>& osobnik);
+};
