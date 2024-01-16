@@ -1,7 +1,6 @@
-﻿  Optimizer.cpp
-  Trwa generowanie kodu
-  0 of 652 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+﻿  Trwa generowanie kodu
+  4 of 960 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   Zakończono generowanie kodu
   AGChallenge.vcxproj -> C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\x64\Release\AGChallenge.exe
