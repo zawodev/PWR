@@ -1,6 +1,57 @@
-﻿  Trwa generowanie kodu
-  4 of 960 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+﻿  Evaluator.cpp
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(188,2): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(203,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(206,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(209,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(212,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(260,12): warning C4305: "return": obcięcie z "int" do "bool"
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(301,46): warning C4305: "return": obcięcie z "int" do "bool"
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(332,57): warning C4305: "return": obcięcie z "int" do "bool"
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(346,66): warning C4305: "return": obcięcie z "int" do "bool"
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(311,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(422,2): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(433,4): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(443,4): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(457,5): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(483,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(492,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(495,4): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(503,6): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(522,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(526,27): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(559,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(565,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(580,4): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(590,4): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(718,14): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(724,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(779,4): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(784,4): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(1887,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(1904,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(1929,4): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(1952,4): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(2142,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  GeneticAlgorithm.cpp
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\GeneticAlgorithm.cpp(35,33): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\GeneticAlgorithm.cpp(135,12): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+  GeneticAlgorithmTwo.cpp
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\GeneticAlgorithmTwo.cpp(272,45): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\GeneticAlgorithmTwo.cpp(388,12): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+  Main.cpp
+  MyMath.cpp
+  NETsimulator.cpp
+  Optimizer.cpp
+  Specimen.cpp
+  Timer.cpp
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Timer.cpp(34,33): warning C4244: "=": konwersja z "LONGLONG" do "double", możliwa utrata danych
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Timer.cpp(51,3): warning C4244: "=": konwersja z "double" do "LONGLONG", możliwa utrata danych
+  Tools.cpp
+  fitness.cpp
+  list.cpp
+  Trwa generowanie kodu
+  Previous IPDB was built with incompatible compiler, fall back to full compilation.
+C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\AGChallenge\Evaluator.cpp(530): warning C4715: "CLFLnetEvaluator::l_skip_comments_and_open”: niewszystkie ścieżki kodu zwracają wartość
+  All 961 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Zakończono generowanie kodu
   AGChallenge.vcxproj -> C:\Users\aliks\Documents\GitHub\PWR\sem3\TEP-cpp\zad6miniproj\AGChallengePubl\x64\Release\AGChallenge.exe
