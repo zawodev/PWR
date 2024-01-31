@@ -186,30 +186,30 @@ void GeneticAlgorithmTwo::changeStrategy(std::vector<std::pair<double, std::vect
 
 	if (true) { //strategia 1 - ma³a wariacja na zmiennych kontroluj¹cych populacje
 		//szansa na mutacje
-		mutationChance = mutationChanceStates[c_rand_engine() % mutationChanceStates.size()];
+		mutationChance = mutationChanceStates[iRand() % mutationChanceStates.size()];
 		printSettingsVariable(mutationChance, mutationChanceStates, "mutationChance");
 
 		//procent krzyzowania
-		crossoverPercent = crossoverPercentStates[c_rand_engine() % crossoverPercentStates.size()];
+		crossoverPercent = crossoverPercentStates[iRand() % crossoverPercentStates.size()];
 		printSettingsVariable(crossoverPercent, crossoverPercentStates, "crossoverPercent");
 
 		//procent scoutowania
-		scoutPercent = scoutPercentStates[c_rand_engine() % scoutPercentStates.size()];
+		scoutPercent = scoutPercentStates[iRand() % scoutPercentStates.size()];
 		printSettingsVariable(scoutPercent, scoutPercentStates, "scoutPercent");
 
 		//ilosc najlepszych osobnikow ktore przepisujemy bez zmian
-		vipAmount = vipAmountStates[c_rand_engine() % vipAmountStates.size()];
+		vipAmount = vipAmountStates[iRand() % vipAmountStates.size()];
 		printSettingsVariable(vipAmount, vipAmountStates, "vipAmount");
 
 		//usun najgorsze osobniki lub losowe
-		removeWorstOrRandomChance = removeWorstOrRandomChanceStates[c_rand_engine() % removeWorstOrRandomChanceStates.size()];
+		removeWorstOrRandomChance = removeWorstOrRandomChanceStates[iRand() % removeWorstOrRandomChanceStates.size()];
 		printSettingsVariable(removeWorstOrRandomChance, removeWorstOrRandomChanceStates, "removeWorstOrRandomChance");
 	}
 	if (false) { //strategia 2 - nowa populacja vipów
-		int strategy = c_rand_engine() % 5;
+		int strategy = iRand() % 5;
 		if (strategy == 0 || vips.size() >= 16) {
 			if (vips.size() < 16) vips.push_back(gen[0]);
-			else vips[c_rand_engine() % vips.size()] = gen[0];
+			else vips[iRand() % vips.size()] = gen[0];
 
 			copyGeneration(gen, vips);
 			resizeGeneration(gen, currentGenerationSize);
@@ -221,7 +221,7 @@ void GeneticAlgorithmTwo::changeStrategy(std::vector<std::pair<double, std::vect
 		}
 		else {
 			if (vips.size() < 16) vips.push_back(gen[0]);
-			else vips[c_rand_engine() % vips.size()] = gen[0];
+			else vips[iRand() % vips.size()] = gen[0];
 
 			generateRandomGeneration(gen);
 			localBestFitness = -DBL_MAX;
@@ -275,10 +275,10 @@ void GeneticAlgorithmTwo::RunIteration() {
 	updateBestSpecimen(generation);
 
 	//zapisz wyniki do pliku
-	if (globalBestFitness > pbTreshhold) {
+	/*if (globalBestFitness > pbTreshhold) {
 		saveGenerationToFile(generation, to_string(generation[0].first) + ".txt"); //or "generation.txt"
 		pbTreshhold += treshholdChange;
-	}
+	}*/
 
 	CalculateNextGeneration(generation);
 }
@@ -292,7 +292,7 @@ void GeneticAlgorithmTwo::CalculateNextGeneration(vector<pair<double, vector<int
 
 	for (int i = 0; i < removalSize; i++) {
 		//usun przypadkowe rozwiazanie
-		if (c_rand_engine() % 1000 < removeWorstOrRandomChance * 1000) generation.erase(generation.begin() + (c_rand_engine() % generation.size()));
+		if (iRand() % 1000 < removeWorstOrRandomChance * 1000) generation.erase(generation.begin() + (iRand() % generation.size()));
 		//usun najgorsze rozwiazanie
 		else generation.pop_back();
 	}
@@ -305,10 +305,10 @@ void GeneticAlgorithmTwo::CalculateNextGeneration(vector<pair<double, vector<int
 	//tworzymy nowe rozwi¹zania krzy¿uj¹c najlepsze z poprzedniej generacji
 	for (int i = 0; i < crossoverSize; i++) {
 		pair<double, vector<int>> specimen;
-		pair<double, vector<int>> parent1 = generation[c_rand_engine() % currentGenerationSize];
-		pair<double, vector<int>> parent2 = generation[c_rand_engine() % currentGenerationSize]; //lub generation.size() jesli chcesz zeby dzieci tez sie rozmna¿a³y od razu
+		pair<double, vector<int>> parent1 = generation[iRand() % currentGenerationSize];
+		pair<double, vector<int>> parent2 = generation[iRand() % currentGenerationSize]; //lub generation.size() jesli chcesz zeby dzieci tez sie rozmna¿a³y od razu
 		for (int j = 0; j < parent1.second.size(); j++) {
-			if (c_rand_engine() % 2 == 0) specimen.second.push_back(parent1.second[j]);
+			if (iRand() % 2 == 0) specimen.second.push_back(parent1.second[j]);
 			else specimen.second.push_back(parent2.second[j]);
 		}
 		evaluateSpecimen(specimen);
@@ -329,12 +329,12 @@ void GeneticAlgorithmTwo::CalculateNextGeneration(vector<pair<double, vector<int
 
 	//mutujemy wszystkie nowe rozwiazania
 	for (int i = vipAmount; i < currentGenerationSize; i++) {
-		if (c_rand_engine() % 1000 < mutationChance * 1000) {
+		if (iRand() % 1000 < mutationChance * 1000) {
 			pair<double, vector<int>> specimen = generation[i];
 			double specimenMutationAmount = minMutationAmount + ((double(i) / double(currentGenerationSize)) * (maxMutationAmount - minMutationAmount));
 			for (int j = 0; j < specimen.second.size(); j++) {
-				if (c_rand_engine() % 1000 < specimenMutationAmount * 1000) {
-					specimen.second[j] = lRand(c_evaluator.iGetNumberOfValues(j));
+				if (iRand() % 1000 < specimenMutationAmount * 1000) {
+					specimen.second[j] = lRand(myEvaluator.iGetNumberOfValues(j));
 				}
 			}
 			evaluateSpecimen(specimen);
@@ -343,7 +343,7 @@ void GeneticAlgorithmTwo::CalculateNextGeneration(vector<pair<double, vector<int
 	}
 }
 void GeneticAlgorithmTwo::evaluateSpecimen(pair<double, vector<int>>& osobnik) {
-	osobnik.first = c_evaluator.dEvaluate(&osobnik.second);
+	osobnik.first = myEvaluator.dEvaluate(&osobnik.second);
 }
 void GeneticAlgorithmTwo::evaluateGeneration(vector<pair<double, vector<int>>> generation) {
 	for (int i = 0; i < generation.size(); i++) {
@@ -372,9 +372,9 @@ void GeneticAlgorithmTwo::quicksort(vector<pair<double, vector<int>>>& arr, int 
 	if (i < right) quicksort(arr, i, right);
 }
 void GeneticAlgorithmTwo::v_fill_randomly(vector<int>& vSolution) {
-	vSolution.resize((size_t)c_evaluator.iGetNumberOfBits());
+	vSolution.resize((size_t)myEvaluator.iGetNumberOfBits());
 	for (int ii = 0; ii < vSolution.size(); ii++) {
-		vSolution.at(ii) = lRand(c_evaluator.iGetNumberOfValues(ii));
+		vSolution.at(ii) = lRand(myEvaluator.iGetNumberOfValues(ii));
 	}
 }
 pair<double, vector<int>> GeneticAlgorithmTwo::generateRandomSpecimen() {

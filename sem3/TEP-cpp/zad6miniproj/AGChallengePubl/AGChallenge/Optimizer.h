@@ -1,8 +1,9 @@
 #pragma once
 
+#include "MyEvaluator.h"
 #include "Evaluator.h"
 #include "GeneticAlgorithm.h"
-//#include "GeneticAlgorithmTwo.h"
+#include "GeneticAlgorithmTwo.h"
 
 #include <random>
 #include <vector>
@@ -16,11 +17,12 @@ public:
 	void vInitialize();
 	void vRunIteration();
 
-	vector<int>* pvGetCurrentBest() { return GA.GetGlobalBestGenes(); }
+	vector<int>* pvGetCurrentBest() { 
+		//return &GA.GetBestSpecimen().getGenes(); 
+		return GA.GetGlobalBestGenes();
+	}
 
 private:
-	CLFLnetEvaluator& c_evaluator;
-	mt19937 c_rand_engine;
-
-	GeneticAlgorithm GA;
+	GeneticAlgorithmTwo GA;
+	MyEvaluator myEvaluator;
 };

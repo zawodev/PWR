@@ -2,27 +2,30 @@
 
 using namespace std;
 
-GeneticAlgorithm::GeneticAlgorithm(CLFLnetEvaluator& evaluator, mt19937& randEngine) : c_evaluator(evaluator), c_rand_engine(randEngine){
-	localBestFitness = -DBL_MAX;
-	globalBestFitness = -DBL_MAX;
-	globalBestGenes.clear();
-
+GeneticAlgorithm::GeneticAlgorithm(MyEvaluator& _myEvaluator) : myEvaluator(_myEvaluator), globalBestSpecimen(Specimen()) {
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 }
 void GeneticAlgorithm::Initialize() {
-	//ustawiamy najlepsze rozwiazanie na najgorsze mozliwe
-	localBestFitness = -DBL_MAX;
-	globalBestFitness = -DBL_MAX;
-	globalBestGenes.clear();
-
 	//tworzymy populacje
+
+	populations.reserve(numThreads);
+	int startIndex = isLoadedFromFile ? 1 : 0;
+
 	if (isLoadedFromFile) {
-		LoadGenerationFromFile("generation.txt");
-		ResizeGeneration(currentGenerationSize);
+		Population population(myEvaluator, 1024, true); //for test purposes only, not used in final simulation
+		LoadPopulationFromFile(population, "generation.txt");
+		populations.push_back(population);
 	}
-	else {
-		GenerateRandomGeneration();
+	//vector<thread> threads;
+	for (int i = startIndex; i < numThreads; i++) {
+		Population population(myEvaluator, i == 0 ? 1024 : 256, i == 0);
+		//threads.emplace_back(&Population::GenerateRandomGeneration, &population);
+		population.GenerateRandomGeneration();
+		populations.push_back(population);
 	}
+	/*for (auto& thread : threads) {
+		thread.join();
+	}*/
 
 	/*for (int i = 0; i < currentGenerationSize; i++) {
 		cout << generation[i].getFitness() << endl;
@@ -31,156 +34,85 @@ void GeneticAlgorithm::Initialize() {
 }
 
 void GeneticAlgorithm::RunIteration() {
-	//sortujemy rozwiazania od najlepszego do najgorszego
-	Quicksort(0, generation.size() - 1);
 
-	//sprawdzamy czy najlepszy specimen jest lepszy od dotychczasowego najlepszego (globalny i lokalny)
+	vector<thread> threads;
+	for (int i = 0; i < numThreads; i++) {
+		threads.emplace_back(&Population::RunIteration, &populations[i]);
+		//if(iteration % (i + 1) == 0) populations[i].RunIteration();
+		//populations[i].RunIteration();
+	}
+	for (auto& thread : threads) {
+		thread.join();
+	}
+
+	//oceniamy najlepsze osobniki
 	SaveBestSpecimen();
 
-	//zapisz najlepsza generacje do pliku jesli jest lepsza od poprzedniej
-	SavePersonalBestGenerationToFile();
-
-	//tworzymy nowa generacje
-	CalculateNextGeneration();
-}
-
-void GeneticAlgorithm::CalculateNextGeneration() {
-	//usuwanie rozwiazan zeby zrobic miejsce na krzyzowanie i scoutowanie
-	int crossoverSize = (int)(currentGenerationSize * crossoverPercent);
-	int scoutSize = (int)(currentGenerationSize * scoutPercent);
-	int removalSize = crossoverSize + scoutSize;
-	currentGenerationSize -= removalSize;
-
-	for (int i = 0; i < removalSize; i++) {
-		//usun przypadkowe rozwiazanie
-		if (c_rand_engine() % 1000 < removeWorstOrRandomChance * 1000) generation.erase(generation.begin() + (c_rand_engine() % generation.size()));
-		//usun najgorsze rozwiazanie
-		else generation.pop_back();
+	//przemieszaj populacje
+	/*if (iteration % 113 == 0) {
+		int iPopulation1 = iRand() % numActiveThreads;
+		int iPopulation2 = (1 + iPopulation1 + (iRand() % (numActiveThreads - 1))) % numActiveThreads;
+		MixTwoPopulations(populations[iPopulation1], populations[iPopulation2]);
+		if(populations[iPopulation1].getLocalBestSpecimen().getFitness() > populations[iPopulation2].getLocalBestSpecimen().getFitness()) populations[iPopulation2].GenerateRandomGeneration();
+		else populations[iPopulation1].GenerateRandomGeneration();
+		PrintTextInColor("----- generations: [" + to_string(iPopulation1) + "], [" + to_string(iPopulation2) + "] have been mixed -----", 9);
 	}
-	
-	//dodajemy losowych scoutow
-	for (int i = 0; i < scoutSize; i++) {
-		Specimen specimen(c_evaluator, c_rand_engine);
-		specimen.evaluateFitness();
-		generation.push_back(specimen);
-	}
-	
-	//tworzymy nowe rozwi頊ania krzy簑j鉍 najlepsze z poprzedniej generacji
-	for (int i = 0; i < crossoverSize; i++) {
-		Specimen child(c_evaluator, c_rand_engine); //lub generation.size() jesli chcesz zeby dzieci tez sie rozmna瘸造 od razu
-		child.setGenes(generation[c_rand_engine() % currentGenerationSize].crossover(generation[c_rand_engine() % currentGenerationSize]));
-		child.evaluateFitness();
-		generation.push_back(child);
-	}
-
-	currentGenerationSize += removalSize;
-
-	//przepuszczamy najlepsze osobniki z poprzedniej generacji bez zmian
-	/*
-	for (int i = 0; i < vipAmount; i++) {
-		generation.pop_back();
-	}
-	for (int i = 0; i < vipAmount; i++) {
-		generation.push_back(Specimen(c_evaluator, c_rand_engine));
-	}
-	*/
-	
-	//mutujemy wszystkie nowe rozwiazania
-	for (int i = vipAmount; i < currentGenerationSize; i++) {
-		if (c_rand_engine() % 1000 < mutationChance * 1000) {
-			double specimenMutationAmount = minMutationAmount + ((double(i) / double(currentGenerationSize)) * (maxMutationAmount - minMutationAmount));
-			generation[i].mutate(specimenMutationAmount);
-			generation[i].evaluateFitness();
+	if (iteration % 53 == 0) {
+		numActiveThreads++;
+		if (numActiveThreads > numThreads) {
+			numActiveThreads = numThreads;
+			populations[numActiveThreads - 1].GenerateRandomGeneration();
+			PrintTextInColor("----- max threads: " + to_string(numActiveThreads) + "/" + to_string(numThreads) + " ----- (regenerating last)", 11);
 		}
-	}
-}
-
-void GeneticAlgorithm::Quicksort(int left, int right) {
-	int i = left, j = right;
-	double pivot = generation[(left + right) / 2].getFitness();
-
-	while (i <= j) {
-		while (generation[i].getFitness() > pivot) i++; //> malejaco, < rosnaco
-		while (generation[j].getFitness() < pivot) j--; //< malejaco, > rosnaco
-		if (i <= j) {
-			swap(generation[i], generation[j]);
-			i++;
-			j--;
+		else {
+			PrintTextInColor("----- active threads: " + to_string(numActiveThreads) + "/" + to_string(numThreads) + " -----", 11);
 		}
-	};
-
-	if (left < j) Quicksort(left, j);
-	if (i < right) Quicksort(i, right);
-}
-
-void GeneticAlgorithm::EvaluateGeneration() {
-	for (int i = 0; i < generation.size(); i++) {
-		generation[i].evaluateFitness();
-	}
-}
-
-void GeneticAlgorithm::GenerateRandomGeneration() {
-	generation.clear();
-	generation.reserve(currentGenerationSize);
-
-	for (int i = 0; i < currentGenerationSize; ++i) {
-		Specimen specimen(c_evaluator, c_rand_engine);
-		specimen.evaluateFitness();
-		generation.push_back(specimen);
-	}
-}
-
-void GeneticAlgorithm::ResizeGeneration(int newGenerationSize) {
-	if (newGenerationSize > generation.size()) {
-		int diff = newGenerationSize - generation.size();
-		for (int i = 0; i < diff; i++) {
-			Specimen specimen(c_evaluator, c_rand_engine);
-			specimen.evaluateFitness();
-			generation.push_back(specimen);
-		}
-	}
-	else {
-		generation.erase(generation.begin() + newGenerationSize, generation.end());
-	}
+	}*/
 }
 
 void GeneticAlgorithm::SaveBestSpecimen() {
-	//sprawdzamy czy najlepsze rozwiazanie z tej generacji jest lepsze od najlepszego z dotychczasowych rozwiazan
-	if (generation[0].getFitness() > globalBestFitness) {
-		//changeStrategyCounter = 250; //jesli strategia zadziala potrzymaj ciut dluzej i daj jej cos wymyslic
-		changeStrategyCounter = 0;
 
-		globalBestGenes = generation[0].getGenes();
-		globalBestFitness = generation[0].getFitness();
-		localBestFitness = generation[0].getFitness();
+	int newBestIndex = -1;
 
-		//ustaw kolor na zielony
-		PrintSpecimenFitness("new global best: ", globalBestFitness, 10);
-	}
-	else if (generation[0].getFitness() > localBestFitness) {
-		//changeStrategyCounter = 250; //jesli strategia zadziala potrzymaj ciut dluzej i daj jej cos wymyslic
-		changeStrategyCounter = 0;
-
-		localBestFitness = generation[0].getFitness();
-
-		//ustaw kolor na zolty
-		PrintSpecimenFitness("new local best: ", localBestFitness, 14);
-	}
-	else {
-		//ustaw kolor na czerwony
-		PrintSpecimenFitness("no new best: ", generation[1].getFitness(), 12);
-
-		changeStrategyCounter++;
-		if (isStrategyChanged && changeStrategyCounter >= changeStrategyThreshold) {
-			//changeStrategyCounter = 100; //jesli nowa strategia szybko nie zadziala to zmien strategie
-			changeStrategyCounter = 0;
-			UpdateStrategy();
+	//dla wszystkich populacji sprawdz czy najlepszy osobnik jest lepszy od dotychczasowego najlepszego
+	for (int i = 0; i < numThreads; i++) {
+		if (populations[i].getLocalBestSpecimen().getFitness() > globalBestSpecimen.getFitness()) {
+			globalBestSpecimen = populations[i].getLocalBestSpecimen();
+			newBestIndex = i;
 		}
 	}
+
+	PrintLocalBestFitnesses(10, 14, newBestIndex);
+
+	if (newBestIndex != -1) {
+		//green
+		//PrintSpecimenFitness("[" + to_string(newBestIndex) + "] new global best: ", globalBestSpecimen.getFitness(), 10);
+
+		//zapisz do pliku
+		if (globalBestSpecimen.getFitness() > pbThreshold) {
+			SaveSpecimenToFile(globalBestSpecimen, "pb population");
+			pbThreshold += pbThresholdChange;
+		}
+
+		noNewGlobalBestCounter = 0;
+	}
+	else {
+		noNewGlobalBestCounter++;
+		if (isStrategyChanged && noNewGlobalBestCounter >= mixPopulationTreshhold) {
+			noNewGlobalBestCounter = 0;
+			mixPopulationTreshhold += 10;
+			//UpdateStrategy();
+			if (numThreads >= 2) {
+				MixTwoPopulations(populations[0], populations[1]);
+				PrintTextInColor("----- populations: [" + to_string(0) + "], [" + to_string(1) + "] have been mixed -----", 9);
+			}
+		}
+	}
+
 	//ustaw kolor na bialy
 	SetConsoleTextAttribute(hConsole, 7);
 }
-
+/*
 void GeneticAlgorithm::UpdateStrategy() {
 	//ustaw kolor na niebieski
 	SetConsoleTextAttribute(hConsole, 9);
@@ -208,7 +140,7 @@ void GeneticAlgorithm::UpdateStrategy() {
 		PrintSettingsVariable(removeWorstOrRandomChance, removeWorstOrRandomChanceStates, "removeWorstOrRandomChance");
 	}
 	if (false) { //strategia 2 - nowa populacja vip闚
-		/*int strategy = c_rand_engine() % 5;
+		int strategy = c_rand_engine() % 5;
 		if (strategy == 0 || vips.size() >= 16) {
 			if (vips.size() < 16) vips.push_back(gen[0]);
 			else vips[c_rand_engine() % vips.size()] = gen[0];
@@ -232,7 +164,7 @@ void GeneticAlgorithm::UpdateStrategy() {
 			//SetConsoleTextAttribute(hConsole, 11);
 			//std::cout << std::endl << "----- new strategy -----" << std::endl << "started new random generation, there are now: " << vips.size() << " vips" << std::endl;
 		}
-		saveGenerationToFile(vips, "vips.txt");*/
+		saveGenerationToFile(vips, "vips.txt");
 	}
 
 	//ustaw kolor na zielony
@@ -242,38 +174,51 @@ void GeneticAlgorithm::UpdateStrategy() {
 	//ustaw kolor na bialy
 	SetConsoleTextAttribute(hConsole, 7);
 }
-void GeneticAlgorithm::SavePersonalBestGenerationToFile() {
-	if (globalBestFitness > pbThreshold) {
-		SaveGenerationToFile(to_string(localBestFitness) + ".txt"); //or "generation.txt"
-		pbThreshold += pbThresholdChange;
+*/
+void GeneticAlgorithm::MixTwoPopulations(Population& population1, Population& population2) {
+	int pop1Size = population1.getPopulationSize();
+	int pop2Size = population2.getPopulationSize();
+	int _minPopulationSize = pop1Size < pop2Size ? pop1Size : pop2Size;
+
+	for (int i = 0; i < _minPopulationSize; i++) {
+		Specimen& specimen1 = population1.getPopulation()[pop1Size - i - 1];
+		Specimen& specimen2 = population2.getPopulation()[pop2Size - i - 1];
+		if (iRand() % 2 == 0) SwapSpecimens(specimen1, specimen2);
 	}
 }
-void GeneticAlgorithm::SaveGenerationToFile(const std::string& filename) {
-	std::ofstream outFile(filename);
-	EvaluateGeneration(); //just to be safe
+void GeneticAlgorithm::SwapSpecimens(Specimen& specimen1, Specimen& specimen2) {
+	Specimen temp = specimen1;
+	specimen1 = specimen2;
+	specimen2 = temp;
+}
 
+void GeneticAlgorithm::SavePopulationToFile(Population& population, const std::string& populationName) {
+	for (Specimen& specimen : population.getPopulation()) {
+		SaveSpecimenToFile(specimen, populationName);
+	}
+}
+void GeneticAlgorithm::SaveSpecimenToFile(Specimen& specimen, const std::string& populationName) {
+	std::string fileName = populationName + "/specimen_" + to_string(specimen.getFitness()) + ".txt";
+	std::ofstream outFile(fileName);
 	if (outFile.is_open()) {
-		for (int i = 0; i < generation.size(); i++) {
-			outFile << generation[i].getFitness() << ' ';
+		outFile << specimen.getFitness() << ' ';
 
-			for (const int& gene : generation[i].getGenes()) {
-				outFile << gene << ' ';
-			}
-
-			outFile << '\n';
+		for (const int& gene : specimen.getGenes()) {
+			outFile << gene << ' ';
 		}
 
+		outFile << '\n';
+
 		outFile.close();
-		std::cout << "Zapisano do pliku: " << filename << std::endl;
+		std::cout << "Zapisano do pliku: " << fileName << std::endl;
 	}
 	else {
 		std::cout << "B章d podczas otwierania pliku do zapisu." << std::endl;
 	}
 }
-void GeneticAlgorithm::LoadGenerationFromFile(const std::string& filename) {
 
+void GeneticAlgorithm::LoadPopulationFromFile(Population& population, const std::string& filename) {
 	std::ifstream inFile(filename);
-
 	if (inFile.is_open()) {
 		std::string line;
 
@@ -293,13 +238,15 @@ void GeneticAlgorithm::LoadGenerationFromFile(const std::string& filename) {
 				genes.push_back(gene);
 			}
 
-			Specimen specimen(c_evaluator, c_rand_engine);
+			Specimen specimen(myEvaluator);
 			specimen.setFitness(fitness);
 			specimen.setGenes(genes);
 			specimen.evaluateFitness(); //just to be safe calculate again
 
-			generation.push_back(specimen);
+			population.getPopulation().push_back(specimen);
 		}
+
+		population.ResizePopulation();
 
 		inFile.close();
 		std::cout << "Wczytano z pliku: " << filename << std::endl;
@@ -314,7 +261,21 @@ void GeneticAlgorithm::PrintSpecimenFitness(string pretext, double fitness, int 
 	std::cout << pretext << fitness << std::endl;
 	SetConsoleTextAttribute(hConsole, 7); //przywroc bia造 kolor
 }
-
+void GeneticAlgorithm::PrintTextInColor(string text, int color) {
+	SetConsoleTextAttribute(hConsole, color);
+	std::cout << text << std::endl;
+	SetConsoleTextAttribute(hConsole, 7); //przywroc bia造 kolor
+}
+void GeneticAlgorithm::PrintLocalBestFitnesses(int globalColor, int localColor, int globalBestIndex) {
+	SetConsoleTextAttribute(hConsole, localColor);
+	for (int i = 0; i < numThreads; i++) {
+		if(globalBestIndex == i) SetConsoleTextAttribute(hConsole, globalColor);
+		cout << "[" << i << "]: " << populations[i].getLocalBestSpecimen().getFitness() << " ";
+		SetConsoleTextAttribute(hConsole, localColor);
+	}
+	cout << endl;
+	SetConsoleTextAttribute(hConsole, 7); //przywroc bia造 kolor
+}
 template<typename T> void GeneticAlgorithm::PrintSettingsVariable(T& variable, vector<T>& states, const string& name) {
 	std::cout << name << ": {" << states[0];
 	for (int i = 1; i < states.size(); i++) std::cout << ", " << states[i];

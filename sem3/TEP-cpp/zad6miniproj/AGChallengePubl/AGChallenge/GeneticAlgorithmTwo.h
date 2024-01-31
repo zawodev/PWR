@@ -1,5 +1,6 @@
 #pragma once
 
+#include "MyEvaluator.h"
 #include "Evaluator.h"
 
 #include <random>
@@ -9,7 +10,7 @@ using namespace std;
 
 class GeneticAlgorithmTwo {
 public:
-	GeneticAlgorithmTwo(CLFLnetEvaluator& evaluator, mt19937& randEngine) : c_evaluator(evaluator), c_rand_engine(randEngine) {
+	GeneticAlgorithmTwo(MyEvaluator& _myEvaluator) : myEvaluator(_myEvaluator) {
 		localBestFitness = -DBL_MAX;
 		globalBestFitness = -DBL_MAX;
 		globalBestGenes.clear();
@@ -24,8 +25,7 @@ public:
 	vector<int>* GetGlobalBestGenes() { return &globalBestGenes; }
 
 private:
-	CLFLnetEvaluator& c_evaluator; //dont change
-	mt19937& c_rand_engine; //dont change
+	MyEvaluator& myEvaluator;
 	HANDLE hConsole;
 
 	//best specimen ----------------------------------

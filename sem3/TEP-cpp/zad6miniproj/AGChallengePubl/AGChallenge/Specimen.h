@@ -1,38 +1,47 @@
 #pragma once
 
+#include "MyEvaluator.h"
 #include "Evaluator.h"
 
 #include <iostream>
 #include <random>
+#include <random>
 #include <vector>
+#include <cfloat>
+#include <windows.h>
 
 using namespace std;
 
+class Population;
 class Specimen {
 public:
 	//konstruktor
-	Specimen(CLFLnetEvaluator& evaluator, mt19937& randEngine);
+	Specimen();
+	Specimen(Population& _population);
+	Specimen(MyEvaluator& _myEvaluator);
+	Specimen(MyEvaluator& _myEvaluator, vector<int>& newGenes);
+	Specimen(Population& _population, vector<int>& newGenes);
 	Specimen(const Specimen& other);
 
 	//geny
-	vector<int> getGenes() const;
+	vector<int> getGenes();
 	void setGenes(vector<int> genes);
 
 	//fitness
-	double getFitness() const;
+	double getFitness();
 	void setFitness(double fitness);
 	void evaluateFitness();
 
 	//mutate and crossover
 	void mutate(double mutationAmount);
-	vector<int> crossover(const Specimen& other);
+	vector<int> crossover(Specimen& other);
 
 	//operatory
-	Specimen& operator= (const Specimen& other);
+	Specimen& operator= (Specimen& other);
 
 private:
-	CLFLnetEvaluator& c_evaluator; //dont change
-	mt19937& c_rand_engine; //dont change
+	MyEvaluator* myEvaluator; //dont change
+	Population* population;
 
 	vector<int> genes;
 	double fitness;

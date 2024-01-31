@@ -51,6 +51,12 @@
     <ClCompile Include="GeneticAlgorithmTwo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Population.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyEvaluator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Timer.h">
@@ -84,6 +90,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GeneticAlgorithmTwo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Population.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyEvaluator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

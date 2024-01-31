@@ -10,7 +10,7 @@ using namespace TimeCounters;
 
 using namespace std;
 
-#define dMAX_TIME 2000 * 60
+#define dMAX_TIME 3 * 60 * 60
 
 
 void vRunExperiment(CLFLnetEvaluator &cConfiguredEvaluator)
@@ -36,6 +36,7 @@ void vRunExperiment(CLFLnetEvaluator &cConfiguredEvaluator)
 
 			c_time_counter.bGetTimePassed(&d_time_passed);
 		}//while (d_time_passed <= MAX_TIME)
+		cout << "Best Fitness: " << cConfiguredEvaluator.dEvaluate(c_optimizer.pvGetCurrentBest()) << endl;
 	}//try
 	catch (exception &c_exception)
 	{
@@ -68,7 +69,7 @@ void main(int iArgCount, char **ppcArgValues)
 	cout << "end\n";
 
 	CString  s_test;
-	vRunLFLExperiment("104b00");
+	vRunLFLExperiment("162b04");
 
 	/*vRunIsingSpinGlassExperiment(81, 0, i_mask_seed);
 	vRunIsingSpinGlassExperiment(81, 0, iSEED_NO_MASK);

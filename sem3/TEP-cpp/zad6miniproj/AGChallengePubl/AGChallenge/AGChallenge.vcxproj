@@ -150,8 +150,10 @@
     <ClCompile Include="GeneticAlgorithmTwo.cpp" />
     <ClCompile Include="list.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MyEvaluator.cpp" />
     <ClCompile Include="MyMath.cpp" />
     <ClCompile Include="NETsimulator.cpp" />
+    <ClCompile Include="Population.cpp" />
     <ClCompile Include="Specimen.cpp" />
     <ClCompile Include="Optimizer.cpp" />
     <ClCompile Include="Timer.cpp" />
@@ -163,8 +165,10 @@
     <ClInclude Include="GeneticAlgorithm.h" />
     <ClInclude Include="GeneticAlgorithmTwo.h" />
     <ClInclude Include="list.h" />
+    <ClInclude Include="MyEvaluator.h" />
     <ClInclude Include="MyMath.h" />
     <ClInclude Include="NETsimulator.h" />
+    <ClInclude Include="Population.h" />
     <ClInclude Include="Specimen.h" />
     <ClInclude Include="Optimizer.h" />
     <ClInclude Include="Timer.h" />
