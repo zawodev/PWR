@@ -8,12 +8,13 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Exercise1 {
     private static int globalVariable = 0;
     private static final int threadCount = 16;
-    private static final long runTimeInSeconds = 1;
+    private static final long runTimeInSeconds = 3;
     private static final Lock lock = new ReentrantLock();
 
     public static void main(String[] args) {
         Thread[] threads = new Thread[threadCount];
         Random random = new Random();
+        System.out.println("initial value: " + globalVariable);
         for (int i = 0; i < threadCount; i++) {
             threads[i] = new Thread(() -> {
                 long endTimeMillis = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(runTimeInSeconds);
@@ -24,17 +25,17 @@ public class Exercise1 {
                         else globalVariable--;
                     }
                     catch (Exception e) {
-                        e.printStackTrace();
+                        throw new RuntimeException(e);
                     }
                     finally {
                         lock.unlock();
                     }
 
                     try {
-                        Thread.sleep(random.nextInt(100));
+                        Thread.sleep(random.nextInt(10));
                     }
                     catch (InterruptedException e) {
-                        e.printStackTrace();
+                        throw new RuntimeException(e);
                     }
                 }
             });
@@ -47,7 +48,7 @@ public class Exercise1 {
             }
         }
         catch (InterruptedException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
         System.out.println("final value: " + globalVariable);
