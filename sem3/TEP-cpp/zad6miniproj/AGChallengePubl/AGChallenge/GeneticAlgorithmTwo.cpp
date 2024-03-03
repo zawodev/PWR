@@ -13,6 +13,7 @@
 
 using namespace std;
 
+//WERSJA KONKURSOWA
 
 //USTAWIENIA SYMULACJI
 
@@ -37,7 +38,7 @@ static vector<double> crossoverPercentStates = { .300, .450, .600, .800, .900 };
 
 //scoutowanie
 static double scoutPercent = .000; //procent osobnikow ktore tworzymy losowo
-static vector<double> scoutPercentStates = { .000, .001, .010, .100 }; //mozliwe wartosci scoutPercent
+static vector<double> scoutPercentStates = { .000, .001, .010 }; //mozliwe wartosci scoutPercent
 
 //usuwanie osobnikow
 static double removeWorstOrRandomChance = 0.0; //[0.0, 1.0] usun najgorsze osobniki [0.0] lub losowe [1.0]

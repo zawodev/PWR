@@ -4,10 +4,11 @@
 
 using namespace std;
 
-Population::Population(MyEvaluator& _myEvaluator, int _populationSize, bool _searchForMax) : myEvaluator(_myEvaluator), localBestSpecimen(Specimen()) {
-	searchForMax = _searchForMax;
-	populationSize = _populationSize;
+Population::Population(MyEvaluator& _myEvaluator, int _populationSize, bool _isMainPopulation) : myEvaluator(_myEvaluator), localBestSpecimen(Specimen()), isMainPopulation(_isMainPopulation) {
+	
+	isSearchingForMax = isMainPopulation;
 
+	populationSize = _populationSize;
 	population.clear();
 
 	maxValues.resize(myEvaluator.iGetNumberOfBits());
@@ -31,22 +32,34 @@ void Population::GenerateRandomGeneration() {
 	}
 	localBestSpecimen = population[0];
 }
+//other.populationSize musi byc >= populationSize inaczej katastrofa bedzie (wypada³oby to wyifowaæ ale mi sie nie chce)
+void Population::GenerateGenerationFromOther(Population& other) { 
+	population.clear();
+	population.reserve(populationSize);
+
+	vector<Specimen>& otherPopulation = other.getPopulation();
+
+	for (int i = 0; i < populationSize; i++) {
+		Specimen& specimen = other.getPopulation().at(i);
+
+		vector<int> newGenes = specimen.getGenes();
+		double newFitness = specimen.getFitness();
+
+		Specimen newSpecimen(myEvaluator, newGenes, newFitness);
+		population.push_back(newSpecimen);
+	}
+	localBestSpecimen = population[0];
+}
+
 void Population::RunIteration() {
 	//tworzymy nowa generacje
-
-	//c_evaluator = CLFLnetEvaluator();
-	//c_evaluator.bConfigure(configurationString);
-
 	CalculateNextGeneration();
 
 	//sortujemy rozwiazania od najlepszego do najgorszego
 	Quicksort(0, population.size() - 1);
-	if (!searchForMax) reverse(population.begin(), population.end());
 
-	//jesli najlepsze rozwiazanie z tej generacji jest lepsze od najlepszego rozwiazania z poprzedniej generacji to zapisujemy je jako najlepsze rozwiazanie
-	if ((searchForMax && population[0].getFitness() > localBestSpecimen.getFitness()) || (!searchForMax && population[0].getFitness() < localBestSpecimen.getFitness())) {
-		localBestSpecimen = population[0];
-	}
+	//zapisujemy najlepsze rozwiazanie
+	SaveBestSpecimen();
 }
 
 vector<Specimen>& Population::getPopulation() {
@@ -71,6 +84,59 @@ void Population::ResizePopulation() { //po³¹cz z generateRandomGeneration
 Specimen& Population::getLocalBestSpecimen() {
 	return localBestSpecimen;
 }
+
+void Population::SaveBestSpecimen() {
+
+	if (!isSearchingForMax) reverse(population.begin(), population.end());
+
+	if (IsNewLocalBestSpecimen(isSearchingForMax)) {
+		localBestSpecimen = population[0];
+		noNewLocalBestCounter = 0;
+	}
+	else {
+		noNewLocalBestCounter++;
+		if (noNewLocalBestCounter > noNewLocalBestTreshhold) {
+			noNewLocalBestCounter = 0;
+			OnNoNewBestSpecimen();
+		}
+	}
+}
+
+bool Population::IsNewLocalBestSpecimen(bool isSearchingForMax) {
+	if (isSearchingForMax) {
+		if (population[0].getFitness() > localBestSpecimen.getFitness()) {
+			return true;
+		}
+	}
+	else {
+		if (population[0].getFitness() < localBestSpecimen.getFitness()) {
+			return true;
+		}
+	}
+	return false;
+}
+
+void Population::OnNoNewBestSpecimen() {
+	if (isMainPopulation) { //main population
+		setNoNewLocalBestTreshholdReached(true);
+
+		mutationChance = mutationChanceStates[iRand() % mutationChanceStates.size()];
+		crossoverPercent = crossoverPercentStates[iRand() % crossoverPercentStates.size()];
+		vipAmount = vipAmountStates[iRand() % vipAmountStates.size()];
+		cout << "zmiana parametrów: mutationChance: " << mutationChance << ", crossoverPercent: " << crossoverPercent << ", vipAmount: " << vipAmount << endl;
+	}
+	else { //side population
+		isSearchingForMax = !isSearchingForMax;
+
+		if (isSearchingForMax) {
+			cout << "zmiana strategii: teraz szukamy maksimum" << endl;
+		}
+		else {
+			cout << "zmiana strategii: teraz szukamy minimum" << endl;
+		}
+	}
+}
+
 
 void Population::CalculateNextGeneration() {
 	//usuwanie rozwiazan zeby zrobic miejsce na krzyzowanie i scoutowanie

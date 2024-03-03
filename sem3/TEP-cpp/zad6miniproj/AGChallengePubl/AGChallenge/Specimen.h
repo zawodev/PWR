@@ -20,6 +20,7 @@ public:
 	Specimen(Population& _population);
 	Specimen(MyEvaluator& _myEvaluator);
 	Specimen(MyEvaluator& _myEvaluator, vector<int>& newGenes);
+	Specimen(MyEvaluator& _myEvaluator, vector<int>& newGenes, double newFitness);
 	Specimen(Population& _population, vector<int>& newGenes);
 	Specimen(const Specimen& other);
 

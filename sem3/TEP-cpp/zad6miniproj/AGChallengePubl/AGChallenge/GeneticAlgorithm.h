@@ -35,18 +35,13 @@ private:
 
 	//moje zmienne ----------------------------------
 
-	const int numThreads = 1; //liczba watkow
-
-	//vector<future<void>> futures;
+	const int mainPopulationSize = 1024; //ilosc osobnikow w g³ównej populacji
+	const int sidePopulationSize = 128; //ilosc osobnikow w bocznej populacji
 
 	vector<Population> populations; //populacje
 
 	//zmiana strategii
 	bool isStrategyChanged = true; //czy zmienic strategie
-	int mixPopulationTreshhold = 20; //co ile nieskutecznych iteracji miesza populacje
-
-	int noNewGlobalBestCounter = 0; //licznik iteracji bez znalezienia nowego global besta
-	int iterationCounter = 0; //licznik iteracji
 
 	//zapisywanie do pliku (w celu testow)
 	bool isLoadedFromFile = false; //czy wczytywac populacje z pliku

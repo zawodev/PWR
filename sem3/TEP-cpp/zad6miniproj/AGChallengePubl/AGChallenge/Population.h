@@ -20,9 +20,11 @@ public:
 	Population(MyEvaluator& _myEvaluator, int populationSize, bool searchForMax);
 
 	void GenerateRandomGeneration(); //tworzy losowa populacje
-	void RunIteration();
+	void GenerateGenerationFromOther(Population& other); //kopiuje populacje z innej populacji
 
-	vector<Specimen>& getPopulation();
+	void RunIteration();
+	
+	vector<Specimen>& getPopulation(); //zwraca populacje
 
 	void ResizePopulation();
 
@@ -34,6 +36,8 @@ public:
 	vector<int> maxValues;
 
 	int getPopulationSize() { return populationSize; }
+	bool getNoNewLocalBestTreshholdReached() { return noNewLocalBestTreshholdReached; }
+	void setNoNewLocalBestTreshholdReached(bool value) { noNewLocalBestTreshholdReached = value; }
 
 private:
 	MyEvaluator& myEvaluator; //dont change
@@ -42,19 +46,23 @@ private:
 
 	Specimen localBestSpecimen; //najlepszy osobnik w obecnej populacji
 	int populationSize; //ilosc osobnikow w populacji
-	bool searchForMax; //czy szukamy maksimum czy minimum
+
+	const bool isMainPopulation; //czy to glowna populacja
+	bool isSearchingForMax; //czy szukamy maksimum czy minimum
 
 	//moje zmienne ----------------------------------
 
-	//bool isLocalBestSpecimenBetter = false; //czy najlepszy osobnik z obecnej populacji jest lepszy od najlepszego osobnika z poprzedniej populacji
+	int noNewLocalBestCounter = 0;
+	const int noNewLocalBestTreshhold = 30;
+	bool noNewLocalBestTreshholdReached = false;
 
 	vector<Specimen> population; //populacja
 
 	int vipAmount = 64; //ilosc najlepszych osobnikow ktorych przepisujemy bez zmian
-	vector<int> vipAmountStates = { 0, 0, 0, 1, 1, 16, 64 }; //mozliwe wartosci vipAmount
+	vector<int> vipAmountStates = { 1, 1, 4, 16 }; //mozliwe wartosci vipAmount
 
 	double mutationChance = .15; //szansa na mutacje w danym osobniku
-	vector<double> mutationChanceStates = { .05, .15, .9 }; //mozliwe wartosci mutationChance
+	vector<double> mutationChanceStates = { .05, .10, .15, .9 }; //mozliwe wartosci mutationChance
 
 	double minMutationAmount = .001; //minimalna wartosc mutacji w lepszym osobniku
 	double maxMutationAmount = .004; //maxymalna wartosc mutacji w gorszym osobniku
@@ -62,10 +70,12 @@ private:
 	double crossoverPercent = .45; //procent osobnikow ktore krzyzujemy
 	vector<double> crossoverPercentStates = { .3, .45, .6, .8, .9 }; //mozliwe wartosci crossoverPercent
 
-	double idiotPercent = 0; //procent osobnikow ktore szuka minimum zamiast maksimum
-	vector<double> idiotPercentStates = { 0, .001, .01, .1 }; //mozliwe wartosci idiotPercent
-
 	//moje metody ----------------------------------
+
+	void SaveBestSpecimen(); //zapisuje najlepszy osobnik z obecnej populacji
+	void OnNoNewBestSpecimen(); //wywolywane gdy nie znaleziono nowego najlepszego osobnika
+
+	bool IsNewLocalBestSpecimen(bool isSearchingForMax); //sprawdza czy znaleziono nowego najlepszego osobnika
 
 	void CalculateNextGeneration(); // oblicza nastepna generacje
 	void Quicksort(int left, int right); //sortuje populacje od najlepszego osobnika do najgorszego

@@ -52,6 +52,17 @@ Specimen::Specimen(MyEvaluator& _myEvaluator, vector<int>& newGenes) {
 	fitness = -DBL_MAX;
 	//evaluateFitness();
 }
+Specimen::Specimen(MyEvaluator& _myEvaluator, vector<int>& newGenes, double newFitness) {
+	population = nullptr;
+	myEvaluator = &_myEvaluator;
+
+	genes.resize((*myEvaluator).iGetNumberOfBits());
+	for (int i = 0; i < genes.size(); i++) {
+		genes.at(i) = newGenes.at(i);
+	}
+	fitness = newFitness;
+	//evaluateFitness();
+}
 
 Specimen::Specimen(Population& _population, vector<int>& newGenes) {
 	population = &_population;

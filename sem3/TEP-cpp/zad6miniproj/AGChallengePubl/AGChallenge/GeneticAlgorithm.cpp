@@ -6,26 +6,22 @@ GeneticAlgorithm::GeneticAlgorithm(MyEvaluator& _myEvaluator) : myEvaluator(_myE
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 }
 void GeneticAlgorithm::Initialize() {
+
 	//tworzymy populacje
+	Population population1(myEvaluator, mainPopulationSize, true);
 
-	populations.reserve(numThreads);
-	int startIndex = isLoadedFromFile ? 1 : 0;
+	//wczytaj populacje z pliku lub wygeneruj nowa
+	if (isLoadedFromFile) LoadPopulationFromFile(population1, "generation.txt");
+	else population1.GenerateRandomGeneration();
 
-	if (isLoadedFromFile) {
-		Population population(myEvaluator, 1024, true); //for test purposes only, not used in final simulation
-		LoadPopulationFromFile(population, "generation.txt");
-		populations.push_back(population);
+	//dodaj populacje do wektora populacji
+	populations.push_back(population1);
+
+	if (sidePopulationSize > 0) {
+		Population population2(myEvaluator, sidePopulationSize, false);
+		population2.GenerateGenerationFromOther(population1); //wygeneruj druga populacje z pierwszej
+		populations.push_back(population2);
 	}
-	//vector<thread> threads;
-	for (int i = startIndex; i < numThreads; i++) {
-		Population population(myEvaluator, i == 0 ? 1024 : 256, i == 0);
-		//threads.emplace_back(&Population::GenerateRandomGeneration, &population);
-		population.GenerateRandomGeneration();
-		populations.push_back(population);
-	}
-	/*for (auto& thread : threads) {
-		thread.join();
-	}*/
 
 	/*for (int i = 0; i < currentGenerationSize; i++) {
 		cout << generation[i].getFitness() << endl;
@@ -35,78 +31,53 @@ void GeneticAlgorithm::Initialize() {
 
 void GeneticAlgorithm::RunIteration() {
 
+	/*
 	vector<thread> threads;
-	for (int i = 0; i < numThreads; i++) {
+	for (int i = 0; i < currentPopulationNum; i++) {
 		threads.emplace_back(&Population::RunIteration, &populations[i]);
-		//if(iteration % (i + 1) == 0) populations[i].RunIteration();
-		//populations[i].RunIteration();
+		populations[i].RunIteration();
 	}
 	for (auto& thread : threads) {
 		thread.join();
 	}
+	*/
+
+	for (int i = 0; i < populations.size(); i++) {
+		populations[i].RunIteration();
+	}
 
 	//oceniamy najlepsze osobniki
 	SaveBestSpecimen();
-
-	//przemieszaj populacje
-	/*if (iteration % 113 == 0) {
-		int iPopulation1 = iRand() % numActiveThreads;
-		int iPopulation2 = (1 + iPopulation1 + (iRand() % (numActiveThreads - 1))) % numActiveThreads;
-		MixTwoPopulations(populations[iPopulation1], populations[iPopulation2]);
-		if(populations[iPopulation1].getLocalBestSpecimen().getFitness() > populations[iPopulation2].getLocalBestSpecimen().getFitness()) populations[iPopulation2].GenerateRandomGeneration();
-		else populations[iPopulation1].GenerateRandomGeneration();
-		PrintTextInColor("----- generations: [" + to_string(iPopulation1) + "], [" + to_string(iPopulation2) + "] have been mixed -----", 9);
-	}
-	if (iteration % 53 == 0) {
-		numActiveThreads++;
-		if (numActiveThreads > numThreads) {
-			numActiveThreads = numThreads;
-			populations[numActiveThreads - 1].GenerateRandomGeneration();
-			PrintTextInColor("----- max threads: " + to_string(numActiveThreads) + "/" + to_string(numThreads) + " ----- (regenerating last)", 11);
-		}
-		else {
-			PrintTextInColor("----- active threads: " + to_string(numActiveThreads) + "/" + to_string(numThreads) + " -----", 11);
-		}
-	}*/
 }
 
 void GeneticAlgorithm::SaveBestSpecimen() {
 
-	int newBestIndex = -1;
-
 	//dla wszystkich populacji sprawdz czy najlepszy osobnik jest lepszy od dotychczasowego najlepszego
-	for (int i = 0; i < numThreads; i++) {
+	int newBestIndex = -1;
+	for (int i = 0; i < populations.size(); i++) {
 		if (populations[i].getLocalBestSpecimen().getFitness() > globalBestSpecimen.getFitness()) {
 			globalBestSpecimen = populations[i].getLocalBestSpecimen();
 			newBestIndex = i;
 		}
 	}
 
-	PrintLocalBestFitnesses(10, 14, newBestIndex);
+	//wypisz najlepsze osobniki
+	PrintLocalBestFitnesses(10, 12, newBestIndex);
 
-	if (newBestIndex != -1) {
-		//green
-		//PrintSpecimenFitness("[" + to_string(newBestIndex) + "] new global best: ", globalBestSpecimen.getFitness(), 10);
+	//jezeli populacja[0] nie znalazla nowego najlepszego osobnika to mieszamy populacje
+	if (newBestIndex == 1 && populations.size() >= 2) {
+		MixTwoPopulations(populations[0], populations[1]);
+		PrintTextInColor("----- populations: [" + to_string(0) + "], [" + to_string(1) + "] have been mixed -----", 9);
 
-		//zapisz do pliku
-		if (globalBestSpecimen.getFitness() > pbThreshold) {
-			SaveSpecimenToFile(globalBestSpecimen, "pb population");
-			pbThreshold += pbThresholdChange;
+		for (int i = 0; i < populations.size(); i++) {
+			populations[i].setNoNewLocalBestTreshholdReached(false);
 		}
-
-		noNewGlobalBestCounter = 0;
 	}
-	else {
-		noNewGlobalBestCounter++;
-		if (isStrategyChanged && noNewGlobalBestCounter >= mixPopulationTreshhold) {
-			noNewGlobalBestCounter = 0;
-			mixPopulationTreshhold += 10;
-			//UpdateStrategy();
-			if (numThreads >= 2) {
-				MixTwoPopulations(populations[0], populations[1]);
-				PrintTextInColor("----- populations: [" + to_string(0) + "], [" + to_string(1) + "] have been mixed -----", 9);
-			}
-		}
+
+	//zapisz do pliku jezeli najlepszy osobnik ma odpowiednia wartosc
+	if (globalBestSpecimen.getFitness() > pbThreshold) {
+		SaveSpecimenToFile(globalBestSpecimen, "pb population");
+		pbThreshold += pbThresholdChange;
 	}
 
 	//ustaw kolor na bialy
@@ -268,7 +239,7 @@ void GeneticAlgorithm::PrintTextInColor(string text, int color) {
 }
 void GeneticAlgorithm::PrintLocalBestFitnesses(int globalColor, int localColor, int globalBestIndex) {
 	SetConsoleTextAttribute(hConsole, localColor);
-	for (int i = 0; i < numThreads; i++) {
+	for (int i = 0; i < populations.size(); i++) {
 		if(globalBestIndex == i) SetConsoleTextAttribute(hConsole, globalColor);
 		cout << "[" << i << "]: " << populations[i].getLocalBestSpecimen().getFitness() << " ";
 		SetConsoleTextAttribute(hConsole, localColor);

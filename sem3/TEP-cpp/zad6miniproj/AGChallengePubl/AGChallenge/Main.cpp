@@ -69,7 +69,7 @@ void main(int iArgCount, char **ppcArgValues)
 	cout << "end\n";
 
 	CString  s_test;
-	vRunLFLExperiment("162b04");
+	vRunLFLExperiment("104b00"); //162b04
 
 	/*vRunIsingSpinGlassExperiment(81, 0, i_mask_seed);
 	vRunIsingSpinGlassExperiment(81, 0, iSEED_NO_MASK);
