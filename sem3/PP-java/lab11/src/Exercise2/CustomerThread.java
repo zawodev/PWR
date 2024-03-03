@@ -29,7 +29,7 @@ class CustomerThread extends Thread {
             }
 
             try {
-                Thread.sleep(random.nextInt(10));
+                Thread.sleep(random.nextInt(100));
             }
             catch (InterruptedException e) {
                 throw new RuntimeException(e);

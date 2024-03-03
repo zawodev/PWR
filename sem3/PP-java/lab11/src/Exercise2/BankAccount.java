@@ -24,10 +24,16 @@ class BankAccount {
     }
 
     public synchronized void deposit(int amount) {
+        if (amount <= 0){
+            return;
+        }
         balance += amount;
         //System.out.println("wpłata na konto [" + accountNumber + "]: " + amount + "pln");
     }
     public synchronized void withdraw(int amount) {
+        if (amount <= 0){
+            return;
+        }
         if (balance >= amount) {
             balance -= amount;
             //System.out.println("wypłata z konta [" + accountNumber + "]: " + amount + "pln");
@@ -43,6 +49,9 @@ class BankAccount {
         }
         if (targetAccount == null) {
             //System.out.println("próba przelewu z konta [" + accountNumber + "] na nieistniejące konto");
+            return;
+        }
+        if (amount <= 0){
             return;
         }
 

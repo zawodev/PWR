@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class Exercise1 {
+public class VariableChanger {
     private static int globalVariable = 0;
     private static final int threadCount = 16;
     private static final long runTimeInSeconds = 3;
@@ -32,7 +32,7 @@ public class Exercise1 {
                     }
 
                     try {
-                        Thread.sleep(random.nextInt(10));
+                        Thread.sleep(random.nextInt(100));
                     }
                     catch (InterruptedException e) {
                         throw new RuntimeException(e);
