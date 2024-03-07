@@ -11,8 +11,8 @@ for filename in os.listdir(input_path):
         file_path = os.path.join(input_path, filename)
 
         image = Image.open(file_path)
-        image.show()
-        image = image.resize((200, 200))
+        # image.show()
+        # image = image.resize((200, 200))
 
         png_filename = os.path.splitext(filename)[0] + '.png'
         png_file_path = os.path.join(output_path, png_filename)
