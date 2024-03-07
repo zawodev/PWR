@@ -1,0 +1,46 @@
+conditional linkless learning
+
+ja mam pytanie tylko prosze mnie tylko poinstruołwać co powinienem dalej zrobić, aby do tego piątku zgłosić się do tej współpracy, czy to wymaga napisania jakiejś aplikacji pisemnej w formie pdf żeby gdzieś to wysłać czy jakie są procedury tutaj teraz
+
+
+
+
+optymalizacja wielokryterialna
+
+zamiast jednego rozwiązania, jest wiele rozwiązań
+
+jeżeli optymalizujemy jakość to będzie rosnąć cena, jeżeli dwa rozwiązania konkurencyjne, to niemożna stwierdzić które lepsze
+
+lepsze musi być w obu dziedzinach żeby odrzucić starą
+
+zależności będą się zmieniać w proporcjach różnych
+
+wielokryterialne, wielokryterialne z dużą ilością kryteriów (multi(1-3)/many(4+ -> (~30max), objectives)
+
+relacja dominacji (jeden lepszy pod kazdym wzgledem od drugiego)
+
+materaiły na stronie
+
+
+
+
+weighted WIG (wariable integration graph)
+
+mówi co jest powiązane (max 3 SAT problem?)
+
+grey box co to
+
+
+
+
+poziom hierarchi
+
+123 -> 456 wtedy i tylko wtedy += 500
+
+te bonusy są wychwytywalne
+
+
+
+
+h
+
