@@ -1,7 +1,10 @@
-199.72.81.55 - - [01/Jul/1995:00:00:01 -0400] "GET /history/apollo/ HTTP/1.0" 460 6245
-unicomp6.unicomp.net - - [01/Jul/1995:00:00:06 -0400] "GET /shuttle/countdown/ HTTP/1.0" 510 3985
-199.120.110.21 - - [01/Jul/1995:00:00:09 -0400] "GET /shuttle/missions/sts-73/mission-sts-73.html HTTP/1.0" 410 4085
-burger.letters.pl - - [01/Jul/1995:00:00:11 -0400] "GET /shuttle/countdown/liftoff.html HTTP/1.0" 304 0
-199.120.110.21 - - [01/Jul/1995:00:00:11 -0400] "GET /shuttle/missions/sts-73/sts-73-patch-small.gif HTTP/1.0" 555 4179
-199.120.110.21 - - [01/Jul/1995:00:00:12 -0400] "GET /shuttle/missions/sts-73/sts-73-patch-small.gif HTTP/1.0" 404 45
-burger.letters.com - - [01/Jul/1995:00:00:13 -0400] "GET /images/NASA-logosmall.gif HTTP/1.0" 304 0
+199.72.81.55 - - [01/Jan/1995:00:00:01 -0400] "GET /history/apollo/ HTTP/1.0" 460 6245
+unicomp6.unicomp.net - - [01/Jul/2001:00:10:06 -0400] "GET /shuttle/countdown/ HTTP/1.0" 510 3985
+199.120.110.21 - - [03/Mar/1995:00:20:09 -0400] "GET /shuttle/missions/sts-73/mission-sts-73.html HTTP/1.0" 410 4085
+burger.letters.pl - - [04/Jul/1995:01:00:11 -0400] "GET /shuttle/countdown/liftoff.html HTTP/1.0" 304 0
+199.120.110.21 - - [05/Jul/1993:00:10:11 -0400] "GET /shuttle/missions/sts-73/sts-73-patch-small.gif HTTP/1.0" 555 4179
+199.120.110.21 - - [07/Jul/1995:14:01:12 -0400] "GET /shuttle/missions/sts-73/sts-73-patch-small.gif HTTP/1.0" 404 45
+burger.letters.com - - [21/Jul/1995:00:20:13 -0400] "GET /images/NASA-logosmall.gif HTTP/1.0" 304 0
+blv-pm2-ip16.halcyon.com - - [01/Jul/1997:21:24:51 -0400] "GET /shuttle/missions/sts-67/sts-67-patch-small.gif HTTP/1.0" 200 17083
+alyssa.prodigy.com - - [11/Sep/2001:00:21:37 -0400] "GET /shuttle/missions/sts-71/sts-71-patch-small.gif HTTP/1.0" 200 12054
+hoflink.com - - [01/Jun/1993:04:24:58 -0400] "GET /shuttle/missions/100th.html HTTP/1.0" 200 32303
