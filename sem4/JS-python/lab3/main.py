@@ -175,9 +175,6 @@ def test_all_func():
 
 def test_last_func():
     _log_dict = log_to_dict(get_entries_by_addr(read_log(), "ppp0.pwrnet.com"))
-    print("\n--- Log dict: ---")
-    print(get_addrs(_log_dict))
-
     print("\n--- Entries dates: ---")
     print_dict_entry_dates(_log_dict)
 
