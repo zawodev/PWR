@@ -33,5 +33,9 @@
 
 # duze pliki cpp (tep sem3 miniproj)
 *.ipch
+*.zip
+*.rar
+
+
 sem4/JS-python/lab2/NASA
 sem4/JS-python/lab3/NASA
