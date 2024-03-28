@@ -34,6 +34,7 @@
 # duze pliki cpp (tep sem3 miniproj)
 *.ipch
 
+# zipy rary
 *.zip
 *.rar
 
