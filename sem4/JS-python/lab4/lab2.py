@@ -4,7 +4,8 @@ import sys
 
 def print_folders():
     for katalog in os.environ['PATH'].split(os.pathsep):
-        print(katalog)
+        if katalog:
+            print(katalog)
 
 
 def print_exec_files():
@@ -14,7 +15,8 @@ def print_exec_files():
         except OSError:  # jeśli są błędy, pomijam katalog (np. brak dostępu)
             continue
 
-        exec_files = [plik for plik in files if os.path.isfile(os.path.join(folder, plik)) and os.access(os.path.join(folder, plik), os.X_OK)]
+        exec_files = [plik for plik in files if
+                      os.path.isfile(os.path.join(folder, plik)) and os.access(os.path.join(folder, plik), os.X_OK)]
         if exec_files:  # jeśli w danym folderze są pliki wykonywalne, to je wypisz
             print(f"{folder}:")
             for plik in exec_files:
