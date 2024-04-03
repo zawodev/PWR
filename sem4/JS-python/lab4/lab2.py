@@ -1,13 +1,13 @@
 import os
 import sys
 
-
+# print folders
 def print_folders():
     for katalog in os.environ['PATH'].split(os.pathsep):
         if katalog:
             print(katalog)
 
-
+# print executables
 def print_exec_files():
     for folder in os.environ['PATH'].split(os.pathsep):
         try:  # listuje files w danym katalogu
