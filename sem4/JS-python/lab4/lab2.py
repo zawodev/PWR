@@ -1,36 +1,39 @@
 import os
 import sys
 
-# print folders
-def print_folders():
-    for katalog in os.environ['PATH'].split(os.pathsep):
-        if katalog:
-            print(katalog)
 
-# print executables
-def print_exec_files():
+def print_folders():
     for folder in os.environ['PATH'].split(os.pathsep):
-        try:  # listuje files w danym katalogu
+        if folder: # if exist
+            print(folder)
+
+
+def print_executables():
+    for folder in os.environ['PATH'].split(os.pathsep):
+        try: # listuje files w danym katalogu
             files = os.listdir(folder)
-        except OSError:  # jeśli są błędy, pomijam katalog (np. brak dostępu)
+        except OSError: # jeśli są błędy, pomijam katalog (np. brak dostępu)
             continue
 
-        exec_files = [plik for plik in files if
-                      os.path.isfile(os.path.join(folder, plik)) and os.access(os.path.join(folder, plik), os.X_OK)]
-        if exec_files:  # jeśli w danym folderze są pliki wykonywalne, to je wypisz
+        exec_files = [file for file in files if
+                      os.path.isfile(os.path.join(folder, file)) and
+                      os.access(os.path.join(folder, file), os.X_OK) and # liniksowy plik wykonywalny
+                      file.endswith(".exe")] # mozliwe ze bez tej linijki
+
+        if exec_files: # jeśli w folderze są pliki
             print(f"{folder}:")
-            for plik in exec_files:
-                print(f"  {plik}")
-            print()  # dla lepszej czytelności
+            for file in exec_files:
+                print(f"  {file}")
+            print()
 
 
 if __name__ == "__main__":
-    usage_msg = "Usage: python lab2.py [f|x]; f - folders, x - executables"
+    usage_msg = "usage: python lab2.py [f|x]; f - folders, x - executables"
     if len(sys.argv) < 2:
-        print("No parameter given. " + usage_msg)
+        print("no parameters given, " + usage_msg)
     elif sys.argv[1].lower() == "f":
         print_folders()
     elif sys.argv[1].lower() == "x":
-        print_exec_files()
+        print_executables()
     else:
-        print("Unknown parameter. " + usage_msg)
+        print("unknown parameter, " + usage_msg)

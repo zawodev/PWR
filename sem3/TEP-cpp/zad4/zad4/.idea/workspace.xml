@@ -20,9 +20,9 @@
     <option name="majorVersion" value="2023" />
     <option name="minorVersion" value="3.4" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2eGplzmuMmZB4gWbBPAC48NzLih" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -36,6 +36,7 @@
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
+    "last_opened_file_path": "C:/Users/aliks/Documents/GitHub/PWR/sem4/JS-python/lab4/lab4",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -49,6 +50,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711540924592</updated>
       <workItem from="1711540926264" duration="22000" />
+      <workItem from="1712700821582" duration="41000" />
     </task>
     <servers />
   </component>

@@ -20,5 +20,5 @@ def env_vars_filter(parameters):
 
 
 if __name__ == "__main__":
-    # pomijam pierwszy argument, który jest nazwą skryptu
+    # pomijam pierwszy argument, bo jest nazwą skryptu [1:]
     env_vars_filter(sys.argv[1:])

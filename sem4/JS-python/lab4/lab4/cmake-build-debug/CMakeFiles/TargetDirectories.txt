@@ -1,3 +1,0 @@
-C:/Users/aliks/Documents/GitHub/PWR/sem4/JS-python/lab4/lab4/cmake-build-debug/CMakeFiles/lab4.dir
-C:/Users/aliks/Documents/GitHub/PWR/sem4/JS-python/lab4/lab4/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/aliks/Documents/GitHub/PWR/sem4/JS-python/lab4/lab4/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -4,48 +4,50 @@ import sys
 import json
 
 def process_directory(directory):
-    stats = {
+    files_stats = {
         "files": 0,
         "total_characters": 0,
         "total_words": 0,
         "total_lines": 0,
-        "common_char": {},
-        "common_word": {}
+        "common_char": "N/A",
+        "common_word": "N/A"
     }
+    common_chars = {}
+    common_words = {}
 
     for root, dirs, files in os.walk(directory):
         for filename in files:
-            filepath = os.path.join(root, filename)
-            result = subprocess.run(["./a.out"], input=filepath, text=True, capture_output=True)
+            filepath = os.path.abspath(os.path.join(root, filename)).replace('\\', '/')
+            result = subprocess.run(["lab4-cpp/lab4.exe"], input=filepath, text=True, capture_output=True)
             if result.returncode == 0 and result.stdout:
                 data = json.loads(result.stdout)
-                stats["files"] += 1
-                stats["total_characters"] += data["characters"]
-                stats["total_words"] += data["words"]
-                stats["total_lines"] += data["lines"]
                 char = data["most_common_character"]
                 word = data["most_common_word"]
-                stats["common_char"][char] = stats["common_char"].get(char, 0) + 1
-                stats["common_word"][word] = stats["common_word"].get(word, 0) + 1
 
-    # Finding overall most common
-    common_char = max(stats["common_char"], key=stats["common_char"].get, default="N/A")
-    common_word = max(stats["common_word"], key=stats["common_word"].get, default="N/A")
+                files_stats["files"] += 1
+                files_stats["total_characters"] += data["characters"]
+                files_stats["total_words"] += data["words"]
+                files_stats["total_lines"] += data["lines"]
 
-    return {
-        "read_files": stats["files"],
-        "total_characters": stats["total_characters"],
-        "total_words": stats["total_words"],
-        "total_lines": stats["total_lines"],
-        "most_common_character": common_char,
-        "most_common_word": common_word
-    }
+                files_stats["common_char"] = char
+                files_stats["common_word"] = word
+
+                common_chars[char] = common_chars.get(char, 0) + 1
+                common_words[word] = common_words.get(word, 0) + 1
+            else:
+                print(f"error: {result.returncode}")
+
+    # Finding overall most common character and word
+    files_stats["common_char"] = max(common_chars, key=common_chars.get, default="N/A")
+    files_stats["common_word"] = max(common_words, key=common_words.get, default="N/A")
+
+    return files_stats
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python script.py <directory_path>")
+        print("usage: python lab4.py [path-to-files-dir]")
         sys.exit(1)
 
-    directory = sys.argv[1]
-    stats = process_directory(directory)
-    print(json.dumps(stats, indent=4))
+    _directory = sys.argv[1]
+    _files_stats = process_directory(_directory)
+    print(json.dumps(_files_stats, indent=4)) # indent = ilość wcięć
