@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.27"
+						"string" : "3.28"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "lab4",
+					"name" : "lab4_cpp",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "lab4::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-lab4-Debug-7048f70a4e78151d5fe8.json",
-					"name" : "lab4",
+					"id" : "lab4_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lab4_cpp-Debug-71a85885a7d264772f28.json",
+					"name" : "lab4_cpp",
 					"projectIndex" : 0
 				}
 			]

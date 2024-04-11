@@ -18,7 +18,7 @@ def process_directory(directory):
     for root, dirs, files in os.walk(directory):
         for filename in files:
             filepath = os.path.abspath(os.path.join(root, filename)).replace('\\', '/')
-            result = subprocess.run(["lab4-cpp/lab4.exe"], input=filepath, text=True, capture_output=True)
+            result = subprocess.run(["lab4-cpp/cmake-build-debug/lab4_cpp.exe"], input=filepath, text=True, capture_output=True)
             if result.returncode == 0 and result.stdout:
                 data = json.loads(result.stdout)
 

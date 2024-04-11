@@ -129,7 +129,7 @@ def print_dict_entry_dates(log_dict):
 def test_all_func():
     # zad 1
     _log = read_log()
-    print("\n--- Original log: ---")
+    print("--- Original log: ---")
     print_entries(_log)
 
     # zad 2
@@ -174,11 +174,11 @@ def test_all_func():
     print_dict_entry_dates(_log_dict)
 
 def test_last_func():
-    _log_dict = log_to_dict(get_entries_by_addr(read_log(), "ppp0.pwrnet.com"))
-    print("\n--- Entries dates: ---")
+    _log_dict = log_to_dict(get_entries_by_addr(read_log(), "199.120.110.21"))
+    print("--- Entries dates: ---")
     print_dict_entry_dates(_log_dict)
 
 
 if __name__ == "__main__":
-    # test_all_func()
-    test_last_func()
+    test_all_func()
+    # test_last_func()

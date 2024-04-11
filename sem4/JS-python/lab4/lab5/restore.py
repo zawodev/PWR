@@ -30,5 +30,5 @@ def restore_backup(target_dir):
 
 
 if __name__ == '__main__':
-    target_dir = sys.argv[1] if len(sys.argv) > 1 else '.backups'
-    restore_backup(target_dir)
+    _target_dir = sys.argv[1] if len(sys.argv) > 1 else '.backups'
+    restore_backup(_target_dir)
