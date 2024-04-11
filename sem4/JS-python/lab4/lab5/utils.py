@@ -3,15 +3,12 @@ import json
 from datetime import datetime
 
 def get_backup_dir():
-    """Zwraca lokalizację katalogu .backups, używając zmiennej środowiskowej lub domyślnej ścieżki."""
     return os.environ.get('BACKUPS_DIR', os.path.join(os.path.expanduser('~'), '.backups'))
 
 def ensure_dir_exists(path):
-    """Tworzy katalog, jeśli nie istnieje."""
     os.makedirs(path, exist_ok=True)
 
 def log_backup_entry(backup_dir, source_dir, archive_name):
-    """Dopisuje wpis o kopii zapasowej do pliku JSON w katalogu .backups."""
     log_file_path = os.path.join(backup_dir, 'backup_history.json')
     entry = {
         'date': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
@@ -30,7 +27,6 @@ def log_backup_entry(backup_dir, source_dir, archive_name):
             json.dump([entry], log_file, indent=4)
 
 def read_backup_history(backup_dir):
-    """Czyta historię kopii zapasowych z pliku JSON."""
     log_file_path = os.path.join(backup_dir, 'backup_history.json')
     if not os.path.exists(log_file_path):
         return []

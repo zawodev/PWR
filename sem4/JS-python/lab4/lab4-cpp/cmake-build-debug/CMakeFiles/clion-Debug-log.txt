@@ -20,6 +20,6 @@ CMake Deprecation Warning:
 -- Check for working CXX compiler: C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/g++.exe - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Configuring done (2.6s)
+-- Configuring done (1.5s)
 -- Generating done (0.0s)
 -- Build files have been written to: C:/Users/aliks/Documents/GitHub/PWR/sem4/JS-python/lab4/lab4-cpp/cmake-build-debug

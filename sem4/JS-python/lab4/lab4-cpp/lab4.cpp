@@ -54,7 +54,7 @@ int main() {
             lines++;
         }
     }
-    if (!word.empty()) lines++; // Counting last line if not ended with newline
+    if (!word.empty()) lines++; // counting last line if not ended with endl
 
     auto [mostCommonChar, charFreq] = findMostCommonCharacter(charCount);
     auto [mostCommonWord, wordFreq] = findMostCommonWord(wordCount);
