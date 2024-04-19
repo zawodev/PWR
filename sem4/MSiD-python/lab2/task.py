@@ -44,7 +44,7 @@ def get_minor_matrix(mat: List[List[int]], i: int, j: int) -> List[List[int]]:
 
     return [row[:j] + row[j + 1:] for row in (mat[:i] + mat[i + 1:])] # wykreslamy i-ty wiersz i j-ta kolumne
 
-    # return [row[:j] + row[j+1:] for row_index, row in enumerate(mat) if row_index != i]
+    # retpiurn [row[:j] + row[j+1:] for row_index, row in enumerate(mat) if row_index != i]
 
     pass
 

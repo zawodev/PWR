@@ -19,9 +19,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2fAvujY3IcD98renC42rfRoC8Xe" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,7 +31,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/aliks/Documents/GitHub/PWR/sem4/MSiD-python/jupyter-notebooks",
+    "last_opened_file_path": "C:/Users/aliks/Documents/GitHub/PWR/sem4/MSiD-python/lab2",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -58,6 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713256922360</updated>
       <workItem from="1713256923504" duration="155000" />
+      <workItem from="1713520849938" duration="141000" />
     </task>
     <servers />
   </component>
