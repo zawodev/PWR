@@ -1,11 +1,32 @@
 import re
 import sys
+import logging
 
 # DEFINITIONS:
 # file - list of lines
 # line - raw line of text from file
 # log - parsed line of data in form of a dict
 
+# KONFIGURACJA LOGOWANIA
+logging.basicConfig(level=logging.DEBUG)  # Ustawienie poziomu podstawowego na DEBUG
+
+# Utworzenie handlera dla poziomów DEBUG, INFO, WARNING (wyjście na stdout)
+stdout_handler = logging.StreamHandler(sys.stdout)
+stdout_handler.setLevel(logging.DEBUG)
+stdout_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+stdout_handler.setFormatter(stdout_formatter)
+stdout_handler.addFilter(lambda record: record.levelno <= logging.WARNING)
+
+# Utworzenie handlera dla poziomów ERROR, CRITICAL (wyjście na stderr)
+stderr_handler = logging.StreamHandler(sys.stderr)
+stderr_handler.setLevel(logging.ERROR)
+stderr_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+stderr_handler.setFormatter(stderr_formatter)
+
+# Dodanie handlerów do loggera
+logger = logging.getLogger()
+logger.addHandler(stdout_handler)
+logger.addHandler(stderr_handler)
 
 def parse_log_file(file):
     log_dicts = []
@@ -26,7 +47,9 @@ def parse_log_line(line: str): # 2a
     log_pattern = r'^(?P<timestamp>\w{3}\s+\d+\s+\d+:\d+:\d+)\s+(?P<hostname>\S+)\s+sshd\[(?P<pid>\d+)\]:\s+(?P<event>.+)$'
     match = re.match(log_pattern, line)
     if match:
-        return match.groupdict()
+        log_dict = match.groupdict()
+        logging.debug(f"read {len(line)} bytes from log line")
+        return log_dict
     else:
         return None
 
@@ -65,8 +88,17 @@ def get_message_type(event_description):
 if __name__ == '__main__':
     log_file = parse_log_file(sys.stdin)
     for log_line in log_file:
-        print("=============")
-        print(get_ipv4s_from_log(log_line))
-        print(get_user_from_log(log_line))
-        print(get_message_type(log_line['event']))
-    print("=============")
+        ipv4s = get_ipv4s_from_log(log_line)
+        user = get_user_from_log(log_line)
+        message_type = get_message_type(log_line['event'])
+
+        if message_type in ["accepted password for", "connection closed by"]:
+            logging.info(message_type)
+        elif message_type == "failed password for":
+            logging.warning(message_type)
+        elif message_type in ["authentication failure", "invalid user"]:
+            logging.error(message_type)
+        elif message_type == "possible break-in attempt":
+            logging.critical(message_type)
+        else:
+            logging.debug("Other message type")
