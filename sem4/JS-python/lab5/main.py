@@ -1,32 +1,42 @@
 import re
 import sys
 import logging
+import my_utils as mu
+import log_analysis as la
 
 # DEFINITIONS:
 # file - list of lines
 # line - raw line of text from file
 # log - parsed line of data in form of a dict
 
+# Konfiguracja loggera
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+
+# Ustawienie formatu dla logów
+formatter = logging.Formatter('%(asctime)s; %(levelname)s: %(message)s')
+
+# Ustawienie handlera dla logów na stdout (poziomy DEBUG, INFO, WARNING)
+stdout_handler = logging.StreamHandler(sys.stdout)
+stdout_handler.setLevel(logging.DEBUG)  # Poziom ustawiony na INFO
+stdout_handler.setFormatter(formatter)
+logger.addHandler(stdout_handler)
+
+# Ustawienie handlera dla logów na stderr (poziomy ERROR, CRITICAL)
+stderr_handler = logging.StreamHandler(sys.stderr)
+stderr_handler.setLevel(logging.ERROR)  # Poziom ustawiony na ERROR
+stderr_handler.setFormatter(formatter)
+logger.addHandler(stderr_handler)
+
+# Filtrowanie poziomów ERROR i CRITICAL dla stdout
+class ErrorCriticalFilter(logging.Filter):
+    def filter(self, record):
+        return record.levelno < logging.ERROR  # Zwraca True dla poziomów niższych niż ERROR
+
+stdout_handler.addFilter(ErrorCriticalFilter())  # Dodanie filtru do handlera stdout
+
 # KONFIGURACJA LOGOWANIA
 logging.basicConfig(level=logging.DEBUG)  # Ustawienie poziomu podstawowego na DEBUG
-
-# Utworzenie handlera dla poziomów DEBUG, INFO, WARNING (wyjście na stdout)
-stdout_handler = logging.StreamHandler(sys.stdout)
-stdout_handler.setLevel(logging.DEBUG)
-stdout_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-stdout_handler.setFormatter(stdout_formatter)
-stdout_handler.addFilter(lambda record: record.levelno <= logging.WARNING)
-
-# Utworzenie handlera dla poziomów ERROR, CRITICAL (wyjście na stderr)
-stderr_handler = logging.StreamHandler(sys.stderr)
-stderr_handler.setLevel(logging.ERROR)
-stderr_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-stderr_handler.setFormatter(stderr_formatter)
-
-# Dodanie handlerów do loggera
-logger = logging.getLogger()
-logger.addHandler(stdout_handler)
-logger.addHandler(stderr_handler)
 
 def parse_log_file(file):
     log_dicts = []
@@ -37,60 +47,23 @@ def parse_log_file(file):
     return log_dicts
 
 
-def parse_log_line(line: str): # 2a
-    """
-    Converts raw line of text into a data in a form of a dictionary
-    :param line: raw line (str)
-    :return: log in dictionary structure
-    """
-    # Dec 10 07:13:56 LabSZ sshd[24227]: Disconnecting: Too many authentication failures for root [preauth]
+def parse_log_line(line: str):
     log_pattern = r'^(?P<timestamp>\w{3}\s+\d+\s+\d+:\d+:\d+)\s+(?P<hostname>\S+)\s+sshd\[(?P<pid>\d+)\]:\s+(?P<event>.+)$'
     match = re.match(log_pattern, line)
     if match:
         log_dict = match.groupdict()
-        logging.debug(f"read {len(line)} bytes from log line")
+        log_dict['ipv4s'] = mu.get_ipv4s_from_log(log_dict)
+        log_dict['username'] = mu.get_user_from_log(log_dict['event'])
+        log_dict['msg_type'] = mu.get_message_type(log_dict['event'])
+        # logging.debug(f"read {len(line)} bytes from log line")
         return log_dict
     else:
         return None
 
 
-def get_ipv4s_from_log(log): # 2b
-    ipv4_pattern = r'\b(?:\d{1,3}\.){3}\d{1,3}\b'
-    return re.findall(ipv4_pattern, log['event'])
-
-
-def get_user_from_log(log):
-    user_patterns = [
-        r'user\s+(\S+)',
-        r'user=(\S+)'
-    ]
-    for pattern in user_patterns:
-        match = re.search(pattern, log['event'])
-        if match:
-            return match.group(1)
-    return None
-
-
-def get_message_type(event_description):
-    event_description = event_description.lower()
-    phrases = ["accepted password for",
-               "failed password for",
-               "connection closed by",
-               "invalid user",
-               "authentication failure",
-               "possible break-in attempt"]
-    for phrase in phrases:
-        if phrase in event_description:
-            return phrase
-    return "other"
-
-
-if __name__ == '__main__':
-    log_file = parse_log_file(sys.stdin)
+def test1():
     for log_line in log_file:
-        ipv4s = get_ipv4s_from_log(log_line)
-        user = get_user_from_log(log_line)
-        message_type = get_message_type(log_line['event'])
+        message_type = log_line['msg_type']
 
         if message_type in ["accepted password for", "connection closed by"]:
             logging.info(message_type)
@@ -101,4 +74,12 @@ if __name__ == '__main__':
         elif message_type == "possible break-in attempt":
             logging.critical(message_type)
         else:
-            logging.debug("Other message type")
+            logging.debug("other message type")
+
+
+if __name__ == '__main__':
+    log_file = parse_log_file(sys.stdin)
+    # test1()
+
+    la.print_log_analysis(log_file)
+
