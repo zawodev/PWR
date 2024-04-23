@@ -1,8 +1,4 @@
-import sys
-
-import log_parser_2 as ex2
-import logger_3 as ex3
-import log_analysis_4 as ex4
+import log_cli_5 as ex5
 
 # DEFINITIONS:
 # file - list of lines
@@ -12,8 +8,7 @@ import log_analysis_4 as ex4
 # in some sense this is the file 'ex1'
 
 if __name__ == '__main__':
-    log_file = ex2.parse_log_file(sys.stdin)
-
-    ex3.log_the_log_file(log_file)
-    ex4.print_log_analysis(log_file)
-
+    # log_file = ex2.parse_log_file(sys.stdin)
+    # ex3.log_the_log_file(log_file)
+    # ex4.print_log_analysis(log_file)
+    ex5.init()

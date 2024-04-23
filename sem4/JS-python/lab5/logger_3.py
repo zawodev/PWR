@@ -27,19 +27,37 @@ logger.addHandler(stderr_handler)
 # basic log set for debug
 logging.basicConfig(level=logging.DEBUG)
 
-def log_the_log_file(log_file):
+
+def check_log_level(log_level, min_log_level):
+    log_levels = {
+        'DEBUG': 0,
+        'INFO': 1,
+        'WARNING': 2,
+        'ERROR': 3,
+        'CRITICAL': 4,
+        'NONE': 5
+    }
+    log_level_int = log_levels[log_level]
+    min_log_level_int = log_levels[min_log_level]
+
+    if min_log_level_int <= log_level_int:
+        return True
+    else:
+        return False
+
+
+def log_the_log_file(log_file, min_log_level):
     for log_line in log_file:
         message_type = log_line['msg_type']
 
-        logging.debug(f"read {len(log_line['line'])} bytes from log line")
+        if check_log_level('DEBUG', min_log_level):
+            logging.debug(f"read {len(log_line['line'])} bytes from log line")
 
-        if message_type in ["accepted password for", "connection closed by"]:
+        if check_log_level('INFO', min_log_level) and message_type in ["accepted password for", "connection closed by"]:
             logging.info(message_type)
-        elif message_type == "failed password for":
+        elif check_log_level('WARNING', min_log_level) and message_type == "failed password for":
             logging.warning(message_type)
-        elif message_type in ["authentication failure", "invalid user"]:
+        elif check_log_level('ERROR', min_log_level) and message_type in ["authentication failure", "invalid user"]:
             logging.error(message_type)
-        elif message_type == "possible break-in attempt":
+        elif check_log_level('CRITICAL', min_log_level) and message_type == "possible break-in attempt":
             logging.critical(message_type)
-        else:
-            logging.debug("other message type")

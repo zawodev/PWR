@@ -4,13 +4,13 @@ import re
 def parse_log_file(file):
     log_dicts = []
     for line in file:
-        parsed_line = parse_log_line(line.strip())
-        if parsed_line:
-            log_dicts.append(parsed_line)
+        log_line = parse_log_line(line.strip())
+        if log_line:
+            log_dicts.append(log_line)
     return log_dicts
 
 
-def parse_log_line(line: str):
+def parse_log_line(line: str): # 2a
     log_pattern = r'^(?P<timestamp>\w{3}\s+\d+\s+\d+:\d+:\d+)\s+(?P<hostname>\S+)\s+sshd\[(?P<pid>\d+)\]:\s+(?P<event>.+)$'
     match = re.match(log_pattern, line)
     if match:
@@ -24,9 +24,9 @@ def parse_log_line(line: str):
         return None
 
 
-def get_ipv4s_from_log(log): # 2b
+def get_ipv4s_from_log(log_line): # 2b
     ipv4_pattern = r'\b(?:\d{1,3}\.){3}\d{1,3}\b'
-    return re.findall(ipv4_pattern, log['event'])
+    return re.findall(ipv4_pattern, log_line['event'])
 
 
 def get_user_from_log(log_event: str): # 2c
@@ -54,3 +54,15 @@ def get_message_type(log_event: str): # 2d
         if phrase in log_event:
             return phrase
     return "other"
+
+
+def print_ipv4s_from_log(log_line): # print 2b
+    print(get_ipv4s_from_log(log_line))
+
+
+def print_user_from_log(log_event): # print 2c
+    print(get_user_from_log(log_event))
+
+
+def print_message_type(log_event):  # print 2d
+    print(get_message_type(log_event))

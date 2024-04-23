@@ -4,7 +4,7 @@ import statistics
 from collections import Counter
 
 
-def get_random_logs_for_user(log_file, n=1, username=None): # a
+def get_random_logs_for_user(log_file, n=3, username=None): # a)
     if username is None:
         all_users = set(log['username'] for log in log_file)
         if all_users:
@@ -16,7 +16,7 @@ def get_random_logs_for_user(log_file, n=1, username=None): # a
     return {'username': username, 'logs': random.sample(user_logs, min(n, len(user_logs)))}
 
 
-def calculate_ssh_connection_stats(log_file): # b
+def calculate_ssh_connection_stats(log_file): # b)
     global_duration = []
     user_durations = {}
 
@@ -64,7 +64,7 @@ def calculate_ssh_connection_stats(log_file): # b
             'user_stats': user_stats}
 
 
-def calculate_most_and_least_frequent_users(log_file, n=1): # c
+def calculate_most_and_least_frequent_users(log_file, n=5): # c)
     user_counts = Counter()
 
     for log in log_file:
@@ -78,27 +78,40 @@ def calculate_most_and_least_frequent_users(log_file, n=1): # c
     return {'most_frequent': most_frequent_users, 'least_frequent': least_frequent_users}
 
 
-def print_log_analysis(log_file):
-    # a.
+def print_random_logs_for_user(log_file): # print a)
     random_logs_for_user = get_random_logs_for_user(log_file, n=3)
-    print("\n--- a)")
+    print("--- a)")
     print(f"random {len(random_logs_for_user['logs'])} logs from user: {random_logs_for_user['username']}")
     for log in random_logs_for_user['logs']:
         print(log)
 
-    # b.
+
+def print_ssh_connection_stats(log_file): # print b)
     ssh_stats = calculate_ssh_connection_stats(log_file)
-    print("\n--- b)")
+    print("--- b)")
     print(f"global average time: {ssh_stats['global_stats']['avg_time']: .2f}s")
     print(f"global standard deviation: {ssh_stats['global_stats']['std_dev']: .2f}s")
     print(f"average time for all {len(ssh_stats['user_stats'])} users: ")
     for user, stats in ssh_stats['user_stats'].items():
         print(f"username: {user}, avg_time: {stats['avg_time']: .2f}s, std_dev: {stats['std_dev']: .2f}s")
 
-    # c.
+
+def print_most_and_least_frequent_users(log_file): # print c)
     frequency_stats = calculate_most_and_least_frequent_users(log_file, n=5)
-    print("\n--- c)")
+    print("--- c)")
     print(f"most common {len(frequency_stats['most_frequent'])} users: ")
     print(frequency_stats['most_frequent'])
     print(f"least common {len(frequency_stats['least_frequent'])} users: ")
     print(frequency_stats['least_frequent'])
+
+
+def print_log_analysis(log_file):
+    # a.
+    print_random_logs_for_user(log_file)
+    print()
+    # b.
+    print_ssh_connection_stats(log_file)
+    print()
+    # c.
+    print_most_and_least_frequent_users(log_file)
+    print()
