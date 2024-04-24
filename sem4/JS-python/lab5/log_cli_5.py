@@ -14,14 +14,14 @@ def init():
 
 
     # -------------- EX2 --------------
-    # a) get_ipv4s_from_log
-    f1 = subparsers.add_parser('2b', help='get_ipv4s_from_log')
+    # a) print_ipv4s_from_log
+    f1 = subparsers.add_parser('2b', help='print_ipv4s_from_log')
     f1.set_defaults(log_line=ex2.print_ipv4s_from_log)
-    # b) get_user_from_log
-    f2 = subparsers.add_parser('2c', help='get_user_from_log')
+    # b) print_user_from_log
+    f2 = subparsers.add_parser('2c', help='print_user_from_log')
     f2.set_defaults(log_event=ex2.print_user_from_log)
-    # c) get_message_type
-    f3 = subparsers.add_parser('2d', help='get_message_type')
+    # c) print_message_type
+    f3 = subparsers.add_parser('2d', help='print_message_type')
     f3.set_defaults(log_event=ex2.print_message_type)
 
 
