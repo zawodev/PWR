@@ -1,9 +1,8 @@
 import datetime
+from collections import defaultdict
 
 
 def detect_brute_force_attempts(log_file, interval=60, attempts=5, user_detect=False):
-    from collections import defaultdict
-
     if user_detect:
         print("Detecting brute force attempts for many usernames: ")
 
@@ -25,11 +24,6 @@ def detect_brute_force_attempts(log_file, interval=60, attempts=5, user_detect=F
             key = ip
 
         if failure:
-            #if attack_attempts[key]:
-                #print(len(attack_attempts[key]))
-                #print("=", end=" ")
-                #print((timestamp - attack_attempts[key][-1][0]).total_seconds())
-
             if attack_attempts[key] and (attack_attempts[key][0][0] - attack_attempts[key][-1][0]).total_seconds() > interval:
                 attack_attempts[key].clear()
 
@@ -38,8 +32,6 @@ def detect_brute_force_attempts(log_file, interval=60, attempts=5, user_detect=F
             if len(attack_attempts[key]) >= attempts:
                 first_attempt = attack_attempts[key][0][0]
                 last_attempt = attack_attempts[key][-1][0]
-                #print("-", end=" ")
-                #print((last_attempt - first_attempt).total_seconds())
                 if (last_attempt - first_attempt).total_seconds() <= interval:
                     detected_attacks.append({
                         'timestamp': last_attempt.strftime('%Y-%m-%d %H:%M:%S'),
