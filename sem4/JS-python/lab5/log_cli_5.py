@@ -2,13 +2,14 @@ import argparse
 import log_parser_2 as ex2
 import logger_3 as ex3
 import log_analysis_4 as ex4
+import log_bruteforce_6 as ex6
 
 
 def init():
     parser = argparse.ArgumentParser(description='CLI tool for handling log files and running module functions.')
 
     parser.add_argument('log_path', type=str, help='Path to the log file')
-    parser.add_argument('--log_level', type=str, choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL', 'NONE'], default='NONE', help='Minimum log level')
+    parser.add_argument('--log-level', type=str, choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL', 'NONE'], default='NONE', help='Minimum log level')
 
     subparsers = parser.add_subparsers(help='Commands for running specific module functions')
 
@@ -39,6 +40,17 @@ def init():
     f7 = subparsers.add_parser('4d', help='print_log_analysis')
     f7.set_defaults(log_file=ex4.print_log_analysis)
 
+
+    # -------------- EX6 --------------
+    # a) print_brute_force_attempts
+    f8 = subparsers.add_parser('6a', help='print_brute_force_attempts')
+    f8.set_defaults(log_file_6=ex6.print_brute_force_attempts)
+    f8.add_argument('--interval', type=int, default=60, help="maximum interval in seconds between failed login attempts")
+    f8.add_argument('--attempts', type=int, default=5, help="minimum number of failed login attempts to be considered a brute force attack")
+    f8.add_argument('--by_user', action='store_true', help="detect brute force attempts by user")
+
+
+
     args = parser.parse_args()
     try:
         with open(args.log_path, 'r') as file:
@@ -49,6 +61,9 @@ def init():
 
             if hasattr(args, 'log_file'):
                 args.log_file(log_file)
+
+            if hasattr(args, 'log_file_6'):
+                args.log_file_6(log_file, interval=args.interval, attempts=args.attempts, user_detect=args.by_user)
 
             for log_line in log_file:
                 if log_line:

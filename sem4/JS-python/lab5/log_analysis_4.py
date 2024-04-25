@@ -33,7 +33,7 @@ def calculate_ssh_connection_stats(log_file): # b)
     prev_pid = None
 
     for log in log_file:
-        timestamp = datetime.datetime.strptime(log['timestamp'], "%b %d %H:%M:%S").replace(year=2013)
+        timestamp = datetime.datetime.strptime(log['timestamp'], "%b %d %H:%M:%S")
         pid = log['pid']
         _username = log['username'] if log['username'] is not None else _username
 
