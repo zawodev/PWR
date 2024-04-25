@@ -13,6 +13,5 @@ if __name__ == '__main__':
     # ex3.log_the_log_file(log_file)
     # ex4.print_log_analysis(log_file)
 
-
-    ex5.init()
-    # ex7.app()
+    # ex5.init()
+    ex7.app()
