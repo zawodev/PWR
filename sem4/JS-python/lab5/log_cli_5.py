@@ -8,7 +8,7 @@ import log_bruteforce_6 as ex6
 def init():
     parser = argparse.ArgumentParser(description='CLI tool for handling log files and running module functions.')
 
-    parser.add_argument('log_path', type=str, help='Path to the log file')
+    parser.add_argument('log-path', type=str, help='Path to the log file')
     parser.add_argument('--log-level', type=str, choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL', 'NONE'], default='NONE', help='Minimum log level')
 
     subparsers = parser.add_subparsers(help='Commands for running specific module functions')
