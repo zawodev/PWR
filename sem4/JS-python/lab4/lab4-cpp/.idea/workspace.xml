@@ -21,8 +21,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a6615d3-d4c5-42e0-8ac1-ab18772c8d13" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MSiD-python/jupyter-notebooks/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MSiD-python/jupyter-notebooks/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,6 +258,7 @@
       <workItem from="1713560370998" duration="76000" />
       <workItem from="1714158160099" duration="5000" />
       <workItem from="1714218901891" duration="13000" />
+      <workItem from="1715009419868" duration="4000" />
     </task>
     <servers />
   </component>
