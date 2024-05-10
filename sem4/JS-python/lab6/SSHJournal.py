@@ -36,7 +36,7 @@ class SSHLogJournal:
 
     def __getitem__(self, key):
         if isinstance(key, slice):
-            return self.log_entries[key.start:key.stop:key.step]
+            return self.log_entries[key]
         elif isinstance(key, str):
             filtered_logs = [entry for entry in self.log_entries if entry.has_ip and key in entry.ipv4s]
             return filtered_logs
