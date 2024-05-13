@@ -16,7 +16,7 @@ def log(level=logging.DEBUG):
 
         @functools.wraps(cls)
         def wrapped(*args, **kwargs):
-            logging.log(level, f"Creating instance of {class_name}")
+            logging.log(level, f"creating instance of {class_name}")
             instance = cls(*args, **kwargs)
             return instance
 
@@ -34,9 +34,9 @@ def log(level=logging.DEBUG):
 
             logging.log(
                 level,
-                f"Function '{func.__name__}' called with args: {arg_str}. "
-                f"Returned: {return_value_str}. "
-                f"Execution time: {end_time - start_time:.4f} seconds."
+                f"function '{func.__name__}' called with args: {arg_str}; "
+                f"returned: {return_value_str}; "
+                f"execution time: {end_time - start_time:.4f} seconds;"
             )
 
             return result
