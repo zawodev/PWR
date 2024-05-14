@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e60e827-243d-4c1f-b946-cad4296d774d" name="Changes" comment="" />
+    <list default="true" id="6e60e827-243d-4c1f-b946-cad4296d774d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +27,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/aliks/Documents/GitHub/PWR/sem4/MSiD-python/jupyter-notebooks",
+    "last_opened_file_path": "C:/Users/aliks/Documents/GitHub/msid-project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -62,6 +64,7 @@
       <workItem from="1714465355489" duration="1096000" />
       <workItem from="1715262196430" duration="82000" />
       <workItem from="1715532772182" duration="2226000" />
+      <workItem from="1715671727811" duration="516000" />
     </task>
     <servers />
   </component>
