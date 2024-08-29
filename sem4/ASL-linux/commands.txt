@@ -1,0 +1,10 @@
+debian
+password
+
+sudo -i
+su debian
+
+vboxmanage modifyvm vm2 --nic3 nat
+
+
+C:\Users\aliks\VirtualBox VMs
