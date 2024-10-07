@@ -39,8 +39,8 @@
 *.rar
 
 # pliki worda i powerpointa
-*.docx
-*.pptx
+# *.docx
+# *.pptx
 
 sem4/JS-python/lab2/NASA
 sem4/JS-python/lab3/NASA
