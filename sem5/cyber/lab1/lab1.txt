@@ -1,0 +1,51 @@
+Aleksander Stepaniuk Cyberbezpieczenstwo laby 1
+
+====== a) Cel i zakres testów penetracyjnych
+
+test penetracyjny: symulacja ataku na systemy
+
+Cel: wykryć potencjalnie słabe strony i podatności na prawdziwy atak, identyfikacja luk w zabezpieczeniach, ocena poziomu bezpieczenstwa
+
+Zakres: między innymi:  sieci, aplikacje webowe, systemy operacyjne, bazy danych, ataki z zewnatrz (przez internet) lub wewnatrz (wewnetrzne zagrozenia)
+
+====== b) Różnica między testami penetracyjnymi a wykrywaniem podatności 
+
+test penetracyjny: symulowane ataki prowadzone przez specjalistów 
+
+wykrywanie podatności: automatyczny proces (czasem z udziałem człowieka) do zkatalogowania znanych podatności w systemach, bez próby ich głębszego eksploatowania (skupia się na wykryciu, a nie na ocenie zagrożeń)
+
+====== c) Etyczny hacking
+
+Etyczny hacking to forma testowania bezpieczeństwa systemów przeprowadzona przez wyszkolonych specjalistów (tzw. białe kapelusze) którzy legalnie wykorystują techniki stosowane przez cyberprzestępców, aby znaleźć słabe punkty zanim zostaną wykorzystane przez tych złych
+
+====== d) Podstawowe rodzaje testów penetracyjnych
+
+1) Black-box -> tester nie ma wiedzy o systemie przed rozpoczęciem testu symulując atak z zewnątrz
+2) White-box -> tester ma pełny dostęp do dokumentacji, kodu źródlowego i infrastruktury co pozwala na dogłębną analize
+3)  Gray-box -> tester ma częściową wiedzę o systemie (pozwala na testy z perspektywy zewnątrznej i wewnetrznej)
+4) Testy socjotechniczne -> manipulowanie ludzmi zeby uzyskac dostep do systemow
+
+
+===== e) Metodologie testów penetracyjnych
+
+1) OSSTMM (Open Source Security Testing Methodoogy Manual):
+Cel: zapewnia kompleksowe testowanie bezpieczenstwa obejmujace wszystkie aspekty organizacji
+zakres: skupia sie na 5 obszarach: ludzie, procesy, interakcje, dane i infrastruktura
+
+2) ISSAF (Information Systems Security Assessment Framework):
+cel: Standardowy sposób przeprowadzania testów bezpieczeństwa, skupiający się na ocenie całego cyklu życia systemów IT
+Zakres: obejmuje identyfikację podatności, ocenę ryzyka i kontrolę nad środkami zapobiegawczymi
+
+3) OWASP (Open Web Application Security Project):
+Cel: Skupienie się na bezpieczeństwie aplikacji webowych.
+zakres: Obejmuje testowanie pod kątem specyficznych zagrożeń webowych, takich jak SQL Injection, XSS itp
+
+4) WASC-TC (Web Application Security Consortium - Threat Classification):
+Cel: Ułatwienie zrozumienia zagrożeń dla aplikacji webowych
+zakres: Klasyfikacja zagrożeń związanych z aplikacjami internetowymi, aby ułatwić przeprowadzanie testów bezpieczeństwa
+
+5) PTES (Penetration Testing Execution Standard):
+cel: zapewnienie standardowego podejścia do testów penetracyjnych.
+zakres: definiuje ramy działań, które powinny być wykonane przed w trakcie i po testach penetracyjnych
+
+
