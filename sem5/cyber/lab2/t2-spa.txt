@@ -1,0 +1,1 @@
+Un algoritmo es una secuencia finita de pasos que se siguen para resolver un problema o realizar una tarea. Los algoritmos se aplican en matemáticas, informática, lógica y muchas otras áreas.

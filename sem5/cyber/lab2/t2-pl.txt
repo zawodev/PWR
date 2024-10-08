@@ -1,0 +1,1 @@
+Algorytm to skoñczony ci¹g jednoznacznie zdefiniowanych czynnoœci, prowadz¹cy do rozwi¹zania danego problemu lub wykonania okreœlonego zadania. Algorytmy stosuje siê w matematyce, informatyce, logice oraz wielu innych dziedzinach.

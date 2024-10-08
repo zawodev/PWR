@@ -1,0 +1,1 @@
+An algorithm is a finite sequence of well-defined instructions used to solve a class of specific problems or to perform a computation. Algorithms are used in mathematics, computer science, and logic to complete tasks efficiently.
