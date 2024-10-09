@@ -1,0 +1,3 @@
+https://poczta.wp.pl/login/login.html
+
+szukamy POST które zawiera cos w stylu login i haslo

@@ -1,0 +1,7 @@
+https://example.com/search?q=test
+q=example
+
+
+https://www.bing.com/search?q=Co+dalej+z+rezygnacj%c4%85+arcybiskupa+Stanis%c5%82awa
+
+(zmieniamy q)
