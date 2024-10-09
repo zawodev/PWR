@@ -1,0 +1,40 @@
+-slabosci algorytmow pokazac
+-dla vinegreta nie ma sensu wielokrotne szyfrowanie
+
+
+ABCABCABCABC
+DEFGDEFGDEFG  +
+============
+DFHGEGFHFEGI
+
+
+-hilla / playfair
+1  0
+13 1
+hill wielokrotnie szyfrowanie nic nie daje
+
+QDZI QDZI TUCJ
+
+-homofony (niby fajne)
+-solitare (niby fajne)
+
+2) ngramy-w zależności od jezyka mozna znalezc np. "for" "the" itd co pada czesto w jezyku
+
+
+-zrozumiec autokorelacje (wartosc liczbowa w piku Y nie ma znaczenia, na znaczenie ile jest roznicy miedzy jednym pikiem a drugim i czy sie pojawia okresowo)
+
+Vingret, XOR czy playfair dobrze sie pasuje do tego
+
+
+miec tekst jednorodny i niejednorodny
+
+3) analiza plikow (rozbic 3-4 najlepiej wszystkie szyfry złamane) - pokazac droge do złamania szyfru albo chociaz dlugosc klucza czy cos
+
+nie trzeba robic preprocessingu na tekście
+
+
+
+można łamać kody jak sie chce (nawet skryptem w python)
+
+googlowac aby znaleźć tekst źródłowy jaks ie przypadkiem odnajdzie fragment słowa
+
