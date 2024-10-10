@@ -26,6 +26,8 @@ public class TestAppointmentsSystem {
         doc4 = new Doctor("Jan Kran");
         doc5 = new Doctor("Józef Maria Halinka");
 
+        //testujemy polski język
+
         system = new AppointmentsSystem();
 
         system.addDoctor(doc1);

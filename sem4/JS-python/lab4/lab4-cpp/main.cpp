@@ -86,6 +86,8 @@ int main() {
     cout << "}" << endl
          << "}" << endl;
 
+    //test polskiego alfabetu
+
     return 0;
     //    C:\Users\aliks\Documents\GitHub\PWR\sem4\JS-python\lab4\lab4-files\test2.txt
 }
