@@ -1,0 +1,115 @@
+
+
+
+The Enigma machine was a field unit used in World War II by German field agents to encrypt and decrypt messages and communications. Similar to the Feistel function of the 1970s, the Enigma machine was one of the first mechanized methods of encrypting text using an iterative cipher. It employed a series of rotors that, with some electricity, a light bulb, and a reflector, allowed the operator to either encrypt or decrypt a message. The original position of the rotors, set with each encryption and based on a prearranged pattern that in turn was based on the calendar, allowed the machine to be used, even if it was compromised.
+
+When the Enigma was in use, with each subsequent key press, the rotors would change in alignment from their set positions in such a way that a different letter was produced each time. The operator, with a message in hand, would enter each character into the machine by pressing a typewriter-like key. The rotors would align, and a letter would then illuminate, telling the operator what the letter really was. Likewise, when enciphering, the operator would press the key and the illuminated letter would be the cipher text. The continually changing internal flow of electricity that caused the rotors to change was not random, but it did create a polyalphabetic cipher that could be different each time it was used.
+
+
+------- Vigenere
+BLUESKY 1_1
+
+Usy Ifsenl geurgop qek k djpfh mxgu fmiv sl Xzlpv Gys TC fq Qcsxur xscmo ukwxrt ei ifmpzan efn bfnlchd kfdmeyoq byx ggwkvycgsdgpym. Wawgmll xg dff Qymkdcm qorudgpy ij lrc 1970t, ebi Wxghxu qsmfjyy asc mop ij lrc gtlwl wcdsurajce xyxzybt zz ifmpzanmfq rfin ykslh lh mlopbeczw mgqsyv. Ad cnafsqob b dyvaoq pq lslypt ebel, ggus mseo cmpwxjsajes, e dseie vydl, yoo u vwpjfnnsj, kjmzqiv dff zjijkrpc ns wsripl ifmpzan sj ncdcstl k kfdmeyo. Rip ivaqgolf tgcgutir gp rip lslypt, dyx osri pugz oldcstlsmo lhh tkqfo ir s zpfllvsxefo jeldcsy nlsd go eovf gyt muwwn mo ebi ukjfyxej, kjmzqiv dff xugzslf ei fw eqfo, yzwx gg tn asc apxjvgwgtpx. Azol usy Ifsenl qek sl vdy, aadf flwl keztpkywxr lps tjoqt, ebi jyrpcm ageje nbefqc jy upaqlnphx xbmn ebiab qfe jsksrjzhw ax qvnb e okw usux s nggqyvwxr mpnxwb ubd jvgnsdpx ismf utgi. Lrc payvsdms, hcxz k kfdmeyo go surv, gmvwx ifdcs pugz mfbcuglop jyns lrc nlwlaxc cj jvwcqjya e linfhlmlop-mtei cow. Usy vgdmsd qsmvb bwckf, kle l fildcs hiydn riph mdvsnthelo, rfwfmfq rip itwbyuzl azkr usy pwdrfc lisvjz huw. Dsifhcww, gffy yrusniplmfq, rip itwbyuzl ageje alikc rip eiq kle ebi avjvxcrsdce wyxlop xzopv lc usy gazffc nipd. Rip wsfdgofupdi ailhkaxe jynijxym qfso yd fwyglbgdtnc lryu nuykob usy vgdmsd ns uryory asc lpe lefnmn, mox ad bjo wvwkrf l jsdiymabetorjn wmhrcs ebel mmvwx fw nggqyvwxr flwl lskf tn asc stpx.
+
+------Ceasr 
+G deszyfr 1_2
+
+Znk Ktomsg sginotk cgy g lokrj atoz aykj ot Cuxrj Cgx OO he Mkxsgt lokrj gmktzy zu ktixevz gtj jkixevz skyygmky gtj iussatoigzouty. Yosorgx zu znk Lkoyzkr latizout ul znk 1970y, znk Ktomsg sginotk cgy utk ul znk loxyz skingtofkj skznujy ul ktixevzotm zkdz ayotm gt ozkxgzobk iovnkx. Oz ksvruekj g ykxoky ul xuzuxy zngz, cozn yusk krkizxoioze, g romnz harh, gtj g xklrkizux, grruckj znk uvkxgzux zu koznkx ktixevz ux jkixevz g skyygmk. Znk uxomotgr vuyozout ul znk xuzuxy, ykz cozn kgin ktixevzout gtj hgykj ut g vxkgxxgtmkj vgzzkxt zngz ot zaxt cgy hgykj ut znk igrktjgx, grruckj znk sginotk zu hk aykj, kbkt ol oz cgy iusvxusoykj. Cnkt znk Ktomsg cgy ot ayk, cozn kgin yahykwaktz qke vxkyy, znk xuzuxy cuarj ingtmk ot gromtsktz lxus znkox ykz vuyozouty ot yain g cge zngz g jollkxktz rkzzkx cgy vxujaikj kgin zosk. Znk uvkxgzux, cozn g skyygmk ot ngtj, cuarj ktzkx kgin ingxgizkx otzu znk sginotk he vxkyyotm g zevkcxozkx-roqk qke. Znk xuzuxy cuarj gromt, gtj g rkzzkx cuarj znkt orrasotgzk, zkrrotm znk uvkxgzux cngz znk rkzzkx xkgrre cgy. Roqkcoyk, cnkt ktiovnkxotm, znk uvkxgzux cuarj vxkyy znk qke gtj znk orrasotgzkj rkzzkx cuarj hk znk iovnkx zkdz. Znk iutzotagrre ingtmotm otzkxtgr lruc ul krkizxoioze zngz igaykj znk xuzuxy zu ingtmk cgy tuz xgtjus, haz oz joj ixkgzk g vuregrvnghkzoi iovnkx zngz iuarj hk jollkxktz kgin zosk oz cgy aykj.
+
+
+------Atbash podst 
+qwerty
+
+Obt Ticahq hqebcit uqn q yctgr pico pntr ci Ujmgr Uqm CC wx Atmhqi yctgr qation oj tiemxko qir rtemxko htnnqatn qir ejhhpiceqocjin. Nchcgqm oj obt Ytcnotg ypieocji jy obt 1970n, obt Ticahq hqebcit uqn jit jy obt ycmno htebqicztr htobjrn jy tiemxkocia otvo pncia qi cotmqocst eckbtm. Co thkgjxtr q ntmctn jy mjojmn obqo, ucob njht tgteomcecox, q gcabo wpgw, qir q mtygteojm, qggjutr obt jktmqojm oj tcobtm tiemxko jm rtemxko q htnnqat. Obt jmcaciqg kjncocji jy obt mjojmn, nto ucob tqeb tiemxkocji qir wqntr ji q kmtqmmqiatr kqootmi obqo ci opmi uqn wqntr ji obt eqgtirqm, qggjutr obt hqebcit oj wt pntr, tsti cy co uqn ejhkmjhcntr. Ubti obt Ticahq uqn ci pnt, ucob tqeb npwntlptio ftx kmtnn, obt mjojmn ujpgr ebqiat ci qgcaihtio ymjh obtcm nto kjncocjin ci npeb q uqx obqo q rcyytmtio gtootm uqn kmjrpetr tqeb ocht. Obt jktmqojm, ucob q htnnqat ci bqir, ujpgr tiotm tqeb ebqmqeotm cioj obt hqebcit wx kmtnncia q oxktumcotm-gcft ftx. Obt mjojmn ujpgr qgcai, qir q gtootm ujpgr obti cggphciqot, otggcia obt jktmqojm ubqo obt gtootm mtqggx uqn. Gcftucnt, ubti tieckbtmcia, obt jktmqojm ujpgr kmtnn obt ftx qir obt cggphciqotr gtootm ujpgr wt obt eckbtm otvo. Obt ejiocipqggx ebqiacia ciotmiqg ygju jy tgteomcecox obqo eqpntr obt mjojmn oj ebqiat uqn ijo mqirjh, wpo co rcr emtqot q kjgxqgkbqwtoce eckbtm obqo ejpgr wt rcyytmtio tqeb ocht co uqn pntr.
+
+-------HILL
+zasx
+
+Hjw Incuua qautyno egi m vownx unch wiax en Mmtph Egj WS lc Ywvoin lscph aiwhhc ho whylcxh enr xqylcxh uwsimusi mnr yuoygjsiavsyny. Iookpqj pm ntk Vasmhsp bgjyfsyn kv htk 1970i, htk Whswoi oiypsbw gay mfw ev htk vojsh uwotwncbwx swptgxa md whylcxhgni hsdt gusbu en chsjuhgfc ymlpwv. Sj wkldmywl a ywvsci wv nmnmti htwh, qsjt umiw ipeyfjwymhk, a tswtr zkpn, anx c jivfwohoj, upjmewl hjw elyjuhoj pm gsjtkj inujalf mt xqylcxh e owikaiw. Ptk mtswsbat luiohgmf md hjw vmnmti, kwp eihj wuyp whylcxhgmf anx zaywl mf a hjiabjuniwl lkhzwvn vtwh gn vgxn may zsiax mn vtk ykpenrab, atpaeux xtk oiypsbw pm pw miax, qfcn cv oh qay yuopjeokiax. Otkn vtk Whswoi egi on sia, eihj wuyp iezqwygknv qmc xjiik, hjw vmnmti ymkph ypanus sb atswnqwhh pjeo dtksp iah lmqsjsyny sb ieyp a mag hjav a rszvajinv pehzwv egi tjexuyyx qaut rsew. Ptk mzwvavmt, eihj a qwsimus sb twnr, eqgpx qnvwv wuyp ypabauhsj wnvm ntk oiypsbw rc xjiiksbu e hklyehsjwv-psqm qmc. Ltk jehojs eqgpx cpsur, anx c pehzwv eqgpx xtkn cpjgmsbavw, pwnpsni hjw elyjuhoj gtwh ztk pehzwv jiatpw egi. Fskwgsmw, gtkn onusvtkjwni, hjw elyjuhoj gmkph llwsi htk qmc qnr hjw wpjgmsbavwl pehzwv eqgpx zw ptk ymlpwv hsdt. Hjw omfhgnsatpw ypanugni sbhsjhat vfme md wnwohfsisjc ltwh yasiax xtk jehojs ho ypanus egi zmn junrmi, zkh gh vsf ylwuhs a hmlcqpxtwzghgy esvtkj ptwh ymkph zg xevxwvwhh saut rsew wh qay guwl.
+
+---------------------------------------------------------2.X
+
+The preceding clearly demonstrated that though the substitution cipher is fun and easy, it is also vulnerable and weak. It is especially susceptible to frequency analysis. Given a large enough sample, a cipher can easily be broken by mapping the frequency of the letters in the ciphertext to the frequency of letters in the language or dialect of the ciphertext (if it is known). To make ciphers more difficult to crack, Blaise de Vigenère from the sixteenth-century court of Henry III of France proposed a polyalphabetic substitution. In this cipher, instead of a one-to-one relationship, there is a one-to-many. A single letter can have multiple substitutes. The Vigenère solution was the first known cipher to use a keyword.
+
+
+---------vigenera 
+blackwindow
+
+Use rbakrgwjh nlgkntl gsipysvbwbrg hdbe tjyqou wva tfbudebhwwko nirraz vv tqo lnf owal, lh et lluy rcyqsnbmlg kjl jhog. Je iu ooxrfwwmwy ueokrshecwe vy bzrtiaony cxwtlvwo. Htvgx w tnuua fyowqd anpdhf, l ckzdme foj flskvu jr efklpn di iicswjh ehg pnmdxsjdj oh ddm yhhpfcs kx ppr fwliprvotb gr hdf qrgaqmafm kg wevdazf lb pip lcxccnjs ks oicvakg rt pip ckzdmewstu (tf kd ea xqcso). Eo okgm plddfcs oynm qltbjnund pw puoyl, Mlcsom qh Jehpngba nera pip skhpmrqhd-dpnveng prinu zf Jojzl LWE pq Ftkjkr sfkqzsgn w xbomwmahclabvf gqcdtkdqbvrb. Eo ehkc yqcksn, jysvowl bi o kop-tq-yjm ehzwutopcdqc, wvasp iu k kvr-wc-ibyy. C cevtos hfetgb yia korf xundexyh gqcdtkdqbrv. Hdf Giiojmeh gkmftkyj env hdf qitcp sarkj dtpjon bb xga b veagkzq.
+
+
+---------------- atbash
+sailor
+
+Tco mpoioldjb igospgy lohkjqtpstol tcst tckubc tco quaqtdtutdkj idmcop dq ruj sjl osqy, dt dq sgqk vugjopsago sjl wosf. Dt dq oqmoidsggy quqiomtdago tk rponuojiy sjsgyqdq. Bdvoj s gspbo ojkubc qshmgo, s idmcop isj osqdgy ao apkfoj ay hsmmdjb tco rponuojiy kr tco gottopq dj tco idmcoptoxt tk tco rponuojiy kr gottopq dj tco gsjbusbo kp ldsgoit kr tco idmcoptoxt (dr dt dq fjkwj). Tk hsfo idmcopq hkpo ldrrdiugt tk ipsif, Agsdqo lo Vdbojopo rpkh tco qdxtoojtc-iojtupy ikupt kr Cojpy DDD kr Rpsjio mpkmkqol s mkgysgmcsaotdi quaqtdtutdkj. Dj tcdq idmcop, djqtosl kr s kjo-tk-kjo pogstdkjqcdm, tcopo dq s kjo-tk-hsjy. S qdjbgo gottop isj csvo hugtdmgo quaqtdtutoq. Tco Vdbojopo qkgutdkj wsq tco rdpqt fjkwj idmcop tk uqo s foywkpl.
+
+--------------playfair 
+cloud
+
+PN AR XK OA LN TN LO FB QO ZU FK DK TP PE RG GZ PH RZ PN UD AN PN FR LF TP NQ DS KL HD HQ KA QK YM DM GH OG FP WM QN PF UQ CX DO KG PE IB FB TG XB EH NQ MQ FR RA LH BC UW YF PU AR QN IB GR UE XK SL GK UV GH BC UY MQ BN XA HG CB TE KO GK UD AN PF HS OB HA HQ KA PO GH FB QM UW EF EQ ER GK FW HF RV QH TN PN FG XK SL GK UV UE PN BO GR RG ST KH PN AO HQ KA SP KO RZ RD PN FG XK SL GK UV UE OB RZ RG ST KH PN BO GH FD BA KE TO HB OB DP UE PN AO HQ KA SP KO QN BM QN RM KD ZI RD HF RK LH VP KX YS EX GO MB BM LD DQ RD OP HA IE CB MQ GO AX NB GK KX FG XE NS KA QM ZR KO GK PN OA TZ OS VU UD SP UE KA KT WM KW KL EY ES GH OA QS CR UR GO HV UO VF CQ PH EF QN UP LF TP NQ DS KL HK TZ IK PU HQ KA QK MT RG GC UE EC KG RD DK KX BO GP KL MT IK QP KA XK MQ EC KG RD HF MZ FP KH BD BO GR RG PO GH PH XA SF DQ HQ OB YF FQ QN SD RG TP KA WH AF KG XK RU OD QN DK VB TP KA BM ST RN KD ZI LH VP KX RD FY FB RK ZX EX OZ
+
+
+---------------------------------3.x
+
+Simply put, it works like this: First, the idea is to confuse the real message and the encrypted message. Like other encryption methods, it uses the XOR to do this. AES requires either 128, 192, or 256 bits to work; however, one must have a “key” with which to start. This might be a password, or a string of random numbers stored on a card, or any input derived from an unchanging, but unique thing, such as your retina. From there, the key needs to be both obfuscated and expanded to match the correct block size, and to be parceled up into the little packages, or blocks, that will be used in later operations of the encryption sequence. To accomplish this, a procedure called Password-Based Key Derivation Function (PBKDF2) is used.10 Enciphering is achieved by then using an XOR and hashing the bits together again and again and again through a shift row offset. This effectively shuffles the deck.Second: Introduce diffusion by using a simple column transposition to rearrange the bits until they are no longer sensible as letters, and then hashing the bits using substitution (XOR). Furthermore, AES employs a key expansion and multiple rounds. For example, if you XOR a string and produce ciphertext, you have successfully obfuscated the message. If you want anyone to read it, just give them the key and they can reverse the XOR to get the correct text. The problem arises in portability: We want people to be able to decrypt our messages, but only if they have the pass key. This is where things get tricky, because we have to have a key that is long (128 or 256 bits) but that can be generated from a password that is reasonably short, so that we can remember it. Ultimately, this is the weakness of AES or actually the gateway into it, that is, the weak link.
+
+
+---------------playfair
+slow
+4F 47 20 48 54 20 57 56 20 4E 56 20 51 4D 20 52 41 20 57 51 20 47 57 20 4F 48 20 52 4B 20 50 4D 20 47 4F 20 44 4D 20 4E 57 20 51 5A 20 50
+4D 20 44 4B 20 45 46 20 4F 4D 20 41 4E 20 4C 44 20 53 51 20 42 5A 20 57 42 20 50 4D 20 4B 59 20 46 57 20 41 48 20 42 57 20 4C 53 20 4B 42
+20 53 54 20 46 51 20 4B 43 20 42 52 20 45 50 20 56 52 20 52 46 20 46 49 20 42 57 20 4C 53 20 4B 42 20 4F 48 20 52 4B 20 41 51 20 4B 43 20
+59 4B 20 50 42 20 59 57 20 51 4E 20 51 44 20 54 47 20 46 52 20 49 4C 20 42 4F 20 4D 51 20 53 42 20 42 57 20 50 4D 20 44 59 20 57 51 20 51
+41 20 49 44 20 50 4D 20 47 4F 20 57 46 20 57 4E 20 44 52 20 58 47 20 59 4B 20 57 42 20 4D 51 20 4B 43 20 51 57 20 4E 45 20 4D 51 20 41 4E
+20 57 41 20 57 51 20 4D 49 20 57 41 20 43 59 20 4B 59 20 53 51 20 46 4B 20 53 42 20 50 4D 20 4C 5A 20 46 57 20 52 4B 20 57 45 20 4D 51 20
+4B 4C 20 49 4B 20 48 50 20 51 41 20 41 4E 20 57 54 20 51 5A 20 50 4D 20 47 4F 20 47 4B 20 48 49 20 4E 46 20 46 57 20 54 4C 20 4F 55 20 4C
+41 20 57 51 20 49 44 20 54 57 20 41 4E 20 51 4B 20 55 4E 20 41 44 20 54 57 20 51 42 20 41 49 20 55 53 20 47 46 20 4B 59 20 4F 55 20 41 4E
+20 57 51 20 46 45 20 53 51 20 4C 46 20 57 54 20 49 44 20 54 57 20 52 55 20 47 51 20 4E 56 20 51 46 20 4B 59 20 48 58 20 46 45 20 45 54 20
+41 49 20 53 54 20 53 55 20 48 50 20 53 54 20 48 4B 20 55 4E 20 47 53 20 4E 5A 20 51 47 20 4E 58 20 46 52 20 49 4B 20 55 4E 20 42 53 20 48
+50 20 53 4C 20 58 57 20 59 4E 20 59 4B 20 51 4D 20 54 53 20 45 54 20 41 49 20 50 4D 20 4B 59 20 46 52 20 4B 43 20 52 4B 20 55 52 20 44 59
+20 46 45 20 41 4E 20 53 44 20 46 43 20 41 51 20 49 4C 20 43 42 20 53 42 20 46 4C 20 52 46 20 46 4F 20 51 42 20 44 59 20 54 4C 20 51 42 20
+46 45 20 51 41 20 54 46 20 50 46 20 4D 50 20 4B 43 20 44 4C 20 51 59 20 59 4B 20 46 50 20 43 53 20 4C 44 20 47 57 20 4D 58 20 46 57 20 51
+42 20 51 41 20 43 46 20 54 4C 20 50 45 20 43 57 20 46 45 20 56 4E 20 47 51 20 51 41 20 50 4D 20 43 57 20 4D 51 20 50 41 20 43 52 20 4C 46
+20 4D 57 20 4B 42 20 4C 57 20 4E 45 20 4F 57 20 45 48 20 41 4E 20 4D 4C 20 52 41 20 48 4F 20 53 43 20 42 59 20 57 42 20 49 51 20 50 53 20
+46 5A 20 4B 59 20 4C 51 20 4B 59 20 46 5A 20 51 44 20 55 42 20 41 44 20 50 4D 20 44 59 20 42 52 20 45 50 20 56 52 20 51 4D 20 53 51 20 57
+42 20 4E 58 20 42 52 20 44 46 20 51 41 20 4C 46 20 44 4C 20 48 54 20 4F 48 20 4C 47 20 50 4D 20 47 4F 20 4C 54 20 51 57 20 44 46 20 42 58
+20 59 4B 20 46 4C 20 4F 56 20 57 43 20 43 51 20 53 4C 20 4C 41 20 57 51 20 45 43 20 53 4C 20 46 45 20 52 4B 20 58 45 20 4B 59 20 48 58 20
+46 5A 20 51 44 20 54 42 20 53 55 20 46 50 20 51 44 20 50 51 20 45 47 20 45 42 20 47 4F 20 53 42 20 46 45 20 42 52 20 44 48 20 56 50 20 4B
+59 20 47 51 20 48 4B 20 4C 53 20 48 50 20 4B 44 20 59 43 20 45 43 20 5A 52 20 4B 43 20 55 53 20 4F 47 20 55 4E 20 53 54 20 4F 44 20 54 57
+20 51 42 20 4D 4C 20 4C 47 20 47 51 20 4D 4E 20 4B 43 20 44 47 20 4E 41 20 51 41 20 4B 42 20 50 4D 20 4B 59 20 53 4D 20 4F 4D 20 54 53 20
+51 42 20 53 4D 20 4F 4D 20 54 53 20 51 42 20 53 4D 20 4F 4D 20 50 4E 20 4B 50 20 53 58 20 48 49 20 53 4C 20 49 4B 20 4D 5A 20 51 57 20 41
+57 20 44 5A 20 42 41 20 46 52 20 50 4D 20 47 4F 20 46 42 20 42 46 20 46 50 20 48 58 20 43 57 20 55 57 20 47 56 20 44 5A 20 43 41 20 42 57
+20 50 4D 20 46 45 20 46 44 20 47 57 20 46 44 20 53 51 20 49 51 20 50 4E 20 51 57 20 42 58 20 44 46 20 49 51 20 44 5A 20 42 5A 20 4F 47 20
+53 51 20 45 55 20 53 42 20 47 51 20 4D 53 20 4F 47 20 48 54 20 57 43 20 44 4C 20 53 56 20 47 54 20 4E 54 20 53 54 20 4C 4E 20 57 4C 20 4D
+51 20 51 44 20 50 4E 20 57 51 20 46 57 20 51 59 20 54 57 20 55 4E 20 46 52 20 4B 43 20 44 47 20 4E 41 20 53 55 20 51 4D 20 41 50 20 4B 43
+20 5A 57 20 59 4B 20 51 53 20 4F 57 20 55 4E 20 4B 59 20 57 42 20 55 42 20 47 44 20 57 43 20 53 4C 20 57 43 20 51 5A 20 52 46 20 4E 57 20
+53 54 20 46 51 20 4B 43 20 50 47 20 53 4C 20 49 4B 20 55 4E 20 50 4D 20 46 43 20 4D 51 20 42 53 20 4F 47 20 55 4E 20 42 53 20 47 42 20 51
+4D 20 4E 5A 20 51 4D 20 53 51 20 4F 44 20 54 45 20 59 4E 20 50 4D 20 4B 59 20 49 41 20 59 4B 20 57 46 20 57 42 20 48 54 20 4F 57 20 55 57
+20 57 4D 20 4B 57 20 44 59 20 54 4C 20 55 42 20 51 44 20 54 53 20 51 42 20 47 5A 20 41 50 20 48 51 20 57 43 20 51 57 20 53 55 20 42 4F 20
+44 41 20 59 4B 20 5A 4F 20 48 54 20 57 43 20 4D 44 20 58 57 20 56 59 20 57 51 20 53 4C 20 4E 54 20 47 51 20 4D 53 20 51 42 20 51 54 20 44
+49 20 56 42 20 46 44 20 48 51 20 4B 43 20 54 4E 20 44 59 20 52 5A 20 53 58 20 4D 4C 20 59 43 20 42 53 20 44 56 20 44 46 20 4F 55 20 41 42
+20 56 53 20 57 56 20 53 44 20 42 5A 20 4C 42 20 46 5A 20 46 45 20 50 4D 20 46 4B 20 42 57 20 4C 53 20 4B 42 20 4D 44 20 58 57 20 59 53 20
+53 54 20 5A 46 20 52 55 20 53 51 20 46 52 20 57 51 20 46 57 20 49 51 20 51 4D 20 53 42 20 4E 4D 20 48 58 20 46 52 20 4B 43 20 54 5A 20 4B
+43 20 52 4B 20 5A 57 20 51 42 20 50 4D 20 4B 57 20 46 4C 20 50 54 20 43 59 20 4B 59 20 57 42 20 50 4D 20 44 59 20 57 51 20 51 41 20 4B 42
+20 51 5A 20 50 4D 20 46 44 20 57 51 20 59 4B 20 46 50 20 52 46 20 5A 51 20 50 4D 20 43 52 20 51 57 20 43 53 20 46 4B 20 57 54 20 47 4F 20
+42 57 20 47 51 20 51 4C 20 54 4E 20 53 46 20 48 4F 20 4D 51 20 57 45 20 4B 45 20 53 54 20 4E 51 20 44 57 20 56 43 20 46 52 20 53 44 20 46
+57 20 43 53 20 46 52 20 44 49 20 46 44 20 59 57 20 51 4E 20 53 58 20 54 4B 20 42 57 20 4C 53 20 4B 42 20 42 47 20 5A 4E 20 53 51 20 57 56
+20 4D 44 20 50 4D 20 4B 57 20 4D 4C 20 59 43 20 50 4D 20 43 52 20 53 4C 20 57 47 20 4B 57 20 50 4D 20 47 4F 20 47 4F 20 4C 4B 20 4B 59 20
+46 52 20 49 4B 20 55 4E 20 42 4E 20 46 52 20 4E 54 20 48 44 20 52 57 20 43 46 20 46 4C 20 53 42 20 4B 45 20 43 4B 20 4C 5A 20 46 52 20 4C
+49 20 4C 5A 20 46 57 20 52 4B 20 5A 52 20 4D 4C 20 51 4D 20 4C 4F 20 53 51 20 49 53 20 4E 45 20 4D 51 20 42 47 20 5A 4E 20 50 4D 20 46 5A
+20 46 4C 20 55 47 20 42 4B 20 42 52 20 4B 59 20 46 5A 20 46 45 20 45 54 20 41 49 20 4C 54 20 53 4C 20 4C 41 20 57 51 20 46 51 20 4D 4C 20
+51 4D 20 57 4E 20 46 57 20 4C 57 20 54 53 20 43 53 20 55 57 20 49 4C 20 54 4E 20 4C 57 20 50 4D 20 46 5A 20 45 4B 20 46 4C 20 50 54 20 46
+4B 20 46 4B 20 43 46 20 51 4B 20 4E 5A 20 41 50 20 4B 47 20 46 5A 20 43 57 20 5A 52 20 49 4B 20 4F 47 20 41 4E 20 4B 43 20 45 4B 20 57 4D
+20 52 42 20 4F 55 20 4C 57 20 4D 46 20 42 57 20 57 51 20 4C 46 20 4E 5A 20 53 4F 20 57 56 20 50 4D 20 42 4B 20 46 5A 20 4B 45 20 57 5A 20
+47 51 20 51 41 20 4D 51 20 50 4D 20 46 5A 20 47 4F 20 50 4D 20 4B 45 20 46 57 20 48 57 20 47 51 20 49 59
+
+---------------------- hill
+faaf
+
+Moixdq xwr, or gshym doyu rjom: Zohmr, rju opua om rs ksnzwmu rju huad iummaeu anp rju unkhqxrup iummaeu. Doyu srjuh unkhqxrosn iurjspm, or wmum rju LSH rs ps rjom. AUM hucwohum uorjuh 128, 192, sh 256 form rs gshy; jsgubuh, snu iwmr jabu a “yuq” gorj gjokj rs mrahr. Rjom ioejr fu a xammgshp, sh a mrhone sz hanpsi nwifuhm mrshup sn a kahp, sh anq onxwr puhobup zhsi an wnkjaneone, fwr wnocwu rjone, mwkj am qswh hurona. Zhsi rjuhu, rju yuq nuupm rs fu fsrj sfzwmkarup anp ulxanpup rs iarkj rju kshhukr fdsky movu, anp rs fu xahkudup wx onrs rju dorrdu xakyaeum, sh fdskym, rjar godd fu wmup on daruh sxuharosnm sz rju unkhqxrosn mucwunku. Rs akksixdomj rjom, a xhskupwhu kaddup Xammgshp-Famup Yuq Puhobarosn Zwnkrosn (XFYPZ2) om wmup.10 Unkoxjuhone om akjoubup fq rjun wmone an LSH anp jamjone rju form rseurjuh aeaon anp aeaon anp aeaon rjhswej a mjozr hsg szzmur. Rjom uzzukrobudq mjwzzdum rju puky.Muksnp: Onrhspwku pozzwmosn fq wmone a moixdu ksdwin rhanmxsmorosn rs huahhaneu rju form wnrod rjuq ahu ns dsneuh munmofdu am durruhm, anp rjun jamjone rju form wmone mwfmrorwrosn (LSH). Zwhrjuhishu, AUM uixdsqm a yuq ulxanmosn anp iwdroxdu hswnpm. Zsh ulaixdu, oz qsw LSH a mrhone anp xhspwku koxjuhrulr, qsw jabu mwkkummzwddq sfzwmkarup rju iummaeu. Oz qsw ganr anqsnu rs huap or, twmr eobu rjui rju yuq anp rjuq kan hubuhmu rju LSH rs eur rju kshhukr rulr. Rju xhsfdui ahomum on xshrafodorq: Gu ganr xusxdu rs fu afdu rs pukhqxr swh iummaeum, fwr sndq oz rjuq jabu rju xamm yuq. Rjom om gjuhu rjonem eur rhokyq, fukawmu gu jabu rs jabu a yuq rjar om dsne (128 sh 256 form) fwr rjar kan fu eunuharup zhsi a xammgshp rjar om huamsnafdq mjshr, ms rjar gu kan huiuifuh or. Wdroiarudq, rjom om rju guaynumm sz AUM sh akrwaddq rju earugaq onrs or, rjar om, rju guay dony.
+
+------------------vigenere
+whitestone
+
+Opuipq iig, mp dwkok ewxi poql: Jakgg, xdl qwis bg gs yvvyykx hui nlie qwlgnka hvw xzx sagnfxmiv fsfwwnm. Emcx cglay mggjrdgmku uxxzhrf, mp baxw las KSN aw ws lawf. EAZ zxumbfrw apbaij 128, 192, hf 256 ompz bh agky; ussldxv, ggs zyoa ptzw t “yrc” spba azbqu xk zbtvl. Mvvw ipoax tx o ceozehvv, hf n wpyqgk gy fnrzvu gyeusew oawkiv hb n gwyl, hv sgm vrlbb wijbjrh bywf ef nbplwuobry, uig yjpyni lawak, obka ek rchv nlbbrs. Yfbq pomki, las xiu umxhk mc oi xvba styifgwamw efw sktwulxh lh anxyo bai uhfeiya jesud gvda, hvw xg us cenjmeiv nd vrpv bai dbhgpa wivoszsf, sn ithgcl, huep dqep tx ifiz pv eelxf btayimmggg bj pom xrukmcxevv liinsaga. Aw tguhacpezp mlal, o cvkjmwyjx qnphll Ieklkbvz-Iiliv Dsl Hayqoelbca Jqukmmgg (DOOZM2) ql ykxr.10 Rrypxaijbbt mo hkamwosq fu apxr mlwak wu FHV sgr ueooqgk las ompz bhkwmvrv wnibr sgr nkwpv trv tunmj apksmzv n wdpnm vgp csjolb. Mlal ssjajbbzwem flqmneik mvr hajs.Liuhbq: Mjazhhmvs qmbmclmgg pl yopvz e kbacpa jweyeg heejzxhwamwbr pv zxejkoaka apx famg hrppt mlwr oei jv thryxf fijzqupw tg yipamkw, sgr glau ptwzbbt xdl jbxk ngvrc zcuwlbhhxevv (QSJ). Yiexdlzfsjx, ORW atxesql o xiu lfieflwbr wul fydmwcpa ywnrvl. Tbv aeiftdx, ws ckb FHV s lhemjn igh hkcqyyl kbtzxfgita, ghy ztjr wqjkxwkyiypu vjyykvogiz apx qwlgnka. Pn rsm poax wughrw mc eiwk qm, nmlh tmrl baie mvr oaf igh lasl gwu zxzwkgr xdl FHV lh urx pom vsjkspx plfm. Xzx desxsmf ejbgrw eu xhvltpvpeag: Pi otbg tavxei lh pr exsm ms vxqecla wnv exgfecla, uyl hbyc em baiq aoii pom iekl yrc. Poql mk pvrva apbryl urx pyqvoq, uspeqzm pi ztjr xk oioi s dsl xdhb bw dhbt (128 sn 256 iqmw) tnh glwa ktr tx urrayimiv yfbq w wilwohfq xdhb bw jxofsjhjec kacex, ov bael ps pej ymfieuse mp. Btmmethrpu, apbw al hui slidrwlg bj WLA hv svhhehsg mlw zogishg brlh wg, xdhb bw, las jiwr tbrc.
+
