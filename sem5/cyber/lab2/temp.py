@@ -1,6 +1,5 @@
 import string
 
-
 def generate_substitution_key(plaintext, ciphertext):
     # utwórz listę dla klucza, wypełnioną początkowo znakami '-'
     alphabet = list(string.ascii_uppercase)
@@ -22,7 +21,6 @@ def generate_substitution_key(plaintext, ciphertext):
             key[i] = remaining_letters.pop(0)
 
     return ''.join(key)
-
 
 # przykładowe teksty jawny i zaszyfrowany
 plaintext = """
