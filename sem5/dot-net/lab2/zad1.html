@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Przykładowa strona HTML5">
+    <meta name="author" content="zawodev">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML5, strona, przykładowa">
+    <title>Przykładowa strona HTML5</title>
+</head>
+<body>
+
+    <header id="poczatek">
+        <h1>(i) Przykładowa strona HTML5</h1>
+        <nav>
+            <ul>
+                <li><a href="#tabela">(i) Przejdź do tabeli</a></li>
+                <li><a href="#listy">(i) Przejdź do list</a></li>
+                <li><a href="#formularz">(i) Przejdź do formularza</a></li>
+                <li><a href="#poczatek">(i) Przejdź na początek</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>(a) Znaki specjalne</h2>
+        <p>Pięć przykładowych znaków specjalnych: &copy;, &euro;, &reg;, &lt;, &gt;</p>
+    </section>
+
+    <section>
+        <h2>(b) Formatowanie tekstu</h2>
+        <p><strong>Pogrubienie</strong> - aby podkreślić ważne elementy</p>
+        <p><em>Kursywa</em> - aby podkreślić coś innego</p>
+        <p><u>Podkreślenie</u> - dla szczególnych fragmentów</p>
+        <p><mark>Zaznaczenie</mark> - aby coś uwidocznić</p>
+        <p><del>Przekreślenie</del> - dla usuniętych elementów</p>
+    </section>
+
+    <section id="listy">
+        <h2>(c, d, e, f) Listy</h2>
+        <h3>(c) Listy uporządkowane</h3>
+        <ol>
+            <li>Pierwszy element</li>
+            <li>Drugi element</li>
+            <li>Trzeci element</li>
+        </ol>
+
+        <h3>(d) Listy nieuporządkowane</h3>
+        <ul>
+            <li>Pierwszy element</li>
+            <li>Drugi element</li>
+            <li>Trzeci element</li>
+        </ul>
+
+        <h3>(e) Lista definicji</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Język do tworzenia stron internetowych</dd>
+            <dt>CSS</dt>
+            <dd>Język do stylizowania stron internetowych</dd>
+        </dl>
+
+        <h3>(f) Zagnieżdżone listy (4 poziomy)</h3>
+        <ul>
+            <li>Pierwszy poziom
+                <ul>
+                    <li>Drugi poziom
+                        <ul>
+                            <li>Trzeci poziom
+                                <ul>
+                                    <li>Czwarty poziom</li>
+                                    <li>Czwarty poziom</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Drugi poziom</li>
+                </ul>
+            </li>
+            <li>Pierwszy poziom</li>
+            <li>Pierwszy poziom</li>
+        </ul>
+    </section>
+
+    <section id="tabela">
+        <h2>(g) Tabela</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Kategoria</th>
+                    <th colspan="2">Opis</th>
+                    <th>Data</th>
+                    <th>Autor</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="5">Podsumowanie tabeli</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td rowspan="2">Technologia</td>
+                    <td>HTML</td>
+                    <td>Język znaczników</td>
+                    <td>2021</td>
+                    <td>wavodez</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>Stylizacja stron</td>
+                    <td>2023</td>
+                    <td>vadozew</td>
+                </tr>
+                <tr>
+                    <td>Programowanie</td>
+                    <td colspan="2">JavaScript</td>
+                    <td>2024</td>
+                    <td>zawodev</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="formularz">
+        <h2>(h) Formularz</h2>
+        <form action="#" method="post">
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="age">Wiek:</label>
+            <input type="number" id="age" name="age"><br><br>
+
+            <label for="password">Hasło:</label>
+            <input type="password" id="password" name="password"><br><br>
+
+            <label for="birthday">Data urodzenia:</label>
+            <input type="date" id="birthday" name="birthday"><br><br>
+
+            <label for="color">Ulubiony kolor:</label>
+            <input type="color" id="color" name="color"><br><br>
+
+            <label for="file">Prześlij plik:</label>
+            <input type="file" id="file" name="file"><br><br>
+
+            <label for="gender">Płeć:</label>
+            <select id="gender" name="gender">
+                <option value="male">Mężczyzna</option>
+                <option value="female">Kobieta</option>
+                <option value="other">Inna</option>
+            </select><br><br>
+
+            <label for="terms">Zaakceptuj warunki:</label>
+            <input type="checkbox" id="terms" name="terms"><br><br>
+
+            <label for="range">Zakres:</label>
+            <input type="range" id="range" name="range" min="0" max="100"><br><br>
+
+            <input type="submit" value="Wyślij">
+            <input type="reset" value="Resetuj">
+        </form>
+    </section>
+
+    <section>
+        <!-- Lorem ipsum, so the page is longer -->
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum accumsan efficitur. Phasellus condimentum facilisis libero non ornare. Praesent id arcu porttitor, elementum tellus et, elementum sapien. Maecenas ut ipsum nulla. Vestibulum bibendum risus nulla, at mattis elit commodo a. Maecenas vitae mauris sagittis nulla imperdiet maximus id hendrerit ipsum. Nam sit amet eleifend risus, sit amet faucibus ligula.
+        </p> <p>
+            Aliquam libero urna, mattis quis justo quis, gravida laoreet tellus. Vivamus tincidunt bibendum ligula, ac dapibus elit ullamcorper in. Mauris ac volutpat lectus, non eleifend velit. Etiam finibus neque magna, non elementum justo ultricies a. Cras luctus nunc ac fringilla sagittis. Nulla justo augue, gravida sed tellus sit amet, accumsan vestibulum risus. Ut pulvinar sagittis sollicitudin. Phasellus elementum facilisis libero, nec aliquam arcu varius et.
+        </p> <p>
+            Mauris placerat, sapien a sagittis varius, purus nisl rutrum magna, pharetra pellentesque sapien ante quis urna. Integer accumsan laoreet sapien, tincidunt dignissim dolor commodo non. Praesent non erat vulputate, varius erat at, tincidunt orci. Donec tristique, mi quis varius suscipit, sapien ipsum rhoncus quam, malesuada interdum magna nisl a diam. Integer pharetra, dolor at pulvinar cursus, dolor dolor vehicula urna, at ultricies nibh neque sed erat. In id leo ligula. Vestibulum malesuada congue sapien, cursus pharetra ligula consequat sed. Donec sollicitudin fermentum pulvinar. Nunc consequat ante in odio gravida, at lobortis lacus iaculis. Maecenas sed ante vitae magna iaculis sodales. Etiam et odio viverra urna lacinia lobortis sit amet sit amet lacus. Aliquam in purus pulvinar, tincidunt est nec, mattis ipsum. Proin finibus nibh sem, id tempor lacus scelerisque et. Mauris at pharetra ex. Fusce sed ipsum eleifend, sagittis sem non, facilisis odio.
+        </p> <p>
+            Cras id ornare dolor, eu dignissim lacus. Integer vitae ante nec ante pretium malesuada quis sed sapien. Vestibulum dignissim metus ligula, non eleifend quam suscipit id. Morbi gravida libero id enim accumsan fringilla. Suspendisse eu eros odio. Sed eleifend eget mauris at consectetur. Sed consequat turpis et eros hendrerit, non ornare eros porta. Sed malesuada nisl eu massa mollis cursus.
+        </p> <p>
+            Nullam vitae malesuada diam, quis lacinia est. Nulla venenatis ornare lorem, et faucibus nisi egestas ut. Pellentesque id lacus cursus, imperdiet libero id, faucibus massa. Nunc tristique leo orci. Integer neque neque, efficitur in nisl eu, congue commodo nunc. Donec iaculis quam elementum, condimentum orci id, placerat magna. Curabitur et risus in arcu bibendum scelerisque. Cras malesuada faucibus urna, et pulvinar leo pulvinar ac. Nulla nec ornare enim, at finibus nunc. Sed sagittis quam nunc, sed porttitor felis laoreet sed.
+        </p> <p>
+            Sed sed mollis purus, sagittis dapibus risus. Vivamus lorem ipsum, ullamcorper non vulputate et, auctor nec diam. Integer fringilla condimentum tellus, ac tempor tellus accumsan ac. Aenean vitae felis cursus quam ultrices convallis. Curabitur mattis nunc a purus cursus, et pellentesque orci ullamcorper. Cras consectetur odio eget volutpat tincidunt. Suspendisse tincidunt sagittis placerat. Vestibulum cursus mattis dapibus. Sed quis tortor rhoncus, lacinia urna et, dignissim lacus. Duis sollicitudin ligula in urna luctus, id malesuada est ultrices. Donec pellentesque congue sollicitudin. Suspendisse porta diam eu egestas placerat. Donec sapien dui, suscipit et leo quis, pellentesque tempus dolor. In enim nunc, hendrerit a condimentum at, elementum nec metus. Sed elit libero, vehicula placerat ipsum rutrum, consectetur tempor purus.
+        </p> <p>
+            Nam vestibulum a lectus a fringilla. Praesent in velit magna. Aliquam efficitur, nibh vel commodo viverra, purus magna euismod mi, ut maximus nunc nunc ac sapien. In vulputate posuere lacus, et luctus arcu vestibulum at. Maecenas venenatis a lorem non tincidunt. Sed ultricies purus in dictum viverra. Nulla nulla nibh, ultricies vel auctor in, volutpat sed arcu. Mauris vehicula odio ac est efficitur, non auctor est ullamcorper. Duis blandit pretium enim. Fusce et ex sapien. Vestibulum aliquam volutpat nulla vitae rhoncus. Aliquam erat volutpat.
+        </p> <p>
+            Suspendisse sollicitudin tellus vel semper fringilla. Duis placerat condimentum orci, at rhoncus sapien sagittis id. Sed pretium mi non augue dignissim consequat. Nunc eu felis at dui maximus iaculis. Suspendisse feugiat dapibus convallis. Curabitur consequat dignissim dictum. Fusce in condimentum magna, sit amet hendrerit massa. Maecenas et dui nec massa dignissim ornare. Donec et semper lorem.
+        </p> <p>
+            Donec vitae purus lorem. Mauris a enim tortor. Mauris mauris lacus, finibus ut elementum quis, auctor nec quam. Pellentesque leo metus, vestibulum sit amet nulla vel, gravida molestie libero. Nulla nec fermentum nisl. Aenean non urna congue, auctor tellus sit amet, facilisis ipsum. In imperdiet ex id ipsum elementum tincidunt. Integer tincidunt vehicula dui at venenatis. Fusce aliquet lacinia sem quis aliquam. Pellentesque ut ornare magna. Donec eu lacus augue. Phasellus placerat nunc eu turpis semper rhoncus.
+        </p> <p>
+            Curabitur sit amet velit aliquam, pretium mauris eu, fermentum dui. Mauris ut pharetra tortor. Curabitur mattis ex quis egestas ultricies. Cras hendrerit, metus ac varius fermentum, est ligula pretium nisl, a ornare nunc sapien sit amet enim. Etiam dignissim vehicula tortor, luctus euismod ipsum eleifend in. Nullam ullamcorper tristique mauris, et laoreet velit eleifend id. Curabitur a massa pharetra metus consequat finibus. Maecenas ornare rutrum nibh, ut ultrices sapien commodo non. Curabitur blandit, nisl eu condimentum consequat, neque nulla laoreet ipsum, ac volutpat nunc nisi sit amet sapien. Nunc odio odio, rutrum a vulputate ac, ornare in quam. Fusce ac auctor leo. Aliquam erat volutpat. Etiam auctor maximus lectus, placerat scelerisque sapien mollis vitae. Morbi nisl justo, sagittis vitae ornare sed, interdum sed sem. Fusce fringilla, ipsum ut auctor dapibus, quam justo malesuada mi, et ornare mi ante quis lacus.
+        </p> <p>
+            Integer non fermentum nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fringilla, velit in condimentum commodo, ex augue ultricies neque, a pulvinar leo diam non velit. Proin mattis urna ut lectus faucibus, sed ultrices elit ornare. Duis ornare massa at consequat volutpat. Donec mollis, diam nec facilisis aliquet, nisl quam viverra felis, ac gravida sem ipsum in velit. Quisque interdum tristique vehicula. In cursus odio id diam tristique blandit. Etiam pulvinar porttitor magna, a finibus nibh consequat sit amet.
+        </p> <p>
+            Etiam condimentum nisi ut diam porta, non sodales nunc vestibulum. In pulvinar nunc ut sollicitudin suscipit. Quisque arcu dolor, cursus at tellus nec, consectetur convallis lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut vulputate eget risus ut tristique. Donec ornare dictum elit, et elementum felis pulvinar eu. Donec turpis turpis, tempor a efficitur eget, mollis tempus augue. Praesent dictum pellentesque sem id vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+        </p> <p>
+            Etiam rutrum posuere mi, sit amet consectetur mi hendrerit at. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc ac ex quis metus venenatis suscipit lobortis vel eros. Suspendisse dictum arcu in nisl hendrerit, quis porta libero porttitor. Sed vestibulum sem eros, nec semper risus fermentum in. Quisque vulputate nulla id quam semper, quis molestie enim tincidunt. Morbi id neque sit amet erat viverra finibus eu non tortor. Nullam molestie mattis maximus. Donec semper erat eget nisl gravida, sit amet auctor leo commodo. Mauris convallis facilisis eleifend. Phasellus quam sapien, viverra molestie ex ac, condimentum accumsan ex.
+        </p> <p>
+            Donec sagittis scelerisque ornare. Nam non ligula in dolor ultrices bibendum. Suspendisse viverra porttitor turpis. Nunc in faucibus enim, et malesuada sem. Phasellus sapien neque, sollicitudin mollis sem sed, euismod ultrices eros. Praesent tempus erat lectus, id accumsan massa fringilla quis. Morbi interdum diam id tincidunt accumsan. Suspendisse viverra tellus eu nisl luctus iaculis vitae at libero. Duis et porttitor turpis. Proin euismod neque et congue aliquam.
+        </p> <p>
+            Mauris non dignissim mauris. Sed pulvinar rhoncus sollicitudin. Phasellus fermentum vestibulum mauris, sed eleifend metus iaculis vitae. Pellentesque finibus aliquet ipsum vel feugiat. Proin ultricies interdum lacus. Nunc consectetur nisl in nulla mollis maximus. Vivamus vel ornare urna. Donec vitae magna purus. Nam purus ipsum, pretium at elit et, vestibulum blandit turpis. Nullam ac erat ac sapien dapibus suscipit non non libero. Quisque rhoncus turpis nec facilisis sollicitudin. Aenean malesuada, metus eget fermentum molestie, arcu nunc molestie sem, vel rutrum ex metus et sem. Suspendisse sit amet ultrices nisl, nec sodales erat.
+        </p> <p>
+            Sed iaculis ante ac bibendum tincidunt. Proin tincidunt ut lacus at rhoncus. Nunc molestie finibus neque, quis elementum diam imperdiet vitae. Donec facilisis non orci eget efficitur. Vivamus sed justo vel tellus auctor luctus nec eu purus. Sed interdum convallis sodales. Nulla facilisis elit hendrerit nisl tristique, ut semper lorem sodales. In non pretium nunc, vel luctus ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus fermentum quam ut consectetur consectetur. In et purus nulla.
+        </p> <p>
+            Cras molestie dolor quis lectus faucibus, nec convallis justo commodo. Sed ultrices lacus imperdiet, ultrices lectus nec, varius lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor lorem quis nisi pulvinar accumsan. Donec et euismod dolor. Donec at lectus quis ligula ullamcorper ornare nec sed mauris. Suspendisse potenti. Vestibulum mollis eros ex, sed mattis tellus maximus ac. Pellentesque faucibus sollicitudin ipsum sit amet auctor. Phasellus nec justo arcu. Maecenas ac rutrum arcu. Etiam finibus ipsum vel ex semper dictum.
+        </p> <p>
+            In finibus orci ac convallis posuere. Praesent et elit eu lacus vulputate lobortis. Integer ornare est vel quam aliquet, ac placerat sem varius. Phasellus ut vestibulum elit. Fusce feugiat nibh arcu, non dapibus sapien cursus vitae. Praesent pulvinar massa quis fringilla lacinia. Proin nec aliquet dolor, accumsan semper ipsum. Donec ornare ex et ornare finibus. Phasellus euismod euismod scelerisque. Fusce in libero quis orci auctor sodales auctor eu metus. Nunc ornare tortor sed iaculis sagittis.
+        </p> <p>
+            Praesent lobortis massa at tempor tincidunt. Vivamus a dolor vitae mi consequat ullamcorper vel eget mauris. In hac habitasse platea dictumst. Sed semper vehicula nisl facilisis sollicitudin. Sed vel accumsan nunc. Suspendisse felis nisl, ullamcorper et aliquam eu, hendrerit nec est. Duis varius aliquet dictum. Proin quis purus libero. Phasellus lectus magna, efficitur quis diam vitae, efficitur pulvinar eros. Nam justo sapien, volutpat eget faucibus vel, varius in ante. Morbi nec felis eleifend, iaculis erat at, tristique nisi. Pellentesque at dui erat. In interdum nisl a finibus imperdiet.
+        </p> <p>
+            Aenean sed lacus sed felis lobortis posuere ac sit amet ipsum. Morbi viverra nibh enim, id posuere justo ultrices in. Pellentesque egestas non justo et faucibus. Maecenas venenatis dictum neque. Curabitur ornare ac quam in pellentesque. Phasellus accumsan tellus id pretium placerat. Vivamus pulvinar facilisis euismod. Praesent hendrerit quam ac massa accumsan tempus.
+        </p>
+    </section>
+
+    <footer>
+        <p>(i) © 2024 zawodev</p>
+    </footer>
+
+</body>
+</html>
