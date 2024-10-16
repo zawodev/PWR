@@ -14,10 +14,11 @@ DallasTemperature sensors(&oneWire);
 #define RED_BUTTON 2
 #define GREEN_BUTTON 4
 
+const unsigned long debounceDelay = 50;
+unsigned long lastDebounceTimeRed = 0;
+unsigned long lastDebounceTimeGreen = 0;
+
 int currentColor = 0; // 0 - czerwona, 1 - zielona, 2 - niebieska
-int lastDebounceTimeRed = 0;
-int lastDebounceTimeGreen = 0;
-int debounceDelay = 50;
 
 bool lastRedButtonState = HIGH;
 bool lastGreenButtonState = HIGH;
@@ -25,54 +26,40 @@ bool redButtonPressed = false;
 bool greenButtonPressed = false;
 
 void initRGB() {
-  pinMode(LED_RED, OUTPUT);
-  digitalWrite(LED_RED, LOW);
-
-  pinMode(LED_GREEN, OUTPUT);
-  digitalWrite(LED_GREEN, LOW);
-
-  pinMode(LED_BLUE, OUTPUT);
-  digitalWrite(LED_BLUE, LOW);
+  const int ledPins[] = {LED_RED, LED_GREEN, LED_BLUE};
+  for (int i = 0; i < 3; i++) {
+    pinMode(ledPins[i], OUTPUT);
+    digitalWrite(ledPins[i], LOW);
+  }
 }
 
 void initButtons() {
-  pinMode(RED_BUTTON, INPUT_PULLUP);
-  pinMode(GREEN_BUTTON, INPUT_PULLUP);
+  const int buttonPins[] = {RED_BUTTON, GREEN_BUTTON};
+  for (int i = 0; i < 2; i++) {
+    pinMode(buttonPins[i], INPUT_PULLUP);
+  }
 }
 
 void changeColor() {
-  // zmiana na kolejny kolor
+  const int ledPins[] = {LED_RED, LED_GREEN, LED_BLUE};
+  digitalWrite(ledPins[currentColor], LOW);
   currentColor = (currentColor + 1) % 3;
-  // włącz odpowiednią diodę wyłącz inną
-  if (currentColor == 0) {
-      digitalWrite(LED_BLUE, LOW);
-      digitalWrite(LED_RED, HIGH);
-  }
-  else if (currentColor == 1) {
-      digitalWrite(LED_RED, LOW);
-      digitalWrite(LED_GREEN, HIGH);
-  }
-  else if (currentColor == 2) {
-      digitalWrite(LED_GREEN, LOW);
-      digitalWrite(LED_BLUE, HIGH);
-  }
+  digitalWrite(ledPins[currentColor], HIGH);
 }
 
-void handleButtonPress(int buttonPin, bool &lastButtonState, bool &buttonPressed, int &lastDebounceTime) {
+void handleButtonPress(int buttonPin, bool &lastButtonState, bool &buttonPressed, unsigned long &lastDebounceTime) {
   bool reading = digitalRead(buttonPin);
 
-  // sprawdzenie eliminacji drgań
   if (reading != lastButtonState) {
     lastDebounceTime = millis();
   }
 
   if ((millis() - lastDebounceTime) > debounceDelay) {
-    // tylko po ustabilizowaniu sygnału traktujemy to jako prawdziwy przycisk
-    if (reading == LOW && !buttonPressed) { // naciśnięcie
+    if (reading == LOW && !buttonPressed) {
       buttonPressed = true;
-    } else if (reading == HIGH && buttonPressed) { // zwolnienie
+    }
+    else if (reading == HIGH && buttonPressed) {
       buttonPressed = false;
-
       changeColor();
     }
   }
@@ -89,9 +76,6 @@ void setup() {
 }
 
 void loop() {
-  // obsługa czerwonego przycisku
   handleButtonPress(RED_BUTTON, lastRedButtonState, redButtonPressed, lastDebounceTimeRed);
-
-  // obsługa zielonego przycisku
   handleButtonPress(GREEN_BUTTON, lastGreenButtonState, greenButtonPressed, lastDebounceTimeGreen);
 }

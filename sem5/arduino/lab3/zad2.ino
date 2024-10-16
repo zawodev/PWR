@@ -24,34 +24,49 @@ bool greenState = LOW;
 bool blueState = LOW;
 
 void initRGB() {
-  pinMode(LED_RED, OUTPUT);
-  digitalWrite(LED_RED, LOW);
-
-  pinMode(LED_GREEN, OUTPUT);
-  digitalWrite(LED_GREEN, LOW);
-
-  pinMode(LED_BLUE, OUTPUT);
-  digitalWrite(LED_BLUE, LOW);
+  const int ledPins[] = {LED_RED, LED_GREEN, LED_BLUE};
+  for (int i = 0; i < 3; i++) {
+    pinMode(ledPins[i], OUTPUT);
+    digitalWrite(ledPins[i], LOW);
+  }
 }
 
 void setup() {
+    lcd.init();
+    lcd.backlight();
+
   initRGB();
 }
 
-void changeLED(int currentMillis, int& previousMillis, const unsigned long interval, bool& state, int led) {
+void changeLED(unsigned long currentMillis, unsigned long& previousMillis, const unsigned long interval, bool& state, const int led) {
   if (currentMillis - previousMillis >= interval) {
     previousMillis = currentMillis;
     state = !state;
     digitalWrite(led, state);
+
+    //nie jest konieczne, ale do debugowania fajne
+    displayLEDState();
   }
 }
 
-void loop() {
-  unsigned long currentMillis = millis();
+void displayLEDState() {
+  lcd.clear(); // clear the LCD screen
+  lcd.setCursor(0, 0); // set cursor to the beginning
+  lcd.print("(");
+  lcd.print(redState);  // print red LED state
+  lcd.print(", ");
+  lcd.print(greenState); // print green LED state
+  lcd.print(", ");
+  lcd.print(blueState);  // print blue LED state
+  lcd.print(")");
+}
 
+void loop() {
+    unsigned long currentMillis = millis();
     changeLED(currentMillis, previousMillisRed, intervalRed, redState, LED_RED);
     changeLED(currentMillis, previousMillisGreen, intervalGreen, greenState, LED_GREEN);
     changeLED(currentMillis, previousMillisBlue, intervalBlue, blueState, LED_BLUE);
 
-  //kolejne zadania dla loopa tutaj
+    //kolejne zadania dla loopa tutaj
+
 }

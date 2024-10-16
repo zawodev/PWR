@@ -1,14 +1,24 @@
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
-#define GREEN_BUTTON 4 // klawisz zielony
-#define RED_BUTTON 2   // klawisz czerwony
+#define GREEN_BUTTON 4
+#define RED_BUTTON 2
 
-LiquidCrystal_I2C lcd(0x27, 16, 2); // ustawienia LCD
+LiquidCrystal_I2C lcd(0x27, 16, 2);
 
-unsigned long startTime = 0;        // czas startu stopera
-unsigned long elapsedTime = 0;      // czas, który upłynął
-bool running = false;               // czy stoper działa?
+unsigned long startTime = 0;
+unsigned long elapsedTime = 0;
+bool running = false; // czy stoper działa? w sensie czy liczy czas
+
+const unsigned long debounceDelay = 50;
+
+// red button
+bool redButtonPressed = false;
+unsigned long lastDebounceTimeRed = 0;
+
+// green button
+bool greenButtonPressed = false;
+unsigned long lastDebounceTimeGreen = 0;
 
 void initButtons() {
   pinMode(GREEN_BUTTON, INPUT_PULLUP);
@@ -21,47 +31,64 @@ void updateDisplay() {
   lcd.print("Time:");
 
   lcd.setCursor(0, 1);
-  lcd.print(elapsedTime / 1000); // konwersja na sekundy
+  lcd.print(elapsedTime / 1000);
   lcd.print(" sec");
 }
 
 void setup() {
-  lcd.begin(16, 2); // rozpoczęcie komunikacji z wyświetlaczem
+  lcd.begin(16, 2);
   lcd.backlight();
 
   initButtons();
-  updateDisplay(); // wyświetl 0 na starcie
+  updateDisplay(); //wyświetl 0 na starcie
+}
+
+void handleButtonPress(const int buttonPin, const unsigned long debounceDelay, bool &buttonPressed, unsigned long &lastDebounceTime, void (*action)()) {
+  bool currentState = digitalRead(buttonPin);
+  unsigned long currentTime = millis();
+
+  if (currentState != buttonPressed) {
+    lastDebounceTime = currentTime; // reset the debounce timer
+  }
+
+  if ((currentTime - lastDebounceTime) > debounceDelay) {
+    if (currentState == LOW && !buttonPressed) {
+        buttonPressed = true;
+        //button pressed action here
+        action();
+    }
+    else if (currentState == HIGH && buttonPressed) {
+        buttonPressed = false;
+        //button released action here
+    }
+  }
+}
+
+void toggleTimer() {
+  if (!running) {
+    running = true;
+    startTime = millis() - elapsedTime;
+  }
+  else {
+    running = false;
+    elapsedTime = millis() - startTime;
+  }
+  updateDisplay();
+}
+
+void resetTimer() {
+  running = false;
+  elapsedTime = 0;
+  updateDisplay();
 }
 
 void loop() {
-  if (digitalRead(GREEN_BUTTON) == LOW) {
-    delay(50); // debounce
-    if (digitalRead(GREEN_BUTTON) == LOW) { // weryfikacja ponowna po eliminacji
-      if (!running) {
-        running = true;              // uruchomienie stopera
-        startTime = millis() - elapsedTime; // kontynuacja od ostatniego miejsca
-      } else {
-        running = false;             // zatrzymanie stopera
-        elapsedTime = millis() - startTime; // zaktualizowanie upływu czasu
-      }
-      updateDisplay(); // aktualizacja wyświetlacza
-      while (digitalRead(GREEN_BUTTON) == LOW); // oczekiwanie na zwolnienie przycisku
-    }
-  }
-
-  if (digitalRead(RED_BUTTON) == LOW) {
-    delay(50); // eliminacja drgań styków
-    if (digitalRead(RED_BUTTON) == LOW) { // weryfikacja ponowna po eliminacji
-      running = false;        // zatrzymanie stopera
-      elapsedTime = 0;        // resetowanie upływu czasu
-      updateDisplay();        // aktualizacja wyświetlacza
-      while (digitalRead(RED_BUTTON) == LOW); // oczekiwanie na zwolnienie przycisku
-    }
-  }
+  handleButtonPress(RED_BUTTON, debounceDelay, redButtonPressed, lastDebounceTimeRed, resetTimer);
+  handleButtonPress(GREEN_BUTTON, debounceDelay, greenButtonPressed, lastDebounceTimeGreen, toggleTimer);
 
   if (running) {
-    elapsedTime = millis() - startTime; // aktualizacja upływu czasu podczas działania stopera
-    if (elapsedTime % 1000 == 0) {      // aktualizacja wyświetlacza co sekundę
+    elapsedTime = millis() - startTime;
+    if (elapsedTime % 1000 == 0) {
       updateDisplay();
     }
   }
