@@ -1,0 +1,9 @@
+zad1
+IDEA, AES, DES (dla przyzwoitości zrobić tylko 3 zamiast 2)
+
+zad2 
+xorowanie jest proste do testowniby
+
+2.5 największa uwaga zwraca
+
+warto sprawdzić różne miejsca, i dać blok 128 bitow gdzies co 128 bitow a nie losowo w srodku

@@ -73,10 +73,7 @@ void handleButtonPress(int buttonPin, bool &lastButtonState, bool &buttonPressed
     } else if (reading == HIGH && buttonPressed) { // zwolnienie
       buttonPressed = false;
 
-      // akcja po zwolnieniu przycisku
-      if (buttonPin == GREEN_BUTTON) {
-        changeColor(); // zmiana koloru
-      }
+      changeColor();
     }
   }
 
