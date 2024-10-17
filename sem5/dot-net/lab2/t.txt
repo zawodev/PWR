@@ -1,0 +1,8 @@
+a    Znaki specjalne: 5 przykładowych znaków (©, €, ®, <, >)
+b    Formatowanie tekstu: <strong>, <em>, <b>, <i>, <u> można dodać w treści akapitów.
+cdef Listy: Uporządkowane, nieuporządkowane, definicji oraz zagnieżdżone.
+g    Tabela: 5x5 z łączeniem komórek oraz wierszami nagłówka i stopki.
+h    Formularz: 10 różnych typów pól (text, email, number, password, date, color, file, select, checkbox, range).
+i    Linkowanie wewnętrzne: Linki do sekcji na stronie.
+j    Meta: 4 elementy (charset, description, author, keywords).
+k    Nowe elementy struktury: <section>, <header>, <footer>.
