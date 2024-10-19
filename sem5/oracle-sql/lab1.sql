@@ -49,9 +49,8 @@ data_incydentu DATE CONSTRAINT wrokoc_data_incydentu_nn NOT NULL,
 opis_incydentu VARCHAR2(50)
 );
 
--- ALTER TABLE
+-- ALTER SESSION
 
-ALTER TABLE Bandy ADD CONSTRAINT ban_sze_fk FOREIGN KEY(szef_bandy) REFERENCES Kocury(pseudo);
 ALTER SESSION SET NLS_DATE_FORMAT='YYYY-MM-DD';
 
 -- FILL DATA (FUNKCJE)
@@ -92,10 +91,9 @@ INTO Bandy VALUES (4,'LACIACI MYSLIWI','GORKA','RAFA')
 INTO Bandy VALUES (5,'ROCKERSI','ZAGRODA',NULL)
 SELECT * FROM dual;
 
--- Disabling szef_fk
-ALTER TABLE Kocury DISABLE CONSTRAINT szef_fk;
+-- FILL DATA (KOCURY) (enable/disable constraint, because of circular reference)
 
--- FILL DATA (KOCURY)
+ALTER TABLE Kocury DISABLE CONSTRAINT koc_szef_fk;
 
 INSERT ALL
 INTO Kocury VALUES ('JACEK','M','PLACEK','LOWCZY','LYSY','2008-12-01',67,NULL,2)
@@ -118,8 +116,7 @@ INTO Kocury VALUES ('KSAWERY','M','MAN','LAPACZ','RAFA','2008-07-12',51,NULL,4)
 INTO Kocury VALUES ('MELA','D','DAMA','LAPACZ','RAFA','2008-11-01',51,NULL,4)
 SELECT * FROM dual;
 
--- Enabling szef_fk
-ALTER TABLE Kocury ENABLE CONSTRAINT szef_fk;
+ALTER TABLE Kocury ENABLE CONSTRAINT koc_szef_fk;
 
 -- FILL DATA (WROGOWIE KOCUROW)
 
@@ -144,7 +141,8 @@ INTO Wrogowie_Kocurow VALUES ('MALY','CHYTRUSEK','2011-07-13','PODEBRAL PODEBRAN
 INTO Wrogowie_Kocurow VALUES ('UCHO','SWAWOLNY DYZIO','2011-07-14','OBRZUCIL KAMIENIAMI')
 SELECT * FROM dual;
 
-ALTER TABLE Bandy ADD CONSTRAINT szef_bandy_fk FOREIGN KEY (szef_bandy) REFERENCES Kocury(pseudo);
+-- Bandy: ban_szef_fk
+ALTER TABLE Bandy ADD CONSTRAINT ban_szef_fk FOREIGN KEY(szef_bandy) REFERENCES Kocury(pseudo);
 
 COMMIT;
 
