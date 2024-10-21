@@ -391,7 +391,8 @@ START WITH
     funkcja = 'BANDZIOR';
 
 -- Zad 15
-    
+
+
 SELECT
     LPAD(TO_CHAR(LEVEL - 1), (LEVEL - 1) * 4 + LENGTH(TO_CHAR(LEVEL - 1)), '===>') || '        ' || imie AS "Hierarchia",
     NVL(szef, 'Sam sobie panem') AS "Pseudo szefa",
