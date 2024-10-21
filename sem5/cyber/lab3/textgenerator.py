@@ -5,7 +5,7 @@ import re
 text1 = 'n' * 2000
 
 # tekst 2: powtórzenie podanego tekstu 1000 razy
-text2 = "i ja jechalem na rowerze i potem jeszcze do biedronki na lody " * 1000
+text2 = "i potem jeszcze do biedronki na lody " * 1000
 
 # tekst 3: pierwsze 1000 słów lorem ipsum
 text3 = ''.join(lorem.words(1000))
