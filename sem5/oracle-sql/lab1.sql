@@ -10,43 +10,43 @@ DROP TABLE Wrogowie_kocurow CASCADE CONSTRAINTS;
 -- INITIALIZATION
 
 CREATE TABLE Bandy (
-nr_bandy NUMBER(2) CONSTRAINT ban_nrbandy_pk PRIMARY KEY,
-nazwa VARCHAR2(20) CONSTRAINT ban_nazwa_nn NOT NULL,
-teren VARCHAR2(15) CONSTRAINT ban_teren_unq UNIQUE,
-szef_bandy VARCHAR2(15) CONSTRAINT ban_szef_unq UNIQUE 
+    nr_bandy NUMBER(2) CONSTRAINT ban_nrbandy_pk PRIMARY KEY,
+    nazwa VARCHAR2(20) CONSTRAINT ban_nazwa_nn NOT NULL,
+    teren VARCHAR2(15) CONSTRAINT ban_teren_unq UNIQUE,
+    szef_bandy VARCHAR2(15) CONSTRAINT ban_szef_unq UNIQUE
 );
 
 CREATE TABLE Funkcje (
-funkcja VARCHAR2(10) CONSTRAINT fun_funkcja_pk PRIMARY KEY,
-min_myszy NUMBER(3) CONSTRAINT fun_minmice_gt_5 CHECK (min_myszy > 5),
-max_myszy NUMBER(3) CONSTRAINT fun_maxmice_lt_200 CHECK (200 > max_myszy),
-CONSTRAINT fun_maxmice_ge_min CHECK (max_myszy >= min_myszy)
+    funkcja VARCHAR2(10) CONSTRAINT fun_funkcja_pk PRIMARY KEY,
+    min_myszy NUMBER(3) CONSTRAINT fun_minmice_gt_5 CHECK (min_myszy > 5),
+    max_myszy NUMBER(3) CONSTRAINT fun_maxmice_lt_200 CHECK (200 > max_myszy),
+    CONSTRAINT fun_maxmice_ge_min CHECK (max_myszy >= min_myszy)
 );
 
 CREATE TABLE Wrogowie (
-imie_wroga VARCHAR2(15) CONSTRAINT wro_imie_pk PRIMARY KEY,
-stopien_wrogosci NUMBER(2) CONSTRAINT wro_wrogosc_values CHECK (stopien_wrogosci BETWEEN 1 AND 10),
-gatunek VARCHAR2(15),
-lapowka VARCHAR2(20)
+    imie_wroga VARCHAR2(15) CONSTRAINT wro_imie_pk PRIMARY KEY,
+    stopien_wrogosci NUMBER(2) CONSTRAINT wro_wrogosc_values CHECK (stopien_wrogosci BETWEEN 1 AND 10),
+    gatunek VARCHAR2(15),
+    lapowka VARCHAR2(20)
 );
 
 CREATE TABLE Kocury (
-imie VARCHAR2(15) CONSTRAINT koc_imie_nn NOT NULL,
-plec VARCHAR2(1) CONSTRAINT koc_plec_values CHECK (plec IN ('M', 'D')),
-pseudo VARCHAR2(15) CONSTRAINT koc_pseudo_pk PRIMARY KEY,
-funkcja VARCHAR2(10) CONSTRAINT koc_funkcja_fk REFERENCES Funkcje(funkcja),
-szef VARCHAR2(15) CONSTRAINT koc_szef_fk REFERENCES Kocury(pseudo),
-w_stadku_od DATE DEFAULT SYSDATE,
-przydzial_myszy NUMBER(3),
-myszy_extra NUMBER(3),
-nr_bandy NUMBER(2) CONSTRAINT koc_nr_bandy_fk REFERENCES Bandy(nr_bandy)
+    imie VARCHAR2(15) CONSTRAINT koc_imie_nn NOT NULL,
+    plec VARCHAR2(1) CONSTRAINT koc_plec_values CHECK (plec IN ('M', 'D')),
+    pseudo VARCHAR2(15) CONSTRAINT koc_pseudo_pk PRIMARY KEY,
+    funkcja VARCHAR2(10) CONSTRAINT koc_funkcja_fk REFERENCES Funkcje(funkcja),
+    szef VARCHAR2(15) CONSTRAINT koc_szef_fk REFERENCES Kocury(pseudo),
+    w_stadku_od DATE DEFAULT SYSDATE,
+    przydzial_myszy NUMBER(3),
+    myszy_extra NUMBER(3),
+    nr_bandy NUMBER(2) CONSTRAINT koc_nr_bandy_fk REFERENCES Bandy(nr_bandy)
 );
 
 CREATE TABLE Wrogowie_kocurow (
-pseudo VARCHAR2(15) CONSTRAINT wrokoc_pseudo_fk REFERENCES Kocury(pseudo),
-imie_wroga VARCHAR2(15) CONSTRAINT wrokoc_imie_wroga_fk REFERENCES Wrogowie(imie_wroga),
-data_incydentu DATE CONSTRAINT wrokoc_data_incydentu_nn NOT NULL,
-opis_incydentu VARCHAR2(50)
+    pseudo VARCHAR2(15) CONSTRAINT wrokoc_pseudo_fk REFERENCES Kocury(pseudo),
+    imie_wroga VARCHAR2(15) CONSTRAINT wrokoc_imie_wroga_fk REFERENCES Wrogowie(imie_wroga),
+    data_incydentu DATE CONSTRAINT wrokoc_data_incydentu_nn NOT NULL,
+    opis_incydentu VARCHAR2(50)
 );
 
 -- ALTER SESSION
@@ -147,102 +147,105 @@ ALTER TABLE Bandy ADD CONSTRAINT ban_szef_fk FOREIGN KEY(szef_bandy) REFERENCES 
 COMMIT;
 
 
--- ==================================================================================             
+-- ==================================================================================
 -- =========================   INITIALIZATION FINISH HERE   =========================
 -- ==================================================================================
 
 -- Zad 1
 
-SELECT 
+SELECT
     imie_wroga AS "WROG",
     opis_incydentu AS "PRZEWINA"
-FROM 
+FROM
     Wrogowie_Kocurow
-WHERE 
-    data_incydentu >= '2009.01.01' 
-    AND data_incydentu <= '2009.12.31';
+WHERE
+    data_incydentu >= '2009.01.01'
+  AND data_incydentu <= '2009.12.31';
 
 -- Zad 2
 
-SELECT 
-    imie AS "IMIE", 
-    funkcja AS "FUNKCJA", 
+SELECT
+    imie AS "IMIE",
+    funkcja AS "FUNKCJA",
     w_stadku_od AS "Z NAMI OD"
-FROM 
+FROM
     Kocury
-WHERE 
+WHERE
     plec = 'D'
-    AND w_stadku_od >= '2005.09.01'
-    AND w_stadku_od <= '2007.07.31';
+  AND w_stadku_od >= '2005.09.01'
+  AND w_stadku_od <= '2007.07.31';
 
 -- Zad 3
 
-SELECT 
-    imie_wroga AS "WROG", 
-    gatunek, 
+SELECT
+    imie_wroga AS "WROG",
+    gatunek,
     stopien_wrogosci AS "STOPIEN WROGOSCI"
-FROM 
+FROM
     Wrogowie
-WHERE 
+WHERE
     lapowka IS NULL
-ORDER BY 
+ORDER BY
     stopien_wrogosci;
 
 -- Zad 4
 -- TO_CHAR(w_stadku_od, 'YYYY-MM-DD')
 
-SELECT 
+SELECT
     imie || ' zwany ' || pseudo  || ' (fun. ' || funkcja || ') lowi myszki w bandzie ' || nr_bandy || ' od ' || w_stadku_od AS "WSZYSTKO O KOCURACH"
-FROM 
+FROM
     Kocury
-WHERE 
+WHERE
     plec = 'M'
-ORDER BY 
-    w_stadku_od DESC, 
+ORDER BY
+    w_stadku_od DESC,
     pseudo ASC;
 
 -- Zad 5
 
 
-SELECT 
+SELECT
     pseudo,
     --REGEXP_REPLACE(REGEXP_REPLACE(pseudo, SUBSTR(pseudo, INSTR(pseudo, 'A'), 1), '#', 1), SUBSTR(pseudo, INSTR(pseudo, 'L'), 1), '%', 1) AS zmieniony_pseudo
     REGEXP_REPLACE(REGEXP_REPLACE(pseudo, '(.*?)L(.*)', '\1%\2', 1, 1), '(.*?)A(.*)', '\1#\2', 1, 1) AS "Po wymianie A an # oraz L na %"
-FROM 
+FROM
     Kocury
-WHERE 
-    --INSTR(pseudo, 'A') > 0 AND INSTR(pseudo, 'L') > 0;
-    pseudo LIKE '%A%' 
-    AND pseudo LIKE '%L%';
+WHERE
+  --INSTR(pseudo, 'A') > 0 AND INSTR(pseudo, 'L') > 0;
+    pseudo LIKE '%A%'
+  AND pseudo LIKE '%L%';
 
 -- Zad 6
 
 
-SELECT 
+SELECT
     imie,
     w_stadku_od AS "W stadku",
-    przydzial_myszy AS "Zjadal",
+    ROUND(0.9*przydzial_myszy) AS "Zjadal",
     ADD_MONTHS(w_stadku_od, 6) AS "Podwyzka",
-    ROUND(przydzial_myszy * 1.1) AS "Zjada"
-FROM 
+    przydzial_myszy AS "Zjada"
+FROM
     Kocury
-WHERE 
-    -- w_stadku_od <= ADD_MONTHS(SYSDATE, -180) 
+WHERE
+  -- w_stadku_od <= ADD_MONTHS(SYSDATE, -180)
     w_stadku_od <= ADD_MONTHS(TO_DATE('2024-07-17', 'YYYY-MM-DD'), -180)
-    AND TO_CHAR(w_stadku_od, 'MM-DD') BETWEEN '03-01' AND '09-30';
+  AND TO_CHAR(w_stadku_od, 'MM-DD') BETWEEN '03-01' AND '09-30';
 
 -- Zad 7
 
 
-SELECT 
-    imie, 
-    3 * przydzial_myszy "MYSZY KWARTALNIE", 
-    3 * NVL(myszy_extra, 0) "KWARTALNE DODATKI"
-FROM 
+SELECT
+    imie,
+    3 * przydzial_myszy AS "MYSZY KWARTALNIE",
+    3 * NVL(myszy_extra, 0) AS "KWARTALNE DODATKI"
+FROM
     Kocury
-WHERE 
-    przydzial_myszy > 2 * NVL(myszy_extra, 0) 
-    AND przydzial_myszy > 55;
+WHERE
+    przydzial_myszy > 2 * NVL(myszy_extra, 0)
+  AND przydzial_myszy > 55
+ORDER BY
+    "MYSZY KWARTALNIE" DESC;
+
 
 -- Zad 8
 
@@ -253,93 +256,89 @@ SELECT
         WHEN 12 * (przydzial_myszy + NVL(myszy_extra, 0)) > 660 THEN TO_CHAR(12 * (przydzial_myszy + NVL(myszy_extra, 0)))
         WHEN 12 * (przydzial_myszy + NVL(myszy_extra, 0)) = 660 THEN 'Limit'
         ELSE 'Ponizej 660'
-    END AS "Zjada rocznie"
+        END AS "Zjada rocznie"
 FROM
     Kocury;
 
 -- Zad 9
 --a)
-SELECT 
+SELECT
     pseudo,
     w_stadku_od,
-    CASE 
-        -- koty, które przystąpiły w pierwszej połowie miesiąca (do 15 włącznie) otrzymują wypłatę w ostatnią środę października
-        WHEN TO_CHAR(w_stadku_od, 'DD') <= 15 THEN 
-            NEXT_DAY(LAST_DAY(TO_DATE('29-10-2024', 'DD-MM-YYYY')) - 7, 'ŚRODA') 
-        -- koty, które przystąpiły po 15-ym otrzymują wypłatę w ostatnią środę następnego miesiąca
-        ELSE 
-            NEXT_DAY(LAST_DAY(TO_DATE('29-10-2024', 'DD-MM-YYYY') + INTERVAL '1' MONTH) - 7, 'ŚRODA') 
-    END AS "WYPLATA"
-FROM 
+    CASE
+        WHEN TO_CHAR(w_stadku_od, 'DD') <= 15 THEN
+            NEXT_DAY(LAST_DAY(TO_DATE('29-10-2024', 'DD-MM-YYYY')) - 7, 'ŚRODA')
+        ELSE
+            NEXT_DAY(LAST_DAY(TO_DATE('29-10-2024', 'DD-MM-YYYY') + INTERVAL '1' MONTH) - 7, 'ŚRODA')
+        END AS "WYPLATA"
+FROM
     Kocury
-ORDER BY 
-    w_stadku_od;
+ORDER BY
+    w_stadku_od ASC;
 
 
 --b)
-SELECT 
+SELECT
     pseudo,
     w_stadku_od,
-    CASE 
-        -- koty, które przystąpiły w pierwszej połowie miesiąca (do 15 włącznie) otrzymują wypłatę w ostatnią środę listopada
-        WHEN TO_CHAR(w_stadku_od, 'DD') <= 15 THEN 
-            NEXT_DAY(LAST_DAY(ADD_MONTHS(TO_DATE('31-10-2024', 'DD-MM-YYYY'), 1)) - 7, 'ŚRODA') 
-        -- koty, które przystąpiły po 15-ym również otrzymują wypłatę w listopadzie
-        ELSE 
-            NEXT_DAY(LAST_DAY(ADD_MONTHS(TO_DATE('31-10-2024', 'DD-MM-YYYY'), 1)) - 7, 'ŚRODA') 
-    END AS "WYPLATA"
-FROM 
+    CASE
+        WHEN TO_CHAR(w_stadku_od, 'DD') <= 15 THEN
+            NEXT_DAY(LAST_DAY(ADD_MONTHS(TO_DATE('31-10-2024', 'DD-MM-YYYY'), 1)) - 7, 'ŚRODA')
+        ELSE
+            NEXT_DAY(LAST_DAY(ADD_MONTHS(TO_DATE('31-10-2024', 'DD-MM-YYYY'), 1)) - 7, 'ŚRODA')
+        END AS "WYPLATA"
+FROM
     Kocury
-ORDER BY 
-    w_stadku_od;
+ORDER BY
+    w_stadku_od ASC;
 
 -- Zad 10
 --a)
-SELECT 
-    pseudo || ' - ' || 
-    CASE 
+SELECT
+    pseudo || ' - ' ||
+    CASE
         WHEN COUNT(*) > 1 THEN 'nieunikalny'
         ELSE 'Unikalny'
-    END AS "Unikalnosc atr. PSEUDO"
-FROM 
+        END AS "Unikalnosc atr. PSEUDO"
+FROM
     Kocury
-GROUP BY 
+GROUP BY
     pseudo;
 
 --b)
-SELECT 
-    szef || ' - ' || 
-    CASE 
+SELECT
+    szef || ' - ' ||
+    CASE
         WHEN COUNT(*) > 1 THEN 'nieunikalny'
         ELSE 'Unikalny'
-    END AS "Unikalnosc atr. SZEF"
-FROM 
+        END AS "Unikalnosc atr. SZEF"
+FROM
     Kocury
-WHERE 
+WHERE
     szef IS NOT NULL
-GROUP BY 
+GROUP BY
     szef;
 
 
 
 -- Zad 11
 
-SELECT 
-    k.pseudo AS "Pseudonim", 
+SELECT
+    k.pseudo AS "Pseudonim",
     COUNT(w.imie_wroga) AS "Liczba wrogow"
-FROM 
+FROM
     Kocury k
-JOIN 
+        JOIN
     Wrogowie_kocurow w ON k.pseudo = w.pseudo
 GROUP BY
     k.pseudo
-HAVING 
+HAVING
     COUNT(w.imie_wroga) >= 2;
 
 
 -- Zad 12
-      
-SELECT 
+
+SELECT
     'Liczba kotow= ' AS "Kol1",
     COUNT(*) AS "Kol2",
     'lowi jako ' AS "Kol3",
@@ -347,48 +346,49 @@ SELECT
     'i zjada max. '  AS "Kol5",
     TO_CHAR(MAX(k.przydzial_myszy + NVL(k.myszy_extra, 0)), 'FM999.00') AS "Kol6",
     'myszy miesiecznie' AS "Kol7"
-FROM 
+FROM
     Kocury k
-JOIN 
+        JOIN
     Funkcje f ON k.funkcja = f.funkcja
-WHERE 
-    k.plec <> 'M' 
-    AND k.pseudo <> 'SZEFUNIA'
-GROUP BY 
+WHERE
+    k.plec <> 'M'
+  AND k.pseudo <> 'SZEFUNIA'
+GROUP BY
     f.funkcja
-HAVING 
+HAVING
     AVG(k.przydzial_myszy + NVL(k.myszy_extra, 0)) > 50;
 
 
 -- Zad 13
 
 
-SELECT 
-    nr_bandy AS "Nr bandy", 
-    plec AS "Plec", 
+SELECT
+    nr_bandy AS "Nr bandy",
+    plec AS "Plec",
     MIN(przydzial_myszy) AS "Minimalny przydzial"
-FROM 
+FROM
     Kocury
-GROUP BY 
-    nr_bandy, 
+GROUP BY
+    nr_bandy,
     plec;
 
 -- Zad 14
 
 
-SELECT 
-    LEVEL "Poziom", 
-    pseudo "Pseudonim", 
-    funkcja "Funkcja", 
+SELECT
+    LEVEL "Poziom",
+    pseudo "Pseudonim",
+    funkcja "Funkcja",
     nr_bandy "Nr bandy"
-FROM 
+FROM
     Kocury
-WHERE 
+WHERE
     plec  = 'M'
-CONNECT BY PRIOR 
+    CONNECT BY PRIOR
     pseudo = szef
-START WITH 
+START WITH
     funkcja = 'BANDZIOR';
+
 
 -- Zad 15
 
@@ -396,27 +396,27 @@ SELECT
     LPAD(TO_CHAR(LEVEL - 1), (LEVEL - 1) * 4 + LENGTH(TO_CHAR(LEVEL - 1)), '===>') || '        ' || imie AS "Hierarchia",
     NVL(szef, 'Sam sobie panem') AS "Pseudo szefa",
     funkcja AS "Funkcja"
-FROM 
+FROM
     Kocury
-WHERE 
+WHERE
     myszy_extra > 0
-CONNECT BY 
+    CONNECT BY
     PRIOR pseudo = szef
-START WITH 
+START WITH
     szef IS NULL;
 
--- Zad 16         
-    
-SELECT 
-	RPAD(' ', 4 * (LEVEL - 1), ' ') || pseudo AS "Droga sluzbowa"
-FROM 
-	Kocury
-CONNECT BY 
+-- Zad 16
+
+SELECT
+    RPAD(' ', 4 * (LEVEL - 1), ' ') || pseudo AS "Droga sluzbowa"
+FROM
+    Kocury
+    CONNECT BY
 	PRIOR szef = pseudo
-START WITH 
-	EXTRACT(YEAR FROM TO_DATE('2024-07-17', 'YYYY-MM-DD')) - EXTRACT(YEAR FROM w_stadku_od) > 15
-	AND plec = 'M'
-	AND myszy_extra IS NULL;
+START WITH
+    EXTRACT(YEAR FROM TO_DATE('2024-07-17', 'YYYY-MM-DD')) - EXTRACT(YEAR FROM w_stadku_od) > 15
+       AND plec = 'M'
+       AND myszy_extra IS NULL;
 
 
            
