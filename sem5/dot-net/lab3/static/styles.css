@@ -1,0 +1,177 @@
+/* zad 2 - zmiana wielkości tekstu */
+.em-text { font-size: 1.5em; } /* 1em = 16px wzgledne */
+.px-text { font-size: 20px; } /* 1px = 1/96 cala bezwzgledne */
+.pt-text { font-size: 12pt; } /* 1pt = 1/72 cala bezwgldne */
+.percent-text { font-size: 150%; } /* 100% = 16px wzgledne */
+
+/* reguły związane z box-model i pozycjonowaniem */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 2px solid #333;
+}
+
+.box {
+    padding: 20px;
+    margin: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc; /* grubosc styl kolor */
+    position: relative; /* relative, absolute, fixed, static */
+}
+
+
+
+/* tło strony */
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('3354.png');
+    background-repeat: no-repeat; /* repeat-x, repeat-y, repeat, space, round */
+    background-position: center top; /* center center , top right, bottom 50px right 3%;*/
+    background-size: cover; /* contain auto, 100% 100%, 50% 50% */
+    background-attachment: fixed; /* scroll, fixed, local*/
+}
+
+/* selektor css po id */
+#main-header {
+    color: blue;
+}
+
+/* selektor css po klasie */
+.container > .box { /* wszystkie elementy z klasą box które mają ojca container */
+    border: 2px dashed green;
+}
+
+
+h1, h2 { /* selektor css po tagu */
+    font-family: Arial, sans-serif; /* style css */
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+/* po klasie */
+.border-example {
+    border-width: 5px;
+    border-style: solid;
+    border-color: red;
+}
+
+/* stylowanie tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+/* pseudo-klasy i pseudo-elementy */
+a:hover {
+    color: red;
+}
+
+a:visited {
+    color: gray;
+}
+
+p::before {
+    content: "Start: ";
+}
+
+p::after {
+    content: " - End.";
+}
+
+/* menu rozwijane */
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    position: relative;
+    display: inline-block;
+}
+
+.nav li ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.nav li:hover ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav li ul li {
+    display: block;
+}
+
+
+
+
+.vertical-menu {
+    width: 200px;
+}
+
+.vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* podstrony */
+.sub-menu {
+    display: none;
+}
+
+.sub-menu li {
+    display: block;
+}
+
+
+
+
+
+
+
+p {
+    font-size: 20px;
+    color: red;
+    font-family: "sans-serif";
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+td:hover {
+    background-color: #abcdef;
+}
+th:hover {
+    background-color: #ab12ab;
+}
+
+table > *:hover {
+    background-color: #f5f5f5;
+}

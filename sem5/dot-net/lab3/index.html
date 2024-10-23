@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona główna</title>
+
+    <link rel="stylesheet" href="static/styles.css"> <!-- zad 1 -->
+    <style>
+        /* zad 1 */
+        h1 {
+            color: darkblue;
+        }
+    </style>
+
+</head>
+<body>
+<h1 style="color:red;"> Text </h1> <!-- zad 1 -->
+
+<header id="main-header">
+    <h1>Witamy na stronie głównej</h1>
+</header>
+
+<nav>
+    <div class="vertical-menu">
+        <a href="index.html">Strona główna</a>
+        <a href="page1.html">Strona 1</a>
+        <!-- podstrony do page1.html -->
+        <div class="sub-menu">
+            <a href="#">Podstrona 1.1</a>
+            <a href="#">Podstrona 1.2</a>
+        </div>
+        <a href="page2.html">Strona 2</a>
+        <a href="page3.html">Strona 3</a>
+        <a href="page4.html">Strona 4</a>
+        <!-- podstrony do page4.html -->
+        <div class="sub-menu">
+            <a href="#">Podstrona 4.1</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="box em-text">To jest tekst o wielkości 1.5em</div>
+    <div class="box px-text">To jest tekst o wielkości 20px</div>
+    <div class="box pt-text">To jest tekst o wielkości 12pt</div>
+    <div class="box percent-text">To jest tekst o wielkości 150%</div>
+</div>
+
+<div class="border-example">
+    <div class="box em-text">To jest tekst o wielkości 1.5em</div>
+</div>
+
+
+</body>
+</html>
