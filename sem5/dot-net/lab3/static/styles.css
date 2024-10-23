@@ -1,61 +1,97 @@
 /* zad 2 - zmiana wielkości tekstu */
-.em-text { font-size: 1.5em; } /* 1em = 16px wzgledne */
+.em-text { font-size: 0.6em; } /* 1em = 16px wzgledne */
 .px-text { font-size: 20px; } /* 1px = 1/96 cala bezwzgledne */
 .pt-text { font-size: 12pt; } /* 1pt = 1/72 cala bezwgldne */
 .percent-text { font-size: 150%; } /* 100% = 16px wzgledne */
 
-/* reguły związane z box-model i pozycjonowaniem */
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 10px;
-    border: 2px solid #333;
-}
-
-.box {
-    padding: 20px;
-    margin: 10px;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc; /* grubosc styl kolor */
-    position: relative; /* relative, absolute, fixed, static */
-}
 
 
-
-/* tło strony */
+/* zad 3 - tło strony */
 body {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('3354.png');
+    background-image: linear-gradient(rgba(255, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url('3354.png');
     background-repeat: no-repeat; /* repeat-x, repeat-y, repeat, space, round */
     background-position: center top; /* center center , top right, bottom 50px right 3%;*/
     background-size: cover; /* contain auto, 100% 100%, 50% 50% */
     background-attachment: fixed; /* scroll, fixed, local*/
+
+    padding: 20px;
 }
 
-/* selektor css po id */
-#main-header {
+
+
+/* zad 4 - selektory css */
+#main-header { /* selektor css po id */
     color: blue;
 }
-
 /* selektor css po klasie */
+.border-example {
+    border-width: 5px;
+    border-style: solid;
+    border-color: red;
+}
+/* selektor css po atrybucie */
 .container > .box { /* wszystkie elementy z klasą box które mają ojca container */
     border: 2px dashed green;
 }
-
-
 h1, h2 { /* selektor css po tagu */
     font-family: Arial, sans-serif; /* style css */
     line-height: 1.5;
     font-weight: bold;
 }
 
-/* po klasie */
-.border-example {
-    border-width: 5px;
-    border-style: solid;
-    border-color: red;
+
+
+
+/* zad 5 - box-model */
+.container {
+    width: 100%;
+    height: 500px;
+    position: relative; /* relative, absolute, fixed, static */
+    background-color: #e1e1e1;
+    border: 2px solid #000;
+    padding: 10px;
+}
+.box {
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffcc00;
+    border: 2px solid #000; /* grubosc styl kolor */
+}
+.static {
+    position: static;
+    background-color: #e6ff1c;
+}
+.relative {
+    position: relative;
+    top: 10px;
+    left: 30px;
+    background-color: darkslateblue;
+}
+.absolute {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    background-color: coral;
+}
+.fixed {
+    position: fixed;
+    top: 420px;
+    left: 420px;
+    background-color: chartreuse;
+}
+.float-left {
+    float: left;
+    background-color: #00ccff;
+}
+.float-right {
+    float: right;
+    background-color: #ff66cc;
 }
 
-/* stylowanie tabel */
+
+/* zad 8 - stylowanie tabel */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -66,95 +102,6 @@ th, td {
     padding: 8px;
     text-align: left;
 }
-
-/* pseudo-klasy i pseudo-elementy */
-a:hover {
-    color: red;
-}
-
-a:visited {
-    color: gray;
-}
-
-p::before {
-    content: "Start: ";
-}
-
-p::after {
-    content: " - End.";
-}
-
-/* menu rozwijane */
-.nav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav li {
-    position: relative;
-    display: inline-block;
-}
-
-.nav li ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 100%;
-    left: 0;
-}
-
-.nav li:hover ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav li ul li {
-    display: block;
-}
-
-
-
-
-.vertical-menu {
-    width: 200px;
-}
-
-.vertical-menu a {
-    background-color: #eee;
-    color: black;
-    display: block;
-    padding: 12px;
-    text-decoration: none;
-}
-
-.vertical-menu a:hover {
-    background-color: #ccc;
-}
-
-.vertical-menu a.active {
-    background-color: #04AA6D;
-    color: white;
-}
-
-/* podstrony */
-.sub-menu {
-    display: none;
-}
-
-.sub-menu li {
-    display: block;
-}
-
-
-
-
-
-
-
 p {
     font-size: 20px;
     color: red;
@@ -164,7 +111,6 @@ p {
     font-style: italic;
     text-decoration: underline;
 }
-
 td:hover {
     background-color: #abcdef;
 }
@@ -174,4 +120,100 @@ th:hover {
 
 table > *:hover {
     background-color: #f5f5f5;
+}
+
+
+
+/* zad 9 - pseudoklasy i pseudoelementy */
+a:hover {
+    color: red;
+}
+a:visited {
+    color: #4f981d;
+}
+button:disabled {
+    border: 2px solid #ff6600;
+    background-color: #ffcc00;
+}
+/* valid - zmienia styl gdy element jest poprawny */
+.button:valid {
+    border: 2px solid #10ff00;
+    background-color: #9cff00;
+}
+.button:hover {
+    background-color: #ff6600;
+    color: white;
+    cursor: pointer;
+}
+
+
+::selection {
+    background-color: #48ff00;
+    color: black;
+}
+li::marker {
+    color: #ff6600;
+    font-size: 40px;
+}
+p::before {
+    content: "Start: ";
+}
+p::after {
+    content: " - End.";
+}
+
+
+
+
+/* zad 10 - styl głównego menu rozwijanego */
+.menu {
+    width: 200px;
+    position: relative;
+}
+
+.menu-item {
+    position: relative;
+    background-color: #eee;
+    text-decoration: none;
+    padding: 12px;
+    color: black;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #ccc;
+    display: block;
+}
+
+/* podmenu ukryte domyślnie */
+.sub-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 200px;
+    background-color: #ddd;
+}
+
+.sub-menu a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.sub-menu a:hover {
+    background-color: #10ff00;
+}
+
+/* pokaz podmenu gdy najedziesz na element głowny */
+.menu-item:hover .sub-menu {
+    display: block;
+}
+
+.menu-item > a {
+    width: 100%;
+    height: 100%;
+    color: #00ccff;
 }
