@@ -10,43 +10,43 @@ DROP TABLE Wrogowie_kocurow CASCADE CONSTRAINTS;
 -- INITIALIZATION
 
 CREATE TABLE Bandy (
-    nr_bandy NUMBER(2) CONSTRAINT ban_nrbandy_pk PRIMARY KEY,
-    nazwa VARCHAR2(20) CONSTRAINT ban_nazwa_nn NOT NULL,
-    teren VARCHAR2(15) CONSTRAINT ban_teren_unq UNIQUE,
-    szef_bandy VARCHAR2(15) CONSTRAINT ban_szef_unq UNIQUE
+                       nr_bandy NUMBER(2) CONSTRAINT ban_nrbandy_pk PRIMARY KEY,
+                       nazwa VARCHAR2(20) CONSTRAINT ban_nazwa_nn NOT NULL,
+                       teren VARCHAR2(15) CONSTRAINT ban_teren_unq UNIQUE,
+                       szef_bandy VARCHAR2(15) CONSTRAINT ban_szef_unq UNIQUE
 );
 
 CREATE TABLE Funkcje (
-    funkcja VARCHAR2(10) CONSTRAINT fun_funkcja_pk PRIMARY KEY,
-    min_myszy NUMBER(3) CONSTRAINT fun_minmice_gt_5 CHECK (min_myszy > 5),
-    max_myszy NUMBER(3) CONSTRAINT fun_maxmice_lt_200 CHECK (200 > max_myszy),
-    CONSTRAINT fun_maxmice_ge_min CHECK (max_myszy >= min_myszy)
+                         funkcja VARCHAR2(10) CONSTRAINT fun_funkcja_pk PRIMARY KEY,
+                         min_myszy NUMBER(3) CONSTRAINT fun_minmice_gt_5 CHECK (min_myszy > 5),
+                         max_myszy NUMBER(3) CONSTRAINT fun_maxmice_lt_200 CHECK (200 > max_myszy),
+                         CONSTRAINT fun_maxmice_ge_min CHECK (max_myszy >= min_myszy)
 );
 
 CREATE TABLE Wrogowie (
-    imie_wroga VARCHAR2(15) CONSTRAINT wro_imie_pk PRIMARY KEY,
-    stopien_wrogosci NUMBER(2) CONSTRAINT wro_wrogosc_values CHECK (stopien_wrogosci BETWEEN 1 AND 10),
-    gatunek VARCHAR2(15),
-    lapowka VARCHAR2(20)
+                          imie_wroga VARCHAR2(15) CONSTRAINT wro_imie_pk PRIMARY KEY,
+                          stopien_wrogosci NUMBER(2) CONSTRAINT wro_wrogosc_values CHECK (stopien_wrogosci BETWEEN 1 AND 10),
+                          gatunek VARCHAR2(15),
+                          lapowka VARCHAR2(20)
 );
 
 CREATE TABLE Kocury (
-    imie VARCHAR2(15) CONSTRAINT koc_imie_nn NOT NULL,
-    plec VARCHAR2(1) CONSTRAINT koc_plec_values CHECK (plec IN ('M', 'D')),
-    pseudo VARCHAR2(15) CONSTRAINT koc_pseudo_pk PRIMARY KEY,
-    funkcja VARCHAR2(10) CONSTRAINT koc_funkcja_fk REFERENCES Funkcje(funkcja),
-    szef VARCHAR2(15) CONSTRAINT koc_szef_fk REFERENCES Kocury(pseudo),
-    w_stadku_od DATE DEFAULT SYSDATE,
-    przydzial_myszy NUMBER(3),
-    myszy_extra NUMBER(3),
-    nr_bandy NUMBER(2) CONSTRAINT koc_nr_bandy_fk REFERENCES Bandy(nr_bandy)
+                        imie VARCHAR2(15) CONSTRAINT koc_imie_nn NOT NULL,
+                        plec VARCHAR2(1) CONSTRAINT koc_plec_values CHECK (plec IN ('M', 'D')),
+                        pseudo VARCHAR2(15) CONSTRAINT koc_pseudo_pk PRIMARY KEY,
+                        funkcja VARCHAR2(10) CONSTRAINT koc_funkcja_fk REFERENCES Funkcje(funkcja),
+                        szef VARCHAR2(15) CONSTRAINT koc_szef_fk REFERENCES Kocury(pseudo),
+                        w_stadku_od DATE DEFAULT SYSDATE,
+                        przydzial_myszy NUMBER(3),
+                        myszy_extra NUMBER(3),
+                        nr_bandy NUMBER(2) CONSTRAINT koc_nr_bandy_fk REFERENCES Bandy(nr_bandy)
 );
 
 CREATE TABLE Wrogowie_kocurow (
-    pseudo VARCHAR2(15) CONSTRAINT wrokoc_pseudo_fk REFERENCES Kocury(pseudo),
-    imie_wroga VARCHAR2(15) CONSTRAINT wrokoc_imie_wroga_fk REFERENCES Wrogowie(imie_wroga),
-    data_incydentu DATE CONSTRAINT wrokoc_data_incydentu_nn NOT NULL,
-    opis_incydentu VARCHAR2(50)
+                                  pseudo VARCHAR2(15) CONSTRAINT wrokoc_pseudo_fk REFERENCES Kocury(pseudo),
+                                  imie_wroga VARCHAR2(15) CONSTRAINT wrokoc_imie_wroga_fk REFERENCES Wrogowie(imie_wroga),
+                                  data_incydentu DATE CONSTRAINT wrokoc_data_incydentu_nn NOT NULL,
+                                  opis_incydentu VARCHAR2(50)
 );
 
 -- ALTER SESSION
@@ -221,7 +221,7 @@ WHERE
 SELECT
     imie,
     w_stadku_od AS "W stadku",
-    ROUND(0.9*przydzial_myszy) AS "Zjadal",
+    ROUND(przydzial_myszy / 1.1) AS "Zjadal",
     ADD_MONTHS(w_stadku_od, 6) AS "Podwyzka",
     przydzial_myszy AS "Zjada"
 FROM
@@ -281,12 +281,7 @@ ORDER BY
 SELECT
     pseudo,
     w_stadku_od,
-    CASE
-        WHEN TO_CHAR(w_stadku_od, 'DD') <= 15 THEN
-            NEXT_DAY(LAST_DAY(ADD_MONTHS(TO_DATE('31-10-2024', 'DD-MM-YYYY'), 1)) - 7, 'ŚRODA')
-        ELSE
-            NEXT_DAY(LAST_DAY(ADD_MONTHS(TO_DATE('31-10-2024', 'DD-MM-YYYY'), 1)) - 7, 'ŚRODA')
-        END AS "WYPLATA"
+    NEXT_DAY(LAST_DAY(ADD_MONTHS(TO_DATE('31-10-2024', 'DD-MM-YYYY'), 1)) - 7, 'ŚRODA') AS "WYPLATA"
 FROM
     Kocury
 ORDER BY
@@ -324,16 +319,14 @@ GROUP BY
 -- Zad 11
 
 SELECT
-    k.pseudo AS "Pseudonim",
-    COUNT(w.imie_wroga) AS "Liczba wrogow"
+    pseudo AS "Pseudonim",
+    COUNT(imie_wroga) AS "Liczba wrogow"
 FROM
-    Kocury k
-        JOIN
-    Wrogowie_kocurow w ON k.pseudo = w.pseudo
+    Wrogowie_kocurow
 GROUP BY
-    k.pseudo
+    pseudo
 HAVING
-    COUNT(w.imie_wroga) >= 2;
+    COUNT(imie_wroga) > 1;
 
 
 -- Zad 12
@@ -408,7 +401,7 @@ START WITH
 -- Zad 16
 
 SELECT
-    RPAD(' ', 4 * (LEVEL - 1), ' ') || pseudo AS "Droga sluzbowa"
+    LPAD(' ', 4 * (LEVEL - 1), ' ') || pseudo AS "Droga sluzbowa"
 FROM
     Kocury
     CONNECT BY
