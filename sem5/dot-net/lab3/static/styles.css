@@ -9,9 +9,9 @@
 /* zad 3 - tło strony */
 body {
     background-image: linear-gradient(rgba(255, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url('3354.png');
-    background-repeat: no-repeat; /* repeat-x, repeat-y, repeat, space, round */
     background-position: center top; /* center center , top right, bottom 50px right 3%;*/
-    background-size: cover; /* contain auto, 100% 100%, 50% 50% */
+    background-repeat: no-repeat; /* repeat-x, repeat-y, repeat, space, round */
+    background-size: cover; /* 100% 50%, contain auto, 100% 100%, 50% 50% */
     background-attachment: fixed; /* scroll, fixed, local*/
 
     padding: 20px;
@@ -24,7 +24,7 @@ body {
     color: blue;
 }
 /* selektor css po klasie */
-.border-example {
+.border-example { /* zad 7 - atrybuty border-width, style color */
     border-width: 5px;
     border-style: solid;
     border-color: red;
@@ -90,6 +90,36 @@ h1, h2 { /* selektor css po tagu */
     background-color: #ff66cc;
 }
 
+/* zad 6 - formatowanie tekstu, rozne grubosci wysokosci */
+p {
+    font-size: 20px;
+    color: red;
+    font-family: "sans-serif";
+
+    font-weight: bold;
+    font-style: italic;
+
+    text-decoration: underline;
+    text-align: center; /* left, right, center, justify */
+
+    letter-spacing: 2px;
+    word-spacing: 5px;
+
+    line-height: 1.5;
+}
+p.strikethrough {
+    text-decoration: line-through; /* przekreślenie */
+}
+p.uppercase {
+    text-transform: uppercase; /* wszystkie litery wielkie */
+}
+p.capitalize {
+    text-transform: capitalize; /* pierwsze litery każdego słowa wielkie */
+}
+p.shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* pozioma pionowa rozmycie kolor */
+}
+
 
 /* zad 8 - stylowanie tabel */
 table {
@@ -101,15 +131,6 @@ th, td {
     border: 1px solid black;
     padding: 8px;
     text-align: left;
-}
-p {
-    font-size: 20px;
-    color: red;
-    font-family: "sans-serif";
-    font-weight: bold;
-    text-transform: uppercase;
-    font-style: italic;
-    text-decoration: underline;
 }
 td:hover {
     background-color: #abcdef;
