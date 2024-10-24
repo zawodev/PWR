@@ -31,12 +31,33 @@ void updateDisplay() {
   lcd.print("Time:");
 
   lcd.setCursor(0, 1);
-  lcd.print(elapsedTime / 1000);
-  lcd.print(" sec");
+  int minutes = elapsedTime / 60000;
+  int seconds = (elapsedTime % 60000) / 1000;
+  int milliseconds = elapsedTime % 1000;
+
+  if (minutes < 10) {
+      lcd.print("0");
+  }
+  lcd.print(minutes);
+  lcd.print(":");
+
+  if (seconds < 10) {
+      lcd.print("0");
+  }
+  lcd.print(seconds);
+  lcd.print(":");
+
+  if (milliseconds < 100) {
+      lcd.print("0");
+  }
+  if (milliseconds < 10) {
+      lcd.print("0");
+  }
+  lcd.print(milliseconds);
 }
 
 void setup() {
-  lcd.begin(16, 2);
+  lcd.init();
   lcd.backlight();
 
   initButtons();
@@ -88,7 +109,7 @@ void loop() {
 
   if (running) {
     elapsedTime = millis() - startTime;
-    if (elapsedTime % 1000 == 0) {
+    if (elapsedTime % 213 == 0) {
       updateDisplay();
     }
   }

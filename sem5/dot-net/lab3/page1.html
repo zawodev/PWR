@@ -16,9 +16,9 @@
 </header>
 
 <nav class="menu">
-    <a href="index.html" class="menu-item"> Strona gówna </a>
+    <a href="index.html"> Strona główna </a>
     <div class="menu-item">
-        <a href="page1.html"> Strona 1 </a>
+        <a href="page1.html"> Strona 1 (tabela) </a>
         <div class="sub-menu">
             <a href="#">Podstrona 1.1</a>
             <a href="#">Podstrona 1.2</a>
@@ -33,13 +33,13 @@
         </div>
     </div>
     <div class="menu-item">
-        <a href="page3.html"> Strona 3 </a>
+        <a href="page3.html"> Strona 3 (box model)</a>
         <div class="sub-menu">
             <a href="#">Podstrona 3.1</a>
         </div>
     </div>
     <div class="menu-item">
-        <a href="page4.html"> Strona 4 </a>
+        <a href="page4.html"> Strona 4 (pozostałe)</a>
     </div>
     <div class="menu-item">
         <a href="page5mod.html"> Modyfikacja </a>
@@ -47,6 +47,42 @@
 </nav>
 
 <button disabled> DISABLED BUTTON </button>
+
+<section id="tabela2">
+    <h2>(mod) Tabela 2</h2>
+    <table border="1">
+        <thead>
+        <tr>
+            <th rowspan="2"> &lt; &gt; </th>
+            <th colspan="3">TYTUŁ</th>
+            <th>A</th>
+        </tr>
+        <tr>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+            <th>E</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>F</td>
+            <td>G</td>
+            <td rowspan="2" colspan="3"><img src="static/3354.png" alt="Obrazek"></td>
+        </tr>
+        <tr>
+            <td>H</td>
+            <td>I</td>
+        </tr>
+        <tr>
+            <td>J</td>
+            <td>K</td>
+            <td>L</td>
+            <td colspan="2"><a href="https://www.google.com">google</a></td>
+        </tr>
+        </tbody>
+    </table>
+</section>
 
 </body>
 </html>

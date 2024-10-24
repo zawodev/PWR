@@ -65,13 +65,13 @@ h1, h2 { /* selektor css po tagu */
 }
 .relative {
     position: relative;
-    top: 10px;
-    left: 30px;
+    top: 100px;
+    left: 150px;
     background-color: darkslateblue;
 }
 .absolute {
     position: absolute;
-    top: 10px;
+    top: -100px;
     right: 100px;
     background-color: coral;
 }
@@ -189,10 +189,12 @@ p::after {
 /* zad 10 - styl głównego menu rozwijanego */
 .menu {
     width: 200px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-.menu-item {
+.menu > a {
     position: relative;
     background-color: #eee;
     text-decoration: none;
@@ -202,9 +204,26 @@ p::after {
     transition: background-color 0.3s;
 }
 
+.menu > a:hover {
+    background-color: #ccc;
+}
+
+.menu:hover .menu-item {
+    display: block;
+}
+
+.menu-item {
+    position: relative;
+    background-color: #eee;
+    text-decoration: none;
+    padding: 12px;
+    color: black;
+    display: none;
+    transition: background-color 0.3s;
+}
+
 .menu-item:hover {
     background-color: #ccc;
-    display: block;
 }
 
 /* podmenu ukryte domyślnie */
@@ -238,3 +257,12 @@ p::after {
     height: 100%;
     color: #00ccff;
 }
+
+
+
+/* modyfikacja */
+
+/* tło powtarzane w x oraz w y tylko na stronie page5mod */
+
+
+
