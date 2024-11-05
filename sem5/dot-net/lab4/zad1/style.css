@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#tableContainer {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 2px solid red;
+}
+
+th {
+    font-weight: bold;
+    color: black;
+    background-color: yellow;
+}
+
+td.even {
+    background-color: lightcoral;
+    color: black;
+}
+
+td.odd {
+    background-color: lightblue;
+    color: black;
+}
