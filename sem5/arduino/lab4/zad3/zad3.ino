@@ -19,7 +19,7 @@ DallasTemperature sensors(&oneWire);
 #define VOLTAGE_REF 5.0 // napięcie
 
 void setup() {
-    Serial.begin(115200);
+    Serial.begin(9600);
     lcd.init();
     lcd.backlight();
 
@@ -41,9 +41,9 @@ void loop() {
     lcd.print("V");
 
     // zad 4 - debugowanie w serial
-    Serial.print("ADC: ");
+    Serial.print("ADC:");
     Serial.print(adcValue);
-    Serial.print("\tVoltage: ");
+    Serial.print("\tVoltage:");
     Serial.print(voltage, 2);
     Serial.println("V");
 

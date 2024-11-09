@@ -22,7 +22,8 @@ void setup() {
     pinMode(RED_BUTTON, INPUT_PULLUP);
     pinMode(GREEN_BUTTON, INPUT_PULLUP);
 
-    Serial.begin(115200);
+    Serial.begin(9600);
+    // 115200
     // max 4 000 000
     // rozpoczęcie komunikacji szeregowej z maksymalną szybkością 115200 bps
     //page 3

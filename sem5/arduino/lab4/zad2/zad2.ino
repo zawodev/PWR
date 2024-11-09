@@ -23,7 +23,7 @@ void setup() {
     lcd.init();
     lcd.backlight();
 
-    Serial.begin(115200); // inicjalizacja portu szeregowego
+    Serial.begin(9600); // inicjalizacja portu szeregowego
 
     pinMode(LED_RED, OUTPUT);
     pinMode(LED_GREEN, OUTPUT);
