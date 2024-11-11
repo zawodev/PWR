@@ -34,13 +34,13 @@ SELECT
     K3.imie as "SZEF 2",
     K4.imie as "SZEF 3"
 FROM
-    (Kocury K1 LEFT JOIN
-    (Kocury K2 LEFT JOIN
-    (Kocury K3 LEFT JOIN
-    (Kocury K4
-    ON K4.pseudo = K3.szef))
-    ON K3.pseudo = K2.szef)
-    ON K2.pseudo = K1.szef)
+    Kocury K1 LEFT JOIN
+    Kocury K2 LEFT JOIN
+    Kocury K3 LEFT JOIN
+    Kocury K4
+    ON K4.pseudo = K3.szef
+    ON K3.pseudo = K2.szef
+    ON K2.pseudo = K1.szef
 WHERE
     K1.funkcja = 'KOT' OR K1.funkcja = 'MILUSIA';
 
@@ -48,18 +48,18 @@ WHERE
 
 SELECT *
 FROM(
-    SELECT
-        CONNECT_BY_ROOT imie "IMIE ",
-        imie,
-        CONNECT_BY_ROOT funkcja "FUNKCJA",
-        LEVEL "L"
-    FROM Kocury
-        CONNECT BY PRIOR szef = pseudo
-    START WITH
-        funkcja IN ('KOT', 'MILUSIA'))
-PIVOT (
-    MAX(imie) FOR L IN (2 szef1, 3 szef2, 4 szef3)
-)
+        SELECT
+            CONNECT_BY_ROOT imie "IMIE ",
+                imie,
+            CONNECT_BY_ROOT funkcja "FUNKCJA",
+                LEVEL "L"
+        FROM Kocury
+            CONNECT BY PRIOR szef = pseudo
+        START WITH
+            funkcja IN ('KOT', 'MILUSIA'))
+        PIVOT (
+               MAX(imie) FOR L IN (2 szef1, 3 szef2, 4 szef3)
+        )
 ORDER BY
     szef3;
 
@@ -71,13 +71,13 @@ ORDER BY
 SELECT
     imie as "IMIE",
     funkcja as "FUNKCJA",
-    RTRIM(REVERSE(RTRIM(SYS_CONNECT_BY_PATH(REVERSE(imie), ' | '), imie)), ' | ') "IMIONA KOLEJNYCH SZEFÓW"
+    REVERSE(RTRIM(RTRIM(SYS_CONNECT_BY_PATH(REVERSE(imie), ' | '), imie), ' | ')) "IMIONA KOLEJNYCH SZEFÓW"
 FROM
     Kocury
 WHERE
     funkcja in ('KOT', 'MILUSIA')
-    CONNECT BY
-    PRIOR pseudo = szef
+    CONNECT BY PRIOR
+    pseudo = szef
 START WITH
     szef IS NULL;
 
@@ -92,28 +92,26 @@ SELECT
 FROM
     Wrogowie JOIN
     Wrogowie_kocurow JOIN
-    Kocury JOIN BANDY
+    Kocury JOIN
+    BANDY
     ON Kocury.nr_bandy = Bandy.nr_bandy
     ON Wrogowie_kocurow.pseudo = Kocury.pseudo
     ON Wrogowie.imie_wroga = Wrogowie_kocurow.imie_wroga
 WHERE
     Kocury.plec = 'D' AND
-    Wrogowie_kocurow.DATA_INCYDENTU > TO_DATE('2007-01-01');
+    Wrogowie_kocurow.data_incydentu > TO_DATE('2007-01-01');
 
 ----------------------------- ZAD 21 -----------------------------
 
 SELECT
-    Bandy.nazwa "NAZWA BANDY",
-    COUNT(Q1.pseudo) "KOTY Z WROGAMI"
+    Bandy.nazwa AS "NAZWA BANDY",
+    COUNT(DISTINCT Kocury.pseudo) AS "KOTY Z WROGAMI"
 FROM
-    Bandy JOIN(
-        SELECT DISTINCT
-            Kocury.pseudo,
-            Kocury.nr_bandy
-        FROM (
-            Kocury JOIN Wrogowie_kocurow
-            ON Kocury.pseudo = Wrogowie_kocurow.pseudo))
-        Q1 ON Q1.nr_bandy= Bandy.nr_bandy
+    Bandy
+        JOIN Kocury ON
+        Kocury.nr_bandy = Bandy.nr_bandy
+        JOIN Wrogowie_kocurow ON
+        Kocury.pseudo = Wrogowie_kocurow.pseudo
 GROUP BY
     Bandy.nazwa;
 
@@ -126,12 +124,12 @@ SELECT
 FROM
     Kocury
         JOIN Wrogowie_kocurow
-        ON Kocury.pseudo = Wrogowie_kocurow.pseudo
+             ON Kocury.pseudo = Wrogowie_kocurow.pseudo
 GROUP BY
     Kocury.pseudo,
     funkcja
 HAVING
-    COUNT(Kocury.pseudo) >= 2;
+    COUNT(Kocury.pseudo) > 1;
 
 ----------------------------- ZAD 23 -----------------------------
 
@@ -180,7 +178,7 @@ SELECT
 FROM
     Bandy
         LEFT JOIN Kocury
-        ON Bandy.nr_bandy = Kocury.nr_bandy
+                  ON Bandy.nr_bandy = Kocury.nr_bandy
 WHERE
     imie IS NULL;
 
@@ -193,15 +191,15 @@ SELECT
 FROM
     Bandy
 
-MINUS
+        MINUS
 
 SELECT DISTINCT
     Kocury.nr_bandy,
     Bandy.nazwa,
     Bandy.teren
 FROM Bandy
-    LEFT JOIN Kocury
-    ON Bandy.nr_bandy = Kocury.nr_bandy;
+         LEFT JOIN Kocury
+                   ON Bandy.nr_bandy = Kocury.nr_bandy;
 
 
 ----------------------------- ZAD 25 -----------------------------
@@ -213,55 +211,54 @@ SELECT
 FROM
     Kocury
 WHERE
-    NVL(przydzial_myszy, 0) >= ALL (
-        SELECT 3 * NVL(przydzial_myszy, 0)
-            FROM Kocury
-                JOIN Bandy
-                ON Kocury.nr_bandy = Bandy.nr_bandy
-                    WHERE
-                        funkcja = 'MILUSIA' AND
-                        Bandy.teren IN ('SAD', 'CALOSC')
+    NVL(przydzial_myszy, 0) >= 3 * (
+        SELECT
+            NVL(przydzial_myszy, 0)
+        FROM
+            Kocury
+                JOIN
+            Bandy
+            ON
+                Kocury.nr_bandy = Bandy.nr_bandy
+        WHERE
+            funkcja = 'MILUSIA' AND
+            Bandy.teren IN ('SAD', 'CALOSC')
+        ORDER BY
+            NVL(przydzial_myszy, 0) DESC
+            FETCH FIRST 1 ROW ONLY
     );
+
 
 ----------------------------- ZAD 26 -----------------------------
 
 SELECT
-    K2.funkcja,
-    K2.AVG "Srednio najw. i najm. myszy"
-FROM(
-    SELECT
-        MIN(AVG) "MINAVG",
-        MAX(AVG) "MAXAVG"
-    FROM(
-        SELECT
-            funkcja,
-            CEIL(AVG(przydzial_myszy + NVL(myszy_extra, 0))) "AVG"
-        FROM
-            Kocury
-        WHERE
-            funkcja != 'SZEFUNIO'
-        GROUP BY
-            funkcja
-    )
-) K1
-
-JOIN(
-SELECT
     funkcja,
-    CEIL(AVG(przydzial_myszy + NVL(myszy_extra, 0))) "AVG"
+    CEIL(AVG(przydzial_myszy + NVL(myszy_extra, 0))) AS "Srednio najw. i najm. myszy"
 FROM
     Kocury
 WHERE
     funkcja != 'SZEFUNIO'
 GROUP BY
     funkcja
-) K2
+HAVING
+    CEIL(AVG(przydzial_myszy + NVL(myszy_extra, 0))) = (
+    SELECT MIN(AVG_MYSZY) FROM (
+    SELECT CEIL(AVG(przydzial_myszy + NVL(myszy_extra, 0))) AS AVG_MYSZY
+    FROM Kocury
+    WHERE funkcja != 'SZEFUNIO'
+    GROUP BY funkcja
+    )
+    )
+    OR CEIL(AVG(przydzial_myszy + NVL(myszy_extra, 0))) = (
+    SELECT MAX(AVG_MYSZY) FROM (
+    SELECT CEIL(AVG(przydzial_myszy + NVL(myszy_extra, 0))) AS AVG_MYSZY
+    FROM Kocury
+    WHERE funkcja != 'SZEFUNIO'
+    GROUP BY funkcja
+    )
+    )
+ORDER BY 2 ASC;
 
-ON K1.MINAVG = K2.AVG
-OR K1.MAXAVG = K2.AVG
-
-ORDER BY
-    K2.AVG;
 
 ----------------------------- ZAD 27a -----------------------------
 
@@ -269,20 +266,32 @@ SELECT
     pseudo,
     przydzial_myszy + NVL(myszy_extra, 0) "ZJADA"
 FROM
-    Kocury K
+    Kocury K1
 WHERE(
-    SELECT
-        COUNT(DISTINCT przydzial_myszy + NVL(myszy_extra, 0))
-    FROM
-        Kocury
-    WHERE
-        przydzial_myszy + NVL(myszy_extra, 0) > K.przydzial_myszy + NVL(K.myszy_extra, 0)
-) < 6
-ORDER BY
-    2 DESC;
+         SELECT
+             COUNT(*)
+         FROM
+             Kocury K2
+         WHERE
+             K2.przydzial_myszy + NVL(K2.myszy_extra, 0) > K1.przydzial_myszy + NVL(K1.myszy_extra, 0)
+     ) < &n
+ORDER BY 2 DESC;
 
 ----------------------------- ZAD 27b -----------------------------
-
+/*
+SELECT
+    pseudo,
+    zjada "ZJADA"
+FROM(
+    SELECT
+        pseudo,
+        przydzial_myszy + NVL(myszy_extra, 0) as zjada
+    FROM
+        Kocury
+    ORDER BY 2 DESC
+)
+WHERE ROWNUM <= &n;
+*/
 SELECT
     pseudo,
     przydzial_myszy + NVL(myszy_extra, 0) "ZJADA"
@@ -290,24 +299,24 @@ FROM
     Kocury
 WHERE
     przydzial_myszy + NVL(myszy_extra, 0) IN (
-    SELECT *
-    FROM (
-        SELECT DISTINCT
-            przydzial_myszy + NVL(myszy_extra, 0)
-        FROM
-            Kocury
-        ORDER BY
-            1 DESC
-    )
-    WHERE
-        ROWNUM <= 6
-);
+        SELECT *
+        FROM (
+                 SELECT DISTINCT
+                     przydzial_myszy + NVL(myszy_extra, 0)
+                 FROM
+                     Kocury
+                 ORDER BY
+                     1 DESC
+             )
+        WHERE
+            ROWNUM <= &n
+    );
 
 ----------------------------- ZAD 27c -----------------------------
 
 SELECT
     K1.pseudo,
-    AVG(K1.przydzial_myszy + NVL(K1.myszy_extra, 0)) "ZJADA"
+    MAX(K1.przydzial_myszy + NVL(K1.myszy_extra, 0)) "ZJADA"
 FROM
     Kocury K1 LEFT JOIN
     Kocury K2 ON
@@ -315,7 +324,7 @@ FROM
 GROUP BY
     K1.pseudo
 HAVING
-    COUNT(K2.pseudo) <= 6
+    COUNT(*) < &n
 ORDER BY
     2 DESC;
 
@@ -325,127 +334,77 @@ SELECT
     pseudo,
     ZJADA
 FROM (
-    SELECT
-        pseudo,
-        NVL(przydzial_myszy, 0) + NVL(myszy_extra, 0) "ZJADA",
-        DENSE_RANK() OVER (
+         SELECT
+             pseudo,
+             NVL(przydzial_myszy, 0) + NVL(myszy_extra, 0) "ZJADA",
+             DENSE_RANK() OVER (
             ORDER BY
                 przydzial_myszy + NVL(myszy_extra, 0) DESC
-        ) RANK
-    FROM
-        Kocury
-    )
-WHERE RANK <= 6;
+        ) ranking
+         FROM
+             Kocury
+     )
+WHERE ranking <= &n;
 
 
 ----------------------------- ZAD 28 -----------------------------
 
+-- CTE
+-- COMMON TABLE EXPRESSION != VIEW
+-- (it is temporary)
+WITH
+    YearData AS (
+        SELECT
+            EXTRACT(YEAR FROM w_stadku_od) AS YEAR,
+    COUNT(EXTRACT(YEAR FROM w_stadku_od)) AS SUM
+FROM Kocury
+GROUP BY EXTRACT(YEAR FROM w_stadku_od)
+    ),
+    AvgData AS (
+SELECT AVG(COUNT(EXTRACT(YEAR FROM w_stadku_od))) AS AVG
+FROM Kocury
+GROUP BY EXTRACT(YEAR FROM w_stadku_od)
+    ),
+    DiffData AS (
 SELECT
-    TO_CHAR(YEAR) "ROK",
-    SUM "LICZBA WSTAPIEN"
-FROM (
-    SELECT
-        YEAR,
-        SUM,
-        ABS(SUM-AVG) "DIFF"
-    FROM (
-        SELECT
-            EXTRACT(YEAR FROM w_stadku_od) "YEAR",
-            COUNT(EXTRACT(YEAR FROM w_stadku_od)) "SUM"
-        FROM
-            Kocury
-        GROUP BY
-            EXTRACT(YEAR FROM w_stadku_od)
+    year_data.YEAR,
+    year_data.SUM,
+    avg_data.AVG,
+    ABS(year_data.SUM - avg_data.AVG) AS DIFF,
+    CASE
+    WHEN year_data.SUM < avg_data.AVG THEN 'lower'
+    ELSE 'higher'
+    END AS diff_side
+FROM YearData year_data
+    CROSS JOIN AvgData avg_data
+    ),
+    MinDiffLower AS (
+SELECT MIN(DIFF) AS MIN_DIFF
+FROM DiffData
+WHERE diff_side = 'lower'
+    ),
+    MinDiffHigher AS (
+SELECT MIN(DIFF) AS MIN_DIFF
+FROM DiffData
+WHERE diff_side = 'higher'
     )
-    JOIN (
-        SELECT
-            AVG(COUNT(EXTRACT(YEAR FROM w_stadku_od))) "AVG"
-        FROM
-            Kocury
-        GROUP BY
-            EXTRACT(YEAR FROM w_stadku_od)
-    ) ON SUM < AVG
-)
-WHERE DIFF < ALL (
-    SELECT
-        MAX(ABS(SUM-AVG)) "DIFF"
-    FROM (
-        SELECT
-            EXTRACT(YEAR FROM w_stadku_od) "YEAR",
-            COUNT(EXTRACT(YEAR FROM w_stadku_od)) "SUM"
-        FROM
-            Kocury
-        GROUP BY
-            EXTRACT(YEAR FROM w_stadku_od)
-    )
-    JOIN (
-        SELECT
-            AVG(COUNT(EXTRACT(YEAR FROM w_stadku_od))) "AVG"
-        FROM
-            Kocury
-        GROUP BY
-            EXTRACT(YEAR FROM w_stadku_od)
-    ) ON SUM < AVG
-)
+
+SELECT
+    TO_CHAR(diff_data.YEAR) AS "ROK",
+    diff_data.SUM AS "LICZBA WSTAPIEN"
+FROM DiffData diff_data
+WHERE
+    diff_data.DIFF = (SELECT MIN_DIFF FROM MinDiffLower) OR
+    diff_data.DIFF = (SELECT MIN_DIFF FROM MinDiffHigher)
 
 UNION
 
 SELECT
     'Srednia',
-    ROUND(AVG(COUNT(EXTRACT(YEAR FROM w_stadku_od))), 7) "AVG"
-FROM
-    Kocury
-GROUP BY
-    EXTRACT(YEAR FROM w_stadku_od)
-
-UNION
-
-SELECT
-    TO_CHAR(YEAR),
-    SUM
-FROM (
-    SELECT
-        YEAR,
-        SUM,
-        ABS(SUM-AVG) "DIFF"
-    FROM (
-        SELECT
-            EXTRACT(YEAR FROM w_stadku_od) "YEAR",
-            COUNT(EXTRACT(YEAR FROM w_stadku_od)) "SUM"
-        FROM
-            Kocury
-        GROUP BY
-            EXTRACT(YEAR FROM w_stadku_od)
-    )
-    JOIN (
-        SELECT AVG(COUNT(EXTRACT(YEAR FROM w_stadku_od))) "AVG"
-    FROM
-        Kocury
-    GROUP BY
-        EXTRACT(YEAR FROM w_stadku_od)
-    ) ON SUM > AVG
-)
-WHERE DIFF < ALL (
-    SELECT
-        MAX(ABS(SUM-AVG)) "DIFF"
-    FROM (
-        SELECT
-            EXTRACT(YEAR FROM w_stadku_od) "YEAR",
-            COUNT(EXTRACT(YEAR FROM w_stadku_od)) "SUM"
-        FROM
-            Kocury
-        GROUP BY
-            EXTRACT(YEAR FROM w_stadku_od)
-    )
-    JOIN (
-        SELECT AVG(COUNT(EXTRACT(YEAR FROM w_stadku_od))) "AVG"
-    FROM
-        Kocury
-    GROUP BY
-        EXTRACT(YEAR FROM w_stadku_od)
-    ) ON SUM > AVG
-)
+    ROUND(AVG(year_data.SUM), 7) AS "AVG"
+FROM YearData year_data
 ORDER BY 2 ASC;
+
 
 ----------------------------- ZAD 29a -----------------------------
 
@@ -471,7 +430,8 @@ ORDER BY 4 ASC;
 SELECT
     imie,
     przydzial_myszy + NVL(myszy_extra, 0) "ZJADA",
-    K1.nr_bandy, TO_CHAR(AVG, '99.99') "SREDNIA BANDY"
+    K1.nr_bandy,
+    TO_CHAR(AVG, '99.99') "SREDNIA BANDY"
 FROM
     Kocury K1 JOIN (
         SELECT
@@ -482,8 +442,8 @@ FROM
         GROUP BY
             nr_bandy
     ) K2 ON
-    K1.nr_bandy = K2.nr_bandy AND
-    przydzial_myszy + NVL(myszy_extra, 0) < AVG
+        K1.nr_bandy = K2.nr_bandy AND
+        przydzial_myszy + NVL(myszy_extra, 0) < AVG
 WHERE
     PLEC = 'M'
 ORDER BY 4 ASC;
@@ -494,11 +454,14 @@ SELECT
     imie,
     przydzial_myszy + NVL(myszy_extra, 0) "ZJADA",
     nr_bandy,
-    TO_CHAR((SELECT AVG(przydzial_myszy + NVL(myszy_extra, 0)) "AVG"
-FROM
-    Kocury K
-WHERE
-    Kocury.nr_bandy = K.nr_bandy), '99.99') "SREDNIA BANDY"
+    TO_CHAR((
+                SELECT
+                    AVG(przydzial_myszy + NVL(myszy_extra, 0)) "AVG"
+                FROM
+                    Kocury K
+                WHERE
+                    Kocury.nr_bandy = K.nr_bandy), '99.99'
+    ) "SREDNIA BANDY"
 FROM
     Kocury
 WHERE
@@ -519,17 +482,16 @@ SELECT
     imie,
     TO_CHAR(w_stadku_od, 'YYYY-MM-DD') || ' <--- NAJSTARSZY STAZEM W BANDZIE ' || nazwa "WSTAPIL DO STADKA"
 FROM (
-    SELECT
-        imie,
-        w_stadku_od, nazwa,
-        MIN(w_stadku_od) OVER (PARTITION BY Kocury.nr_bandy) minstaz
-    FROM
-        Kocury
-    JOIN
-        Bandy
-    ON
-        Kocury.nr_bandy = Bandy.nr_bandy
-)
+         SELECT
+             imie,
+             w_stadku_od,
+             nazwa,
+             MIN(w_stadku_od) OVER (PARTITION BY Kocury.nr_bandy) minstaz
+         FROM
+             Kocury
+                 JOIN Bandy ON
+                 Kocury.nr_bandy = Bandy.nr_bandy
+     )
 WHERE
     w_stadku_od = minstaz
 
@@ -539,17 +501,16 @@ SELECT
     imie,
     TO_CHAR(w_stadku_od, 'YYYY-MM-DD') || ' <--- NAJMLODSZY STAZEM W BANDZIE ' || nazwa "WSTAPIL DO STADKA"
 FROM (
-    SELECT
-        imie,
-        w_stadku_od, nazwa,
-        MAX(w_stadku_od) OVER (PARTITION BY Kocury.nr_bandy) maxstaz
-    FROM
-        Kocury
-    JOIN
-        Bandy
-    ON
-        Kocury.nr_bandy = Bandy.nr_bandy
-)
+         SELECT
+             imie,
+             w_stadku_od,
+             nazwa,
+             MAX(w_stadku_od) OVER (PARTITION BY Kocury.nr_bandy) maxstaz
+         FROM
+             Kocury
+                 JOIN Bandy ON
+                 Kocury.nr_bandy = Bandy.nr_bandy
+     )
 WHERE
     w_stadku_od = maxstaz
 
@@ -559,22 +520,21 @@ SELECT
     imie,
     TO_CHAR(w_stadku_od, 'YYYY-MM-DD')
 FROM (
-    SELECT
-        imie,
-        w_stadku_od, nazwa,
-        MIN(w_stadku_od) OVER (PARTITION BY Kocury.nr_bandy) minstaz,
-        MAX(w_stadku_od) OVER (PARTITION BY Kocury.nr_bandy) maxstaz
-    FROM
-        Kocury
-    JOIN
-        Bandy
-    ON
-        Kocury.nr_bandy = Bandy.nr_bandy
-)
+         SELECT
+             imie,
+             w_stadku_od,
+             nazwa,
+             MIN(w_stadku_od) OVER (PARTITION BY Kocury.nr_bandy) minstaz,
+                 MAX(w_stadku_od) OVER (PARTITION BY Kocury.nr_bandy) maxstaz
+         FROM
+             Kocury
+                 JOIN Bandy ON
+                 Kocury.nr_bandy = Bandy.nr_bandy
+     )
 WHERE
-    W_STADKU_OD != minstaz AND
-    W_STADKU_OD != maxstaz
-ORDER BY IMIE;
+    w_stadku_od != minstaz AND
+    w_stadku_od != maxstaz
+ORDER BY 1;
 
 ----------------------------- ZAD 31 -----------------------------
 
@@ -591,10 +551,10 @@ SELECT
     COUNT(myszy_extra)
 FROM
     Kocury
-JOIN
+        JOIN
     Bandy
-ON
-    Kocury.nr_bandy = Bandy.nr_bandy
+    ON
+        Kocury.nr_bandy = Bandy.nr_bandy
 GROUP BY nazwa;
 
 SELECT *
@@ -607,18 +567,18 @@ SELECT
     przydzial_myszy "ZJADA", 'OD ' || min_spoz || ' DO ' || max_spoz "GRANICE SPOZYCIA",
     TO_CHAR(w_stadku_od, 'YYYY-MM-DD') "LOWI OD"
 FROM (
-    Kocury
-    JOIN
-        Bandy
-    ON
-        Kocury.nr_bandy = Bandy.nr_bandy
-    JOIN
-        Statystyki
-    ON
-        Bandy.nazwa = Statystyki.nazwa_bandy
-)
+         Kocury
+             JOIN
+             Bandy
+             ON
+                 Kocury.nr_bandy = Bandy.nr_bandy
+             JOIN
+             Statystyki
+             ON
+                 Bandy.nazwa = Statystyki.nazwa_bandy
+     )
 WHERE
-    pseudo = UPPER('PLACEK');
+    pseudo = UPPER(&name);
 
 ----------------------------- ZAD 32 -----------------------------
 
@@ -638,29 +598,29 @@ WHERE pseudo IN (
         pseudo
     FROM
         Kocury
-    JOIN
+            JOIN
         Bandy
-    ON
-        Kocury.nr_bandy = Bandy.nr_bandy
+        ON
+            Kocury.nr_bandy = Bandy.nr_bandy
     WHERE
         nazwa = 'CZARNI RYCERZE'
     ORDER BY
         w_stadku_od
-    FETCH NEXT 3 ROWS ONLY
+        FETCH NEXT 3 ROWS ONLY
 ) OR pseudo IN (
     SELECT
         pseudo
     FROM
         Kocury
-    JOIN
+            JOIN
         Bandy
-    ON
-        Kocury.nr_bandy= Bandy.nr_bandy
+        ON
+            Kocury.nr_bandy= Bandy.nr_bandy
     WHERE
         nazwa = 'LACIACI MYSLIWI'
     ORDER BY
         w_stadku_od
-    FETCH NEXT 3 ROWS ONLY
+        FETCH NEXT 3 ROWS ONLY
 );
 
 SELECT
@@ -678,14 +638,14 @@ SET
             MIN(przydzial_myszy)
         FROM
             Kocury
-        ), 10),
+    ), 10),
     myszy_extra = NVL(myszy_extra, 0) + 0.15 * (
-    SELECT
-        AVG(NVl(myszy_extra, 0))
-    FROM
-        Kocury
-    WHERE
-        StaraGwardia.nr_bandy = nr_bandy
+        SELECT
+            AVG(NVl(myszy_extra, 0))
+        FROM
+            Kocury
+        WHERE
+            StaraGwardia.nr_bandy = nr_bandy
     );
 
 SELECT
@@ -700,179 +660,158 @@ ROLLBACK;
 
 ----------------------------- ZAD 33a -----------------------------
 
-SELECT *
-FROM (
-    SELECT
-        TO_CHAR(DECODE(plec, 'D', nazwa, ' ')) "NAZWA BANDY",
-        TO_CHAR(DECODE(plec, 'D', 'Kotka', 'Kocor')),
-        TO_CHAR(COUNT(pseudo)) "ILE",
-        TO_CHAR(NVL((SELECT SUM(przydzial_myszy + NVL(myszy_extra, 0)) FROM Kocury K WHERE funkcja = 'SZEFUNIO' AND K.nr_bandy= Kocury.nr_bandy AND K.plec = Kocury.plec),0)) "SZEFUNIO",
-        TO_CHAR(NVL((SELECT SUM(przydzial_myszy + NVL(myszy_extra, 0)) FROM Kocury K WHERE funkcja = 'BANDZIOR' AND K.nr_bandy= Kocury.nr_bandy AND K.plec = Kocury.plec),0)) "BANDZIOR",
-        TO_CHAR(NVL((SELECT SUM(przydzial_myszy + NVL(myszy_extra, 0)) FROM Kocury K WHERE funkcja = 'LOWCZY' AND K.nr_bandy= Kocury.nr_bandy AND K.plec = Kocury.plec),0)) "LOWCZY",
-        TO_CHAR(NVL((SELECT SUM(przydzial_myszy + NVL(myszy_extra, 0)) FROM Kocury K WHERE funkcja = 'LAPACZ' AND K.nr_bandy= Kocury.nr_bandy AND K.plec = Kocury.plec),0)) "LAPACZ",
-        TO_CHAR(NVL((SELECT SUM(przydzial_myszy + NVL(myszy_extra, 0)) FROM Kocury K WHERE funkcja = 'KOT' AND K.nr_bandy= Kocury.nr_bandy AND K.plec = Kocury.plec),0)) "KOT",
-        TO_CHAR(NVL((SELECT SUM(przydzial_myszy + NVL(myszy_extra, 0)) FROM Kocury K WHERE funkcja = 'MILUSIA' AND K.nr_bandy= Kocury.nr_bandy AND K.plec = Kocury.plec),0)) "MILUSIA",
-        TO_CHAR(NVL((SELECT SUM(przydzial_myszy + NVL(myszy_extra, 0)) FROM Kocury K WHERE funkcja = 'DZIELCZY' AND K.nr_bandy= Kocury.nr_bandy AND K.plec = Kocury.plec),0)) "DZIELCZY",
-        TO_CHAR(NVL((SELECT SUM(przydzial_myszy + NVL(myszy_extra, 0)) FROM Kocury K WHERE K.nr_bandy= Kocury.nr_bandy AND K.plec = Kocury.plec),0)) "SUMA"
-    FROM (
-        Kocury
+SELECT
+    b.nazwa AS "NAZWA BANDY",
+    CASE
+        WHEN k.plec = 'M' THEN 'Kocur'
+        WHEN k.plec = 'D' THEN ' Kotka'
+        END AS "PLEC",
+    NVL(TO_CHAR(COUNT(k.pseudo)), ' ') AS "ILE",
+    NVL(TO_CHAR(SUM(DECODE(k.funkcja, 'SZEFUNIO',  k.przydzial_myszy + NVL(k.myszy_extra, 0), 0))), ' ') AS "SZEFUNIO",
+    NVL(TO_CHAR(SUM(DECODE(k.funkcja, 'BANDZIOR',  k.przydzial_myszy + NVL(k.myszy_extra, 0), 0))), ' ') AS "BANDZIOR",
+    NVL(TO_CHAR(SUM(DECODE(k.funkcja, 'LOWCZY',  k.przydzial_myszy + NVL(k.myszy_extra, 0), 0))), ' ') AS "LOWCZY",
+    NVL(TO_CHAR(SUM(DECODE(k.funkcja, 'LAPACZ',  k.przydzial_myszy + NVL(k.myszy_extra, 0), 0))), ' ') AS "LAPACZ",
+    NVL(TO_CHAR(SUM(DECODE(k.funkcja, 'KOT',  k.przydzial_myszy + NVL(k.myszy_extra, 0), 0))), ' ') AS "KOT",
+    NVL(TO_CHAR(SUM(DECODE(k.funkcja, 'MILUSIA',  k.przydzial_myszy + NVL(k.myszy_extra, 0), 0))), ' ') AS "MILUSIA",
+    NVL(TO_CHAR(SUM(DECODE(k.funkcja, 'DZIELCZY',  k.przydzial_myszy + NVL(k.myszy_extra, 0), 0))), ' ') AS "DZIELCZY",
+    NVL(TO_CHAR(SUM(k.przydzial_myszy + NVL(k.myszy_extra, 0))), ' ') AS "SUMA"
+FROM
+    Kocury k
         JOIN
-            Bandy
-        ON
-            Kocury.nr_bandy = Bandy.nr_bandy
-    )
-    GROUP BY
-        nazwa,
-        plec,
-        Kocury.nr_bandy
-    ORDER BY
-        nazwa
-)
+    Bandy b ON k.nr_bandy = b.nr_bandy
+GROUP BY
+    b.nazwa, k.plec
 
-UNION
+UNION ALL
 
 SELECT
-    'Z--------------',
-    '------',
-    '--------',
-    '---------',
-    '---------',
-    '--------',
-    '--------',
-    '--------',
-    '--------',
-    '--------',
-    '--------'
+    'Z--------------' AS "NAZWA BANDY",
+    '------' AS "PLEC",
+    '--------' AS "ILE",
+    '---------' AS "SZEFUNIO",
+    '---------' AS "BANDZIOR",
+    '--------' AS "LOWCZY",
+    '--------' AS "LAPACZ",
+    '--------' AS "KOT",
+    '--------' AS "MILUSIA",
+    '--------' AS "DZIELCZY",
+    '--------' AS "SUMA"
 FROM
-    DUAL
+    dual
 
-UNION
+UNION ALL
 
-SELECT DISTINCT
-    'ZJADA RAZEM',
-    ' ',
-    ' ',
-    TO_CHAR(NVL((SELECT SUM(przydzial_myszy + NVL(myszy_extra, 0)) FROM Kocury K WHERE funkcja = 'SZEFUNIO'),0)) "SZEFUNIO",
-    TO_CHAR(NVL((SELECT SUM(przydzial_myszy + NVL(myszy_extra, 0)) FROM Kocury K WHERE funkcja = 'BANDZIOR'),0)) "BANDZIOR",
-    TO_CHAR(NVL((SELECT SUM(przydzial_myszy + NVL(myszy_extra, 0)) FROM Kocury K WHERE funkcja = 'LOWCZY'),0)) "LOWCZY",
-    TO_CHAR(NVL((SELECT SUM(przydzial_myszy + NVL(myszy_extra, 0)) FROM Kocury K WHERE funkcja = 'LAPACZ'),0)) "LAPACZ",
-    TO_CHAR(NVL((SELECT SUM(przydzial_myszy + NVL(myszy_extra, 0)) FROM Kocury K WHERE funkcja = 'KOT'),0)) "KOT",
-    TO_CHAR(NVL((SELECT SUM(przydzial_myszy + NVL(myszy_extra, 0)) FROM Kocury K WHERE funkcja = 'MILUSIA'),0)) "MILUSIA",
-    TO_CHAR(NVL((SELECT SUM(przydzial_myszy + NVL(myszy_extra, 0)) FROM Kocury K WHERE funkcja = 'DZIELCZY'),0)) "DZIELCZY",
-    TO_CHAR(NVL((SELECT SUM(przydzial_myszy + NVL(myszy_extra, 0)) FROM Kocury K),0)) "SUMA"
-FROM (
-    Kocury
-    JOIN
-        Bandy
-    ON
-        Kocury.nr_bandy = Bandy.nr_bandy
-);
+SELECT
+    'ZJADA RAZEM' AS "NAZWA BANDY",
+    ' ' AS "PLEC", -- Pusty string zamiast NULL
+    ' ' AS "ILE",  -- Pusty string zamiast NULL
+    NVL(TO_CHAR(SUM(DECODE(k.funkcja, 'SZEFUNIO',  k.przydzial_myszy + NVL(k.myszy_extra, 0), 0))), ' ') AS "SZEFUNIO",
+    NVL(TO_CHAR(SUM(DECODE(k.funkcja, 'BANDZIOR',  k.przydzial_myszy + NVL(k.myszy_extra, 0), 0))), ' ') AS "BANDZIOR",
+    NVL(TO_CHAR(SUM(DECODE(k.funkcja, 'LOWCZY',  k.przydzial_myszy + NVL(k.myszy_extra, 0), 0))), ' ') AS "LOWCZY",
+    NVL(TO_CHAR(SUM(DECODE(k.funkcja, 'LAPACZ',  k.przydzial_myszy + NVL(k.myszy_extra, 0), 0))), ' ') AS "LAPACZ",
+    NVL(TO_CHAR(SUM(DECODE(k.funkcja, 'KOT',  k.przydzial_myszy + NVL(k.myszy_extra, 0), 0))), ' ') AS "KOT",
+    NVL(TO_CHAR(SUM(DECODE(k.funkcja, 'MILUSIA',  k.przydzial_myszy + NVL(k.myszy_extra, 0), 0))), ' ') AS "MILUSIA",
+    NVL(TO_CHAR(SUM(DECODE(k.funkcja, 'DZIELCZY',  k.przydzial_myszy + NVL(k.myszy_extra, 0), 0))), ' ') AS "DZIELCZY",
+    NVL(TO_CHAR(SUM(k.przydzial_myszy + NVL(k.myszy_extra, 0))), ' ') AS "SUMA"
+FROM
+    Kocury k
+        JOIN
+    Bandy b ON k.nr_bandy = b.nr_bandy
+ORDER BY
+    "NAZWA BANDY", "PLEC";
 
 ----------------------------- ZAD 33b -----------------------------
 
 SELECT *
 FROM (
-    SELECT
-        TO_CHAR(DECODE(plec, 'D', nazwa, ' ')) "NAZWA BANDY",
-        TO_CHAR(DECODE(plec, 'D', 'Kotka', 'Kocor')),
-        TO_CHAR(ile) "ILE",
-        TO_CHAR(NVL(szefunio, 0)) "SZEFUNIO",
-        TO_CHAR(NVL(bandzior,0)) "BANDZIOR",
-        TO_CHAR(NVL(lowczy,0)) "LOWCZY",
-        TO_CHAR(NVL(lapacz,0)) "LAPACZ",
-        TO_CHAR(NVL(kot,0)) "KOT",
-        TO_CHAR(NVL(milusia,0)) "MILUSIA",
-        TO_CHAR(NVL(dzielczy,0)) "DZIELCZY",
-        TO_CHAR(NVL(suma,0)) "SUMA"
-    FROM (
-        SELECT
-            nazwa,
-            plec,
-            funkcja,
-            przydzial_myszy + NVL(myszy_extra, 0) liczba
-        FROM
-            Kocury
-        JOIN
-            Bandy
-        ON
-            Kocury.nr_bandy= Bandy.nr_bandy
-    ) PIVOT (
-        SUM(liczba) FOR funkcja IN (
-            'SZEFUNIO' szefunio, 'BANDZIOR' bandzior, 'LOWCZY' lowczy, 'LAPACZ' lapacz, 'KOT' kot, 'MILUSIA' milusia, 'DZIELCZY' dzielczy
+         SELECT
+             TO_CHAR(nazwa) "NAZWA BANDY",
+             TO_CHAR(DECODE(plec, 'D', ' Kotka', 'Kocur')) AS "PLEC",
+             TO_CHAR(ile) AS "ILE",
+             TO_CHAR(NVL(szefunio, 0)) AS "SZEFUNIO",
+             TO_CHAR(NVL(bandzior, 0)) AS "BANDZIOR",
+             TO_CHAR(NVL(lowczy, 0)) AS "LOWCZY",
+             TO_CHAR(NVL(lapacz, 0)) AS "LAPACZ",
+             TO_CHAR(NVL(kot, 0)) AS "KOT",
+             TO_CHAR(NVL(milusia, 0)) AS "MILUSIA",
+             TO_CHAR(NVL(dzielczy, 0)) AS "DZIELCZY",
+             TO_CHAR(NVL(suma, 0)) AS "SUMA"
+         FROM (
+                  SELECT
+                      b.nazwa,
+                      k.plec,
+                      k.funkcja,
+                      (k.przydzial_myszy + NVL(k.myszy_extra, 0)) AS liczba
+                  FROM
+                      Kocury k
+                          JOIN
+                      Bandy b
+                      ON
+                          k.nr_bandy = b.nr_bandy
+              ) PIVOT (
+                       SUM(liczba) FOR funkcja IN (
+            'SZEFUNIO' AS szefunio, 'BANDZIOR' AS bandzior, 'LOWCZY' AS lowczy,
+            'LAPACZ' AS lapacz, 'KOT' AS kot, 'MILUSIA' AS milusia, 'DZIELCZY' AS dzielczy
         )
-    )
-    JOIN (
-        SELECT
-            nazwa "N",
-            plec "P",
-            COUNT(pseudo) ile,
-            SUM(przydzial_myszy + NVL(myszy_extra, 0)) suma
-        FROM
-            Kocury K
-        JOIN
-            Bandy B
-        ON
-            K.nr_bandy= B.nr_bandy
-        GROUP BY
-            nazwa,
-            plec
-        ORDER BY
-            nazwa
-    )
-    ON
-        N = nazwa AND P = plec
-)
+             )
+                  JOIN (
+             SELECT
+                 b.nazwa AS "N",
+                 k.plec AS "P",
+                 COUNT(k.pseudo) AS ile,
+                 SUM(k.przydzial_myszy + NVL(k.myszy_extra, 0)) AS suma
+             FROM
+                 Kocury k
+                     JOIN
+                 Bandy b
+                 ON
+                     k.nr_bandy = b.nr_bandy
+             GROUP BY
+                 b.nazwa, k.plec
+             ORDER BY
+                 b.nazwa
+         ) summary
+                       ON
+                           summary.N = nazwa AND summary.P = plec
+     )
 
 UNION
 
 SELECT
-    'Z--------------',
-    '------',
-    '--------',
-    '---------',
-    '---------',
-    '--------',
-    '--------',
-    '--------',
-    '--------',
-    '--------',
-    '--------'
+    'Z--------------', '------', '--------', '---------', '---------',
+    '--------', '--------', '--------', '--------', '--------', '--------'
 FROM
     DUAL
 
 UNION
 
 SELECT
-    'ZJADA RAZEM',
-    ' ',
-    ' ',
-    TO_CHAR(NVL(szefunio, 0)) szefunio,
-    TO_CHAR(NVL(bandzior, 0)) bandzior,
-    TO_CHAR(NVL(lowczy, 0)) lowczy,
-    TO_CHAR(NVL(lapacz, 0)) lapacz,
-    TO_CHAR(NVL(kot, 0)) kot,
-    TO_CHAR(NVL(milusia, 0)) milusia,
-    TO_CHAR(NVL(dzielczy, 0)) dzielczy,
-    TO_CHAR(NVL(suma, 0)) suma
+    'ZJADA RAZEM', ' ', ' ', TO_CHAR(NVL(szefunio, 0)) AS szefunio,
+    TO_CHAR(NVL(bandzior, 0)) AS bandzior, TO_CHAR(NVL(lowczy, 0)) AS lowczy,
+    TO_CHAR(NVL(lapacz, 0)) AS lapacz, TO_CHAR(NVL(kot, 0)) AS kot,
+    TO_CHAR(NVL(milusia, 0)) AS milusia, TO_CHAR(NVL(dzielczy, 0)) AS dzielczy,
+    TO_CHAR(NVL(suma, 0)) AS suma
 FROM (
-    SELECT
-        funkcja,
-        przydzial_myszy + NVL(myszy_extra, 0) liczba
-    FROM
-        Kocury
-    JOIN
-        Bandy
-    ON
-        Kocury.nr_bandy = Bandy.nr_bandy
-)
-PIVOT (
-    SUM(liczba) FOR funkcja IN (
-        'SZEFUNIO' szefunio, 'BANDZIOR' bandzior, 'LOWCZY' lowczy, 'LAPACZ' lapacz, 'KOT' kot, 'MILUSIA' milusia, 'DZIELCZY' dzielczy
+         SELECT
+             k.funkcja,
+             (k.przydzial_myszy + NVL(k.myszy_extra, 0)) AS liczba
+         FROM
+             Kocury k
+                 JOIN
+             Bandy b
+             ON
+                 k.nr_bandy = b.nr_bandy
+     )
+         PIVOT (
+                SUM(liczba) FOR funkcja IN (
+        'SZEFUNIO' AS szefunio, 'BANDZIOR' AS bandzior, 'LOWCZY' AS lowczy,
+        'LAPACZ' AS lapacz, 'KOT' AS kot, 'MILUSIA' AS milusia, 'DZIELCZY' AS dzielczy
     )
-)
-CROSS JOIN (
+        )
+         CROSS JOIN (
     SELECT
-        SUM(przydzial_myszy + NVL(myszy_extra, 0)) suma
+        SUM(k.przydzial_myszy + NVL(k.myszy_extra, 0)) AS suma
     FROM
-        Kocury
+        Kocury k
 );
+
