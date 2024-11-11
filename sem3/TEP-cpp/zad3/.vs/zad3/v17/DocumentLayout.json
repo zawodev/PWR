@@ -1,0 +1,62 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{176F0164-3B36-4EEE-B55B-A514F6A696B4}|zad3\\zad3.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad3\\zad3\\CTree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{176F0164-3B36-4EEE-B55B-A514F6A696B4}|zad3\\zad3.vcxproj|solutionrelative:zad3\\CTree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{176F0164-3B36-4EEE-B55B-A514F6A696B4}|zad3\\zad3.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad3\\zad3\\CNode.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{176F0164-3B36-4EEE-B55B-A514F6A696B4}|zad3\\zad3.vcxproj|solutionrelative:zad3\\CNode.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CTree.cpp",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad3\\zad3\\CTree.cpp",
+              "RelativeDocumentMoniker": "zad3\\CTree.cpp",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad3\\zad3\\CTree.cpp",
+              "RelativeToolTip": "zad3\\CTree.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-10T17:11:36.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CNode.cpp",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad3\\zad3\\CNode.cpp",
+              "RelativeDocumentMoniker": "zad3\\CNode.cpp",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad3\\zad3\\CNode.cpp",
+              "RelativeToolTip": "zad3\\CNode.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-10T17:11:33.214Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
