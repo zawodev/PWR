@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<div id="app">
+    <h1>Generowanie Tabliczki Mnożenia</h1>
+    <label for="tableSizeInput">Podaj liczbę (5-20):</label>
+    <input type="number" id="tableSizeInput" min="5" max="20" />
+    <button onclick="generateTable()">Generuj</button>
+    <p id="message"></p>
+    <div id="tableContainer"></div>
+</div>

@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+canvas.drawingX {
+    border: 2px solid #333;
+    background-color: #fff;
+    margin: 20px 0;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+canvas#notauto {
+    width: 40%;
+    height: 80%;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+}
