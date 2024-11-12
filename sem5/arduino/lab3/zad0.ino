@@ -4,7 +4,6 @@
 #include <DallasTemperature.h>
 
 LiquidCrystal_I2C lcd(0x27,16,2);
-
 OneWire oneWire(A1);
 DallasTemperature sensors(&oneWire);
 
