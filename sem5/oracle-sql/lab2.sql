@@ -30,9 +30,9 @@ ORDER BY
 SELECT
     K1.imie,
     K1.funkcja,
-    K2.imie as "SZEF 1",
-    K3.imie as "SZEF 2",
-    K4.imie as "SZEF 3"
+    NVL(K2.imie, ' ') as "SZEF 1",
+    NVL(K3.imie, ' ') as "SZEF 2",
+    NVL(K4.imie, ' ') as "SZEF 3"
 FROM
     Kocury K1 LEFT JOIN
     Kocury K2 LEFT JOIN
@@ -191,15 +191,16 @@ SELECT
 FROM
     Bandy
 
-        MINUS
+MINUS
 
 SELECT DISTINCT
     Kocury.nr_bandy,
     Bandy.nazwa,
     Bandy.teren
-FROM Bandy
-         LEFT JOIN Kocury
-                   ON Bandy.nr_bandy = Kocury.nr_bandy;
+FROM
+    Bandy
+LEFT JOIN Kocury
+ON Bandy.nr_bandy = Kocury.nr_bandy;
 
 
 ----------------------------- ZAD 25 -----------------------------
@@ -215,9 +216,7 @@ WHERE
         SELECT
             NVL(przydzial_myszy, 0)
         FROM
-            Kocury
-                JOIN
-            Bandy
+            Kocury JOIN Bandy
             ON
                 Kocury.nr_bandy = Bandy.nr_bandy
         WHERE
