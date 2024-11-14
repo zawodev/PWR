@@ -10,7 +10,7 @@
 #define BUTTON_RED 2
 
 #define DEBOUNCING_PERIOD 100
-#define LED_VAL_STEP 5
+#define LED_VAL_STEP 15
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
@@ -45,6 +45,8 @@ const int colorMenuLength = sizeof(colorMenu) / sizeof(colorMenu[0]);
 // ------------------------ VARIABLES ------------------------
 
 volatile int encoderValue = 0; //temp for encoder value
+int lastEn1 = LOW;
+unsigned long lastChangeTimestamp = 0UL;
 
 int menuIndex = 0;
 int lastMainMenuIndex = 0;
@@ -147,7 +149,7 @@ void loop() {
     // ------------------------ BUTTON GREEN ------------------------
 
     if (digitalRead(BUTTON_GREEN) == LOW) {
-        delay(100);
+        delay(200);
         if (currentMenu == MainMenu) {
             lastMainMenuIndex = menuIndex; // save current index before switching menu
             if (menuIndex < 3) {
@@ -185,7 +187,7 @@ void loop() {
     // ------------------------ BUTTON RED ------------------------
 
     if (digitalRead(BUTTON_RED) == LOW) {
-        delay(100);
+        delay(200);
         if (currentMenu == EditLedMenu || currentMenu == SetColorMenu) {
             currentMenu = MainMenu;
             menuIndex = lastMainMenuIndex; // return to the last position in the main menu
@@ -197,7 +199,7 @@ void loop() {
 
     int en1 = encoder1;
     int en2 = encoder2;
-    if (en1 == LOW && millis() > timestamp + DEBOUNCING_PERIOD) {
+    if (en1 == LOW && lastEn1 == HIGH && timestamp > lastChangeTimestamp + DEBOUNCING_PERIOD) {
         if (en2 == HIGH) {
             if (currentMenu == MainMenu) {
                 menuIndex = (menuIndex + 1) % mainMenuLength;
@@ -226,6 +228,7 @@ void loop() {
                 enterEditLedMenu(mainMenu[menuIndex], ledValue);
             }
         }
-        encoderTimestamp = millis();
+        lastChangeTimestamp = timestamp;
     }
+    lastEn1 = en1;
 }
