@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab6\\lab6.csproj",
+      "projectUniqueName": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab6\\lab6.csproj",
       "projectName": "lab6",
-      "projectPath": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab6\\lab6.csproj",
+      "projectPath": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab6\\lab6.csproj",
       "packagesPath": "C:\\Users\\aliks\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab6\\obj\\",
+      "outputPath": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab6\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,7 +33,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

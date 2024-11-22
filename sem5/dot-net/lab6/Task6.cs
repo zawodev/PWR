@@ -1,7 +1,7 @@
 ﻿using System;
 
 class Task6 {
-    static void CountMyTypes(params object[] items) {
+    static (int evenInts, int positiveDoubles, int longStrings, int otherTypes) CountMyTypes(params object[] items) {
         int evenInts = 0, positiveDoubles = 0, longStrings = 0, otherTypes = 0;
 
         foreach (var item in items) {
@@ -21,13 +21,15 @@ class Task6 {
             }
         }
 
-        Console.WriteLine($"Even integers: {evenInts}");
-        Console.WriteLine($"Positive doubles: {positiveDoubles}");
-        Console.WriteLine($"Strings >= 5 chars: {longStrings}");
-        Console.WriteLine($"Other types: {otherTypes}");
+        return (evenInts, positiveDoubles, longStrings, otherTypes);
     }
 
     public static void Start() {
-        CountMyTypes(2, 3.5, "hello", 8, -2.1, "hi", 'c', true, 3);
+        var result = CountMyTypes(2, 3.5, "hello", 8, -2.1, "hi", 'c', true, 3);
+
+        Console.WriteLine($"Even integers: {result.evenInts}");
+        Console.WriteLine($"Positive doubles: {result.positiveDoubles}");
+        Console.WriteLine($"Strings >= 5 chars: {result.longStrings}");
+        Console.WriteLine($"Other types: {result.otherTypes}");
     }
 }

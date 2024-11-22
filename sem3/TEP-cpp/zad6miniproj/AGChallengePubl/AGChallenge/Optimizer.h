@@ -18,11 +18,11 @@ public:
 	void vRunIteration();
 
 	vector<int>* pvGetCurrentBest() { 
-		return &GA.GetBestSpecimen().getGenes(); 
-		//return GA.GetGlobalBestGenes();
+		//return &GA.GetBestSpecimen().getGenes(); 
+		return GA.GetGlobalBestGenes();
 	}
 
 private:
-	GeneticAlgorithm GA;
+	GeneticAlgorithmTwo GA;
 	MyEvaluator myEvaluator;
 };

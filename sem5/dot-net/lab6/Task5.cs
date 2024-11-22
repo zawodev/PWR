@@ -1,7 +1,7 @@
 ﻿using System;
 
 class Task5 {
-    static void DrawCard(string line1, string line2 = "", char borderChar = 'X', int borderWidth = 2, int minWidth = 20) {
+    static void DrawCard(string line1, string line2 = "", char borderChar = 'X', int borderWidth = 1, int minWidth = 20) {
         // obliczenie finalnej szerokości całej wizytówki
         int cardWidth = Math.Max(minWidth, Math.Max(line1.Length, line2.Length) + 2 * borderWidth);
 
@@ -28,15 +28,15 @@ class Task5 {
 
     public static void Start() {
         // paramerty domyślne
-        DrawCard("Ryszard");
+        DrawCard("Pawelec");
         Console.WriteLine();
 
         // parametry nazwane
-        DrawCard(line1: "Ryszard", line2: "Rys", borderChar: 'X', borderWidth: 2, minWidth: 20);
+        DrawCard(line1: "Karol", line2: "Pan", borderChar: '#', borderWidth: 2, minWidth: 20);
         Console.WriteLine();
 
         // zmiana szerokości wizytówki
-        DrawCard("John Doe", "JD", borderChar: '#', borderWidth: 3, minWidth: 0);
+        DrawCard("Jan Walus", borderWidth: 3, minWidth: 0);
         Console.WriteLine();
     }
 }
