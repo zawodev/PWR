@@ -12,9 +12,13 @@ COptimizer::COptimizer(CLFLnetEvaluator& cEvaluator) : myEvaluator(cEvaluator), 
 }
 
 void COptimizer::vInitialize() {
+	cout << "Before GA Init" << endl;
 	GA.Initialize();
+	cout << "After GA Init" << endl;
 }
 
 void COptimizer::vRunIteration() {
+	cout << "Before GA Iter" << endl;
 	GA.RunIteration();
+	cout << "After GA Iter" << endl;
 }

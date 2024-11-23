@@ -12,15 +12,15 @@ public:
 	MyEvaluator(const MyEvaluator& other) : evaluator(other.evaluator), c_rand_engine(other.c_rand_engine) {}
 
 	int iGetNumberOfBits() { 
-		lock_guard<mutex> lock(myMutex);
+		//lock_guard<mutex> lock(myMutex);
 		return evaluator.iGetNumberOfBits(); 
 	}
 	double dEvaluate(vector<int>* vGenotype) {
-		lock_guard<mutex> lock(myMutex);
+		//lock_guard<mutex> lock(myMutex);
 		return evaluator.dEvaluate(vGenotype); 
 	}
 	int iGetNumberOfValues(int i) {
-		lock_guard<mutex> lock(myMutex);
+		//lock_guard<mutex> lock(myMutex);
 		return evaluator.iGetNumberOfValues(i);
 	}
 private:

@@ -1,41 +1,61 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\",
+  "WorkspaceRootPath": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Optimizer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithm3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|solutionrelative:AGChallenge\\GeneticAlgorithm3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Optimizer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|solutionrelative:AGChallenge\\Optimizer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Optimizer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Optimizer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|solutionrelative:AGChallenge\\Optimizer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|solutionrelative:AGChallenge\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithm3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|solutionrelative:AGChallenge\\GeneticAlgorithm3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithmTwo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithmTwo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|solutionrelative:AGChallenge\\GeneticAlgorithmTwo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|solutionrelative:AGChallenge\\GeneticAlgorithm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithmTwo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|solutionrelative:AGChallenge\\GeneticAlgorithmTwo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Evaluator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\MyEvaluator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|solutionrelative:AGChallenge\\MyEvaluator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\MyEvaluator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|solutionrelative:AGChallenge\\MyEvaluator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|solutionrelative:AGChallenge\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Evaluator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|solutionrelative:AGChallenge\\Evaluator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Population.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|solutionrelative:AGChallenge\\GeneticAlgorithm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Population.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|solutionrelative:AGChallenge\\Population.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Specimen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Specimen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|solutionrelative:AGChallenge\\Specimen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Population.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Population.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C0B11BE8-2577-4282-8C8C-95E28C381912}|AGChallenge\\AGChallenge.vcxproj|solutionrelative:AGChallenge\\Population.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -46,34 +66,90 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MyEvaluator.h",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\MyEvaluator.h",
+              "RelativeDocumentMoniker": "AGChallenge\\MyEvaluator.h",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\MyEvaluator.h",
+              "RelativeToolTip": "AGChallenge\\MyEvaluator.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-23T13:52:39.38Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MyEvaluator.cpp",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\MyEvaluator.cpp",
+              "RelativeDocumentMoniker": "AGChallenge\\MyEvaluator.cpp",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\MyEvaluator.cpp",
+              "RelativeToolTip": "AGChallenge\\MyEvaluator.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-23T13:53:02.686Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Optimizer.h",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Optimizer.h",
-              "RelativeDocumentMoniker": "AGChallenge\\Optimizer.h",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Optimizer.h",
-              "RelativeToolTip": "AGChallenge\\Optimizer.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAYAAAAAAAAAA==",
+              "Title": "GeneticAlgorithm3.h",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithm3.h",
+              "RelativeDocumentMoniker": "AGChallenge\\GeneticAlgorithm3.h",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithm3.h",
+              "RelativeToolTip": "AGChallenge\\GeneticAlgorithm3.h",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAAEUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-22T15:07:29.271Z",
+              "WhenOpened": "2024-11-22T18:56:47.157Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "GeneticAlgorithm3.cpp",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithm3.cpp",
+              "RelativeDocumentMoniker": "AGChallenge\\GeneticAlgorithm3.cpp",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithm3.cpp",
+              "RelativeToolTip": "AGChallenge\\GeneticAlgorithm3.cpp",
+              "ViewState": "AgIAAMABAAAAAAAAAAAYwNUBAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-22T18:56:23.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GeneticAlgorithmTwo.h",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithmTwo.h",
+              "RelativeDocumentMoniker": "AGChallenge\\GeneticAlgorithmTwo.h",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithmTwo.h",
+              "RelativeToolTip": "AGChallenge\\GeneticAlgorithmTwo.h",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAABEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-22T19:12:22.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "GeneticAlgorithmTwo.cpp",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithmTwo.cpp",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithmTwo.cpp",
               "RelativeDocumentMoniker": "AGChallenge\\GeneticAlgorithmTwo.cpp",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithmTwo.cpp",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithmTwo.cpp",
               "RelativeToolTip": "AGChallenge\\GeneticAlgorithmTwo.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADcBAAAAAAAAAAAAAFEBAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-22T14:55:02.043Z",
               "EditorCaption": ""
@@ -81,23 +157,36 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Optimizer.h",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Optimizer.h",
+              "RelativeDocumentMoniker": "AGChallenge\\Optimizer.h",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Optimizer.h",
+              "RelativeToolTip": "AGChallenge\\Optimizer.h",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAB0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-22T15:07:29.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Optimizer.cpp",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Optimizer.cpp",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Optimizer.cpp",
               "RelativeDocumentMoniker": "AGChallenge\\Optimizer.cpp",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Optimizer.cpp",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Optimizer.cpp",
               "RelativeToolTip": "AGChallenge\\Optimizer.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABSAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-22T14:53:55.227Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Evaluator.cpp",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Evaluator.cpp",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Evaluator.cpp",
               "RelativeDocumentMoniker": "AGChallenge\\Evaluator.cpp",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Evaluator.cpp",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Evaluator.cpp",
               "RelativeToolTip": "AGChallenge\\Evaluator.cpp",
               "ViewState": "AgIAADkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -106,24 +195,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GeneticAlgorithm.cpp",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithm.cpp",
-              "RelativeDocumentMoniker": "AGChallenge\\GeneticAlgorithm.cpp",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithm.cpp",
-              "RelativeToolTip": "AGChallenge\\GeneticAlgorithm.cpp",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACoAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-17T21:41:17.384Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "Population.h",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Population.h",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Population.h",
               "RelativeDocumentMoniker": "AGChallenge\\Population.h",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Population.h",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Population.h",
               "RelativeToolTip": "AGChallenge\\Population.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -131,42 +207,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "Population.cpp",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Population.cpp",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Population.cpp",
               "RelativeDocumentMoniker": "AGChallenge\\Population.cpp",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Population.cpp",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Population.cpp",
               "RelativeToolTip": "AGChallenge\\Population.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKAAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-17T21:41:24.098Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T21:41:24.098Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Main.cpp",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Main.cpp",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Main.cpp",
               "RelativeDocumentMoniker": "AGChallenge\\Main.cpp",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Main.cpp",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Main.cpp",
               "RelativeToolTip": "AGChallenge\\Main.cpp",
-              "ViewState": "AgIAABIAAAAAAAAAAADwvyIAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAADwvyIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-17T21:41:12.081Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
+              "Title": "GeneticAlgorithm.cpp",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithm.cpp",
+              "RelativeDocumentMoniker": "AGChallenge\\GeneticAlgorithm.cpp",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\GeneticAlgorithm.cpp",
+              "RelativeToolTip": "AGChallenge\\GeneticAlgorithm.cpp",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-09-17T21:41:17.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Specimen.cpp",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Specimen.cpp",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Specimen.cpp",
               "RelativeDocumentMoniker": "AGChallenge\\Specimen.cpp",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Specimen.cpp",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem3\\TEP-cpp\\zad6miniproj\\AGChallengePubl\\AGChallenge\\Specimen.cpp",
               "RelativeToolTip": "AGChallenge\\Specimen.cpp",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAGwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-17T21:41:21.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T21:41:21.286Z"
             }
           ]
         }

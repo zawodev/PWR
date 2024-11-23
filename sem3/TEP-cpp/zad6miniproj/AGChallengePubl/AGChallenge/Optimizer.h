@@ -4,6 +4,7 @@
 #include "Evaluator.h"
 #include "GeneticAlgorithm.h"
 #include "GeneticAlgorithmTwo.h"
+#include "GeneticAlgorithm3.h"
 
 #include <random>
 #include <vector>
@@ -19,10 +20,13 @@ public:
 
 	vector<int>* pvGetCurrentBest() { 
 		//return &GA.GetBestSpecimen().getGenes(); 
+		//return GA.GetGlobalBestGenes();
 		return GA.GetGlobalBestGenes();
 	}
 
 private:
-	GeneticAlgorithmTwo GA;
+	//GeneticAlgorithm GA;
+	//GeneticAlgorithmTwo GA;
+	GeneticAlgorithm3 GA;
 	MyEvaluator myEvaluator;
 };
