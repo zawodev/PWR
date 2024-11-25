@@ -1,0 +1,30 @@
+@startuml
+|User|
+start
+:Open registration screen;
+|UI|
+:Display registration form;
+|User|
+:Fill in data (name, email, phone, password);
+:Accept terms of service;
+|Logic|
+:Validate data;
+if (Data valid?) then (Yes)
+    :Validate uniqueness of email;
+    if (Email unique?) then (Yes)
+        :Create user account;
+        :Send verification email/SMS;
+        |User|
+        :Log in automatically;
+        stop
+    else (No)
+        |UI|
+        :Display error "Email already exists";
+        -> Fill in data;
+    endif
+else (No)
+    |UI|
+    :Display validation errors;
+    -> Fill in data;
+endif
+@enduml

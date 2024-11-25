@@ -1,0 +1,28 @@
+@startuml
+|User|
+start
+:Browse map with favorite places;
+:Choose destination (map, search, or favorites);
+|Logic|
+:Display available vehicles and pricing;
+if (Vehicles available?) then (Yes)
+    :Select a vehicle;
+    :Generate possible routes;
+    if (Routes available?) then (Yes)
+        |UI|
+        :Display route details (time, cost, vehicle);
+        |User|
+        :Approve selected route;
+        stop
+    else (No)
+        |UI|
+        :Display "No routes available" message;
+        :Suggest parameter changes;
+        -> Choose destination;
+    endif
+else (No)
+    |UI|
+    :Display "No vehicles available in the area";
+    stop
+endif
+@enduml
