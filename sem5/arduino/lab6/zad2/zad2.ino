@@ -1,20 +1,19 @@
 #include <RGBLED.h>
 
-// dioda RGB podłączona do pinów 9, 10, 11
+// dioda RGB podłączona do pinów a, b, c
 RGBLED led(6, 5, 3);
 
 void setup() {
     led.begin(); // inicjalizacja diody
 
     // ustawienie kolorów
-    led.setColor(RED);    // czerwony
+    led.setColor(RED);
     delay(1000);
-    led.setColor(GREEN);  // zielony
+    led.setColor(GREEN);
     delay(1000);
-    led.setColor(BLUE);   // niebieski
+    led.setColor(BLUE);
     delay(1000);
 
-    // mieszanie kolorów przez wartości RGB
     led.setColor(128, 64, 0); // pomarańczowy
     delay(1000);
 
