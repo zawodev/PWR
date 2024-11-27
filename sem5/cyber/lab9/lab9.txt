@@ -1,0 +1,10 @@
+wireshark cos tam sprawdzić
+sklonuj ubuntu
+jeśli sa dwie (Kali A, Kali B) to chodzi o ubuntu A lub B (Ubuntu server znaczy kali serwer)
+zawsze trzeba być podlaczonym do vpna
+wireshark najpierw na interface vpnowym a później na fizycznym (lub odwrotnie)
+
+
+(strong box i podobne menadżery haseł)
+kung fiury
+hacker (film)

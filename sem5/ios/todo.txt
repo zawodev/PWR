@@ -1,0 +1,21 @@
+- plant list methods: (Plant Service, Plant Data)
+ a) plant categories list
+ b) plant species list (wewnątrz plant categories, odblokowuje dopiero po a)
+ c) plant name list (wewnątrz plant species, odblokowuje dopiero po b)
+[możliwe ze wystarczy a i b]
+
+ d) na podstawie plant category i plant species wyznacz plant id (lub -1)
+
+
+- plant model methods:
+ a) Stworz plant model na 3 sposoby (konstruktor)
+   - domyślny PlantModel() -> dane domyślne
+   - from id  PlantModel(id: id) -> api request o dane z id
+   - ręcznie  PlantModel(name:, category:, ...) -> dane recznie wybrane przez usera
+ b) zmienne (można podac recznie):
+   - water in ml
+   - sun in hours
+   - last watering date
+   - next watering date
+ c) waterThePlant
+ d) getNumOfErrors (oblicza ktore dane nie sa w granicach) 0/4
