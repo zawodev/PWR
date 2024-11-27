@@ -33,23 +33,23 @@ namespace ConsoleApp1 {
         public static Dictionary<string, int> SortTopicsByFrequency(List<StudentWithTopics> students) {
             return students
                 .SelectMany(s => s.Topics) // flatten all topics into a single list
-                .GroupBy(t => t)          // group by topic name
-                .ToDictionary(g => g.Key, g => g.Count()) // create dictionary with topic and its count
-                .OrderByDescending(kv => kv.Value)       // sort by frequency descending
-                .ToDictionary(kv => kv.Key, kv => kv.Value); // return sorted dictionary
+                .GroupBy(t => t)
+                .ToDictionary(g => g.Key, g => g.Count())
+                .OrderByDescending(kv => kv.Value)
+                .ToDictionary(kv => kv.Key, kv => kv.Value);
         }
 
         // task b: sort topics by frequency within each gender
         public static Dictionary<Gender, Dictionary<string, int>> SortTopicsByGenderAndFrequency(List<StudentWithTopics> students) {
             return students
-                .GroupBy(s => s.Gender) // group students by gender
+                .GroupBy(s => s.Gender) 
                 .ToDictionary(
                     g => g.Key, // key: gender
-                    g => g.SelectMany(s => s.Topics) // flatten topics for the gender group
-                          .GroupBy(t => t)           // group by topic
-                          .ToDictionary(tg => tg.Key, tg => tg.Count()) // create topic-frequency dictionary
-                          .OrderByDescending(kv => kv.Value) // sort by frequency descending
-                          .ToDictionary(kv => kv.Key, kv => kv.Value) // return sorted dictionary for each gender
+                    g => g.SelectMany(s => s.Topics) // value: topics sorted by frequency
+                          .GroupBy(t => t)
+                          .ToDictionary(tg => tg.Key, tg => tg.Count()) 
+                          .OrderByDescending(kv => kv.Value) 
+                          .ToDictionary(kv => kv.Key, kv => kv.Value)
                 );
         }
     }

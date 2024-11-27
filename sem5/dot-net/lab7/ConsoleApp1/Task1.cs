@@ -11,7 +11,7 @@ namespace ConsoleApp1 {
             // sample data
             var students = Generator.GenerateStudentsWithTopicsEasy();
 
-            int groupSize = 3; // specify group size (n)
+            int groupSize = 3; // group size (n)
             var groupedStudents = GroupStudents(students, groupSize);
 
             // display grouped students

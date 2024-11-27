@@ -19,3 +19,7 @@
    - next watering date
  c) waterThePlant
  d) getNumOfErrors (oblicza ktore dane nie sa w granicach) 0/4
+
+
+----------------------------------------------------------------------------------
+

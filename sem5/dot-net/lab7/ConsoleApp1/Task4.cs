@@ -18,11 +18,11 @@ public class ExampleClass {
 namespace ConsoleApp1 {
     class Task4 {
         public static void Start() {
-            // a. Create objects of the class and store them in variables of type object
+            // a. task
             object obj1 = new ExampleClass();
             object obj2 = new ExampleClass();
 
-            // b. Invoke the 'Add' method using reflection
+            // task b. invoke add method 
             Type type = obj1.GetType();
             MethodInfo addMethod = type.GetMethod("Add");
 
@@ -31,7 +31,7 @@ namespace ConsoleApp1 {
                 Console.WriteLine($"Result of Add(5, 7): {result1}");
             }
 
-            // Invoke the 'Concatenate' method using reflection
+            // invoke concatenate method using mechanizm odbicia
             MethodInfo concatenateMethod = type.GetMethod("Concatenate");
 
             if (concatenateMethod != null) {

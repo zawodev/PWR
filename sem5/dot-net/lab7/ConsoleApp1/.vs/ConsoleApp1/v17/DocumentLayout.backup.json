@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab7\\consoleapp1\\task2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|solutionrelative:task2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab7\\consoleapp1\\task1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|solutionrelative:task1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab7\\consoleapp1\\task4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|solutionrelative:task4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,14 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab7\\consoleapp1\\task3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|solutionrelative:task3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab7\\consoleapp1\\task1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|solutionrelative:task1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab7\\consoleapp1\\task2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|solutionrelative:task2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,33 +42,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Task1.cs",
               "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task1.cs",
               "RelativeDocumentMoniker": "Task1.cs",
               "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task1.cs",
               "RelativeToolTip": "Task1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T23:18:25.662Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Task2.cs",
               "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task2.cs",
               "RelativeDocumentMoniker": "Task2.cs",
               "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task2.cs",
               "RelativeToolTip": "Task2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T23:05:05.161Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Task3.cs",
               "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task3.cs",
               "RelativeDocumentMoniker": "Task3.cs",
@@ -76,31 +76,30 @@
               "RelativeToolTip": "Task3.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAADIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T23:28:18.959Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T23:28:18.959Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Task4.cs",
               "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task4.cs",
               "RelativeDocumentMoniker": "Task4.cs",
               "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task4.cs",
               "RelativeToolTip": "Task4.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAywCUAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA/wBIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T23:43:57.148Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGAAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T23:02:18.618Z",
               "EditorCaption": ""

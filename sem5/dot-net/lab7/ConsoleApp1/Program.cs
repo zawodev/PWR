@@ -94,6 +94,13 @@ public static class Generator {
 
 public class Program {
     public static void Main() {
+        Console.WriteLine("\n--------------------- TASK 1 ---------------------\n");
+        Task1.Start();
+        Console.WriteLine("\n--------------------- TASK 2 ---------------------\n");
+        Task2.Start();
+        Console.WriteLine("\n--------------------- TASK 3 ---------------------\n");
+        Task3.Start();
+        Console.WriteLine("\n--------------------- TASK 4 ---------------------\n");
         Task4.Start();
     }
 }

@@ -68,22 +68,23 @@ namespace ConsoleApp1 {
             };
 
             // task b:
-            // var topics = GenerateTopicsFromStudents(studentsWithTopics);
+            var topicsFromStudents = GenerateTopicsFromStudents(studentsWithTopics);
 
+            // display topics (task a and b):
             var students = TransformToStudents(studentsWithTopics, topics);
-
             Console.WriteLine("Students (list of topic IDs):");
             foreach (var student in students) {
                 Console.WriteLine(student);
             }
 
+            // task c:
             Console.WriteLine("\nRelation many-to-many (StudentToTopic):");
             var studentToTopic = TransformToStudentToTopic(studentsWithTopics, topics);
             foreach (var relation in studentToTopic) {
                 Console.WriteLine(relation);
             }
         }
-        // solution a: map StudentWithTopics to Student using predefined topics
+        // task a: map students with topics to students with topics
         public static List<Student> TransformToStudents(List<StudentWithTopics> studentsWithTopics, List<Topic> topics) {
             return studentsWithTopics.Select(s => new Student {
                 Id = s.Id,
@@ -96,7 +97,7 @@ namespace ConsoleApp1 {
             }).ToList();
         }
 
-        //b. Generacja listy tematów poprzez zapytanie. 
+        //b. task b
         public static List<Topic> GenerateTopicsFromStudents(List<StudentWithTopics> studentsWithTopics) {
             return studentsWithTopics
                 .SelectMany(s => s.Topics)          // flatten all topic lists into one list
@@ -105,7 +106,7 @@ namespace ConsoleApp1 {
                 .ToList();
         }
 
-        // solution c: map many-to-many relation using StudentToTopic
+        // tasik c: map many-to-many relation using StudentToTopic
         public static List<StudentToTopic> TransformToStudentToTopic(List<StudentWithTopics> studentsWithTopics, List<Topic> topics) {
             return studentsWithTopics.SelectMany(s => s.Topics.Select(t => new StudentToTopic(
                 s.Id,
