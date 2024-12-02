@@ -1,5 +1,6 @@
 #include <util/atomic.h>
 #include <LiquidCrystal_I2C.h>
+#include <RBGLED.h>
 
 #define LED_RED 6
 #define LED_GREEN 5

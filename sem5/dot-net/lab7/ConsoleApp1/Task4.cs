@@ -19,11 +19,14 @@ namespace ConsoleApp1 {
     class Task4 {
         public static void Start() {
             // a. task
-            object obj1 = new ExampleClass();
-            object obj2 = new ExampleClass();
+            //get example class from string
+            Type type = Type.GetType("ExampleClass"); // namespace.class
+
+            object obj1 = Activator.CreateInstance(type);
+            object obj2 = Activator.CreateInstance(type);
 
             // task b. invoke add method 
-            Type type = obj1.GetType();
+            //Type type = obj1.GetType();
             MethodInfo addMethod = type.GetMethod("Add");
 
             if (addMethod != null) {

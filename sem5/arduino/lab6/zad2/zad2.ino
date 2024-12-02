@@ -1,9 +1,15 @@
-#include <RGBLED.h>
+#include <RgbLed.h>
+#include <LiquidCrystal_I2C.h>
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 // dioda RGB podłączona do pinów a, b, c
-RGBLED led(6, 5, 3);
+RgbLed led(6, 5, 3);
 
 void setup() {
+    //wyłącz lcd
+    lcd.noBacklight();
+
     led.begin(); // inicjalizacja diody
 
     // ustawienie kolorów
@@ -18,6 +24,7 @@ void setup() {
     delay(1000);
 
     led.setColor(BLACK); // wyłączenie diody
+    delay(1000);
 }
 
 void loop() {

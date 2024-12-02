@@ -1,26 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\",
+  "WorkspaceRootPath": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab7\\consoleapp1\\task4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab7\\consoleapp1\\task4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|solutionrelative:task4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab7\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab7\\consoleapp1\\task3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab7\\consoleapp1\\task3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|solutionrelative:task3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab7\\consoleapp1\\task2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab7\\consoleapp1\\task2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|solutionrelative:task2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab7\\consoleapp1\\task1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab7\\consoleapp1\\task1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|solutionrelative:task1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab7\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab7\\consoleapp1\\lecturelinq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6E5BC8C-42CB-43C5-A1DE-DDD6CF57EA9F}|ConsoleApp1.csproj|solutionrelative:lecturelinq.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\aliks\\AppData\\Local\\Temp\\a962f541-fbab-49e7-a772-a0da99faae77_LectureLinq.zip.e77\\LectureLinq\\LectureLinq\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +37,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,67 +49,92 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Task1.cs",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task1.cs",
-              "RelativeDocumentMoniker": "Task1.cs",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task1.cs",
-              "RelativeToolTip": "Task1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "LectureLINQ.cs",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\LectureLINQ.cs",
+              "RelativeDocumentMoniker": "LectureLINQ.cs",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\LectureLINQ.cs",
+              "RelativeToolTip": "LectureLINQ.cs",
+              "ViewState": "AgIAACABAAAAAAAAAAAuwCYBAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T23:18:25.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T11:06:31.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aliks\\AppData\\Local\\Temp\\a962f541-fbab-49e7-a772-a0da99faae77_LectureLinq.zip.e77\\LectureLinq\\LectureLinq\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\a962f541-fbab-49e7-a772-a0da99faae77_LectureLinq.zip.e77\\LectureLinq\\LectureLinq\\Program.cs",
+              "ToolTip": "C:\\Users\\aliks\\AppData\\Local\\Temp\\a962f541-fbab-49e7-a772-a0da99faae77_LectureLinq.zip.e77\\LectureLinq\\LectureLinq\\Program.cs[Tylko do odczytu]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\a962f541-fbab-49e7-a772-a0da99faae77_LectureLinq.zip.e77\\LectureLinq\\LectureLinq\\Program.cs[Tylko do odczytu]",
+              "ViewState": "AgIAAFIBAAAAAAAAAAAwwGwBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T11:05:31.171Z",
+              "EditorCaption": "[Tylko do odczytu]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Task2.cs",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task2.cs",
-              "RelativeDocumentMoniker": "Task2.cs",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task2.cs",
-              "RelativeToolTip": "Task2.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAowC8AAABZAAAAAAAAAA==",
+              "Title": "Task1.cs",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task1.cs",
+              "RelativeDocumentMoniker": "Task1.cs",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task1.cs",
+              "RelativeToolTip": "Task1.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAzwBcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T23:05:05.161Z",
+              "WhenOpened": "2024-11-28T10:21:41.115Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Task3.cs",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task3.cs",
-              "RelativeDocumentMoniker": "Task3.cs",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task3.cs",
-              "RelativeToolTip": "Task3.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAowDgAAAAjAAAAAAAAAA==",
+              "Title": "Task2.cs",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task2.cs",
+              "RelativeDocumentMoniker": "Task2.cs",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task2.cs",
+              "RelativeToolTip": "Task2.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowC8AAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T23:28:18.959Z",
+              "WhenOpened": "2024-11-28T10:21:41.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Task3.cs",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task3.cs",
+              "RelativeDocumentMoniker": "Task3.cs",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task3.cs",
+              "RelativeToolTip": "Task3.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAowG0AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T10:21:41.139Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Task4.cs",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task4.cs",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task4.cs",
               "RelativeDocumentMoniker": "Task4.cs",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task4.cs",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Task4.cs",
               "RelativeToolTip": "Task4.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAwwB0AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T23:43:57.148Z",
+              "WhenOpened": "2024-11-28T10:21:41.141Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Program.cs",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab7\\ConsoleApp1\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAmwGQAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T23:02:18.618Z",
+              "WhenOpened": "2024-11-28T10:21:41.143Z",
               "EditorCaption": ""
             }
           ]

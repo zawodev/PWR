@@ -3,64 +3,49 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
-// inicjalizacja LCD
 LiquidCrystal_I2C lcd(0x27, 16, 2);
-
-// inicjalizacja czujnika temperatury
 OneWire oneWire(A1);
 DallasTemperature sensors(&oneWire);
 
-// piny dla diody RGB
 #define LED_RED 6
 #define LED_GREEN 5
 #define LED_BLUE 3
 
-// piny przycisków
 #define RED_BUTTON 2
 #define GREEN_BUTTON 4
 
-// zakres strefy komfortu
-#define COMFORT_MIN 20.0
-#define COMFORT_MAX 25.0
+#define COMFORT_MIN 26.0
+#define COMFORT_MAX 28.0
 
-// zmienne do przechowywania wartości minimalnej i maksymalnej temperatury
-float min_temp = 1000.0; // start z wysoką wartością
-float max_temp = -1000.0; // start z niską wartością
+float min_temp = 1000.0;
+float max_temp = -1000.0; 
 
-// tryb wyświetlania
 enum DisplayMode { CURRENT_TEMP, MIN_MAX_TEMP };
 DisplayMode current_mode = CURRENT_TEMP;
 
 void setup() {
-    // inicjalizacja LCD
     lcd.init();
     lcd.backlight();
 
-    // inicjalizacja czujników temperatury
     sensors.begin();
 
-    // ustawienie pinów diody RGB
     pinMode(LED_RED, OUTPUT);
     pinMode(LED_GREEN, OUTPUT);
     pinMode(LED_BLUE, OUTPUT);
 
-    // ustawienie pinów przycisków
     pinMode(RED_BUTTON, INPUT_PULLUP);
     pinMode(GREEN_BUTTON, INPUT_PULLUP);
 
-    // wyświetlenie początkowego komunikatu
     lcd.setCursor(0, 0);
     lcd.print("Initializing...");
     delay(2000);
 }
 
 void loop() {
-    // odczyt temperatury z czujników
     sensors.requestTemperatures();
     float internal_temp = sensors.getTempCByIndex(1); // temperatura wewnętrzna
     float external_temp = sensors.getTempCByIndex(0); // temperatura zewnętrzna
 
-    // aktualizacja min/max dla temperatury zewnętrznej
     if (external_temp < min_temp) {
         min_temp = external_temp;
     }
@@ -77,7 +62,6 @@ void loop() {
         delay(100); // debouncing
     }
 
-    // wyświetlanie na LCD w zależności od trybu
     lcd.clear();
     if (current_mode == CURRENT_TEMP) {
         lcd.setCursor(0, 0);
@@ -89,7 +73,6 @@ void loop() {
         lcd.print(external_temp, 1);
         lcd.print("C");
 
-        // sygnalizacja strefy komfortu diodą RGB
         if (external_temp < COMFORT_MIN) {
             setRGB(0, 0, 255); // niebieski
         } else if (external_temp > COMFORT_MAX) {
