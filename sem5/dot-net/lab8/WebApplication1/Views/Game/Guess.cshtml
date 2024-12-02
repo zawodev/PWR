@@ -1,0 +1,27 @@
+﻿@{
+    string message = ViewData["Message"] as string;
+    int attempts = (int)ViewData["Attempts"];
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gra zgadywanka</title>
+    <style>
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+
+        .failure {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="@(message.Contains("FENOMENALNIE") ? "success" : "failure")">
+        @message
+    </h1>
+    <p>Próba numer: @attempts</p>
+</body>
+</html>
