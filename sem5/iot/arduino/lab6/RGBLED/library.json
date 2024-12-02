@@ -1,0 +1,21 @@
+{
+  "name": "RGBLED",
+  "keywords": "rgb, led, colors",
+  "description": "Library for controlling an RGB LED with Arduino",
+  "repository": {
+    "type": "git",
+    "url": "https://example.com/RGBLED.git"
+  },
+  "authors": [
+    {
+      "name": "zawodev",
+      "email": "alikstepaniuk@gmail.com",
+      "url": "https://zawo.dev",
+      "maintainer": true
+    }
+  ],
+  "version": "1.0.4",
+  "homepage": "https://example.com/RGBLED",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
