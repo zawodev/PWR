@@ -1,0 +1,19 @@
+﻿@{
+    string message = ViewData["Message"] as string;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ustaw zakres</title>
+	<style>
+		.mycolor {
+			color: rebeccapurple;
+		}
+	</style>
+</head>
+<body>
+    <h1 class="@("mycolor")">@message</h1>
+    <a href="/Draw">Przejdź do losowania liczby</a>
+</body>
+</html>
