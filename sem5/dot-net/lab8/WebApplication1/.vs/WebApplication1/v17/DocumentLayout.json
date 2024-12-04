@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\views\\game\\set.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:views\\game\\set.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\views\\game\\guess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:views\\game\\guess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,40 +19,35 @@
       "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:views\\game\\draw.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\views\\game\\set.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:views\\game\\set.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\views\\tool\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:views\\tool\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\controllers\\toolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:controllers\\toolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab5\\ConsoleApp5\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\controllers\\toolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:controllers\\toolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\views\\tool\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:views\\tool\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +57,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,20 +69,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-02T09:53:00.743Z",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab5\\ConsoleApp5\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\lab5\\ConsoleApp5\\Program.cs",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab5\\ConsoleApp5\\Program.cs",
+              "RelativeToolTip": "..\\..\\lab5\\ConsoleApp5\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T21:56:03.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameController.cs",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Controllers\\GameController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GameController.cs",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Controllers\\GameController.cs",
+              "RelativeToolTip": "Controllers\\GameController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T09:22:00.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Guess.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Game\\Guess.cshtml",
+              "RelativeDocumentMoniker": "Views\\Game\\Guess.cshtml",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Game\\Guess.cshtml",
+              "RelativeToolTip": "Views\\Game\\Guess.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-02T09:22:40.2Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Set.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Game\\Set.cshtml",
+              "RelativeDocumentMoniker": "Views\\Game\\Set.cshtml",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Game\\Set.cshtml",
+              "RelativeToolTip": "Views\\Game\\Set.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-02T09:39:39.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Draw.cshtml",
               "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Game\\Draw.cshtml",
               "RelativeDocumentMoniker": "Views\\Game\\Draw.cshtml",
@@ -92,20 +134,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Set.cshtml",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Game\\Set.cshtml",
-              "RelativeDocumentMoniker": "Views\\Game\\Set.cshtml",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Game\\Set.cshtml",
-              "RelativeToolTip": "Views\\Game\\Set.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T09:39:39.724Z",
+              "WhenOpened": "2024-12-02T09:25:55.662Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-02T09:53:00.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -113,25 +168,11 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvxUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T09:27:03.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T09:27:03.077Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T09:25:55.662Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -139,38 +180,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T09:22:50.754Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T09:22:50.754Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Guess.cshtml",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Game\\Guess.cshtml",
-              "RelativeDocumentMoniker": "Views\\Game\\Guess.cshtml",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Game\\Guess.cshtml",
-              "RelativeToolTip": "Views\\Game\\Guess.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T09:22:40.2Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GameController.cs",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Controllers\\GameController.cs",
-              "RelativeDocumentMoniker": "Controllers\\GameController.cs",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Controllers\\GameController.cs",
-              "RelativeToolTip": "Controllers\\GameController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T09:22:00.6Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Solve.cshtml",
               "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Tool\\Solve.cshtml",
               "RelativeDocumentMoniker": "Views\\Tool\\Solve.cshtml",
@@ -178,25 +192,11 @@
               "RelativeToolTip": "Views\\Tool\\Solve.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T09:21:15.27Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T09:21:15.27Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ToolController.cs",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Controllers\\ToolController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ToolController.cs",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Controllers\\ToolController.cs",
-              "RelativeToolTip": "Controllers\\ToolController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T09:19:10.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -205,6 +205,25 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T09:18:23.766Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ToolController.cs",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Controllers\\ToolController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ToolController.cs",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Controllers\\ToolController.cs",
+              "RelativeToolTip": "Controllers\\ToolController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T09:19:10.771Z",
               "EditorCaption": ""
             }
           ]

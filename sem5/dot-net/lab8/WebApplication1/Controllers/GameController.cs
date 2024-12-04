@@ -10,7 +10,7 @@ namespace WebApplication1.Controllers {
         public IActionResult Set(int n) {
             range = n;
 
-            ViewData["Message"] = $"Zakres ustawiony na {n}";
+            ViewData["Message"] = $"zakres ustawiony na {n}";
             return View();
             //return Content($"Zakres ustawiony na {n}."); // ?? lepiej nie content chyba
         }
@@ -21,7 +21,7 @@ namespace WebApplication1.Controllers {
             randomValue = random.Next(0, range);
             attempts = 0;
 
-            ViewData["Message"] = $"Wylosowano nową liczbę z zakresu [0, {range}]";
+            ViewData["Message"] = $"wylosowano nową liczbę z zakresu [0, {range}]";
             return View();
             //return Content("Wylosowano nową liczbę.");
         }
@@ -32,11 +32,11 @@ namespace WebApplication1.Controllers {
             string message;
 
             if (guess < randomValue) {
-                message = "Za mało";
+                message = "za mało";
             } else if (guess > randomValue) {
-                message = "Za dużo";
+                message = "za dużo";
             } else {
-                message = $"FENOMENALNIE! Zgadłeś liczbę {randomValue} w {attempts} próbach";
+                message = $"FENOMENALNIE! zgadłeś liczbę {randomValue} w {attempts} próbach";
             }
 
             ViewData["Message"] = message;
