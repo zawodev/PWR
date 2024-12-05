@@ -1,35 +1,6 @@
 ﻿@{
     string message = ViewData["Message"] as string;
     string cssClass = ViewData["CssClass"] as string;
+    ViewData["Title"] = "Równanie kwadratowe";
 }
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Równanie kwadratowe</title>
-    <style>
-        .identity {
-            color: green;
-            font-weight: bold;
-        }
-
-        .no-solutions {
-            color: red;
-            font-weight: bold;
-        }
-
-        .one-solution {
-            color: blue;
-            font-style: italic;
-        }
-
-        .two-solutions {
-            color: orange;
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <h1 class="@cssClass">@message</h1>
-</body>
-</html>
+<h1 class="@cssClass">@message</h1>

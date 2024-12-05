@@ -1,19 +1,7 @@
 ﻿@{
     string message = ViewData["Message"] as string;
+    ViewData["Title"] = "Losowanie liczby";
 }
+<h1 class="@("mycolor")">@message</h1>
+<a href="/Guess,15">Zacznij zgadywać (przykład: Guess,15)</a>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Losowanie liczby</title>
-    <style>
-        .mycolor {
-			color: aqua;
-        }
-    </style>
-</head>
-<body>
-    <h1 class="@("mycolor")">@message</h1>
-    <a href="/Guess,15">Zacznij zgadywać (przykład: Guess,15)</a>
-</body>
-</html>

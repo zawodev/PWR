@@ -5,6 +5,9 @@ namespace WebApplication1.Controllers {
         private static int range = 100;
         private static int randomValue;
         private static int attempts;
+        
+        // dotychczasowe próby zgadnięcia liczby w formie listy intów
+        private static List<int> guesses = new List<int>();
 
         [Route("Set,{n}")]
         public IActionResult Set(int n) {
@@ -20,6 +23,7 @@ namespace WebApplication1.Controllers {
             Random random = new Random();
             randomValue = random.Next(0, range);
             attempts = 0;
+            guesses.Clear();
 
             ViewData["Message"] = $"wylosowano nową liczbę z zakresu [0, {range}]";
             return View();
@@ -30,6 +34,7 @@ namespace WebApplication1.Controllers {
         public IActionResult Guess(int guess) {
             attempts++;
             string message;
+            guesses.Add(guess);
 
             if (guess < randomValue) {
                 message = "za mało";
@@ -41,6 +46,7 @@ namespace WebApplication1.Controllers {
 
             ViewData["Message"] = message;
             ViewData["Attempts"] = attempts;
+            ViewData["Guesses"] = guesses;
 
             return View();
         }
