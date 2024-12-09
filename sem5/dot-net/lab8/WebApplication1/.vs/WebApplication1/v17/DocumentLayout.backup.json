@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\views\\game\\set.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:views\\game\\set.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\views\\game\\draw.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:views\\game\\draw.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\views\\tool\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:views\\tool\\solve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\views\\game\\set.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:views\\game\\set.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\views\\game\\guess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:views\\game\\guess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\views\\game\\draw.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:views\\game\\draw.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\controllers\\toolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:controllers\\toolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab8\\webapplication1\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{460E966B-A346-46AE-9504-0FED441620E8}|WebApplication1.csproj|solutionrelative:controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,8 +41,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 372,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 131,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Solve.cshtml",
               "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Tool\\Solve.cshtml",
               "RelativeDocumentMoniker": "Views\\Tool\\Solve.cshtml",
@@ -67,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Draw.cshtml",
               "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Game\\Draw.cshtml",
               "RelativeDocumentMoniker": "Views\\Game\\Draw.cshtml",
@@ -80,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Set.cshtml",
               "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Game\\Set.cshtml",
               "RelativeDocumentMoniker": "Views\\Game\\Set.cshtml",
@@ -106,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -119,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -133,12 +133,25 @@
           ]
         },
         {
-          "DockedWidth": 28,
+          "DockedWidth": 269,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "GameController.cs",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Controllers\\GameController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GameController.cs",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Controllers\\GameController.cs",
+              "RelativeToolTip": "Controllers\\GameController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T09:22:00.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ToolController.cs",
               "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Controllers\\ToolController.cs",
               "RelativeDocumentMoniker": "Controllers\\ToolController.cs",
@@ -147,19 +160,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T09:19:10.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GameController.cs",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Controllers\\GameController.cs",
-              "RelativeDocumentMoniker": "Controllers\\GameController.cs",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab8\\WebApplication1\\Controllers\\GameController.cs",
-              "RelativeToolTip": "Controllers\\GameController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowBkAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T09:22:00.6Z",
               "EditorCaption": ""
             }
           ]

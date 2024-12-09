@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Article>
+
+<h2>Articles</h2>
+<a asp-action="Create">Add New Article</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Expiry Date</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var article in Model)
+        {
+            <tr>
+                <td>@article.Name</td>
+                <td>@article.Price</td>
+                <td>@article.ExpiryDate.ToShortDateString()</td>
+                <td>@article.Category</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@article.Id">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@article.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@article.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Footer {
+    <p>obecnie znajdujemy się na footerze index.cshtml</p>
+}

@@ -1,0 +1,28 @@
+﻿@model Article
+
+<h2>Article Details</h2>
+
+<table class="table">
+    <tr>
+        <th>Name:</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Price:</th>
+        <td>@Model.Price</td>
+    </tr>
+    <tr>
+        <th>Expiry Date:</th>
+        <td>@Model.ExpiryDate.ToShortDateString()</td>
+    </tr>
+    <tr>
+        <th>Category:</th>
+        <td>@Model.Category</td>
+    </tr>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>
+
+@section Footer {
+    <p>obecnie znajdujemy się na footerze details.cshtml</p>
+}
