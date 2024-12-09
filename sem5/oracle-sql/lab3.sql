@@ -1,23 +1,7 @@
--- Lab 34
-DECLARE
-func Kocury.funkcja%TYPE;
-BEGIN
-SELECT funkcja INTO func FROM Kocury WHERE funkcja = ? GROUP BY funkcja;
-DBMS_OUTPUT.PUT_LINE(func);
-EXCEPTION
-  WHEN OTHERS THEN
-    DBMS_OUTPUT.PUT_LINE('BRAK TAKIEGO KOTA');
-END;
+SET SERVEROUTPUT ON
 
--- Określić ile kotów w każdej z band posiada wrogów.
--- Zad 34
-SELECT nazwa "Nazwa bandy", COUNT(DISTINCT K.pseudo) "Liczba kotow z wrogami"
-FROM Kocury K
-         JOIN Bandy B ON K.nr_bandy = B.nr_bandy
-         JOIN Wrogowie_kocurow WK ON K.pseudo = WK.pseudo
-GROUP BY nazwa;
 
---34
+--zad34 (DZIELCZY jeden, LOWCZY kilka)
 DECLARE
 funkcja_kocura KOCURY.funkcja%TYPE;
 BEGIN
@@ -27,59 +11,13 @@ WHERE FUNKCJA = UPPER('&nazwa_funkcji');
 DBMS_OUTPUT.PUT_LINE('Znaleziono kota o funkcji: ' || funkcja_kocura);
 EXCEPTION
     WHEN TOO_MANY_ROWS 
-        THEN DBMS_OUTPUT.PUT_LINE('znaleziono');
+        THEN DBMS_OUTPUT.PUT_LINE('TAK znaleziono');
 WHEN NO_DATA_FOUND 
         THEN DBMS_OUTPUT.PUT_LINE('NIE znaleziono');
 END;
 
---Zad. 34. Napisać blok PL/SQL, który wybiera z relacji Kocury koty o funkcji podanej z klawiatury. Jedynym efektem
--- działania bloku ma być komunikat informujący czy znaleziono, czy też nie, kota pełniącego podaną funkcję (w przypadku
--- znalezienia kota wyświetlić nazwę odpowiedniej funkcji).
-DECLARE
-liczba NUMBER;
-    fun Kocury.funkcja%TYPE ;
-BEGIN
-SELECT count(pseudo), min(funkcja) into liczba, fun
-From Kocury
-Where funkcja = UPPER($(nazwa_funkcji));
-if liczba > 0 then dbms_output.put_line('Znaleziono kota pelniacego funkcje ' || fun);
-else DBMS_OUTPUT.PUT_LINE('Nie znaleziono');
-end if;
-end;
 
--- Zad. 34
-DECLARE
-CURSOR c_kocury IS
-SELECT funkcja FROM Kocury WHERE funkcja = ? GROUP BY funkcja;
-func Kocury.funkcja%TYPE;
-BEGIN
-OPEN c_kocury;
-FETCH c_kocury INTO func;
-IF c_kocury%FOUND THEN
-    DBMS_OUTPUT.PUT_LINE('Znalieziono kota o funkcji: ' || func);
-ELSE
-    DBMS_OUTPUT.PUT_LINE('BRAK TAKIEGO KOTA');
-END IF;
-CLOSE c_kocury;
-EXCEPTION
-  WHEN OTHERS THEN
-    DBMS_OUTPUT.PUT_LINE('Inny błąd');
-END;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
---35
+--zad35 (LYSY)
 DECLARE
 imie_kocura KOCURY.imie%TYPE;
     pzydzial_kocura NUMBER;
@@ -95,7 +33,7 @@ IF pzydzial_kocura > 700
     ELSIF imie_kocura LIKE '%A%'
         THEN DBMS_OUTPUT.PUT_LINE('imię zawiera litere A');
     ELSIF miesiac_kocura = 5 
-        THEN DBMS_OUTPUT.PUT_LINE('listopad jest miesiacem przystapienia do stada');
+        THEN DBMS_OUTPUT.PUT_LINE('maj jest miesiacem przystapienia do stada');
 ELSE DBMS_OUTPUT.PUT_LINE('nie odpowiada kryteriom');
 END IF;
 EXCEPTION 
@@ -105,91 +43,8 @@ WHEN OTHERS
         THEN DBMS_OUTPUT.PUT_LINE(sqlerrm);
 END;
 
---Lab 35
-DECLARE
-kocur Kocury%ROWTYPE;
-  nf BOOLEAN:= TRUE;
-BEGIN
-SELECT * INTO kocur FROM Kocury WHERE pseudo = ?;
 
-IF (kocur.przydzial_myszy + NVL(kocur.myszy_extra, 0)) * 12 > 700 THEN
-    nf := FALSE;
-    DBMS_OUTPUT.PUT_LINE(kocur.imie || ' calkowity roczny przydzial myszy  > 700');
-END IF;
-
-  IF kocur.imie LIKE '%A%' THEN
-    nf := FALSE;
-    DBMS_OUTPUT.PUT_LINE(kocur.imie || ' imie zawiera litere A');
-END IF;
-
-  IF EXTRACT(MONTH FROM kocur.w_stadku_od) = 1 THEN
-    nf := FALSE;
-    DBMS_OUTPUT.PUT_LINE(kocur.imie || ' styczen jest miesiacem przystapienia do stada');
-END IF;
-
-  IF nf THEN
-    DBMS_OUTPUT.PUT_LINE(kocur.imie || ' nie odpowiada kryteriom');
-END IF;
-EXCEPTION
-  WHEN OTHERS THEN
-  DBMS_OUTPUT.PUT_LINE('BRAK TAKIEGO KOTA');
-END;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
---Lab 36
-DECLARE
-CURSOR kocuryC IS SELECT * FROM Kocury;
-kocur kocuryC%ROWTYPE;
-  suma NUMBER;
-  maxf NUMBER;
-  pp NUMBER;
-BEGIN
-
-
-  LOOP
-SELECT SUM(przydzial_myszy) INTO suma FROM Kocury;
-EXIT WHEN suma > 1050;
-
-OPEN kocuryC;
-
-LOOP
-FETCH kocuryC INTO kocur;
-      EXIT WHEN kocuryC%NOTFOUND;
-SELECT max_myszy INTO maxf FROM Funkcje WHERE funkcja = kocur.funkcja;
-pp := kocur.przydzial_myszy * 1.1;
-
-      IF pp > maxf THEN
-        pp := maxf;
-END IF;
-
-UPDATE Kocury
-SET przydzial_myszy = pp
-WHERE pseudo = kocur.pseudo;
-END LOOP;
-
-CLOSE kocuryC;
-END LOOP;
-END;
-
-SELECT imie, przydzial_myszy FROM kocury ORDER BY przydzial_myszy DESC;
-ROLLBACK;
-
-
---zad36 TODO zablokowac przed updateowaniem
+--zad36 ()
 DECLARE
 CURSOR kolejka IS
 SELECT PSEUDO, NVL(PRZYDZIAL_MYSZY,0) zjada, Funkcje.MAX_MYSZY maks
@@ -231,25 +86,46 @@ ORDER BY 2 DESC;
 
 ROLLBACK;
 
+--zad36 ale bez wypisywania (za to bez klikania dwa razy)
+DECLARE
+CURSOR kocuryC IS SELECT * FROM Kocury;
+kocur kocuryC%ROWTYPE;
+  suma NUMBER;
+  maxf NUMBER;
+  pp NUMBER;
+BEGIN
 
 
+  LOOP
+SELECT SUM(przydzial_myszy) INTO suma FROM Kocury;
+EXIT WHEN suma > 1050;
+
+OPEN kocuryC;
+
+LOOP
+FETCH kocuryC INTO kocur;
+      EXIT WHEN kocuryC%NOTFOUND;
+SELECT max_myszy INTO maxf FROM Funkcje WHERE funkcja = kocur.funkcja;
+pp := kocur.przydzial_myszy * 1.1;
+
+      IF pp > maxf THEN
+        pp := maxf;
+END IF;
+
+UPDATE Kocury
+SET przydzial_myszy = pp
+WHERE pseudo = kocur.pseudo;
+END LOOP;
+
+CLOSE kocuryC;
+END LOOP;
+END;
+
+SELECT imie, przydzial_myszy FROM kocury ORDER BY przydzial_myszy DESC;
+ROLLBACK;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
---Lab 37
+--zad37 ()
 DECLARE
 CURSOR topC IS
 SELECT pseudo, przydzial_myszy + NVL(myszy_extra, 0) "zjada"
@@ -267,6 +143,46 @@ FOR i IN 1..5
     DBMS_OUTPUT.PUT_LINE(TO_CHAR(i) ||'    '|| RPAD(top.pseudo, 8) || '    ' || LPAD(TO_CHAR(top."zjada"), 5));
 END LOOP;
 END;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
