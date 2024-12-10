@@ -22,15 +22,22 @@ namespace WebApplication1.Controllers {
             return View(article);
         }
 
-        public IActionResult Create() => View();
+        public IActionResult Create() {
+            return View();
+        }
 
-        [HttpPost]
+        [ValidateAntiForgeryToken, HttpPost]
         public IActionResult Create(Article article) {
-            if (ModelState.IsValid) {
-                _articlesContext.Add(article);
-                return RedirectToAction(nameof(Index));
+            try {
+                if (ModelState.IsValid) {
+                    _articlesContext.Add(article);
+                    return RedirectToAction(nameof(Index));
+                }
+                return View(article);
             }
-            return View(article);
+            catch {
+                return View();
+            }
         }
 
         public IActionResult Edit(int id) {

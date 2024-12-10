@@ -1,58 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\",
+  "WorkspaceRootPath": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\controllers\\articlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:controllers\\articlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\models\\contexts\\articlesdictionarycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:models\\contexts\\articlesdictionarycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\models\\contexts\\articleslistcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:models\\contexts\\articleslistcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\views\\articles\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:views\\articles\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\views\\articles\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:views\\articles\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\views\\articles\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:views\\articles\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\views\\articles\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:views\\articles\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\views\\articles\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:views\\articles\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\views\\articles\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:views\\articles\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\views\\articles\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:views\\articles\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\views\\articles\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:views\\articles\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\views\\articles\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:views\\articles\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\views\\articles\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:views\\articles\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\zawodev\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\models\\interfaces\\iarticlescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:models\\interfaces\\iarticlescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\controllers\\articlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:controllers\\articlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\models\\contexts\\articlesdictionarycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:models\\contexts\\articlesdictionarycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\models\\contexts\\articleslistcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:models\\contexts\\articleslistcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|c:\\users\\aliks\\documents\\github\\pwr\\sem5\\dot-net\\lab9\\webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F7415FE-EF76-4A6D-A54A-9615E0DBD5EC}|WebApplication1.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -75,64 +71,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Articles\\Create.cshtml",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Create.cshtml",
-              "RelativeToolTip": "Views\\Articles\\Create.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAB8AAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-09T14:32:14.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Articles\\Index.cshtml",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Index.cshtml",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Index.cshtml",
               "RelativeToolTip": "Views\\Articles\\Index.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACIAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-09T14:07:57.159Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Articles\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Edit.cshtml",
               "RelativeToolTip": "Views\\Articles\\Edit.cshtml",
-              "ViewState": "AgIAABEAAAAAAAAAAAAxwCAAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-09T14:31:12.172Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Articles\\Create.cshtml",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Create.cshtml",
+              "RelativeToolTip": "Views\\Articles\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-09T14:32:14.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Articles\\Details.cshtml",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Details.cshtml",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Details.cshtml",
               "RelativeToolTip": "Views\\Articles\\Details.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-09T14:21:47.512Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\Articles\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Articles\\Delete.cshtml",
               "RelativeToolTip": "Views\\Articles\\Delete.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-09T14:34:33.554Z",
               "EditorCaption": ""
@@ -140,10 +136,49 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T14:12:22.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAB7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-09T14:23:37.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ArticlesController.cs",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Controllers\\ArticlesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ArticlesController.cs",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Controllers\\ArticlesController.cs",
+              "RelativeToolTip": "Controllers\\ArticlesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T14:13:44.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Article.cs",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Models\\Article.cs",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Models\\Article.cs",
               "RelativeDocumentMoniker": "Models\\Article.cs",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Models\\Article.cs",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Models\\Article.cs",
               "RelativeToolTip": "Models\\Article.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -152,94 +187,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ArticlesController.cs",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Controllers\\ArticlesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ArticlesController.cs",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Controllers\\ArticlesController.cs",
-              "RelativeToolTip": "Controllers\\ArticlesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T14:13:44.318Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "ArticlesDictionaryContext.cs",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Models\\Contexts\\ArticlesDictionaryContext.cs",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Models\\Contexts\\ArticlesDictionaryContext.cs",
               "RelativeDocumentMoniker": "Models\\Contexts\\ArticlesDictionaryContext.cs",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Models\\Contexts\\ArticlesDictionaryContext.cs",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Models\\Contexts\\ArticlesDictionaryContext.cs",
               "RelativeToolTip": "Models\\Contexts\\ArticlesDictionaryContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T14:29:30.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ArticlesListContext.cs",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Models\\Contexts\\ArticlesListContext.cs",
-              "RelativeDocumentMoniker": "Models\\Contexts\\ArticlesListContext.cs",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Models\\Contexts\\ArticlesListContext.cs",
-              "RelativeToolTip": "Models\\Contexts\\ArticlesListContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T14:28:37.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-09T14:38:02.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T14:29:30.571Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABoAAAA7AAAAAAAAAA==",
+              "Title": "ArticlesListContext.cs",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Models\\Contexts\\ArticlesListContext.cs",
+              "RelativeDocumentMoniker": "Models\\Contexts\\ArticlesListContext.cs",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Models\\Contexts\\ArticlesListContext.cs",
+              "RelativeToolTip": "Models\\Contexts\\ArticlesListContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T14:12:22.554Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T14:28:37.444Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABmAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-09T14:23:37.703Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IArticlesContext.cs",
-              "DocumentMoniker": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Models\\Interfaces\\IArticlesContext.cs",
-              "RelativeDocumentMoniker": "Models\\Interfaces\\IArticlesContext.cs",
-              "ToolTip": "C:\\Users\\aliks\\Documents\\GitHub\\zawodev\\PWR\\sem5\\dot-net\\lab9\\WebApplication1\\Models\\Interfaces\\IArticlesContext.cs",
-              "RelativeToolTip": "Models\\Interfaces\\IArticlesContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T14:16:45.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-09T14:38:02.073Z"
             }
           ]
         }

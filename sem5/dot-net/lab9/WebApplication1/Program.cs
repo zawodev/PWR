@@ -2,8 +2,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<WebApplication1.Models.Interfaces.IArticlesContext, WebApplication1.Models.Contexts.ArticlesDictionaryContext>();
-builder.Services.AddSingleton<WebApplication1.Models.Interfaces.IArticlesContext, WebApplication1.Models.Contexts.ArticlesDictionaryContext>();
+//builder.Services.AddScoped<WebApplication1.Models.Interfaces.IArticlesContext, WebApplication1.Models.Contexts.ArticlesListContext>();
+builder.Services.AddSingleton<WebApplication1.Models.Interfaces.IArticlesContext, WebApplication1.Models.Contexts.ArticlesListContext>();
 
 var app = builder.Build();
 
