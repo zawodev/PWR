@@ -1,0 +1,39 @@
+﻿@model Article
+
+<h2>Duplicate Article</h2>
+
+<p>Are you sure you want to duplicate this article? There is no coming back from that.</p>
+
+<table class="table">
+    <tr>
+        <th>Id:</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <th>Name:</th>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <th>Price:</th>
+        <td>@Model.Price</td>
+    </tr>
+    <tr>
+        <th>Expiry Date:</th>
+        <td>@Model.ExpiryDate.ToShortDateString()</td>
+    </tr>
+    <tr>
+        <th>Category:</th>
+        <td>@Model.Category</td>
+    </tr>
+</table>
+
+<form asp-action="Duplicate" method="post">
+    <input asp-for="Id" type="hidden" />
+    <button type="submit" class="btn btn-danger">Duplicate</button>
+</form>
+
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>
+
+@section Footer {
+    <p>obecnie znajdujemy się na footerze duplicate.cshtml</p>
+}

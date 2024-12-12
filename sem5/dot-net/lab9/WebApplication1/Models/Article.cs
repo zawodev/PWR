@@ -22,7 +22,16 @@ namespace WebApplication1.Models {
 
         [DataType(DataType.Date)]
         public DateTime ExpiryDate { get; set; }
-
         public Category Category { get; set; }
+
+        public Article DeepCopy() {
+            return new Article {
+                Id = Id,
+                Name = Name,
+                Price = Price,
+                ExpiryDate = ExpiryDate,
+                Category = Category
+            };
+        }
     }
 }

@@ -66,5 +66,18 @@ namespace WebApplication1.Controllers {
             _articlesContext.Delete(id);
             return RedirectToAction(nameof(Index));
         }
+
+        public IActionResult Duplicate(int id) {
+            var article = _articlesContext.GetById(id);
+            if (article == null) return NotFound();
+            return View(article);
+        }
+        [HttpPost, ActionName("Duplicate")]
+        public IActionResult DuplicateConfirmed(Article article) {
+            Article _article = _articlesContext.GetById(article.Id);
+            Article copy = _article.DeepCopy();
+            _articlesContext.Add(copy);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
