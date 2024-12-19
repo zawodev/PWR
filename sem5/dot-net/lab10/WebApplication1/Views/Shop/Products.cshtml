@@ -1,0 +1,27 @@
+﻿@model IEnumerable<WebApplication1.Models.Article>
+
+@{
+    ViewData["Title"] = $"Shop - {@ViewData["CategoryName"]}";
+}
+
+<h1>@ViewData["CategoryName"]</h1>
+
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-4">
+            <div class="card">
+                <img src="@Url.Content("~/uploads/" + (product.ImagePath == null ? "placeholder.png" : product.ImagePath) )" class="card-img-top" alt="Image of @product.Name" />
+                <div class="card-body">
+                    <h5 class="card-title">@product.Name</h5>
+                    <p class="card-text">Price: @product.Price.ToString("C")</p>
+                    <!-- In the future you can add a "Add to Cart" button here -->
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<div>
+    <a href="@Url.Action("Index", "Shop")">Back to Categories</a>
+</div>
