@@ -1,0 +1,29 @@
+﻿@model IEnumerable<WebApplication1.Models.Category>
+
+@{
+    ViewData["Title"] = "Shop - Categories";
+}
+
+<h1>Categories</h1>
+
+<div>
+    <select id="categorySelect" onchange="location = this.value;">
+        <option value="">Select a category</option>
+        @foreach (var category in Model)
+        {
+            <option value="@Url.Action("Products", "Shop", new { categoryId = category.Id })">@category.Name</option>
+        }
+    </select>
+</div>
+
+<div>
+    <h3>Categories List</h3>
+    <ul>
+        @foreach (var category in Model)
+        {
+            <li>
+                <a href="@Url.Action("Products", "Shop", new { categoryId = category.Id })">@category.Name</a>
+            </li>
+        }
+    </ul>
+</div>

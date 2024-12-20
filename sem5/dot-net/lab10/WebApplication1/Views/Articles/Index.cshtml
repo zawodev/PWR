@@ -1,0 +1,40 @@
+﻿@model IEnumerable<WebApplication1.Models.Article>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Articles</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var article in Model) {
+            <tr>
+                <td>@article.Name</td>
+                <td>@article.Price</td>
+                <td>
+                    <img src="@Url.Content("~/uploads/" + article.ImagePath)" alt="Article Image" class="img-thumbnail" style="width: 100px;" />
+                </td>
+                <td>@article.Category.Name</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@article.Id">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@article.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@article.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
