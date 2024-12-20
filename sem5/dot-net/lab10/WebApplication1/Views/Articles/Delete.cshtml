@@ -23,7 +23,7 @@
     </div>
     <label>Image</label>
     <div class="form-group">
-        <img src="@Url.Content("~/uploads/" + Model.ImagePath)" alt="Article Image" class="img-fluid" />
+        <img src="@Url.Content("~/uploads/" + (Model.ImagePath == null ? "placeholder.png" : Model.ImagePath) )" alt="Article Image" class="img-fluid" />
     </div>
     <form asp-action="Delete" asp-route-id="@Model.Id" method="post">
         <div class="form-group">

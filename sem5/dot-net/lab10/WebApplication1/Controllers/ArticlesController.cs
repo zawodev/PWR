@@ -28,7 +28,8 @@ namespace WebApplication1.Controllers {
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Article article, IFormFile imageFile) {
             if (imageFile == null) { //image file is not required, if not present we do a deafault image
-                article.ImagePath = "placeholder.png";
+                //article.ImagePath = "placeholder.png";
+                article.ImagePath = null;
             } 
             else {
                 var fileName = $"{Guid.NewGuid()}_{imageFile.FileName}";

@@ -1,0 +1,6 @@
+udp scan może trwac w nieskonczonosc jak nie ma usługi udp w sieci(3min cisza to napisac w sprawku ze cisza)
+
+-T flaga do opóźnienia żeby nie dostać bana na firewallu od serwera (zobaczyć jak bardzo rosnie bo mogą trwac długo 15min ale dalej nie robic)
+
+
+czym się rozni amap od nmapa

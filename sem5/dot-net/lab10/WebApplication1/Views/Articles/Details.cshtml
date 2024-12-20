@@ -23,7 +23,7 @@
     </div>
     <label>Image</label>
     <div class="form-group">
-        <img src="@Url.Content("~/uploads/" + Model.ImagePath)" alt="Article Image" class="img-fluid" />
+        <img src="@Url.Content("~/uploads/" + (Model.ImagePath == null ? "placeholder.png" : Model.ImagePath) )" alt="Article Image" class="img-fluid" />
     </div>
     <div>
         <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |

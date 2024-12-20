@@ -26,7 +26,7 @@
                 <td>@article.Name</td>
                 <td>@article.Price</td>
                 <td>
-                    <img src="@Url.Content("~/uploads/" + article.ImagePath)" alt="Article Image" class="img-thumbnail" style="width: 100px;" />
+                    <img src="@Url.Content("~/uploads/" + (article.ImagePath == null ? "placeholder.png" : article.ImagePath) )" alt="Article Image" class="img-thumbnail" style="width: 100px;" />
                 </td>
                 <td>@article.Category.Name</td>
                 <td>

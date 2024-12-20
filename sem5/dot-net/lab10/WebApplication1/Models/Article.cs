@@ -11,7 +11,7 @@ namespace WebApplication1.Models {
         [Column(TypeName = "decimal(18,2)")]
         [Range(0, double.MaxValue, ErrorMessage = "test")]
         public decimal Price { get; set; }
-        public string? ImagePath { get; set; }
+        public string? ImagePath { get; set; } = null;
         public int CategoryId { get; set; }
         public Category Category { get; set; } = new Category();
     }

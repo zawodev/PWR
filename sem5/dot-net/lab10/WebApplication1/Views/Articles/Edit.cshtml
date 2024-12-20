@@ -28,7 +28,7 @@
             </div>
             <div class="form-group">
                 <label>Image</label>
-                <img src="@Url.Content("~/uploads/" + Model.ImagePath)" alt="Article Image" class="img-fluid" />
+                <img src="@Url.Content("~/uploads/" + (Model.ImagePath == null ? "placeholder.png" : Model.ImagePath) )" alt="Article Image" class="img-fluid" />
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

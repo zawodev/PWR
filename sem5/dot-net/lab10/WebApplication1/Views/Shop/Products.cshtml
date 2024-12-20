@@ -11,7 +11,7 @@
     {
         <div class="col-md-4">
             <div class="card">
-                <img src="@Url.Content("~/uploads/" + product.ImagePath)" class="card-img-top" alt="Image of @product.Name" />
+                <img src="@Url.Content("~/uploads/" + (product.ImagePath == null ? "placeholder.png" : product.ImagePath) )" class="card-img-top" alt="Image of @product.Name" />
                 <div class="card-body">
                     <h5 class="card-title">@product.Name</h5>
                     <p class="card-text">Price: @product.Price.ToString("C")</p>
