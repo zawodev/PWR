@@ -1,4 +1,6 @@
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using System.Configuration;
 using WebApplication2Razor.Data;
 
 var builder = WebApplication.CreateBuilder(args);
