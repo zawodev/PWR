@@ -1,0 +1,41 @@
+﻿@page
+@model WebApplication2Razor.Pages.Articles.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var article in Model.Articles)
+        {
+            <tr>
+                <td>@article.Name</td>
+                <td>@article.Price</td>
+                <td>
+                    <img src="@Url.Content("~/uploads/" + (article.ImagePath ?? "placeholder.png"))" alt="Article Image" class="img-thumbnail" style="width: 100px;" />
+                </td>
+                <td>@article.Category.Name</td>
+                <td>
+                    <a asp-page="./Details" asp-route-id="@article.Id">Details</a> |
+                    <a asp-page="./Edit" asp-route-id="@article.Id">Edit</a> |
+                    <a asp-page="./Delete" asp-route-id="@article.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

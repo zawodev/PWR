@@ -1,0 +1,31 @@
+﻿@page
+@model Shop.IndexModel
+@{
+    ViewData["Title"] = "Shop - Categories";
+}
+
+<h1>Categories</h1>
+
+<a href="@Url.Page("/Shop/Cart")" class="btn btn-secondary">Go to Cart</a>
+
+<div>
+    <select id="categorySelect" onchange="location = this.value;">
+        <option value="">Select a category</option>
+        @foreach (var category in Model.Categories)
+        {
+            <option value="@Url.Page("./Products", new { categoryId = category.Id })">@category.Name</option>
+        }
+    </select>
+</div>
+
+<div>
+    <h3>Categories List</h3>
+    <ul>
+        @foreach (var category in Model.Categories)
+        {
+            <li>
+                <a href="@Url.Page("./Products", new { categoryId = category.Id })">@category.Name</a>
+            </li>
+        }
+    </ul>
+</div>

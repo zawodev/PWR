@@ -1,0 +1,12 @@
+﻿@{
+    string message = ViewData["Message"] as string;
+    int attempts = (int)ViewData["Attempts"];
+    List<int> guesses = ViewData["Guesses"] as List<int>;
+    ViewData["Title"] = "Gra zgadywanka";
+}
+
+<h1 class="@(message.Contains("FENOMENALNIE") ? "success" : "failure")">
+    @message
+</h1>
+<p>Próba numer: @attempts</p>
+<p>Twoje próby: @string.Join(", ", guesses)</p>
