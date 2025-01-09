@@ -36,61 +36,49 @@ namespace WebApplication2Razor.Pages.Shop {
         }
 
         private void LoadCart() {
-            var cart = Request.Cookies["cart"];
-            var cartItems = cart == null ? new Dictionary<int, int>() : DeserializeCart(cart);
+            var cartItems = Request.Cookies.Keys
+                .Where(key => key.StartsWith("cart_"))
+                .ToDictionary(
+                    key => int.Parse(key.Substring(5)),
+                    key => int.Parse(Request.Cookies[key])
+                );
 
             var productIds = cartItems.Keys.ToList();
             var productsInCart = _context.Articles
                 .Where(a => productIds.Contains(a.Id))
                 .ToList();
 
-            // usuñ te produkty z koszyka, które zosta³y usuniête z bazy w miêdzyczasie
-            var validCartItems = cartItems.Where(ci => productsInCart.Any(p => p.Id == ci.Key)).ToDictionary(ci => ci.Key, ci => ci.Value);
-            SaveCart(validCartItems);
+            // remove cookies for products that no longer exist in the database
+            foreach (var id in productIds.Except(productsInCart.Select(p => p.Id))) {
+                Response.Cookies.Delete($"cart_{id}");
+                cartItems.Remove(id);
+            }
 
             CartItems = productsInCart.Select(p => new CartItemViewModel {
                 Product = p,
-                Quantity = validCartItems[p.Id]
+                Quantity = cartItems[p.Id]
             }).ToList();
         }
 
         private void ModifyCart(int id, int change) {
-            var cart = Request.Cookies["cart"];
-            var cartItems = cart == null ? new Dictionary<int, int>() : DeserializeCart(cart);
-
+            var key = $"cart_{id}";
             if (change == 0) {
-                cartItems.Remove(id); // remove item if change is zero (obviously)
+                // remove item if change is zero
+                Response.Cookies.Delete(key);
             } else {
-                if (!cartItems.ContainsKey(id)) { // jak nie ma w koszyku jeszcze
-                    if (_context.Articles.Any(a => a.Id == id)) // ale jak jest w bazie
-                    {
-                        cartItems[id] = change; // add as new item
-                    }
-                } else {
-                    cartItems[id] += change; // update iloœæ produktu
-                    if (cartItems[id] <= 0) {
-                        cartItems.Remove(id); // remove if quantity is zero
-                    }
+                int newQuantity = change;
+                if (Request.Cookies.ContainsKey(key)) {
+                    newQuantity += int.Parse(Request.Cookies[key]);
+                }
+
+                if (newQuantity <= 0) {
+                    Response.Cookies.Delete(key); // remove if quantity is zero
+                } else if (_context.Articles.Any(a => a.Id == id)) {
+                    Response.Cookies.Append(key, newQuantity.ToString(), new CookieOptions {
+                        Expires = DateTime.Now.AddDays(7)
+                    });
                 }
             }
-
-            SaveCart(cartItems);
-        }
-
-        private void SaveCart(Dictionary<int, int> cartItems) {
-            var cart = string.Join(";", cartItems.Select(ci => $"{ci.Key}-{ci.Value}"));
-            Response.Cookies.Append("cart", cart, new CookieOptions {
-                Expires = DateTime.Now.AddDays(7)
-            });
-        }
-
-        private Dictionary<int, int> DeserializeCart(string cart) {
-            return cart.Split(';')
-                .Select(item => item.Split('-'))
-                .ToDictionary(
-                    parts => int.Parse(parts[0]),
-                    parts => int.Parse(parts[1])
-                );
         }
     }
 

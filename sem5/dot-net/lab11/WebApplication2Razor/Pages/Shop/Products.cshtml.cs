@@ -37,40 +37,23 @@ namespace WebApplication2Razor.Pages.Shop {
             return Page();
         }
 
-        // Handle adding item to cart
         public IActionResult OnPostAddToCart(int productId) {
-            // Retrieve existing cart from cookies
-            var cart = Request.Cookies["cart"];
-            var cartItems = cart == null ? new Dictionary<int, int>() : DeserializeCart(cart);
+            var key = $"cart_{productId}";
 
-            // Update the cart (increment quantity if the product already exists)
-            if (cartItems.ContainsKey(productId)) {
-                cartItems[productId]++;
-            } else {
-                cartItems[productId] = 1;
+            int quantity = 1;
+            if (Request.Cookies.ContainsKey(key)) {
+                quantity += int.Parse(Request.Cookies[key]);
             }
 
-            // Save the updated cart back to cookies
-            Response.Cookies.Append("cart", SerializeCart(cartItems), new CookieOptions {
-                Expires = DateTime.Now.AddDays(7), // Keep for 7 days
-                HttpOnly = true,
-                SameSite = SameSiteMode.Lax
-            });
+            if (_context.Articles.Any(a => a.Id == productId)) {
+                Response.Cookies.Append(key, quantity.ToString(), new CookieOptions {
+                    Expires = DateTime.Now.AddDays(7),
+                    HttpOnly = true,
+                    SameSite = SameSiteMode.Lax
+                });
+            }
 
-            return RedirectToPage(); // Redirect to the same page to update UI
-        }
-
-        private string SerializeCart(Dictionary<int, int> cart) {
-            return string.Join(";", cart.Select(item => $"{item.Key}-{item.Value}"));
-        }
-
-        private Dictionary<int, int> DeserializeCart(string cart) {
-            return cart.Split(';')
-                .Select(item => item.Split('-'))
-                .ToDictionary(
-                    parts => int.Parse(parts[0]),
-                    parts => int.Parse(parts[1])
-                );
+            return RedirectToPage();
         }
     }
 }
