@@ -32,6 +32,23 @@ namespace NewRazorApplication1.Controllers {
             return article;
         }
 
+        // GET: api/articles/ByCategory?categoryId=1&skip=0&take=5
+        [HttpGet("ByCategory")]
+        public async Task<IActionResult> GetProductsByCategory(int categoryId, int skip, int take) {
+            var products = await _context.Articles
+                .Where(a => a.CategoryId == categoryId)
+                .Skip(skip)
+                .Take(take)
+                .ToListAsync();
+
+            if (!products.Any()) {
+                return NoContent();
+            }
+
+            return Ok(products);
+        }
+
+
         // POST: api/articles
         [HttpPost]
         public async Task<ActionResult<Article>> CreateArticle(Article article) {
@@ -39,6 +56,28 @@ namespace NewRazorApplication1.Controllers {
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetArticle), new { id = article.Id }, article);
+        }
+
+        // POST: api/articles/AddToCart?productId=1
+        [HttpPost("AddToCart")]
+        public IActionResult AddToCart([FromQuery] int productId) {
+            var key = $"cart_{productId}";
+
+            int quantity = 1;
+            if (Request.Cookies.ContainsKey(key)) {
+                quantity += int.Parse(Request.Cookies[key]);
+            }
+
+            if (_context.Articles.Any(a => a.Id == productId)) {
+                Response.Cookies.Append(key, quantity.ToString(), new CookieOptions {
+                    Expires = DateTime.Now.AddDays(7),
+                    HttpOnly = true,
+                    SameSite = SameSiteMode.Lax
+                });
+                return Ok(new { success = true, quantity });
+            }
+
+            return BadRequest(new { success = false, message = "Product not found" });
         }
 
         // PUT: api/articles/{id}

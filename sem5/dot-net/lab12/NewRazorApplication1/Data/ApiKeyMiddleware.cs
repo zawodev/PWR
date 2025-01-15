@@ -17,6 +17,7 @@ namespace NewRazorApplication1.Data {
         }
 
         public async Task InvokeAsync(HttpContext context, ShopDbContext dbContext) {
+            Console.WriteLine(context.Request.Path);
             // Only check API key for requests starting with /api
             if (!context.Request.Path.StartsWithSegments("/api")) {
                 await _next(context); // Skip middleware for non-API requests
@@ -25,6 +26,12 @@ namespace NewRazorApplication1.Data {
 
             // If the request is a GET, no API key is required
             if (context.Request.Method == HttpMethods.Get) {
+                await _next(context); // Allow the request to continue
+                return;
+            }
+
+            // If the request is a POST api/articles/AddToCart, no API key is required
+            if (context.Request.Path.StartsWithSegments("/api/articles/AddToCart")) {
                 await _next(context); // Allow the request to continue
                 return;
             }

@@ -8,25 +8,98 @@
 <h1>@Model.CategoryName</h1>
 
 <a href="@Url.Page("/Shop/Cart")" class="btn btn-secondary">Go to Cart</a>
+<a href="@Url.Page("./Index")" class="btn btn-secondary">Back to Categories</a>
 
-<div class="row">
-    @foreach (var product in Model.Products)
+<div id="products-container" class="row">
+    @foreach (var product in Model.Products.Take(5))
     {
-        <div class="col-md-4">
+        <div class="col-md-4 product-item">
             <div class="card">
-                <img src="@Url.Content("~/uploads/" + (product.ImagePath == null ? "placeholder.png" : product.ImagePath) )" class="card-img-top" alt="Image of @product.Name" />
+                <img src="@Url.Content("~/uploads/" + (product.ImagePath == null ? "placeholder.png" : product.ImagePath))" class="card-img-top" alt="Image of @product.Name" />
                 <div class="card-body">
                     <h5 class="card-title">@product.Name</h5>
                     <p class="card-text">Price: @product.Price.ToString("C")</p>
-                    <form method="post" asp-page-handler="AddToCart" asp-route-productId="@product.Id">
-                        <button type="submit" class="btn btn-primary">Add to Cart</button>
-                    </form>
+                    <button class="btn btn-primary add-to-cart-btn" data-product-id="@product.Id">Add to Cart</button>
                 </div>
             </div>
         </div>
     }
 </div>
 
-<div>
-    <a asp-page="./Index">Back to Categories</a>
-</div>
+<button id="load-more-btn" class="btn btn-outline-primary" data-category-id="@Model.Products.FirstOrDefault()?.CategoryId" data-loaded="5">
+    Show More
+</button>
+
+@section Scripts {
+    <script>
+        async function addToCart(productId) {
+            try {
+                const response = await fetch(`/api/articles/AddToCart?productId=${productId}`, {
+                    method: 'POST'
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    alert(`Product added to cart. Quantity: ${result.quantity}`);
+                } else {
+                    const error = await response.json();
+                    alert(`Error: ${error.message}`);
+                }
+            } catch (error) {
+                console.error("Error adding to cart:", error);
+                alert("Failed to add product to cart.");
+            }
+        }
+
+        // Add click listener for dynamically loaded buttons
+        document.addEventListener("click", function (event) {
+            if (event.target.classList.contains("add-to-cart-btn")) {
+                event.preventDefault();
+                const productId = event.target.getAttribute("data-product-id");
+                addToCart(productId);
+            }
+        });
+
+        // Load more products button logic
+        document.getElementById("load-more-btn").addEventListener("click", async function () {
+            const button = this;
+            const categoryId = button.getAttribute("data-category-id");
+            const skip = parseInt(button.getAttribute("data-loaded"));
+            const take = 5;
+
+            try {
+                const response = await fetch(`/api/articles/ByCategory?categoryId=${categoryId}&skip=${skip}&take=${take}`);
+                if (response.status === 204) {
+                    button.disabled = true;
+                    button.innerText = "No more products";
+                    return;
+                }
+
+                const products = await response.json();
+                const container = document.getElementById("products-container");
+
+                products.forEach(product => {
+                    const productHtml = `
+                        <div class="col-md-4 product-item">
+                            <div class="card">
+                                <img src="/uploads/${product.imagePath || "placeholder.png"}" class="card-img-top" alt="Image of ${product.name}" />
+                                <div class="card-body">
+                                    <h5 class="card-title">${product.name}</h5>
+                                    <p class="card-text">Price: ${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(product.price)}</p>
+                                    <button class="btn btn-primary add-to-cart-btn" data-product-id="${product.id}">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>`;
+                    container.insertAdjacentHTML("beforeend", productHtml);
+                });
+
+                button.setAttribute("data-loaded", skip + take);
+            } catch (error) {
+                console.error("Error loading more products:", error);
+            }
+        });
+    </script>
+}
+
+
+
