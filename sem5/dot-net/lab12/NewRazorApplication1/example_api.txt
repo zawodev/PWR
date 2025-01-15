@@ -24,10 +24,10 @@ GET https://localhost:7047/api/articles/14
 
 POST https://localhost:7047/api/articles
 {
-    "Name": "Test Article",
+    "Name": "Test2 Article",
     "Price": 19.99,
-    "ImagePath": "test.jpg",
-    "categoryId": 1
+    "ImagePath": null,
+    "CategoryId": 13
 }
 
 PUT https://localhost:7047/api/articles/214
@@ -35,8 +35,8 @@ PUT https://localhost:7047/api/articles/214
     "Id": 214,
     "Name": "Test2 Article",
     "Price": 19.99,
-    "ImagePath": "test.jpg",
-    "categoryId": 2
+    "ImagePath": null,
+    "CategoryId": 13
 }
 
 DELETE https://localhost:7047/api/articles/14

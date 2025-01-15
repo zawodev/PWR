@@ -13,6 +13,6 @@ namespace WebApplication2Razor.Models {
         public decimal Price { get; set; }
         public string? ImagePath { get; set; } = null;
         public int CategoryId { get; set; }
-        public Category Category { get; set; } = new Category();
+        public Category? Category { get; set; }
     }
 }

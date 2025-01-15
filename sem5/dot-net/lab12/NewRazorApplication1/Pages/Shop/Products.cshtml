@@ -40,18 +40,18 @@
 
                 if (response.ok) {
                     const result = await response.json();
-                    alert(`Product added to cart. Quantity: ${result.quantity}`);
+                    alert(`Dodano produkt do koszyka!`);
                 } else {
                     const error = await response.json();
-                    alert(`Error: ${error.message}`);
+                    alert(`error: ${error.message}`);
                 }
             } catch (error) {
-                console.error("Error adding to cart:", error);
-                alert("Failed to add product to cart.");
+                console.error("error adding to cart:", error);
+                alert("failed to add product to cart.");
             }
         }
 
-        // Add click listener for dynamically loaded buttons
+        // add click listener for dynamically loaded button
         document.addEventListener("click", function (event) {
             if (event.target.classList.contains("add-to-cart-btn")) {
                 event.preventDefault();
@@ -60,7 +60,7 @@
             }
         });
 
-        // Load more products button logic
+        // load more products button logic
         document.getElementById("load-more-btn").addEventListener("click", async function () {
             const button = this;
             const categoryId = button.getAttribute("data-category-id");
@@ -95,7 +95,7 @@
 
                 button.setAttribute("data-loaded", skip + take);
             } catch (error) {
-                console.error("Error loading more products:", error);
+                console.error("error loading more products:", error);
             }
         });
     </script>

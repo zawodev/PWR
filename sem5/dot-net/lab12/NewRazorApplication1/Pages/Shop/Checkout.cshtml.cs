@@ -35,7 +35,6 @@ namespace NewRazorApplication1.Pages.Shop {
 
             LoadCart();
 
-            // Utwórz nowe zamówienie
             var order = new Order {
                 FullName = FullName,
                 Address = Address,
@@ -44,7 +43,6 @@ namespace NewRazorApplication1.Pages.Shop {
                 Items = new List<OrderItem>()
             };
 
-            // Dodaj elementy koszyka do zamówienia
             foreach (var cartItem in CartItems) {
                 var orderItem = new OrderItem {
                     ProductId = cartItem.Product.Id,
@@ -55,16 +53,13 @@ namespace NewRazorApplication1.Pages.Shop {
                 _context.OrderItems.Add(orderItem);
             }
 
-            // Zapisz zamówienie w bazie danych
             _context.Orders.Add(order);
             _context.SaveChanges();
 
-            // Wyczyœæ koszyk
             foreach (var cartItem in CartItems) {
                 Response.Cookies.Delete($"cart_{cartItem.Product.Id}");
             }
 
-            // PrzejdŸ do potwierdzenia zamówienia
             TempData["FullName"] = FullName;
             TempData["Address"] = Address;
             TempData["PaymentMethod"] = PaymentMethod;

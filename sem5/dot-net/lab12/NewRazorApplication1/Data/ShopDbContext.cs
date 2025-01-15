@@ -16,26 +16,23 @@ namespace WebApplication2Razor.Data {
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             base.OnModelCreating(modelBuilder);
 
-            // Relacja jeden-do-wielu: Category -> Articles
             modelBuilder.Entity<Article>()
                 .HasOne(a => a.Category)
                 .WithMany(c => c.Articles)
                 .HasForeignKey(a => a.CategoryId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Relacja jeden-do-wielu: Order -> OrderItems
             modelBuilder.Entity<Order>()
                 .HasMany(o => o.Items)
                 .WithOne(oi => oi.Order)
                 .HasForeignKey(oi => oi.OrderId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Relacja jeden-do-jeden: OrderItem -> Article
             modelBuilder.Entity<OrderItem>()
                 .HasOne(oi => oi.Product)
-                .WithMany() // Jeśli relacja jest "one-to-many", zmień tutaj na `.WithMany(a => a.OrderItems)`
+                .WithMany()
                 .HasForeignKey(oi => oi.ProductId)
-                .OnDelete(DeleteBehavior.Restrict); // Zabezpieczenie przed usunięciem produktu
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

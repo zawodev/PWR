@@ -18,50 +18,48 @@ namespace NewRazorApplication1.Data {
 
         public async Task InvokeAsync(HttpContext context, ShopDbContext dbContext) {
             Console.WriteLine(context.Request.Path);
-            // Only check API key for requests starting with /api
+            // only check ap[i key for requests starting with /api
             if (!context.Request.Path.StartsWithSegments("/api")) {
-                await _next(context); // Skip middleware for non-API requests
+                await _next(context);
                 return;
             }
 
-            // If the request is a GET, no API key is required
+            // if the request is a GET, no API key is required
             if (context.Request.Method == HttpMethods.Get) {
-                await _next(context); // Allow the request to continue
+                await _next(context);
                 return;
             }
 
-            // If the request is a POST api/articles/AddToCart, no API key is required
+            // if the request is a POST api/articles/AddToCart, no API key is required
             if (context.Request.Path.StartsWithSegments("/api/articles/AddToCart")) {
-                await _next(context); // Allow the request to continue
+                await _next(context);
                 return;
             }
 
-            // For other methods like POST, PUT, DELETE, validate the API key
+            // for other methods like POST, PUT, DELETE, validate the API key
             var apiKeyHeader = context.Request.Headers["ApiKey"];
 
-            // Check if the ApiKey header exists and is valid
+            // check if the apikye header exists and is valid
             if (!apiKeyHeader.Any()) {
-                _logger.LogWarning("API key is missing.");
-                context.Response.StatusCode = StatusCodes.Status400BadRequest;
-                await context.Response.WriteAsync("API key is missing.");
+                _logger.LogWarning("API key is missing");
+                context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                await context.Response.WriteAsync("API key is missing");
                 return;
             }
 
             var apiKey = apiKeyHeader.FirstOrDefault();
 
-            // Validate the API key from the database
             var keyRecord = await dbContext.ApiKeys
                 .Where(a => a.Key == apiKey && a.IsActive)
                 .FirstOrDefaultAsync();
 
             if (keyRecord == null) {
-                _logger.LogWarning("Invalid or inactive API key.");
+                _logger.LogWarning("invalid or inactive API key");
                 context.Response.StatusCode = StatusCodes.Status401Unauthorized;
-                await context.Response.WriteAsync("Invalid or inactive API key.");
+                await context.Response.WriteAsync("invalid or inactive API key");
                 return;
             }
 
-            // API key is valid, proceed to the next middleware
             await _next(context);
         }
     }

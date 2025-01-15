@@ -55,7 +55,7 @@ namespace NewRazorApplication1.Controllers {
             _context.Articles.Add(article);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetArticle), new { id = article.Id }, article);
+            return CreatedAtAction(nameof(GetArticle), new { id = article.Id, }, article);
         }
 
         // POST: api/articles/AddToCart?productId=1

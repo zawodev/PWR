@@ -71,7 +71,7 @@ using (var scope = app.Services.CreateScope()) {
 
 using (var scope = app.Services.CreateScope()) {
     var dbContext = scope.ServiceProvider.GetRequiredService<ShopDbContext>();
-    ApiKeyGenerator.Initialize(dbContext); // Ensure this happens in the correct scope
+    ApiKeyGenerator.Initialize(dbContext);
 }
 
 app.Run();
