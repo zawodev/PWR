@@ -1,0 +1,40 @@
+﻿@page
+@model WebApplication2Razor.Pages.Articles.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Article</h4>
+    <hr />
+    <div>
+        <div class="form-group">
+            <label>Name</label>
+            <p>@Model.Article.Name</p>
+        </div>
+        <div class="form-group">
+            <label>Price</label>
+            <p>@Model.Article.Price</p>
+        </div>
+        <div class="form-group">
+            <label>Category</label>
+            <p>@Model.Article.Category.Name</p>
+        </div>
+        <label>Image</label>
+        <div class="form-group">
+            <img src="@Url.Content("~/uploads/" + (Model.Article.ImagePath ?? "placeholder.png"))" alt="Article Image" class="img-fluid" />
+        </div>
+        <form method="post">
+            <div class="form-group">
+                <input type="submit" value="Delete" class="btn btn-danger" />
+            </div>
+        </form>
+        <div>
+            <a asp-page="./Index">Back to List</a>
+        </div>
+    </div>
+</div>

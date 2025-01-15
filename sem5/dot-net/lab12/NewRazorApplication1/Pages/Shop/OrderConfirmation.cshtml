@@ -1,0 +1,11 @@
+﻿@page
+@model NewRazorApplication1.Pages.Shop.OrderConfirmationModel
+@{
+    ViewData["Title"] = "Order Confirmation";
+}
+
+<h1>Thank You for Your Order!</h1>
+
+<p><strong>Full Name:</strong> @Model.FullName</p>
+<p><strong>Address:</strong> @Model.Address</p>
+<p><strong>Payment Method:</strong> @Model.PaymentMethod</p>

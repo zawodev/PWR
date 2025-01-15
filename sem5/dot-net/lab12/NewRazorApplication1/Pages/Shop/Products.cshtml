@@ -1,0 +1,32 @@
+﻿@page "{categoryId:int}"
+@model Shop.ProductsModel
+
+@{
+    ViewData["Title"] = $"Shop - {@Model.CategoryName}";
+}
+
+<h1>@Model.CategoryName</h1>
+
+<a href="@Url.Page("/Shop/Cart")" class="btn btn-secondary">Go to Cart</a>
+
+<div class="row">
+    @foreach (var product in Model.Products)
+    {
+        <div class="col-md-4">
+            <div class="card">
+                <img src="@Url.Content("~/uploads/" + (product.ImagePath == null ? "placeholder.png" : product.ImagePath) )" class="card-img-top" alt="Image of @product.Name" />
+                <div class="card-body">
+                    <h5 class="card-title">@product.Name</h5>
+                    <p class="card-text">Price: @product.Price.ToString("C")</p>
+                    <form method="post" asp-page-handler="AddToCart" asp-route-productId="@product.Id">
+                        <button type="submit" class="btn btn-primary">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<div>
+    <a asp-page="./Index">Back to Categories</a>
+</div>

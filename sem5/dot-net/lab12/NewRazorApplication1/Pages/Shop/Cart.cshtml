@@ -1,0 +1,61 @@
+﻿@page
+@model Shop.CartModel
+@{
+    ViewData["Title"] = "Your Cart";
+}
+
+<h1>Your Cart</h1>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">@TempData["Message"]</div>
+}
+
+@if (Model.CartItems.Count == 0)
+{
+    <p>Your cart is empty.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.CartItems)
+            {
+                <tr>
+                    <td>@item.Product.Name</td>
+                    <td>@item.Product.Price.ToString("C")</td>
+                    <td>@item.Quantity</td>
+                    <td>@((item.Quantity * item.Product.Price).ToString("C"))</td>
+                    <td>
+                        <a asp-page-handler="Increase" asp-route-id="@item.Product.Id" class="btn btn-success">+</a>
+                        <a asp-page-handler="Decrease" asp-route-id="@item.Product.Id" class="btn btn-warning">-</a>
+                        <a asp-page-handler="Remove" asp-route-id="@item.Product.Id" class="btn btn-danger">Remove</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @if (Model.CartItems.Count > 0)
+    {
+        <h3>Total: @Model.CartItems.Sum(i => i.Quantity * i.Product.Price).ToString("C")</h3>
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <a asp-page="/Shop/Checkout" class="btn btn-primary">Place Order</a>
+        }
+        else
+        {
+            <p><a asp-area="Identity" asp-page="/Account/Login" class="btn btn-warning">Log in to place an order</a></p>
+        }
+    }
+}
