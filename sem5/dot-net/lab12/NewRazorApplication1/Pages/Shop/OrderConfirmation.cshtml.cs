@@ -3,8 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using NewRazorApplication1.Data;
 using WebApplication2Razor.Models;
 using WebApplication2Razor.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace NewRazorApplication1.Pages.Shop {
+    [Authorize(Policy = "BlockCartForAdmin")]
     public class OrderConfirmationModel : PageModel {
         private readonly ShopDbContext _context;
 

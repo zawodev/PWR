@@ -85,7 +85,7 @@
                                 <img src="/uploads/${product.imagePath || "placeholder.png"}" class="card-img-top" alt="Image of ${product.name}" />
                                 <div class="card-body">
                                     <h5 class="card-title">${product.name}</h5>
-                                    <p class="card-text">Price: ${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(product.price)}</p>
+                                    <p class="card-text">Price: ${new Intl.NumberFormat('pl-PL', { style: 'currency', currency: 'PLN' }).format(product.price)}</p>
                                     <button class="btn btn-primary add-to-cart-btn" data-product-id="${product.id}">Add to Cart</button>
                                 </div>
                             </div>

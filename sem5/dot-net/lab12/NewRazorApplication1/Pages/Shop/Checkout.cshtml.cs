@@ -5,8 +5,10 @@ using WebApplication2Razor.Models;
 using System.Collections.Generic;
 using System.Linq;
 using WebApplication2Razor.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace NewRazorApplication1.Pages.Shop {
+    [Authorize(Policy = "BlockCartForAdmin")]
     public class CheckoutModel : PageModel {
         private readonly ShopDbContext _context;
 

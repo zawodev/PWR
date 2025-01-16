@@ -7,8 +7,10 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace NewRazorApplication1.Pages.Shop {
+    [Authorize(Policy = "BlockCartForAdmin")]
     public class ProductsModel : PageModel {
         private readonly ShopDbContext _context;
 

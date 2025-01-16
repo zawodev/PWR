@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using WebApplication2Razor.Data;
 using WebApplication2Razor.Models;
 
 namespace NewRazorApplication1.Pages.Shop {
+    [Authorize(Policy = "BlockCartForAdmin")]
     public class IndexModel : PageModel {
         private readonly ShopDbContext _context;
 
