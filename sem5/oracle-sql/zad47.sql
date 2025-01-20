@@ -1,4 +1,3 @@
---sekcja usuwania:
 DROP TABLE KocuryT CASCADE CONSTRAINTS;
 DROP TABLE PlebsT CASCADE CONSTRAINTS;
 DROP TABLE ElitaT CASCADE CONSTRAINTS;
@@ -20,6 +19,8 @@ SET SERVEROUTPUT ON;
 SET VERIFY OFF;
 
 --zad47 ----------------------------------------------------------------------------------
+    
+-- KocuryO
 CREATE OR REPLACE TYPE KocuryO AS OBJECT
 (
     imie            VARCHAR2(15),
@@ -40,6 +41,7 @@ DROP TYPE KocuryO;
 
 ROLLBACK;
 
+-- KocuryO Body
 CREATE OR REPLACE TYPE BODY KocuryO
 AS
     MEMBER FUNCTION caly_przydzial RETURN NUMBER IS
@@ -52,6 +54,7 @@ AS
     END;
 END;
 
+-- KocuryT
 CREATE TABLE KocuryT OF KocuryO (
   imie CONSTRAINT kocuryo_imie_nn NOT NULL,
   plec CONSTRAINT kocuryo_plec_ch CHECK(plec IN ('M', 'D')),
@@ -64,7 +67,7 @@ CREATE TABLE KocuryT OF KocuryO (
 
 DROP TABLE KocuryT;
 
---plebs
+-- PlebsO
 CREATE OR REPLACE TYPE PlebsO AS OBJECT
 (
     pseudo   VARCHAR2(15),
@@ -72,7 +75,7 @@ CREATE OR REPLACE TYPE PlebsO AS OBJECT
     MEMBER FUNCTION get_details RETURN VARCHAR2
 );
 
-
+-- PlebsO Body
 CREATE OR REPLACE TYPE BODY PlebsO
 AS
     MEMBER FUNCTION get_details RETURN VARCHAR2
@@ -84,6 +87,7 @@ AS
     END;
 END;
 
+-- PlebsT Table
 CREATE TABLE PlebsT OF PlebsO(
     kot SCOPE IS KocuryT CONSTRAINT plebso_kot_nn NOT NULL,
     CONSTRAINT plebso_fk FOREIGN KEY (pseudo) REFERENCES KocuryT(pseudo),
