@@ -166,7 +166,7 @@ BEGIN
 SELECT FUNKCJA INTO funkcja_kocura
 FROM KOCURY
 WHERE FUNKCJA = UPPER('&nazwa_funkcji');
-DBMS_OUTPUT.PUT_LINE('Znaleziono kota o funkcji: ' || funkcja_kocura);
+DBMS_OUTPUT.PUT_LINE('znaleziono kota o funkcji: ' || funkcja_kocura);
 EXCEPTION
     WHEN TOO_MANY_ROWS 
         THEN DBMS_OUTPUT.PUT_LINE('TAK znaleziono');
@@ -177,12 +177,14 @@ END;
 
 --zad35 (LYSY, RURA, BOLEK, ZERO)
 DECLARE
-imie_kocura KOCURY.imie%TYPE;
-przydzial_kocura NUMBER;
-miesiac_kocura NUMBER;
-znaleziony BOOLEAN DEFAULT FALSE;
+    imie_kocura KocuryT.imie%TYPE;
+    przydzial_kocura NUMBER;
+    miesiac_kocura NUMBER;
+    znaleziony BOOLEAN DEFAULT FALSE;
 BEGIN
-SELECT imie, (NVL(przydzial_myszy, 0) + NVL(myszy_extra,0))*12, EXTRACT(MONTH FROM w_stadku_od)
+SELECT 
+    imie, 
+    (NVL(przydzial_myszy, 0) + NVL(myszy_extra,0)) * 12, EXTRACT(MONTH FROM w_stadku_od)
 INTO imie_kocura, przydzial_kocura, miesiac_kocura
 FROM KOCURY
 WHERE PSEUDO = UPPER('&pseudonim');

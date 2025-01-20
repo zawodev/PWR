@@ -4,7 +4,7 @@ DROP TABLE PlebsT CASCADE CONSTRAINTS;
 DROP TABLE ElitaT CASCADE CONSTRAINTS;
 DROP TABLE KontoT CASCADE CONSTRAINTS;
 DROP TABLE IncydentyT CASCADE CONSTRAINTS;
-DROP TYPE BODY KocuryO ;
+DROP TYPE BODY KocuryO;
 DROP TYPE KocuryO FORCE;
 DROP TYPE BODY ElitaO;
 DROP TYPE ElitaO FORCE;
@@ -14,6 +14,10 @@ DROP TYPE BODY KontoO;
 DROP TYPE KontoO FORCE;
 DROP TYPE BODY IncydentO;
 DROP TYPE IncydentO FORCE;
+
+ALTER SESSION SET NLS_DATE_FORMAT='YYYY-MM-DD';
+SET SERVEROUTPUT ON;
+SET VERIFY OFF;
 
 --zad47 ----------------------------------------------------------------------------------
 CREATE OR REPLACE TYPE KocuryO AS OBJECT
@@ -144,8 +148,7 @@ CREATE TABLE KontoT OF KontoO (
     CONSTRAINT ko_dw_du_ch CHECK(data_wprowadzenia <= data_usuniecia)
 );
 
--- Incydenty Object
-
+-- IncydentyO Object
 CREATE OR REPLACE TYPE IncydentO AS OBJECT
 (
     pseudo VARCHAR2(15),
@@ -156,6 +159,7 @@ CREATE OR REPLACE TYPE IncydentO AS OBJECT
     MEMBER FUNCTION czy_aktualny RETURN BOOLEAN,
     MEMBER FUNCTION czy_ma_opis RETURN BOOLEAN
 );
+
 -- IncydentyO Body
 CREATE OR REPLACE TYPE BODY IncydentO
 AS
@@ -171,8 +175,8 @@ AS
         RETURN data_incydentu >= '2015-01-01';
     END;
 END;
--- IncydentyT Table
 
+-- IncydentyT Table
 CREATE TABLE IncydentyT OF IncydentO (
     CONSTRAINT incydento_pk PRIMARY KEY(pseudo, imie_wroga),
     kot SCOPE IS KocuryT CONSTRAINT incydentyo_kot_nn NOT NULL,
@@ -181,7 +185,7 @@ CREATE TABLE IncydentyT OF IncydentO (
     data_incydentu CONSTRAINT incydentyo_data_nn NOT NULL
 );
 
-
+-- TRIGGERS
 CREATE OR REPLACE TRIGGER elita_trg
     BEFORE INSERT OR UPDATE
     ON ElitaT
@@ -199,8 +203,11 @@ BEGIN
         RAISE_APPLICATION_ERROR(-20001, 'Kot należy już do elity.');
     END IF;
 END;
+
+
 DROP TRIGGER elita_trg;
 DROP TRIGGER plebs_trg;
+
 
 CREATE OR REPLACE TRIGGER plebs_trg
     BEFORE INSERT OR UPDATE
@@ -229,9 +236,6 @@ BEGIN
     SELECT REF(K) INTO kot FROM KocuryT K WHERE K.pseudo = 'TYGRYS';
     INSERT INTO PlebsT VALUES (PlebsO('TYGRYS', kot));
 END;
-
-
-INSERT INTO PlebsT VALUES (PLEBSO('TYGRYS', (SELECT DEREF(K) FROM KocuryT K WHERE K.PSEUDO = 'TYGRYS' )));
 
 --dane wprowadzenia myszy
 DECLARE
@@ -360,17 +364,17 @@ SELECT * FROM KontoT;
 --METODY:
 SELECT DEREF(kot).info() FROM PLEBST;
 SELECT DEREF(kot).info(), DEREF(slugus).get_details() FROM ELitaT;
-SELECT data_usuniecia, data_wprowadzenia, DEREF(kot).pseudo, DEREF(kot).get_sluga().get_details() FROM KONTOT;
-SELECT K.IMIE, K.PLEC, K.caly_przydzial() FROM KocuryT K WHERE K.caly_przydzial() > 90;
-
+SELECT data_usuniecia, data_wprowadzenia, DEREF(kot).pseudo, DEREF(kot).get_sluga().get_details() FROM KontoT;
+SELECT K.IMIE, K.PLEC, K.caly_przydzial() FROM KocuryT K WHERE K.caly_przydzial() > 65;
 
 --PODZAPYTANIE
 SELECT pseudo, plec FROM (SELECT K.pseudo pseudo, K.plec plec FROM KocuryT K WHERE K.PLEC = 'D');
 
-SELECT K.info() FROM KocuryT K WHERE K.caly_przydzial() <= (
-    SELECT AVG(K1.caly_przydzial())
-    FROM KocuryT K1
+SELECT K1.info() FROM KocuryT K1 WHERE K1.caly_przydzial() <= (
+    SELECT AVG(K2.caly_przydzial())
+    FROM KocuryT K2
     );
+
 --GRUPOWANIE
 SELECT K.funkcja, COUNT(K.pseudo) as koty_w_funkcji FROM KocuryT K GROUP BY K.funkcja;
 
@@ -378,83 +382,81 @@ SELECT DEREF(kot).pseudo "Kot", count(slugus) "Sługa"
 FROM ElitaT E
 GROUP BY DEREF(kot).pseudo;
 
-
 SELECT E.kot.pseudo, E.kot.caly_przydzial()
-FROM KocuryT K JOIN ElitaT E  ON E.kot = REF(K);
-
-SELECT E.kot.pseudo, E.kot.caly_przydzial()
-FROM  ElitaT E;
-
-SELECT K.pseudo, data_wprowadzenia, data_usuniecia
-FROM KocuryT K JOIN ElitaT E ON REF(K) = E.kot LEFT JOIN KontoT ON REF(E) = KontoT.kot;
+FROM KocuryT K JOIN ElitaT E ON E.kot = REF(K);
 
 SELECT K.kot.PSEUDO, data_wprowadzenia, data_usuniecia
 FROM KontoT K;
 
 --lista2 zad 18
-SELECT K2.imie, K2.w_stadku_od "POLUJE OD"
-FROM KocuryT K1
-         JOIN KocuryT K2
-              ON K1.imie = 'JACEK'
-WHERE K1.w_stadku_od > K2.w_stadku_od
-ORDER BY K2.w_stadku_od DESC;
+SELECT
+    K2.imie,
+    K2.w_stadku_od "POLUJE OD"
+FROM
+    KocuryT K1 JOIN KocuryT K2 ON K1.imie = 'JACEK'
+WHERE
+    K1.w_stadku_od < K2.w_stadku_od
+ORDER BY
+    K1.w_stadku_od DESC;
 
 --lista2 zad 19a
-SELECT K.imie "Imie",
-       K.funkcja "Funkcja",
-       K.szef.imie "Szef 1",
-       K.szef.szef.imie "Szef 2",
-       K.szef.szef.szef.imie "Szef 3"
-FROM KocuryT K
-WHERE K.funkcja IN ('KOT', 'MILUSIA');
+SELECT 
+    K.imie "Imie",
+    K.funkcja "Funkcja",
+    K.szef.imie "Szef 1",
+    K.szef.szef.imie "Szef 2",
+    K.szef.szef.szef.imie "Szef 3"
+FROM 
+    KocuryT K
+WHERE 
+    K.funkcja IN ('KOT', 'MILUSIA');
 
---lista 2 zad 23
-SELECT imie, 12 * K.caly_przydzial() "DAWKA ROCZNA", 'powyzej 864' "DAWKA"
-FROM KocuryT K
-WHERE 12 * K.caly_przydzial() > 864
-  AND myszy_extra IS NOT NULL
-UNION
-SELECT imie, 12 * K.caly_przydzial() "DAWKA ROCZNA", '864' "DAWKA"
-FROM KocuryT K
-WHERE 12 * K.caly_przydzial() = 864
-  AND myszy_extra IS NOT NULL
-UNION
-SELECT imie, 12 * K.caly_przydzial() "DAWKA ROCZNA", 'ponizej 864' "DAWKA"
-FROM KocuryT K
-WHERE 12 * K.caly_przydzial() < 864
-  AND myszy_extra IS NOT NULL
-ORDER BY 2 DESC;
-
---lista 3 zad 34
+--lista 3 zad34 (DZIELCZY jeden, LOWCZY kilka)
 DECLARE
     funkcja_kocura KocuryT.funkcja%TYPE;
 BEGIN
     SELECT FUNKCJA INTO funkcja_kocura
     FROM KocuryT
-    WHERE FUNKCJA = UPPER('MILUSIA');
-    DBMS_OUTPUT.PUT_LINE('Znaleziono kota o funkcji: ' || funkcja_kocura);
+    WHERE FUNKCJA = UPPER('&nazwa_funkcji');
+    DBMS_OUTPUT.PUT_LINE('znaleziono kota o funkcji: ' || funkcja_kocura);
 EXCEPTION
     WHEN TOO_MANY_ROWS
-        THEN DBMS_OUTPUT.PUT_LINE('znaleziono '|| funkcja_kocura);
+        THEN DBMS_OUTPUT.PUT_LINE('TAK znaleziono '|| funkcja_kocura);
     WHEN NO_DATA_FOUND
         THEN DBMS_OUTPUT.PUT_LINE('NIE znaleziono' || funkcja_kocura);
 END;
 
---lista 3 zad37
+--lista 3 zad35 (LYSY, RURA, BOLEK, ZERO)
 DECLARE
-    CURSOR topC IS
-        SELECT K.pseudo, K.caly_przydzial() "zjada"
-        FROM KocuryT K
-        ORDER BY "zjada" DESC;
-    top topC%ROWTYPE;
+    imie_kocura KocuryT.imie%TYPE;
+    przydzial_kocura NUMBER;
+    miesiac_kocura NUMBER;
+    znaleziony BOOLEAN DEFAULT FALSE;
 BEGIN
-    OPEN topC;
-    DBMS_OUTPUT.PUT_LINE('Nr   Pseudonim   Zjada');
-    DBMS_OUTPUT.PUT_LINE('----------------------');
-    FOR i IN 1..5
-    LOOP
-        FETCH topC INTO top;
-        EXIT WHEN topC%NOTFOUND;
-        DBMS_OUTPUT.PUT_LINE(TO_CHAR(i) ||'    '|| RPAD(top.pseudo, 8) || '    ' || LPAD(TO_CHAR(top."zjada"), 5));
-    END LOOP;
+SELECT
+    imie,
+    (koc.caly_przydzial()) * 12,
+    EXTRACT(MONTH FROM w_stadku_od)
+INTO
+    imie_kocura,
+    przydzial_kocura,
+    miesiac_kocura
+FROM
+    KocuryT koc
+WHERE
+    PSEUDO = UPPER('&pseudonim');
+IF przydzial_kocura > 700 
+    THEN DBMS_OUTPUT.PUT_LINE('calkowity roczny przydzial myszy >700');
+ELSIF imie_kocura LIKE '%A%'
+    THEN DBMS_OUTPUT.PUT_LINE('imię zawiera litere A');
+ELSIF miesiac_kocura = 5 
+    THEN DBMS_OUTPUT.PUT_LINE('maj jest miesiacem przystapienia do stada');
+ELSE 
+    DBMS_OUTPUT.PUT_LINE('nie odpowiada kryteriom');
+END IF;
+EXCEPTION 
+    WHEN NO_DATA_FOUND
+        THEN DBMS_OUTPUT.PUT_LINE('brak kota o takim pseudonimie');
+WHEN OTHERS 
+        THEN DBMS_OUTPUT.PUT_LINE(sqlerrm);
 END;
