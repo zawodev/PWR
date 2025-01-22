@@ -1,0 +1,10 @@
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    display: flexbox;
+    flex-direction: column;
+    min-height: 80vh;
+}
