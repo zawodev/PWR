@@ -260,11 +260,13 @@ BEGIN
         LOOP
             WHILE tab_zjadanych_myszy(id_zjadacza) = 0 AND najedzone_koty_num < tab_pseudo.COUNT
                 LOOP
+                    -- kazdy obrot petli to jeden kot zjada
                     najedzone_koty_num := najedzone_koty_num + 1;
                     id_zjadacza := MOD(id_zjadacza + 1, tab_pseudo.COUNT) + 1;
                 END LOOP;
 
             IF najedzone_koty_num = tab_pseudo.COUNT THEN
+                --nadmiary zbiera szef szefow
                 tab_zjadaczy(i) := 'TYGRYS';
             ELSE
                 tab_zjadaczy(i) := tab_pseudo(id_zjadacza);
@@ -300,6 +302,7 @@ INSERT INTO Konto_osobiste_LYSY VALUES(seq_myszy.nextval, 21, '2025-01-13');
 INSERT INTO Konto_osobiste_LYSY VALUES(seq_myszy.nextval, 25, '2025-01-13');
 INSERT INTO Konto_osobiste_LYSY VALUES(seq_myszy.nextval, 29, '2025-01-15');
 INSERT INTO Konto_osobiste_LYSY VALUES(seq_myszy.nextval, 27, '2025-01-15');
+INSERT INTO Konto_osobiste_LYSY VALUES(seq_myszy.nextval, 41, '2025-01-17');
 
 INSERT INTO Konto_osobiste_TYGRYS VALUES(seq_myszy.nextval, 31, '2025-01-13');
 INSERT INTO Konto_osobiste_TYGRYS VALUES(seq_myszy.nextval, 30, '2025-01-15');
@@ -329,9 +332,19 @@ SELECT * FROM Konto_osobiste_LYSY;
 
 -- test wyplata
 
+SELECT COUNT(*)
+FROM MYSZY
+WHERE data_wydania = '2025-01-29';
+
+
 BEGIN
     wyplata();
 END;
+
+
+-- suma dla wszystkich kotow (NVL(PRZYDZIAL_MYSZY, 0) + NVL(MYSZY_EXTRA, 0))
+SELECT SUM(NVL(PRZYDZIAL_MYSZY, 0) + NVL(MYSZY_EXTRA, 0))
+FROM Kocury;
 
 
 
