@@ -1,0 +1,1 @@
+CSRF mogą nie dzialac na nowym FireFoxie, jak nie działa to zrobić screena ze nie działa ielo to wystarzczy
