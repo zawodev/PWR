@@ -1,0 +1,57 @@
+1) Tytuł (Sławne "wpadki" prezentacji)
+2) Plan spotkania
+3) Czym jest wpadka w prezentacji?
+4) Rodzaje wpadek (techniczne, merytoryczne, komunikacyjne)
+5) Znane wpadki - przykłady z życia wzięte (analiza przyczyn każdej z sytuacji)
+ 6) Elon Musk - pęknięcie szyby w Cybertruck
+ 7) Steve Jobs - problemy techniczne podczas premiery iphone4
+ 8) Microsoft - blue screen podczas prezentacji windows 98
+ 9) Biden trump
+10) Dlaczego dochodzi do wpadek?
+11) Główne przyczyny wpadek (problemy techniczne, brak przygotowania, stres i presja)
+12) "Psychology of Public speaking" - cytaty z badań o wpływie stresu na wystąpienia publiczne
+13) Dyskusja: Czy wpadki są zawsze negatywne? (pytanie do publiczności)
+14) Jak unikać wpadek? 10 zasad. (PLOS Computational Biology: Ten Simple Rules for Effective Presentation Slides)
+15) Jak unikać wpadek technicznych i komunikacyjnych
+16) Jak unikać wpadek merytorycznych
+17) Podsumowanie
+18) Dziękuję za uwagę + Pytania od publiczności
+19) Bibliografia
+
+
+
+
+3)
+-a] Jest więc sytuacją nieplanowaną, ale taką której możemy zapobiegać poprzez dobre przygotowanie do prezentacji oraz skrupulatność
+-b] Może wynikać z błędów technicznych, problemów merytorycznych, nieodpowiedniego stylu prezentacji lub niewłaściwego projektu slajdów o czym powiem na kolejnym slajdzie
+
+4)
+-a] awarie sprzętu projektora, komputera, oprogramowania, problemy z mikrofonem
+-b] nieaktualne dane, przeciążenie poznawcze przez zbyt skomplikowane slajdy, brak przygotowania do trudnych pytań od publiczności
+-c] stres, trudności z mówieniem, zapominanie treści, pocieranie rąk, brak kontaktu wzrokowego, zły ton, brak entuzjazjmu w głosie zarówno werbalne jak i niewerbalne, nieodpowiedni strój
+
+10)
+-a] jesteśmy ludźmi, stresujemy się to jest normalne, ale wiele z sytuacji wpadkowych można z łatwością uniknąć poprzez zwykłe przygotowanie się zarówno techniczne jak i merytoryczne (o tym później)
+
+11)
+-a] czyli wszystko to o czym mówiłem wcześniej, to znaczy przygotowanie merytoryczne, techniczne oraz umiejętność przemawiania przed tłumem 
+
+12) University of Bergen
+33% populacji doświadcza Fear of Public Speaking (strach przed przemawianiem)
+-a] przyspieszony puls, pocenie się, trudność w koncentracji. 
+-b] lęk ten jest klasyfikowany jako specyficzny rodzaj zaburzenia lękowo społecznego. nieleczony może prowadzić do rozwinięcia sie uogólnionych zaburzeń lękowych, 
+-c] natomiast dobra wiadomość jest taka że interwencje psychologiczne takie jak terapia behavioralna, moga nie tylko łagodzić ten lęk ale również całkowicie go przepracować i w konsekwencji się go pozbyć. w związku z tym budowanie pewnosci siebie i rozwijanie umiejetnosci przemawiania
+
+13)
+-a] wzrost popularności
+-b] można pomyśleć że ktoś jest pewny siebie jak wybrnie
+
+16) Najprostszą do uniknięcia wpadką, jest zdecydowanie wpadka merytoryczna, polegająca na nieczytelnej i nieprzyswajalnej prezentacji.
+  a] STRESZCZENIE KLUCZOWYCH ZASAD z Presentation Zen, autorstwa Garrego Raynoldsa
+
+
+17)
+ a] Przygotowanie merytoryczne, technicznie i trening komunikacyjności do prezentacji 
+ b] PESP - prostota, estetyka, storytelling, przekaz podczas tworzenia slajdów
+ c] pracować nad własnym stresem, nad pewnością siebie przemawiania przed tłumem
+ d] przetestowac sprzet, miec plan b np. pendrive, jak cos sie stanie, to reagowac humorem, przećwiczyć przemawianie konkretnie tej prezentacji
