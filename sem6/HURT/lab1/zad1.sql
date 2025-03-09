@@ -41,7 +41,7 @@ CREATE TABLE Zakupy (
 );
 
 CREATE TABLE Nabytki (
-    IdNabytku INT IDENTITY(1, 1,) PRIMARY KEY,
+    IdNabytku INT IDENTITY(1, 1) PRIMARY KEY,
     Ilosc INT NOT NULL,
     IdOferty INT NOT NULL,
     IdZakupu INT NOT NULL,
