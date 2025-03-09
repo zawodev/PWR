@@ -83,6 +83,15 @@ FROM [Sales].[SalesOrderDetail] SOD
     JOIN [Production].[ProductSubcategory] PSC ON PP.ProductSubcategoryID = PSC.ProductSubcategoryID
 GROUP BY PSC.Name;
 
+SELECT
+    PSC.Name as "Subcategory",
+    MIN(SOD.UnitPriceDiscount * SOD.OrderQty * SOD.UnitPrice) as "MinDiscount",
+    MAX(SOD.UnitPriceDiscount * SOD.OrderQty * SOD.UnitPrice) as "MaxDiscount"
+FROM Sales.SalesOrderDetail SOD
+    JOIN Production.Product PP ON SOD.ProductID = PP.ProductID
+    JOIN Production.ProductSubcategory PSC ON PP.ProductSubcategoryID = PSC.ProductSubcategoryID
+GROUP BY PSC.Name;
+
 -- 8) Podaj produkty, których cena jest wyższa od średniej ceny produktów w sklepie.
 SELECT
     PP.ProductID as "ProductID",
