@@ -8,7 +8,7 @@ SELECT *
 FROM [Production].[Product] P
 WHERE P.Color is NULL;
 
--- 3) tu jeszcze małe poprawki
+-- 3)
 SELECT YEAR(OrderDate) as "Year", SUM(TotalDue) as "Total"
 FROM [Sales].[SalesOrderHeader]
 GROUP BY YEAR(OrderDate)

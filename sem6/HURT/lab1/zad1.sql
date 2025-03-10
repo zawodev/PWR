@@ -1,4 +1,8 @@
 CREATE DATABASE Uslugi;
+GO
+
+USE Uslugi;
+GO
 
 -- TWORZYMY TABELE
 
