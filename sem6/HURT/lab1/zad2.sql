@@ -122,3 +122,50 @@ FROM [Sales].[SalesOrderHeader] S
     JOIN [Sales].[SalesTerritory] ST ON S.TerritoryID = ST.TerritoryID
 GROUP BY ST.CountryRegionCode
 ORDER BY ST.CountryRegionCode;
+
+-- 11) MODYFIKACJA
+-- 
+-- 
+-- Średnia kwota transakcji wszystkich oraz średnia liczba produktów w transakcji. pogrupuj po mieście i adresie
+
+-- 8/10 pkt rozwiązanie below:
+SELECT
+    A.City as "City",
+    ROUND(AVG(SOH.TotalDue / SOD.OrderQty), 2) as "AvgTotalDue", -- tutaj tylko zamiast orderQty powinien być COUNT to jest wzorcówka teoretycznie
+    ROUND(AVG(CAST(SOD.OrderQty as float)), 2) as "AvgOrderQty"
+FROM [Sales].[SalesOrderHeader] SOH
+    JOIN [Sales].[SalesOrderDetail] SOD ON SOH.SalesOrderID = SOD.SalesOrderID
+    JOIN [Person].[Address] A ON SOH.ShipToAddressID = A.AddressID
+GROUP BY A.City
+ORDER BY 2 DESC;
+
+--nieudane próby:
+SELECT
+    A.City as "City",
+    AVG(SOH.TotalDue / COUNT(SOD.SalesOrderID)) as "AvgTotalDue",
+    AVG(SOD.OrderQty) as "AvgOrderQty"
+FROM [Sales].[SalesOrderHeader] SOH
+    JOIN [Sales].[SalesOrderDetail] SOD ON SOH.SalesOrderID = SOD.SalesOrderID
+    JOIN [Person].[Address] A ON SOH.ShipToAddressID = A.AddressID
+GROUP BY A.City
+ORDER BY A.City;
+
+
+
+SELECT
+    A.City as "City",
+    A.AddressLine1 as "Address",
+    AVG(S.TotalDue) as "AvgTotalDue",
+    AVG(SOD.OrderQty) as "AvgOrderQty"
+FROM [Sales].[SalesOrderHeader] S
+    JOIN [Sales].[SalesOrderDetail] SOD ON S.SalesOrderID = SOD.SalesOrderID
+    JOIN [Person].[Address] A ON S.ShipToAddressID = A.AddressID
+GROUP BY A.City, A.AddressLine1
+ORDER BY A.City, A.AddressLine1;
+
+SELECT
+    AVG(S.TotalDue) as "AvgTotalDue",
+    AVG(SOD.OrderQty) as "AvgOrderQty"
+FROM [Sales].[SalesOrderHeader] S
+    JOIN [Sales].[SalesOrderDetail] SOD ON S.SalesOrderID = SOD.SalesOrderID
+GROUP BY S.BillToAddressID, S.BillToCity;
