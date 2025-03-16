@@ -25,10 +25,14 @@ WITH ProductSales AS (
 )
 SELECT TOP 20
     p.Name AS ProductName,
-        pc.Name AS CategoryName,
-       ps.TotalSold
+    pc.Name AS CategoryName,
+    ps.TotalSold
 FROM ProductSales ps
-         JOIN Production.Product p ON ps.ProductID = p.ProductID
-         JOIN Production.ProductSubcategory psc ON p.ProductSubcategoryID = psc.ProductSubcategoryID
-         JOIN Production.ProductCategory pc ON psc.ProductCategoryID = pc.ProductCategoryID
+    JOIN Production.Product p ON ps.ProductID = p.ProductID
+    JOIN Production.ProductSubcategory psc ON p.ProductSubcategoryID = psc.ProductSubcategoryID
+    JOIN Production.ProductCategory pc ON psc.ProductCategoryID = pc.ProductCategoryID
 ORDER BY ps.TotalSold DESC;
+
+
+
+
