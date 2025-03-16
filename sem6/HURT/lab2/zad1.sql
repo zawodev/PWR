@@ -4,7 +4,10 @@
 --a) zapytanie z użyciem polecenia pivot
 SELECT * FROM
 (
-SELECT YEAR(OrderDate) AS Year, MONTH(OrderDate) AS Month, COUNT(DISTINCT CustomerID) AS Customers
+SELECT 
+    YEAR(OrderDate) AS Year, 
+    MONTH(OrderDate) AS Month, 
+    COUNT(DISTINCT CustomerID) AS Customers
 FROM Sales.SalesOrderHeader
 GROUP BY YEAR(OrderDate), MONTH(OrderDate)
 ) AS SourceTable
@@ -12,10 +15,13 @@ PIVOT
 (
 SUM(Customers)
 FOR Month IN ([1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12])
-) AS PivotTable
+) AS PivotTable;
          
 --b) zapytanie bez użycia polecenia pivot
-SELECT YEAR(OrderDate) AS Year, MONTH(OrderDate) AS Month, COUNT(DISTINCT CustomerID) AS Customers
+SELECT 
+    YEAR(OrderDate) AS Year, 
+    MONTH(OrderDate) AS Month, 
+    COUNT(DISTINCT CustomerID) AS Customers
 FROM Sales.SalesOrderHeader
 GROUP BY YEAR(OrderDate), MONTH(OrderDate)
 ORDER BY Year, Month;
@@ -58,6 +64,7 @@ ORDER BY Year, Month, Day;
 
 --4) Wykorzystując polecenie CASE przygotować podsumowania do zestawienia z poprzedniego zadania tak, aby sumowane były kwoty zamówień oraz obliczana liczba różnych produktów dla poszczególnych miesięcy i dni tygodnia.
 --   Uwaga: Pamiętaj o wybraniu właściwego atrybutu funkcji datepart tak, aby zgadzała się nazwa dnia tygodnia.
+
 SELECT
     CASE MONTH(OrderDate)
         WHEN 1 THEN 'January'
@@ -96,8 +103,7 @@ ORDER BY MONTH(OrderDate), DATEPART(WEEKDAY, OrderDate);
 --Schemat wynikowej tabeli powinien wyglądać następująco:
 --KartyLojalnosciowe(Imie, Nazwisko, Liczba transakcji, Łączna kwota transakcji, Kolor karty)
 
-CREATE TABLE KartyLojalnosciowe
-(
+CREATE TABLE KartyLojalnosciowe (
     Imie NVARCHAR(50),
     Nazwisko NVARCHAR(50),
     LiczbaTransakcji INT,
@@ -105,7 +111,6 @@ CREATE TABLE KartyLojalnosciowe
     KolorKarty NVARCHAR(50)
 );
 
--- Obliczenie średniej wartości zamówienia w bazie
 DECLARE @Srednia DECIMAL(16, 2);
 SET @Srednia = (SELECT AVG(TotalDue) FROM Sales.SalesOrderHeader);
 
@@ -143,14 +148,17 @@ FROM
             SUM(CASE WHEN SOH.TotalDue > 2.5 * @Srednia THEN 1 ELSE 0 END) AS duzeZamowienia
         FROM Sales.Customer C
                  JOIN Sales.SalesOrderHeader SOH ON C.CustomerID = SOH.CustomerID
-        WHERE C.PersonID IS NOT NULL  -- Pomija firmy (które nie mają danych osobowych w tabeli Person)
+        WHERE C.PersonID IS NOT NULL -- pomijamy firmy które nie mają danych osobowych w tabeli Person.Person
         GROUP BY C.CustomerID
     ) AS T
         JOIN Sales.Customer C ON T.CustomerID = C.CustomerID
         JOIN Person.Person P ON C.PersonID = P.BusinessEntityID;
 
+
+-- test1
 SELECT * FROM KartyLojalnosciowe;
 
+-- test2
 SELECT KolorKarty, COUNT(*) as "Liczba kart"
 FROM KartyLojalnosciowe
 GROUP BY KolorKarty
