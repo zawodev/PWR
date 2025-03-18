@@ -163,12 +163,6 @@ SELECT KolorKarty, COUNT(*) as "Liczba kart"
 FROM KartyLojalnosciowe
 GROUP BY KolorKarty
 ORDER BY 2;
-               
-               
-               
-
-
-
 
 
 

@@ -60,3 +60,18 @@ FROM Production.Product PP
             JOIN Sales.SalesTerritory ST ON C.TerritoryID = ST.TerritoryID
 GROUP BY PC.Name, PSC.Name
 ORDER BY PC.Name, PSC.Name
+
+--6) to samo co 5 tylko ilość sprzedanych sztuk
+SELECT
+    PC.Name as "Category",
+    PSC.Name as "Subcategory",
+    SUM(SOD.OrderQty) as "Sold"
+FROM Production.Product PP
+            JOIN Production.ProductSubcategory PSC ON PP.ProductSubcategoryID = PSC.ProductSubcategoryID
+            JOIN Production.ProductCategory PC ON PSC.ProductCategoryID = PC.ProductCategoryID
+            JOIN Sales.SalesOrderDetail SOD ON PP.ProductID = SOD.ProductID
+            JOIN Sales.SalesOrderHeader SOH ON SOD.SalesOrderID = SOH.SalesOrderID
+            JOIN Sales.Customer C ON SOH.CustomerID = C.CustomerID
+            JOIN Sales.SalesTerritory ST ON C.TerritoryID = ST.TerritoryID
+GROUP BY PC.Name, PSC.Name
+ORDER BY PC.Name, PSC.Name
