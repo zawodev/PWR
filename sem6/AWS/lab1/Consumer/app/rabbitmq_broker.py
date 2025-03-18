@@ -10,19 +10,24 @@ class RabbitMQBroker:
     EXCHANGE_TYPE = "direct"
 
     def __init__(self, host='localhost', port=5672, username='guest', password='guest'):
+        """
+        start a connection with RabbitMQ and declare an exchange
+        """
+        # start connection
         credentials = pika.PlainCredentials(username, password)
         params = pika.ConnectionParameters(host=host, port=port, credentials=credentials)
         self.connection = pika.BlockingConnection(params)
         self.channel = self.connection.channel()
 
+        # declare an exchange
         self.channel.exchange_declare(exchange=self.EXCHANGE_NAME, exchange_type=self.EXCHANGE_TYPE)
-        logger.info("Połączono z RabbitMQ (Consumer), zadeklarowano exchange: %s", self.EXCHANGE_NAME)
+        logger.info("Połączono z RabbitMQ, zadeklarowano exchange: %s", self.EXCHANGE_NAME)
 
     def subscribe_and_consume(self, routing_key, callback):
         """
-        1) Deklaruje kolejkę (o unikalnej nazwie) 
-        2) Binduje ją do exchange z danym routing_key
-        3) Uruchamia pętlę konsumującą (start_consuming)
+        1) declare a queue (with a unique name)
+        2) bind it to the exchange with a given routing_key
+        3) start consuming loop (start_consuming)
         """
         queue_name = f"{routing_key}_queue_{uuid.uuid4().hex[:6]}"
         self.channel.queue_declare(queue=queue_name, exclusive=True)
@@ -30,9 +35,8 @@ class RabbitMQBroker:
 
         logger.info("Consumer subskrybuje routing_key=%s, queue=%s", routing_key, queue_name)
 
-        # Ustawiamy callback
+        # set the callback
         def on_message(ch, method, properties, body):
-            # Odczytujemy JSON
             msg = json.loads(body.decode('utf-8'))
             event_class_name = msg["event_class"]
             data = msg["data"]
@@ -47,8 +51,13 @@ class RabbitMQBroker:
 
     def publish(self, routing_key, event_obj):
         """
-        Konsument może również publikować (np. Type3Consumer publikuje Type4Event).
+        publishing an event (serialized to JSON) with a given routing_key
         """
+        # simple example:
+        # {
+        #   "event_class": "Type1Event",
+        #   "data": "example data is put here",
+        # }
         message = {
             "event_class": event_obj.__class__.__name__,
             "data": event_obj.data
@@ -60,8 +69,11 @@ class RabbitMQBroker:
             routing_key=routing_key,
             body=body
         )
-        logger.info("Konsument wysłał event %s na routing_key=%s", event_obj.__class__.__name__, routing_key)
+        logger.info("Wysłano event %s na routing_key=%s", event_obj.__class__.__name__, routing_key)
 
     def close(self):
+        """
+        close the connection with RabbitMQ
+        """
         self.connection.close()
-        logger.info("Zamknięto połączenie z RabbitMQ (Consumer).")
+        logger.info("Zamknięto połączenie z RabbitMQ")

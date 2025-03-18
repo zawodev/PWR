@@ -35,7 +35,7 @@ def main():
         pub1_3.broker.close()
         pub2.broker.close()
         pub3.broker.close()
-        print("Zatrzymano wszystkich publisherów.")
+        print("stopped all pubslishers")
 
 if __name__ == "__main__":
     main()

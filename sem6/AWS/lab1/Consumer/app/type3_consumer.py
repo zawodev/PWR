@@ -11,9 +11,7 @@ class Type3Consumer(ConsumerBase):
 
     def process(self, event):
         logger.info("[Type3Consumer] Przetwarzam event: %s", event.data)
-        # Po przetworzeniu generujemy event typu 4 i publikujemy
         new_event = Type4Event(data=f"Generowane na bazie: {event.data}")
-        # Kanał to 'type4'
         routing_key = "type4"
         self.broker.publish(routing_key, new_event)
 

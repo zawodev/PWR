@@ -24,7 +24,7 @@ def main():
         pub.run()
     except KeyboardInterrupt:
         pub.broker.close()
-        print("Zatrzymano publishera Type3.")
+        print("stopped type3 publisher")
 
 if __name__ == "__main__":
     main()

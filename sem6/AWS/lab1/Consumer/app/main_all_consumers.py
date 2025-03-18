@@ -1,7 +1,7 @@
 import logging
 import threading
 import time
-from type1_consumer import Type1ConsumerA
+from type1_consumer import Type1Consumer
 from type2_consumer import Type2Consumer
 from type3_consumer import Type3Consumer
 from type4_consumer import Type4Consumer
@@ -9,8 +9,8 @@ from type4_consumer import Type4Consumer
 def main():
     logging.basicConfig(level=logging.INFO, format='[ALL-CONSUMERS] %(asctime)s %(name)s %(levelname)s: %(message)s')
 
-    c1a = Type1ConsumerA()
-    c1b = Type1ConsumerA()
+    c1a = Type1Consumer("Type1ConsumerA")
+    c1b = Type1Consumer("Type1ConsumerB")
     c2 = Type2Consumer()
     c3 = Type3Consumer()
     c4 = Type4Consumer()
@@ -36,7 +36,7 @@ def main():
         c2.broker.close()
         c3.broker.close()
         c4.broker.close()
-        print("Zatrzymano wszystkich konsumentów.")
+        print("stopped all consumers")
 
 if __name__ == "__main__":
     main()
