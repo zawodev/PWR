@@ -5,10 +5,12 @@ from core.transit_graph import TransitGraph
 from utils.geometry import haversine
 
 class PathFinder:
-    def __init__(self, graph: TransitGraph, avg_speed_kmh: float = 20.0):
+    def __init__(self, graph: TransitGraph, avg_speed_kmh: float = 20.0, transfer_threshold: int = 300):
         self.graph = graph
-        # średnia prędkość w km/s, przydatna do heurystyki A*
+        # Średnia prędkość w km/s, przydatna do heurystyki A*
         self.avg_speed = avg_speed_kmh / 3600.0
+        # Próg w sekundach – jeżeli czas oczekiwania przekracza ten próg, nawet ta sama linia liczy się jako przesiadka.
+        self.transfer_threshold = transfer_threshold
 
     def heuristic_time(self, current_stop: str, target_stop: str) -> float:
         """
@@ -22,14 +24,11 @@ class PathFinder:
         return distance / self.avg_speed
 
     def dijkstra_time(self, start_stop: str, target_stop: str, start_time: int):
-        """
-        Wyszukiwanie najkrótszej ścieżki wg czasu przy użyciu algorytmu Dijkstry.
-        """
         start = time.time()
         counter = 0
-        # Struktura: (koszt, counter, current_time, stop, current_line, path)
+        # Elementy: (koszt, counter, current_time, stop, current_line, path)
         heap = [(0, counter, start_time, start_stop, None, [])]
-        visited = dict()  # (stop, current_line): cost
+        visited = dict()
 
         while heap:
             cost, _, current_time, stop, current_line, path = heapq.heappop(heap)
@@ -40,23 +39,20 @@ class PathFinder:
                 comp_time = time.time() - start
                 return path, cost, comp_time
 
-            for conn in self.graph.get_connections_from(stop, current_time):
-                wait = conn.departure_time - current_time
-                travel = conn.arrival_time - conn.departure_time
+            for conn, eff_dep, eff_arr in self.graph.get_connections_from(stop, current_time):
+                wait = eff_dep - current_time
+                travel = eff_arr - eff_dep
                 new_cost = cost + wait + travel
                 counter += 1
-                heapq.heappush(heap, (new_cost, counter, conn.arrival_time, conn.end_stop, conn.line, path + [conn]))
+                heapq.heappush(heap, (new_cost, counter, eff_arr, conn.end_stop, conn.line, path + [conn]))
         comp_time = time.time() - start
         return None, float('inf'), comp_time
 
     def a_star_time(self, start_stop: str, target_stop: str, start_time: int):
-        """
-        Wyszukiwanie A* wg minimalizacji czasu.
-        """
         start = time.time()
         counter = 0
         h = self.heuristic_time(start_stop, target_stop)
-        # Struktura: (f, counter, g, current_time, stop, current_line, path)
+        # Elementy: (f, counter, g, current_time, stop, current_line, path)
         heap = [(h, counter, 0, start_time, start_stop, None, [])]
         visited = dict()
 
@@ -69,23 +65,20 @@ class PathFinder:
                 comp_time = time.time() - start
                 return path, g, comp_time
 
-            for conn in self.graph.get_connections_from(stop, current_time):
-                wait = conn.departure_time - current_time
-                travel = conn.arrival_time - conn.departure_time
+            for conn, eff_dep, eff_arr in self.graph.get_connections_from(stop, current_time):
+                wait = eff_dep - current_time
+                travel = eff_arr - eff_dep
                 new_g = g + wait + travel
                 new_h = self.heuristic_time(conn.end_stop, target_stop)
                 counter += 1
-                heapq.heappush(heap, (new_g + new_h, counter, new_g, conn.arrival_time, conn.end_stop, conn.line, path + [conn]))
+                heapq.heappush(heap, (new_g + new_h, counter, new_g, eff_arr, conn.end_stop, conn.line, path + [conn]))
         comp_time = time.time() - start
         return None, float('inf'), comp_time
 
     def a_star_transfers(self, start_stop: str, target_stop: str, start_time: int):
-        """
-        Wyszukiwanie A* wg minimalizacji liczby przesiadek.
-        Pierwszy kurs nie liczy się jako przesiadka – heurystyka ustawiona na 0.
-        """
         start = time.time()
         counter = 0
+        # Elementy: (f, counter, g, current_time, stop, current_line, path)
         heap = [(0, counter, 0, start_time, start_stop, None, [])]
         visited = dict()
 
@@ -98,24 +91,31 @@ class PathFinder:
                 comp_time = time.time() - start
                 return path, g, comp_time
 
-            for conn in self.graph.get_connections_from(stop, current_time):
-                transfer_cost = 0
-                if current_line is not None and conn.line != current_line:
-                    transfer_cost = 1
+            for conn, eff_dep, eff_arr in self.graph.get_connections_from(stop, current_time):
+                wait = eff_dep - current_time
+                # Jeśli jedziemy już jakąś linią...
+                if current_line is not None:
+                    # Jeżeli to ta sama linia, ale czas oczekiwania przekracza próg,
+                    # uznajemy to za przesiadkę
+                    if conn.line == current_line:
+                        transfer_cost = 1 if wait > self.transfer_threshold else 0
+                    else:
+                        transfer_cost = 1
+                else:
+                    transfer_cost = 0
                 new_g = g + transfer_cost
                 counter += 1
-                heapq.heappush(heap, (new_g, counter, new_g, conn.arrival_time, conn.end_stop, conn.line, path + [conn]))
+                heapq.heappush(heap, (new_g, counter, new_g, eff_arr, conn.end_stop, conn.line, path + [conn]))
         comp_time = time.time() - start
         return None, float('inf'), comp_time
 
     def optimized_a_star(self, start_stop: str, target_stop: str, start_time: int, mode='time'):
-        """
-        Ulepszona wersja A* wykorzystująca odpowiednią heurystykę zależnie od trybu.
-        Parametr mode: 'time' lub 'transfers'.
-        """
         start = time.time()
         counter = 0
-        h = self.heuristic_time(start_stop, target_stop) if mode == 'time' else 0
+        if mode in ('t', 'time'):
+            h = self.heuristic_time(start_stop, target_stop)
+        else:
+            h = 0
         heap = [(h, counter, 0, start_time, start_stop, None, [])]
         visited = dict()
 
@@ -129,20 +129,25 @@ class PathFinder:
                 comp_time = time.time() - start
                 return path, g, comp_time
 
-            for conn in self.graph.get_connections_from(stop, current_time):
+            for conn, eff_dep, eff_arr in self.graph.get_connections_from(stop, current_time):
                 counter += 1
-                if mode == 'time':
-                    wait = conn.departure_time - current_time
-                    travel = conn.arrival_time - conn.departure_time
+                if mode in ('t', 'time'):
+                    wait = eff_dep - current_time
+                    travel = eff_arr - eff_dep
                     new_g = g + wait + travel
                     new_h = self.heuristic_time(conn.end_stop, target_stop)
                 else:
-                    transfer_cost = 0
-                    if current_line is not None and conn.line != current_line:
-                        transfer_cost = 1
-                    new_g = g + transfer_cost
+                    wait = eff_dep - current_time
+                    if current_line is not None:
+                        if conn.line == current_line:
+                            new_transfer = 1 if wait > self.transfer_threshold else 0
+                        else:
+                            new_transfer = 1
+                    else:
+                        new_transfer = 0
+                    new_g = g + new_transfer
                     new_h = 0
                 new_f = new_g + new_h
-                heapq.heappush(heap, (new_f, counter, new_g, conn.arrival_time, conn.end_stop, conn.line, path + [conn]))
+                heapq.heappush(heap, (new_f, counter, new_g, eff_arr, conn.end_stop, conn.line, path + [conn]))
         comp_time = time.time() - start
         return None, float('inf'), comp_time

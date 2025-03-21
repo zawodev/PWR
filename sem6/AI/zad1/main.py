@@ -9,14 +9,14 @@ def main():
     # Ścieżka do pliku CSV – zmodyfikuj według potrzeb
     csv_path = "data/connection_graph.csv"
     graph = TransitGraph(csv_path)
-    pathfinder = PathFinder(graph)
+    # Możemy podać próg dla przesiadki np. 300 sekund (5 minut)
+    pathfinder = PathFinder(graph, transfer_threshold=300)
 
     # Wczytanie 4 linii wejścia
     input_lines = []
     for _ in range(4):
         input_lines.append(input().strip())
 
-    # Sprawdzenie czy dotyczy zadania 2 (lista przystanków oddzielona średnikiem)
     if ";" in input_lines[1]:
         # Zadanie 2
         start_stop = input_lines[0]
@@ -26,7 +26,6 @@ def main():
         tabu_solver = TabuSearchTSP(graph, pathfinder, mode=criterion)
         best_solution, tsp_cost, tsp_comp_time, nodes, cost_matrix = tabu_solver.solve(start_stop, stops_to_visit, start_time)
 
-        # Wyznaczanie szczegółowego harmonogramu – sumujemy koszty i czasy obliczeń legów trasy
         full_path = []
         total_leg_cost = 0
         total_leg_comp_time = 0
@@ -50,7 +49,7 @@ def main():
             full_path.extend(path)
             total_leg_cost += leg_cost
             total_leg_comp_time += leg_comp_time
-            current_time = path[-1].arrival_time  # aktualizacja start_time dla kolejnego legu
+            current_time = path[-1].arrival_time  # aktualizacja czasu na koniec legu
 
         print_schedule(full_path)
         sys.stderr.write(f"Łączny koszt trasy: {total_leg_cost}\n")

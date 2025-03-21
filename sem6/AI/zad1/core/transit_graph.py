@@ -1,7 +1,6 @@
 import csv
 from collections import defaultdict
 from utils.time_utils import time_to_seconds
-from utils.geometry import haversine
 
 class Connection:
     def __init__(self, row):
@@ -34,15 +33,33 @@ class TransitGraph:
             for row in reader:
                 conn = Connection(row)
                 self.connections_by_stop[conn.start_stop].append(conn)
-                # Zapis współrzędnych – zakładamy stałość lokalizacji
+                # Zapisujemy współrzędne – zakładamy stałość lokalizacji
                 self.stops_coords[conn.start_stop] = (conn.start_stop_lat, conn.start_stop_lon)
                 self.stops_coords[conn.end_stop] = (conn.end_stop_lat, conn.end_stop_lon)
-        # Sortujemy połączenia wg czasu odjazdu
+        # Sortujemy połączenia wg oryginalnego czasu odjazdu
         for stop in self.connections_by_stop:
             self.connections_by_stop[stop].sort(key=lambda c: c.departure_time)
 
     def get_connections_from(self, stop: str, current_time: int):
         """
-        Zwraca listę połączeń z danego przystanku, których odjazd nie jest wcześniejszy niż current_time.
+        Zwraca listę połączeń z danego przystanku, 
+        przeliczając efektywny czas odjazdu/ przyjazdu z uwzględnieniem, że rozkład się powtarza codziennie.
+        Jeśli oryginalny czas połączenia (departure_time) jest mniejszy niż (current_time % 86400),
+        to traktujemy to jako połączenie następnego dnia (dodajemy 86400 sekund).
         """
-        return [c for c in self.connections_by_stop.get(stop, []) if c.departure_time >= current_time]
+        result = []
+        for conn in self.connections_by_stop.get(stop, []):
+            eff_dep = conn.departure_time
+            eff_arr = conn.arrival_time
+            # Przeliczenie modulo bieżącego dnia
+            current_day_time = current_time % 86400
+            if eff_dep < current_day_time:
+                eff_dep += 86400
+                eff_arr += 86400
+            # Jeśli efektywny czas odjazdu jest nadal mniejszy niż current_time, to dodajemy kolejny dzień
+            if eff_dep < current_time:
+                eff_dep += 86400
+                eff_arr += 86400
+            if eff_dep >= current_time:
+                result.append((conn, eff_dep, eff_arr))
+        return result
