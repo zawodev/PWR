@@ -3,9 +3,9 @@
 -- uważaj na błąd: Conversion failed when converting the nvarchar value 'M' to data type int.
 
 SELECT * FROM (
-                  SELECT
-                      CASE
-                          WHEN MONTH(S.OrderDate) = 1 THEN 'January'
+        SELECT
+          CASE
+            WHEN MONTH(S.OrderDate) = 1 THEN 'January'
             WHEN MONTH(S.OrderDate) = 2 THEN 'February'
             WHEN MONTH(S.OrderDate) = 3 THEN 'March'
             WHEN MONTH(S.OrderDate) = 4 THEN 'April'
