@@ -148,7 +148,7 @@ FROM
             SUM(CASE WHEN SOH.TotalDue > 2.5 * @Srednia THEN 1 ELSE 0 END) AS duzeZamowienia
         FROM Sales.Customer C
                  JOIN Sales.SalesOrderHeader SOH ON C.CustomerID = SOH.CustomerID
-        WHERE C.PersonID IS NOT NULL -- pomijamy firmy które nie mają danych osobowych w tabeli Person.Person
+        WHERE C.PersonID IS NOT NULL
         GROUP BY C.CustomerID
     ) AS T
         JOIN Sales.Customer C ON T.CustomerID = C.CustomerID
