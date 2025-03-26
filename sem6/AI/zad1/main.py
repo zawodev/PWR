@@ -4,15 +4,18 @@ from core.pathfinder import PathFinder
 from core.tabu_search_tsp import TabuSearchTSP
 from utils.time_utils import time_to_seconds
 from utils.schedule import print_schedule
+from logger import Logger
 
 def main():
-    # Ścieżka do pliku CSV – zmodyfikuj według potrzeb
+    
     csv_path = "data/connection_graph.csv"
-    graph = TransitGraph(csv_path)
-    # Możemy podać próg dla przesiadki np. 300 sekund (5 minut)
-    pathfinder = PathFinder(graph, transfer_threshold=300)
+    
+    logger = Logger()
+    graph = TransitGraph(csv_path, logger)
+    pathfinder = PathFinder(graph, logger, transfer_threshold=300)
+    
+    logger.log("Wpisz dane wejściowe: (1) start_stop, (2) target_stops, (3) criterion, (4) start_time")
 
-    # Wczytanie 4 linii wejścia
     input_lines = []
     for _ in range(4):
         input_lines.append(input().strip())
@@ -23,9 +26,9 @@ def main():
         stops_to_visit = [s.strip() for s in input_lines[1].split(";") if s.strip()]
         criterion = input_lines[2].lower()  # 't' lub 'p'
         start_time = time_to_seconds(input_lines[3])
-        tabu_solver = TabuSearchTSP(graph, pathfinder, mode=criterion)
+        tabu_solver = TabuSearchTSP(graph, logger, pathfinder, mode=criterion)
         best_solution, tsp_cost, tsp_comp_time, nodes, cost_matrix = tabu_solver.solve(start_stop, stops_to_visit, start_time)
-
+        
         full_path = []
         total_leg_cost = 0
         total_leg_comp_time = 0
@@ -36,16 +39,16 @@ def main():
             to_index = best_solution[(i + 1) % num_legs]
             frm = nodes[from_index]
             to = nodes[to_index]
+            
             if criterion in ('t', 'time'):
-                path, leg_cost, leg_comp_time = pathfinder.a_star_time(frm, to, current_time)
-            elif criterion in ('p', 'transfers'):
-                path, leg_cost, leg_comp_time = pathfinder.a_star_transfers(frm, to, current_time)
+                path, leg_cost, leg_comp_time = pathfinder.optimized_a_star(frm, to, current_time, mode='time')
             else:
-                sys.stdout.write("Nieznane kryterium.\n")
-                return
+                path, leg_cost, leg_comp_time = pathfinder.optimized_a_star(frm, to, current_time, mode='transfers')
+
             if path is None:
                 sys.stdout.write(f"Nie znaleziono połączenia pomiędzy {frm} a {to}\n")
                 return
+            
             full_path.extend(path)
             total_leg_cost += leg_cost
             total_leg_comp_time += leg_comp_time

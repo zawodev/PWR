@@ -1,22 +1,23 @@
 import time
 from core.pathfinder import PathFinder
+from logger import Logger
 
 class TabuSearchTSP:
-    def __init__(self, graph, pathfinder: PathFinder, mode='t'):
+    def __init__(self, graph, logger: Logger, pathfinder: PathFinder, mode='t'):
         """
         mode: 't' lub 'time' – minimalizacja czasu,
               'p' lub 'transfers' – minimalizacja liczby przesiadek.
         """
         self.graph = graph
+        self.logger = logger
         self.pathfinder = pathfinder
         self.mode = mode.lower()
 
     def compute_cost_between(self, start, end, start_time):
-        """Wyznacza koszt przejazdu pomiędzy dwoma przystankami."""
         if self.mode in ('t', 'time'):
-            _, cost, _ = self.pathfinder.a_star_time(start, end, start_time)
+            _, cost, _ = self.pathfinder.optimized_a_star(start, end, start_time, mode='time')
         elif self.mode in ('p', 'transfers'):
-            _, cost, _ = self.pathfinder.a_star_transfers(start, end, start_time)
+            _, cost, _ = self.pathfinder.optimized_a_star(start, end, start_time, mode='transfers')
         else:
             raise ValueError("Nieznany tryb optymalizacji")
         return cost
@@ -26,6 +27,7 @@ class TabuSearchTSP:
         Buduje macierz kosztów między zadanymi przystankami.
         Zakładamy, że opóźnienia (czasy oczekiwania) są pomijalne przy obliczaniu heurystyki TSP.
         """
+        self.logger.log("Budowanie macierzy kosztów")
         n = len(stops)
         cost_matrix = [[0] * n for _ in range(n)]
         for i in range(n):
@@ -34,6 +36,7 @@ class TabuSearchTSP:
                     cost_matrix[i][j] = 0
                 else:
                     cost_matrix[i][j] = self.compute_cost_between(stops[i], stops[j], start_time)
+        self.logger.log("Macierz kosztów zbudowana")
         return cost_matrix
 
     def tour_cost(self, solution, cost_matrix):
@@ -61,6 +64,7 @@ class TabuSearchTSP:
         Rozwiązuje problem TSP z zadanymi przystankami używając Tabu Search.
         Trasa: A -> lista przystanków -> A.
         """
+        self.logger.log("Rozpoczęcie rozwiązania problemu TSP")
         nodes = [start_stop] + stops_to_visit
         n = len(nodes)
         cost_matrix = self.build_cost_matrix(nodes, start_time)
@@ -97,4 +101,5 @@ class TabuSearchTSP:
                 iter_no_improve = 0
             iter_total += 1
         comp_time = time.time() - start_iter
+        self.logger.log("Problem TSP rozwiązany")
         return best_solution, best_cost, comp_time, nodes, cost_matrix
