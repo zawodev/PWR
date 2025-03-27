@@ -2,10 +2,6 @@ import csv
 import matplotlib.pyplot as plt
 
 def load_stops(csv_path, max_name_length=8):
-    """
-    Wczytuje plik CSV i zwraca słownik: nazwa przystanku -> (lat, lon).
-    Uwzględnia tylko przystanki, których nazwa ma max_name_length lub mniej znaków.
-    """
     stops = {}
     with open(csv_path, newline='', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
@@ -20,9 +16,6 @@ def load_stops(csv_path, max_name_length=8):
     return stops
 
 def plot_stops(stops):
-    """
-    Rysuje punkty reprezentujące przystanki i anotu, podając ich nazwy.
-    """
     lats = []
     lons = []
     names = []
@@ -45,7 +38,7 @@ def plot_stops(stops):
     plt.show()
 
 def main():
-    csv_path = "connection_graph.csv"
+    csv_path = "data/connection_graph.csv"
     stops = load_stops(csv_path)
     plot_stops(stops)
 
