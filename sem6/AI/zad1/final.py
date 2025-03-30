@@ -13,7 +13,7 @@ from collections import defaultdict
 
 # TRUE -> fast, but not always optimal
 # FALSE -> slow, but (i think) always optimal
-USE_FAST_CONNECTION_SEARCH = True
+USE_FAST_CONNECTION_SEARCH = False
 
 # ================================
 # utils
@@ -47,6 +47,10 @@ def seconds_to_time(seconds: int) -> str:
     return f"{h:02d}:{m:02d}:{s:02d}"
 
 def print_schedule(path):
+
+    # for conn in path:
+    #    print(conn)
+    
     if not path:
         return
     schedule = []
