@@ -166,6 +166,30 @@ END ranking
 FROM ProductsSales
 ORDER BY AvgSold DESC;
 
+-- zad 3 - modyfikacja:
+-- Dla 10 najlepszych produktów przygotuj ranking prezentujący narastające kwoty w kolejnych latach (2011-2014):
+-- kolumny: Nazwa produktu, Rok, Narastająca kwota (powinno być łącznie 40 rekordów - dla każdego produktu po 4 lata)
+-- (wykorzystaj funkcje okienkowe)
+-- nie działa to jak coś
+-- powinno być top10 products by year, a pozniej dodac 4 lata dla kazdego z nich
+
+WITH Top10ProductsByYear AS (
+    SELECT TOP 10
+        P.Name AS Product,
+        YEAR(SOH.OrderDate) AS Year,
+        SUM(SOD.LineTotal) AS Total
+    FROM Sales.SalesOrderHeader SOH
+        JOIN Sales.SalesOrderDetail SOD ON SOH.SalesOrderID = SOD.SalesOrderID
+        JOIN Production.Product P ON SOD.ProductID = P.ProductID
+    GROUP BY P.Name, YEAR(SOH.OrderDate)
+    ORDER BY SUM(SOD.LineTotal) DESC
+)
+SELECT
+    Product,
+    Year,
+    SUM(Total) OVER (PARTITION BY Product ORDER BY Year ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS RunningTotal
+FROM Top10ProductsByYear
+ORDER BY Product, Year;
 
 
 
