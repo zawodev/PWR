@@ -167,6 +167,9 @@ FROM ProductsSales
 ORDER BY AvgSold DESC;
 
 
+
+
+
 -- wnioski:
 -- Wykorzystanie funkcji grupujących (rollup, cube, grouping sets) okazało się przydatne do uzyskania dodatkowych informacji 
 -- o danych, takich jak sumy całkowite, sumy częściowe czy rankingu i podsumowania na różnych poziomach szczegółow w relatywnie

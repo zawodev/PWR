@@ -1,0 +1,43 @@
+localhost zmien na nazwe z sql server
+analiysis services visual studio
+
+new data source 
+
+konto z prawami administratora Microsoft windows
+i passy do tego konta Microsoft
+nowy user windows z admina opcjami (i uruchom visuala jako administrator)
+
+(dbadmin optional) public, sysadmin -> sa -> services
+
+jak uruchomisz jako admin visual to możesz inherit dac i pojdzie
+
+properties deployment localhost podmien na nazwe database sql
+
+i tak dla wszystkich 6ciu
+
+
+
+dla cubes 3
+1) ostatnie  (miara data source tables) 4ta pozycja
+2) Order Qty Sales Amount (Unit Price, Unit Price Disqounat)
+3) Dimensions (tylko Dimy wziąć, Fact odklikać)
+4) Finish (Fact żółte wymiary niebieskie)
+
+sprawdz czy działa:
+prawy + process + YES + (jak czerwony X to źle bardzo i zmien credentials) + Run (jak zielony)
+
+
+jak coś bardzo nie działa -> projekt od nowa i tyle
+
+dim date dim:
+przeciągamy co chcemy analizować do na maxa lewo
+
+
+analizę in excel button żeby wejść do excela
+
+
+
+-----
+DO PROJEKTU
+
+10000 co najmniej rekordów, 5 wymiarów co najmniej (tabeli faktow)
