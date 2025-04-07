@@ -173,23 +173,49 @@ ORDER BY AvgSold DESC;
 -- nie działa to jak coś
 -- powinno być top10 products by year, a pozniej dodac 4 lata dla kazdego z nich
 
-WITH Top10ProductsByYear AS (
-    SELECT TOP 10
-        P.Name AS Product,
-        YEAR(SOH.OrderDate) AS Year,
-        SUM(SOD.LineTotal) AS Total
-    FROM Sales.SalesOrderHeader SOH
-        JOIN Sales.SalesOrderDetail SOD ON SOH.SalesOrderID = SOD.SalesOrderID
-        JOIN Production.Product P ON SOD.ProductID = P.ProductID
-    GROUP BY P.Name, YEAR(SOH.OrderDate)
-    ORDER BY SUM(SOD.LineTotal) DESC
+WITH Years AS (
+    SELECT 2011 AS SalesYear UNION ALL
+    SELECT 2012 UNION ALL
+    SELECT 2013 UNION ALL
+    SELECT 2014
+),
+
+ProductSales AS (
+    SELECT 
+        p.ProductID, 
+        YEAR(soh.OrderDate) AS SalesYear, 
+        SUM(sod.LineTotal) AS SalesAmount
+    FROM Sales.SalesOrderHeader soh
+        JOIN Sales.SalesOrderDetail sod ON soh.SalesOrderID = sod.SalesOrderID
+        JOIN Production.Product p ON p.ProductID = sod.ProductID
+    WHERE YEAR(soh.OrderDate) BETWEEN 2011 AND 2014
+    GROUP BY p.ProductID, YEAR(soh.OrderDate)
+),
+
+Top10Products AS (
+    SELECT 
+        TOP 10 ps.ProductID, 
+        p.Name
+    FROM ProductSales ps
+        JOIN Production.Product p ON p.ProductID = ps.ProductID
+    GROUP BY ps.ProductID, p.Name
+    ORDER BY SUM(ps.SalesAmount) DESC
 )
+
 SELECT
-    Product,
-    Year,
-    SUM(Total) OVER (PARTITION BY Product ORDER BY Year ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS RunningTotal
-FROM Top10ProductsByYear
-ORDER BY Product, Year;
+    tp.Name AS ProductName,
+    y.SalesYear,
+    ISNULL(ps.SalesAmount, 0) AS SalesAmount,
+    SUM(ISNULL(ps.SalesAmount, 0)) OVER (
+        PARTITION BY tp.ProductID 
+        ORDER BY y.SalesYear
+    ) AS CumulativeSales
+FROM Top10Products tp
+    CROSS JOIN Years y
+    LEFT JOIN ProductSales ps ON tp.ProductID = ps.ProductID AND y.SalesYear = ps.SalesYear
+ORDER BY tp.Name, y.SalesYear;
+
+
 
 
 
