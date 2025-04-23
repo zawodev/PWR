@@ -41,3 +41,13 @@ analizę in excel button żeby wejść do excela
 DO PROJEKTU
 
 10000 co najmniej rekordów, 5 wymiarów co najmniej (tabeli faktow)
+(dane w stylu transakcyjnym niekoniecznie transakcyjne)
+
+
+
+
+
+
+266 rekordów powinno być
+
+głónwie sprawdzane będzie 5 zadanie ile razy wyciągamy rok miesiąć dzień
