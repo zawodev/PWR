@@ -50,6 +50,20 @@ CREATE TABLE Stepaniuk.DIM_SALESPERSON (
 
 CREATE TABLE Stepaniuk.FACT_SALES (
     FactID INT IDENTITY(1,1) PRIMARY KEY,
+    ProductID INT,
+    CustomerID INT,
+    SalesPersonID INT,
+    OrderDate INT NOT NULL,
+    ShipDate INT,
+    OrderQty INT NOT NULL,
+    UnitPrice MONEY NOT NULL,
+    UnitPriceDiscount MONEY NOT NULL,
+    LineTotal AS (ISNULL(OrderQty, 0) * ISNULL(UnitPrice, 0) * (1 - ISNULL(UnitPriceDiscount, 0)))
+);
+
+-- old lab4 facts
+CREATE TABLE Stepaniuk.FACT_SALES (
+    FactID INT IDENTITY(1,1) PRIMARY KEY,
     ProductID INT FOREIGN KEY REFERENCES Stepaniuk.DIM_PRODUCT(ProductID),
     CustomerID INT FOREIGN KEY REFERENCES Stepaniuk.DIM_CUSTOMER(CustomerID),
     SalesPersonID INT FOREIGN KEY REFERENCES Stepaniuk.DIM_SALESPERSON(SalesPersonID),
@@ -70,7 +84,6 @@ CREATE TABLE Stepaniuk.FACT_SALES (
 -- Uwaga 2. Do tabeli FACT_SALES należy skopiować również transakcje, które nie mają
 -- sprzedawcy.
 
--- DIM_CUSTOMER ------
 
 WITH data AS (
     SELECT DISTINCT
@@ -92,9 +105,7 @@ WITH data AS (
     WHERE at.Name = 'Home' OR at.Name IS NULL
 )
 INSERT INTO Stepaniuk.DIM_CUSTOMER
-SELECT * FROM Stepaniuk.DIM_CUSTOMER;
-
--- DIM_PRODUCT ------
+SELECT * FROM data;
 
 WITH data AS (
     SELECT DISTINCT
@@ -124,8 +135,6 @@ WITH data AS (
 INSERT INTO Stepaniuk.DIM_PRODUCT
 SELECT * FROM data;
 
--- DIM_SALESPERSON ------
-
 WITH data AS (
     SELECT DISTINCT
         sp.BusinessEntityID,
@@ -143,11 +152,6 @@ WITH data AS (
 INSERT INTO Stepaniuk.DIM_SALESPERSON
 SELECT * FROM data;
 
-DELETE FROM Stepaniuk.DIM_SALESPERSON;
-SELECT * from Stepaniuk.DIM_SALESPERSON;
-
--- FACT_SALES ------ 
-
 WITH data AS (
     SELECT
         sod.ProductID,
@@ -164,13 +168,20 @@ WITH data AS (
 INSERT INTO Stepaniuk.FACT_SALES
 SELECT * FROM data;
 
-SELECT * FROM Stepaniuk.FACT_SALES;
-DELETE FROM Stepaniuk.FACT_SALES;
-
 -- Zad. 4. Więzy integralności
 -- 1. Dodać integralność referencyjną i klucze główne do tabel już zdefiniowanych.
--- 2. Przygotować instrukcję INSERT INTO, która sprawdzi poprawność integralności referencyjnej oraz klucze główne.
 
+ALTER TABLE Stepaniuk.FACT_SALES ADD 
+CONSTRAINT FK_ProductID FOREIGN KEY (ProductID) REFERENCES Stepaniuk.DIM_PRODUCT(ProductID),
+CONSTRAINT FK_CustomerID FOREIGN KEY (CustomerID) REFERENCES Stepaniuk.DIM_CUSTOMER(CustomerID),
+CONSTRAINT FK_SalesPersonID FOREIGN KEY (SalesPersonID) REFERENCES Stepaniuk.DIM_SALESPERSON(SalesPersonID),
+CONSTRAINT FK_OrderDate FOREIGN KEY (OrderDate) REFERENCES Stepaniuk.DIM_TIME(PK_TIME),
+CONSTRAINT FK_ShipDate FOREIGN KEY (ShipDate) REFERENCES Stepaniuk.DIM_TIME(PK_TIME);
+
+
+    
+    
+-- 2. Przygotować instrukcję INSERT INTO, która sprawdzi poprawność integralności referencyjnej oraz klucze główne.
 -- 2a) Próba dodania rekordu z nieistniejącym ID klienta
 INSERT INTO Stepaniuk.FACT_SALES (ProductID, CustomerID, SalesPersonID, OrderDate, ShipDate, OrderQty, UnitPrice, UnitPriceDiscount)
 VALUES (1, 999999, 1, 20230101, 20230102, 10, 100.00, 0.10);
