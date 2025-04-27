@@ -1,43 +1,23 @@
 # src/infrastructure/event_bus/rabbitmq_consumer.py
-
-import pika
-import json
+import pika, json, logging
 from ...infrastructure.config import settings
 
+logger = logging.getLogger(__name__)
+
 def consume(routing_key: str, callback):
-    """
-    1) Subskrybuje jeden routing_key.
-    2) Wiąże exchange -> tymczasową kolejkę.
-    3) Na odebranie wiadomości wywołuje callback(body_dict).
-    """
     params = pika.URLParameters(settings.RABBITMQ_URL)
-    connection = pika.BlockingConnection(params)
-    channel = connection.channel()
+    conn = pika.BlockingConnection(params)            # :contentReference[oaicite:7]{index=7}
+    ch = conn.channel()
+    ch.exchange_declare(exchange=settings.RABBITMQ_EXCHANGE, exchange_type='topic', durable=True)
 
-    # Exchange typu topic
-    channel.exchange_declare(
-        exchange=settings.RABBITMQ_EXCHANGE,
-        exchange_type='topic',
-        durable=True
-    )  # :contentReference[oaicite:0]{index=0}
+    q = ch.queue_declare('', exclusive=True).method.queue
+    ch.queue_bind(exchange=settings.RABBITMQ_EXCHANGE, queue=q, routing_key=routing_key)
+    logger.info(f"[Consumer] Bound to '{routing_key}', waiting for messages...")
 
-    # Tymczasowa, unikatowa kolejka
-    result = channel.queue_declare('', exclusive=True)
-    queue_name = result.method.queue
+    def on_message(ch, method, props, body):
+        data = json.loads(body)
+        logger.info(f"[Consumer] Received '{method.routing_key}': {data}")
+        callback(data)
 
-    # Wiązanie routing key
-    channel.queue_bind(
-        exchange=settings.RABBITMQ_EXCHANGE,
-        queue=queue_name,
-        routing_key=routing_key
-    )
-
-    # Konsumpcja
-    channel.basic_consume(
-        queue=queue_name,
-        on_message_callback=lambda ch, method, props, body: callback(json.loads(body)),
-        auto_ack=True
-    )  # :contentReference[oaicite:1]{index=1}
-
-    print(f"[*] Consuming {routing_key}")
-    channel.start_consuming()
+    ch.basic_consume(queue=q, on_message_callback=on_message, auto_ack=True)
+    ch.start_consuming()

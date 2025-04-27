@@ -72,6 +72,7 @@ def start_services():
 
 if __name__ == "__main__":
     start_rabbitmq()
+    """
     print("🟢 RabbitMQ uruchomiony.")
 
     try:
@@ -95,4 +96,4 @@ if __name__ == "__main__":
             p.terminate()
         subprocess.run(["docker", "stop", "rabbitmq-test"])
         print("✔️ Wszystko zatrzymane.")
-    """
+    
