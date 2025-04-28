@@ -1,0 +1,12 @@
+dobrze przemyśleć wnioski z danych avg czy cos
+czasami visual od nowa projekt albo kopie robi bo partycje czasem za szybko jak klikniesz to się rozsyspie
+
+
+2-3 slajdy co faktem jakie są wymiary jakie miary co się da wyciągnąć z tych danych prezki zrobić na za 2 tygodnie\
+
+takie dane, do których na podstawie np, daty miejsca (zadbać o ziarnistość właściwą) żeby każdy mógł indywidualnie połączyć np, z danymi podgodowymi
+kaggle czy coś takiego istnieje
+dane które chcemy analizować, rzeczywiste wnioski nie generować nic
+
+każdy wymiar no wypadało by żeby ponad 5 atrybutów
+przy ETLu ma być czyszczenie danych i inna taka obróbka generalna żeby dostać normalną ilóść punktów (Fuzzy Lookup lub fuzzy grouping do literówek)

@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="25"
-  DTS:VersionGUID="{14B9E699-A9A0-44A0-A963-1C0C83DF0390}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{DB62F319-44B5-486C-A816-09A1A0E19A99}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -26,6 +26,18 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=ZAWO-LAPTOP;Initial Catalog=AdventureWorks2022;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{1F3B350E-27CF-4C1B-BF20-963A22953A35}ZAWO-LAPTOP.AdventureWorks2022;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ZAWO-LAPTOP.AdventureWorks2022 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7C490B78-A8AA-4B56-9ED2-B5982F16C576}"
+      DTS:ObjectName="ZAWO-LAPTOP.AdventureWorks2022 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ZAWO-LAPTOP;Initial Catalog=AdventureWorks2022;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{7C490B78-A8AA-4B56-9ED2-B5982F16C576}ZAWO-LAPTOP.AdventureWorks2022 1;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -223,7 +235,8 @@
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
-            <SQLTask:SqlTaskData xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{1F3B350E-27CF-4C1B-BF20-963A22953A35}" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -242,25 +255,25 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="121.6,41.6"
-          Id="Package\Delete a)"
-          TopLeft="90.5000001809427,47.5588234925456" />
-        <NodeLayout
           Size="176,41.6"
           Id="Package\Create b)"
           TopLeft="91.2142858328869,123.441176393504" />
+        <NodeLayout
+          Size="121.6,41.6"
+          Id="Package\Delete a)"
+          TopLeft="90.5000001809427,47.5588234925456" />
         <NodeLayout
           Size="175.2,41.6"
           Id="Package\Insert c)"
           TopLeft="93.5714287706174,209.529411581045" />
         <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\References d)"
-          TopLeft="97.1428573496487,294.411764447819" />
-        <NodeLayout
           Size="173.6,41.6"
           Id="Package\Print f)"
           TopLeft="92.1428573390051,374.517646757191" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\References d)"
+          TopLeft="97.1428573496487,294.411764447819" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="178.857143006915,89.1588234925456">

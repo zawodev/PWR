@@ -1,0 +1,2 @@
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+raz wpisać bo to zmienia ustawienia powershella
