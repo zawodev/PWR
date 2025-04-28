@@ -1,38 +1,33 @@
+# payment-service/src/infrastructure/database/payment_repository.py
+
 import logging
-from sqlalchemy import create_engine, text
-from sqlalchemy.orm import sessionmaker
-from ...infrastructure.config import settings
+from uuid import UUID
+from sqlalchemy.orm import Session
+from ...infrastructure.database.session import SessionLocal
+from ...infrastructure.database.models import Payment as ORMPayment
+from ...domain.entities.payment import Payment
 
 logger = logging.getLogger(__name__)
 
-# 1) Połączenie oraz utworzenie tabeli payments
-engine = create_engine(settings.DATABASE_URL, echo=False)  # :contentReference[oaicite:0]{index=0}
-with engine.begin() as conn:
-    conn.execute(text("""
-      CREATE TABLE IF NOT EXISTS payments (
-          reservation_id TEXT PRIMARY KEY,
-          succeeded INTEGER NOT NULL,
-          amount INTEGER,
-          failure_reason TEXT
-      )
-"""))  # :contentReference[oaicite:1]{index=1}
-
-SessionLocal = sessionmaker(bind=engine)
-
 class PaymentRepository:
     def __init__(self):
-        self.session = SessionLocal()
+        self.session: Session = SessionLocal()
 
-    def add(self, reservation_id: str, succeeded: bool, amount: int, failure_reason: str):
-        logger.info(f"[Payment] Saving payment: {reservation_id}, succeeded={succeeded}, amount={amount}, reason={failure_reason}")  # :contentReference[oaicite:2]{index=2}
-        self.session.execute(
-            text("INSERT OR REPLACE INTO payments (reservation_id, succeeded, amount, failure_reason) "
-                 "VALUES (:reservation_id, :succeeded, :amount, :failure_reason)"),
-            {
-                "reservation_id": reservation_id,
-                "succeeded": int(succeeded),
-                "amount": amount,
-                "failure_reason": failure_reason
-            }
+    def add(self, domain: Payment):
+        orm = ORMPayment(
+            payment_id=domain.payment_id,
+            booking_id=domain.booking_id,
+            amount=domain.amount,
+            currency=domain.currency,
+            status=domain.status,
+            failure_reason=domain.failure_reason,
+            initiated_at=domain.initiated_at.isoformat() if domain.initiated_at else "",
+            completed_at=domain.completed_at.isoformat() if domain.completed_at else ""
         )
-        self.session.commit()  # :contentReference[oaicite:3]{index=3}
+        logger.info(f"[Payment][DB] Inserting payment: {orm.__dict__}")
+        self.session.merge(orm)
+        self.session.commit()
+
+    def list_all(self):
+        logger.info("[Payment][DB] Querying all payments")
+        return self.session.query(ORMPayment).all()

@@ -1,33 +1,32 @@
+# notification-service/src/infrastructure/database/notification_repository.py
+
 import logging
-from sqlalchemy import create_engine, text
-from sqlalchemy.orm import sessionmaker
-from ...infrastructure.config import settings
-import json
+from uuid import UUID
+from sqlalchemy.orm import Session
+from ...infrastructure.database.session import SessionLocal
+from ...infrastructure.database.models import Notification as ORMNotification
+from ...domain.entities.notification import Notification
 
 logger = logging.getLogger(__name__)
 
-# 1) Połączenie i tabela notifications
-engine = create_engine(settings.DATABASE_URL, echo=False)  # :contentReference[oaicite:12]{index=12}
-with engine.begin() as conn:
-    conn.execute(text("""
-      CREATE TABLE IF NOT EXISTS notifications (
-       id INTEGER PRIMARY KEY AUTOINCREMENT,
-       event TEXT,
-       payload TEXT,
-       created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-      )
-      """))  # :contentReference[oaicite:13]{index=13}
-
-SessionLocal = sessionmaker(bind=engine)
-
 class NotificationRepository:
     def __init__(self):
-        self.session = SessionLocal()
+        self.session: Session = SessionLocal()
 
-    def add(self, event: str, payload: dict):
-        logger.info(f"[Notification] Saving notification: {event} – {payload}")  # :contentReference[oaicite:14]{index=14}
-        self.session.execute(
-            text("INSERT INTO notifications (event, payload) VALUES (:event, :payload)"),
-            {"event": event, "payload": json.dumps(payload)}
+    def add(self, domain: Notification):
+        orm = ORMNotification(
+            notification_id=domain.notification_id,
+            ticket_id=domain.ticket_id,
+            user_id=domain.user_id,
+            channel=domain.channel,
+            status=domain.status,
+            payload=domain.payload,
+            sent_at=domain.sent_at.isoformat() if domain.sent_at else ""
         )
-        self.session.commit()  # :contentReference[oaicite:15]{index=15}
+        logger.info(f"[Notification][DB] Inserting notification: {orm.__dict__}")
+        self.session.merge(orm)
+        self.session.commit()
+
+    def list_all(self):
+        logger.info("[Notification][DB] Querying all notifications")
+        return self.session.query(ORMNotification).all()

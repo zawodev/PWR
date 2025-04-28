@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from ..app.controllers.reservation_controller import router as reservation_router
+from ..app.controllers.booking_controller import router as reservation_router
 from ..infrastructure.logging_config import setup_logging
 from ..infrastructure.config import settings
 

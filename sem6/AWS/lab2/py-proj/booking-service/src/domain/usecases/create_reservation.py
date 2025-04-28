@@ -1,15 +1,16 @@
-from ...infrastructure.database.reservation_repository import ReservationRepository
+from ...infrastructure.database.booking_repository import BookingRepository
 from ...domain.entities.reservation import Reservation
 
 class CreateReservationUseCase:
     def __init__(self):
-        self.repo = ReservationRepository()
+        self.repo = BookingRepository()
 
-    def execute(self, data: dict):
-        # 1. Stworzenie encji
+    def execute(self, data: dict) -> Reservation:
         reservation = Reservation.create(
-            match_id=data["match_id"], user_id=data["user_id"]
+            user_id=data["userId"],
+            match_id=data["matchId"],
+            seats=data["seats"],
+            metadata=data.get("metadata", {})
         )
-        # 2. Zapis do bazy (Command)
         self.repo.add(reservation)
         return reservation

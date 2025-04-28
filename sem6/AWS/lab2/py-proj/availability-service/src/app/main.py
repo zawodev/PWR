@@ -1,45 +1,57 @@
+# availability-service/src/app/main.py
+
 import threading
+import logging
+
 from fastapi import FastAPI
 from ..infrastructure.logging_config import setup_logging
 from ..infrastructure.config import settings
 from ..infrastructure.event_bus.rabbitmq_consumer import consume
+from ..infrastructure.event_bus.rabbitmq_producer import producer
 from ..domain.events.reservation_created_event import ReservationCreatedEvent
 from ..domain.events.seat_allocated_event import SeatAllocatedEvent
 from ..domain.usecases.allocate_seat import AllocateSeatUseCase
-from ..infrastructure.event_bus.rabbitmq_producer import producer
-from ..infrastructure.database.availability_repository import SeatRepository
-import logging
+from ..infrastructure.database.seat_repository import SeatRepository
+from ..infrastructure.database.session import SessionLocal  # tworzy tabele
 
 setup_logging()
-app = FastAPI()
-last_event = {}
 logger = logging.getLogger(__name__)
+app = FastAPI(title="Availability Service")
 
 @app.on_event("startup")
 def startup():
-    # Teraz subskrybujemy reservations.created
     threading.Thread(
         target=consume,
-        args=(
-            ReservationCreatedEvent.NAME,  # routing key
-            handle_reservation_created      # callback
-        ),
+        args=(ReservationCreatedEvent.NAME, handle_reservation_created),
         daemon=True
     ).start()
+    logger.info(f"[Availability] Started consumer for '{ReservationCreatedEvent.NAME}'")
 
 def handle_reservation_created(body: dict):
-    logger.info(f"[Availability] Handling ReservationCreated: {body}")
+    logger.info(f"[Availability] Received '{ReservationCreatedEvent.NAME}': {body}")
     uc = AllocateSeatUseCase()
-    result = uc.execute(body)
-    event_key = SeatAllocatedEvent.NAME if result["allocated"] else SeatAllocatedEvent.UNAVAILABLE
-    logger.info(f"[Availability] Publishing '{event_key}': {result}")
-    producer.publish(routing_key=event_key, message=result)
+    result = uc.execute(body)  # SeatReservation
+
+    # Poprawka: używamy result.status, bo domenowa klasa ma pole status, nie allocated
+    if result.status == "RESERVED":
+        event_key = SeatAllocatedEvent.NAME
+    else:
+        event_key = SeatAllocatedEvent.UNAVAILABLE
+
+    event_body = result.to_dict()
+    logger.info(f"[Availability] Publishing '{event_key}': {event_body}")
+    producer.publish(routing_key=event_key, message=event_body)
+
+    # Zapis domenowego obiektu do bazy
     repo = SeatRepository()
-    repo.add(body["id"], result["allocated"], result.get("seat_number"))
-    last_event.update(result)
+    repo.add(result)
 
-@app.get("/status")
-def status():
-    return last_event
+@app.get("/seat_reservations")
+def list_reservations():
+    logger.info("[Availability][API] GET /seat_reservations")
+    items = SeatRepository().list_all()
+    return {"seat_reservations": [item.__dict__ for item in items]}
 
-
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("src.app.main:app", host="127.0.0.1", port=8001, log_level="info")

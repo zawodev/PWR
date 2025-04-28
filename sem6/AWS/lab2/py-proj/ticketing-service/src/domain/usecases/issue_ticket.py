@@ -1,11 +1,14 @@
-from uuid import uuid4
+# ticketing-service/src/domain/usecases/issue_ticket.py
+
+from ...domain.entities.ticket import Ticket
+from ...infrastructure.database.ticket_repository import TicketRepository
 
 class IssueTicketUseCase:
-    def execute(self, data: dict):
-        # generowanie prostego biletu
-        ticket_id = str(uuid4())
-        return {
-            "reservation_id": data["reservation_id"],
-            "ticket_id": ticket_id,
-            "issued_at": uuid4().hex  # np. timestamp lub inny identyfikator
-        }
+    def __init__(self):
+        self.repo = TicketRepository()
+
+    def execute(self, data: dict) -> Ticket:
+        qr_code = f"QR{data['bookingId'][:8]}{data['bookingId'][-8:]}"
+        ticket = Ticket.create(booking_id=data["bookingId"], qr_code=qr_code)
+        self.repo.add(ticket)
+        return ticket
