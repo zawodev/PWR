@@ -29,13 +29,11 @@ def startup():
 def handle_seat_allocated(body: dict):
     logger.info(f"[Payment] Received '{SeatAllocatedEvent.NAME}': {body}")
     uc = ProcessPaymentUseCase()
-    result = uc.execute(body)  # result to Payment
+    result = uc.execute(body)
 
-    # Zapis do bazy
     repo = PaymentRepository()
     repo.add(result)
 
-    # Wybór eventu
     event_key = (
         PaymentSucceededEvent.NAME if result.status == "SUCCEEDED"
         else PaymentFailedEvent.NAME

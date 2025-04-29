@@ -8,9 +8,6 @@ class SendNotificationUseCase:
         self.repo = NotificationRepository()
 
     def execute(self, data: dict, channel: str, status: str) -> Notification:
-        """
-        data = event payload; channel/status zależne od typu eventu
-        """
         notification = Notification.create(
             ticket_id=data.get("ticketId", data.get("bookingId", "")),
             user_id=data.get("userId", ""),

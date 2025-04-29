@@ -5,7 +5,7 @@ from fastapi import FastAPI
 from ..infrastructure.logging_config import setup_logging
 from ..infrastructure.config import settings
 from ..infrastructure.event_bus.rabbitmq_consumer import consume
-from ..domain.events.seat_allocated_event import SeatAllocatedEvent
+from ..domain.events.seat_unavailable_event import SeatUnavailableEvent
 from ..domain.events.payment_failed_event import PaymentFailedEvent
 from ..domain.events.ticket_issued_event import TicketIssuedEvent
 from ..domain.usecases.send_notification import SendNotificationUseCase
@@ -18,13 +18,12 @@ app = FastAPI(title="Notification Service")
 
 @app.on_event("startup")
 def startup():
-    # seats.unavailable → traktujemy jako PENDING notification
     threading.Thread(
         target=consume,
-        args=(SeatAllocatedEvent.UNAVAILABLE, handle_unavailable),
+        args=(SeatUnavailableEvent.NAME, handle_unavailable),
         daemon=True
     ).start()
-    logger.info(f"[Notification] Consumer for '{SeatAllocatedEvent.UNAVAILABLE}' started")
+    logger.info(f"[Notification] Consumer for '{SeatUnavailableEvent.NAME}' started")
 
     threading.Thread(
         target=consume,
@@ -41,20 +40,20 @@ def startup():
     logger.info(f"[Notification] Consumer for '{TicketIssuedEvent.NAME}' started")
 
 def handle_unavailable(body: dict):
-    logger.info(f"[Notification] Received '{SeatAllocatedEvent.UNAVAILABLE}': {body}")
+    logger.info(f"[Notification][UNAVAILABLE] Received '{SeatUnavailableEvent.NAME}': {body}")
     uc = SendNotificationUseCase()
     result = uc.execute(body, channel="SYSTEM", status="PENDING")
     producer_response = result.to_dict()
     logger.info(f"[Notification] Saved notification: {producer_response}")
 
 def handle_failed(body: dict):
-    logger.info(f"[Notification] Received '{PaymentFailedEvent.NAME}': {body}")
+    logger.info(f"[Notification][FAILED] Received '{PaymentFailedEvent.NAME}': {body}")
     uc = SendNotificationUseCase()
     result = uc.execute(body, channel="SYSTEM", status="PENDING")
     logger.info(f"[Notification] Saved notification: {result.to_dict()}")
 
 def handle_issued(body: dict):
-    logger.info(f"[Notification] Received '{TicketIssuedEvent.NAME}': {body}")
+    logger.info(f"[Notification][ISSUED] Received '{TicketIssuedEvent.NAME}': {body}")
     uc = SendNotificationUseCase()
     result = uc.execute(body, channel="EMAIL", status="SENT")
     logger.info(f"[Notification] Saved notification: {result.to_dict()}")

@@ -14,9 +14,9 @@ class BookingRepository:
     def add(self, reservation: Reservation):
         logger.info(f"[Booking][DB] Mapping Reservation → BookingORM for id={reservation.id}")
         booking = BookingORM(
-            booking_id=reservation.id,       # ← konwersja
-            user_id=reservation.user_id,     # ← konwersja
-            match_id=reservation.match_id,   # ← konwersja
+            booking_id=reservation.id,
+            user_id=reservation.user_id,
+            match_id=reservation.match_id,
             seats=reservation.seats,
             status=reservation.status,
             extra_metadata=reservation.metadata

@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 
 def consume(routing_key: str, callback):
     params = pika.URLParameters(settings.RABBITMQ_URL)
-    conn = pika.BlockingConnection(params)            # :contentReference[oaicite:7]{index=7}
+    conn = pika.BlockingConnection(params)
     ch = conn.channel()
     ch.exchange_declare(exchange=settings.RABBITMQ_EXCHANGE, exchange_type='topic', durable=True)
 

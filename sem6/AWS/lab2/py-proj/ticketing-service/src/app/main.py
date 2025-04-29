@@ -29,13 +29,11 @@ def startup():
 def handle_payment_succeeded(body: dict):
     logger.info(f"[Ticketing] Received '{PaymentSucceededEvent.NAME}': {body}")
     uc = IssueTicketUseCase()
-    result = uc.execute(body)  # result to Ticket
+    result = uc.execute(body)
 
-    # Zapis do bazy
     repo = TicketRepository()
     repo.add(result)
 
-    # Publikacja eventu
     event_body = result.to_dict()
     logger.info(f"[Ticketing] Publishing '{TicketIssuedEvent.NAME}': {event_body}")
     producer.publish(routing_key=TicketIssuedEvent.NAME, message=event_body)

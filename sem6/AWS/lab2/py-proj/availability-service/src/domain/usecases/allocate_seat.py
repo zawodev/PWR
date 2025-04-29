@@ -9,15 +9,20 @@ class AllocateSeatUseCase:
         self.repo = SeatRepository()
 
     def execute(self, data: dict) -> SeatReservation:
-        allocated = random.choice([True, True, True, False])
-        status = "RESERVED" if allocated else "RELEASED"
+        booking_id = data["bookingId"]
+        match_id   = data["matchId"]
+        seats_req  = data["seats"]
+
+        reserved = self.repo.list_reserved_seats(match_id)
+        conflict = any(s in reserved for s in seats_req)
+        status = "RESERVED" if not conflict else "RELEASED"
 
         domain = SeatReservation.create(
-            booking_id=data["bookingId"],
-            match_id=data["matchId"],
-            seats=data["seats"],
+            booking_id=booking_id,
+            match_id=match_id,
+            seats=seats_req,
             status=status
         )
-        # zapis domeny do DB
+
         self.repo.add(domain)
         return domain

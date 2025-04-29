@@ -1,0 +1,23 @@
+flowchart LR
+    User([Użytkownik]) 
+    Booking([booking-service])
+    Availability([availability-service])
+    Payment([payment-service])
+    Ticketing([ticketing-service])
+    Notification([notification-service])
+
+    User -->|POST /bookings| Booking
+
+    Booking -->|ReservationCreatedEvent| Availability
+
+    Availability -->|SeatAllocatedEvent| Payment
+    Availability -->|SeatUnavailableEvent| Notification
+
+    Payment -->|PaymentSucceededEvent| Ticketing
+    Payment -->|PaymentFailedEvent| Notification
+
+    Ticketing -->|TicketIssuedEvent| Notification
+    
+    Availability -.->|SeatAllocatedEvent| Notification
+    Payment -.->|PaymentSucceededEvent| Notification
+    Ticketing -.->|TicketIssuedEvent| Notification
