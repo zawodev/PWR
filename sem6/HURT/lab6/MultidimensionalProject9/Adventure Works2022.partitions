@@ -1,0 +1,105 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="7cab4992-2a1d-44ff-bc47-53dff5ca89c6" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Adventure Works2022</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>FACT SALES</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="50301888-8e10-498b-a13a-964beda37677">
+          <ID>FACT SALES</ID>
+          <Name>FACT SALES</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="103e5bdc-aae4-4381-8d28-15b7cc670706">
+            <DataSourceViewID>Adventure Works2022</DataSourceViewID>
+            <TableID>Stepaniuk_FACT_SALES</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>FACT SALES 1</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="2e06fccf-5657-43b0-b425-9a5443f11db0">
+          <ID>FACT SALES</ID>
+          <Name>FACT SALES</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="9ad5f4f0-c912-45c7-b8fb-d6e9a87cbbf6">
+            <DataSourceViewID>Adventure Works2022</DataSourceViewID>
+            <TableID>Stepaniuk_FACT_SALES</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>FACT SALES 2</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="40dc7a78-a39f-4256-9f74-5ce9b6dc475b">
+          <ID>FACT SALES</ID>
+          <Name>FACT SALES</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b422583e-1b40-4f27-843d-cc213ea4681a">
+            <DataSourceViewID>Adventure Works2022</DataSourceViewID>
+            <TableID>Stepaniuk_FACT_SALES</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>FACT SALES 3</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="bbee876d-1adb-4707-8841-392f66e6b609">
+          <ID>FACT SALES</ID>
+          <Name>FACT SALES</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="76d48d4b-030b-4120-af83-2eb191a6f5a0">
+            <DataSourceViewID>Adventure Works2022</DataSourceViewID>
+            <TableID>Stepaniuk_FACT_SALES</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>FACT SALES 4</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="0a67865c-afcc-4db6-ba28-37d36fb94321">
+          <ID>FACT SALES</ID>
+          <Name>FACT SALES</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="6601d5c6-e54c-4df1-a379-82e66dbc929d">
+            <DataSourceViewID>Adventure Works2022</DataSourceViewID>
+            <TableID>Stepaniuk_FACT_SALES</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

@@ -1,0 +1,928 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="46df50b1-2eb9-4d6a-ae4b-249d65e12bbd" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Adventure Works2022 1</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>FACT SALES</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="7b79893d-d2fa-43c2-ba82-312a151cc435">
+          <ID>FACT SALES 2011</ID>
+          <Name>FACT SALES 2011</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="a58f7d03-f226-4dd7-87d8-dcacc100d711">
+            <DataSourceViewID>Adventure Works2022 1</DataSourceViewID>
+            <TableID>Stepaniuk_FACT_SALES_2011</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <EstimatedRows>5716</EstimatedRows>
+          <AggregationDesignID>AggregationDesign</AggregationDesignID>
+        </Partition>
+        <Partition dwd:design-time-name="42a75308-3b52-41d2-85ee-e2bd261551b0">
+          <ID>FACT SALES 2012</ID>
+          <Name>FACT SALES 2012</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="ad4e06de-9620-4be0-8626-0925d7365b51">
+            <DataSourceViewID>Adventure Works2022 1</DataSourceViewID>
+            <TableID>Stepaniuk_FACT_SALES_2012</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <EstimatedRows>21689</EstimatedRows>
+          <AggregationDesignID>AggregationDesign 1</AggregationDesignID>
+        </Partition>
+        <Partition dwd:design-time-name="866c707d-be4b-4ca8-8c59-f85280eb254d">
+          <ID>FACT SALES 2013</ID>
+          <Name>FACT SALES 2013</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="77036ef8-de35-43cf-a770-0b97c4e30059">
+            <DataSourceViewID>Adventure Works2022 1</DataSourceViewID>
+            <TableID>Stepaniuk_FACT_SALES_2013</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <EstimatedRows>56573</EstimatedRows>
+          <AggregationDesignID>AggregationDesign 2</AggregationDesignID>
+        </Partition>
+        <Partition dwd:design-time-name="3fff8d78-d55d-4025-ae29-eee2eeb40353">
+          <ID>FACT SALES 2014</ID>
+          <Name>FACT SALES 2014</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="4ec3dd2e-b0c3-4eab-922a-0fe9bcfbf190">
+            <DataSourceViewID>Adventure Works2022 1</DataSourceViewID>
+            <TableID>Stepaniuk_FACT_SALES_2014</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <EstimatedRows>37339</EstimatedRows>
+          <AggregationDesignID>AggregationDesign 3</AggregationDesignID>
+        </Partition>
+      </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>AggregationDesign</ID>
+          <Name>AggregationDesign</Name>
+          <CreatedTimestamp>2025-05-02T17:38:52.206667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2025-05-02T17:38:52.206667Z</LastSchemaUpdate>
+          <EstimatedRows>5716</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Product ID</AttributeID>
+                  <EstimatedCount>504</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Customer ID</AttributeID>
+                  <EstimatedCount>19820</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Sales Person ID</AttributeID>
+                  <EstimatedCount>17</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Order Date</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PK TIME</AttributeID>
+                  <EstimatedCount>1134</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Ship Date</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PK TIME</AttributeID>
+                  <EstimatedCount>1134</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation 0</ID>
+              <Name>Aggregation 0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sales Person ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1</ID>
+              <Name>Aggregation 1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2</ID>
+              <Name>Aggregation 2</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Product ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3</ID>
+              <Name>Aggregation 3</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PK TIME</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 4</ID>
+              <Name>Aggregation 4</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PK TIME</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+        <AggregationDesign>
+          <ID>AggregationDesign 1</ID>
+          <Name>AggregationDesign 1</Name>
+          <CreatedTimestamp>2025-05-02T17:39:37.52Z</CreatedTimestamp>
+          <LastSchemaUpdate>2025-05-02T17:39:37.52Z</LastSchemaUpdate>
+          <EstimatedRows>21689</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Product ID</AttributeID>
+                  <EstimatedCount>504</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Customer ID</AttributeID>
+                  <EstimatedCount>19820</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Sales Person ID</AttributeID>
+                  <EstimatedCount>17</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Order Date</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PK TIME</AttributeID>
+                  <EstimatedCount>1134</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Ship Date</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PK TIME</AttributeID>
+                  <EstimatedCount>1134</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation 0</ID>
+              <Name>Aggregation 0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sales Person ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1</ID>
+              <Name>Aggregation 1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Product ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2</ID>
+              <Name>Aggregation 2</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PK TIME</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3</ID>
+              <Name>Aggregation 3</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PK TIME</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 4</ID>
+              <Name>Aggregation 4</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+        <AggregationDesign>
+          <ID>AggregationDesign 2</ID>
+          <Name>AggregationDesign 2</Name>
+          <CreatedTimestamp>2025-05-02T17:40:09.053333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2025-05-02T17:40:09.053333Z</LastSchemaUpdate>
+          <EstimatedRows>56573</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Product ID</AttributeID>
+                  <EstimatedCount>504</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Customer ID</AttributeID>
+                  <EstimatedCount>19820</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Sales Person ID</AttributeID>
+                  <EstimatedCount>17</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Order Date</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PK TIME</AttributeID>
+                  <EstimatedCount>1134</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Ship Date</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PK TIME</AttributeID>
+                  <EstimatedCount>1134</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation 0</ID>
+              <Name>Aggregation 0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sales Person ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1</ID>
+              <Name>Aggregation 1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2</ID>
+              <Name>Aggregation 2</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Product ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3</ID>
+              <Name>Aggregation 3</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PK TIME</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 4</ID>
+              <Name>Aggregation 4</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PK TIME</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 5</ID>
+              <Name>Aggregation 5</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Product ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sales Person ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 6</ID>
+              <Name>Aggregation 6</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sales Person ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PK TIME</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 7</ID>
+              <Name>Aggregation 7</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sales Person ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PK TIME</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+        <AggregationDesign>
+          <ID>AggregationDesign 3</ID>
+          <Name>AggregationDesign 3</Name>
+          <CreatedTimestamp>2025-05-02T17:40:28.763333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2025-05-02T17:40:28.763333Z</LastSchemaUpdate>
+          <EstimatedRows>37339</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Product ID</AttributeID>
+                  <EstimatedCount>504</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Customer ID</AttributeID>
+                  <EstimatedCount>19820</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Sales Person ID</AttributeID>
+                  <EstimatedCount>17</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Order Date</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PK TIME</AttributeID>
+                  <EstimatedCount>1134</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Ship Date</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PK TIME</AttributeID>
+                  <EstimatedCount>1134</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation 0</ID>
+              <Name>Aggregation 0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sales Person ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1</ID>
+              <Name>Aggregation 1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PK TIME</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2</ID>
+              <Name>Aggregation 2</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PK TIME</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3</ID>
+              <Name>Aggregation 3</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 4</ID>
+              <Name>Aggregation 4</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Product ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 5</ID>
+              <Name>Aggregation 5</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>DIM PRODUCT 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Product ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM CUSTOMER 1</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>DIM SALESPERSON 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Sales Person ID</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Order Date</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Ship Date</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+      </AggregationDesigns>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>
