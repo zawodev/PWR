@@ -8,3 +8,9 @@ docker-compose up -d
 docker ps
 docker logs -f booking-service
 docker-compose down
+
+//tym razem bez leaku hasla :P
+terraform plan -var="master_password=yourpassword"
+terraform apply -auto-approve -var="master_password=yourpassword" 
+terraform output rabbitmq_endpoint
+terraform destroy -auto-approve -var="master_password=yourpassword"

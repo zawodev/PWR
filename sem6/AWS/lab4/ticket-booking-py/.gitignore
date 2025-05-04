@@ -1,1 +1,44 @@
 **/.env
+
+# ----------------------------------------
+# Katalogi i pliki Terraform do wykluczenia
+# ----------------------------------------
+
+# Lokalny katalog z providerami i modułami
+**/.terraform/*  
+
+# Pliki stanu Terraform
+*.tfstate
+*.tfstate.*  
+
+# Lockfile z wersjami providerów – trackujemy go w repo, więc NIE ignorujemy:
+# .terraform.lock.hcl
+
+# Pliki planów Terraform
+*.tfplan*
+
+# Crash logi z lokalnych uruchomień
+crash.log
+crash.*.log  
+
+# Override’y lokalne
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json  
+
+# Pliki zmiennych, mogą zawierać wrażliwe dane
+*.tfvars      :contentReference[oaicite:0]{index=0}
+*.tfvars.json :contentReference[oaicite:1]{index=1}
+
+# Konfiguracje CLI
+.terraformrc
+terraform.rc  
+
+# ----------------------------------------
+# Pliki IDE / edytorów (opcjonalnie)
+# ----------------------------------------
+*.idea/
+*.vscode/
+*.swp
+*~
