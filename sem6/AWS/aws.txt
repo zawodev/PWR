@@ -1,2 +1,0 @@
-lab2
-w dockerze na aws ma być w chmurze wszystko

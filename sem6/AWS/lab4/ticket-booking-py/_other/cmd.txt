@@ -1,0 +1,10 @@
+cd booking-service
+docker build -t booking-service:latest .
+docker images | grep booking-service
+docker run -d --name booking-service --env-file ./.env -p 8000:8000 booking-service:latest
+
+cd ticket-booking-py
+docker-compose up -d
+docker ps
+docker logs -f booking-service
+docker-compose down
