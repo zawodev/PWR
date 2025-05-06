@@ -19,14 +19,14 @@ provider "aws" {
   region = var.aws_region
 }
 
-# Przyjęcie lub utworzenie domyślnej VPC
+# tworzenie domyślnego VPC
 resource "aws_default_vpc" "default" {
   tags = {
     Name = "default-vpc"
   }
 }
 
-# Pobranie subnetów domyślnej VPC (zamiast przestarzałego aws_subnet_ids)
+# pobranie subnetów domyślnej VPC
 data "aws_subnets" "default" {
   filter {
     name   = "vpc-id"
@@ -34,7 +34,7 @@ data "aws_subnets" "default" {
   }
 }
 
-# Security Group dla RDS PostgreSQL
+# security group dla RDS PostgreSQL
 resource "aws_security_group" "rds_sg" {
   name        = "rds-postgres-sg"
   description = "Allow PostgreSQL access"
@@ -54,7 +54,7 @@ resource "aws_security_group" "rds_sg" {
   }
 }
 
-# Security Group dla RabbitMQ
+# security group dla RabbitMQ
 resource "aws_security_group" "rabbit_sg" {
   name        = "rabbitmq-sg"
   description = "Allow RabbitMQ"
@@ -80,7 +80,7 @@ resource "aws_security_group" "rabbit_sg" {
   }
 }
 
-# Grupa subnetów dla RDS
+# grupa subnetów dla RDS
 resource "aws_db_subnet_group" "default" {
   name       = "${var.db_identifier}-subnet-group"
   subnet_ids = data.aws_subnets.default.ids
@@ -90,7 +90,7 @@ resource "aws_db_subnet_group" "default" {
   }
 }
 
-# Pojedyncza instancja RDS PostgreSQL
+# pojedyncza instancja RDS PostgreSQL
 resource "aws_db_instance" "postgres" {
   identifier             = var.db_identifier
   engine                 = "postgres"
@@ -107,13 +107,13 @@ resource "aws_db_instance" "postgres" {
   db_subnet_group_name   = aws_db_subnet_group.default.name
 }
 
-# Opóźnienie, by endpoint DNS był gotowy
+# opóźnienie, żeby endpoint DNS był gotowy
 resource "time_sleep" "wait_db" {
   depends_on      = [aws_db_instance.postgres]
   create_duration = "60s"
 }
 
-# Provider PostgreSQL – łączy się do endpointu RDS
+# provider PostgreSQL – łączy się do endpointu RDS
 provider "postgresql" {
   host            = aws_db_instance.postgres.address
   port            = aws_db_instance.postgres.port
@@ -123,11 +123,12 @@ provider "postgresql" {
   connect_timeout = 15
 }
 
+# konkretne bazy danych
 locals {
   db_names = ["booking", "availability", "notification", "payment", "ticketing"]
 }
 
-# Tworzenie pięciu dodatkowych baz danych
+# tworzenie pięciu dodatkowych baz danych
 resource "postgresql_database" "databases" {
   for_each = toset(local.db_names)
   name     = each.value
@@ -138,7 +139,7 @@ resource "postgresql_database" "databases" {
   ]
 }
 
-# Wyszukanie najnowszego Amazon Linux 2 AMI
+# wyszukanie najnowszego Amazon Linux 2 AMI
 data "aws_ami" "amazon_linux_2" {
   most_recent = true
   owners      = ["amazon"]
