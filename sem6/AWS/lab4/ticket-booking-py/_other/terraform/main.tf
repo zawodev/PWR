@@ -19,10 +19,27 @@ provider "aws" {
   region = var.aws_region
 }
 
+# Przyjęcie lub utworzenie domyślnej VPC
+resource "aws_default_vpc" "default" {
+  tags = {
+    Name = "default-vpc"
+  }
+}
+
+# Pobranie subnetów domyślnej VPC (zamiast przestarzałego aws_subnet_ids)
+data "aws_subnets" "default" {
+  filter {
+    name   = "vpc-id"
+    values = [aws_default_vpc.default.id]
+  }
+}
+
 # Security Group dla RDS PostgreSQL
 resource "aws_security_group" "rds_sg" {
   name        = "rds-postgres-sg"
   description = "Allow PostgreSQL access"
+  vpc_id      = aws_default_vpc.default.id
+
   ingress {
     from_port   = 5432
     to_port     = 5432
@@ -37,20 +54,57 @@ resource "aws_security_group" "rds_sg" {
   }
 }
 
+# Security Group dla RabbitMQ
+resource "aws_security_group" "rabbit_sg" {
+  name        = "rabbitmq-sg"
+  description = "Allow RabbitMQ"
+  vpc_id      = aws_default_vpc.default.id
+
+  ingress {
+    from_port   = 5672
+    to_port     = 5672
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  ingress {
+    from_port   = 15672
+    to_port     = 15672
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
+# Grupa subnetów dla RDS
+resource "aws_db_subnet_group" "default" {
+  name       = "${var.db_identifier}-subnet-group"
+  subnet_ids = data.aws_subnets.default.ids
+
+  tags = {
+    Name = "${var.db_identifier}-db-subnet-group"
+  }
+}
+
 # Pojedyncza instancja RDS PostgreSQL
 resource "aws_db_instance" "postgres" {
-  identifier          = var.db_identifier
-  engine              = "postgres"
-  engine_version      = "17.2"               # <— zaktualizowane na najnowszą wersję PostgreSQL 17.2 :contentReference[oaicite:1]{index=1}
-  instance_class      = var.instance_class
-  allocated_storage   = var.allocated_storage
-  db_name             = "postgres"
-  username            = var.master_username
-  password            = var.master_password
-  port                = 5432
-  skip_final_snapshot = true
-  publicly_accessible = true
+  identifier             = var.db_identifier
+  engine                 = "postgres"
+  engine_version         = "17.2"
+  instance_class         = var.instance_class
+  allocated_storage      = var.allocated_storage
+  db_name                = "postgres"
+  username               = var.master_username
+  password               = var.master_password
+  port                   = 5432
+  skip_final_snapshot    = true
+  publicly_accessible    = true
   vpc_security_group_ids = [aws_security_group.rds_sg.id]
+  db_subnet_group_name   = aws_db_subnet_group.default.name
 }
 
 # Opóźnienie, by endpoint DNS był gotowy
@@ -84,30 +138,7 @@ resource "postgresql_database" "databases" {
   ]
 }
 
-# RabbitMQ na EC2 (bez zmian)
-resource "aws_security_group" "rabbit_sg" {
-  name        = "rabbitmq-sg"
-  description = "Allow RabbitMQ"
-  ingress {
-    from_port   = 5672
-    to_port     = 5672
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-  ingress {
-    from_port   = 15672
-    to_port     = 15672
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-}
-
+# Wyszukanie najnowszego Amazon Linux 2 AMI
 data "aws_ami" "amazon_linux_2" {
   most_recent = true
   owners      = ["amazon"]
@@ -117,10 +148,13 @@ data "aws_ami" "amazon_linux_2" {
   }
 }
 
+# RabbitMQ na EC2
 resource "aws_instance" "rabbitmq" {
   ami                    = data.aws_ami.amazon_linux_2.id
   instance_type          = var.rabbitmq_instance_type
+  subnet_id              = tolist(data.aws_subnets.default.ids)[0]
   vpc_security_group_ids = [aws_security_group.rabbit_sg.id]
+
   user_data = <<-EOF
               #!/bin/bash
               yum update -y
@@ -129,5 +163,8 @@ resource "aws_instance" "rabbitmq" {
               systemctl enable rabbitmq-server
               systemctl start rabbitmq-server
               EOF
-  tags = { Name = "rabbitmq-broker" }
+
+  tags = {
+    Name = "rabbitmq-broker"
+  }
 }

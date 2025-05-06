@@ -160,3 +160,14 @@ WITH data AS (
 )
 INSERT INTO Stepaniuk.FACT_SALES_2014
 SELECT * FROM data;
+
+--adventureworks2022
+-- wybierz wszystkie rekordy zakupów gdzie były kupowane rowery (oraz ich ilość) z order detail
+SELECT 
+    sod.ProductID,
+    sod.OrderQty AS OrderQty
+FROM
+    Sales.SalesOrderDetail sod
+    JOIN Production.Product p ON sod.ProductID = p.ProductID
+WHERE
+    p.Name LIKE '%Bike%'

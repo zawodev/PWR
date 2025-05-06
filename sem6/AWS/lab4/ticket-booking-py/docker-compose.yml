@@ -5,20 +5,19 @@ networks:
     driver: bridge
     
 services:
-  rabbitmq:
-    image: rabbitmq:3-management
-    container_name: rabbitmq
-    ports:
-      - "5672:5672"
-      - "15672:15672"
-    networks: 
-      - app-net
+  #rabbitmq:
+  #  image: rabbitmq:3-management
+  #  container_name: rabbitmq
+  #  ports:
+  #    - "5672:5672"
+  #    - "15672:15672"
+  #  networks: 
+  #    - app-net
   booking:
     build: ./booking-service
     container_name: booking
     env_file: ./booking-service/.env
-    depends_on: 
-      - rabbitmq
+    #depends_on: rabbitmq
     networks:
       - app-net
     ports: ["8000:8000"]
@@ -26,8 +25,7 @@ services:
     build: ./availability-service
     container_name: availability
     env_file: ./availability-service/.env
-    depends_on:
-      - rabbitmq
+    #depends_on: rabbitmq
     networks:
       - app-net
     ports: ["8001:8001"]
@@ -35,8 +33,7 @@ services:
     build: ./payment-service
     container_name: payment
     env_file: ./payment-service/.env
-    depends_on:
-      - rabbitmq
+    #depends_on: rabbitmq
     networks:
       - app-net
     ports: ["8002:8002"]
@@ -44,8 +41,7 @@ services:
     build: ./ticketing-service
     container_name: ticketing
     env_file: ./ticketing-service/.env
-    depends_on:
-      - rabbitmq
+    #depends_on: rabbitmq
     networks:
       - app-net
     ports: ["8003:8003"]
@@ -53,8 +49,7 @@ services:
     build: ./notification-service
     container_name: notification
     env_file: ./notification-service/.env
-    depends_on:
-      - rabbitmq
+    #depends_on: rabbitmq
     networks:
       - app-net
     ports: ["8004:8004"]
