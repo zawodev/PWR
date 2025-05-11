@@ -5,6 +5,7 @@ import sys
 from clobber_app.game import GameState
 from clobber_app.logger_config import setup_logger
 from clobber_app.players import HumanPlayer, RandomAgent, MinimaxAgent
+from clobber_app.utils import *
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Clobber Game")
@@ -25,17 +26,17 @@ def interactive_args():
     print("No CLI arguments detected. Switching to interactive input mode.")
     rows = int(input("Enter number of rows (max 10) [5]: ") or 5)
     cols = int(input("Enter number of cols (max 10) [6]: ") or 6)
-    mode = input("Enter mode (pvc or cvc) [pvc]: ") or "pvc"
+    mode = input("Enter mode (pvc or cvc) [cvc]: ") or "cvc"
 
-    agent1 = input("Agent1 type (human, random, smart) [human]: ") or "human"
+    agent1 = input("Agent1 type (human, random, smart) [random]: ") or "random"
     h1     = input("Agent1 heuristic (material, mobility, combined) [material]: ") or "material"
-    d1     = int(input("Agent1 search depth [3]: ") or 3)
+    d1     = int(input("Agent1 search depth [6]: ") or 6)
 
     agent2 = input("Agent2 type (human, random, smart) [smart]: ") or "smart"
     h2     = input("Agent2 heuristic (material, mobility, combined) [combined]: ") or "combined"
-    d2     = int(input("Agent2 search depth [3]: ") or 3)
+    d2     = int(input("Agent2 search depth [6]: ") or 6)
 
-    verbose = input("Verbose output? (y/N): ").strip().lower().startswith('y')
+    verbose = input("Verbose output? (y/N) [y]: ").strip().lower().startswith('y') or True
 
     class Args: pass
     args = Args()
@@ -74,17 +75,20 @@ def main():
             break
 
         if args.verbose:
-            print(f"\nRound {rounds+1} – player {state.current}")
-            print(state)
+            print("\n" + Style.BRIGHT + "--------   Runda %d   ---------" % (rounds+1) + Style.RESET_ALL)
+            print_board_colored(state)
+            announce_turn(state)
 
         move = players[state.current].select_move(state)
         state.apply_move(move)
         rounds += 1
 
-    print("\nFinal position:")
-    print(state)
+    # Po zakończeniu gry:
+    print("\n" + Style.BRIGHT + "--------   Koniec gry   ---------" + Style.RESET_ALL)
+    print_board_colored(state)
     winner = "W" if state.current == "B" else "B"
-    print(f"\nRounds: {rounds}, Winner: {winner}")
+    announce_winner(winner)
+    print(f"Liczba rund: {rounds}")
 
 if __name__ == "__main__":
     main()

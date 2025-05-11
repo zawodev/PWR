@@ -49,5 +49,4 @@ def minimax_decision(state, depth, player, heuristic_fn, alpha_beta=False):
         if val > best_val:
             best_val, best_move = val, m
 
-    result = SearchResult(best_move, best_val, stats)
-    return result, stats
+    return SearchResult(best_move, best_val, stats)

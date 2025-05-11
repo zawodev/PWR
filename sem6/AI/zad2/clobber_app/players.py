@@ -10,7 +10,7 @@ class Player:
 class HumanPlayer(Player):
     def select_move(self, state):
         moves = state.get_legal_moves(state.current)
-        return input(f"Choose move {moves}: ")
+        return input(f"{moves}\nChoose move: ")
 
 class RandomAgent(Player):
     def select_move(self, state):
@@ -25,9 +25,9 @@ class MinimaxAgent(Player):
         self.logger = logging.getLogger('clobber')
 
     def select_move(self, state):
-        result, stats = minimax_decision(
+        result = minimax_decision(
             state, self.depth, state.current,
             self.heur_fn, alpha_beta=self.alpha_beta
         )
-        self.logger.info(f"{self.name} nodes={stats['nodes']} time={stats['time']:.3f}s")
+        self.logger.info(f"{self.name} nodes={result.stats['nodes']} time={result.stats['time']:.3f}s")
         return result.move
