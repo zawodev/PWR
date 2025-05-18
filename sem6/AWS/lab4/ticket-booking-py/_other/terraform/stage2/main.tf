@@ -1,9 +1,6 @@
 terraform {
   required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
-    }
+    aws = { source = "hashicorp/aws", version = "~> 4.0" }
   }
 }
 
@@ -11,55 +8,29 @@ provider "aws" {
   region = var.aws_region
 }
 
-####################################
-# 1. ECS Cluster
-####################################
-resource "aws_ecs_cluster" "cluster" {
-  name = var.cluster_name
-}
-
-####################################
-# 2. IAM Role for Fargate tasks
-####################################
-data "aws_iam_policy_document" "ecs_assume" {
-  statement {
-    actions = ["sts:AssumeRole"]
-    principals {
-      type        = "Service"
-      identifiers = ["ecs-tasks.amazonaws.com"]
-    }
+# ========== datasource'y VPC, subnet, default SG ==========
+data "aws_vpcs" "default" {
+  filter { 
+    name = "isDefault"
+    values = ["true"]
   }
 }
-
-resource "aws_iam_role" "ecs_task_execution" {
-  name               = "ecsTaskExecRole"
-  assume_role_policy = data.aws_iam_policy_document.ecs_assume.json
-}
-
-resource "aws_iam_role_policy_attachment" "ecs_task_policy" {
-  role       = aws_iam_role.ecs_task_execution.name
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
-}
-
-####################################
-# 3. Security Group for services
-####################################
-data "aws_default_vpc" "default" {}
-
 data "aws_subnets" "default" {
-  filter {
-    name   = "vpc-id"
-    values = [data.aws_default_vpc.default.id]
+  filter { 
+    name = "vpc-id"
+    values = [data.aws_vpcs.default.ids[0]]
   }
 }
 
-resource "aws_security_group" "app_sg" {
-  name        = "ecs-services-sg"
-  vpc_id      = data.aws_default_vpc.default.id
+# ========== 1. Security Group dla ALB ==========
+resource "aws_security_group" "alb_sg" {
+  name        = "alb-sg"
+  description = "Allow HTTP from anywhere"
+  vpc_id      = data.aws_vpcs.default.ids[0]
 
   ingress {
-    from_port   = 0
-    to_port     = 65535
+    from_port   = 80
+    to_port     = 80
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -71,79 +42,103 @@ resource "aws_security_group" "app_sg" {
   }
 }
 
-####################################
-# 4. Task Definitions & Services
-####################################
-locals {
-  services = [
-    {
-      name  = "booking"
-      image = "${var.docker_registry}/booking-service:latest"
-      port  = 8000
-    },
-    {
-      name  = "availability"
-      image = "${var.docker_registry}/availability-service:latest"
-      port  = 8001
-    },
-    {
-      name  = "payment"
-      image = "${var.docker_registry}/payment-service:latest"
-      port  = 8002
-    },
-    {
-      name  = "ticketing"
-      image = "${var.docker_registry}/ticketing-service:latest"
-      port  = 8003
-    },
-    {
-      name  = "notification"
-      image = "${var.docker_registry}/notification-service:latest"
-      port  = 8004
-    },
-  ]
+# ========== 2. Security Group dla Fargate ==========
+resource "aws_security_group" "svc_sg" {
+  name        = "fargate-services-sg"
+  description = "Allow ALB to reach Fargate tasks"
+  vpc_id      = data.aws_vpcs.default.ids[0]
+
+  ingress {
+    from_port       = 8000
+    to_port         = 8004
+    protocol        = "tcp"
+    security_groups = [aws_security_group.alb_sg.id]
+  }
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 }
 
-# Task definitions
-resource "aws_ecs_task_definition" "tasks" {
-  for_each = { for svc in local.services : svc.name => svc }
+# ========== 3. ECS Cluster ==========
+resource "aws_ecs_cluster" "cluster" {
+  name = var.cluster_name
+}
 
+# ========== 4. ALB + Listener + TG ==========
+resource "aws_lb" "alb" {
+  name               = var.alb_name
+  load_balancer_type = "application"
+  subnets            = data.aws_subnets.default.ids
+  security_groups    = [aws_security_group.alb_sg.id]
+}
+
+resource "aws_lb_target_group" "tg" {
+  name        = var.tg_name
+  port        = 80
+  protocol    = "HTTP"
+  vpc_id      = data.aws_vpcs.default.ids[0]
+  target_type = "ip"
+
+  health_check {
+    path                = "/health"
+    matcher             = "200-399"
+    interval            = 30
+    healthy_threshold   = 2
+    unhealthy_threshold = 5
+  }
+}
+
+resource "aws_lb_listener" "http" {
+  load_balancer_arn = aws_lb.alb.arn
+  port              = 80
+  protocol          = "HTTP"
+  default_action {
+    type             = "forward"
+    target_group_arn = aws_lb_target_group.tg.arn
+  }
+}
+
+# ========== 5. IAM Role ==========
+data "aws_iam_role" "exec_role" {
+  name = var.execution_role_name
+}
+
+# ========== 6. Task Definitions & Services ==========
+locals {
+  services = ["booking","availability","payment","ticketing","notification"]
+}
+
+resource "aws_ecs_task_definition" "tasks" {
+  for_each                 = toset(local.services)
   family                   = each.key
   network_mode             = "awsvpc"
   requires_compatibilities = ["FARGATE"]
   cpu                      = "256"
   memory                   = "512"
-  execution_role_arn       = aws_iam_role.ecs_task_execution.arn
+  execution_role_arn       = data.aws_iam_role.exec_role.arn
 
-  container_definitions = jsonencode([
-    {
-      name      = each.key
-      image     = each.value.image
-      essential = true
-
-      portMappings = [
-        {
-          containerPort = each.value.port
-          protocol      = "tcp"
-        }
-      ]
-
-      environment = [
-        {
-          name  = "DATABASE_URL"
-          value = "postgres://${var.postgres_endpoint}:5432/${each.key}"
-        },
-        {
-          name  = "RABBITMQ_URL"
-          value = "amqp://guest:guest@${var.rabbitmq_endpoint}:5672/"
-        }
-      ]
+  container_definitions = jsonencode([{
+    name      = each.key
+    image     = "zawodev/${each.key}-service:latest"
+    portMappings = [{
+      containerPort = lookup(var.service_ports, each.key)
+      protocol      = "tcp"
+    }]
+    logConfiguration = {
+      logDriver = "awslogs"
+      options = {
+        awslogs-group         = "/ecs/${each.key}"
+        awslogs-region        = var.aws_region
+        awslogs-stream-prefix = each.key
+      }
     }
-  ])
+  }])
 }
 
-# ECS Services
-resource "aws_ecs_service" "services" {
+resource "aws_ecs_service" "svc" {
   for_each        = aws_ecs_task_definition.tasks
   name            = each.key
   cluster         = aws_ecs_cluster.cluster.id
@@ -153,9 +148,15 @@ resource "aws_ecs_service" "services" {
 
   network_configuration {
     subnets         = data.aws_subnets.default.ids
-    security_groups = [aws_security_group.app_sg.id]
+    security_groups = [aws_security_group.svc_sg.id]
     assign_public_ip = true
   }
 
-  depends_on = [aws_iam_role_policy_attachment.ecs_task_policy]
+  load_balancer {
+    target_group_arn = aws_lb_target_group.tg.arn
+    container_name   = each.key
+    container_port   = lookup(var.service_ports, each.key)
+  }
+
+  depends_on = [aws_lb_listener.http]
 }

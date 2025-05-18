@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.12 (lab1)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.13 virtualenv at C:\Users\aliks\Documents\GitHub\zawodev\PWR\sem6\AWS\lab4\ticket-booking-py\.venv" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.13 (ticket-booking-py)" project-jdk-type="Python SDK" />
 </project>

@@ -9,7 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/ticketing-service/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.13 virtualenv at C:\Users\aliks\Documents\GitHub\zawodev\PWR\sem6\AWS\lab4\ticket-booking-py\.venv" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.13 (ticket-booking-py)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
