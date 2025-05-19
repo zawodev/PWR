@@ -1,6 +1,6 @@
 output "postgres_endpoint" {
   description = "Endpoint instancji RDS PostgreSQL"
-  value       = aws_db_instance.postgres.address   # lub .endpoint
+  value       = aws_db_instance.postgres.address # lub .endpoint idk
 }
 
 output "postgres_databases" {

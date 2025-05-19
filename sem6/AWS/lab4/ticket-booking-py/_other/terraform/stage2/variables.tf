@@ -1,18 +1,26 @@
 variable "aws_region" {
-  description = "Region AWS"
+  description = "AWS region"
   type        = string
   default     = "us-east-1"
 }
 
-variable "cluster_name" {
-  description = "Nazwa ECS Cluster"
+variable "instance_type" {
+  description = "EC2 instance type for services"
   type        = string
-  default     = "microservices-cluster"
+  default     = "t3.micro"
 }
 
+# lista nazw serwisów (używana też w image tag)
+variable "services" {
+  description = "Names of microservices"
+  type        = list(string)
+  default     = ["booking","availability","payment","ticketing","notification"]
+}
+
+# porty host → kontener dla każdego serwisu
 variable "service_ports" {
-  description = "Porty poszczególnych usług"
-  type = map(number)
+  description = "Map service → port"
+  type        = map(number)
   default = {
     booking      = 8000
     availability = 8001
@@ -20,22 +28,4 @@ variable "service_ports" {
     ticketing    = 8003
     notification = 8004
   }
-}
-
-variable "alb_name" {
-  description = "Nazwa Application Load Balancera"
-  type        = string
-  default     = "ms-alb"
-}
-
-variable "tg_name" {
-  description = "Nazwa Target Group"
-  type        = string
-  default     = "ms-tg"
-}
-
-variable "execution_role_name" {
-  description = "Istniejąca rola IAM ECS Task Execution"
-  type        = string
-  default     = "AWSServiceRoleForECS"
 }

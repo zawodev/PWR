@@ -16,8 +16,8 @@ terraform output rabbitmq_endpoint
 terraform destroy -auto-approve -var="master_password=yourpassword"
 
 //rebuild docker images
-docker compose build --no-cache
-docker compose push
+docker-compose build --no-cache
+docker-compose push
 
 
 
