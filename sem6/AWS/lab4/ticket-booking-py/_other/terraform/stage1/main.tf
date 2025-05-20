@@ -107,13 +107,13 @@ resource "aws_db_instance" "postgres" {
   db_subnet_group_name   = aws_db_subnet_group.default.name
 }
 
-# opóźnienie, żeby endpoint DNS był gotowy
+# opóźniam żeby endpoint DNS był gotowy
 resource "time_sleep" "wait_db" {
   depends_on      = [aws_db_instance.postgres]
   create_duration = "60s"
 }
 
-# provider PostgreSQL – łączy się do endpointu RDS
+# provider PostgreSQL łączy się do endpointu RDS
 provider "postgresql" {
   host            = aws_db_instance.postgres.address
   port            = aws_db_instance.postgres.port
@@ -123,12 +123,12 @@ provider "postgresql" {
   connect_timeout = 15
 }
 
-# konkretne bazy danych
+# nazwy baz danych (mogłyby być w zmiennych ale są stałe)
 locals {
   db_names = ["booking", "availability", "notification", "payment", "ticketing"]
 }
 
-# tworzenie pięciu dodatkowych baz danych
+# tworzenie pięciu baz danych
 resource "postgresql_database" "databases" {
   for_each = toset(local.db_names)
   name     = each.value
@@ -139,7 +139,7 @@ resource "postgresql_database" "databases" {
   ]
 }
 
-# wyszukanie najnowszego Amazon Linux 2 AMI
+# wyszukanie najnowszego amazon linux 2 ami
 data "aws_ami" "amazon_linux_2" {
   most_recent = true
   owners      = ["amazon"]

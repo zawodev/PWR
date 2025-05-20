@@ -10,14 +10,12 @@ variable "instance_type" {
   default     = "t3.micro"
 }
 
-# lista nazw serwisów (używana też w image tag)
 variable "services" {
   description = "Names of microservices"
   type        = list(string)
   default     = ["booking","availability","payment","ticketing","notification"]
 }
 
-# porty host → kontener dla każdego serwisu
 variable "service_ports" {
   description = "Map service → port"
   type        = map(number)

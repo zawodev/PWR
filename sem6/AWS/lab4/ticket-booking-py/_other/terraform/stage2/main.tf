@@ -1,6 +1,9 @@
 terraform {
   required_providers {
-    aws = { source = "hashicorp/aws", version = "~> 4.0" }
+    aws = { 
+      source = "hashicorp/aws", 
+      version = "~> 4.0" 
+    }
   }
 }
 
@@ -8,7 +11,7 @@ provider "aws" {
   region = var.aws_region
 }
 
-# 1. Default VPC & subnets
+# 1) domyślne vpc i subnety
 data "aws_vpcs" "default" {
   filter { 
     name = "isDefault"
@@ -22,7 +25,7 @@ data "aws_subnets" "default" {
   }
 }
 
-# 2. Security Group dla wszystkich mikroserwisów
+# 2) security groups dla wszystkich mikroserwisów
 resource "aws_security_group" "svc_sg" {
   name        = "microservices-sg"
   description = "Allow HTTP to all microservices"
@@ -42,7 +45,7 @@ resource "aws_security_group" "svc_sg" {
   }
 }
 
-# 3. Pobranie najnowszego Amazon Linux 2 AMI
+# 3) analogicznie do stage1, pobieramy najnowszy amazon linux 2 ami
 data "aws_ami" "amazon_linux_2" {
   most_recent = true
   owners      = ["amazon"]
@@ -52,7 +55,7 @@ data "aws_ami" "amazon_linux_2" {
   }
 }
 
-# 4. EC2 dla każdego serwisu
+# 4) tworzymy ec2 instancje dla każdego serwisu
 resource "aws_instance" "svc" {
   for_each = toset(var.services)
 
@@ -72,7 +75,6 @@ resource "aws_instance" "svc" {
     service docker start
     usermod -a -G docker ec2-user
 
-    # pull and run container
     docker pull zawodev/${each.key}-service:latest
     docker rm -f ${each.key} || true
     docker run -d --name ${each.key} -p ${lookup(var.service_ports, each.key)}:${lookup(var.service_ports, each.key)} zawodev/${each.key}-service:latest
