@@ -1,5 +1,4 @@
 import argparse
-import logging
 import sys
 
 from clobber_app.game import GameState
@@ -11,14 +10,15 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Clobber Game")
     parser.add_argument("--rows", type=int, default=5, help="Number of rows (max 10)")
     parser.add_argument("--cols", type=int, default=6, help="Number of cols (max 10)")
-    parser.add_argument("--mode", choices=["pvc","cvc"], default="pvc")
-    parser.add_argument("--agent1", choices=["human","random","smart"], default="human")
-    parser.add_argument("--h1", choices=["material","mobility","combined"], default="material")
-    parser.add_argument("--d1", type=int, default=3)
-    parser.add_argument("--agent2", choices=["human","random","smart"], default="smart")
-    parser.add_argument("--h2", choices=["material","mobility","combined"], default="combined")
-    parser.add_argument("--d2", type=int, default=3)
-    parser.add_argument("--no-color", action="store_true", help="Disable colored output")
+
+    parser.add_argument("--agent1", choices=["human", "random", "smart"], default="random")
+    parser.add_argument("--h1", choices=["opp_mobility", "mobility", "centrality", "combined"], default="centrality")
+    parser.add_argument("--d1", type=int, default=4)
+
+    parser.add_argument("--agent2", choices=["human", "random", "smart"], default="smart")
+    parser.add_argument("--h2", choices=["opp_mobility", "mobility", "centrality", "combined"], default="centrality")
+    parser.add_argument("--d2", type=int, default=4)
+
     parser.add_argument("--verbose", action="store_true", help="Enable debug logging")
     return parser.parse_args()
 
@@ -26,26 +26,26 @@ def interactive_args():
     print("No CLI arguments detected. Switching to interactive input mode.")
     rows = int(input("Enter number of rows (max 10) [5]: ") or 5)
     cols = int(input("Enter number of cols (max 10) [6]: ") or 6)
-    mode = input("Enter mode (pvc or cvc) [cvc]: ") or "cvc"
 
     agent1 = input("Agent1 type (human, random, smart) [random]: ") or "random"
-    h1     = input("Agent1 heuristic (material, mobility, combined) [material]: ") or "material"
-    d1     = int(input("Agent1 search depth [6]: ") or 6)
+    h1 = input("Agent1 heuristic (opp_mobility, mobility, centrality, combined) [centrality]: ") or "centrality"
+    d1 = int(input("Agent1 search depth [4]: ") or 4)
 
     agent2 = input("Agent2 type (human, random, smart) [smart]: ") or "smart"
-    h2     = input("Agent2 heuristic (material, mobility, combined) [combined]: ") or "combined"
-    d2     = int(input("Agent2 search depth [6]: ") or 6)
+    h2 = input("Agent2 heuristic (opp_mobility, mobility, centrality, combined) [centrality]: ") or "centrality"
+    d2 = int(input("Agent2 search depth [4]: ") or 4)
 
-    verbose = input("Verbose output? (y/N) [y]: ").strip().lower().startswith('y') or True
+    verbose = input("Verbose output? (y/N) [N]: ").strip().lower().startswith('y') or False
 
-    class Args: pass
+    class Args:
+        pass
+
     args = Args()
     args.rows = rows
     args.cols = cols
-    args.mode = mode
     args.agent1, args.h1, args.d1 = agent1, h1, d1
     args.agent2, args.h2, args.d2 = agent2, h2, d2
-    args.no_color, args.verbose = False, verbose
+    args.verbose = verbose
     return args
 
 def make_player(kind, name, heuristic, depth):
@@ -83,7 +83,7 @@ def main():
         state.apply_move(move)
         rounds += 1
 
-    # Po zakończeniu gry:
+    # game finished
     print("\n" + Style.BRIGHT + "--------   Koniec gry   ---------" + Style.RESET_ALL)
     print_board_colored(state)
     winner = "W" if state.current == "B" else "B"

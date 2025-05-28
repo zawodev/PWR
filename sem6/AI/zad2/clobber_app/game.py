@@ -1,5 +1,5 @@
 from typing import List
-from clobber_app.utils import notation_to_index
+from clobber_app.utils import notation_to_index, coords_to_notation
 
 class GameState:
     def __init__(self, rows: int = 5, cols: int = 6):
@@ -7,7 +7,7 @@ class GameState:
         self.cols = cols
         self.board = [[None]*cols for _ in range(rows)]
         self._init_board()
-        self.current = 'B'  # 'B' = Black (first), 'W' = White (second)
+        self.current = 'B'  # 'B' = black (first), 'W' = white (second)
 
     def _init_board(self):
         for r in range(self.rows):
@@ -17,23 +17,33 @@ class GameState:
     def is_terminal(self) -> bool:
         return not self.get_legal_moves('B') and not self.get_legal_moves('W')
 
-    def coords_to_notation(self, r: int, c: int) -> str:
-        col = chr(ord('a') + c)
-        row = str(self.rows - 1 - r)
-        return f"{col}{row}"
+    def count_attacked_enemy_pieces(self, player: str) -> int:
+        opp = 'W' if player == 'B' else 'B'
+        dirs = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+        count = 0
+
+        for r in range(self.rows):
+            for c in range(self.cols):
+                if self.board[r][c] == opp:
+                    for dr, dc in dirs:
+                        nr, nc = r+dr, c+dc
+                        if 0 <= nr < self.rows and 0 <= nc < self.cols and self.board[nr][nc] == player:
+                            count += 1
+                            break
+        return count
 
     def get_legal_moves(self, player: str) -> List[str]:
         moves = []
         opp = 'W' if player == 'B' else 'B'
-        dirs = [(-1,0),(1,0),(0,-1),(0,1)]
+        dirs = [(-1, 0), (1, 0), (0, -1), (0, 1)]
         for r in range(self.rows):
             for c in range(self.cols):
                 if self.board[r][c] == player:
                     for dr, dc in dirs:
                         nr, nc = r+dr, c+dc
                         if 0 <= nr < self.rows and 0 <= nc < self.cols and self.board[nr][nc] == opp:
-                            src = self.coords_to_notation(r, c)
-                            dst = self.coords_to_notation(nr, nc)
+                            src = coords_to_notation(r, c)
+                            dst = coords_to_notation(nr, nc)
                             moves.append(src + dst)
         return moves
 

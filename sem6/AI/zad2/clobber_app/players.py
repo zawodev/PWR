@@ -10,7 +10,17 @@ class Player:
 class HumanPlayer(Player):
     def select_move(self, state):
         moves = state.get_legal_moves(state.current)
-        return input(f"{moves}\nChoose move: ")
+        if not moves:
+            print("❌ No legal moves available")
+            return None
+
+        while True:
+            print("Legal moves:", moves)
+            move = input("Choose move: ").strip()
+            if move in moves:
+                return move
+            else:
+                print(f"❌ Invalid move '{move}'\n")
 
 class RandomAgent(Player):
     def select_move(self, state):
@@ -30,4 +40,9 @@ class MinimaxAgent(Player):
             self.heur_fn, alpha_beta=self.alpha_beta
         )
         self.logger.info(f"{self.name} nodes={result.stats['nodes']} time={result.stats['time']:.3f}s")
+
+        if result.move is None:
+            #self.logger.warning(f"{self.name} has no legal moves? weird")
+            return random.choice(state.get_legal_moves(state.current))
+
         return result.move

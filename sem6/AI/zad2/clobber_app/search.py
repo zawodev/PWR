@@ -15,7 +15,8 @@ def minimax_decision(state, depth, player, heuristic_fn, alpha_beta=False):
 
     def max_value(s, d, alpha, beta):
         stats['nodes'] += 1
-        if d == 0 or s.is_terminal(): return heuristic_fn(s, player)
+        if d == 0 or s.is_terminal():
+            return heuristic_fn(s, player)
         v = -math.inf
         for m in s.get_legal_moves(s.current):
             s2 = copy.deepcopy(s)
@@ -24,12 +25,14 @@ def minimax_decision(state, depth, player, heuristic_fn, alpha_beta=False):
             v = max(v, val)
             if alpha_beta:
                 alpha = max(alpha, v)
-                if alpha >= beta: break
+                if alpha >= beta:
+                    break
         return v
 
     def min_value(s, d, alpha, beta):
         stats['nodes'] += 1
-        if d == 0 or s.is_terminal(): return heuristic_fn(s, player)
+        if d == 0 or s.is_terminal():
+            return heuristic_fn(s, player)
         v = math.inf
         for m in s.get_legal_moves(s.current):
             s2 = copy.deepcopy(s)
@@ -38,7 +41,8 @@ def minimax_decision(state, depth, player, heuristic_fn, alpha_beta=False):
             v = min(v, val)
             if alpha_beta:
                 beta = min(beta, v)
-                if beta <= alpha: break
+                if beta <= alpha:
+                    break
         return v
 
     best_val, best_move = -math.inf, None

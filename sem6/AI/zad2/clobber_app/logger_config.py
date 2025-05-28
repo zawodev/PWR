@@ -1,6 +1,4 @@
 import logging
-
-import logging
 from colorama import Fore, Style
 
 class ColorFormatter(logging.Formatter):
