@@ -83,3 +83,31 @@ services:
     networks:
       - app-net
     ports: ["8004:8004"]
+
+
+
+
+
+
+
+
+
+-----------------------------------------
+
+
+
+
+docker compose ps
+docker compose up -d
+docker compose down
+
+docker compose up -d --scale booking=5
+
+
+docker stack deploy -c docker-compose.yml myapp
+docker service scale myapp_booking=5
+docker stack rm myapp
+docker stack services myapp
+
+
+
