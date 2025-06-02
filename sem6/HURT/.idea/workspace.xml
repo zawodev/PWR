@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35bd9cce-a29a-4739-ba9d-e6dce0f13511" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lab8-projekt/lab8_2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab9-projekt-etap2/data/main2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab9-projekt-etap2/lab9.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab9-projekt-etap2/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AWS/lab4/ticket-booking-py/_other/terraform/stage2/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/../AWS/lab4/ticket-booking-py/_other/terraform/stage2/variables.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,9 +35,21 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/aliks&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/aliks&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-PY-251.23774.444" />
+        <option value="bundled-python-sdk-890ed5b35930-d9c5bdb153f4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.23774.444" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SwiftWorkspaceSettings">
     <option name="detectedToolchain" value="true" />
@@ -44,7 +61,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745664803875</updated>
+      <workItem from="1748089109219" duration="25000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

@@ -11,8 +11,13 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
+<<<<<<< Updated upstream
   DTS:VersionBuild="50"
   DTS:VersionGUID="{8DB2D2A2-CCDF-4B16-B255-C5FED4CC0AAE}">
+=======
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{E5F876AB-9FA9-4F91-919C-DBA6745256A2}">
+>>>>>>> Stashed changes
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1394,7 +1399,11 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="CreateStageCities"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+<<<<<<< Updated upstream
           DTS:ThreadHint="0">
+=======
+          DTS:ThreadHint="1">
+>>>>>>> Stashed changes
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1411,7 +1420,11 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="CreateStageCustomers"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+<<<<<<< Updated upstream
           DTS:ThreadHint="0">
+=======
+          DTS:ThreadHint="1">
+>>>>>>> Stashed changes
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1428,12 +1441,20 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="CreateStageCustomersClean"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+<<<<<<< Updated upstream
           DTS:ThreadHint="1">
+=======
+          DTS:ThreadHint="0">
+>>>>>>> Stashed changes
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{3C3CA077-3DF1-48E4-B02F-044570C3633E}"
+<<<<<<< Updated upstream
               SQLTask:SqlStatementSource="IF OBJECT_ID('Stage.CustomersClean','U') IS NULL&#xA;BEGIN&#xA;  CREATE TABLE Stage.CustomersClean (&#xA;    customer_id     VARCHAR(50) PRIMARY KEY,&#xA;    customer_state  CHAR(50),&#xA;    customer_city   VARCHAR(100),&#xA;    city_population INT       NULL,&#xA;    city_area_km2   DECIMAL(18,2) NULL,&#xA;    city_density    DECIMAL(18,2) NULL,&#xA;    city_gdp_per_capita DECIMAL(18,2) NULL,&#xA;    customer_tag     VARCHAR(100)&#xA;  );&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+=======
+              SQLTask:SqlStatementSource="IF OBJECT_ID('Stage.CustomersClean','U') IS NULL&#xA;BEGIN&#xA;  CREATE TABLE Stage.CustomersClean (&#xA;    customer_id     VARCHAR(50) PRIMARY KEY,&#xA;    customer_state  CHAR(50),&#xA;    customer_city   VARCHAR(100),&#xA;    city_population INT       NULL,&#xA;    city_area_km2   DECIMAL(18,2) NULL,&#xA;    city_density    DECIMAL(18,2) NULL,&#xA;    city_gdp_per_capita DECIMAL(18,2) NULL&#xA;  );&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+>>>>>>> Stashed changes
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -1445,7 +1466,11 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="CreateStageOrderItems"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+<<<<<<< Updated upstream
           DTS:ThreadHint="0">
+=======
+          DTS:ThreadHint="1">
+>>>>>>> Stashed changes
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1462,7 +1487,11 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="CreateStageOrders"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+<<<<<<< Updated upstream
           DTS:ThreadHint="0">
+=======
+          DTS:ThreadHint="1">
+>>>>>>> Stashed changes
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1479,7 +1508,11 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="CreateStageOrdersClean"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+<<<<<<< Updated upstream
           DTS:ThreadHint="1">
+=======
+          DTS:ThreadHint="0">
+>>>>>>> Stashed changes
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1496,7 +1529,11 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="CreateStagePayments"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+<<<<<<< Updated upstream
           DTS:ThreadHint="0">
+=======
+          DTS:ThreadHint="1">
+>>>>>>> Stashed changes
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1513,7 +1550,11 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="CreateStageProductCategoryNameTranslation"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+<<<<<<< Updated upstream
           DTS:ThreadHint="0">
+=======
+          DTS:ThreadHint="1">
+>>>>>>> Stashed changes
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1530,7 +1571,11 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="CreateStageProducts"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+<<<<<<< Updated upstream
           DTS:ThreadHint="0">
+=======
+          DTS:ThreadHint="1">
+>>>>>>> Stashed changes
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1547,7 +1592,11 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="CreateStageProductsClean"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+<<<<<<< Updated upstream
           DTS:ThreadHint="1">
+=======
+          DTS:ThreadHint="0">
+>>>>>>> Stashed changes
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1564,7 +1613,11 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="CreateStageReviews"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+<<<<<<< Updated upstream
           DTS:ThreadHint="0">
+=======
+          DTS:ThreadHint="1">
+>>>>>>> Stashed changes
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1598,7 +1651,11 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="CreateStageSellers"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+<<<<<<< Updated upstream
           DTS:ThreadHint="0">
+=======
+          DTS:ThreadHint="1">
+>>>>>>> Stashed changes
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1615,7 +1672,11 @@
           DTS:LocaleID="-1"
           DTS:ObjectName="CreateStageSellersClean"
           DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+<<<<<<< Updated upstream
           DTS:ThreadHint="1">
+=======
+          DTS:ThreadHint="0">
+>>>>>>> Stashed changes
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData

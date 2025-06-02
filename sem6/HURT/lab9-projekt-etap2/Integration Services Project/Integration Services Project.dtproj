@@ -26,7 +26,11 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">ZAWO-LAPTOP</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
+<<<<<<< Updated upstream
           <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAww4aClWQvUO/Tj/opq2jLgAAAAACAAAAAAAQZgAAAAEAACAAAAAGBGyzKxH7VTjWhDZG36Itkyt0oAKA+d3fcPnqPB95BwAAAAAOgAAAAAIAACAAAACr7iLBmH1Op9Q7bSTm7HeZ2kQaxw+DnfjRUUXYkpR7RZAAAABGZj07NOUyFvZ6CMpUnhrQlK/gRxg2/d8tSPIZzc/6kZMYqyFV5K/fz4f76r0CMxqnLT44aIV42SuXXjmsZqiWi+V6tDj87i9VRPJBXyTo4axOiI30DKnimkndzfhaS5yQPXXqfClM1Exfc167JcXKwo+rmKqQPEtffOJ1fLBT1IIUWr0w5rR5+RnAcpqV+/RAAAAAfB0GNyvk7DJ+OqizOaXi0ODJzMFU25RoqccFZnsQAUnnXIy80Jone4U+V15LDmlTcI6Emuy4qOceE99z1V9FtQ==</SSIS:Property>
+=======
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAww4aClWQvUO/Tj/opq2jLgAAAAACAAAAAAAQZgAAAAEAACAAAAD3hXQJ042zqj1CicNzQO/XcY/0k2A4Gtgo5GfxWpDIagAAAAAOgAAAAAIAACAAAAD5jBpc6+Pwj0Eas3fUCUYA+RMyhMj7tqlCLTS/kbhHepAAAAD53EuusoMOgvLDu3Lrv05TLRwMMrcT3AyB+V/F3FdLM6KN9taj2h80UtutNEe+X+InXnF18KQAfsuUBAez5Rsx5QZ35ZqxXFvKS19QGPwvJg1Qj00JokZVGJ2GVzAyQ8NWkuEEFRSozc6Pz1MOPe5B5zhaYNX526sHvqpQl4KacSYjIUksXR3xCklmTCimeKxAAAAA8obDpF2GF/vkgwciGXp2Gfo4PKKS573LVJx4S/0NfE8Ail2xroKAKKYv4ctuQR60XOn+ZUlKQia90SQ8WERIEg==</SSIS:Property>
+>>>>>>> Stashed changes
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -44,10 +48,17 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+<<<<<<< Updated upstream
                 <SSIS:Property SSIS:Name="VersionBuild">362</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{8D882686-7D86-4BE0-BB69-9ED8A4F86A89}</SSIS:Property>
+=======
+                <SSIS:Property SSIS:Name="VersionBuild">221</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{E8ADB10B-00F5-424D-B63B-4D08A5D4DA2E}</SSIS:Property>
+>>>>>>> Stashed changes
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1853,7 +1864,11 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+<<<<<<< Updated upstream
                     <SSIS:Property SSIS:Name="Value">Data Source=ZAWO-LAPTOP;Initial Catalog=BrazilianOlist;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{3C3CA077-3DF1-48E4-B02F-044570C3633E}ZAWO-LAPTOP.BrazilianOlist;</SSIS:Property>
+=======
+                    <SSIS:Property SSIS:Name="Value">Data Source=ZAWO-LAPTOP;Initial Catalog=BrazilianOlist;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{3C3CA077-3DF1-48E4-B02F-044570C3633E}ZAWO-LAPTOP.BrazilianOlist;Auto Translate=False;</SSIS:Property>
+>>>>>>> Stashed changes
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1983,10 +1998,17 @@
                 <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+<<<<<<< Updated upstream
                 <SSIS:Property SSIS:Name="VersionBuild">48</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{E5F876AB-9FA9-4F91-919C-DBA6745256A2}</SSIS:Property>
+=======
+                <SSIS:Property SSIS:Name="VersionBuild">42</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{612FFE08-46BF-4E50-9C0F-015CAD11D017}</SSIS:Property>
+>>>>>>> Stashed changes
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

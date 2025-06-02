@@ -11,8 +11,13 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
+<<<<<<< Updated upstream
   DTS:VersionBuild="402"
   DTS:VersionGUID="{8F37D4FE-FF8F-4F65-95A7-D8542D372B49}">
+=======
+  DTS:VersionBuild="329"
+  DTS:VersionGUID="{AEB79FD4-C302-4886-925A-8773142D736A}">
+>>>>>>> Stashed changes
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -825,7 +830,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="customer_id"
+<<<<<<< Updated upstream
               DTS:DTSID="{B751A0F1-2125-4039-BB66-E6859C0FA508}"
+=======
+              DTS:DTSID="{6EDDA37B-B4CE-4B7E-B689-05DCF9580289}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -834,7 +843,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="customer_unique_id"
+<<<<<<< Updated upstream
               DTS:DTSID="{8A62052B-006C-44A5-A6B3-6620707C71DE}"
+=======
+              DTS:DTSID="{DDBEDAD5-F46A-493A-B286-EBE317607C29}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -843,7 +856,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="customer_zip_code_prefix"
+<<<<<<< Updated upstream
               DTS:DTSID="{FCC70F0A-90F4-434A-8817-7A4EBD96CB72}"
+=======
+              DTS:DTSID="{C78AF2EE-C300-4589-BE85-62D074BDC623}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -852,7 +869,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="customer_city"
+<<<<<<< Updated upstream
               DTS:DTSID="{2D18012B-3BAE-4C16-AABF-E9F850F2A17E}"
+=======
+              DTS:DTSID="{CB4EDCA6-3C25-4993-B7FB-C3115E90E226}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -861,7 +882,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="customer_state"
+<<<<<<< Updated upstream
               DTS:DTSID="{D73469A1-813C-4B7E-8573-26CBD7963743}"
+=======
+              DTS:DTSID="{7B0AC92D-E60A-4FE4-B43C-36DF32E8A204}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -889,8 +914,13 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
+<<<<<<< Updated upstream
               DTS:ObjectName="&quot;order_id&quot;"
               DTS:DTSID="{FCBC3FD7-FFCA-4404-9566-2C526186D9E7}"
+=======
+              DTS:ObjectName="order_id"
+              DTS:DTSID="{FE679831-03C0-4C1F-83CF-9D8915DCA225}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -898,8 +928,13 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
+<<<<<<< Updated upstream
               DTS:ObjectName="&quot;customer_id&quot;"
               DTS:DTSID="{C152184A-353C-48E5-9489-DD5E574745D3}"
+=======
+              DTS:ObjectName="customer_id"
+              DTS:DTSID="{73DEDB68-A0D0-4607-8109-BAE0CCB6C7D6}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -907,8 +942,13 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
+<<<<<<< Updated upstream
               DTS:ObjectName="&quot;order_status&quot;"
               DTS:DTSID="{DD14BCDA-F637-4265-AC02-5C112695131A}"
+=======
+              DTS:ObjectName="order_status"
+              DTS:DTSID="{D2AA9031-C7EA-48CB-B750-64360F742A9E}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -916,8 +956,13 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
+<<<<<<< Updated upstream
               DTS:ObjectName="&quot;order_purchase_timestamp&quot;"
               DTS:DTSID="{BB7B4E93-C34B-45BF-8D9C-FDE8C7EA4004}"
+=======
+              DTS:ObjectName="order_purchase_timestamp"
+              DTS:DTSID="{8E05ACB7-815E-404A-8612-0763F3E8E73A}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -925,8 +970,13 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
+<<<<<<< Updated upstream
               DTS:ObjectName="&quot;order_approved_at&quot;"
               DTS:DTSID="{63D2344D-AEDB-48FF-9274-413FB5080779}"
+=======
+              DTS:ObjectName="order_approved_at"
+              DTS:DTSID="{6D1286F5-7856-49BB-BA15-B14D72572318}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -934,8 +984,13 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
+<<<<<<< Updated upstream
               DTS:ObjectName="&quot;order_delivered_carrier_date&quot;"
               DTS:DTSID="{1F510BD3-4A53-4DB8-BC3E-6663E346FD9C}"
+=======
+              DTS:ObjectName="order_delivered_carrier_date"
+              DTS:DTSID="{DAB0FABA-D643-4FA9-8E00-9A8DE396D430}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -943,8 +998,13 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
+<<<<<<< Updated upstream
               DTS:ObjectName="&quot;order_delivered_customer_date&quot;"
               DTS:DTSID="{AF3ED325-8955-4B27-8F31-C13794B83842}"
+=======
+              DTS:ObjectName="order_delivered_customer_date"
+              DTS:DTSID="{83BA635D-1471-47DC-B782-DD5074760177}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -952,8 +1012,13 @@
               DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
+<<<<<<< Updated upstream
               DTS:ObjectName="&quot;order_estimated_delivery_date&quot; "
               DTS:DTSID="{FFA0C670-62BA-4188-AC44-BFFE100B3F8E}"
+=======
+              DTS:ObjectName="order_estimated_delivery_date"
+              DTS:DTSID="{D10AB57B-2C76-45CE-AD3C-CF3AA35224A2}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -982,7 +1047,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="order_id"
+<<<<<<< Updated upstream
               DTS:DTSID="{DE15CF97-5DC4-48CA-86C1-0C9FE2492F3B}"
+=======
+              DTS:DTSID="{DBB54F5A-E96E-4A10-9E3E-51ECD4B5104B}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -991,7 +1060,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="order_item_id"
+<<<<<<< Updated upstream
               DTS:DTSID="{4DCE9B9B-E9CC-444F-BCF8-ECFD9C4647C2}"
+=======
+              DTS:DTSID="{6F9D60F8-A704-439B-8AE0-DEDC11F83C3F}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1000,7 +1073,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="product_id"
+<<<<<<< Updated upstream
               DTS:DTSID="{B4848892-E26C-49A7-80B3-54E82E88DB92}"
+=======
+              DTS:DTSID="{D7E0F431-5CB5-482B-B644-12A986094C73}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1009,7 +1086,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="seller_id"
+<<<<<<< Updated upstream
               DTS:DTSID="{60AA549B-0123-444A-A9E5-5F3029CDB485}"
+=======
+              DTS:DTSID="{2C7D5D2E-BF1F-4DA5-94EC-050AED90924F}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1018,7 +1099,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="shipping_limit_date"
+<<<<<<< Updated upstream
               DTS:DTSID="{AE1E976A-D87B-4928-B849-5A45893DC997}"
+=======
+              DTS:DTSID="{AF700BA1-FA1B-4561-ACB1-AC6B605A5D2B}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1027,7 +1112,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="price"
+<<<<<<< Updated upstream
               DTS:DTSID="{AC2768E4-C453-47AE-B02A-A3BFF634ABF0}"
+=======
+              DTS:DTSID="{62A17ACD-1ED0-435F-8B2F-1BDF2DE80BCC}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1036,7 +1125,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="freight_value"
+<<<<<<< Updated upstream
               DTS:DTSID="{A47836C7-E0F6-491C-9C0A-821F6FCC5AE4}"
+=======
+              DTS:DTSID="{4BF3905C-2081-48A3-AE0B-4F2BA2756DBA}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1065,7 +1158,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="order_id"
+<<<<<<< Updated upstream
               DTS:DTSID="{04D80860-7602-4DD5-AFF0-6E64D6BE6133}"
+=======
+              DTS:DTSID="{2F66A302-CE31-4FF6-AB3F-79A9FB2B0B5D}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1074,7 +1171,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="payment_sequential"
+<<<<<<< Updated upstream
               DTS:DTSID="{DD3DEDAE-61F8-441B-8499-5773A1261549}"
+=======
+              DTS:DTSID="{C20355F3-0BA6-426D-B169-A49828A1B889}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1083,7 +1184,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="payment_type"
+<<<<<<< Updated upstream
               DTS:DTSID="{359E9AEF-6983-4E53-BD88-6ABA9FC9D238}"
+=======
+              DTS:DTSID="{0105FDD4-8D4F-4ADF-A50A-DBE717E0DC14}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1092,7 +1197,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="payment_installments"
+<<<<<<< Updated upstream
               DTS:DTSID="{A5D9AE3F-96D0-435C-BBE8-6A8F9B557864}"
+=======
+              DTS:DTSID="{A39952D2-0419-414C-9591-BCE8779A5A9F}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1101,7 +1210,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="payment_value"
+<<<<<<< Updated upstream
               DTS:DTSID="{5AE3678B-5E41-43E7-963C-F0B6FDFD3006}"
+=======
+              DTS:DTSID="{0589188E-46DF-4DC8-B079-AF32285DE9C7}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1130,7 +1243,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="review_id"
+<<<<<<< Updated upstream
               DTS:DTSID="{6AC99DA9-AA00-49DA-8A21-68AB37F35C67}"
+=======
+              DTS:DTSID="{55751CBF-C36A-4117-B336-8A7EF92E348A}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1139,7 +1256,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="order_id"
+<<<<<<< Updated upstream
               DTS:DTSID="{7F2FC34E-1F14-4F81-9DF0-55A376F93195}"
+=======
+              DTS:DTSID="{EEC15225-5B1A-466A-A247-0CE2F4A9C665}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1148,7 +1269,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="review_score"
+<<<<<<< Updated upstream
               DTS:DTSID="{D3EED8A5-19AC-4D22-B2D5-1A363742C8E2}"
+=======
+              DTS:DTSID="{49FC001A-04D3-42E4-B7F3-B1A42B1AD661}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1157,7 +1282,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="review_comment_title"
+<<<<<<< Updated upstream
               DTS:DTSID="{80304BB3-596B-4A3D-95B9-BDFBEAE3ABF6}"
+=======
+              DTS:DTSID="{C877B1EA-52F2-4A30-921F-3AA55699579D}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1166,7 +1295,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="review_comment_message"
+<<<<<<< Updated upstream
               DTS:DTSID="{9463CB32-8305-4330-9F7C-4D4B386C4D27}"
+=======
+              DTS:DTSID="{0C2A15A7-04CA-4851-B3B9-AA6C43DB7F5C}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1175,7 +1308,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="review_creation_date"
+<<<<<<< Updated upstream
               DTS:DTSID="{8D3A936B-3D76-4264-8319-9346CF42920F}"
+=======
+              DTS:DTSID="{630C634E-C518-4258-99EB-E8C8A3F23B65}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1184,7 +1321,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="review_answer_timestamp"
+<<<<<<< Updated upstream
               DTS:DTSID="{0B7B2B8B-1155-4213-A08F-AFAB59B4887F}"
+=======
+              DTS:DTSID="{14E50BA5-8F1C-45D6-9481-4A05BD7875E8}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1213,7 +1354,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="product_id"
+<<<<<<< Updated upstream
               DTS:DTSID="{20A1D4AC-A6D9-46F0-88E4-274D94E7856D}"
+=======
+              DTS:DTSID="{B7180751-4234-4AB2-ACAC-3ABC1744F2C1}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1222,7 +1367,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="product_category_name"
+<<<<<<< Updated upstream
               DTS:DTSID="{A87881CC-483F-4167-B954-369B500F6038}"
+=======
+              DTS:DTSID="{69EDD79A-8576-48A5-8813-B11091E8C0A2}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1231,7 +1380,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="product_name_lenght"
+<<<<<<< Updated upstream
               DTS:DTSID="{2BFD9F99-500A-4035-A11C-1579C6077DD9}"
+=======
+              DTS:DTSID="{379B7A8E-64D9-4B4C-83F6-7ED0F269E78D}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1240,7 +1393,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="product_description_lenght"
+<<<<<<< Updated upstream
               DTS:DTSID="{6FA64500-D872-47AA-BFDF-B09CA53B1422}"
+=======
+              DTS:DTSID="{261B3532-146A-4332-8DC8-FD6BDBC0E9A4}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1249,7 +1406,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="product_photos_qty"
+<<<<<<< Updated upstream
               DTS:DTSID="{D0C24658-3D5C-4711-9624-8FC56C67FD5A}"
+=======
+              DTS:DTSID="{80BD936F-B316-4CD5-95BE-0FC9A9C477CF}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1258,7 +1419,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="product_weight_g"
+<<<<<<< Updated upstream
               DTS:DTSID="{7DC82102-FF56-4B4C-9389-EA37EED4BBE4}"
+=======
+              DTS:DTSID="{C5230C32-E466-4B8A-B340-F1B89DB8D196}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1267,7 +1432,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="product_length_cm"
+<<<<<<< Updated upstream
               DTS:DTSID="{7258411F-AEF5-492C-AEB8-041BFB505FF7}"
+=======
+              DTS:DTSID="{1B969D42-75E1-4E0F-A5B9-AFE43F951778}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1276,7 +1445,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="product_height_cm"
+<<<<<<< Updated upstream
               DTS:DTSID="{9CBA9C01-8CAA-4842-AC5E-D5CFA3488E36}"
+=======
+              DTS:DTSID="{C8E6E3FE-73C3-4FA5-93F5-562F4C1D2CF7}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1285,7 +1458,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="product_width_cm"
+<<<<<<< Updated upstream
               DTS:DTSID="{C1AA6FA6-9727-4695-A9BD-6E5F8599EFF3}"
+=======
+              DTS:DTSID="{759F87C6-5FE8-46F8-862F-4679739084E6}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1314,7 +1491,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="seller_id"
+<<<<<<< Updated upstream
               DTS:DTSID="{64CFBDDB-CE2E-4345-B255-447BBFC96352}"
+=======
+              DTS:DTSID="{8FD134E7-B089-4AFE-9374-FF2FC60ECFF9}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1323,7 +1504,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="seller_zip_code_prefix"
+<<<<<<< Updated upstream
               DTS:DTSID="{6CCC0E42-54BD-4DB5-ADFC-4C080CF1DF6F}"
+=======
+              DTS:DTSID="{D5B97FB2-31AC-40DE-9910-2B40786313CD}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1332,7 +1517,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="seller_city"
+<<<<<<< Updated upstream
               DTS:DTSID="{A2826578-4EE4-4FC0-9583-39DEAC858DFC}"
+=======
+              DTS:DTSID="{CEB1F26D-BD81-4928-96C8-85A12AB2BBB3}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1341,7 +1530,11 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="seller_state"
+<<<<<<< Updated upstream
               DTS:DTSID="{19059A1E-9522-408E-9259-938578FE3BFB}"
+=======
+              DTS:DTSID="{473DF306-6BF1-4591-BA88-7C51B15DB90B}"
+>>>>>>> Stashed changes
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1356,7 +1549,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
+<<<<<<< Updated upstream
           DTS:ConnectionString="Data Source=ZAWO-LAPTOP;Initial Catalog=BrazilianOlist;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{3C3CA077-3DF1-48E4-B02F-044570C3633E}ZAWO-LAPTOP.BrazilianOlist;" />
+=======
+          DTS:ConnectionString="Data Source=ZAWO-LAPTOP;Initial Catalog=BrazilianOlist;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{3C3CA077-3DF1-48E4-B02F-044570C3633E}ZAWO-LAPTOP.BrazilianOlist;Auto Translate=False;" />
+>>>>>>> Stashed changes
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -1387,6 +1584,7 @@
               version="1">
               <components>
                 <component
+<<<<<<< Updated upstream
                   refId="Package\SC_CleanStage\DFT_CustomersClean\Aggregate 1"
                   componentClassID="Microsoft.Aggregate"
                   contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
@@ -1678,10 +1876,22 @@
                   <inputs>
                     <input
                       refId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column 1.Inputs[Derived Column Input]"
+=======
+                  refId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Derived Column"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column.Inputs[Derived Column Input]"
+>>>>>>> Stashed changes
                       description="Input to the Derived Column Transformation"
                       name="Derived Column Input">
                       <inputColumns>
                         <inputColumn
+<<<<<<< Updated upstream
                           refId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column 1.Inputs[Derived Column Input].Columns[order_count]"
                           cachedDataType="i4"
                           cachedName="order_count"
@@ -1764,11 +1974,18 @@
                       <inputColumns>
                         <inputColumn
                           refId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column 2.Inputs[Derived Column Input].Columns[city_population]"
+=======
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column.Inputs[Derived Column Input].Columns[city_population]"
+>>>>>>> Stashed changes
                           cachedDataType="i4"
                           cachedName="city_population"
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[city_population]" />
                         <inputColumn
+<<<<<<< Updated upstream
                           refId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column 2.Inputs[Derived Column Input].Columns[city_area_km2]"
+=======
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column.Inputs[Derived Column Input].Columns[city_area_km2]"
+>>>>>>> Stashed changes
                           cachedDataType="numeric"
                           cachedName="city_area_km2"
                           cachedPrecision="18"
@@ -1780,6 +1997,7 @@
                   </inputs>
                   <outputs>
                     <output
+<<<<<<< Updated upstream
                       refId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column 2.Outputs[Derived Column Output]"
                       description="Default Output of the Derived Column Transformation"
                       exclusionGroup="1"
@@ -1792,6 +2010,20 @@
                           errorOrTruncationOperation="Computation"
                           errorRowDisposition="FailComponent"
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column 2.Outputs[Derived Column Output].Columns[city_density]"
+=======
+                      refId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column.Outputs[Derived Column Output].Columns[city_density]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column.Outputs[Derived Column Output].Columns[city_density]"
+>>>>>>> Stashed changes
                           name="city_density"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -1812,11 +2044,16 @@
                       <externalMetadataColumns />
                     </output>
                     <output
+<<<<<<< Updated upstream
                       refId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column 2.Outputs[Derived Column Error Output]"
+=======
+                      refId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column.Outputs[Derived Column Error Output]"
+>>>>>>> Stashed changes
                       description="Error Output of the Derived Column Transformation"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="Derived Column Error Output"
+<<<<<<< Updated upstream
                       synchronousInputId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column 2.Inputs[Derived Column Input]">
                       <outputColumns>
                         <outputColumn
@@ -1829,6 +2066,20 @@
                           refId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                           dataType="i4"
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+=======
+                      synchronousInputId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+>>>>>>> Stashed changes
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -1879,7 +2130,11 @@
                     <property
                       dataType="System.Single"
                       description="Specifies the minimum similarity score required for the match results that the transformation returns."
+<<<<<<< Updated upstream
                       name="MinSimilarity">0</property>
+=======
+                      name="MinSimilarity">0.75</property>
+>>>>>>> Stashed changes
                     <property
                       dataType="System.String"
                       description="Specifies the set of white-space and punctuation characters used to separate fuzzy match fields into the words used for matching and scoring a fuzzy lookup."
@@ -1913,11 +2168,49 @@
                       name="Fuzzy Lookup Input">
                       <inputColumns>
                         <inputColumn
+<<<<<<< Updated upstream
+=======
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Inputs[Fuzzy Lookup Input].Columns[customer_id]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="customer_id"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]">
+                          <properties>
+                            <property
+                              dataType="System.Null"
+                              description="Name of the reference table column with which the input column should be matched."
+                              name="JoinToReferenceColumn"
+                              state="escaped" />
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies whether the match is a fuzzy or an exact match."
+                              name="JoinType"
+                              typeConverter="tcJoinType">2</property>
+                            <property
+                              dataType="System.Single"
+                              description="Specifies the minimum textual similarity required between input and fuzzy matched records on values in this particular join column.  Must be a floating point value between 0.0 and 1.0."
+                              name="MinSimilarity">0</property>
+                            <property
+                              dataType="System.UInt32"
+                              description="Specifies the comparison options for character data. The options are those supported by the FoldString function."
+                              name="FuzzyComparisonFlags"
+                              typeConverter="tcComparisonFlags">1</property>
+                            <property
+                              dataType="System.UInt32"
+                              description="Flags to FoldString that should be used when comparing whether two strings are equivalent."
+                              name="FuzzyComparisonFlagsEx"
+                              typeConverter="tcComparisonFlagsEx">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+>>>>>>> Stashed changes
                           refId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Inputs[Fuzzy Lookup Input].Columns[customer_unique_id]"
                           cachedCodepage="1250"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="customer_unique_id"
+<<<<<<< Updated upstream
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\Aggregate 1.Outputs[Aggregate Output 1].Columns[customer_unique_id]">
                           <properties>
                             <property
@@ -2050,6 +2343,9 @@
                           cachedLength="9"
                           cachedName="Copy of customer_tag"
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of customer_tag]">
+=======
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_unique_id]">
+>>>>>>> Stashed changes
                           <properties>
                             <property
                               dataType="System.Null"
@@ -2083,7 +2379,11 @@
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="customer_zip_code_prefix"
+<<<<<<< Updated upstream
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\Lookup.Outputs[Lookup Match Output].Columns[customer_zip_code_prefix]">
+=======
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_zip_code_prefix]">
+>>>>>>> Stashed changes
                           <properties>
                             <property
                               dataType="System.Null"
@@ -2117,7 +2417,11 @@
                           cachedDataType="str"
                           cachedLength="100"
                           cachedName="customer_city"
+<<<<<<< Updated upstream
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\Lookup.Outputs[Lookup Match Output].Columns[customer_city]">
+=======
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_city]">
+>>>>>>> Stashed changes
                           <properties>
                             <property
                               dataType="System.String"
@@ -2151,7 +2455,11 @@
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="customer_state"
+<<<<<<< Updated upstream
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\Lookup.Outputs[Lookup Match Output].Columns[customer_state]">
+=======
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_state]">
+>>>>>>> Stashed changes
                           <properties>
                             <property
                               dataType="System.String"
@@ -2189,6 +2497,34 @@
                       name="Fuzzy Lookup Output">
                       <outputColumns>
                         <outputColumn
+<<<<<<< Updated upstream
+=======
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[customer_id]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[customer_id]"
+                          name="customer_id">
+                          <properties>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the reference table column that is copied to the output for each match result."
+                              name="CopyFromReferenceColumn"
+                              state="escaped" />
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
+                              name="SourceInputColumnLineageID">#{Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]}</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies whether the column is used to indicate confidence or similarity."
+                              name="ColumnType"
+                              typeConverter="tcColumnType">0</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+>>>>>>> Stashed changes
                           refId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[customer_unique_id]"
                           codePage="1250"
                           dataType="str"
@@ -2205,6 +2541,7 @@
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
+<<<<<<< Updated upstream
                               name="SourceInputColumnLineageID">#{Package\SC_CleanStage\DFT_CustomersClean\Aggregate 1.Outputs[Aggregate Output 1].Columns[customer_unique_id]}</property>
                             <property
                               dataType="System.Int32"
@@ -2301,6 +2638,9 @@
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
                               name="SourceInputColumnLineageID">#{Package\SC_CleanStage\DFT_CustomersClean\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of customer_tag]}</property>
+=======
+                              name="SourceInputColumnLineageID">#{Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_unique_id]}</property>
+>>>>>>> Stashed changes
                             <property
                               dataType="System.Int32"
                               description="Specifies whether the column is used to indicate confidence or similarity."
@@ -2325,7 +2665,11 @@
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
+<<<<<<< Updated upstream
                               name="SourceInputColumnLineageID">#{Package\SC_CleanStage\DFT_CustomersClean\Lookup.Outputs[Lookup Match Output].Columns[customer_zip_code_prefix]}</property>
+=======
+                              name="SourceInputColumnLineageID">#{Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_zip_code_prefix]}</property>
+>>>>>>> Stashed changes
                             <property
                               dataType="System.Int32"
                               description="Specifies whether the column is used to indicate confidence or similarity."
@@ -2350,7 +2694,11 @@
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
+<<<<<<< Updated upstream
                               name="SourceInputColumnLineageID">#{Package\SC_CleanStage\DFT_CustomersClean\Lookup.Outputs[Lookup Match Output].Columns[customer_city]}</property>
+=======
+                              name="SourceInputColumnLineageID">#{Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_city]}</property>
+>>>>>>> Stashed changes
                             <property
                               dataType="System.Int32"
                               description="Specifies whether the column is used to indicate confidence or similarity."
@@ -2375,7 +2723,11 @@
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
+<<<<<<< Updated upstream
                               name="SourceInputColumnLineageID">#{Package\SC_CleanStage\DFT_CustomersClean\Lookup.Outputs[Lookup Match Output].Columns[customer_state]}</property>
+=======
+                              name="SourceInputColumnLineageID">#{Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_state]}</property>
+>>>>>>> Stashed changes
                             <property
                               dataType="System.Int32"
                               description="Specifies whether the column is used to indicate confidence or similarity."
@@ -2384,19 +2736,34 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
+<<<<<<< Updated upstream
                           refId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[city_area_km2]"
                           dataType="numeric"
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[city_area_km2]"
                           name="city_area_km2"
                           precision="18"
                           scale="2">
+=======
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[STATE]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[STATE]"
+                          name="STATE">
+>>>>>>> Stashed changes
                           <properties>
                             <property
                               dataType="System.String"
                               description="Specifies the reference table column that is copied to the output for each match result."
                               name="CopyFromReferenceColumn"
+<<<<<<< Updated upstream
                               state="escaped">AREA</property>
                             <property
+=======
+                              state="escaped">STATE</property>
+                            <property
+                              containsID="true"
+>>>>>>> Stashed changes
                               dataType="System.Null"
                               description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
                               name="SourceInputColumnLineageID" />
@@ -2419,6 +2786,60 @@
                               name="CopyFromReferenceColumn"
                               state="escaped">ESTIMATED_POP</property>
                             <property
+<<<<<<< Updated upstream
+=======
+                              containsID="true"
+                              dataType="System.Null"
+                              description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
+                              name="SourceInputColumnLineageID" />
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies whether the column is used to indicate confidence or similarity."
+                              name="ColumnType"
+                              typeConverter="tcColumnType">0</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[CITY]"
+                          codePage="1250"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[CITY]"
+                          name="CITY">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the reference table column that is copied to the output for each match result."
+                              name="CopyFromReferenceColumn"
+                              state="escaped">CITY</property>
+                            <property
+                              containsID="true"
+                              dataType="System.Null"
+                              description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
+                              name="SourceInputColumnLineageID" />
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies whether the column is used to indicate confidence or similarity."
+                              name="ColumnType"
+                              typeConverter="tcColumnType">0</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[city_area_km2]"
+                          dataType="numeric"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[city_area_km2]"
+                          name="city_area_km2"
+                          precision="18"
+                          scale="2">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the reference table column that is copied to the output for each match result."
+                              name="CopyFromReferenceColumn"
+                              state="escaped">AREA</property>
+                            <property
+                              containsID="true"
+>>>>>>> Stashed changes
                               dataType="System.Null"
                               description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
                               name="SourceInputColumnLineageID" />
@@ -2443,6 +2864,10 @@
                               name="CopyFromReferenceColumn"
                               state="escaped">GDP_CAPITA</property>
                             <property
+<<<<<<< Updated upstream
+=======
+                              containsID="true"
+>>>>>>> Stashed changes
                               dataType="System.Null"
                               description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
                               name="SourceInputColumnLineageID" />
@@ -2495,7 +2920,11 @@
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
+<<<<<<< Updated upstream
                               name="SourceInputColumnLineageID">#{Package\SC_CleanStage\DFT_CustomersClean\Lookup.Outputs[Lookup Match Output].Columns[customer_city]}</property>
+=======
+                              name="SourceInputColumnLineageID">#{Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_city]}</property>
+>>>>>>> Stashed changes
                             <property
                               dataType="System.Int32"
                               description="Specifies whether the column is used to indicate confidence or similarity."
@@ -2519,7 +2948,11 @@
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
+<<<<<<< Updated upstream
                               name="SourceInputColumnLineageID">#{Package\SC_CleanStage\DFT_CustomersClean\Lookup.Outputs[Lookup Match Output].Columns[customer_state]}</property>
+=======
+                              name="SourceInputColumnLineageID">#{Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_state]}</property>
+>>>>>>> Stashed changes
                             <property
                               dataType="System.Int32"
                               description="Specifies whether the column is used to indicate confidence or similarity."
@@ -2533,6 +2966,7 @@
                   </outputs>
                 </component>
                 <component
+<<<<<<< Updated upstream
                   refId="Package\SC_CleanStage\DFT_CustomersClean\Lookup"
                   componentClassID="Microsoft.Lookup"
                   contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
@@ -2732,6 +3166,13 @@ where [refTable].[customer_unique_id] = ?</property>
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
                   description="OLE DB Destination"
                   name="OLE DB Destination 1"
+=======
+                  refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+>>>>>>> Stashed changes
                   usesDispositions="true"
                   version="4">
                   <properties>
@@ -2784,7 +3225,11 @@ where [refTable].[customer_unique_id] = ?</property>
                   </properties>
                   <connections>
                     <connection
+<<<<<<< Updated upstream
                       refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Connections[OleDbConnection]"
+=======
+                      refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Connections[OleDbConnection]"
+>>>>>>> Stashed changes
                       connectionManagerID="Package.ConnectionManagers[ZAWO-LAPTOP.BrazilianOlist]"
                       connectionManagerRefId="Package.ConnectionManagers[ZAWO-LAPTOP.BrazilianOlist]"
                       description="The OLE DB runtime connection used to access the database."
@@ -2792,13 +3237,18 @@ where [refTable].[customer_unique_id] = ?</property>
                   </connections>
                   <inputs>
                     <input
+<<<<<<< Updated upstream
                       refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
+=======
+                      refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input]"
+>>>>>>> Stashed changes
                       errorOrTruncationOperation="Insert"
                       errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
                         <inputColumn
+<<<<<<< Updated upstream
                           refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[customer_unique_id]"
                           cachedCodepage="1250"
                           cachedDataType="str"
@@ -2808,18 +3258,37 @@ where [refTable].[customer_unique_id] = ?</property>
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[customer_unique_id]" />
                         <inputColumn
                           refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[customer_city]"
+=======
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customer_id]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="customer_id"
+                          externalMetadataColumnId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[customer_id]" />
+                        <inputColumn
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customer_city]"
+>>>>>>> Stashed changes
                           cachedCodepage="1250"
                           cachedDataType="str"
                           cachedLength="100"
                           cachedName="customer_city"
+<<<<<<< Updated upstream
                           externalMetadataColumnId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[customer_city]"
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[customer_city]" />
                         <inputColumn
                           refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[customer_state]"
+=======
+                          externalMetadataColumnId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_city]"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[customer_city]" />
+                        <inputColumn
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customer_state]"
+>>>>>>> Stashed changes
                           cachedCodepage="1250"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="customer_state"
+<<<<<<< Updated upstream
                           externalMetadataColumnId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[customer_state]"
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[customer_state]" />
                         <inputColumn
@@ -2830,10 +3299,29 @@ where [refTable].[customer_unique_id] = ?</property>
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[city_population]" />
                         <inputColumn
                           refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[city_area_km2]"
+=======
+                          externalMetadataColumnId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_state]"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[customer_state]" />
+                        <inputColumn
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[city_density]"
+                          cachedDataType="r8"
+                          cachedName="city_density"
+                          externalMetadataColumnId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city_density]"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column.Outputs[Derived Column Output].Columns[city_density]" />
+                        <inputColumn
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[city_population]"
+                          cachedDataType="i4"
+                          cachedName="city_population"
+                          externalMetadataColumnId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city_population]"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[city_population]" />
+                        <inputColumn
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[city_area_km2]"
+>>>>>>> Stashed changes
                           cachedDataType="numeric"
                           cachedName="city_area_km2"
                           cachedPrecision="18"
                           cachedScale="2"
+<<<<<<< Updated upstream
                           externalMetadataColumnId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[city_area_km2]"
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[city_area_km2]" />
                         <inputColumn
@@ -2844,10 +3332,17 @@ where [refTable].[customer_unique_id] = ?</property>
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column 2.Outputs[Derived Column Output].Columns[city_density]" />
                         <inputColumn
                           refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[GDP_CAPITA]"
+=======
+                          externalMetadataColumnId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city_area_km2]"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[city_area_km2]" />
+                        <inputColumn
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[GDP_CAPITA]"
+>>>>>>> Stashed changes
                           cachedDataType="numeric"
                           cachedName="GDP_CAPITA"
                           cachedPrecision="18"
                           cachedScale="2"
+<<<<<<< Updated upstream
                           externalMetadataColumnId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[city_gdp_per_capita]"
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[GDP_CAPITA]" />
                         <inputColumn
@@ -2858,16 +3353,25 @@ where [refTable].[customer_unique_id] = ?</property>
                           cachedName="Copy of customer_tag"
                           externalMetadataColumnId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[customer_tag]"
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[Copy of customer_tag]" />
+=======
+                          externalMetadataColumnId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city_gdp_per_capita]"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output].Columns[GDP_CAPITA]" />
+>>>>>>> Stashed changes
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
+<<<<<<< Updated upstream
                           refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+=======
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+>>>>>>> Stashed changes
                           codePage="1250"
                           dataType="str"
                           length="50"
                           name="customer_id" />
                         <externalMetadataColumn
+<<<<<<< Updated upstream
                           refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[customer_state]"
                           codePage="1250"
                           dataType="str"
@@ -2875,11 +3379,15 @@ where [refTable].[customer_unique_id] = ?</property>
                           name="customer_state" />
                         <externalMetadataColumn
                           refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[customer_city]"
+=======
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_city]"
+>>>>>>> Stashed changes
                           codePage="1250"
                           dataType="str"
                           length="100"
                           name="customer_city" />
                         <externalMetadataColumn
+<<<<<<< Updated upstream
                           refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[city_population]"
                           dataType="i4"
                           name="city_population" />
@@ -2907,11 +3415,41 @@ where [refTable].[customer_unique_id] = ?</property>
                           dataType="str"
                           length="100"
                           name="customer_tag" />
+=======
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_state]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
+                          name="customer_state" />
+                        <externalMetadataColumn
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city_population]"
+                          dataType="i4"
+                          name="city_population" />
+                        <externalMetadataColumn
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city_area_km2]"
+                          dataType="numeric"
+                          name="city_area_km2"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city_density]"
+                          dataType="numeric"
+                          name="city_density"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[city_gdp_per_capita]"
+                          dataType="numeric"
+                          name="city_gdp_per_capita"
+                          precision="10"
+                          scale="6" />
+>>>>>>> Stashed changes
                       </externalMetadataColumns>
                     </input>
                   </inputs>
                   <outputs>
                     <output
+<<<<<<< Updated upstream
                       refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
                       exclusionGroup="1"
                       isErrorOut="true"
@@ -2928,6 +3466,24 @@ where [refTable].[customer_unique_id] = ?</property>
                           refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           dataType="i4"
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+=======
+                      refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+>>>>>>> Stashed changes
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -2960,8 +3516,12 @@ where [refTable].[customer_unique_id] = ?</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
+<<<<<<< Updated upstream
                       UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT customer_id, 1 AS order_count
 FROM [Stage].[OrdersClean];</property>
+=======
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+>>>>>>> Stashed changes
                     <property
                       dataType="System.String"
                       description="The variable that contains the SQL command to be executed."
@@ -3093,11 +3653,20 @@ FROM [Stage].[OrdersClean];</property>
                       name="OLE DB Source Error Output">
                       <outputColumns>
                         <outputColumn
+<<<<<<< Updated upstream
                           refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
+=======
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customer_id]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customer_id]"
+                          name="customer_id" />
+>>>>>>> Stashed changes
                         <outputColumn
                           refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customer_unique_id]"
                           codePage="1250"
@@ -3127,11 +3696,21 @@ FROM [Stage].[OrdersClean];</property>
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customer_state]"
                           name="customer_state" />
                         <outputColumn
+<<<<<<< Updated upstream
+=======
+                          refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+>>>>>>> Stashed changes
                           refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                           dataType="i4"
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
+<<<<<<< Updated upstream
                         <outputColumn
                           refId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customer_id]"
                           codePage="1250"
@@ -3139,11 +3718,14 @@ FROM [Stage].[OrdersClean];</property>
                           length="50"
                           lineageId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[customer_id]"
                           name="customer_id" />
+=======
+>>>>>>> Stashed changes
                       </outputColumns>
                       <externalMetadataColumns />
                     </output>
                   </outputs>
                 </component>
+<<<<<<< Updated upstream
                 <component
                   refId="Package\SC_CleanStage\DFT_CustomersClean\Raw File Destination"
                   componentClassID="Microsoft.RawDestination"
@@ -3284,6 +3866,23 @@ FROM [Stage].[OrdersClean];</property>
                 <path
                   refId="Package\SC_CleanStage\DFT_CustomersClean.Paths[OLE DB Source Output]"
                   endId="Package\SC_CleanStage\DFT_CustomersClean\Aggregate 1.Inputs[Aggregate Input 1]"
+=======
+              </components>
+              <paths>
+                <path
+                  refId="Package\SC_CleanStage\DFT_CustomersClean.Paths[Derived Column Output]"
+                  endId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\SC_CleanStage\DFT_CustomersClean.Paths[Fuzzy Lookup Output]"
+                  endId="Package\SC_CleanStage\DFT_CustomersClean\Derived Column.Inputs[Derived Column Input]"
+                  name="Fuzzy Lookup Output"
+                  startId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Outputs[Fuzzy Lookup Output]" />
+                <path
+                  refId="Package\SC_CleanStage\DFT_CustomersClean.Paths[OLE DB Source Output]"
+                  endId="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup.Inputs[Fuzzy Lookup Input]"
+>>>>>>> Stashed changes
                   name="OLE DB Source Output"
                   startId="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source.Outputs[OLE DB Source Output]" />
               </paths>
@@ -3714,6 +4313,7 @@ FROM [Stage].[OrdersClean];</property>
                   </outputs>
                 </component>
                 <component
+<<<<<<< Updated upstream
                   refId="Package\SC_CleanStage\DFT_OrdersClean\Lookup"
                   componentClassID="Microsoft.Lookup"
                   contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
@@ -3876,6 +4476,8 @@ where [refTable].[customer_id] = ?</property>
                   </outputs>
                 </component>
                 <component
+=======
+>>>>>>> Stashed changes
                   refId="Package\SC_CleanStage\DFT_OrdersClean\OLE DB Destination"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -4032,6 +4634,17 @@ where [refTable].[customer_id] = ?</property>
                           externalMetadataColumnId="Package\SC_CleanStage\DFT_OrdersClean\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[second_n]"
                           lineageId="Package\SC_CleanStage\DFT_OrdersClean\Derived Column.Outputs[Derived Column Output].Columns[sedond_n]" />
                         <inputColumn
+<<<<<<< Updated upstream
+=======
+                          refId="Package\SC_CleanStage\DFT_OrdersClean\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customer_id]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="customer_id"
+                          externalMetadataColumnId="Package\SC_CleanStage\DFT_OrdersClean\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
+                          lineageId="Package\SC_CleanStage\DFT_OrdersClean\OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]" />
+                        <inputColumn
+>>>>>>> Stashed changes
                           refId="Package\SC_CleanStage\DFT_OrdersClean\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[order_status]"
                           cachedCodepage="1250"
                           cachedDataType="str"
@@ -4039,6 +4652,7 @@ where [refTable].[customer_id] = ?</property>
                           cachedName="order_status"
                           externalMetadataColumnId="Package\SC_CleanStage\DFT_OrdersClean\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[order_status]"
                           lineageId="Package\SC_CleanStage\DFT_OrdersClean\OLE DB Source.Outputs[OLE DB Source Output].Columns[order_status]" />
+<<<<<<< Updated upstream
                         <inputColumn
                           refId="Package\SC_CleanStage\DFT_OrdersClean\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customer_unique_id]"
                           cachedCodepage="1250"
@@ -4047,6 +4661,8 @@ where [refTable].[customer_id] = ?</property>
                           cachedName="customer_unique_id"
                           externalMetadataColumnId="Package\SC_CleanStage\DFT_OrdersClean\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
                           lineageId="Package\SC_CleanStage\DFT_OrdersClean\Lookup.Outputs[Lookup Match Output].Columns[customer_unique_id]" />
+=======
+>>>>>>> Stashed changes
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -4644,6 +5260,7 @@ where [refTable].[customer_id] = ?</property>
                     </input>
                   </inputs>
                 </component>
+<<<<<<< Updated upstream
                 <component
                   refId="Package\SC_CleanStage\DFT_OrdersClean\Raw File Destination 2"
                   componentClassID="Microsoft.RawDestination"
@@ -4736,6 +5353,8 @@ where [refTable].[customer_id] = ?</property>
                     </input>
                   </inputs>
                 </component>
+=======
+>>>>>>> Stashed changes
               </components>
               <paths>
                 <path
@@ -4755,6 +5374,7 @@ where [refTable].[customer_id] = ?</property>
                   startId="Package\SC_CleanStage\DFT_OrdersClean\Derived Column.Outputs[Derived Column Error Output]" />
                 <path
                   refId="Package\SC_CleanStage\DFT_OrdersClean.Paths[Derived Column Output]"
+<<<<<<< Updated upstream
                   endId="Package\SC_CleanStage\DFT_OrdersClean\Lookup.Inputs[Lookup Input]"
                   name="Derived Column Output"
                   startId="Package\SC_CleanStage\DFT_OrdersClean\Derived Column.Outputs[Derived Column Output]" />
@@ -4774,6 +5394,12 @@ where [refTable].[customer_id] = ?</property>
                   name="Lookup No Match Output"
                   startId="Package\SC_CleanStage\DFT_OrdersClean\Lookup.Outputs[Lookup No Match Output]" />
                 <path
+=======
+                  endId="Package\SC_CleanStage\DFT_OrdersClean\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\SC_CleanStage\DFT_OrdersClean\Derived Column.Outputs[Derived Column Output]" />
+                <path
+>>>>>>> Stashed changes
                   refId="Package\SC_CleanStage\DFT_OrdersClean.Paths[OLE DB Source Output]"
                   endId="Package\SC_CleanStage\DFT_OrdersClean\Data Conversion.Inputs[Data Conversion Input]"
                   name="OLE DB Source Output"
@@ -6586,7 +7212,11 @@ where [refTable].[customer_id] = ?</property>
                     <property
                       dataType="System.Single"
                       description="Specifies the minimum similarity score required for the match results that the transformation returns."
+<<<<<<< Updated upstream
                       name="MinSimilarity">0.5</property>
+=======
+                      name="MinSimilarity">0.75</property>
+>>>>>>> Stashed changes
                     <property
                       dataType="System.String"
                       description="Specifies the set of white-space and punctuation characters used to separate fuzzy match fields into the words used for matching and scoring a fuzzy lookup."
@@ -6976,7 +7606,10 @@ where [refTable].[customer_id] = ?</property>
                               name="CopyFromReferenceColumn"
                               state="escaped">GDP_CAPITA</property>
                             <property
+<<<<<<< Updated upstream
                               containsID="true"
+=======
+>>>>>>> Stashed changes
                               dataType="System.Null"
                               description="Specifies the lineage identifier of the input column from which to copy to this output column for each match."
                               name="SourceInputColumnLineageID" />
@@ -7535,7 +8168,11 @@ where [refTable].[customer_id] = ?</property>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{3C3CA077-3DF1-48E4-B02F-044570C3633E}"
+<<<<<<< Updated upstream
               SQLTask:SqlStatementSource="IF OBJECT_ID('Stepaniuk.CustomerDim','U') IS NULL&#xA;BEGIN&#xA;  CREATE TABLE Stepaniuk.CustomerDim (&#xA;    customer_id     VARCHAR(50)  PRIMARY KEY,&#xA;    customer_state  CHAR(2)      NOT NULL,&#xA;    customer_city   VARCHAR(100) NOT NULL,&#xA;    city_population INT           NULL,&#xA;    city_area_km2   DECIMAL(10,2) NULL,&#xA;    city_density    DECIMAL(10,2) NULL,&#xA;    customer_tag    VARCHAR(100)&#xA;  );&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+=======
+              SQLTask:SqlStatementSource="IF OBJECT_ID('Stepaniuk.CustomerDim','U') IS NULL&#xA;BEGIN&#xA;  CREATE TABLE Stepaniuk.CustomerDim (&#xA;    customer_id     VARCHAR(50)  PRIMARY KEY,&#xA;    customer_state  CHAR(2)      NOT NULL,&#xA;    customer_city   VARCHAR(100) NOT NULL,&#xA;    city_population INT           NULL,&#xA;    city_area_km2   DECIMAL(10,2) NULL,&#xA;    city_density    DECIMAL(10,2) NULL&#xA;  );&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+>>>>>>> Stashed changes
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -7808,7 +8445,11 @@ where [refTable].[customer_id] = ?</property>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{3C3CA077-3DF1-48E4-B02F-044570C3633E}"
+<<<<<<< Updated upstream
               SQLTask:SqlStatementSource="IF OBJECT_ID('Stage.CustomersClean','U') IS NULL&#xA;BEGIN&#xA;  CREATE TABLE Stage.CustomersClean (&#xA;    customer_id     VARCHAR(50) PRIMARY KEY,&#xA;    customer_state  CHAR(50),&#xA;    customer_city   VARCHAR(100),&#xA;    city_population INT       NULL,&#xA;    city_area_km2   DECIMAL(18,2) NULL,&#xA;    city_density    DECIMAL(18,2) NULL,&#xA;    city_gdp_per_capita DECIMAL(18,2) NULL,&#xA;    customer_tag     VARCHAR(100)&#xA;  );&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+=======
+              SQLTask:SqlStatementSource="IF OBJECT_ID('Stage.CustomersClean','U') IS NULL&#xA;BEGIN&#xA;  CREATE TABLE Stage.CustomersClean (&#xA;    customer_id     VARCHAR(50) PRIMARY KEY,&#xA;    customer_state  CHAR(50),&#xA;    customer_city   VARCHAR(100),&#xA;    city_population INT       NULL,&#xA;    city_area_km2   DECIMAL(18,2) NULL,&#xA;    city_density    DECIMAL(18,2) NULL,&#xA;    city_gdp_per_capita DECIMAL(18,2) NULL&#xA;  );&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+>>>>>>> Stashed changes
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -8181,7 +8822,11 @@ where [refTable].[customer_id] = ?</property>
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{3C3CA077-3DF1-48E4-B02F-044570C3633E}"
+<<<<<<< Updated upstream
               SQLTask:SqlStatementSource="MERGE Stepaniuk.CustomerDim AS T&#xA;USING (&#xA;  SELECT DISTINCT&#xA;    customer_id, customer_state, customer_city,&#xA;    city_population, city_area_km2, city_density, customer_tag&#xA;  FROM Stage.CustomersClean&#xA;) AS S&#xA;ON T.customer_id = S.customer_id&#xA;WHEN MATCHED THEN&#xA;  UPDATE SET&#xA;    customer_state  = S.customer_state,&#xA;    customer_city   = S.customer_city,&#xA;    city_population = S.city_population,&#xA;    city_area_km2   = S.city_area_km2,&#xA;    city_density    = S.city_density,&#xA;    customer_tag = S.customer_tag&#xA;WHEN NOT MATCHED THEN&#xA;  INSERT (customer_id, customer_state, customer_city,&#xA;          city_population, city_area_km2, city_density, customer_tag)&#xA;  VALUES (S.customer_id, S.customer_state, S.customer_city,&#xA;          S.city_population, S.city_area_km2, S.city_density, S.customer_tag);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+=======
+              SQLTask:SqlStatementSource="MERGE Stepaniuk.CustomerDim AS T&#xA;USING (&#xA;  SELECT DISTINCT&#xA;    customer_id, customer_state, customer_city,&#xA;    city_population, city_area_km2, city_density&#xA;  FROM Stage.CustomersClean&#xA;) AS S&#xA;ON T.customer_id = S.customer_id&#xA;WHEN MATCHED THEN&#xA;  UPDATE SET&#xA;    customer_state  = S.customer_state,&#xA;    customer_city   = S.customer_city,&#xA;    city_population = S.city_population,&#xA;    city_area_km2   = S.city_area_km2,&#xA;    city_density    = S.city_density&#xA;WHEN NOT MATCHED THEN&#xA;  INSERT (customer_id, customer_state, customer_city,&#xA;          city_population, city_area_km2, city_density)&#xA;  VALUES (S.customer_id, S.customer_state, S.customer_city,&#xA;          S.city_population, S.city_area_km2, S.city_density);&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+>>>>>>> Stashed changes
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -10461,6 +11106,7 @@ where [refTable].[customer_id] = ?</property>
                       name="Flat File Source Output">
                       <outputColumns>
                         <outputColumn
+<<<<<<< Updated upstream
                           refId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].Columns[order_estimated_delivery_date]"
                           codePage="1250"
                           dataType="str"
@@ -10483,12 +11129,18 @@ where [refTable].[customer_id] = ?</property>
                           </properties>
                         </outputColumn>
                         <outputColumn
+=======
+>>>>>>> Stashed changes
                           refId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].Columns[order_id]"
                           codePage="1250"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                           externalMetadataColumnId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;order_id&quot;]"
+=======
+                          externalMetadataColumnId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[order_id]"
+>>>>>>> Stashed changes
                           length="50"
                           lineageId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].Columns[order_id]"
                           name="order_id"
@@ -10510,7 +11162,11 @@ where [refTable].[customer_id] = ?</property>
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                           externalMetadataColumnId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;customer_id&quot;]"
+=======
+                          externalMetadataColumnId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[customer_id]"
+>>>>>>> Stashed changes
                           length="50"
                           lineageId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].Columns[customer_id]"
                           name="customer_id"
@@ -10532,7 +11188,11 @@ where [refTable].[customer_id] = ?</property>
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                           externalMetadataColumnId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;order_status&quot;]"
+=======
+                          externalMetadataColumnId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[order_status]"
+>>>>>>> Stashed changes
                           length="50"
                           lineageId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].Columns[order_status]"
                           name="order_status"
@@ -10554,7 +11214,11 @@ where [refTable].[customer_id] = ?</property>
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                           externalMetadataColumnId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;order_purchase_timestamp&quot;]"
+=======
+                          externalMetadataColumnId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[order_purchase_timestamp]"
+>>>>>>> Stashed changes
                           length="50"
                           lineageId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].Columns[order_purchase_timestamp]"
                           name="order_purchase_timestamp"
@@ -10576,7 +11240,11 @@ where [refTable].[customer_id] = ?</property>
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                           externalMetadataColumnId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;order_approved_at&quot;]"
+=======
+                          externalMetadataColumnId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[order_approved_at]"
+>>>>>>> Stashed changes
                           length="50"
                           lineageId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].Columns[order_approved_at]"
                           name="order_approved_at"
@@ -10598,7 +11266,11 @@ where [refTable].[customer_id] = ?</property>
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                           externalMetadataColumnId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;order_delivered_carrier_date&quot;]"
+=======
+                          externalMetadataColumnId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[order_delivered_carrier_date]"
+>>>>>>> Stashed changes
                           length="50"
                           lineageId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].Columns[order_delivered_carrier_date]"
                           name="order_delivered_carrier_date"
@@ -10620,7 +11292,11 @@ where [refTable].[customer_id] = ?</property>
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                           externalMetadataColumnId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;order_delivered_customer_date&quot;]"
+=======
+                          externalMetadataColumnId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[order_delivered_customer_date]"
+>>>>>>> Stashed changes
                           length="50"
                           lineageId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].Columns[order_delivered_customer_date]"
                           name="order_delivered_customer_date"
@@ -10636,10 +11312,36 @@ where [refTable].[customer_id] = ?</property>
                               name="UseBinaryFormat">false</property>
                           </properties>
                         </outputColumn>
+<<<<<<< Updated upstream
+=======
+                        <outputColumn
+                          refId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].Columns[order_estimated_delivery_date]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[order_estimated_delivery_date]"
+                          length="50"
+                          lineageId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].Columns[order_estimated_delivery_date]"
+                          name="order_estimated_delivery_date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+>>>>>>> Stashed changes
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
+<<<<<<< Updated upstream
                           refId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[&quot;order_estimated_delivery_date&quot; ]"
                           codePage="1250"
                           dataType="str"
@@ -10687,6 +11389,55 @@ where [refTable].[customer_id] = ?</property>
                           dataType="str"
                           length="50"
                           name="&quot;order_delivered_customer_date&quot;" />
+=======
+                          refId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[order_id]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
+                          name="order_id" />
+                        <externalMetadataColumn
+                          refId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[customer_id]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
+                          name="customer_id" />
+                        <externalMetadataColumn
+                          refId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[order_status]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
+                          name="order_status" />
+                        <externalMetadataColumn
+                          refId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[order_purchase_timestamp]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
+                          name="order_purchase_timestamp" />
+                        <externalMetadataColumn
+                          refId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[order_approved_at]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
+                          name="order_approved_at" />
+                        <externalMetadataColumn
+                          refId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[order_delivered_carrier_date]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
+                          name="order_delivered_carrier_date" />
+                        <externalMetadataColumn
+                          refId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[order_delivered_customer_date]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
+                          name="order_delivered_customer_date" />
+                        <externalMetadataColumn
+                          refId="Package\SC_LoadStageData\DFT_LoadOrdersStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[order_estimated_delivery_date]"
+                          codePage="1250"
+                          dataType="str"
+                          length="50"
+                          name="order_estimated_delivery_date" />
+>>>>>>> Stashed changes
                       </externalMetadataColumns>
                     </output>
                     <output
@@ -14910,6 +15661,7 @@ where [refTable].[customer_id] = ?</property>
     design-time-name="Package\SC_CleanStage\DFT_CustomersClean">
     <LayoutInfo>
       <GraphLayout
+<<<<<<< Updated upstream
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="112.8,41.6"
@@ -14964,10 +15716,39 @@ where [refTable].[customer_id] = ?</property>
               EndConnector="0,46.4588246302932"
               Start="0,0"
               End="0,38.9588246302932">
+=======
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="142.4,41.6"
+          Id="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup"
+          TopLeft="224.999996647239,193.999997109175" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Source"
+          TopLeft="217.999996751547,83.9999987483024" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination"
+          TopLeft="213.999996811152,394.999994114041" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\SC_CleanStage\DFT_CustomersClean\Derived Column"
+          TopLeft="220.999996706843,290.999995663762" />
+        <EdgeLayout
+          Id="Package\SC_CleanStage\DFT_CustomersClean.Paths[OLE DB Source Output]"
+          TopLeft="294.499996699393,125.599998748302">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,68.3999983608721"
+              Start="0,0"
+              End="0,60.8999983608721">
+>>>>>>> Stashed changes
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
+<<<<<<< Updated upstream
                     End="0,38.9588246302932" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
@@ -15003,12 +15784,16 @@ where [refTable].[customer_id] = ?</property>
                     Point3="146.628571665774,-40.1705881853572" />
                   <mssgle:LineSegment
                     End="146.628571665774,-64.8411763707143" />
+=======
+                    End="0,60.8999983608721" />
+>>>>>>> Stashed changes
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
+<<<<<<< Updated upstream
               BoundingBox="17.5078991141369,-31.1705881853572,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
@@ -15082,11 +15867,15 @@ where [refTable].[customer_id] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="20.5907563999234,1,91.7327734375,11.609375"
+=======
+              BoundingBox="-27.9759895833333,25.665819492936,55.9519791666667,9.568359375"
+>>>>>>> Stashed changes
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\SC_CleanStage\DFT_CustomersClean.Paths[Fuzzy Lookup Output]"
+<<<<<<< Updated upstream
           TopLeft="667.628572687568,453.423529226093">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15094,16 +15883,30 @@ where [refTable].[customer_id] = ?</property>
               EndConnector="0,131.058823253251"
               Start="0,0"
               End="0,123.558823253251">
+=======
+          TopLeft="296.799996677041,235.599997109175">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.3999985545875"
+              Start="0,0"
+              End="0,47.8999985545875">
+>>>>>>> Stashed changes
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
+<<<<<<< Updated upstream
                     End="0,123.558823253251" />
+=======
+                    End="0,47.8999985545875" />
+>>>>>>> Stashed changes
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
+<<<<<<< Updated upstream
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15139,10 +15942,16 @@ where [refTable].[customer_id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+=======
+            <mssgm:EdgeLabel
+              BoundingBox="-27.9759895833333,19.1658195897937,55.9519791666667,9.568359375"
+              RelativePosition="Any" />
+>>>>>>> Stashed changes
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\SC_CleanStage\DFT_CustomersClean.Paths[Derived Column Output]"
+<<<<<<< Updated upstream
           TopLeft="142.828571538049,357.894117394358">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15150,16 +15959,30 @@ where [refTable].[customer_id] = ?</property>
               EndConnector="0,44.0705881910546"
               Start="0,0"
               End="0,36.5705881910546">
+=======
+          TopLeft="298.299996758998,332.599995663762">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62.3999984502791"
+              Start="0,0"
+              End="0,54.8999984502791">
+>>>>>>> Stashed changes
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
+<<<<<<< Updated upstream
                     End="0,36.5705881910546" />
+=======
+                    End="0,54.8999984502791" />
+>>>>>>> Stashed changes
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
+<<<<<<< Updated upstream
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15251,12 +16074,18 @@ where [refTable].[customer_id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+=======
+            <mssgm:EdgeLabel
+              BoundingBox="-27.9759895833333,22.6658195376395,55.9519791666667,9.568359375"
+              RelativePosition="Any" />
+>>>>>>> Stashed changes
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+<<<<<<< Updated upstream
     design-time-name="Package\SC_CleanStage\DFT_CustomersClean\Lookup">
     <Properties>
       <Property>
@@ -15280,6 +16109,8 @@ where [refTable].[customer_id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+=======
+>>>>>>> Stashed changes
     design-time-name="Package\SC_CleanStage\DFT_CustomersClean\Fuzzy Lookup">
     <Properties>
       <Property>
@@ -15306,7 +16137,11 @@ where [refTable].[customer_id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+<<<<<<< Updated upstream
     design-time-name="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination 1">
+=======
+    design-time-name="Package\SC_CleanStage\DFT_CustomersClean\OLE DB Destination">
+>>>>>>> Stashed changes
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -15322,18 +16157,30 @@ where [refTable].[customer_id] = ?</property>
     design-time-name="Package\SC_CleanStage\DFT_OrdersClean">
     <LayoutInfo>
       <GraphLayout
+<<<<<<< Updated upstream
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+=======
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+>>>>>>> Stashed changes
         <NodeLayout
           Size="152.8,41.6"
           Id="Package\SC_CleanStage\DFT_OrdersClean\Derived Column"
           TopLeft="162.999997571111,240.599997928738" />
         <NodeLayout
+<<<<<<< Updated upstream
+=======
+          Size="149.6,41.6"
+          Id="Package\SC_CleanStage\DFT_OrdersClean\OLE DB Source"
+          TopLeft="159.999997615814,46.9999992996454" />
+        <NodeLayout
+>>>>>>> Stashed changes
           Size="174.4,41.6"
           Id="Package\SC_CleanStage\DFT_OrdersClean\Raw File Destination"
           TopLeft="469.999992996454,187.999997198582" />
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\SC_CleanStage\DFT_OrdersClean\OLE DB Destination"
+<<<<<<< Updated upstream
           TopLeft="97.999998539686,565.999991565942" />
         <NodeLayout
           Size="149.6,41.6"
@@ -15351,12 +16198,16 @@ where [refTable].[customer_id] = ?</property>
           Size="183.2,41.6"
           Id="Package\SC_CleanStage\DFT_OrdersClean\Raw File Destination 3"
           TopLeft="574.999991431832,490.99999268353" />
+=======
+          TopLeft="153.999997705221,355.999994695186" />
+>>>>>>> Stashed changes
         <NodeLayout
           Size="155.2,41.6"
           Id="Package\SC_CleanStage\DFT_OrdersClean\Data Conversion"
           TopLeft="163.99999755621,138.999997928739" />
         <NodeLayout
           Size="183.2,41.6"
+<<<<<<< Updated upstream
           Id="Package\SC_CleanStage\DFT_OrdersClean\Raw File Destination 2"
           TopLeft="553.999991744757,402.999993994832" />
         <EdgeLayout
@@ -15368,10 +16219,24 @@ where [refTable].[customer_id] = ?</property>
               EndConnector="173.199995738268,14.9999997764824"
               Start="0,0"
               End="165.699995738268,14.9999997764824">
+=======
+          Id="Package\SC_CleanStage\DFT_OrdersClean\Raw File Destination 1"
+          TopLeft="451.999993264675,278.999995842576" />
+        <EdgeLayout
+          Id="Package\SC_CleanStage\DFT_OrdersClean.Paths[OLE DB Source Output]"
+          TopLeft="238.199997586012,88.5999992996454">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.3999986290932"
+              Start="0,0"
+              End="0,42.8999986290932">
+>>>>>>> Stashed changes
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
+<<<<<<< Updated upstream
                     End="82.5999978691339,0" />
                   <mssgle:CubicBezierSegment
                     Point1="82.5999978691339,0"
@@ -15385,18 +16250,26 @@ where [refTable].[customer_id] = ?</property>
                     Point3="90.5999978691339,14.9999997764824" />
                   <mssgle:LineSegment
                     End="165.699995738268,14.9999997764824" />
+=======
+                    End="0,42.8999986290932" />
+>>>>>>> Stashed changes
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
+<<<<<<< Updated upstream
               BoundingBox="40.7336111503839,-17.609375,91.7327734375,11.609375"
+=======
+              BoundingBox="-27.9759895833333,16.6658196270466,55.9519791666667,9.568359375"
+>>>>>>> Stashed changes
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\SC_CleanStage\DFT_OrdersClean.Paths[Derived Column Output]"
+<<<<<<< Updated upstream
           TopLeft="239.399997571111,282.199997928738">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -15404,10 +16277,20 @@ where [refTable].[customer_id] = ?</property>
               EndConnector="84.9999984353778,105.799996289612"
               Start="0,0"
               End="84.9999984353778,98.2999962896116">
+=======
+          TopLeft="239.299997638166,282.199997928738">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,73.799996766448"
+              Start="0,0"
+              End="0,66.299996766448">
+>>>>>>> Stashed changes
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
+<<<<<<< Updated upstream
                     End="0,48.8999981448058" />
                   <mssgle:CubicBezierSegment
                     Point1="0,48.8999981448058"
@@ -15421,12 +16304,21 @@ where [refTable].[customer_id] = ?</property>
                     Point3="84.9999984353778,56.8999981448058" />
                   <mssgle:LineSegment
                     End="84.9999984353778,98.2999962896116" />
+=======
+                    End="0,66.299996766448" />
+>>>>>>> Stashed changes
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
+<<<<<<< Updated upstream
             <EdgeLabelCollection />
+=======
+            <mssgm:EdgeLabel
+              BoundingBox="-27.9759895833333,28.365818695724,55.9519791666667,9.568359375"
+              RelativePosition="Any" />
+>>>>>>> Stashed changes
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15461,7 +16353,11 @@ where [refTable].[customer_id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
+<<<<<<< Updated upstream
               BoundingBox="3.13861112803211,-17.609375,129.9227734375,11.609375"
+=======
+              BoundingBox="3.13861112803207,-17.609375,169.6934765625,11.609375"
+>>>>>>> Stashed changes
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15484,7 +16380,13 @@ where [refTable].[customer_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
+<<<<<<< Updated upstream
             <EdgeLabelCollection />
+=======
+            <mssgm:EdgeLabel
+              BoundingBox="-27.9759895833333,21.4658203124995,55.9519791666667,9.568359375"
+              RelativePosition="Any" />
+>>>>>>> Stashed changes
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15519,6 +16421,7 @@ where [refTable].[customer_id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
+<<<<<<< Updated upstream
               BoundingBox="9.31361100137221,-17.43359375,132.1727734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
@@ -15614,6 +16517,9 @@ where [refTable].[customer_id] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-118.791385452151,73.1999986737962,96.3827734375,11.609375"
+=======
+              BoundingBox="-20.3200738944611,-17.609375,191.440143229167,11.609375"
+>>>>>>> Stashed changes
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15621,6 +16527,7 @@ where [refTable].[customer_id] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+<<<<<<< Updated upstream
     design-time-name="Package\SC_CleanStage\DFT_OrdersClean\OLE DB Destination">
     <Properties>
       <Property>
@@ -15634,6 +16541,8 @@ where [refTable].[customer_id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+=======
+>>>>>>> Stashed changes
     design-time-name="Package\SC_CleanStage\DFT_OrdersClean\OLE DB Source">
     <Properties>
       <Property>
@@ -15647,6 +16556,7 @@ where [refTable].[customer_id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+<<<<<<< Updated upstream
     design-time-name="Package\SC_CleanStage\DFT_OrdersClean\Lookup">
     <Properties>
       <Property>
@@ -15658,14 +16568,24 @@ where [refTable].[customer_id] = ?</property>
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[Stage].[Customers]</Value>
+=======
+    design-time-name="Package\SC_CleanStage\DFT_OrdersClean\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+>>>>>>> Stashed changes
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
+<<<<<<< Updated upstream
           type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+=======
+          type="q2:string">Table</Value>
+>>>>>>> Stashed changes
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -15729,7 +16649,13 @@ where [refTable].[customer_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
+<<<<<<< Updated upstream
             <EdgeLabelCollection />
+=======
+            <mssgm:EdgeLabel
+              BoundingBox="-52.2360801778237,32.2978233499478,55.8054947916667,9.5732421875"
+              RelativePosition="Any" />
+>>>>>>> Stashed changes
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15763,7 +16689,13 @@ where [refTable].[customer_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
+<<<<<<< Updated upstream
             <EdgeLabelCollection />
+=======
+            <mssgm:EdgeLabel
+              BoundingBox="-133.602745764156,31.2999990835783,55.8054947916667,9.5732421875"
+              RelativePosition="Any" />
+>>>>>>> Stashed changes
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15798,7 +16730,11 @@ where [refTable].[customer_id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
+<<<<<<< Updated upstream
               BoundingBox="46.5782923485835,15.8028565558426,149.910078125,16"
+=======
+              BoundingBox="46.5782923485835,15.8028565558426,189.68078125,16"
+>>>>>>> Stashed changes
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15821,7 +16757,13 @@ where [refTable].[customer_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
+<<<<<<< Updated upstream
             <EdgeLabelCollection />
+=======
+            <mssgm:EdgeLabel
+              BoundingBox="-27.9027473958333,23.6633781164884,55.8054947916667,9.5732421875"
+              RelativePosition="Any" />
+>>>>>>> Stashed changes
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15855,7 +16797,13 @@ where [refTable].[customer_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
+<<<<<<< Updated upstream
             <EdgeLabelCollection />
+=======
+            <mssgm:EdgeLabel
+              BoundingBox="2.39725109169887,-15.5732421875,55.8054947916667,9.5732421875"
+              RelativePosition="Any" />
+>>>>>>> Stashed changes
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -15941,7 +16889,11 @@ where [refTable].[customer_id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
+<<<<<<< Updated upstream
               BoundingBox="0,0,0,0"
+=======
+              BoundingBox="-25.1727473958333,24.6633781015872,50.3454947916667,9.5732421875"
+>>>>>>> Stashed changes
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15965,7 +16917,11 @@ where [refTable].[customer_id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
+<<<<<<< Updated upstream
               BoundingBox="0,0,0,0"
+=======
+              BoundingBox="-25.1727473958333,22.6633781313895,50.3454947916667,9.5732421875"
+>>>>>>> Stashed changes
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15989,7 +16945,11 @@ where [refTable].[customer_id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
+<<<<<<< Updated upstream
               BoundingBox="0,0,0,0"
+=======
+              BoundingBox="-25.1727473958333,20.1633781686425,50.3454947916667,9.5732421875"
+>>>>>>> Stashed changes
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -16256,13 +17216,20 @@ where [refTable].[customer_id] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
+<<<<<<< Updated upstream
               EndConnector="109.885708436552,60.0588219480836"
               Start="0,0"
               End="102.385708436552,60.0588219480836">
+=======
+              EndConnector="109.885708436552,60.0588219480841"
+              Start="0,0"
+              End="102.385708436552,60.0588219480841">
+>>>>>>> Stashed changes
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
+<<<<<<< Updated upstream
                     End="50.942854218276,0" />
                   <mssgle:CubicBezierSegment
                     Point1="50.942854218276,0"
@@ -16276,13 +17243,32 @@ where [refTable].[customer_id] = ?</property>
                     Point3="58.942854218276,60.0588219480836" />
                   <mssgle:LineSegment
                     End="102.385708436552,60.0588219480836" />
+=======
+                    End="50.9428542182762,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.9428542182762,0"
+                    Point2="54.9428542182762,0"
+                    Point3="54.9428542182762,4" />
+                  <mssgle:LineSegment
+                    End="54.9428542182762,56.0588219480841" />
+                  <mssgle:CubicBezierSegment
+                    Point1="54.9428542182762,56.0588219480841"
+                    Point2="54.9428542182762,60.0588219480841"
+                    Point3="58.9428542182762,60.0588219480841" />
+                  <mssgle:LineSegment
+                    End="102.385708436552,60.0588219480841" />
+>>>>>>> Stashed changes
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
+<<<<<<< Updated upstream
               BoundingBox="0,0,0,0"
+=======
+              BoundingBox="24.6250482286929,-15.5732421875,60.6356119791667,9.5732421875"
+>>>>>>> Stashed changes
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -16292,13 +17278,20 @@ where [refTable].[customer_id] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
+<<<<<<< Updated upstream
               EndConnector="-268.057136992168,54.576471471633"
               Start="0,0"
               End="-268.057136992168,47.076471471633">
+=======
+              EndConnector="-268.057136992168,54.5764714716321"
+              Start="0,0"
+              End="-268.057136992168,47.0764714716321">
+>>>>>>> Stashed changes
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
+<<<<<<< Updated upstream
                     End="0,23.2882357358165" />
                   <mssgle:CubicBezierSegment
                     Point1="0,23.2882357358165"
@@ -16312,13 +17305,32 @@ where [refTable].[customer_id] = ?</property>
                     Point3="-268.057136992168,31.2882357358165" />
                   <mssgle:LineSegment
                     End="-268.057136992168,47.076471471633" />
+=======
+                    End="0,23.288235735816" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.288235735816"
+                    Point2="0,27.288235735816"
+                    Point3="-4,27.288235735816" />
+                  <mssgle:LineSegment
+                    End="-264.057136992168,27.288235735816" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-264.057136992168,27.288235735816"
+                    Point2="-268.057136992168,27.288235735816"
+                    Point3="-268.057136992168,31.288235735816" />
+                  <mssgle:LineSegment
+                    End="-268.057136992168,47.0764714716321" />
+>>>>>>> Stashed changes
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
+<<<<<<< Updated upstream
               BoundingBox="0,0,0,0"
+=======
+              BoundingBox="-164.346374485667,32.288235735816,60.6356119791667,9.5732421875"
+>>>>>>> Stashed changes
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -16371,7 +17383,11 @@ where [refTable].[customer_id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
+<<<<<<< Updated upstream
               BoundingBox="0,0,0,0"
+=======
+              BoundingBox="-27.9759895833333,18.4599379176655,55.9519791666667,9.568359375"
+>>>>>>> Stashed changes
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -16424,7 +17440,11 @@ where [refTable].[customer_id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
+<<<<<<< Updated upstream
               BoundingBox="0,0,0,0"
+=======
+              BoundingBox="-30.3178059895833,28.7663774766311,60.6356119791667,9.6025390625"
+>>>>>>> Stashed changes
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -16683,7 +17703,11 @@ where [refTable].[customer_id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
+<<<<<<< Updated upstream
               BoundingBox="0,0,0,0"
+=======
+              BoundingBox="69.2668651341317,22.7294108473821,55.9519791666667,9.5732421875"
+>>>>>>> Stashed changes
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -16707,7 +17731,11 @@ where [refTable].[customer_id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
+<<<<<<< Updated upstream
               BoundingBox="0,0,0,0"
+=======
+              BoundingBox="-27.9759895833333,22.6633781313896,55.9519791666667,9.5732421875"
+>>>>>>> Stashed changes
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -16743,7 +17771,11 @@ where [refTable].[customer_id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
+<<<<<<< Updated upstream
               BoundingBox="0,0,0,0"
+=======
+              BoundingBox="-129.604558571156,29.7882357730689,55.9519791666667,9.5732421875"
+>>>>>>> Stashed changes
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
