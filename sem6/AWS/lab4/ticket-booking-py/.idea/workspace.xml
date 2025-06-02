@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="81a05d2d-5c36-4fc7-96ac-88cb44da5302" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2wdmzO7xKvkBOO3xkyrER8DE6s9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.availability_service.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/aliks/Documents/GitHub/PWR/sem6/AWS/lab4/ticket-booking-py/availability-service&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\aliks\Documents\GitHub\PWR\sem6\AWS\lab4\ticket-booking-py\availability-service" />
+      <recent name="C:\Users\aliks\Documents\GitHub\PWR\sem6\AWS\lab4\ticket-booking-py\booking-service" />
+      <recent name="C:\Users\aliks\Documents\GitHub\PWR\sem6\AWS\lab4\ticket-booking-py\notification-service" />
+      <recent name="C:\Users\aliks\Documents\GitHub\PWR\sem6\AWS\lab4\ticket-booking-py\payment-service" />
+      <recent name="C:\Users\aliks\Documents\GitHub\PWR\sem6\AWS\lab4\ticket-booking-py\ticketing-service" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-PY-251.23774.444" />
+        <option value="bundled-python-sdk-890ed5b35930-d9c5bdb153f4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.23774.444" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SwiftWorkspaceSettings">
+    <option name="detectedToolchain" value="true" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81a05d2d-5c36-4fc7-96ac-88cb44da5302" name="Changes" comment="" />
+      <created>1746380087281</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746380087281</updated>
+      <workItem from="1746380088449" duration="8035000" />
+      <workItem from="1746537443476" duration="2260000" />
+      <workItem from="1746540440589" duration="39000" />
+      <workItem from="1746545633897" duration="1402000" />
+      <workItem from="1746550714535" duration="2885000" />
+      <workItem from="1747397159350" duration="3062000" />
+      <workItem from="1747417164321" duration="10295000" />
+      <workItem from="1747686784007" duration="1842000" />
+      <workItem from="1747760278409" duration="2589000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
