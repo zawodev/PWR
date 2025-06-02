@@ -12,11 +12,11 @@ def parse_args():
     parser.add_argument("--cols", type=int, default=6, help="Number of cols (max 10)")
 
     parser.add_argument("--agent1", choices=["human", "random", "smart"], default="random")
-    parser.add_argument("--h1", choices=["opp_mobility", "mobility", "centrality", "combined"], default="centrality")
+    parser.add_argument("--h1", choices=["opp_mobility", "mobility", "centrality", "combined"], default="combined")
     parser.add_argument("--d1", type=int, default=4)
 
     parser.add_argument("--agent2", choices=["human", "random", "smart"], default="smart")
-    parser.add_argument("--h2", choices=["opp_mobility", "mobility", "centrality", "combined"], default="centrality")
+    parser.add_argument("--h2", choices=["opp_mobility", "mobility", "centrality", "combined"], default="combined")
     parser.add_argument("--d2", type=int, default=4)
 
     parser.add_argument("--verbose", action="store_true", help="Enable debug logging")
@@ -28,11 +28,11 @@ def interactive_args():
     cols = int(input("Enter number of cols (max 10) [6]: ") or 6)
 
     agent1 = input("Agent1 type (human, random, smart) [random]: ") or "random"
-    h1 = input("Agent1 heuristic (opp_mobility, mobility, centrality, combined) [centrality]: ") or "centrality"
+    h1 = input("Agent1 heuristic (opp_mobility, mobility, centrality, combined) [combined]: ") or "combined"
     d1 = int(input("Agent1 search depth [4]: ") or 4)
 
     agent2 = input("Agent2 type (human, random, smart) [smart]: ") or "smart"
-    h2 = input("Agent2 heuristic (opp_mobility, mobility, centrality, combined) [centrality]: ") or "centrality"
+    h2 = input("Agent2 heuristic (opp_mobility, mobility, centrality, combined) [combined]: ") or "combined"
     d2 = int(input("Agent2 search depth [4]: ") or 4)
 
     verbose = input("Verbose output? (y/N) [N]: ").strip().lower().startswith('y') or False

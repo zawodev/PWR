@@ -1,0 +1,72 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/25/2025 4:46:37 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ZAWO-LAPTOP"
+  DTS:CreatorName="ZAWO-LAPTOP\aliks"
+  DTS:DTSID="{324DDE87-1EEA-4AAD-B70B-F0C73AC7EC77}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Package2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{F6617728-A124-4EF1-A0F9-D4DE24ED30D4}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ZAWO-LAPTOP.BrazilianOlist]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E8ABC8B7-C9CC-43E3-A706-F6A547B1174F}"
+      DTS:ObjectName="ZAWO-LAPTOP.BrazilianOlist">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=ZAWO-LAPTOP;Initial Catalog=BrazilianOlist;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package2-{E8ABC8B7-C9CC-43E3-A706-F6A547B1174F}ZAWO-LAPTOP.BrazilianOlist;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\RESET"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{33F29EF2-F6AC-4F94-BA23-67C903CA882B}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="RESET"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{E8ABC8B7-C9CC-43E3-A706-F6A547B1174F}"
+          SQLTask:SqlStatementSource="IF OBJECT_ID('Stage.OrdersClean', 'U') IS NOT NULL&#xA;  DROP TABLE Stage.OrdersClean;&#xA;&#xA;IF OBJECT_ID('Stage.CustomersClean', 'U') IS NOT NULL&#xA;  DROP TABLE Stage.CustomersClean;&#xA;&#xA;IF OBJECT_ID('Stage.SellersClean', 'U') IS NOT NULL&#xA;  DROP TABLE Stage.SellersClean;&#xA;&#xA;IF OBJECT_ID('Stage.ProductsClean', 'U') IS NOT NULL&#xA;  DROP TABLE Stage.ProductsClean;&#xA;&#xA;IF OBJECT_ID('Stage.Orders', 'U') IS NOT NULL&#xA;  DROP TABLE Stage.Orders;&#xA;&#xA;IF OBJECT_ID('Stage.OrderItems', 'U') IS NOT NULL&#xA;  DROP TABLE Stage.OrderItems;&#xA;&#xA;IF OBJECT_ID('Stage.Payments', 'U') IS NOT NULL&#xA;  DROP TABLE Stage.Payments;&#xA;&#xA;IF OBJECT_ID('Stage.Reviews', 'U') IS NOT NULL&#xA;  DROP TABLE Stage.Reviews;&#xA;&#xA;IF OBJECT_ID('Stage.Customers', 'U') IS NOT NULL&#xA;  DROP TABLE Stage.Customers;&#xA;&#xA;IF OBJECT_ID('Stage.Sellers', 'U') IS NOT NULL&#xA;  DROP TABLE Stage.Sellers;&#xA;&#xA;IF OBJECT_ID('Stage.Products', 'U') IS NOT NULL&#xA;  DROP TABLE Stage.Products;&#xA;&#xA;IF OBJECT_ID('Stage.ProductCategoryNameTranslation', 'U') IS NOT NULL&#xA;  DROP TABLE Stage.ProductCategoryNameTranslation;&#xA;&#xA;IF OBJECT_ID('Stage.Cities', 'U') IS NOT NULL&#xA;  DROP TABLE Stage.Cities;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;IF OBJECT_ID('Stepaniuk.FactOrders', 'U') IS NOT NULL&#xA;  DROP TABLE Stepaniuk.FactOrders;&#xA;&#xA;IF OBJECT_ID('Stepaniuk.ReviewDim', 'U') IS NOT NULL&#xA;  DROP TABLE Stepaniuk.ReviewDim;&#xA;&#xA;IF OBJECT_ID('Stepaniuk.PaymentDim', 'U') IS NOT NULL&#xA;  DROP TABLE Stepaniuk.PaymentDim;&#xA;&#xA;IF OBJECT_ID('Stepaniuk.ProductDim', 'U') IS NOT NULL&#xA;  DROP TABLE Stepaniuk.ProductDim;&#xA;&#xA;IF OBJECT_ID('Stepaniuk.SellerDim', 'U') IS NOT NULL&#xA;  DROP TABLE Stepaniuk.SellerDim;&#xA;&#xA;IF OBJECT_ID('Stepaniuk.CustomerDim', 'U') IS NOT NULL&#xA;  DROP TABLE Stepaniuk.CustomerDim;&#xA;&#xA;IF OBJECT_ID('Stepaniuk.TimeDim', 'U') IS NOT NULL&#xA;  DROP TABLE Stepaniuk.TimeDim;&#xA;&#xA;IF OBJECT_ID('Stepaniuk.WeekdayDim', 'U') IS NOT NULL&#xA;  DROP TABLE Stepaniuk.WeekdayDim;&#xA;&#xA;IF OBJECT_ID('Stepaniuk.MonthDim', 'U') IS NOT NULL&#xA;  DROP TABLE Stepaniuk.MonthDim;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\RESET"
+          TopLeft="256.428571974441,122.352941069223" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

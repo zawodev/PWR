@@ -17,7 +17,7 @@ variable "services" {
 }
 
 variable "service_ports" {
-  description = "Map service → port"
+  description = "Map service to port"
   type        = map(number)
   default = {
     booking      = 8000

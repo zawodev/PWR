@@ -1,0 +1,269 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c259deca-97e3-4deb-b027-9c6c4269bfa6" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact Orders</ID>
+  <Name>Fact Orders</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2435" scrolltop="-6242" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="5969" y="17209" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01ee00009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FactOrders" left="-1356" top="-64" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4212" height="7222" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e000074100000361c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Stepaniuk_FactOrders" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2435</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-6242</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-1356</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-64</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="a107511b-5598-472c-ae1c-5e35b39ee586">
+    <DataSourceViewID>Brazilian Olist</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="79222060-4115-4e8f-a3d6-bd2e67e51a11">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="2ac69a9c-2086-4535-8a26-1f6ef1642212">
+      <ID>Fact Key</ID>
+      <Name>Fact Key</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="310a079f-18e1-422e-843d-98e7f99ba4f2">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="21bfcedd-e358-423e-ba56-0179015b0b81">
+            <TableID>Stepaniuk_FactOrders</TableID>
+            <ColumnID>fact_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="b4aaac05-f568-49f3-9d11-38e0dbbc4e1a">
+          <AttributeID>Seller Id</AttributeID>
+          <Name>Seller Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="82b916d5-7396-4501-af03-b07ad80a720b">
+          <AttributeID>Review Key</AttributeID>
+          <Name>Review Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="af85daa5-0df0-4b80-b47b-493f922f11db">
+          <AttributeID>Time Key</AttributeID>
+          <Name>Time Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="07305159-5c0a-49d3-8d5a-5d5a9b5bc96e">
+          <AttributeID>Customer Id</AttributeID>
+          <Name>Customer Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ea992c73-1e11-4a7b-a892-aba49621a1c6">
+          <AttributeID>Product Id</AttributeID>
+          <Name>Product Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="45eeebbe-b23d-4155-995d-bbca101a1693">
+          <AttributeID>Payment Type Key</AttributeID>
+          <Name>Payment Type Key</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8ff89613-613c-453b-b290-6043f84a874d">
+          <AttributeID>Average Review Score</AttributeID>
+          <Name>Average Review Score</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3d52e35c-17cb-42da-a581-0f00d9a0e369">
+          <AttributeID>Average Delivery Time</AttributeID>
+          <Name>Average Delivery Time</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a5a1b3c3-b17c-4bba-bcb5-d74f0ce34bc7">
+      <ID>Seller Id</ID>
+      <Name>Seller Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="108510c3-2130-469e-96ee-499d4fd6532a">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="991fdb73-4535-454e-90f2-07f5155b14ed">
+            <TableID>Stepaniuk_FactOrders</TableID>
+            <ColumnID>seller_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ae427d1f-c15b-4fbe-983b-3bf7efb098ab">
+      <ID>Review Key</ID>
+      <Name>Review Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b8bec85c-9d44-486f-aebf-f9bd23ca7b7c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9ca5d315-2428-4ee8-a724-a61b61392a83">
+            <TableID>Stepaniuk_FactOrders</TableID>
+            <ColumnID>review_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="01187f32-cb9a-42b6-802d-eda39b20f299">
+      <ID>Time Key</ID>
+      <Name>Time Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="77438766-3a7c-4ebb-9563-0ef2e3ff120e">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d1020936-4014-4fde-b773-57a9965e14ec">
+            <TableID>Stepaniuk_FactOrders</TableID>
+            <ColumnID>time_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b4519cbc-e429-4429-82ba-7f24ab2cf8a2">
+      <ID>Customer Id</ID>
+      <Name>Customer Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d10b5e79-b713-4166-a4fc-1aa7cd3d0b32">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5b091edd-9ffd-4968-ad3a-d26bb678d4aa">
+            <TableID>Stepaniuk_FactOrders</TableID>
+            <ColumnID>customer_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a01ace9d-5010-4701-8565-5906238fb196">
+      <ID>Product Id</ID>
+      <Name>Product Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9b4194d1-59bd-43a0-8fad-3ae4a70a96d8">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="18e05e96-3a6f-4a6f-be7b-48914afceaa5">
+            <TableID>Stepaniuk_FactOrders</TableID>
+            <ColumnID>product_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f54f189b-3a15-4953-8be5-df3327709706">
+      <ID>Payment Type Key</ID>
+      <Name>Payment Type Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="64a2c242-4b74-4833-9701-c10ce52d26b3">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9ed29fd5-9c00-471c-af47-525998a91e44">
+            <TableID>Stepaniuk_FactOrders</TableID>
+            <ColumnID>payment_type_key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="eddd547d-0679-4744-8162-4b577913d6ff">
+      <ID>Average Review Score</ID>
+      <Name>Average Review Score</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="14190934-f517-45ff-bf0a-7a1811ab418d">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8f60eaa6-592d-4bf4-b26f-37939418d923">
+            <TableID>Stepaniuk_FactOrders</TableID>
+            <ColumnID>average_review_score</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="60b81374-cec0-489c-bee3-b9cc0cf9e23f">
+      <ID>Average Delivery Time</ID>
+      <Name>Average Delivery Time</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e046d9bc-545b-409e-8234-fe356aefdbd9">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e18ac1a7-2391-49fb-8a9c-b5055635206c">
+            <TableID>Stepaniuk_FactOrders</TableID>
+            <ColumnID>average_delivery_time</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

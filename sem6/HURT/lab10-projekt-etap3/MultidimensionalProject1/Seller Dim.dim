@@ -1,0 +1,305 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0fd9ba27-0e8e-439a-a997-a87aa8ceb5b0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Seller Dim</ID>
+  <Name>Seller Dim</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2488" scrolltop="-7229" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8488" y="17484" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01ee00009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="SellerDim" left="41" top="466" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3429" height="4508" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000650d00009c110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Stepaniuk_SellerDim" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2488</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-7229</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>41</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>466</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="e3f18dcd-7e1f-4c86-8a5e-2ca1466409ad">
+    <DataSourceViewID>Brazilian Olist</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="53521aad-c46b-499f-86b5-8fef05ba2512">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="647b3862-6e62-49ab-8ab8-2a2d73824a3e">
+      <ID>Seller Id</ID>
+      <Name>Seller Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6115c075-5eb4-476a-8493-b033cc2b9628">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="373df847-4d30-46c1-9d6d-1eef68f397bf">
+            <TableID>Stepaniuk_SellerDim</TableID>
+            <ColumnID>seller_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="328f2a1a-9ad5-455c-8193-cbdc99ba2ed8">
+          <AttributeID>Seller State</AttributeID>
+          <Name>Seller State</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9e3dc9ee-fcef-408b-aa49-112f10e8f5c5">
+          <AttributeID>Seller City</AttributeID>
+          <Name>Seller City</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9296e6af-f84d-4854-8a7a-bd0ae7f5ba7f">
+          <AttributeID>City Area Km2</AttributeID>
+          <Name>City Area Km2</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d7cf0242-cc4e-4413-96ee-8f01529da461">
+          <AttributeID>City Density</AttributeID>
+          <Name>City Density</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a9f8469d-67de-4530-9a63-c9b45be61b1b">
+          <AttributeID>City Population</AttributeID>
+          <Name>City Population</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2186b8a6-0ff1-49e4-b0da-a4050cb5da39">
+          <AttributeID>Seller Region</AttributeID>
+          <Name>Seller Region</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="631dafea-36ef-4e51-a609-5d141d73638c">
+          <AttributeID>City Pop Buck</AttributeID>
+          <Name>City Pop Buck</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d6f40f23-eec1-44bd-b3a0-489cf4c72512">
+          <AttributeID>City Dens Buck</AttributeID>
+          <Name>City Dens Buck</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9d52604d-7b32-486c-94db-f70c986843ed">
+          <AttributeID>City Area Buck</AttributeID>
+          <Name>City Area Buck</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9385eac9-6904-4a94-ae09-6f25c5d2d683">
+      <ID>Seller State</ID>
+      <Name>Seller State</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f575aa50-135d-496d-84bd-823593157a5c">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="37badd8f-897d-422a-ad62-0a9e17a7e766">
+            <TableID>Stepaniuk_SellerDim</TableID>
+            <ColumnID>seller_state</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3b41bf1c-a0e2-403b-be02-7c3e8a73274d">
+      <ID>Seller City</ID>
+      <Name>Seller City</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="88e1138c-bfff-42dd-99f2-aaa1758ca3bf">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="05648b8c-9869-4fd6-951e-0c7a050debcf">
+            <TableID>Stepaniuk_SellerDim</TableID>
+            <ColumnID>seller_city</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a32b9515-e209-4fe6-9cf6-b9cf97cebb63">
+      <ID>City Area Km2</ID>
+      <Name>City Area Km2</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5bbca096-c99b-4107-8264-1f2d46dc8800">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="06984a11-d023-499c-965c-016cfe07e893">
+            <TableID>Stepaniuk_SellerDim</TableID>
+            <ColumnID>city_area_km2</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="434ccdfd-33b5-4650-ab33-ba6983de7e83">
+      <ID>City Density</ID>
+      <Name>City Density</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="23cbe7d1-7968-4c74-baad-e00b420f11e5">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7a0764cc-ece8-43ea-8e95-6dcac977aae8">
+            <TableID>Stepaniuk_SellerDim</TableID>
+            <ColumnID>city_density</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4e4644ae-2ad6-4142-bdbe-51f91bf496c0">
+      <ID>City Population</ID>
+      <Name>City Population</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a8051037-6b65-4edd-aed4-e70422e900d1">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="22dbc55b-034b-44ae-8f95-b79f7791ba18">
+            <TableID>Stepaniuk_SellerDim</TableID>
+            <ColumnID>city_population</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0f6575b1-9245-49f3-b8dd-1c095c1ab0ae">
+      <ID>Seller Region</ID>
+      <Name>Seller Region</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a19ae51e-d54c-4a53-bf52-950f8284c8c5">
+          <DataType>WChar</DataType>
+          <DataSize>12</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4a81192b-3d19-4142-9bba-08a8f2b33444">
+            <TableID>Stepaniuk_SellerDim</TableID>
+            <ColumnID>seller_region</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="70775a88-a983-4344-9cf0-e770b42cde8e">
+      <ID>City Pop Buck</ID>
+      <Name>City Pop Buck</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="849f1bbb-99c5-4d0f-b2d5-7758d9bd2541">
+          <DataType>WChar</DataType>
+          <DataSize>34</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="87519391-eeec-49f8-a409-ec6e66279e93">
+            <TableID>Stepaniuk_SellerDim</TableID>
+            <ColumnID>city_pop_buck</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d423e897-80e3-430a-8c12-6ce8a0bb16fe">
+      <ID>City Dens Buck</ID>
+      <Name>City Dens Buck</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8179c315-fe8c-4c96-b5b3-582ca88c51f4">
+          <DataType>WChar</DataType>
+          <DataSize>28</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="378b98f9-1aa4-40f8-90f2-ef67398f7a83">
+            <TableID>Stepaniuk_SellerDim</TableID>
+            <ColumnID>city_dens_buck</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0df30d59-82ac-4d67-bfcf-be3f3181b330">
+      <ID>City Area Buck</ID>
+      <Name>City Area Buck</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="68f15535-88c0-42b9-8ebd-7dffd6f8bbbe">
+          <DataType>WChar</DataType>
+          <DataSize>27</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fb9ffb67-b056-453e-b59c-d2815a65683e">
+            <TableID>Stepaniuk_SellerDim</TableID>
+            <ColumnID>city_area_buck</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="a9fae9b4-e2eb-4950-a6ef-98a6e384b4a1">
+      <ID>Hierarchy</ID>
+      <Name>Hierarchy</Name>
+      <Levels>
+        <Level dwd:design-time-name="74674c5b-51da-4b0d-beb4-742482432b99">
+          <ID>Seller Region</ID>
+          <Name>Seller Region</Name>
+          <SourceAttributeID>Seller Region</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="77604781-80cc-4aed-80ff-c5f4e9162bf0">
+          <ID>Seller State</ID>
+          <Name>Seller State</Name>
+          <SourceAttributeID>Seller State</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="64395fe3-3dac-487b-bf91-b4250156a936">
+          <ID>Seller City</ID>
+          <Name>Seller City</Name>
+          <SourceAttributeID>Seller City</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
