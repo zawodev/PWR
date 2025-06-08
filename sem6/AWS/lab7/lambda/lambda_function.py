@@ -8,7 +8,7 @@ import boto3
 
 # env vars
 BUCKET = os.environ["BUCKET_NAME"]
-REGION = os.environ["REGION"]
+REGION = os.environ["REGION_NAME"]
 
 s3 = boto3.client("s3", region_name=REGION)
 
@@ -39,8 +39,7 @@ def lambda_handler(event, context):
             Bucket=BUCKET,
             Key=filename,
             Body=buf,
-            ContentType="image/png",
-            ACL="public-read"
+            ContentType="image/png"
         )
 
         # publiczny URL

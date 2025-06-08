@@ -2,8 +2,12 @@ provider "aws" {
   region = var.region
 }
 
+resource "random_id" "bucket_id" {
+  byte_length = 3
+}
+
 resource "aws_s3_bucket" "qr_bucket" {
-  bucket = var.bucket_name
+  bucket = "${var.bucket_name}-${random_id.bucket_id.hex}"
 
   tags = {
     Name = "QR Code Bucket"

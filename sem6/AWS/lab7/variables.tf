@@ -3,7 +3,7 @@ variable "region" {
 }
 
 variable "bucket_name" {
-  default = "qr-code-bucket"
+  default = "zawodev-qr-code-bucket"
 }
 
 variable "lambda_fun_name" {
@@ -19,7 +19,7 @@ variable "lambda_handler" {
 }
 
 variable "lambda_runtime" {
-  default = "python3.12"
+  default = "python3.9"
 }
 
 variable "lambda_role_name" {
@@ -31,5 +31,5 @@ variable "api_name" {
 }
 
 variable "api_stage_name" { 
-  default = "$generate"
+  default = "default"
 }
