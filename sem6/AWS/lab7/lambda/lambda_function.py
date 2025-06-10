@@ -16,25 +16,25 @@ def lambda_handler(event, context):
     try:
         body = event.get("body")
         if body is None:
-            return _response(400, {"error": "No body in request"})
+            return _response(400, {"error": "no body in request"})
 
         data = json.loads(body)
         url = data.get("url")
         if not url:
-            return _response(400, {"error": "Field 'url' is required"})
+            return _response(400, {"error": "url field is required"})
 
-        # generuj QR
+        # qr generowanie
         qr_img = qrcode.make(url)
 
-        # serializuj do PNG w pamięci
+        # serializacja do png w pamięci
         buf = io.BytesIO()
         qr_img.save(buf, format="PNG")
         buf.seek(0)
 
-        # nazwij plik: timestamp + uuid4
+        # nazywa plik: timestamp + uuid4
         filename = f"{int(time.time())}_{uuid.uuid4().hex}.png"
 
-        # wyślij do S3
+        # wysyłanie do s3
         s3.put_object(
             Bucket=BUCKET,
             Key=filename,
@@ -42,7 +42,7 @@ def lambda_handler(event, context):
             ContentType="image/png"
         )
 
-        # publiczny URL
+        # publiczne url
         url_out = f"https://{BUCKET}.s3.{REGION}.amazonaws.com/{filename}"
         return _response(200, {"qr_url": url_out})
 
