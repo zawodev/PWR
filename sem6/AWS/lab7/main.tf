@@ -89,7 +89,6 @@ resource "aws_apigatewayv2_integration" "qr_integration" {
 resource "aws_apigatewayv2_route" "generate_route" {
   api_id = aws_apigatewayv2_api.qr_api.id
   route_key = "POST /generate"
-
   target = "integrations/${aws_apigatewayv2_integration.qr_integration.id}"
 }
 
