@@ -1,7 +1,7 @@
 import pandas as pd
 from ucimlrepo import fetch_ucirepo
 
-# fetch dataset
+# fetch datasetu
 cardiotocography = fetch_ucirepo(id=193)
 X = cardiotocography.data.features
 y = cardiotocography.data.targets
