@@ -1,0 +1,11 @@
+torch
+torchvision
+facenet-pytorch
+numpy
+Pillow
+requests
+tqdm
+deeplake
+scikit-learn
+pandas
+gdown
