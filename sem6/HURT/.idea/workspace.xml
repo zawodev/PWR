@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35bd9cce-a29a-4739-ba9d-e6dce0f13511" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lab8-projekt/lab8_2.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab9-projekt-etap2/data/main2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab9-projekt-etap2/lab9.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab9-projekt-etap2/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AWS/lab4/ticket-booking-py/_other/terraform/stage2/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/../AWS/lab4/ticket-booking-py/_other/terraform/stage2/variables.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab10-projekt-etap3/book1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/lab10-projekt-etap3/book1.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab11-projekt-etap4/presentation.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/lab11-projekt-etap4/presentation.pptx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
