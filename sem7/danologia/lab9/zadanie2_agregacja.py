@@ -1,9 +1,12 @@
 import numpy as np
 import seaborn as sns
 
+# ---------------------- ZADANIE 2 ----------------------
+# Stwórz macierz o 150 wierszach i 4 kolumach:
+
 print(f"{'-'*20} Zadanie 2: Agregacja {'-'*20}")
 
-# standaryzacja iris
+# wczytanie danych iris (150 wierszy, 4 kolumny liczbowe)
 df = sns.load_dataset("iris")
 data = np.array(df.iloc[:, 0:4]) # wybieramy tylko kolumny liczbowe (pierwsze 4)
 print("Dane oryginalne (pierwszy wiersz):")
@@ -11,6 +14,9 @@ print(data[0])
 print(data[1])
 
 # ---------------------- Zadanie 2a ----------------------
+# Dokonaj standaryzacji wszystkich zmiennych, tj. w każdej kolumnie od każdej 
+# obserwacji odejmij wartość średniej arytmetycznej i podziel ja przez 
+# odchylenie standardowe.
 
 print(f"\n{'-'*20} Zadanie 2a {'-'*20}")
 
@@ -25,12 +31,13 @@ print(standardized[0])
 print(standardized[1])
 
 # ---------------------- Zadanie 2b ----------------------
+# Zaimplementuj  algorytm  sortowania  szybkiego,  wykorzystując  funkcję/metodę
 
 print(f"\n{'-'*20} Zadanie 2b {'-'*20}")
 
 # algorytm quicksort z partition
 def partition(arr, low, high):
-    # wybieramy ostatni element jako pivot
+    # ostatni element jako pivot
     pivot = arr[high]
     i = low - 1
     for j in range(low, high):
@@ -52,6 +59,8 @@ quicksort(arr, 0, len(arr) - 1)
 print(f"Posortowana tablica: {arr}")
 
 # ---------------------- Zadanie 2c ----------------------
+# Napisz funkcję,  która  wywołując unique() (z odpowiednimi  argumentami), 
+# wyznacza modę (dominantę) wartości w podanym wektorze.
 
 print(f"\n{'-'*20} Zadanie 2c {'-'*20}")
 

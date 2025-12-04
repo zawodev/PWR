@@ -1,6 +1,8 @@
 import numpy as np
 
 # ---------------------- ZADANIE 1 ----------------------
+# Przykładowy  wektor.  Zacznijmy  od  stworzenia  wektora  o  sześciu  elementach typu całkowitego.
+
 print(f"{'-'*20} Zadanie 1: Wektoryzacja {'-'*20}")
 
 # tworzenie wektora
@@ -15,6 +17,8 @@ print(f"Wymiar (ndim): {x.ndim}")
 print(f"Kształt (shape): {x.shape}")
 
 # ---------------------- Zadanie 1a ----------------------
+# Stwórz tablice 2 wymiarową 4 elementową. Sprawdź wymiar i kształt macierzy. 
+# Zmień kształt tablicy na tablicę 2 i 6 elementową. 
 
 print(f"\n{'-'*20} Zadanie 1a {'-'*20}")
 
@@ -30,6 +34,8 @@ arr_2x6 = arr_12.reshape(2, 6)
 print(f"\nPo reshape(2, 6):\n{arr_2x6}")
 
 # ---------------------- Zadanie 1b ----------------------
+# Stwórz tablicę zawiera ciąg arytmetyczny o zadanym przyroście. 
+# Stwórz tablicę zawiera ciąg arytmetyczny złożony z wartości z przedziału [a,b]. 
 
 print(f"\n{'-'*20} Zadanie 1b {'-'*20}")
 
@@ -47,6 +53,7 @@ num = 5
 print(f"linspace({a}, {b}, {num}): {np.linspace(a, b, num)}")
 
 # ---------------------- Zadanie 1c ----------------------
+# Stwórz macierz: jednostkową, wypełnioną zerami i jedynkami.
 
 print(f"\n{'-'*20} Zadanie 1c {'-'*20}")
 
@@ -56,6 +63,7 @@ print(f"Zera:\n{np.zeros((3, 3))}")
 print(f"Jedynki:\n{np.ones((3, 3))}")
 
 # ---------------------- Zadanie 1d ----------------------
+# Stwórz macierz 4x2, a następnie dodaj do niej dowolny element.
 
 print(f"\n{'-'*20} Zadanie 1d {'-'*20}")
 
@@ -66,6 +74,7 @@ print(f"Macierz przed:\n{mat}")
 print(f"Macierz po dodaniu elementu:\n{np.append(mat, 9)}")
 
 # ---------------------- Zadanie 1e ----------------------
+# Stwórz 2 różne macierze, a następnie wykonaj na nich operacje: +, -, *, /, **, //, %. 
 
 print(f"\n{'-'*20} Zadanie 1e {'-'*20}")
 
