@@ -1,0 +1,11 @@
+raporcik każdy ekran robić screena i wrzucać, żeby był obszerny bardzo
+
+może być zero tekstu o dziwo
+
+13 kwietnia termin
+
+problemy z uprawnieniami mają jakieś rozwiązania ale no są tam problemy czasem także szukać - okej spoko super
+
+bo tam aws academy ma problemy z ograniczeniami ról
+
+na przyszłe zajęcia działająca aplikacja zdockeryzowana??? i przeklikać przez aws academy coś
