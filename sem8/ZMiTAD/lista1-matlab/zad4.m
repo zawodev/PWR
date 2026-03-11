@@ -29,3 +29,6 @@ var(g2)
 
 mean(g3)
 var(g3)
+
+mean(g4)
+var(g4)
