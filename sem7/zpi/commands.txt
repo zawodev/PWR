@@ -1,0 +1,11 @@
+sfc /scannow
+DISM /Online /Cleanup-Image /RestoreHealth
+
+(abstract) prezentacja bez zdań - punkty lepsze, równoważniki lub same hasła na prezce
+
+- opis funkcjonalny w rozbiciu na moduły - czyli co ma robić każdy moduł (wejście wyjście)
+- wybór technologii
+
+- klasy i główne interfejsy systemu
+
+15:20 zajęcia w piątek

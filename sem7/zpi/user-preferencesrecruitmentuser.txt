@@ -1,0 +1,15 @@
+/user-preferences/<recruitment>/<user>/
+
+PUT
+- tworzy nowy obiekt jak nie ma
+- zużywa jeden "token" (każdy user ma dostępne 3 tokeny, gdzie każdorazowe użycie tego PUT zmniejsza o jeden (nowe pole w bazie by się przydało żeby przechowywać ilość "tokenów")) - czyli przed samym put trzeba zrobić check czy ilość tokenów danego usera > 0
+
+
+- odpala automatycznie próbę rozpoczęcia optymalizacji, jeśli 70% userów ustawi jakieś początkowe preferencje (!= null)
+
+
+GET plan (for user id)
+GET groups room-timeslots (from plan)
+
+
+POST LOAD recruitment plan from optimization solution
