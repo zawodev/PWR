@@ -1,0 +1,5 @@
+backend/chat.db
+backend/uploads/*
+!backend/uploads/.gitkeep
+frontend/node_modules
+frontend/dist

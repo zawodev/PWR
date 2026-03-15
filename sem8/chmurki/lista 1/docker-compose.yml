@@ -1,0 +1,28 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: simple-chat-backend
+    environment:
+      FRONTEND_ORIGIN: http://localhost:3000
+      MAX_FILE_SIZE_BYTES: 10485760
+    ports:
+      - "8000:8000"
+    volumes:
+      - chat_uploads:/app/uploads
+      - chat_db:/app/db
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: http://localhost:8000
+    container_name: simple-chat-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  chat_uploads:
+  chat_db:

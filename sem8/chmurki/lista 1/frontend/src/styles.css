@@ -1,0 +1,154 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.4;
+  color: #12201f;
+  background: linear-gradient(120deg, #f4f7f1 0%, #e6f0e9 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.app-shell h2 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  color: #1f3a31;
+}
+
+.chat-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 16px;
+  align-items: start;
+}
+
+.chat-pane,
+.composer-pane {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.chat-window {
+  border: 1px solid #b9cfc1;
+  background: #ffffff;
+  border-radius: 12px;
+  min-height: 320px;
+  max-height: 55vh;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message-item {
+  border: 1px solid #dbe7df;
+  border-radius: 10px;
+  padding: 10px;
+  background: #fdfefe;
+}
+
+.message-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #304840;
+}
+
+.message-text {
+  margin: 10px 0;
+}
+
+.media-preview {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.audio-preview {
+  width: 100%;
+}
+
+.message-form {
+  border: 1px solid #b9cfc1;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #c7d7cd;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  background: #1b6d4c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #9a2222;
+  margin: 0;
+}
+
+.download-link {
+  color: #1e5f7d;
+}
+
+@media (max-width: 768px) {
+  .app-shell {
+    padding: 14px;
+  }
+
+  .chat-layout {
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
+
+  .chat-window {
+    min-height: 260px;
+    max-height: 48vh;
+  }
+}
