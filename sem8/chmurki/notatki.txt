@@ -9,3 +9,30 @@ problemy z uprawnieniami mają jakieś rozwiązania ale no są tam problemy czas
 bo tam aws academy ma problemy z ograniczeniami ról
 
 na przyszłe zajęcia działająca aplikacja zdockeryzowana??? i przeklikać przez aws academy coś
+
+
+
+
+
+
+
+
+
+na przyszły terraform i cognito i tam aws
+
+
+na kolejny (2tyg) wdrożyć na serwer już (nie lokalnie)
+
+https z cognito niby ma problemy na aws academy wiec:
+
+1) dodanie log balancera do aplikacji podobno rozwiązuje (self sign certyfikat dodajemy) dzięki temu dostajemy https - podobno ten https cognito wystarczy (podobno najczystsze rozwiązanie)
+
+2) dopuszcza te rozwiązanie, ale nie dla własnych projektów - zrezygnowanie z templetów cognito i wysyłanie wszystkich requestów przez backend i backend pyta cognito i odpowiedz odsyła dalej, wtedy nie ma problemu bo backend tylko dzwoni co cognito i nie ma problemu
+
+
+
+normalnie ma się konto i dodaje się klucz i za pomocą klucza komunikacja więc jest łatwiej, ale ten academy jest YIepieEE
+
+większość użytkowników używa SSO
+
+login hasło jakieś musi być przy tym cognito no
