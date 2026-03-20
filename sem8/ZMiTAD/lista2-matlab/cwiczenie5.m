@@ -19,7 +19,7 @@ end
 [hT, pT] = ttest2(x1, x2, 'Alpha', alpha, 'Tail', 'left', 'Vartype', vartype);
 
 fprintf('Cwiczenie 5\n');
-fprintf('Nowy produkt:  srednia=%.4f, s=%.4f\n', mean(x1), std(x1));
+fprintf('Nowy produkt: srednia=%.4f, s=%.4f\n', mean(x1), std(x1));
 fprintf('Znany produkt: srednia=%.4f, s=%.4f\n', mean(x2), std(x2));
 
 fprintf('\nTest F (rownosc wariancji): h=%d, p=%.6f\n', hF, pF);

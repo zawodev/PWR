@@ -7,7 +7,7 @@ alpha = 0.05;
 n = length(x);
 x_bar = mean(x);
 s = std(x);
-t_obs = (x_bar - mu0) / (s / sqrt(n));
+t_obs = (x_bar - mu0) / (s / sqrt(n)); % zaobserwowana statystyka z t studenta
 p_manual = 2 * (1 - tcdf(abs(t_obs), n - 1));
 
 [h, p] = ttest(x, mu0, 'Alpha', alpha);

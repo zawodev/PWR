@@ -1,5 +1,7 @@
 clear; clc;
 
+% stawiamy h1 czy czas jest większy od 6min
+
 mu0 = 6;
 x_bar = 6 + 20/60;
 sigma = 1.5;

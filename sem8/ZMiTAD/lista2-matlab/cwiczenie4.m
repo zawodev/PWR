@@ -16,18 +16,18 @@ v0_B = 1.6^2;
 alpha_B = 0.05;
 [hB, pB] = vartest(x, v0_B, 'Alpha', alpha_B, 'Tail', 'left');
 
-% c) To samo co B dla alpha = 0.1
+% c) to samo co B dla alpha = 0.1
 alpha_C = 0.10;
 [hC, pC] = vartest(x, v0_B, 'Alpha', alpha_C, 'Tail', 'left');
 
 fprintf('Cwiczenie 4\n');
 fprintf('srednia proby = %.4f, odch.std proby = %.4f\n', mean(x), std(x));
 
-fprintf('\nA) H0: sigma = 1.5 (dwustronny)\n');
+fprintf('\na) h0: sigma = 1.5 (dwustronny)\n');
 fprintf('h = %d, p = %.6f\n', hA, pA);
 
-fprintf('\nB) H0: sigma = 1.6, H1: sigma < 1.6 (alpha=0.05)\n');
+fprintf('\nb) h0: sigma = 1.6, H1: sigma < 1.6 (alpha=0.05)\n');
 fprintf('h = %d, p = %.6f\n', hB, pB);
 
-fprintf('\nC) To samo dla alpha=0.10\n');
+fprintf('\nc) to samo dla alpha=0.10\n');
 fprintf('h = %d, p = %.6f\n', hC, pC);
