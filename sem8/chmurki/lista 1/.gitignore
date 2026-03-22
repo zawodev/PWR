@@ -3,3 +3,10 @@ backend/uploads/*
 !backend/uploads/.gitkeep
 frontend/node_modules
 frontend/dist
+
+# terraform:
+*.terraform
+*.terraform.lock.hcl
+*.terraform.tfstate
+*.terraform.tfstate.backup
+terraform.tfstate
