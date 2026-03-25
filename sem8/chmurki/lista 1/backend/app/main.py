@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.config import FRONTEND_ORIGIN, UPLOAD_DIR, DB_PATH
+from app.config import DATABASE_URL, FRONTEND_ORIGIN, UPLOAD_DIR, DB_PATH, S3_BUCKET
 from app.db import Base, engine
 from app.routers.media import router as media_router
 from app.routers.messages import router as messages_router
@@ -19,8 +19,10 @@ app.add_middleware(
 
 @app.on_event("startup")
 def on_startup():
-    UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
-    DB_PATH.parent.mkdir(parents=True, exist_ok=True)
+    if not S3_BUCKET:
+        UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
+    if DATABASE_URL.startswith("sqlite"):
+        DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     Base.metadata.create_all(bind=engine)
 
 

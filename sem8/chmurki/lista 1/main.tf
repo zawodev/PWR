@@ -143,6 +143,16 @@ resource "aws_db_instance" "chat" {
   deletion_protection   = false
 }
 
+resource "aws_security_group_rule" "rds_postgres_ingress" {
+  type              = "ingress"
+  from_port         = 5432
+  to_port           = 5432
+  protocol          = "tcp"
+  cidr_blocks       = ["0.0.0.0/0"]
+  security_group_id = tolist(aws_db_instance.chat.vpc_security_group_ids)[0]
+  description       = "Allow PostgreSQL access for backend in Academy sandbox"
+}
+
 resource "aws_elastic_beanstalk_application" "backend" {
   name        = "${local.name_prefix}-backend"
   description = "Backend FastAPI app"

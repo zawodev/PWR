@@ -1,67 +1,133 @@
 # Simple Group Chat (FastAPI + React)
 
-Minimalna aplikacja webowa z jednym globalnym chatem:
-- backend: FastAPI (GET/POST)
-- frontend: React + TypeScript
-- upload i odbieranie plikow multimedialnych (image/audio/video)
+Global group chat application with media uploads.
 
-## Struktura
+- **Backend:** FastAPI + PostgreSQL + S3
+- **Frontend:** React 18 + TypeScript + Vite
+- **Infrastructure:** AWS Elastic Beanstalk + RDS + S3
 
-- backend
-- frontend
+## Quick Start
 
-Kazdy modul ma osobny Dockerfile i moze byc hostowany niezaleznie.
+### Deploy to AWS
 
-## Backend - endpointy
+```bash
+terraform init
+terraform apply
 
-- GET /api/health
-- GET /api/messages?after_id=123
-- POST /api/messages
-- POST /api/media
-- GET /api/media/{media_id}
-- GET /api/media/{media_id}/content
+python package.py
+python deploy.py
 
-## Uruchomienie backend
+python verify-deployment.py
+```
 
-1. Przejdz do folderu backend.
-2. Zbuduj obraz:
-   docker build -t simple-chat-backend .
-3. Uruchom kontener:
-   docker run --rm -p 8000:8000 -e FRONTEND_ORIGIN=http://localhost:3000 -v chat_uploads:/app/uploads simple-chat-backend
+### Local Development
 
-## Uruchomienie frontend
+```bash
+docker-compose up
+```
 
-1. Przejdz do folderu frontend.
-2. Zbuduj obraz:
-   docker build --build-arg VITE_API_URL=http://localhost:8000 -t simple-chat-frontend .
-3. Uruchom kontener:
-   docker run --rm -p 3000:80 simple-chat-frontend
+Or:
+```bash
+cd backend && uvicorn app.main:app --reload &
+cd frontend && npm run dev
+```
 
-Uwaga: w produkcji frontend powinien wskazywac poprawny adres backendu przez VITE_API_URL na etapie buildu.
+---
 
-## Lokalny dev bez dockera
+## Architecture
 
-Backend:
-- pip install -r requirements.txt
-- uvicorn app.main:app --reload --port 8000
+```
+.
+├── backend/
+│   ├── app/
+│   │   ├── main.py
+│   │   ├── config.py
+│   │   ├── db.py
+│   │   └── routers/
+│   │       ├── messages.py
+│   │       └── media.py
+│   ├── Dockerfile
+│   └── requirements.txt
+├── frontend/
+│   ├── src/
+│   ├── Dockerfile
+│   └── package.json
+├── main.tf
+├── package.py
+├── deploy.py
+├── start-infrastructure.py
+└── stop-infrastructure.py
+```
 
-Frontend:
-- npm install
-- npm run dev
+---
 
-## Opcjonalnie: start obu uslug razem
+## API Endpoints
 
-- docker compose up --build
+| Method | Endpoint | Purpose |
+|--------|----------|---------|
+| GET | `/api/health` | Health check |
+| GET | `/api/messages` | List messages |
+| POST | `/api/messages` | Create message |
+| POST | `/api/media` | Upload file |
+| GET | `/api/media/{id}/content` | Download file |
 
-## Minimalne kontrakty
+---
 
-POST /api/messages body:
-{
-  "nickname": "Ala",
-  "text": "Czesc",
-  "media_id": 1
-}
+## Technology Stack
 
-POST /api/media:
-- multipart/form-data
-- pole: file
+Backend: FastAPI, PostgreSQL, SQLAlchemy, S3
+Frontend: React 18, TypeScript, Vite
+Infrastructure: AWS EB, RDS, S3, CloudWatch
+
+---
+
+## Cost Estimation
+
+| Resource | Monthly |
+|----------|---------|
+| RDS | ~$15 |
+| EB Backend | ~$5 |
+| EB Frontend | ~$5 |
+| S3 | ~$1 |
+| **Total** | ~$26 |
+
+Use `stop-infrastructure.py` to reduce costs to ~$1-2/month
+
+---
+
+## Common Tasks
+
+### Deploy Code Changes
+```bash
+python package.py
+python deploy.py
+python verify-deployment.py
+```
+
+### Save Costs (Stop Infrastructure)
+```bash
+python stop-infrastructure.py
+```
+
+### Resume Infrastructure
+```bash
+python start-infrastructure.py
+```
+
+### Check Status
+```bash
+python verify-deployment.py
+```
+
+---
+
+## Troubleshooting
+
+**Backend shows "Health: Unknown"?**
+Check EB logs in AWS Console or run: `aws elasticbeanstalk describe-events --environment-name simple-chat-backend-env`
+
+**Deploy hangs?**
+Usually takes 10-20 minutes. Check AWS EB Console for status.
+
+**S3 uploads fail?**
+Verify bucket exists and backend has IAM permissions.

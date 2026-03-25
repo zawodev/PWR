@@ -1,16 +1,20 @@
 from pathlib import Path
 import uuid
 
+import boto3
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
 from fastapi.responses import FileResponse
+from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 
-from app.config import MAX_FILE_SIZE_BYTES, UPLOAD_DIR
+from app.config import AWS_REGION, MAX_FILE_SIZE_BYTES, S3_BUCKET, UPLOAD_DIR
 from app.db import get_db
 from app.models import Media
 from app.schemas import MediaOut
 
 router = APIRouter(prefix="/api/media", tags=["media"])
+
+s3_client = boto3.client("s3", region_name=AWS_REGION) if S3_BUCKET else None
 
 
 def _is_supported_content_type(content_type: str) -> bool:
@@ -47,8 +51,20 @@ async def upload_media(file: UploadFile = File(...), db: Session = Depends(get_d
 
     suffix = Path(file.filename or "").suffix
     stored_name = f"{uuid.uuid4().hex}{suffix}"
-    save_path = UPLOAD_DIR / stored_name
-    save_path.write_bytes(raw)
+
+    if s3_client is not None:
+        try:
+            s3_client.put_object(
+                Bucket=S3_BUCKET,
+                Key=stored_name,
+                Body=raw,
+                ContentType=content_type,
+            )
+        except Exception as exc:
+            raise HTTPException(status_code=500, detail=f"S3 upload failed: {exc}") from exc
+    else:
+        save_path = UPLOAD_DIR / stored_name
+        save_path.write_bytes(raw)
 
     media = Media(
         original_name=file.filename or stored_name,
@@ -76,6 +92,22 @@ def get_media_content(media_id: int, db: Session = Depends(get_db)):
     media = db.query(Media).filter(Media.id == media_id).first()
     if media is None:
         raise HTTPException(status_code=404, detail="Media not found")
+
+    if s3_client is not None:
+        try:
+            signed_url = s3_client.generate_presigned_url(
+                "get_object",
+                Params={
+                    "Bucket": S3_BUCKET,
+                    "Key": media.stored_name,
+                    "ResponseContentType": media.content_type,
+                    "ResponseContentDisposition": f'inline; filename="{media.original_name}"',
+                },
+                ExpiresIn=3600,
+            )
+            return RedirectResponse(url=signed_url)
+        except Exception as exc:
+            raise HTTPException(status_code=500, detail=f"S3 read failed: {exc}") from exc
 
     file_path = UPLOAD_DIR / media.stored_name
     if not file_path.exists():
