@@ -34,3 +34,9 @@ if h3 == 0
 else
     disp('Kobiety: Odrzucamy hipoteze.');
 end
+
+% qq plots:
+
+figure; hold on;
+subplot(1,2,1); qqplot(m); title('QQ Plot - Mężczyźni');
+subplot(1,2,2); qqplot(w); title('QQ Plot - Kobiety');
