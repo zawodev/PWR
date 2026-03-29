@@ -1,0 +1,13 @@
+Forma: plik PDF, maksymalnie 3-4 strony A4.
+Oczekiwana zawartość
+
+    Informacja na temat wybranych danych (źródło, interpretacja poszczególnych cech, niestandardowe własności itp.).
+    Informacja na temat wykorzystanych narzędzi (pakiet/program, funkcje itp.)
+    Wyniki: wybrane/najważniejsze wykresy i wskaźniki sumaryczne.
+    Zalecane jest uwzględnienie w analizie przynajmniej jednej zmiennej grupującej i przeprowadzenie analizy porównawczej (np. porównanie zarobków w grupie kobiet i mężczyzn).
+    Precyzyjna interpretacja otrzymanych wyników/wnioski.
+
+Termin: 2 IV 2026 (proszę o przesłanie pliku PDF oraz dołączenie wykorzystanego kodu źródłowego programu).
+Oprogramowanie: dowolne (R, Python, Excel, Matlab itp.)
+Punktacja: 0-3pkt.
+Dodatkowe uwagi: Samodzielność!!
