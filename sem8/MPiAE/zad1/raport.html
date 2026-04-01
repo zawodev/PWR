@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>raport.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="metody-planowania-i-analizy-eksperyment%C3%B3w-analiza-opisowa-wybranych-danych-zadanie-domowe-nr-1">Metody planowania i analizy eksperymentów, analiza opisowa wybranych danych (zadanie domowe nr 1)</h1>
+<h2 id="1-informacja-na-temat-wybranych-danych">1. Informacja na temat wybranych danych</h2>
+<p>Zbiór danych <strong>Palmer Penguins</strong> zyskał dużą popularność jako nowoczesna, doskonała alternatywa dla klasycznego zbioru Iris. Został on zebrany i udostępniony przez dr Kristen Gorman oraz stację badawczą Palmer Station, Antarktyda (w ramach Long Term Ecological Research Network).</p>
+<p>Zbiór pozwala na szczegółową analizę relacji cech fizycznych pingwinów uwzględniając podział na płeć i gatunek. Na drodze wstępnego sprawdzenia, usunięto z niego wiersze z brakami danych (metodą <code>dropna</code>), aby uniknąć błędów agregacji.</p>
+<p><strong>Opis poszczególnych badanych cech (zmiennych):</strong></p>
+<ul>
+<li>
+<p><strong>Gatunek (species)</strong> - zmienna grupująca przypisująca pingwina do jednego z trzech gatunków: <em>Adelie, Chinstrap, Gentoo</em>.</p>
+</li>
+<li>
+<p><strong>Płeć (sex)</strong> - zmienna grupująca: <em>male</em> (samiec), <em>female</em> (samica). Zmienna ta jest wprost powiązana z naturalnym dymorfizmem płciowym badanej grupy.</p>
+</li>
+<li>
+<p><strong>Wyspa (island)</strong> - Biscoe, Dream, Torgersen (miejsce na archipelagu Palmera, gdzie badano dany osobniki).</p>
+</li>
+<li>
+<p><strong>Masa ciała (body_mass_g)</strong> - waga danego osobnika obserwowana w gramach.</p>
+</li>
+<li>
+<p><strong>Wymiary fizyczne</strong> – zmienne podane w milimetrach:</p>
+<ul>
+<li>
+<p><code>flipper_length_mm</code> - długość płetwy.</p>
+</li>
+<li>
+<p><code>bill_length_mm</code> - długość dzioba.</p>
+</li>
+<li>
+<p><code>bill_depth_mm</code> - głębokość (grubość) dzioba.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-wykorzystane-narz%C4%99dzia">2. Wykorzystane narzędzia</h2>
+<p>Do wczytania, odpowiedniego wyczyszczenia danych z braków, oraz ich grupowego przetworzenia wykorzystano środowisko <strong>Python</strong> oraz dedykowane, popularne moduły deweloperskie i analityczne:</p>
+<ul>
+<li>
+<p><strong><code>pandas</code></strong> – fundamentalny pakiet pozwalający wczytać zbiór jako <code>DataFrame</code>, a także dokonać agregacji korzystając z potężnej metody okienkowej <code>groupby()</code> (wyliczenie wariantów w grupie) ze wsparciem statystycznego <code>describe()</code>.</p>
+</li>
+<li>
+<p><strong><code>matplotlib.pyplot</code> oraz <code>seaborn</code></strong> – połączone bilbioteki do precyzyjnej wizualizacji. Wykorzystano m.in. zautomatyzowane metody nakładania na siebie różnokolorowych grup dla typowych statystycznych dystrybucji z wykorzystaniem obiektów: histogramu (<code>histplot</code>), wykresu dyspersyjnego (<code>scatterplot</code>) oraz klasycznego pudełko-wąsy (<code>boxplot</code>).</p>
+</li>
+</ul>
+<h2 id="3-zmienne-grupuj%C4%85ce-i-wska%C5%BAniki-sumaryczne-analiza-por%C3%B3wnawcza">3. Zmienne grupujące i wskaźniki sumaryczne (Analiza Porównawcza)</h2>
+<p>Podstawą tego badania było potraktowanie masy ciała (<code>body_mass_g</code>) jako zmiennej zależnej, natomiast dla <strong>analizy porównawczej</strong> uwzględniono tu koniunkcję dwóch kluczowych zmiennych grupujących (cechach jakościowych): <strong>płci (sex)</strong> oraz <strong>gatunku (species)</strong>.</p>
+<p>Poniższa tabela dowodzi uśrednionych statystyk oraz wartości dyspersyjnych przygotowanych wprost z wykonanego programu.</p>
+<p><strong>Tabela: Statystyki sumaryczne dla Masy Ciała w gramach.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Gatunek (species)</th>
+<th>Płeć (sex)</th>
+<th>Liczebność całkowita</th>
+<th>Średnia masa (mean)</th>
+<th>Mediana (median)</th>
+<th>Odch. stand. (std)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adelie</td>
+<td>Female</td>
+<td>73</td>
+<td>3368.84</td>
+<td>3400.0</td>
+<td>269.38</td>
+</tr>
+<tr>
+<td>Adelie</td>
+<td>Male</td>
+<td>73</td>
+<td>4043.49</td>
+<td>4000.0</td>
+<td>346.81</td>
+</tr>
+<tr>
+<td>Chinstrap</td>
+<td>Female</td>
+<td>34</td>
+<td>3527.21</td>
+<td>3550.0</td>
+<td>285.33</td>
+</tr>
+<tr>
+<td>Chinstrap</td>
+<td>Male</td>
+<td>34</td>
+<td>3938.97</td>
+<td>3950.0</td>
+<td>362.14</td>
+</tr>
+<tr>
+<td>Gentoo</td>
+<td>Female</td>
+<td>58</td>
+<td>4679.74</td>
+<td>4700.0</td>
+<td>281.58</td>
+</tr>
+<tr>
+<td>Gentoo</td>
+<td>Male</td>
+<td>61</td>
+<td>5484.84</td>
+<td>5500.0</td>
+<td>313.16</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-wyniki-wizualne-najwa%C5%BCniejsze-wykresy">4. Wyniki wizualne: Najważniejsze wykresy</h2>
+<p>Przedstawiono wizualizacje ilustrujące i sprawdzające kluczowe rozkłady wg zmiennych grupujących. Poniższe wykresy dostarczają nie tylko statystycznego dowodu na powiązania płci, ale również pomagają zweryfikować badawczą klasyfikację różnych gatunków.</p>
+<h3 id="a-rozk%C5%82ad-masy-cia%C5%82a-z-badaniem-p%C5%82ci">A. Rozkład masy ciała z badaniem płci</h3>
+<p><img src="wykresy/histogram_masa_plec.png" alt="Histogram Masa a Płeć"></p>
+<h3 id="b-r%C3%B3%C5%BCnice-fizjologiczne-wzgl%C4%99dem-grup">B. Różnice fizjologiczne względem grup</h3>
+<p>Wykres typu &quot;Boxplot&quot; badający przedziały (kwartyle) dla długości płetwy potwierdza zbieżne różnice dla wielkości grup pingwinów, będąc dodatkowo skorelowanym z masą ciała (patrz: Gentoo).</p>
+<p><img src="wykresy/boxplot_pletwa_gatunek.png" alt="Boxplot Długości Płetwy względem grup"></p>
+<h3 id="c-analiza-wymiar%C3%B3w-dzioba-dla-poszczeg%C3%B3lnych-gatunk%C3%B3w">C. Analiza wymiarów dzioba dla poszczególnych gatunków</h3>
+<p>Korelacja dwóch numerycznych zmiennych z zastosowanym rzutowaniem na klaster grupy.</p>
+<p><img src="wykresy/scatter_dziob_gatunek.png" alt="Dyspersja dzioba na gatunki"></p>
+<h2 id="5-interpretacja-poszczeg%C3%B3lnych-wynik%C3%B3w---wnioski">5. Interpretacja poszczególnych wyników - Wnioski</h2>
+<p>Analiza podziału biomechanicznego połączonych i zgrupowanych czynnikowo pingwinów pozwala sprecyzować bardzo wyraźne i łatwe do oceny konkluzje naukowe:</p>
+<ol>
+<li>
+<p><strong>Widoczny dymalizm płciowy</strong>: Statystyki uzyskane dla populacji bezsprzecznie udowadniają, iż niezależnie od gatunku, samce z tych samych grup (<em>males</em>) są znacząco cięższe (&quot;różnica płci&quot; wynosi średnio koło 500g-800g przewagi na korzyść samca) oraz cechują się wyraźnie dłuższymi płetwami w porównaniu z samicami. Co więcej, histogram dowodzi, że jest to zjawisko zbiegające do pewnych rozkładów normalnych spiętrzonych dla badanych grup osobno.</p>
+</li>
+<li>
+<p><strong>Cechy gatunku nadpisywane przez płeć</strong>: Widać drastyczną przewagę wielkości fizjologicznych osobnika <strong>Gentoo</strong>. Nawet samice z grupy Gentoo są na ogół zauważalnie cięższe, a ich płetwy są dłuższe (mediana to ok. 210~215 mm) niż wskaźniki najcięższych w stawce i dobrze zbudowanych samców z grup Adelie i Chinstrap.</p>
+</li>
+<li>
+<p><strong>Bardzo silne zgrupowania klastrowe wymiarów dzioba (Scatter Plot)</strong>: Korelacja wymiarów dzioba jest świetnym predykatem i bardzo trafną zmienną klasyfikującą konkretny przypadek biologiczny. Jak wynika z wykresu rozrzutu, pomiar zaledwie dwóch uwarunkowań - długości oraz głębokości (grubości) dzioba - powoduje tworzenie się trzech idealnie wyszarpanych naturalnych wysepek (klastrów), które bezpośrednio odpowiadają konkretnemu rodzajowi pingwina. Taki dowód jednoznacznie wspiera tworzenie algorytmów sztucznej inteligencji, w których na podstawie cech dzioba bezbłędnie klasyfikuje się te odrębne na archipelagu grupy bez konieczności badania genetycznego zwierzęcia.</p>
+</li>
+</ol>
+
+</body>
+</html>
