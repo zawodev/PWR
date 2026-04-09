@@ -1,6 +1,7 @@
 clc; clear; close all;
 
 % masy nasion dwóch połówek tej samej rośliny (jedna zapylona druga nie)
+% zależne są bo przed i po
 
 data = readtable('data/chmiel.csv');
 zapy = data.zapylona;
