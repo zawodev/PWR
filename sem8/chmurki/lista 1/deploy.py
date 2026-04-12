@@ -114,7 +114,7 @@ def package_apps():
             "--region",
             "us-east-1",
             "--backend-env-name",
-            "simple-chat-backend-env",
+            "simple-chat-v3-backend-env",
         ],
         cwd=str(base_dir),
         check=True,
@@ -149,16 +149,16 @@ def main():
     print("="*60)
     
     backend_zip = base_dir / "backend-deployment.zip"
-    backend_version = f"simple-chat-backend-{timestamp}"
+    backend_version = f"simple-chat-v3-backend-{timestamp}"
     backend_s3_key = f"backend/{timestamp}/backend-deployment.zip"
     
     if backend_zip.exists():
         print(f"Backend package: {backend_zip.name} ({backend_zip.stat().st_size / 1024:.1f} KB)")
         
         if upload_to_s3(backend_zip, eb_deployment_bucket, backend_s3_key):
-            if create_app_version("simple-chat-backend", backend_version, eb_deployment_bucket, backend_s3_key):
-                if deploy_version("simple-chat-backend", "simple-chat-backend-env", backend_version):
-                    wait_for_deployment("simple-chat-backend", "simple-chat-backend-env")
+            if create_app_version("simple-chat-v3-backend", backend_version, eb_deployment_bucket, backend_s3_key):
+                if deploy_version("simple-chat-v3-backend", "simple-chat-v3-backend-env", backend_version):
+                    wait_for_deployment("simple-chat-v3-backend", "simple-chat-v3-backend-env")
     else:
         print(f"Backend ZIP not found: {backend_zip}")
     
@@ -167,16 +167,16 @@ def main():
     print("="*60)
     
     frontend_zip = base_dir / "frontend-deployment.zip"
-    frontend_version = f"simple-chat-frontend-{timestamp}"
+    frontend_version = f"simple-chat-v3-frontend-{timestamp}"
     frontend_s3_key = f"frontend/{timestamp}/frontend-deployment.zip"
     
     if frontend_zip.exists():
         print(f"Frontend package: {frontend_zip.name} ({frontend_zip.stat().st_size / 1024:.1f} KB)")
         
         if upload_to_s3(frontend_zip, eb_deployment_bucket, frontend_s3_key):
-            if create_app_version("simple-chat-frontend", frontend_version, eb_deployment_bucket, frontend_s3_key):
-                if deploy_version("simple-chat-frontend", "simple-chat-frontend-env", frontend_version):
-                    wait_for_deployment("simple-chat-frontend", "simple-chat-frontend-env")
+            if create_app_version("simple-chat-v3-frontend", frontend_version, eb_deployment_bucket, frontend_s3_key):
+                if deploy_version("simple-chat-v3-frontend", "simple-chat-v3-frontend-env", frontend_version):
+                    wait_for_deployment("simple-chat-v3-frontend", "simple-chat-v3-frontend-env")
     else:
         print(f"Frontend ZIP not found: {frontend_zip}")
     

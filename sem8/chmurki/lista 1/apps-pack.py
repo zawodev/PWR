@@ -119,7 +119,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--api-url", help="Backend API URL for frontend build")
     parser.add_argument("--region", default="us-east-1")
-    parser.add_argument("--backend-env-name", default="simple-chat-backend-env")
+    parser.add_argument("--backend-env-name", default="simple-chat-v3-backend-env")
     args = parser.parse_args()
 
     api_url = resolve_backend_api_url(args.api_url, args.region, args.backend_env_name)

@@ -13,82 +13,67 @@ terraform {
   }
 }
 
+// plugin terraforma do konkretnej chmury
 provider "aws" {
   region = var.aws_region
 }
 
 variable "aws_region" {
-  description = "AWS region"
+  description = "region aws"
   type        = string
   default     = "us-east-1"
 }
 
 variable "project_name" {
-  description = "Prefix for all resources"
+  description = "nazwa projektu (prefixdla zasobów aws) "
   type        = string
-  default     = "simple-chat"
+  default     = "simple-chat-v3"
 }
 
 variable "db_name" {
-  description = "RDS database name"
+  description = "nazwa bazy danych rds"
   type        = string
   default     = "chatdb"
 }
 
 variable "db_username" {
-  description = "RDS admin username"
+  description = "login admina dla bazy rds"
   type        = string
   default     = "chatadmin"
 }
 
 variable "db_password" {
-  description = "RDS admin password"
+  description = "passy do bazy rds (jak puste, terraform wygeneruje sam)"
   type        = string
   default     = ""
   sensitive   = true
 }
 
 variable "eb_solution_stack_name" {
-  description = "Elastic Beanstalk Docker solution stack name (set according to your region/account)"
+  description = "elastic beanstalk"
   type        = string
   default     = "64bit Amazon Linux 2 v4.7.0 running Docker"
 }
 
 variable "frontend_origin" {
-  description = "Allowed frontend origin for backend CORS"
+  description = "dozwolony origin frontendu dla CORS w backendzie"
   type        = string
   default     = "*"
 }
 
-variable "backend_api_url" {
-  description = "Backend URL injected into frontend"
-  type        = string
-  default     = ""
-}
-
-variable "public_ingress_cidr" {
-  description = "Public ingress CIDR for demo deployment"
-  type        = string
-  default     = "0.0.0.0/0"
-}
-
-variable "eb_service_role_name" {
-  description = "Existing Elastic Beanstalk service role name"
-  type        = string
-  default     = "aws-elasticbeanstalk-service-role"
-}
-
+// zmienne wejśćiowe
 variable "eb_instance_profile_name" {
-  description = "Existing EC2 instance profile name for Elastic Beanstalk"
+  description = "nazwa istniejącego 'instance profile' dla ec2 w Elastic Beanstalk"
   type        = string
   default     = "LabInstanceProfile"
 }
 
+//zmienne pomocnicze
 locals {
-  name_prefix           = var.project_name
   db_password_effective = var.db_password != "" ? var.db_password : random_password.db_password.result
 }
 
+//zasób tworzony w aws
 resource "random_id" "suffix" {
   byte_length = 3
 }
@@ -100,7 +85,7 @@ resource "random_password" "db_password" {
 }
 
 resource "aws_s3_bucket" "media" {
-  bucket = "${local.name_prefix}-media-${random_id.suffix.hex}"
+  bucket = "${var.project_name}-media-${random_id.suffix.hex}"
 }
 
 resource "aws_s3_bucket_versioning" "media" {
@@ -130,7 +115,7 @@ resource "aws_s3_bucket_public_access_block" "media" {
 }
 
 resource "aws_db_instance" "chat" {
-  identifier            = "${local.name_prefix}-db"
+  identifier            = "${var.project_name}-db"
   allocated_storage     = 20
   max_allocated_storage = 100
   engine                = "postgres"
@@ -154,12 +139,12 @@ resource "aws_security_group_rule" "rds_postgres_ingress" {
 }
 
 resource "aws_elastic_beanstalk_application" "backend" {
-  name        = "${local.name_prefix}-backend"
+  name        = "${var.project_name}-backend"
   description = "Backend FastAPI app"
 }
 
 resource "aws_elastic_beanstalk_environment" "backend" {
-  name                = "${local.name_prefix}-backend-env"
+  name                = "${var.project_name}-backend-env"
   application         = aws_elastic_beanstalk_application.backend.name
   solution_stack_name = var.eb_solution_stack_name
 
@@ -243,12 +228,12 @@ resource "aws_elastic_beanstalk_environment" "backend" {
 }
 
 resource "aws_elastic_beanstalk_application" "frontend" {
-  name        = "${local.name_prefix}-frontend"
+  name        = "${var.project_name}-frontend"
   description = "Frontend React app"
 }
 
 resource "aws_elastic_beanstalk_environment" "frontend" {
-  name                = "${local.name_prefix}-frontend-env"
+  name                = "${var.project_name}-frontend-env"
   application         = aws_elastic_beanstalk_application.frontend.name
   solution_stack_name = var.eb_solution_stack_name
 
@@ -271,12 +256,6 @@ resource "aws_elastic_beanstalk_environment" "frontend" {
   }
 
   setting {
-    namespace = "aws:elasticbeanstalk:application:environment"
-    name      = "VITE_API_URL"
-    value     = var.backend_api_url
-  }
-
-  setting {
     namespace = "aws:elasticbeanstalk:cloudwatch:logs"
     name      = "StreamLogs"
     value     = "true"
@@ -296,7 +275,7 @@ resource "aws_elastic_beanstalk_environment" "frontend" {
 }
 
 resource "aws_cognito_user_pool" "chat_users" {
-  name                = "${local.name_prefix}-users"
+  name                = "${var.project_name}-users"
   mfa_configuration   = "OFF"
   deletion_protection = "INACTIVE"
 
@@ -315,7 +294,7 @@ resource "aws_cognito_user_pool" "chat_users" {
 }
 
 resource "aws_cognito_user_pool_client" "chat_app_client" {
-  name         = "${local.name_prefix}-app-client"
+  name         = "${var.project_name}-app-client"
   user_pool_id = aws_cognito_user_pool.chat_users.id
 
   generate_secret               = false
@@ -328,7 +307,7 @@ resource "aws_cognito_user_pool_client" "chat_app_client" {
 }
 
 resource "aws_cloudwatch_metric_alarm" "rds_cpu_high" {
-  alarm_name          = "${local.name_prefix}-rds-cpu-high"
+  alarm_name          = "${var.project_name}-rds-cpu-high"
   alarm_description   = "RDS CPU above 80%"
   namespace           = "AWS/RDS"
   metric_name         = "CPUUtilization"
@@ -344,7 +323,7 @@ resource "aws_cloudwatch_metric_alarm" "rds_cpu_high" {
 }
 
 resource "aws_cloudwatch_dashboard" "main" {
-  dashboard_name = "${local.name_prefix}-dashboard"
+  dashboard_name = "${var.project_name}-dashboard"
 
   dashboard_body = jsonencode({
     widgets = [
@@ -385,6 +364,7 @@ resource "aws_cloudwatch_dashboard" "main" {
   })
 }
 
+//wyjściowe wartości wypisywane po apply
 output "frontend_url" {
   value = "http://${aws_elastic_beanstalk_environment.frontend.cname}"
 }

@@ -36,3 +36,46 @@ normalnie ma się konto i dodaje się klucz i za pomocą klucza komunikacja wię
 większość użytkowników używa SSO
 
 login hasło jakieś musi być przy tym cognito no
+
+
+
+----------------------
+ingress: ruch przychodzący do zasobu
+egress: ruch wychodzący z zasobu
+
+w Security Groups odpowiedź wraca automatycznie (bo są stateful) - więc nie musisz ręcznie ustawiać egress dla odpowiedzi
+
+serwer nie pobiera danych z api więc nie ma potrzeby na egress
+
+
+
+Co oznacza skip_final_snapshot = true w RDS
+Przy usuwaniu instancji DB AWS nie robi końcowego snapshotu.
+Plusy:
+- szybciej,
+- taniej,
+Minus: 
+- nie masz końcowej kopii zapasowej do odzyskania
+
+
+Czym jest policy w konfiguracji S3
+Najczęściej bucket policy to dokument JSON, który mówi kto i co może zrobić na bucketcie lub obiektach.
+W Twoim pliku nie ma osobnego bucket policy. Masz:
+- versioning,
+- szyfrowanie AES256,
+- public access block.
+
+
+Po co depends_on
+depends_on wymusza kolejność, gdy Terraform sam nie widzi zależności po referencjach.
+W Twoim pliku praktycznie nie jest potrzebny, bo zależności są jawne przez odwołania, np:
+- backend environment używa adresu RDS i ID Cognito,
+- alarm używa DB identifier,
+- dashboard używa nazw środowisk.
+
+
+
+W jakiej kolejności Terraform to tworzy
+Terraform nie działa linia po linii, tylko po grafie zależności i równolegle tam, gdzie może.
+
+jabadabaDOO
