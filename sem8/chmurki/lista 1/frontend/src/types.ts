@@ -16,7 +16,34 @@ export type Message = {
 };
 
 export type MessageCreate = {
-  nickname: string;
+  nickname?: string;
   text: string;
   media_id?: number;
+};
+
+export type AuthConfig = {
+  enabled: boolean;
+};
+
+export type LoginRequest = {
+  username: string;
+  password: string;
+};
+
+export type RegisterRequest = {
+  username: string;
+  password: string;
+};
+
+export type LoginResponse = {
+  access_token: string;
+  refresh_token?: string;
+  id_token?: string;
+  token_type: string;
+  expires_in: number;
+  username: string;
+};
+
+export type AuthUser = {
+  username: string;
 };

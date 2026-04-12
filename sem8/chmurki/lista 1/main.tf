@@ -96,7 +96,7 @@ resource "random_id" "suffix" {
 resource "random_password" "db_password" {
   length           = 20
   special          = true
-  override_special = "!@#%^*-_=+"
+  override_special = "!#%^*-_=+"
 }
 
 resource "aws_s3_bucket" "media" {
@@ -201,6 +201,24 @@ resource "aws_elastic_beanstalk_environment" "backend" {
 
   setting {
     namespace = "aws:elasticbeanstalk:application:environment"
+    name      = "COGNITO_REGION"
+    value     = var.aws_region
+  }
+
+  setting {
+    namespace = "aws:elasticbeanstalk:application:environment"
+    name      = "COGNITO_USER_POOL_ID"
+    value     = aws_cognito_user_pool.chat_users.id
+  }
+
+  setting {
+    namespace = "aws:elasticbeanstalk:application:environment"
+    name      = "COGNITO_CLIENT_ID"
+    value     = aws_cognito_user_pool_client.chat_app_client.id
+  }
+
+  setting {
+    namespace = "aws:elasticbeanstalk:application:environment"
     name      = "FRONTEND_ORIGIN"
     value     = var.frontend_origin
   }
@@ -277,6 +295,38 @@ resource "aws_elastic_beanstalk_environment" "frontend" {
   }
 }
 
+resource "aws_cognito_user_pool" "chat_users" {
+  name                = "${local.name_prefix}-users"
+  mfa_configuration   = "OFF"
+  deletion_protection = "INACTIVE"
+
+  password_policy {
+    minimum_length                   = 8
+    require_lowercase                = true
+    require_uppercase                = true
+    require_numbers                  = true
+    require_symbols                  = false
+    temporary_password_validity_days = 7
+  }
+
+  admin_create_user_config {
+    allow_admin_create_user_only = false
+  }
+}
+
+resource "aws_cognito_user_pool_client" "chat_app_client" {
+  name         = "${local.name_prefix}-app-client"
+  user_pool_id = aws_cognito_user_pool.chat_users.id
+
+  generate_secret               = false
+  prevent_user_existence_errors = "ENABLED"
+  explicit_auth_flows = [
+    "ALLOW_USER_PASSWORD_AUTH",
+    "ALLOW_REFRESH_TOKEN_AUTH",
+    "ALLOW_USER_SRP_AUTH"
+  ]
+}
+
 resource "aws_cloudwatch_metric_alarm" "rds_cpu_high" {
   alarm_name          = "${local.name_prefix}-rds-cpu-high"
   alarm_description   = "RDS CPU above 80%"
@@ -349,4 +399,12 @@ output "s3_media_bucket" {
 
 output "rds_endpoint" {
   value = aws_db_instance.chat.address
+}
+
+output "cognito_user_pool_id" {
+  value = aws_cognito_user_pool.chat_users.id
+}
+
+output "cognito_client_id" {
+  value = aws_cognito_user_pool_client.chat_app_client.id
 }

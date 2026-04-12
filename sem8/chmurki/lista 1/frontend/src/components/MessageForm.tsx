@@ -4,11 +4,11 @@ import { postMessage, uploadMedia } from "../services/api";
 import type { Message } from "../types";
 
 type Props = {
+  username: string;
   onMessageCreated: (message: Message) => void;
 };
 
-export default function MessageForm({ onMessageCreated }: Props) {
-  const [nickname, setNickname] = useState(localStorage.getItem("chat_nickname") || "");
+export default function MessageForm({ username, onMessageCreated }: Props) {
   const [text, setText] = useState("");
   const [file, setFile] = useState<File | null>(null);
   const [isSending, setIsSending] = useState(false);
@@ -16,8 +16,8 @@ export default function MessageForm({ onMessageCreated }: Props) {
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!nickname.trim()) {
-      setError("Provide nickname");
+    if (!username.trim()) {
+      setError("Missing authenticated username");
       return;
     }
 
@@ -30,7 +30,6 @@ export default function MessageForm({ onMessageCreated }: Props) {
     setIsSending(true);
 
     try {
-      localStorage.setItem("chat_nickname", nickname.trim());
       let mediaId: number | undefined;
 
       if (file) {
@@ -39,7 +38,7 @@ export default function MessageForm({ onMessageCreated }: Props) {
       }
 
       const created = await postMessage({
-        nickname: nickname.trim(),
+        nickname: username.trim(),
         text: text.trim(),
         media_id: mediaId,
       });
@@ -56,16 +55,7 @@ export default function MessageForm({ onMessageCreated }: Props) {
 
   return (
     <form className="message-form" onSubmit={onSubmit}>
-      <label>
-        Nickname
-        <input
-          value={nickname}
-          onChange={(event) => setNickname(event.target.value)}
-          maxLength={40}
-          placeholder="Your nickname"
-          required
-        />
-      </label>
+      <p className="signed-in-as">Signed in as: {username}</p>
 
       <label>
         Message

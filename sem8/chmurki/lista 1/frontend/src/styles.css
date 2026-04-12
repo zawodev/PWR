@@ -88,6 +88,64 @@ body {
   gap: 12px;
 }
 
+.login-form {
+  max-width: 420px;
+  border: 1px solid #b9cfc1;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.auth-mode-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.auth-mode-switch button {
+  background: #e5efe9;
+  color: #16352b;
+  border: 1px solid #b9cfc1;
+}
+
+.auth-mode-switch button.is-active {
+  background: #1b6d4c;
+  color: #ffffff;
+  border-color: #1b6d4c;
+}
+
+.auth-hint {
+  margin: -4px 0 0;
+  font-size: 0.85rem;
+  color: #3b5a51;
+}
+
+.auth-shell {
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+  align-content: start;
+}
+
+.auth-topbar {
+  margin-top: 10px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.auth-topbar button {
+  padding: 6px 10px;
+}
+
+.signed-in-as {
+  margin: 0;
+  color: #304840;
+  font-size: 0.95rem;
+}
+
 label {
   display: grid;
   gap: 6px;

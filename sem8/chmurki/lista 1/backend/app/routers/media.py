@@ -7,6 +7,7 @@ from fastapi.responses import FileResponse
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 
+from app.auth import get_current_user
 from app.config import AWS_REGION, MAX_FILE_SIZE_BYTES, S3_BUCKET, UPLOAD_DIR
 from app.db import get_db
 from app.models import Media
@@ -37,7 +38,11 @@ def _to_media_out(media: Media) -> MediaOut:
 
 
 @router.post("", response_model=MediaOut)
-async def upload_media(file: UploadFile = File(...), db: Session = Depends(get_db)):
+async def upload_media(
+    file: UploadFile = File(...),
+    _current_user: dict[str, str] | None = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
     content_type = (file.content_type or "").lower()
     if not _is_supported_content_type(content_type):
         raise HTTPException(status_code=400, detail="Only image/audio/video files are allowed")

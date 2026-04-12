@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import DATABASE_URL, FRONTEND_ORIGIN, UPLOAD_DIR, DB_PATH, S3_BUCKET
 from app.db import Base, engine
+from app.routers.auth import router as auth_router
 from app.routers.media import router as media_router
 from app.routers.messages import router as messages_router
 
@@ -33,3 +34,4 @@ def health():
 
 app.include_router(messages_router)
 app.include_router(media_router)
+app.include_router(auth_router)

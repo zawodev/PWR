@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session, joinedload
 
+from app.auth import get_current_user
 from app.config import POLL_DEFAULT_LIMIT
 from app.db import get_db
 from app.models import Media, Message
@@ -36,6 +37,7 @@ def _to_message_out(message: Message) -> MessageOut:
 def get_messages(
     after_id: int | None = Query(default=None, ge=0),
     limit: int = Query(default=POLL_DEFAULT_LIMIT, ge=1, le=200),
+    _current_user: dict[str, str] | None = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
     query = db.query(Message).options(joinedload(Message.media)).order_by(Message.id.asc())
@@ -46,10 +48,19 @@ def get_messages(
 
 
 @router.post("", response_model=MessageOut)
-def post_message(payload: MessageCreate, db: Session = Depends(get_db)):
+def post_message(
+    payload: MessageCreate,
+    current_user: dict[str, str] | None = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
     trimmed_text = payload.text.strip()
     if not trimmed_text and payload.media_id is None:
         raise HTTPException(status_code=400, detail="Message cannot be empty")
+
+    payload_nickname = (payload.nickname or "").strip()
+    nickname = (current_user or {}).get("username", "").strip() or payload_nickname
+    if not nickname:
+        raise HTTPException(status_code=400, detail="Nickname cannot be empty")
 
     media = None
     if payload.media_id is not None:
@@ -58,7 +69,7 @@ def post_message(payload: MessageCreate, db: Session = Depends(get_db)):
             raise HTTPException(status_code=404, detail="Media not found")
 
     message = Message(
-        nickname=payload.nickname.strip(),
+        nickname=nickname,
         text=trimmed_text,
         media_id=payload.media_id,
     )
