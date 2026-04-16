@@ -60,9 +60,9 @@ fprintf('\nDwuczynnikowa ANOVA (toksyna x zaklad, n=12 na grupe):\n');
 %[p, ~, stats] = anova2(X, 12);
 
 % kolejnosc grup: T1Z1, T2Z1, T3Z1, T1Z2, T2Z2, T3Z2, T1Z3, T2Z3, T3Z3
-values   = cell2mat(groups(:)); % 108x1
-toksyna  = repelem([1;2;3;1;2;3;1;2;3], 12);
-zaklad   = repelem([1;1;1;2;2;2;3;3;3], 12);
+values = cell2mat(groups(:)); % 108x1
+toksyna = repelem([1;2;3;1;2;3;1;2;3], 12);
+zaklad = repelem([1;1;1;2;2;2;3;3;3], 12);
 [p, ~, stats] = anovan(values, {toksyna, zaklad}, 'model', 'interaction', 'varnames', {'Toksyna', 'Zaklad'}, 'display', 'off');
 
 fprintf('Toksyna (kolumny): p=%.4f\n', p(1));
