@@ -47,7 +47,7 @@ w Security Groups odpowiedź wraca automatycznie (bo są stateful) - więc nie m
 
 serwer nie pobiera danych z api więc nie ma potrzeby na egress
 
-
+acl - cyfrowe blokowanie lub dawanie dostępu (access control list)
 
 Co oznacza skip_final_snapshot = true w RDS
 Przy usuwaniu instancji DB AWS nie robi końcowego snapshotu.
@@ -77,5 +77,10 @@ W Twoim pliku praktycznie nie jest potrzebny, bo zależności są jawne przez od
 
 W jakiej kolejności Terraform to tworzy
 Terraform nie działa linia po linii, tylko po grafie zależności i równolegle tam, gdzie może.
+
+
+EC2 to goła VM, natomiast beanstalk to platforma/interfejs do wrzucania aplikacji (stawia ec2, load balancer, autoscaling)
+Beanstalk i tak używa EC2 pod spodem — tylko ukrywa przed Tobą szczegóły.
+
 
 jabadabaDOO
