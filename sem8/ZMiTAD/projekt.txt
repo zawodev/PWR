@@ -1,0 +1,29 @@
+dane gdzie minimum 3 próbki (min 30 elementów każde) czyli min 30x3, limitu górnego nie ma
+jedyne co ważne żeby nie wziąć wszystkich studentów tylko próbkę jak chcemy jakieś wnioski dla wszystkich
+
+jakies sprawozdanie sadge
+ALE
+jak oddawać wcześniej, to można w formie mówionej
+zalecane jest zrobić to wcześniej i mieć z głowy
+
+można skonsultować jakość danych mailowo zawsze albo na zajęciach
+
+np:
+cena dolara po zamknięciu giełdy przez 3 ostatnie lata (3 lata = 3 próbki)
+
+albo
+temperatury w styczniu z 3 ostatnich lata
+
+albo 
+cena ropy w ostatnich 3 miesiącach
+
+albo
+oceny z matur z 3 ostatnich lat
+
+można nawet samemu sobie zmierzyć z zegarka (naljepiej ciekawe dane wziac żeby było ciekawie)
+wiec warto wymyslec cos przyjemnego fajnego własnego do prostych wniosków
+
+
+50 listy + 20 projekt z tego 70 razzem i 35 na 3.0
+rn: 
+5 + 5 + 5 + 4 + 5 = 24/25
