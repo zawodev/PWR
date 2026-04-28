@@ -1,0 +1,14 @@
+Test normalności Shapiro-Wilka
+H0: zmienna ma rozkład normalny
+H1: zmienna nie ma rozkładu normalnego
+
+Grupa Female (n=165):
+  statystyka: 0.9193
+  p-value: 0.00000006
+
+Grupa Male (n=168):
+  statystyka: 0.9250
+  p-value: 0.00000012
+
+Poziom istotności α: 0.05
+Wniosek: W obu grupach odrzucamy H0 (brak normalności).

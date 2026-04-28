@@ -1,0 +1,11 @@
+Test t-Welcha dla dwoch niezaleznych prob
+H0: srednia masa ciala samcow = srednia masa ciala samic
+H1: srednie sa rozne
+
+Liczebnosc Female: 165
+Liczebnosc Male: 168
+Statystyka t: 8.5545
+p-value: 0.00000000
+Stopnie swobody (Welch): 323.90
+Poziom istotnosci alpha: 0.05
+Decyzja: Odrzucamy H0

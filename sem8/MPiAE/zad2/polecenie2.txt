@@ -1,0 +1,11 @@
+Forma: proszę o przesłanie rozwiązania w formie pliku PDF (maksymalnie 3-4 strony) oraz dołączenie wykorzystanego kodu źródłowego programu.
+Oczekiwana zawartość
+    Krótka informacja na temat wybranych danych (Uwaga: można wykorzystać dane z poprzedniego zadania lub wybrać inny zbiór).
+    Informacja nt. wykorzystanych narzędzi (pakiet, funkcje itp.)
+    Wyniki: Zastosowanie (przynajmniej dla jednej zmiennej) poznanych metod wnioskowania statystycznego, tzn. estymacji punktowej, estymacji przedziałowej (konstrukcja przedziałów ufności) i weryfikacja określonej hipotezy statystycznej dotyczącej własności jednej lub dwóch populacji (np. porównanie wartości średnich danej cechy dla dwóch niezależnych prób: kobiety vs. mężczyźni, chorzy vs. zdrowi itp.).
+    Precyzyjna interpretacja otrzymanych wyników/wnioski.
+
+Termin: 29 IV 2026.
+Oprogramowanie: dowolne (R, Python, Excel, Matlab itp.).
+Punktacja: 0-3pkt.
+Dodatkowe uwagi: Samodzielność!!!

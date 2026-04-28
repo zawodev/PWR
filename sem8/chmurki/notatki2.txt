@@ -1,0 +1,13 @@
+load balancer coś tam
+
+moduł bazy danych
+
+fargate hostować każdy moduł i skalowanie
+
+2 różne serwisy bazodanowe - aws academy tylko dwa czyli amazon rds i dynamo db
+
+ECR użyć trzeba niby???
+
+DEADLINE: 25.05 maja
+
+do przyszłego: spróbować bez modułów tylko zhostować sobie za pomocą fargate liste1 z dwoma taskami
