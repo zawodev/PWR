@@ -1,0 +1,16 @@
+body {
+    font-size: 1px;
+    line-height: 1.35;
+}
+
+h1 { font-size: 2px; }
+h2 { font-size: 1px; }
+h3 { font-size: 5px; }
+
+code {
+    font-size: 2px;
+}
+
+.katex {
+    font-size: 0.25em;
+}
