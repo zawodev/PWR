@@ -8,6 +8,10 @@ fargate hostować każdy moduł i skalowanie
 
 ECR użyć trzeba niby???
 
-DEADLINE: 25.05 maja
+----- DEADLINE: 25.05 maja
 
 do przyszłego: spróbować bez modułów tylko zhostować sobie za pomocą fargate liste1 z dwoma taskami
+
+nie zostawiać sobie tego na ostatni tydzień
+
+sa pewne niedopowiedzenia które należy odkryć i rozwiązać (hurra) 
