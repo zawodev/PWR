@@ -60,7 +60,6 @@ public class Lista10Zad1 {
             }
 
             // Macierz konfuzji dla tego powtórzenia (suma po foldach)
-            // Macierz konfuzji dla tego powtórzenia (suma po foldach)
             double[][] repConfusion = new double[numClasses][numClasses];
 
             for (int fold = 0; fold < numFolds; fold++) {
