@@ -51,8 +51,7 @@ public class Lista9Zad2 {
 
                 double gainRatio = (splitInfo == 0) ? 0 : infoGain / splitInfo;
 
-                System.out.printf("%-5d %-25s %-12.6f %-12.6f %-12.6f%n",
-                        i, data.attribute(i).name(), infoGain, splitInfo, gainRatio);
+                System.out.printf("%-5d %-25s %-12.6f %-12.6f %-12.6f%n", i, data.attribute(i).name(), infoGain, splitInfo, gainRatio);
             }
 
         } catch (Exception e) {
@@ -89,7 +88,7 @@ public class Lista9Zad2 {
         int total = data.numInstances();
 
         for (List<Instance> subset : groups.values()) {
-            // Tworzymy mniejszy zbiór z wierszami odpowiadającymi konkretnej wartości atrybutu
+            // mniejszy zbiór z wierszami odpowiadającymi konkretnej wartości atrybutu
             Instances subData = new Instances(data, subset.size());
             for (Instance inst : subset) subData.add(inst);
 
@@ -99,7 +98,7 @@ public class Lista9Zad2 {
         return result;
     }
 
-    // Oblicza H(Attribute) - miarę rozproszenia samego atrybutu
+    // oblicza H(Attribute) - miara rozproszenia atrybutu
     public static double splitInfo(Instances data, int attrIndex) {
         Map<String, Integer> counts = new HashMap<>();
         for (Instance inst : data) {
@@ -116,7 +115,7 @@ public class Lista9Zad2 {
         return splitInfo;
     }
 
-    // Matematyczny logarytm o zadanej podstawie
+    // matematyczny logarytm o zadanej podstawie
     public static double logBase(double x) {
         if (x <= 0.0) return 0.0;
         return Math.log(x) / Math.log(LOG_BASE);

@@ -107,9 +107,9 @@ public class Lista10Zad1 {
         double total = tp + tn + fn + fp;
 
         results.accuracy = (tp + tn) / total;
-        results.tpRate   = tp / (tp + fn);          // sensitivity / recall
-        results.tnRate   = tn / (tn + fp);          // specificity
-        results.fpRate   = fp / (fp + tn);          // FP rate
+        results.tpRate   = tp / (tp + fn); // sensitivity / recall
+        results.tnRate   = tn / (tn + fp); // specificity
+        results.fpRate   = fp / (fp + tn); // FP rate
         results.gMean    = Math.sqrt(results.tpRate * results.tnRate);
         results.auc      = (1.0 + results.tpRate - results.fpRate) / 2.0;
 
