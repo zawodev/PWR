@@ -47,3 +47,14 @@ export type LoginResponse = {
 export type AuthUser = {
   username: string;
 };
+
+export type NotificationItem = {
+  id: string;
+  title: string;
+  message: string;
+  created_at: string;
+  chat_id?: number | null;
+  sender?: string | null;
+  recipient?: string | null;
+  status: string;
+};

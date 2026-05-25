@@ -3,7 +3,7 @@ import httpx
 from sqlalchemy.orm import Session
 
 from app.auth import get_current_user
-from app.config import DEFAULT_CHAT_SLUG, MEDIA_SERVICE_URL, NOTIFICATION_SERVICE_URL, POLL_DEFAULT_LIMIT
+from app.config import DEFAULT_CHAT_SLUG, MEDIA_SERVICE_URL, NOTIFICATION_SERVICE_URL, NOTIFICATION_SHARED_SECRET, POLL_DEFAULT_LIMIT
 from app.db import get_db
 from app.models import Chat, Message
 from app.schemas import MediaOut, MessageCreate, MessageOut
@@ -55,9 +55,26 @@ def _notify_new_message(chat: Chat, message: Message) -> None:
         "sender": message.nickname,
     }
 
+    headers = {}
+    if NOTIFICATION_SHARED_SECRET:
+        headers["X-Notification-Secret"] = NOTIFICATION_SHARED_SECRET
+
     try:
-        httpx.post(f"{NOTIFICATION_SERVICE_URL}/api/notifications", json=payload, timeout=3.0)
-    except httpx.HTTPError:
+        response = httpx.post(
+            f"{NOTIFICATION_SERVICE_URL}/api/notifications",
+            json=payload,
+            headers=headers,
+            timeout=3.0,
+        )
+        if response.status_code >= 400:
+            print(
+                "Notification post failed",
+                response.status_code,
+                response.text[:200],
+                flush=True,
+            )
+    except httpx.HTTPError as exc:
+        print(f"Notification post exception: {exc}", flush=True)
         return
 
 

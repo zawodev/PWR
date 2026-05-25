@@ -3,10 +3,9 @@ import json
 import uuid
 
 import boto3
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Header, HTTPException, Query
 
-from app.auth import get_current_user
-from app.config import AWS_REGION, SNS_TOPIC_ARN
+from app.config import AWS_REGION, NOTIFICATION_SHARED_SECRET, SNS_TOPIC_ARN
 from app.db import get_notifications_table
 from app.schemas import NotificationCreate, NotificationOut
 
@@ -40,8 +39,12 @@ def health():
 @router.post("", response_model=NotificationOut)
 def create_notification(
     payload: NotificationCreate,
-    _current_user: dict[str, str] | None = Depends(get_current_user),
+    x_notification_secret: str | None = Header(default=None, alias="X-Notification-Secret"),
 ):
+    if NOTIFICATION_SHARED_SECRET:
+        if not x_notification_secret or x_notification_secret != NOTIFICATION_SHARED_SECRET:
+            raise HTTPException(status_code=401, detail="Invalid notification secret")
+
     if not SNS_TOPIC_ARN:
         raise HTTPException(status_code=503, detail="SNS topic is not configured")
 

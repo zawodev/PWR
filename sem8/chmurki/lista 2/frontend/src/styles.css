@@ -53,6 +53,43 @@ body {
   align-items: start;
 }
 
+.notifications-panel {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+  box-shadow: 0 12px 24px rgba(33, 74, 45, 0.08);
+}
+
+.notifications-panel h2 {
+  margin: 0;
+}
+
+.notifications-list {
+  display: grid;
+  gap: 10px;
+}
+
+.notification-item {
+  border: 1px solid #dbe7df;
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: var(--surface-2);
+}
+
+.notification-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.notification-message {
+  margin: 8px 0 0;
+}
+
 .chat-pane,
 .composer-pane {
   min-width: 0;

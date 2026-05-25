@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import ChatWindow from "./components/ChatWindow";
 import LoginForm from "./components/LoginForm";
@@ -9,12 +9,13 @@ import {
   getAuthConfig,
   getMe,
   getMessages,
+  getNotifications,
   hasAuthToken,
   login,
   register,
   setAuthToken,
 } from "./services/api";
-import type { LoginRequest, Message, RegisterRequest } from "./types";
+import type { LoginRequest, Message, NotificationItem, RegisterRequest } from "./types";
 
 export default function App() {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -25,6 +26,9 @@ export default function App() {
   const [currentUser, setCurrentUser] = useState("");
   const [authError, setAuthError] = useState("");
   const [isSigningIn, setIsSigningIn] = useState(false);
+  const [notifications, setNotifications] = useState<NotificationItem[]>([]);
+  const seenNotifications = useRef(new Set<string>());
+  const initialNotificationsLoaded = useRef(false);
 
   const lastMessageId = useMemo(
     () => messages.reduce((max, item) => (item.id > max ? item.id : max), 0),
@@ -84,6 +88,17 @@ export default function App() {
     return () => {
       cancelled = true;
     };
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !("Notification" in window)) {
+      return;
+    }
+    if (!window.isSecureContext && window.location.hostname !== "localhost") {
+      return;
+    }
+
+    Notification.requestPermission().catch(() => {});
   }, []);
 
   const handleLogin = useCallback(async (payload: LoginRequest) => {
@@ -163,7 +178,61 @@ export default function App() {
     }
   }, [authEnabled, authReady, forceLogout, isAuthenticated, lastMessageId]);
 
+  const showSystemNotification = useCallback((item: NotificationItem) => {
+    if (typeof window === "undefined" || !("Notification" in window)) {
+      return;
+    }
+    if (Notification.permission !== "granted") {
+      return;
+    }
+
+    new Notification(item.title, {
+      body: item.message,
+      tag: item.id,
+    });
+  }, []);
+
+  const loadNotifications = useCallback(async () => {
+    if (!authReady) {
+      return;
+    }
+
+    if (authEnabled && !isAuthenticated) {
+      return;
+    }
+
+    try {
+      const items = await getNotifications(10);
+      if (!items.length) {
+        return;
+      }
+
+      if (!initialNotificationsLoaded.current) {
+        items.forEach((item) => seenNotifications.current.add(item.id));
+        setNotifications(items);
+        initialNotificationsLoaded.current = true;
+        return;
+      }
+
+      const fresh = items.filter((item) => !seenNotifications.current.has(item.id));
+      if (!fresh.length) {
+        return;
+      }
+
+      fresh
+        .slice()
+        .reverse()
+        .forEach((item) => showSystemNotification(item));
+
+      setNotifications((prev) => [...fresh, ...prev].slice(0, 15));
+      fresh.forEach((item) => seenNotifications.current.add(item.id));
+    } catch {
+      return;
+    }
+  }, [authEnabled, authReady, isAuthenticated, showSystemNotification]);
+
   usePolling(loadNewMessages, 2500);
+  usePolling(loadNotifications, 4000);
 
   if (!authReady) {
     return (
@@ -206,6 +275,23 @@ export default function App() {
       </header>
 
       {error ? <p className="error">{error}</p> : null}
+
+      {notifications.length ? (
+        <section className="notifications-panel">
+          <h2>Powiadomienia</h2>
+          <div className="notifications-list">
+            {notifications.map((item) => (
+              <article className="notification-item" key={item.id}>
+                <div className="notification-top">
+                  <strong>{item.title}</strong>
+                  <span>{new Date(item.created_at).toLocaleTimeString()}</span>
+                </div>
+                <p className="notification-message">{item.message}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section className="chat-layout">
         <div className="chat-pane">

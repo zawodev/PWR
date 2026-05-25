@@ -66,6 +66,11 @@ variable "frontend_origin" {
   default     = "*"
 }
 
+variable "notification_email" {
+  type        = string
+  default     = "272644@student.pwr.edu.pl"
+}
+
 variable "auth_image" {
   description = "Auth service image (optional override)"
   type        = string
@@ -86,6 +91,11 @@ variable "media_image" {
 
 variable "notification_image" {
   description = "Notification service image (optional override)"
+  type        = string
+  default     = ""
+}
+
+variable "notification_shared_secret" {
   type        = string
   default     = ""
 }
@@ -120,6 +130,7 @@ locals {
   db_password_effective = var.db_password != "" ? var.db_password : random_password.db_password.result
   ecs_task_execution_role_arn = var.ecs_task_execution_role_arn != "" ? var.ecs_task_execution_role_arn : "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/${var.ecs_task_execution_role_name}"
   ecs_task_role_arn           = var.ecs_task_role_arn != "" ? var.ecs_task_role_arn : "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/${var.ecs_task_role_name}"
+  notification_shared_secret_effective = var.notification_shared_secret != "" ? var.notification_shared_secret : random_password.notification_secret.result
 }
 
 resource "random_id" "suffix" {
@@ -130,6 +141,11 @@ resource "random_password" "db_password" {
   length           = 20
   special          = true
   override_special = "!#%^*-_=+"
+}
+
+resource "random_password" "notification_secret" {
+  length  = 32
+  special = false
 }
 
 data "aws_vpc" "default" {
@@ -208,6 +224,12 @@ resource "aws_dynamodb_table" "notifications" {
 
 resource "aws_sns_topic" "notifications" {
   name = "${var.project_name}-notifications"
+}
+
+resource "aws_sns_topic_subscription" "notifications_email" {
+  topic_arn = aws_sns_topic.notifications.arn
+  protocol  = "email"
+  endpoint  = var.notification_email
 }
 
 resource "aws_cognito_user_pool" "chat_users" {
@@ -638,6 +660,7 @@ resource "aws_ecs_task_definition" "chat" {
         { name = "FRONTEND_ORIGIN", value = var.frontend_origin },
         { name = "MEDIA_SERVICE_URL", value = "http://${aws_lb.main.dns_name}" },
         { name = "NOTIFICATION_SERVICE_URL", value = "http://${aws_lb.main.dns_name}" },
+        { name = "NOTIFICATION_SHARED_SECRET", value = local.notification_shared_secret_effective },
         { name = "COGNITO_REGION", value = var.aws_region },
         { name = "COGNITO_USER_POOL_ID", value = aws_cognito_user_pool.chat_users.id },
         { name = "COGNITO_CLIENT_ID", value = aws_cognito_user_pool_client.chat_app_client.id }
@@ -722,6 +745,7 @@ resource "aws_ecs_task_definition" "notification" {
         { name = "AWS_REGION", value = var.aws_region },
         { name = "SNS_TOPIC_ARN", value = aws_sns_topic.notifications.arn },
         { name = "NOTIFICATIONS_TABLE_NAME", value = aws_dynamodb_table.notifications.name },
+        { name = "NOTIFICATION_SHARED_SECRET", value = local.notification_shared_secret_effective },
         { name = "FRONTEND_ORIGIN", value = var.frontend_origin },
         { name = "COGNITO_REGION", value = var.aws_region },
         { name = "COGNITO_USER_POOL_ID", value = aws_cognito_user_pool.chat_users.id },

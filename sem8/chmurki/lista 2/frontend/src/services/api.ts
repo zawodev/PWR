@@ -6,6 +6,7 @@ import type {
   MediaItem,
   Message,
   MessageCreate,
+  NotificationItem,
   RegisterRequest,
 } from "../types";
 
@@ -120,6 +121,12 @@ export async function getMessages(afterId?: number): Promise<Message[]> {
 
   const url = `${API_URL}/api/messages${params.size ? `?${params}` : ""}`;
   return fetchJson<Message[]>(url);
+}
+
+export async function getNotifications(limit = 25): Promise<NotificationItem[]> {
+  const params = new URLSearchParams();
+  params.set("limit", String(limit));
+  return fetchJson<NotificationItem[]>(`${API_URL}/api/notifications?${params.toString()}`);
 }
 
 export async function postMessage(payload: MessageCreate): Promise<Message> {
