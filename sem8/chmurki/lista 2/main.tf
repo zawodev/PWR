@@ -161,6 +161,7 @@ data "aws_subnets" "default" {
 
 resource "aws_s3_bucket" "media" {
   bucket = "${var.project_name}-media-${random_id.suffix.hex}"
+  force_destroy = true
 }
 
 resource "aws_s3_bucket_versioning" "media" {
@@ -396,18 +397,22 @@ resource "aws_db_instance" "chat" {
 
 resource "aws_ecr_repository" "auth" {
   name = "${var.project_name}-auth"
+  force_delete = true
 }
 
 resource "aws_ecr_repository" "chat" {
   name = "${var.project_name}-chat"
+  force_delete = true
 }
 
 resource "aws_ecr_repository" "media" {
   name = "${var.project_name}-media"
+  force_delete = true
 }
 
 resource "aws_ecr_repository" "notification" {
   name = "${var.project_name}-notification"
+  force_delete = true
 }
 
 locals {
