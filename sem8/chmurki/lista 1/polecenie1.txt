@@ -1,0 +1,24 @@
+Projekt 1 (5 pkt) 1. Stwórz aplikację webową w wybranej  przez siebie  technologii, tematyka aplikacji jest dowolna 
+(może to być np. aplikacja umożliwiająca prosty chat grupowy)  aplikacja powinna: 
+• Posiadać przynajmniej  2 endpointy  GET oraz 2 endpointy  POST  (w tym jeden  POST i GET 
+do przesłania/odbierania  plików multimedialnych) 
+2. Aplikacja powinna posiadać oddzielne dwa moduły backend oraz frontend. Powinny być one 
+hostowane niezależnie od siebie 
+3. Utwórz konfigurację Dockera dla każdego z modułów 
+4. Skonfiguruj dostęp do AWS CLI 
+Uwaga: dane autoryzacyjne znajdują się w zakładce AWS Details i mogą zmieniać się przy 
+każdym starcie Learner Lab 
+ 
+5. Zainstaluj  i skonfiguruj  Terraform 
+6. Stwórz plik main.tf a w nim utwórz podstawową konfigurację do hostowania aplikacji, 
+konfiguracja powinna zawierać: 
+• Konfigurację dla AWS  Elastic Beanstalk  z użyciem którego należy hostować aplikacje 
+(frontend i backend muszą być hostowane niezależnie) 
+• Konfigurację dla RDS do przechowywania danych 
+• Konfigurację dla S3 do przechowywania plików 
+• Konfigurację dla CloudWatch 
+7. W celu uwierzytelniania użytkowników użyj AWS Cognito 
+8. Uruchom aplikację na stworzonej infrastrukturze  oraz zweryfikuj  jej poprawne  funkcjonowanie 
+9. Używając interfejsu  internetowego AWS  (tj. konfigurując wszystko przez stronę internetową) 
+stwórz odpowiednik infrastruktury zdefiniowanej w Terraform oraz uruchom na niej aplikację 
+10.  Stwórz raport podsumowujący wykonane zadanie

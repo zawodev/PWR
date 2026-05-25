@@ -1,0 +1,40 @@
+# terraform:
+*.tfstate
+*.tfstate.backup
+# Crash log files
+crash.log
+# Exclude .terraform directory which contains plugins and modules
+.terraform/
+# Exclude .terraform.lock.hcl which contains dependency lock information
+.terraform.lock.hcl
+# Exclude override files which may contain sensitive information
+override.tf
+override.tf.json
+# Exclude CLI configuration files which may contain sensitive information
+.terraformrc
+terraform.rc
+
+
+# .env files:
+# Exclude .env files which may contain sensitive environment variables
+.env
+# Exclude .env.local files which may contain sensitive environment variables
+.env.local
+# Exclude .env.development files which may contain sensitive environment variables
+.env.development
+# Exclude .env.test files which may contain sensitive environment variables
+.env.test
+# Exclude .env.production files which may contain sensitive environment variables
+.env.production
+# Logs and databases:
+# Exclude log files
+logs/
+# Exclude database files
+*.db
+# Exclude SQLite database files
+
+*.sqlite
+# Exclude MySQL database files
+*.sql
+# Exclude PostgreSQL database files
+*.psql

@@ -15,3 +15,21 @@ do przyszłego: spróbować bez modułów tylko zhostować sobie za pomocą farg
 nie zostawiać sobie tego na ostatni tydzień
 
 sa pewne niedopowiedzenia które należy odkryć i rozwiązać (hurra) 
+
+
+=================================================================================================
+
+s3 pliki szyfrowane "at rest"
+
+block public policy = brak accessu zewnętrznego
+
+PAY_PER_REQUEST => ważne, ponieważ nie ustawiamy capacity ręcznie; AWS sam skaluje, dobre dla małych projektów
+
+chyba stateless kontenery są?
+
+task_definition:
+mówi ile cpu units przydzielonych taskowi
+1024 CPU units = 1 vCPU; memory = 512 (MB ram) -> standardowa najmniejsza możliwa opcja
+
+appautoscaling_target:
+mówi jakie chcemy mieć średnie cpu usage (60%) oraz ile instancji (tasków), samo skaluje
