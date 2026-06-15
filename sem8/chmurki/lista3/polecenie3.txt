@@ -1,0 +1,45 @@
+Projekt 3 (5 pkt)
+1. Stworzoną aplikację dla Projektu 2 zmodyfikuj w następujący sposób:
+• Usuń mikroserwis odpowiedzialny za główną logikę aplikacji, np. zarządzanie czatami,
+wiadomościami lub innymi głównymi zasobami aplikacji.
+• Zastąp ten moduł zestawem funkcji AWS Lambda, które będą realizować poszczególne
+operacje aplikacji, np. tworzenie czatów, pobieranie listy czatów, wysyłanie wiadomości
+oraz pobieranie historii wiadomości.
+• Zamiast bezpośredniej komunikacji z modułem notyfikacji zastosuj architekturę event-
+driven:
+i. Każdy komponent aplikacji, np. funkcje AWS Lambda odpowiedzialne za obsługę
+wiadomości, powinien w przypadku potrzeby wyzwolenia powiadomienia
+publikować komunikat do kolejki Amazon SQS.
+ii. Moduł notyfikacji, wdrożony nadal jako mikroserwis na AWS Fargate, powinien
+odczytywać komunikaty z kolejki Amazon SQS i przetwarzać zdarzenia,
+generując powiadomienia dla użytkowników.
+iii. Dla kolejki Amazon SQS skonfiguruj Dead Letter Queue, do której będą trafiały
+komunikaty, których nie udało się poprawnie przetworzyć po określonej liczbie
+prób.
+iv. Przetwarzanie komunikatów z kolejki SQS powinno być idempotentne, aby
+ponowne przetworzenie tego samego komunikatu nie powodowało
+zdublowania powiadomień.
+• Skonfiguruj logowanie, monitoring i alarmy w Amazon CloudWatch:
+i. utwórz osobne grupy logów dla funkcji AWS Lambda oraz mikroserwisów
+działających na AWS Fargate,
+ii. zapewnij zapisywanie logów z wykonania funkcji Lambda, przetwarzania
+komunikatów SQS oraz działania modułu notyfikacji,
+iii. skonfiguruj metryki i alarmy dla błędów funkcji Lambda, czasu wykonywania
+funkcji Lambda, liczby komunikatów w kolejce SQS, komunikatów trafiających
+do Dead Letter Queue oraz błędów mikroserwisu notyfikacji,
+iv. utwórz dashboard CloudWatch prezentujący najważniejsze metryki działania
+aplikacji.
+2. Konfiguracje infrastruktury wykonanj w Terraform
+3. Komentarze w kodzie powinny być zgodne z dobrymi praktykami:
+• komentarze nie powinny opisywać oczywistych elementów konfiguracji, np. że
+aws_s3_bucket tworzy bucket S3 albo że aws_lambda_function tworzy funkcję
+Lambda,
+• komentarze powinny wyjaśniać przede wszystkim decyzje infrastrukturalne, nietypowe
+ustawienia, zależności między zasobami, ograniczenia AWS Academy Learner Lab lub
+powody przyjęcia konkretnej konfiguracji,
+• komentarze nie powinny zastępować czytelnych nazw zasobów, zmiennych, modułów
+ani dokumentacji projektowej,
+• komentarze powinny być krótkie, rzeczowe i aktualne względem konfiguracji,
+• w przypadku bardziej złożonych fragmentów konfiguracji, np. alarmów CloudWatch,
+Dead Letter Queue, autoscalingu lub powiązań Lambda z SQS, dopuszczalne jest dodanie
+krótkiego komentarza wyjaśniającego cel konfiguracji albo jej najważniejsze założenia.

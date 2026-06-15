@@ -1,0 +1,17 @@
+import os
+
+AWS_REGION = os.getenv("AWS_REGION", "us-east-1")
+SNS_TOPIC_ARN = os.getenv("SNS_TOPIC_ARN", "")
+NOTIFICATIONS_TABLE_NAME = os.getenv("NOTIFICATIONS_TABLE_NAME", "notifications")
+FRONTEND_ORIGIN = os.getenv("FRONTEND_ORIGIN", "*")
+NOTIFICATION_SHARED_SECRET = os.getenv("NOTIFICATION_SHARED_SECRET", "")
+
+# SQS settings – queue URL is required for the event-driven worker
+SQS_QUEUE_URL = os.getenv("SQS_QUEUE_URL", "")
+SQS_POLL_WAIT_SECONDS = int(os.getenv("SQS_POLL_WAIT_SECONDS", "20"))
+SQS_MAX_MESSAGES = int(os.getenv("SQS_MAX_MESSAGES", "10"))
+
+COGNITO_REGION = os.getenv("COGNITO_REGION", AWS_REGION)
+COGNITO_USER_POOL_ID = os.getenv("COGNITO_USER_POOL_ID", "")
+COGNITO_CLIENT_ID = os.getenv("COGNITO_CLIENT_ID", "")
+COGNITO_ENABLED = bool(COGNITO_USER_POOL_ID and COGNITO_CLIENT_ID)

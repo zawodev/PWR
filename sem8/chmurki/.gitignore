@@ -15,6 +15,7 @@ override.tf.json
 terraform.rc
 
 
+
 # .env files:
 # Exclude .env files which may contain sensitive environment variables
 .env
@@ -38,3 +39,7 @@ logs/
 *.sql
 # Exclude PostgreSQL database files
 *.psql
+
+
+
+*/.lambda_build

@@ -1,0 +1,30 @@
+Idempotencja (idempotentność) to właściwość operacji lub funkcji, która polega na tym, że jej wielokrotne wykonanie daje dokładnie taki sam rezultat jak wykonanie jednorazowe.
+
+Idempotentność jest zapewniona poprzez warunkowe polecenie put DynamoDB wykorzystujące unikatowy identyfikator komunikatu zdarzenia – zduplikowany zapis zgłasza wyjątek ConditionalCheckFailedException, który przechwytujemy i traktujemy jako „już przetworzony”.
+
+# Lambda Security Group usunięta, bo Lampda poza VPC bo AWS Academy nie daje NAT Gateway
+
+
+"""
+Lambda handler for chat operations – replaces the chat-service Fargate microservice.
+
+Routing is based on the HTTP method + resource path supplied by API Gateway v2.
+Each invocation opens a short-lived DB connection (acceptable for Lambda's
+concurrency model with RDS; for production traffic RDS Proxy would be better,
+but it is unavailable in AWS Academy).
+"""
+
+DLQ pozwala nam identyfikować że coś poszło nie tak bo tam SQS przetwarzałby w kółko gdyby nie to
+
+
+  visibility_timeout_seconds = 60     # czas dla workera na przetworzenie wiadomości przed retry
+  message_retention_seconds  = 345600 # 4 days (czyli ile czasu wiadomość może czekać w kolejce zanim zostanie automatycznie usunięta)
+  receive_wait_time_seconds  = 20     # long polling (maksymalny czas oczekiwania na wiadomość przy wywołaniu ReceiveMessage – zmniejsza koszty i poprawia responsywność)
+
+
+
+945 resource "aws_lambda_function" "chat" {
+
+  # Nie ma VPC config bo lambda dzwoni RDS przez publiczny endpoint.
+  # z kolei NAT Gateway nie jest dostępne w AWS Academy
+  # pozwala to na bezpośredni dostęp do SQS i innych serwisów AWS
