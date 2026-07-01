@@ -1,0 +1,84 @@
+-DORA
+-BPMN i C4
+-Szacowanie rozmiaru historyjek użytkownika, tempo (velocity) i buforowanie harmonogramu
+-Ustalanie priorytetów i atrakcyjności funkcjonalności
+-Decyzje projektowe na podstawie miar finansowych
+-Piramida testów
+-obliczanie kano
+
+
+
+1.1) DORA
+- elite, high, medium, low - 5%-40% fail rate; <1h-1month failed deploy recovery; deploy <1day-6months
+
+a) wydajność:
+ - change lead time - czas od kiedy commit wejdzie na produkcje
+ - deployment frequency - jak często zmiany w aplikacji wchodzą na produkcję
+b) stabilność:
+ - change fail rate - %of deploy failed
+ - failed deploy recovery time - czas potrzebny do naprawy failed deploy
+
+1.2) DANE - INFORMACJE - WIEDZA - ZROZUMIENIE - MĄDROŚĆ
+
+1.3) SYSTEM INFORMATYCZNY:
+- zasoby ludzkie + środki (w przypadku informatycznego środki to sprzęt teleinformatyczny)
+
+2) RFI/RFP/RFQ::
+- RFI (na początku kiedy badamy rynek, dostępne rozwiązania i dostawcy)
+- RFP (gdy znamy już problem ale nie wiemy jak go najlepiej rozwiązać, propozycja rozwiązania + cena harmonogram podejście)
+- RFQ (gdy dokładnie wiemy czego potrzebujemy, konkretne wyceny cenowe)
+
+3) BPMN:
+- procesów (konkretny proces biznesowy rozpisany) 
+- colaboracji (jak se sobą rozmawiają jednostki biznesowe, konkretne ścieżki)
+- conversacji (uproszczony kolaboracji, aby pokazać wymianę informacji między pools )
+- choreographii (cały przepływ patrząc szerzej na system choreografia całości przepływ eventu)
+
+4) ??? nie wiem co dać dużo gówna nie wiem co jest wazne nawet
+
+5.1) USER STORIES (Historyjki Użytkownika):
+- opisują funkcjonalność
+- prosta forma krótka
+- forma: jako <X> chce <Y>, po to aby <Z>
+- np: jako kierwoca, chce móc zeskanować kod QR, tak aby zweryfikować uprawnienia do przejazdu
+
+5.2) USE CASES (przypadki użycia):
+- szczegółowy strukturowy opis interakcji systemu aby osiągnąć cel
+- wysoko poziomowa wizja na podstawie user stories
+- np: 
+ - historyjka: 
+ - główny aktor:
+ - warunki wstępne:
+ - przepływ główny:
+ - przepływy alternatywne:
+ - warunki końcowe:
+
+6) EaC:
+- automatyzacja powtarzalnych zadań
+- kontrola wersji
+- spójność między środowiskami
+- współpraca wspólne przepływy
+
+7) kosztorys:
+
+8) Szacowanie rozmiaru:
+pkt historyjek: małe 1-2, duże 8+
+velocity (tempo): mierzy szybkość postępu zespołu w każdej iteracji poprzez sumę ukończonych pkt historyjek
+
+wskaźnik satysfkacji (S): S = (Wb + L) / (Wb + K + L + B) * 100% 
+wskaźnik niezadowolenia (N): N = (K + L) / (Wb + K + L + B) * 100%
+
+
+Zgodnie z prawem Conwaya strukturę zespołów należy odwzorować na główne domeny biznesowe systemu. Utworzyłbym trzy Stream-Aligned Teams odpowiedzialne za konta osobiste, produkty oszczędnościowe oraz pożyczki. Każdy zespół rozwijałby własne mikroserwisy i odpowiadał za ich pełny cykl życia. Dodatkowo utworzyłbym Platform Team zapewniający infrastrukturę, CI/CD i monitoring, Enabling Team wspierający bezpieczeństwo i zgodność regulacyjną oraz Complicated Subsystem Team odpowiedzialny za złożony moduł scoringu kredytowego. Między zespołami dominowałby tryb X-as-a-Service (Platform Team → zespoły produktowe), Facilitating (Enabling Team → zespoły produktowe) oraz Collaboration przy realizacji funkcjonalności przekrojowych wymagających współpracy kilku domen.
+
+
+                            prio: 
+8 6  14  14/33  32/61  32   (14/33)/(32/61)=14*61/33*32 = 854/1056
+9 2  11  11/33  21/61  21
+3 5   8   8/33   8/61   8
+     33                61
+
+
+
+
+
