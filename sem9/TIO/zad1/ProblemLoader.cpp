@@ -3,6 +3,7 @@
 #include <sstream>
 #include <iostream>
 #include <algorithm>
+#include <cstdlib>
 #include <random>
 
 using namespace LcVRPContest;

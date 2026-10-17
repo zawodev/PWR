@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ProblemData.hpp"
+#include <fstream>
 #include <string>
 
 using namespace std;
