@@ -144,3 +144,28 @@ cmake --build build
 
 Program powinien wypisać 10 wierszy `current fitness: ...` oraz końcowy wiersz
 `final best fitness: ...`, a następnie zakończyć działanie.
+
+## Algorytm genetyczny
+
+Program rozwiązuje problem za pomocą podstawowego algorytmu genetycznego.
+Chromosom jest wektorem długości równej liczbie klientów. Wartość genu oznacza
+numer grupy/pojazdu, do którego przypisano danego klienta. Kolejność klientów
+jest określona przez `PERMUTATION` w pliku instancji.
+
+Koszt rozwiązania jest obliczany przez `Evaluator`. Ponieważ algorytm genetyczny
+maksymalizuje przystosowanie, używana jest funkcja:
+
+```text
+adaptation = 1 / (1 + route_cost)
+```
+
+Rozwiązania niepoprawne otrzymują przystosowanie równe zero. W każdej generacji
+stosowane są:
+
+- selekcja ruletkowa,
+- krzyżowanie jednopunktowe z prawdopodobieństwem `Pc`,
+- mutacja pojedynczych genów z prawdopodobieństwem `Pm`.
+
+Warunkiem stopu jest osiągnięcie ustalonej liczby generacji. Program w
+`LcVRPContest.cpp` uruchamia trzy eksperymenty dla tej samej instancji i małej
+populacji, zmieniając `Pc` i `Pm`.
