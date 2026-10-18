@@ -14,7 +14,98 @@ W VS Code zainstaluj:
 Potrzebny jest także kompilator:
 
 - **Linux (Ubuntu/Debian):** `sudo apt update && sudo apt install build-essential cmake ninja-build gdb`
+- **Linux (Fedora):** `sudo dnf install gcc-c++ cmake ninja-build gdb`
 - **Windows:** GCC, CMake i Ninja z MSYS2 UCRT64.
+
+### Fedora Linux — instalacja krok po kroku
+
+1. Otwórz terminal i zaktualizuj system:
+
+   ```bash
+   sudo dnf upgrade --refresh
+   ```
+
+2. Zainstaluj kompilator C++, CMake, Ninja, GDB oraz Git:
+
+   ```bash
+   sudo dnf install gcc-c++ cmake ninja-build gdb git
+   ```
+
+3. Sprawdź, czy narzędzia zostały zainstalowane:
+
+   ```bash
+   g++ --version
+   cmake --version
+   ninja --version
+   gdb --version
+   ```
+
+4. Zainstaluj VS Code. Możesz pobrać pakiet `.rpm` z
+   [code.visualstudio.com](https://code.visualstudio.com/download) i
+   zainstalować go poleceniem:
+
+   ```bash
+   sudo dnf install ./code-*.rpm
+   ```
+
+   Jeśli VS Code jest już zainstalowany, przejdź do następnego kroku.
+
+5. Uruchom VS Code i zainstaluj rozszerzenia:
+
+   - **C/C++** (`ms-vscode.cpptools`)
+   - **CMake Tools** (`ms-vscode.cmake-tools`)
+
+   Możesz też zainstalować je z terminala:
+
+   ```bash
+   code --install-extension ms-vscode.cpptools
+   code --install-extension ms-vscode.cmake-tools
+   ```
+
+6. Sklonuj repozytorium albo przejdź do już pobranego katalogu projektu:
+
+   ```bash
+   git clone https://github.com/zawodev/PWR.git
+   cd PWR/sem9/TIO/zad1
+   ```
+
+   Jeśli repozytorium jest już pobrane, wykonaj tylko `cd` do katalogu
+   `sem9/TIO/zad1`.
+
+7. Otwórz katalog projektu w VS Code:
+
+   ```bash
+   code .
+   ```
+
+   Otwórz katalog `zad1`, czyli ten zawierający `CMakeLists.txt` i `data/`.
+
+8. W VS Code wybierz `Ctrl+Shift+P` → **CMake: Select a Kit**, a następnie
+   wybierz GCC/G++.
+
+9. Wybierz `Ctrl+Shift+P` → **CMake: Configure**, a następnie
+   **CMake: Build**. CMake utworzy katalog `build/` z plikami generowanymi
+   automatycznie.
+
+10. Uruchom program przez **CMake: Run Without Debugging** albo z terminala:
+
+   ```bash
+   ./build/LcVRPContest
+   ```
+
+   Program powinien wykonać trzy eksperymenty algorytmu genetycznego, wypisać
+   wyniki `final best fitness` i zakończyć działanie.
+
+### Fedora Linux — uruchomienie z terminala bez VS Code
+
+Jeżeli chcesz tylko skompilować i uruchomić program:
+
+```bash
+cd PWR/sem9/TIO/zad1
+cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug
+cmake --build build
+./build/LcVRPContest
+```
 
 ### Windows — instalacja MSYS2 krok po kroku
 
