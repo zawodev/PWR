@@ -1,8 +1,5 @@
 {
-    "cmake.buildDirectory": "${workspaceFolder}/build",
-    "cmake.cmakePath": "C:\\msys64\\ucrt64\\bin\\cmake.exe",
-    "cmake.configureOnOpen": true,
-    "cmake.debugConfig": {
-        "cwd": "${workspaceFolder}"
-    }
+	"cmake.debugConfig": {
+		"cwd": "${workspaceFolder}"
+	}
 }
