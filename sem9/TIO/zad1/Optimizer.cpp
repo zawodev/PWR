@@ -72,7 +72,7 @@ double Optimizer::CalculateAdaptation(double fitness) const {
 		return 0.0;
 	}
 
-	// Minimalizacja kosztu jest zamieniana na maksymalizację przystosowania.
+	// minimalizacja kosztu -> maksymalizacja przystosowania
 	return 1.0 / (1.0 + fitness);
 }
 
