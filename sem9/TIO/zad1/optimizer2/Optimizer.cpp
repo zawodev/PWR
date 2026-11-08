@@ -1,4 +1,4 @@
-﻿#include "Optimizer.hpp"
+#include "Optimizer.hpp"
 #include "MyEvaluator.hpp"
 #include <iostream>
 #include <limits>
@@ -10,16 +10,16 @@
 
 using namespace LcVRPContest;
 
-Optimizer::Optimizer(Evaluator& evaluator)
+Optimizer2::Optimizer2(Evaluator& evaluator)
     : evaluator_(evaluator) {
     current_best_.fitness = numeric_limits<double>::max();
 }
 
-Optimizer::~Optimizer() {
+Optimizer2::~Optimizer2() {
     StopThreads();
 }
 
-void Optimizer::StopThreads() {
+void Optimizer2::StopThreads() {
     stop_flag_ = true;
     for (auto& t : threads_) {
         if (t.joinable()) {
@@ -30,7 +30,7 @@ void Optimizer::StopThreads() {
     stop_flag_ = false;
 }
 
-void Optimizer::Initialize() {
+void Optimizer2::Initialize() {
     // stop any existing threads first
     StopThreads();
 
@@ -52,11 +52,11 @@ void Optimizer::Initialize() {
         MyEvaluator thread_evaluator(evaluator_.GetProblemData(), evaluator_.GetNumGroups());
         unsigned int seed = rd();
 
-        threads_.emplace_back(&Optimizer::WorkerThread, this, i, std::move(thread_evaluator), seed);
+        threads_.emplace_back(&Optimizer2::WorkerThread, this, i, std::move(thread_evaluator), seed);
     }
 }
 
-void Optimizer::WorkerThread(int thread_id, MyEvaluator evaluator, unsigned int seed) {
+void Optimizer2::WorkerThread(int thread_id, MyEvaluator evaluator, unsigned int seed) {
     // each thread has its own RNG and Individual
     mt19937 rng(seed);
     Individual individual;
@@ -86,13 +86,13 @@ void Optimizer::WorkerThread(int thread_id, MyEvaluator evaluator, unsigned int 
     }
 }
 
-void Optimizer::RunIteration() {
+void Optimizer2::RunIteration() {
     //cout << "Cache hits: " << MyEvaluator::GetCacheHits() << " Cache misses: " << MyEvaluator::GetCacheMisses() << "\r";
     // print some status/info/progress here
     this_thread::sleep_for(chrono::milliseconds(1000));
 }
 
-void Optimizer::UpdateBestIndividual(const Individual& individual) {
+void Optimizer2::UpdateBestIndividual(const Individual& individual) {
     lock_guard<mutex> lock(best_mutex_);
 
     if (individual.fitness < current_best_.fitness) {
@@ -102,7 +102,7 @@ void Optimizer::UpdateBestIndividual(const Individual& individual) {
     }
 }
 
-void Optimizer::UpdateLocalBestIndividual(const Individual& individual, Individual& local_best) {
+void Optimizer2::UpdateLocalBestIndividual(const Individual& individual, Individual& local_best) {
     if (individual.fitness < local_best.fitness) {
         local_best = individual;
         // update diversity pool with new local best
@@ -111,7 +111,7 @@ void Optimizer::UpdateLocalBestIndividual(const Individual& individual, Individu
     UpdateBestIndividual(individual);
 }
 
-int Optimizer::CalculateGenotypeDifference(const vector<int>& genotype1, const vector<int>& genotype2, int numGroups) {
+int Optimizer2::CalculateGenotypeDifference(const vector<int>& genotype1, const vector<int>& genotype2, int numGroups) {
     // build contingency matrix: contingency[g1][g2] = count of customers in group g1 in genotype1 AND group g2 in genotype2
     // using flat vector for better cache performance
     vector<int> contingency(numGroups * numGroups, 0);
@@ -143,7 +143,7 @@ int Optimizer::CalculateGenotypeDifference(const vector<int>& genotype1, const v
     return n - sumOfMaxes;
 }
 
-void Optimizer::UpdateDiversityPool(const Individual& individual) {
+void Optimizer2::UpdateDiversityPool(const Individual& individual) {
     lock_guard<mutex> lock(diversity_pool_mutex_);
     
     int numGroups = evaluator_.GetNumGroups();
@@ -170,7 +170,7 @@ void Optimizer::UpdateDiversityPool(const Individual& individual) {
     diversity_pool_[minIdx] = individual;
 }
 
-Individual Optimizer::GetRandomFromDiversityPool(mt19937& rng) {
+Individual Optimizer2::GetRandomFromDiversityPool(mt19937& rng) {
     lock_guard<mutex> lock(diversity_pool_mutex_);
     
     if (diversity_pool_.empty()) {
@@ -182,12 +182,12 @@ Individual Optimizer::GetRandomFromDiversityPool(mt19937& rng) {
     return diversity_pool_[dist(rng)];
 }
 
-void Optimizer::EvaluateAndUpdate(Individual& individual, MyEvaluator& evaluator) {
+void Optimizer2::EvaluateAndUpdate(Individual& individual, MyEvaluator& evaluator) {
     individual.fitness = evaluator.Evaluate(individual.genotype);
     UpdateBestIndividual(individual);
 }
 
-void Optimizer::InitRandomIndividual(Individual& individual, MyEvaluator& evaluator, mt19937& rng) {
+void Optimizer2::InitRandomIndividual(Individual& individual, MyEvaluator& evaluator, mt19937& rng) {
     individual.genotype.resize(evaluator.GetSolutionSize());
     uniform_int_distribution<int> dist(evaluator.GetLowerBound(), evaluator.GetUpperBound());
     for (size_t i = 0; i < individual.genotype.size(); ++i) {
@@ -197,7 +197,7 @@ void Optimizer::InitRandomIndividual(Individual& individual, MyEvaluator& evalua
     individual.fitness = evaluator.Evaluate(individual.genotype);
 }
 
-void Optimizer::RunIndividual(Individual& individual, Individual& local_best, MyEvaluator& evaluator, mt19937& rng) {
+void Optimizer2::RunIndividual(Individual& individual, Individual& local_best, MyEvaluator& evaluator, mt19937& rng) {
     // 50/50 wybór między gene-based a swap-based FIHC
     uniform_int_distribution<int> fihcChoice(0, 1);
 
@@ -248,7 +248,7 @@ void Optimizer::RunIndividual(Individual& individual, Individual& local_best, My
     }
 }
 
-bool Optimizer::FihcGeneBased(Individual& individual, MyEvaluator& evaluator, mt19937& rng) {
+bool Optimizer2::FihcGeneBased(Individual& individual, MyEvaluator& evaluator, mt19937& rng) {
     // Oryginalny FIHC - przejeżdżamy przez wszystkie geny i każdy próbujemy zmienić
     bool improved = true;
     bool everImproved = false;
@@ -286,7 +286,7 @@ bool Optimizer::FihcGeneBased(Individual& individual, MyEvaluator& evaluator, mt
     return everImproved;
 }
 
-bool Optimizer::FihcSwapBased(Individual& individual, MyEvaluator& evaluator, mt19937& rng) {
+bool Optimizer2::FihcSwapBased(Individual& individual, MyEvaluator& evaluator, mt19937& rng) {
     // FIHC zorientowany na swapy dwóch klientów z różnych tras
     // Bierzemy trasę i próbujemy zamieniać jej klientów z klientami z innych tras
     bool improved = true;
@@ -386,7 +386,7 @@ bool Optimizer::FihcSwapBased(Individual& individual, MyEvaluator& evaluator, mt
     return everImproved;
 }
 
-void Optimizer::ReassignRouteIndividualOld(Individual& individual, MyEvaluator& evaluator, mt19937& rng) {
+void Optimizer2::ReassignRouteIndividualOld(Individual& individual, MyEvaluator& evaluator, mt19937& rng) {
     int numGroups = evaluator.GetNumGroups();
     int solutionSize = evaluator.GetSolutionSize();
 
@@ -461,7 +461,7 @@ void Optimizer::ReassignRouteIndividualOld(Individual& individual, MyEvaluator& 
     EvaluateAndUpdate(individual, evaluator);
 }
 
-void Optimizer::FillEmptyRoute(Individual& individual, MyEvaluator& evaluator, mt19937& rng, int emptyRoute, int heuristicType) {
+void Optimizer2::FillEmptyRoute(Individual& individual, MyEvaluator& evaluator, mt19937& rng, int emptyRoute, int heuristicType) {
     int numGroups = evaluator.GetNumGroups();
     int solutionSize = evaluator.GetSolutionSize();
 
@@ -571,7 +571,7 @@ void Optimizer::FillEmptyRoute(Individual& individual, MyEvaluator& evaluator, m
     }
 }
 
-void Optimizer::MutateIndividual(Individual& individual, MyEvaluator& evaluator, mt19937& rng) {
+void Optimizer2::MutateIndividual(Individual& individual, MyEvaluator& evaluator, mt19937& rng) {
     int solutionSize = evaluator.GetSolutionSize();
     int lowerBound = evaluator.GetLowerBound();
     int upperBound = evaluator.GetUpperBound();
@@ -611,7 +611,7 @@ void Optimizer::MutateIndividual(Individual& individual, MyEvaluator& evaluator,
     individual.fitness = evaluator.Evaluate(individual.genotype);
 }
 
-string Optimizer::FormatIndividual(const Individual& individual) const {
+string Optimizer2::FormatIndividual(const Individual& individual) const {
     ostringstream oss;
     oss << "current fitness: " << fixed << setprecision(2) << individual.fitness << endl;
     for (int val : individual.genotype) {
@@ -634,11 +634,11 @@ string Optimizer::FormatIndividual(const Individual& individual) const {
     return oss.str();
 }
 
-void Optimizer::PrintIndividual(const Individual& individual) const {
+void Optimizer2::PrintIndividual(const Individual& individual) const {
     cout << FormatIndividual(individual);
 }
 
-void Optimizer::SaveIndividualToFile(const Individual& individual, const string& filename) {
+void Optimizer2::SaveIndividualToFile(const Individual& individual, const string& filename) {
     ofstream file(filename);
     if (!file.is_open()) {
         cout << "Error opening file for writing: " << filename << endl;
@@ -648,7 +648,7 @@ void Optimizer::SaveIndividualToFile(const Individual& individual, const string&
     file.close();
 }
 
-void Optimizer::LoadIndividualFromFile(Individual& individual, MyEvaluator& evaluator, const string& filename) {
+void Optimizer2::LoadIndividualFromFile(Individual& individual, MyEvaluator& evaluator, const string& filename) {
     ifstream file(filename);
     if (!file.is_open()) {
         cout << "Error opening file for reading: " << filename << endl;

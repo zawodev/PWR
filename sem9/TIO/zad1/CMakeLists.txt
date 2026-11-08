@@ -9,9 +9,13 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_executable(LcVRPContest
     Evaluator.cpp
     LcVRPContest.cpp
-    Optimizer.cpp
     ProblemData.cpp
     ProblemLoader.cpp
+    optimizer1/Optimizer.cpp
+    optimizer2/MyEvaluator.cpp
+    optimizer2/Optimizer.cpp
+    optimizer2/Individual.cpp
+    optimizer3/Optimizer3.cpp
 )
 
 if(MSVC)

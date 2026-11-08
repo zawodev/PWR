@@ -8,7 +8,7 @@
 
 using namespace LcVRPContest;
 
-Optimizer::Optimizer(
+Optimizer1::Optimizer1(
 	Evaluator& evaluator,
 	int population_size,
 	double crossover_probability,
@@ -20,7 +20,7 @@ Optimizer::Optimizer(
 	  current_best_fitness_(numeric_limits<double>::max()),
 	  rng_(random_device{}()) {}
 
-void Optimizer::Initialize() {
+void Optimizer1::Initialize() {
 	population_.clear();
 	population_.resize(population_size_);
 	population_fitness_.resize(population_size_);
@@ -35,7 +35,7 @@ void Optimizer::Initialize() {
 	EvaluatePopulation();
 }
 
-void Optimizer::RunIteration() {
+void Optimizer1::RunIteration() {
 	vector<vector<int>> next_population;
 	next_population.reserve(population_size_);
 
@@ -57,7 +57,7 @@ void Optimizer::RunIteration() {
 	EvaluatePopulation();
 }
 
-void Optimizer::InitRandomIndividual(vector<int>& individual) {
+void Optimizer1::InitRandomIndividual(vector<int>& individual) {
 	uniform_int_distribution<int> group_distribution(
 		evaluator_.GetLowerBound(),
 		evaluator_.GetUpperBound());
@@ -67,7 +67,7 @@ void Optimizer::InitRandomIndividual(vector<int>& individual) {
 	}
 }
 
-double Optimizer::CalculateAdaptation(double fitness) const {
+double Optimizer1::CalculateAdaptation(double fitness) const {
 	if (fitness < 0.0 || !isfinite(fitness)) {
 		return 0.0;
 	}
@@ -76,7 +76,7 @@ double Optimizer::CalculateAdaptation(double fitness) const {
 	return 1.0 / (1.0 + fitness);
 }
 
-size_t Optimizer::SelectByRoulette() {
+size_t Optimizer1::SelectByRoulette() {
 	double total_adaptation = 0.0;
 	for (double fitness : population_fitness_) {
 		total_adaptation += CalculateAdaptation(fitness);
@@ -101,7 +101,7 @@ size_t Optimizer::SelectByRoulette() {
 	return population_.size() - 1;
 }
 
-void Optimizer::EvaluatePopulation() {
+void Optimizer1::EvaluatePopulation() {
 	for (size_t i = 0; i < population_.size(); ++i) {
 		population_fitness_[i] = evaluator_.Evaluate(population_[i]);
 		if (population_fitness_[i] < current_best_fitness_) {
@@ -111,7 +111,7 @@ void Optimizer::EvaluatePopulation() {
 	}
 }
 
-vector<int> Optimizer::Crossover(
+vector<int> Optimizer1::Crossover(
 	const vector<int>& first_parent,
 	const vector<int>& second_parent) {
 	vector<int> child = first_parent;
@@ -130,7 +130,7 @@ vector<int> Optimizer::Crossover(
 	return child;
 }
 
-void Optimizer::Mutate(vector<int>& individual) {
+void Optimizer1::Mutate(vector<int>& individual) {
 	uniform_real_distribution<double> probability(0.0, 1.0);
 	uniform_int_distribution<int> group_distribution(
 		evaluator_.GetLowerBound(),

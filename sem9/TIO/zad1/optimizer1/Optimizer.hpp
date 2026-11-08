@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Evaluator.hpp"
+#include "../Evaluator.hpp"
 
 #include <random>
 #include <vector>
@@ -8,9 +8,9 @@
 using namespace std;
 
 namespace LcVRPContest {
-	class Optimizer {
+	class Optimizer1 {
 	public:
-		Optimizer(
+		Optimizer1(
 			Evaluator& evaluator,
 			int population_size,
 			double crossover_probability,

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Evaluator.hpp"
+#include "../Evaluator.hpp"
 #include "MyEvaluator.hpp"
 #include "Individual.hpp"
 
@@ -16,10 +16,10 @@ namespace LcVRPContest {
 	// size of diversity pool for maintaining diverse solutions
 	constexpr int DIVERSITY_POOL_SIZE = 25;
 
-	class Optimizer {
+	class Optimizer2 {
 	public:
-		Optimizer(Evaluator& evaluator);
-		~Optimizer();
+		Optimizer2(Evaluator& evaluator);
+		~Optimizer2();
 
 		void Initialize();
 		void RunIteration();

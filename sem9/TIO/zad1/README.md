@@ -260,3 +260,24 @@ stosowane są:
 Warunkiem stopu jest osiągnięcie ustalonej liczby generacji. Program w
 `LcVRPContest.cpp` uruchamia trzy eksperymenty dla tej samej instancji i małej
 populacji, zmieniając `Pc` i `Pm`.
+
+## Trzy algorytmy i wyniki
+
+Projekt zawiera trzy klasy:
+
+- `optimizer1/Optimizer.cpp` — podstawowy algorytm genetyczny (`Optimizer1`),
+- `optimizer2/Optimizer.cpp` — wielowątkowy algorytm lokalnego przeszukiwania
+  (`Optimizer2`),
+- `optimizer3/Optimizer3.cpp` — prosty algorytm mrówkowy (`Optimizer3`).
+
+Każdy przebieg ma wspólny limit czasu ustawiony w `RUN_TIME_SECONDS` w
+`LcVRPContest.cpp`. Program wykonuje dziewięć przebiegów każdego algorytmu i
+zapisuje je do `results.txt` w formacie:
+
+```text
+optimizer parameter1 parameter2 run fitness
+```
+
+Skrypt `heatmap.py` tworzy trzy zestawione mapy cieplne w `heatmap.png`.
+Dla `Optimizer2`, który nie ma parametrów wejściowych, dziewięć pól
+przedstawia bezpośrednio dziewięć niezależnych przebiegów.

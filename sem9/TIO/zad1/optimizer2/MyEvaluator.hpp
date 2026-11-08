@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ProblemData.hpp"
+#include "../ProblemData.hpp"
 #include <vector>
 #include <unordered_map>
 #include <list>
