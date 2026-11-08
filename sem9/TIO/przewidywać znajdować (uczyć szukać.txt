@@ -1,0 +1,123 @@
+przewidywać znajdować (uczyć szukać)
+
+1---
+
+wiele problemów istnieje
+ale pytanie: czy problem rozwiązujemy przez uczenie, czy przez szukanie?
+spoiler: na końcu pokażemy, że to nie musi być wybór albo-albo i można połączyć siły i aspekty obu podejść /filozofii
+
+będą zadanka krótkie, aktywność, pytania, warto być aktywnym przygotowaliśmy interesujące gry i zabawy.
+
+2---
+
+najpierw prosta rozgrzewka 
+później krótko o różnicach w tych dwóch podejściach
+następnie powiemy sobie o chyba najpowszechniejszym wykorzystaniu połączenia genetyków z sieciami neuronowymi czyli krótko o tym czym są hiperparametry i dlaczego chcemy je optymalizować, później trochę więcej o neuroewolucji powie wojtek, również pokażemy ciekawe przykłady i zastosowania więc warto uważać, na koniec podsumowanie
+
+3---
+
+najpierw prosta rozgrzewka, podnieście łapy kto kiedykolwiek trenował jakąś sieć neuronową - jaką kolwiek w ramach zajęć na pwr, lub z własnego zainteresowania tematem
+
+ok dzięki, opuścić możecie łapy, drugie pytanie, tutaj wszyscy oddaliśmy już pierwszą listę z laboratoriów z tego kursu więc to pytanie pokaże nam frekwencję i kto nas słucha a kto może jeszcze trochę śpi
+
+a kto z was z kroku 1 dobierał parametry liczba warstw ukrytych lub liczbe neuronów funkcje aktywacji czy learning rate "na oko"? no w tym ostatnim pytaniu właśni tkwi sedno, bo to nam zapowiada że właśnie dalszą część wykładu nie musimy tego robić pi razy drzwi, a jest to w istocie podproblem który możemy rozwiązać osobną techniką, ale o tym później więc warto uważać :)
+
+czy też mutacje krzyżowanie itd
+
+4---
+
+możemy podzielić problemy na takie które wymagają uczenia, rozpoznawania wzorców, przewidywania czegoś, można powiedzieć że próbujemy naśladować ludzką zdolność do odnajdowania wzorców - stąd często stosuje się przy takich problemach sieci neuronowe, które są de facto inspirowane naszym ludzkim mózgiem i istniejącymi w nim neuronach.
+
+mamy dane i model który wyciąga z nich regułę
+
+drugi rodzaj problemów to takie które wymagają szukania, najprostszy z takich algorytmów to byłby bruteforce, ale niektóre problemy są zwyczajnie zbyt złożone na przeszukiwanie każdej możliwej kombinacji, dlatego również tutaj często stosujemy techniki inspirowane naturą i korzysta się między innymi (o czym na tym wykładzie) z algorytmów genetycznych
+
+mamy sposób oceny rozwiązań i przestrzeń do przeszukania
+
+5 ---
+
+najpierw wagi są losowe, a sieć nie różni się niczym od maszyny losującej, natomiast co odróżnia to rozwiązanie od zwykłego randa, jest to że błąd czyli pewną stratę/różnicę od oczekiwanego wyniku możemy obliczyć i poprawić wagi neuronów w kierunku gradientu tak żeby jego predykcja była nieco lepsza.
+
+intuicja jest tutaj taka: schodzimy z górki po zboczu - sieć neuronowa uczy się poprzez gradient. wyznacza on tzw kierunek zmian, więc to tak jakbyśmy z tej stromej górki zawsze zbiegali w kierunku najbardziej stromego zbocza
+
+Powtarzamy to tysiące razy, przez kolejne epoki.
+
+6 ---
+
+algorytm genetyczny o tym było już sporo na wykładach więc króciutko: celem jest znalezienie co raz to lepszego rozwiązania - dlaczego jest to lepsze niż ślepe szukanie na chybił trafił? ponieważ kiedy zakodujemy nasze rozwiązanie problemu jako genotyp, naturalnie niektóre jego ułożenia są totalnie bez sensu, inne są średnie a jeszcze inne naprawdę dobre i przez czystą losowość geny w dobrych ustawieniach przez selekcje będą zachowywane i przekazywane na kolejne pokolenia natomiast te słabe ułożenia genów będą przez selekcje odpadać i nie będziemy marnować czasu na szukanie w tym kierunku
+
+oczywiście są też inne algorytmy szukające i algorytmy genetyczne to tylko jeden z wielu przykładów, jednak ich uniwersalność i skuteczność prawie że niezależnie od zadanego problemu jest powodem dla którego jest do solidna opcja dla wielu problemów gdzie szukamy rozwiązania.
+
+to samo dzieje się w naturze, wszystko czego potrzebujemy to sposób zakodowania rozwiązania i sposób jego oceny - dlatego algorytmy genetyczne działają również tam gdzie nie ma gradientu
+
+7---
+
+i tutaj wizualizacja też ważnej różnicy przy tych podejściach - wynikająca bezpośrednio z faktu że sieć neuronowa korzysta z gradientu, ponieważ taka sieć uczy się dzięki temu, że wie, w którą stronę iść przez kierunek gradientu właśnie - to jest jednocześnie jej spore ograniczenie bo potrzebuje funkcji, którą da się różniczkować, i sensownych etykietowanych danych.
+
+po lewej jeden punkt schodzi zgodnie z nachyleniem i może utknąć w optimum lokalnym
+
+po prawej populacja sprawdza wiele miejsc naraz, a selekcja przesuwa ją ku lepszym. przykładowo może być gen który sprawia że rozwiązania lądują bliżej środkowego dołka albo taki który umieszcza je bliżej lewego czy prawego - to selekcja osobnik sprawi że naturalnie przeżyją i dalej przekażą geny te które miały bardziej obiecujące te geny
+
+(oczywiście nie zawsze i trzeba uważać na różnorodność populacji często)
+
+8---
+
+zadanie interaktywne
+
+9---
+
+i takie porównanie na koniec jak chodzi o sieci i genetyki
+
+zastosowania sieci neuronowej: 
+
+- detekcja obrazów (przykładowo rozpoznawanie zwierząt na obrazkach, pewnie każdy z was pamięta jak kiedyś wypełniał captche i musiał zaznaczyć wszystkie obrazki na których były przejścia dla pieszych albo znaki stop - to były bezpośrednio dane dla modeli sieci neuronowych dla aut samo jeżdżących więc to jest dokładnie to wykorzystanie)
+
+- detekcja tekstu (przykładowo klasyfikacja np rozpoznawanie tekstu pisanego przez człowieka do znaków unicode, czy to cyfr czy dowolnych liter)
+
+- podobnie regresja jakiejś funkcji, czyli przybliżenie funkcji do danych, nie zawsze da się dobrać wielomian odpowiedni czasem potrzebujemy sieci neuronowej żeby dopasować się dodanych lepiej
+
+genetyk:
+
+- planowanie (np planu zajęć lub produkcji trasy, czegokolwiek tak właściwie)
+- projektowanie (np kształtu aerodynamicznego przy produkcji skrzydeł lub śmigieł lub innych pojazdów o czym było przed chwilą w klockach lego)
+- strojenie dla maszyn przemysłowych ciśnienie, temperatura, żeby nie stłuc talerza przy jego zmywaniu w zmywarce, albo hiperparametrów sieci o czym będzie później
+
+prosta reguła jest taka: jeśli mamy dużo danych i różniczkowalny cel, uczysz. Jeśli mamy tylko sposób oceny i trudną przestrzeń (dużą z ograniczeniami), szukasz. Oba podejścia nie wykluczają się: za chwilę zobaczymy, że wręcz przeciwnie świetnie się uzupełniają.
+
+10 ---
+
+na koniec quiz prosty
+
+mamy kilka problemów przygotowanych, chciałbym żebyście powiedzieli czy te problemy możemy rozwiązać poprzez uczenie czy też szukanie
+
+
+11 ---
+
+na koniec mojej części, żebyśmy płynnie przeszli do kolejnej sekcji chciałbym szybko zakreślić różnice między parametrami a hiperparametrami, ponieważ może to być mylące i wydawać do siebie podobne, paramatry czyli wagi lub biasy są to po prostu zmiennoprzecinkowe wartości w sieci, które poprawiamy w kierunku gradientu, to one określają jak mocno neurony wpływają na siebie wzajemnie, biasy to samo pomagają uregulować bardziej złożone interakcje przy funkcji aktywacji
+
+natomiast hiperparametry tyczą się warstwy wyżej, czyli samych ustawień treningowych, na których sieć jak całość jest trenowana, oznacza to między innymi liczbe warstw czy neuronów naszej sieci ale także jaką funkcję aktywacji wykorzystamy czy jaki będziemy mieli rozmiar batcha.
+
+(poniższe skip)
+Parametry (wagi) sieć uczy sama. Hiperparametry ustawia człowiek przed treningiem i od nich zależy, czy trening w ogóle się uda. Zapytaj salę, którego hiperparametru dobór jest dla nich najbardziej uciążliwy. Uwaga merytoryczna: istnieją techniki różniczkowania po niektórych hiperparametrach (np. po learning rate), ale w praktyce rzadko są stosowane do struktury sieci.
+
+12---
+
+Rachunek: 10 do potęgi 6 kombinacji razy 5 minut daje 5 mln minut, czyli około 3470 dni, czyli około 9,5 roku. 
+
+Wniosek: potrzebujemy przeszukiwania, które odwiedza obiecujące miejsca, a nie wszystkie. 
+
+przeszukiwanie losowe i optymalizacja bayesowska to też sensowne alternatywy; 
+
+- ewolucja wyróżnia się przy złożonych, mieszanych przestrzeniach.
+
+1mln opcji, 5mln minut, 3000 dni, prawie 10 lat
+
+
+
+
+podejść do kolosa na wyjebaniu bo 2 też ci zaliczy a może podbić
+
+
+
+
+

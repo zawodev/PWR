@@ -1,0 +1,7 @@
+slajd 3
+Przejazd dłuższy niż 30s nie jest brany pod uwagę (symulacja kończy się po upływie 30s).
+Liczy się, jak blisko mety był pojazd. Później przy pełnej mecie dopiero czas.
+
+slajd 5
+Parameter-less Population Pyramid
+Gene-pool Optimal Mixing Evolutionary Algorithm
