@@ -39,7 +39,7 @@ void Optimizer::RunIteration() {
 	vector<vector<int>> next_population;
 	next_population.reserve(population_size_);
 
-	// Elityzm zachowuje najlepszy znaleziony chromosom.
+	// elityzm
 	next_population.push_back(current_best_);
 
 	while (static_cast<int>(next_population.size()) < population_size_) {

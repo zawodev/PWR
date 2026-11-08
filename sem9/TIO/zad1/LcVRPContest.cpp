@@ -1,11 +1,13 @@
 #include "Evaluator.hpp"
 #include "Optimizer.hpp"
 #include "ProblemLoader.hpp"
+#include <fstream>
+#include <iomanip>
 #include <iostream>
 
 using namespace LcVRPContest;
 
-void StartOptimization(
+double StartOptimization(
 	const string& folder_name,
 	const string& instance_name,
 	int max_generations,
@@ -32,11 +34,7 @@ void StartOptimization(
 
 	vector<int>* best_solution = optimizer.GetCurrentBest();
 	double best_fitness = evaluator.Evaluate(*best_solution);
-	cout << "final best fitness: " << best_fitness
-		<< ", generations: " << max_generations
-		<< ", population: " << population_size
-		<< ", Pc: " << crossover_probability
-		<< ", Pm: " << mutation_probability << endl;
+	return best_fitness;
 }
 
 int main() {
@@ -44,40 +42,33 @@ int main() {
 	const string instance_name = "ORTEC-n323-k21";
 	const int max_generations = 400;
 	const int population_size = 100;
-	const bool use_random_permutation = false;
+	const bool use_random_permutation = true;
+	const double crossover_probabilities[] = {0.9, 0.7, 0.4};
+	const double mutation_probabilities[] = {0.01, 0.05, 0.15};
 
-	cout << "Run 1: high crossover, low mutation" << endl;
-	StartOptimization(
-        folder_name, 
-        instance_name, 
-        max_generations, 
-        population_size,
-		0.9, 
-        0.01, 
-        use_random_permutation
-    );
+	ofstream results_file("results.txt");
+	results_file << "Pc Pm fitness\n";
+	results_file << fixed << setprecision(6);
 
-	cout << "\nRun 2: medium crossover, medium mutation" << endl;
-	StartOptimization(
-		folder_name, 
-        instance_name, 
-        max_generations, 
-        population_size,
-		0.7, 
-        0.05, 
-        use_random_permutation
-    );
+	for (double crossover_probability : crossover_probabilities) {
+		for (double mutation_probability : mutation_probabilities) {
+			double best_fitness = StartOptimization(
+				folder_name,
+				instance_name,
+				max_generations,
+				population_size,
+				crossover_probability,
+				mutation_probability,
+				use_random_permutation);
 
-	cout << "\nRun 3: low crossover, high mutation" << endl;
-	StartOptimization(
-		folder_name, 
-        instance_name, 
-        max_generations, 
-        population_size,
-		0.4, 
-        0.15, 
-        use_random_permutation
-    );
+			results_file << crossover_probability << ' '
+				<< mutation_probability << ' '
+				<< best_fitness << '\n';
+			cout << "Pc: " << crossover_probability
+				<< ", Pm: " << mutation_probability
+				<< ", best fitness: " << best_fitness << endl;
+		}
+	}
 
 	return 0;
 }
