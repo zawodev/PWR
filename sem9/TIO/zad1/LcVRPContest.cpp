@@ -44,11 +44,12 @@ double RunOptimizer2() {
 	return result;
 }
 
-double RunOptimizer3(int ant_count, double evaporation) {
+double RunOptimizer3(double evaporation, double distance_weight) {
 	ProblemLoader loader(FOLDER_NAME, INSTANCE_NAME, true);
 	ProblemData data = loader.LoadProblem();
 	Evaluator evaluator(data, data.GetNumGroups());
-	Optimizer3 optimizer(evaluator, ant_count, evaporation, 1.0);
+	const int ant_count = 20;
+	Optimizer3 optimizer(evaluator, ant_count, evaporation, distance_weight);
 	optimizer.Initialize();
 	return RunForTime(optimizer, RUN_TIME_SECONDS);
 }
@@ -57,8 +58,8 @@ int main() {
 	const int population_size = 100;
 	const double crossover_probabilities[] = {0.9, 0.7, 0.4};
 	const double mutation_probabilities[] = {0.01, 0.05, 0.15};
-	const int ant_counts[] = {10, 25, 50};
-	const double evaporation_rates[] = {0.1, 0.3, 0.5};
+	const double evaporation_rates[] = {0.02, 0.2, 0.7};
+	const double distance_weights[] = {0.0, 2.0, 6.0};
 
 	ofstream results_file("results.txt");
 	if (!results_file) {
@@ -85,11 +86,13 @@ int main() {
 	}
 
 	run = 0;
-	for (int ants : ant_counts) {
-		for (double evaporation : evaporation_rates) {
+	// Przy stałym limicie czasu liczba mrówek zmienia liczbę iteracji,
+	// dlatego ant_count jest stałe i nie jest badane.
+	for (double evaporation : evaporation_rates) {
+		for (double distance_weight : distance_weights) {
 			++run;
-			double fitness = RunOptimizer3(ants, evaporation);
-			results_file << "optimizer3 " << ants << ' ' << evaporation << ' ' << run << ' ' << fitness << '\n';
+			double fitness = RunOptimizer3(evaporation, distance_weight);
+			results_file << "optimizer3 " << evaporation << ' ' << distance_weight << ' ' << run << ' ' << fitness << '\n';
 			cout << "optimizer3 run " << run << ": " << fitness << '\n';
 		}
 	}

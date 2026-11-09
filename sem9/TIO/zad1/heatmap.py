@@ -92,7 +92,7 @@ images = [
 	),
 	draw_matrix(
 		axes[2], optimizer3_values, optimizer3_x, optimizer3_y,
-		"optimizer3", "evaporation", "ants", cmap, normalization,
+		"optimizer3", "distance_weight", "evaporation", cmap, normalization,
 	),
 ]
 fig.colorbar(images[0], ax=axes, shrink=0.8, label="fitness")
