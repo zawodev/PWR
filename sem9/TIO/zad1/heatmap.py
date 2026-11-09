@@ -66,7 +66,7 @@ optimizer3_rows = [row for row in results if row[0] == "optimizer3"]
 
 optimizer1_values, optimizer1_x, optimizer1_y = matrix(optimizer1_rows)
 optimizer3_values, optimizer3_x, optimizer3_y = matrix(optimizer3_rows)
-optimizer2_values_matrix = np.array(optimizer2_values).reshape(3, 3)
+optimizer2_values_matrix = np.array([[optimizer2_values[0]]])
 
 all_values = np.concatenate([
 	optimizer1_values.ravel(),
@@ -86,8 +86,8 @@ images = [
 		"optimizer1", "Pm", "Pc", cmap, normalization,
 	),
 	draw_matrix(
-		axes[1], optimizer2_values_matrix, ["1", "2", "3"], ["1", "2", "3"],
-		"optimizer2", "przebieg", "przebieg",
+		axes[1], optimizer2_values_matrix, ["wynik"], ["wynik"],
+		"optimizer2", "", "",
 		cmap, normalization,
 	),
 	draw_matrix(

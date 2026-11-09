@@ -11,7 +11,7 @@
 
 using namespace LcVRPContest;
 
-constexpr double RUN_TIME_SECONDS = 5.0;
+constexpr double RUN_TIME_SECONDS = 20.0;
 const string FOLDER_NAME = "Vrp-Set-D";
 const string INSTANCE_NAME = "ORTEC-n323-k21";
 
@@ -56,10 +56,10 @@ double RunOptimizer3(double evaporation, double distance_weight) {
 
 int main() {
 	const int population_size = 100;
-	const double crossover_probabilities[] = {0.9, 0.7, 0.4};
-	const double mutation_probabilities[] = {0.01, 0.05, 0.15};
-	const double evaporation_rates[] = {0.02, 0.2, 0.7};
-	const double distance_weights[] = {0.0, 2.0, 6.0};
+	const double crossover_probabilities[] = {0.1, 0.3, 0.5, 0.7, 0.8, 0.9, 1.0};
+	const double mutation_probabilities[] = {0.001, 0.005, 0.01, 0.03, 0.075, 0.2, 0.5};
+	const double evaporation_rates[] = {0.01, 0.03, 0.1, 0.2, 0.4, 0.7, 0.95};
+	const double distance_weights[] = {0.0, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0};
 
 	ofstream results_file("results.txt");
 	if (!results_file) {
@@ -79,15 +79,13 @@ int main() {
 		}
 	}
 
-	for (run = 1; run <= 9; ++run) {
+	for (run = 1; run <= 1; ++run) {
 		double fitness = RunOptimizer2();
 		results_file << "optimizer2 0 0 " << run << ' ' << fitness << '\n';
 		cout << "optimizer2 run " << run << ": " << fitness << '\n';
 	}
 
 	run = 0;
-	// Przy stałym limicie czasu liczba mrówek zmienia liczbę iteracji,
-	// dlatego ant_count jest stałe i nie jest badane.
 	for (double evaporation : evaporation_rates) {
 		for (double distance_weight : distance_weights) {
 			++run;

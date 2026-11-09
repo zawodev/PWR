@@ -93,7 +93,7 @@ Potrzebny jest także kompilator:
    ./build/LcVRPContest
    ```
 
-   Program powinien wykonać trzy eksperymenty algorytmu genetycznego, wypisać
+   Program powinien wykonać serię eksperymentów algorytmów, wypisać
    wyniki `final best fitness` i zakończyć działanie.
 
 ### Fedora Linux — uruchomienie z terminala bez VS Code
@@ -271,13 +271,15 @@ Projekt zawiera trzy klasy:
 - `optimizer3/Optimizer3.cpp` — prosty algorytm mrówkowy (`Optimizer3`).
 
 Każdy przebieg ma wspólny limit czasu ustawiony w `RUN_TIME_SECONDS` w
-`LcVRPContest.cpp`. Program wykonuje dziewięć przebiegów każdego algorytmu i
-zapisuje je do `results.txt` w formacie:
+`LcVRPContest.cpp`. Program wykonuje 49 przebiegów dla `Optimizer1`, jeden
+przebieg dla `Optimizer2` oraz 49 przebiegów dla `Optimizer3` i zapisuje je do
+`results.txt` w formacie:
 
 ```text
 optimizer parameter1 parameter2 run fitness
 ```
 
 Skrypt `heatmap.py` tworzy trzy zestawione mapy cieplne w `heatmap.png`.
-Dla `Optimizer2`, który nie ma parametrów wejściowych, dziewięć pól
-przedstawia bezpośrednio dziewięć niezależnych przebiegów.
+Dla `Optimizer2`, który nie ma parametrów wejściowych, wykres przedstawia
+pojedynczy wynik w jednym polu. Macierze `Optimizer1` i `Optimizer3` mają
+rozmiar 7x7.
