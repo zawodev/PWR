@@ -15,7 +15,8 @@ Optimizer2::Optimizer2(
 	SelectionMethod selection_method,
 	CrossoverMethod crossover_method,
 	MutationMethod mutation_method,
-	bool use_inversion)
+	bool use_inversion,
+	bool use_elitism)
 	: evaluator_(evaluator),
 	  population_size_(std::max(2, population_size)),
 	  crossover_probability_(std::clamp(crossover_probability, 0.0, 1.0)),
@@ -24,6 +25,7 @@ Optimizer2::Optimizer2(
 	  crossover_method_(crossover_method),
 	  mutation_method_(mutation_method),
 	  use_inversion_(use_inversion),
+	  use_elitism_(use_elitism),
 	  current_best_fitness_(std::numeric_limits<double>::max()),
 	  rng_(std::random_device{}()) {}
 
@@ -42,7 +44,9 @@ void Optimizer2::Initialize() {
 void Optimizer2::RunIteration() {
 	std::vector<std::vector<int>> next_population;
 	next_population.reserve(population_size_);
-	//next_population.push_back(current_best_); // elityzm
+	if (use_elitism_) { //elityzm
+		next_population.push_back(current_best_);
+	}
 
 	while (static_cast<int>(next_population.size()) < population_size_) {
 		std::vector<int> child = Crossover(population_[SelectParent()], population_[SelectParent()]);

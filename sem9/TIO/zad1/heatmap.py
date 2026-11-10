@@ -70,9 +70,12 @@ optimizer2_rows = [row for row in results if row[0] == "optimizer2"]
 optimizer2_values_matrix, optimizer2_x, optimizer2_y = matrix(optimizer2_rows)
 optimizer3_values, optimizer3_x, optimizer3_y = matrix(optimizer3_rows)
 selection_names = {
-	0.0: "ruletkowa",
-	1.0: "turniejowa",
-	2.0: "rankingowa",
+	0.0: "ruletkowa\nbez elityzmu",
+	1.0: "ruletkowa\nz elityzmem",
+	2.0: "turniejowa\nbez elityzmu",
+	3.0: "turniejowa\nz elityzmem",
+	4.0: "rankingowa\nbez elityzmu",
+	5.0: "rankingowa\nz elityzmem",
 }
 variant_names = {
 	0.0: "1-punkt + reset\nbez inwersji",

@@ -12,9 +12,9 @@
 
 using namespace LcVRPContest;
 
-constexpr double RUN_TIME_SECONDS = 5.0;
-const string FOLDER_NAME = "Vrp-Set-A";
-const string INSTANCE_NAME = "A-n36-k5";
+constexpr double RUN_TIME_SECONDS = 1.0;
+const string FOLDER_NAME = "Vrp-Set-E";
+const string INSTANCE_NAME = "E-n22-k4";
 
 template <typename OptimizerType>
 double RunForTime(OptimizerType& optimizer, double seconds) {
@@ -49,12 +49,13 @@ double RunOptimizer2(
 	SelectionMethod selection,
 	CrossoverMethod crossover,
 	MutationMethod mutation,
-	bool use_inversion) {
+	bool use_inversion,
+	bool use_elitism) {
 	ProblemLoader loader(FOLDER_NAME, INSTANCE_NAME, true);
 	ProblemData data = loader.LoadProblem();
 	Evaluator evaluator(data, data.GetNumGroups());
     //cross: 80% (0.8), mutacja: 1% (0.01)
-	Optimizer2 optimizer(evaluator, 100, 0.8, 0.01, selection, crossover, mutation, use_inversion);
+	Optimizer2 optimizer(evaluator, 100, 0.8, 0.01, selection, crossover, mutation, use_inversion, use_elitism);
 	optimizer.Initialize();
 	return RunForTime(optimizer, RUN_TIME_SECONDS);
 }
@@ -103,19 +104,23 @@ int main() {
 	const MutationMethod mutations[] = {MutationMethod::RandomReset, MutationMethod::Swap};
 	run = 0;
 	for (SelectionMethod selection : selections) {
-		for (CrossoverMethod crossover : crossovers) {
-			for (MutationMethod mutation : mutations) {
-				for (bool inversion : {false, true}) {
-					++run;
-					fitness = RunOptimizer2(selection, crossover, mutation, inversion);
+		for (bool elitism : {false, true}) {
+			for (CrossoverMethod crossover : crossovers) {
+				for (MutationMethod mutation : mutations) {
+					for (bool inversion : {false, true}) {
+						++run;
+						fitness = RunOptimizer2(selection, crossover, mutation, inversion, elitism);
 
-					results_file << "optimizer2 " << static_cast<int>(selection)
-						<< ' ' << static_cast<int>(crossover) * 4
-						+ static_cast<int>(mutation) * 2
-						+ static_cast<int>(inversion)
-						<< ' ' << run << ' ' << fitness << '\n';
+						results_file << "optimizer2 "
+							<< static_cast<int>(selection) * 2 
+                            + static_cast<int>(elitism)
+							<< ' ' << static_cast<int>(crossover) * 4
+							+ static_cast<int>(mutation) * 2
+							+ static_cast<int>(inversion)
+							<< ' ' << run << ' ' << fitness << '\n';
 
-					cout << "optimizer2 run " << run << ": " << fitness << '\n';
+						cout << "optimizer2 run " << run << ": " << fitness << '\n';
+					}
 				}
 			}
 		}

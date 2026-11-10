@@ -19,7 +19,8 @@ namespace LcVRPContest {
 			SelectionMethod selection_method,
 			CrossoverMethod crossover_method,
 			MutationMethod mutation_method,
-			bool use_inversion);
+			bool use_inversion,
+			bool use_elitism);
 
 		void Initialize();
 		void RunIteration();
@@ -36,6 +37,7 @@ namespace LcVRPContest {
 		CrossoverMethod crossover_method_;
 		MutationMethod mutation_method_;
 		bool use_inversion_;
+		bool use_elitism_;
 		std::vector<std::vector<int>> population_;
 		std::vector<double> population_fitness_;
 		std::vector<int> current_best_;
