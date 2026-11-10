@@ -13,8 +13,8 @@
 using namespace LcVRPContest;
 
 constexpr double RUN_TIME_SECONDS = 1.0;
-const string FOLDER_NAME = "Vrp-Set-E";
-const string INSTANCE_NAME = "E-n22-k4";
+const string FOLDER_NAME = "Vrp-Set-A";
+const string INSTANCE_NAME = "A-n69-k9";
 
 template <typename OptimizerType>
 double RunForTime(OptimizerType& optimizer, double seconds) {
