@@ -12,8 +12,8 @@
 using namespace LcVRPContest;
 
 constexpr double RUN_TIME_SECONDS = 20.0;
-const string FOLDER_NAME = "Vrp-Set-D";
-const string INSTANCE_NAME = "ORTEC-n323-k21";
+const string FOLDER_NAME = "Vrp-Set-A";
+const string INSTANCE_NAME = "A-n80-k10";
 
 template <typename OptimizerType>
 double RunForTime(OptimizerType& optimizer, double seconds) {
@@ -39,7 +39,7 @@ double RunOptimizer2() {
 	Evaluator evaluator(data, data.GetNumGroups());
 	Optimizer2 optimizer(evaluator);
 	optimizer.Initialize();
-	double result = RunForTime(optimizer, RUN_TIME_SECONDS);
+	double result = RunForTime(optimizer, RUN_TIME_SECONDS * 3);
 	optimizer.StopThreads();
 	return result;
 }
