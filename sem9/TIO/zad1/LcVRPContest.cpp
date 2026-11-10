@@ -12,7 +12,7 @@
 
 using namespace LcVRPContest;
 
-constexpr double RUN_TIME_SECONDS = 1.0;
+constexpr double RUN_TIME_SECONDS = 10.0;
 const string FOLDER_NAME = "Vrp-Set-A";
 const string INSTANCE_NAME = "A-n69-k9";
 
