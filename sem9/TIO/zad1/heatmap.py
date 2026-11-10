@@ -60,15 +60,33 @@ def draw_matrix(axis, values, x_values, y_values, title, xlabel, ylabel,
 
 
 results = load_results()
+optimizer0_values = [row[4] for row in results if row[0] == "optimizer0"]
 optimizer1_rows = [row for row in results if row[0] == "optimizer1"]
-optimizer2_values = [row[4] for row in results if row[0] == "optimizer2"]
 optimizer3_rows = [row for row in results if row[0] == "optimizer3"]
 
+optimizer0_values_matrix = np.array([[optimizer0_values[0]]])
 optimizer1_values, optimizer1_x, optimizer1_y = matrix(optimizer1_rows)
+optimizer2_rows = [row for row in results if row[0] == "optimizer2"]
+optimizer2_values_matrix, optimizer2_x, optimizer2_y = matrix(optimizer2_rows)
 optimizer3_values, optimizer3_x, optimizer3_y = matrix(optimizer3_rows)
-optimizer2_values_matrix = np.array([[optimizer2_values[0]]])
+selection_names = {
+	0.0: "ruletkowa",
+	1.0: "turniejowa",
+	2.0: "rankingowa",
+}
+variant_names = {
+	0.0: "1-punkt + reset\nbez inwersji",
+	1.0: "1-punkt + reset\nz inwersją",
+	2.0: "1-punkt + swap\nbez inwersji",
+	3.0: "1-punkt + swap\nz inwersją",
+	4.0: "uniform + reset\nbez inwersji",
+	5.0: "uniform + reset\nz inwersją",
+	6.0: "uniform + swap\nbez inwersji",
+	7.0: "uniform + swap\nz inwersją",
+}
 
 all_values = np.concatenate([
+	optimizer0_values_matrix.ravel(),
 	optimizer1_values.ravel(),
 	optimizer2_values_matrix.ravel(),
 	optimizer3_values.ravel(),
@@ -79,23 +97,37 @@ cmap = LinearSegmentedColormap.from_list(
 	["#16803c", "#ffe600", "#d62828"],
 )
 
-fig, axes = plt.subplots(1, 3, figsize=(15, 5), constrained_layout=True)
+fig = plt.figure(figsize=(20, 9), constrained_layout=True)
+layout = fig.add_gridspec(2, 3, height_ratios=[1, 1.25])
+axes = [
+	fig.add_subplot(layout[0, 0]),
+	fig.add_subplot(layout[0, 1]),
+	fig.add_subplot(layout[1, :]),
+	fig.add_subplot(layout[0, 2]),
+]
 images = [
 	draw_matrix(
-		axes[0], optimizer1_values, optimizer1_x, optimizer1_y,
+		axes[0], optimizer0_values_matrix, ["wynik"], ["wynik"],
+		"optimizer0", "", "", cmap, normalization,
+	),
+	draw_matrix(
+		axes[1], optimizer1_values, optimizer1_x, optimizer1_y,
 		"optimizer1", "Pm", "Pc", cmap, normalization,
 	),
 	draw_matrix(
-		axes[1], optimizer2_values_matrix, ["wynik"], ["wynik"],
-		"optimizer2", "", "",
+		axes[2], optimizer2_values_matrix,
+		[selection_names.get(value, str(value)) for value in optimizer2_x],
+		[variant_names.get(value, str(value)) for value in optimizer2_y],
+		"optimizer2", "krzyżowanie + mutacja + inwersja", "selekcja",
 		cmap, normalization,
 	),
 	draw_matrix(
-		axes[2], optimizer3_values, optimizer3_x, optimizer3_y,
+		axes[3], optimizer3_values, optimizer3_x, optimizer3_y,
 		"optimizer3", "distance_weight", "evaporation", cmap, normalization,
 	),
 ]
+axes[2].tick_params(axis="x", labelrotation=35)
 fig.colorbar(images[0], ax=axes, shrink=0.8, label="fitness")
 
 plt.savefig("heatmap.png", dpi=150, bbox_inches="tight")
-print("Zapisano heatmap.png")
+print("zapisano heatmap.png")

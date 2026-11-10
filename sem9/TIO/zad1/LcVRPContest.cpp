@@ -1,5 +1,6 @@
 #include "Evaluator.hpp"
 #include "ProblemLoader.hpp"
+#include "optimizer0/Optimizer.hpp"
 #include "optimizer1/Optimizer.hpp"
 #include "optimizer2/Optimizer.hpp"
 #include "optimizer3/Optimizer3.hpp"
@@ -11,9 +12,9 @@
 
 using namespace LcVRPContest;
 
-constexpr double RUN_TIME_SECONDS = 20.0;
+constexpr double RUN_TIME_SECONDS = 5.0;
 const string FOLDER_NAME = "Vrp-Set-A";
-const string INSTANCE_NAME = "A-n80-k10";
+const string INSTANCE_NAME = "A-n36-k5";
 
 template <typename OptimizerType>
 double RunForTime(OptimizerType& optimizer, double seconds) {
@@ -33,15 +34,29 @@ double RunOptimizer1(int population_size, double crossover_probability, double m
 	return RunForTime(optimizer, RUN_TIME_SECONDS);
 }
 
-double RunOptimizer2() {
+double RunOptimizer0() {
 	ProblemLoader loader(FOLDER_NAME, INSTANCE_NAME, true);
 	ProblemData data = loader.LoadProblem();
 	Evaluator evaluator(data, data.GetNumGroups());
-	Optimizer2 optimizer(evaluator);
+	Optimizer0 optimizer(evaluator);
 	optimizer.Initialize();
 	double result = RunForTime(optimizer, RUN_TIME_SECONDS * 3);
 	optimizer.StopThreads();
 	return result;
+}
+
+double RunOptimizer2(
+	SelectionMethod selection,
+	CrossoverMethod crossover,
+	MutationMethod mutation,
+	bool use_inversion) {
+	ProblemLoader loader(FOLDER_NAME, INSTANCE_NAME, true);
+	ProblemData data = loader.LoadProblem();
+	Evaluator evaluator(data, data.GetNumGroups());
+    //cross: 80% (0.8), mutacja: 1% (0.01)
+	Optimizer2 optimizer(evaluator, 100, 0.8, 0.01, selection, crossover, mutation, use_inversion);
+	optimizer.Initialize();
+	return RunForTime(optimizer, RUN_TIME_SECONDS);
 }
 
 double RunOptimizer3(double evaporation, double distance_weight) {
@@ -63,26 +78,47 @@ int main() {
 
 	ofstream results_file("results.txt");
 	if (!results_file) {
-		cerr << "Nie można otworzyć results.txt\n";
+		cerr << "nie udało się otworzyć pliku pewnie zajęty albo co\n";
 		return 1;
 	}
 	results_file << "optimizer parameter1 parameter2 run fitness\n";
 	results_file << fixed << setprecision(6);
 
 	int run = 0;
+	double fitness = RunOptimizer0();
+	results_file << "optimizer0 0 0 1 " << fitness << '\n';
+	cout << "optimizer0 run 1: " << fitness << '\n';
+
 	for (double crossover : crossover_probabilities) {
 		for (double mutation : mutation_probabilities) {
 			++run;
-			double fitness = RunOptimizer1(population_size, crossover, mutation);
+			fitness = RunOptimizer1(population_size, crossover, mutation);
 			results_file << "optimizer1 " << crossover << ' ' << mutation << ' ' << run << ' ' << fitness << '\n';
 			cout << "optimizer1 run " << run << ": " << fitness << '\n';
 		}
 	}
 
-	for (run = 1; run <= 1; ++run) {
-		double fitness = RunOptimizer2();
-		results_file << "optimizer2 0 0 " << run << ' ' << fitness << '\n';
-		cout << "optimizer2 run " << run << ": " << fitness << '\n';
+	const SelectionMethod selections[] = {SelectionMethod::Roulette, SelectionMethod::Tournament, SelectionMethod::Rank};
+	const CrossoverMethod crossovers[] = {CrossoverMethod::OnePoint, CrossoverMethod::Uniform};
+	const MutationMethod mutations[] = {MutationMethod::RandomReset, MutationMethod::Swap};
+	run = 0;
+	for (SelectionMethod selection : selections) {
+		for (CrossoverMethod crossover : crossovers) {
+			for (MutationMethod mutation : mutations) {
+				for (bool inversion : {false, true}) {
+					++run;
+					fitness = RunOptimizer2(selection, crossover, mutation, inversion);
+
+					results_file << "optimizer2 " << static_cast<int>(selection)
+						<< ' ' << static_cast<int>(crossover) * 4
+						+ static_cast<int>(mutation) * 2
+						+ static_cast<int>(inversion)
+						<< ' ' << run << ' ' << fitness << '\n';
+
+					cout << "optimizer2 run " << run << ": " << fitness << '\n';
+				}
+			}
+		}
 	}
 
 	run = 0;

@@ -40,15 +40,13 @@ void Optimizer1::RunIteration() {
 	next_population.reserve(population_size_);
 
 	// elityzm
-	next_population.push_back(current_best_);
+	//next_population.push_back(current_best_);
 
 	while (static_cast<int>(next_population.size()) < population_size_) {
 		size_t first_parent_index = SelectByRoulette();
 		size_t second_parent_index = SelectByRoulette();
 
-		vector<int> child = Crossover(
-			population_[first_parent_index],
-			population_[second_parent_index]);
+		vector<int> child = Crossover(population_[first_parent_index], population_[second_parent_index]);
 		Mutate(child);
 		next_population.push_back(move(child));
 	}
@@ -58,9 +56,7 @@ void Optimizer1::RunIteration() {
 }
 
 void Optimizer1::InitRandomIndividual(vector<int>& individual) {
-	uniform_int_distribution<int> group_distribution(
-		evaluator_.GetLowerBound(),
-		evaluator_.GetUpperBound());
+	uniform_int_distribution<int> group_distribution(evaluator_.GetLowerBound(), evaluator_.GetUpperBound());
 
 	for (int& gene : individual) {
 		gene = group_distribution(rng_);
@@ -121,10 +117,7 @@ vector<int> Optimizer1::Crossover(
 		probability(rng_) < crossover_probability_) {
 		uniform_int_distribution<size_t> point_distribution(1, first_parent.size() - 1);
 		size_t crossover_point = point_distribution(rng_);
-		copy(
-			second_parent.begin() + crossover_point,
-			second_parent.end(),
-			child.begin() + crossover_point);
+		copy(second_parent.begin() + crossover_point, second_parent.end(), child.begin() + crossover_point);
 	}
 
 	return child;
@@ -132,9 +125,7 @@ vector<int> Optimizer1::Crossover(
 
 void Optimizer1::Mutate(vector<int>& individual) {
 	uniform_real_distribution<double> probability(0.0, 1.0);
-	uniform_int_distribution<int> group_distribution(
-		evaluator_.GetLowerBound(),
-		evaluator_.GetUpperBound());
+	uniform_int_distribution<int> group_distribution(evaluator_.GetLowerBound(), evaluator_.GetUpperBound());
 
 	for (int& gene : individual) {
 		if (probability(rng_) < mutation_probability_) {

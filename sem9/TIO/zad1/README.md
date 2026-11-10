@@ -266,20 +266,22 @@ populacji, zmieniając `Pc` i `Pm`.
 Projekt zawiera trzy klasy:
 
 - `optimizer1/Optimizer.cpp` — podstawowy algorytm genetyczny (`Optimizer1`),
-- `optimizer2/Optimizer.cpp` — wielowątkowy algorytm lokalnego przeszukiwania
-  (`Optimizer2`),
+- `optimizer0/Optimizer.cpp` — wcześniejszy wielowątkowy algorytm lokalnego
+  przeszukiwania (`Optimizer0`),
+- `optimizer2/Optimizer.cpp` — rozszerzony prosty algorytm genetyczny
+  (`Optimizer2`) z trzema selekcjami, dwoma krzyżowaniami, dwiema mutacjami
+  i opcjonalną inwersją,
 - `optimizer3/Optimizer3.cpp` — prosty algorytm mrówkowy (`Optimizer3`).
 
 Każdy przebieg ma wspólny limit czasu ustawiony w `RUN_TIME_SECONDS` w
-`LcVRPContest.cpp`. Program wykonuje 49 przebiegów dla `Optimizer1`, jeden
-przebieg dla `Optimizer2` oraz 49 przebiegów dla `Optimizer3` i zapisuje je do
-`results.txt` w formacie:
+`LcVRPContest.cpp`. Program wykonuje jeden przebieg dla `Optimizer0`, 49
+przebiegów dla `Optimizer1`, 24 warianty `Optimizer2` oraz 49 przebiegów dla
+`Optimizer3` i zapisuje je do `results.txt` w formacie:
 
 ```text
 optimizer parameter1 parameter2 run fitness
 ```
 
 Skrypt `heatmap.py` tworzy trzy zestawione mapy cieplne w `heatmap.png`.
-Dla `Optimizer2`, który nie ma parametrów wejściowych, wykres przedstawia
-pojedynczy wynik w jednym polu. Macierze `Optimizer1` i `Optimizer3` mają
-rozmiar 7x7.
+Wykres zawiera jeden panel dla `Optimizer0`, macierze 7x7 dla `Optimizer1` i
+`Optimizer3` oraz macierz 3x8 dla `Optimizer2`.

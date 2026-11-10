@@ -98,20 +98,27 @@ std::vector<int> Optimizer3::BuildSolution() {
 }
 
 void Optimizer3::RunIteration() {
-	std::vector<int> iteration_best;
-	double iteration_best_fitness = std::numeric_limits<double>::max();
+	const ProblemData& data = evaluator_.GetProblemData();
+	int depot = data.GetDepot() - 1;
+	std::vector<std::pair<double, std::vector<int>>> ants;
 
 	for (int ant = 0; ant < ant_count_; ++ant) {
 		std::vector<int> solution = BuildSolution();
 		double fitness = evaluator_.Evaluate(solution);
-		if (fitness >= 0.0 && fitness < iteration_best_fitness) {
-			iteration_best = solution;
-			iteration_best_fitness = fitness;
+		if (fitness < 0.0) {
+			continue;
 		}
-		if (fitness >= 0.0 && fitness < current_best_fitness_) {
+		if (fitness < current_best_fitness_) {
 			current_best_ = solution;
 			current_best_fitness_ = fitness;
 		}
+		ants.push_back({fitness, solution});
+	}
+	if (ants.empty()) {
+		return;
+	}
+	if (reference_cost_ == 0.0) { // skala depozytu ustawiana tylko raz
+		reference_cost_ = ants.front().first;
 	}
 
 	// evaporation ogranicza wpływ starych rozwiązań
@@ -121,23 +128,17 @@ void Optimizer3::RunIteration() {
 		}
 	}
 
-	if (iteration_best.empty()) {
-		return;
-	}
-	if (reference_cost_ == 0.0) {
-		reference_cost_ = iteration_best_fitness;
-	}
-
-	// wzmacniamy krawędzie najlepszego rozwiązania globalnego
-	double deposit = reference_cost_ / current_best_fitness_;
-	const ProblemData& data = evaluator_.GetProblemData();
-	int depot = data.GetDepot() - 1;
-	std::vector<int> route_tail(evaluator_.GetNumGroups(), depot);
-	for (int customer_id : data.GetPermutation()) {
-		int customer = customer_id - 1;
-		int group = current_best_[customer_id - 2];
-		pheromone_[route_tail[group]][customer] += deposit;
-		route_tail[group] = customer;
+	// depozyt, czyli każda mrówka zostawia ślad na krawędziach swojego rozwiązania,
+	// im lepszy fitness miała mrówka, tym mocniejszy ślad
+	for (const auto& [fitness, solution] : ants) {
+		double deposit = reference_cost_ / fitness / ant_count_;
+		std::vector<int> route_tail(evaluator_.GetNumGroups(), depot);
+		for (int customer_id : data.GetPermutation()) {
+			int customer = customer_id - 1;
+			int group = solution[customer_id - 2];
+			pheromone_[route_tail[group]][customer] += deposit;
+			route_tail[group] = customer;
+		}
 	}
 
 	for (auto& row : pheromone_) {

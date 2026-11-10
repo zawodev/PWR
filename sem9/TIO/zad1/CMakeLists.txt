@@ -12,9 +12,10 @@ add_executable(LcVRPContest
     ProblemData.cpp
     ProblemLoader.cpp
     optimizer1/Optimizer.cpp
-    optimizer2/MyEvaluator.cpp
+    optimizer0/MyEvaluator.cpp
+    optimizer0/Optimizer.cpp
+    optimizer0/Individual.cpp
     optimizer2/Optimizer.cpp
-    optimizer2/Individual.cpp
     optimizer3/Optimizer3.cpp
 )
 
