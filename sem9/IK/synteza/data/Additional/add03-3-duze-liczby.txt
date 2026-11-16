@@ -1,0 +1,1 @@
+W tym roku nasz asystent pomógł skonfigurować 943 492 412 komputerów, a w ubiegłym roku 43 436 324. Ta karta graficzna ma 16384 rdzenie CUDA i 21 760 000 000 tranzystorów, a procesor osiąga taktowanie 5,7 GHz. Zestaw pamięci 32 GB (2 × 16 GB) DDR5 6000 MHz kosztuje 489,99 zł, a cały komputer 12 499 zł.

@@ -1,0 +1,1 @@
+Czy na pewno odłączyłeś zasilanie w skrzynce bezpieczników przed demontażem gniazdka? Tak, obwód jest całkowicie odcięty, ale dla pewności sprawdź jeszcze napięcie próbnikiem!

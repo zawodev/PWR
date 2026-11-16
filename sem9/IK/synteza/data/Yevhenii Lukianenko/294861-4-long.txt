@@ -1,0 +1,1 @@
+Gdy powiesz „zgłoś problem”, asystent zapyta, w którym budynku się znajdujesz, czego dotyczy usterka i czy jest pilna, a następnie, po Twoim potwierdzeniu, przekaże zgłoszenie do działu technicznego, który zwykle odpowiada w ciągu dwóch dni roboczych.

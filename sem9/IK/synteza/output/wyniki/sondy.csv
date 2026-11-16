@@ -1,0 +1,160 @@
+sample,file,cat,fragment,expected,regex,piper,xtts
+S03,Aleksander Stepaniuk/272644-3-numbers.txt,D,czternastego listopada,czternastego listopada,czternast\w* listopad,OK,OK
+S03,Aleksander Stepaniuk/272644-3-numbers.txt,D,dwunastą trzydzieści pięć,dwunastą trzydzieści pięć,dwunast\w* trzydzieści pięć,OK,OK
+S05,Aleksander Stepaniuk/272644-5-unique-foreign.txt,N,Samsung,samsung,samsung,OK,OK
+S05,Aleksander Stepaniuk/272644-5-unique-foreign.txt,O,Pro,pro,\bpro\b,OK,OK
+S05,Aleksander Stepaniuk/272644-5-unique-foreign.txt,N,Corsair,korsejr / korsair,corsair|korse|korsa,OK,OK
+S05,Aleksander Stepaniuk/272644-5-unique-foreign.txt,O,Vengeance,wendżens,vengean|wend[żz]en|vend[żz]en|wengen,BŁĄD?,BŁĄD?
+S05,Aleksander Stepaniuk/272644-5-unique-foreign.txt,S,DDR pięć,de de er pięć,\bddr\b|de de er,BŁĄD?,OK
+S08,Mieszko Szczekla/272688-3-numbers.txt,L,cztery tysiące dziewięćset dziewięćdziesiąt dziewięć,jw.,cztery tysiące dziewięćset dziewięćdziesiąt dziewięć,OK,OK
+S09,Mieszko Szczekla/272688-4-long.txt,S,DDR cztery,de de er cztery,(\bddr\b|de de er) cztery,BŁĄD?,BŁĄD?
+S09,Mieszko Szczekla/272688-4-long.txt,S,DDR pięć,de de er pięć,(\bddr\b|de de er) pięć,BŁĄD?,BŁĄD?
+S10,Mieszko Szczekla/272688-5-unique-foreign.txt,N,Gigabyte,gigabajt,gigaba[jy]t|gigabyte,OK,OK
+S10,Mieszko Szczekla/272688-5-unique-foreign.txt,S,X pięćset siedemdziesiąt,iks pięćset siedemdziesiąt,\b(x|iks) pięćset siedemdziesiąt,OK,OK
+S10,Mieszko Szczekla/272688-5-unique-foreign.txt,N,Aorus,aorus,aorus|aoros,OK,OK
+S10,Mieszko Szczekla/272688-5-unique-foreign.txt,O,Elite,elajt / elit,elit|elajt,OK,OK
+S10,Mieszko Szczekla/272688-5-unique-foreign.txt,S,PCI Express,pe ce i ekspres,\bpci\b|pe ce i|pi si aj,OK,OK
+S11,Yevhenii Lukianenko/294861-1-info.txt,S,B-4,be cztery,\bbe? cztery,OK,OK
+S12,Igor Wojtun/272652-2-qna.txt,N,C-HR,ce ha er,\bc ?h ?r\b|ce ha er,OK,BŁĄD?
+S13,Marcin Borkowski/272974-2-qna.txt,W,nie da się cofnąć,nie da się cofnąć,nie da się cofnąć,OK,OK
+S14,Julia Kroczek/266853-3-numbers.txt,S,ul.,ulicy,ulic,BŁĄD?,OK
+S14,Julia Kroczek/266853-3-numbers.txt,L,58/3,pięćdziesiąt osiem przez trzy,pięćdziesiąt osiem (przez |na |łamane |kreska )?trzy,BŁĄD?,BŁĄD?
+S14,Julia Kroczek/266853-3-numbers.txt,S,pn.–pt.,od poniedziałku do piątku,poniedział\w* do piąt,BŁĄD?,BŁĄD?
+S14,Julia Kroczek/266853-3-numbers.txt,D,10:00–19:00,od dziesiątej do dziewiętnastej,dziesi\w* do dziewiętn\w*,BŁĄD?,BŁĄD?
+S14,Julia Kroczek/266853-3-numbers.txt,S,sob.,w soboty / sobota,sobot,BŁĄD?,OK
+S14,Julia Kroczek/266853-3-numbers.txt,S,Tel.,telefon,telefon,BŁĄD?,OK
+S14,Julia Kroczek/266853-3-numbers.txt,L,71 345 67 89,"siedemdziesiąt jeden, trzysta czterdzieści pięć, ...",siedemdziesiąt jeden trzysta czterdzieści pięć sześćdziesiąt siedem osiemdziesiąt dziewięć,BŁĄD?,BŁĄD?
+S14,Julia Kroczek/266853-3-numbers.txt,L,+48,plus czterdzieści osiem,plus czterdzieści osiem,OK,BŁĄD?
+S14,Julia Kroczek/266853-3-numbers.txt,L,54 l,pięćdziesiąt cztery litry,pięćdziesiąt cztery litr,BŁĄD?,BŁĄD?
+S14,Julia Kroczek/266853-3-numbers.txt,L,"349,99 zł",trzysta czterdzieści dziewięć złotych dziewięćdziesiąt dziewięć groszy,trzysta czterdzieści dziewięć (złot|przecinek),OK,OK
+S14,Julia Kroczek/266853-3-numbers.txt,S,nr,numer,numer,BŁĄD?,OK
+S14,Julia Kroczek/266853-3-numbers.txt,L,5%,pięć procent,pięć procent,OK,OK
+S14,Julia Kroczek/266853-3-numbers.txt,L,24/7,dwadzieścia cztery na siedem,dwadzieścia cztery (na |przez |łamane )?siedem,OK,BŁĄD?
+S14,Julia Kroczek/266853-3-numbers.txt,S,www.akwa-swiat.pl,wu wu wu kropka akwa świat kropka pe el,www|wu wu wu,OK,OK
+S15,Julia Kroczek/266853-4-long.txt,S,NO₂,en o dwa,\bno dwa|en o dwa,OK,BŁĄD?
+S15,Julia Kroczek/266853-4-long.txt,L,"0,3 mg/l",zero przecinek trzy miligrama na litr,zero przecinek trzy miligram,BŁĄD?,BŁĄD?
+S15,Julia Kroczek/266853-4-long.txt,L,W 1. tygodniu,w pierwszym tygodniu,pierwsz\w* tygodni,BŁĄD?,BŁĄD?
+S15,Julia Kroczek/266853-4-long.txt,L,ok. 20%,około dwudziestu procent,około (dwadzieścia|dwudziestu) procent,OK,OK
+S15,Julia Kroczek/266853-4-long.txt,L,⅓,jedną trzecią,jedn\w* trzeci,BŁĄD?,BŁĄD?
+S15,Julia Kroczek/266853-4-long.txt,L,24–25°C,dwadzieścia cztery do dwudziestu pięciu stopni Celsjusza,"dwadzieścia cztery .{0,20}stopni",OK,OK
+S15,Julia Kroczek/266853-4-long.txt,S,max.,maksymalnie / maks,maks,BŁĄD?,OK
+S15,Julia Kroczek/266853-4-long.txt,S,XXI w.,dwudziestym pierwszym wieku,dwudziest\w* pierwsz\w* wiek|xxi wiek,BŁĄD?,BŁĄD?
+S15,Julia Kroczek/266853-4-long.txt,S,nr 1,numer jeden,numer jeden,BŁĄD?,OK
+S16,Kacper Tomczyk/272650-3-numbers.txt,S,drem,doktorem,doktor,BŁĄD?,BŁĄD?
+S16,Kacper Tomczyk/272650-3-numbers.txt,D,15.03.2026 r.,piętnastego marca dwa tysiące dwudziestego szóstego roku,piętnast\w* marca,OK,BŁĄD?
+S16,Kacper Tomczyk/272650-3-numbers.txt,D,2026 r.,dwa tysiące dwudziestego szóstego roku,dwudziest\w* szóst\w* roku,BŁĄD?,BŁĄD?
+S16,Kacper Tomczyk/272650-3-numbers.txt,D,godz. 14:30,o godzinie czternastej trzydzieści,godzin\w* czternast\w* trzydzieści,BŁĄD?,OK
+S16,Kacper Tomczyk/272650-3-numbers.txt,S,s. 204,sali dwieście cztery,sal\w* dwieście cztery,BŁĄD?,BŁĄD?
+S17,Wiktor Kubera/266539-3-numbers.txt,L,37%,trzydzieści siedem procent,trzydzieści siedem procent,OK,OK
+S17,Wiktor Kubera/266539-3-numbers.txt,S,IC 148,i ce sto czterdzieści osiem,\bic\b|i ce|intercity,OK,BŁĄD?
+S17,Wiktor Kubera/266539-3-numbers.txt,S,Gł.,Główny,główn,BŁĄD?,OK
+S17,Wiktor Kubera/266539-3-numbers.txt,S,Centr.,Centralna,centraln,BŁĄD?,BŁĄD?
+S17,Wiktor Kubera/266539-3-numbers.txt,D,15.11.2026 r.,piętnastego listopada ...,piętnast\w* listopad,BŁĄD?,BŁĄD?
+S17,Wiktor Kubera/266539-3-numbers.txt,S,odj.,odjazd,odjazd|odjeżdża,BŁĄD?,BŁĄD?
+S17,Wiktor Kubera/266539-3-numbers.txt,D,7:55,siódma pięćdziesiąt pięć,siódm\w* pięćdziesiąt pięć,BŁĄD?,BŁĄD?
+S17,Wiktor Kubera/266539-3-numbers.txt,S,wag.,wagon,wagon,BŁĄD?,BŁĄD?
+S17,Wiktor Kubera/266539-3-numbers.txt,S,m. 42,miejsce czterdzieści dwa,miejsc\w* czterdzieści dwa,BŁĄD?,BŁĄD?
+S17,Wiktor Kubera/266539-3-numbers.txt,L,"2 × 64,26 zł",dwa razy sześćdziesiąt cztery złote dwadzieścia sześć groszy,dwa razy sześćdziesiąt cztery,OK,BŁĄD?
+S17,Wiktor Kubera/266539-3-numbers.txt,L,=,równa się / to,równa się,OK,BŁĄD?
+S18,Andrzej Manderla/294692-3-numbers.txt,L,"27""",dwadzieścia siedem cali,dwadzieścia siedem cal,BŁĄD?,BŁĄD?
+S18,Andrzej Manderla/294692-3-numbers.txt,S,4K,cztery ka,cztery (k|ka)\b,OK,BŁĄD?
+S18,Andrzej Manderla/294692-3-numbers.txt,L,"1499,99 zł",tysiąc czterysta dziewięćdziesiąt dziewięć złotych ...,tysiąc czterysta dziewięćdziesiąt dziewięć,OK,OK
+S18,Andrzej Manderla/294692-3-numbers.txt,L,0%,zero procent,zero procent,OK,OK
+S18,Andrzej Manderla/294692-3-numbers.txt,S,ok.,około,około,OK,BŁĄD?
+S18,Andrzej Manderla/294692-3-numbers.txt,D,15.12.2026 r.,piętnastego grudnia ...,piętnast\w* grudnia,OK,BŁĄD?
+S19,Wiktor Piekarski/272726-3-numbers.txt,L,1.8,jeden i osiem / jeden przecinek osiem,jeden (przecinek |kropka |i )?osiem,OK,OK
+S19,Wiktor Piekarski/272726-3-numbers.txt,D,2024 r.,dwa tysiące dwudziestego czwartego roku,dwudziest\w* czwart\w* roku,BŁĄD?,BŁĄD?
+S19,Wiktor Piekarski/272726-3-numbers.txt,L,129 900 zł,sto dwadzieścia dziewięć tysięcy dziewięćset złotych,sto dwadzieścia dziewięć tysięcy dziewięćset,OK,OK
+S19,Wiktor Piekarski/272726-3-numbers.txt,L,"4,5 l/100 km",cztery i pół litra na sto kilometrów,na sto kilometr,BŁĄD?,BŁĄD?
+S19,Wiktor Piekarski/272726-3-numbers.txt,D,15.12,piętnastego grudnia,piętnast\w* (grudnia|dwunast),BŁĄD?,BŁĄD?
+S19,Wiktor Piekarski/272726-3-numbers.txt,D,godz. 10:30,o godzinie dziesiątej trzydzieści,dziesiąt\w* trzydzieści,OK,BŁĄD?
+S20,Kacper Kubiak/272636-4-long.txt,N,KFC,ka ef ce,\bkfc\b|ka ef ce,BŁĄD?,BŁĄD?
+S20,Kacper Kubiak/272636-4-long.txt,N,Kentucky Fried Chicken,kentaki frajd czikin,kentucky|kentaki,OK,OK
+S20,Kacper Kubiak/272636-4-long.txt,N,Louisville,luiwil,louisville|lu[ij]w?il,OK,OK
+S20,Kacper Kubiak/272636-4-long.txt,D,20 marca 1930 roku,dwudziestego marca tysiąc dziewięćset trzydziestego roku,dwudziest\w* marca,OK,OK
+S20,Kacper Kubiak/272636-4-long.txt,N,PepsiCo,pepsiko,pepsi,OK,OK
+S20,Kacper Kubiak/272636-4-long.txt,N,Yum! Brands,jam brends,\byum\b|\bjam\b,BŁĄD?,BŁĄD?
+S20,Kacper Kubiak/272636-4-long.txt,D,w 1993 roku,w tysiąc dziewięćset dziewięćdziesiątym trzecim roku,dziewięćdziesiąt\w* trzeci\w* roku,OK,OK
+S20,Kacper Kubiak/272636-4-long.txt,D,17 listopada 1995,siedemnastego listopada ...,siedemnast\w* listopad,OK,OK
+S20,Kacper Kubiak/272636-4-long.txt,L,210 barów,dwieście dziesięć barów,dwieście dziesięć,OK,OK
+S20,Kacper Kubiak/272636-4-long.txt,L,„2 w 1”,dwa w jednym,dwa w jed,OK,OK
+S22,Andrzej Manderla/294692-5-unique-foreign.txt,L,WH-1000XM6,wu ha tysiąc iks em sześć,tysiąc|jeden zero zero zero,OK,BŁĄD?
+S22,Andrzej Manderla/294692-5-unique-foreign.txt,O,active noise cancelling,aktiw nojz kanselin,noise|nojz,OK,OK
+S22,Andrzej Manderla/294692-5-unique-foreign.txt,O,Bluetooth,blutut,bluetooth|blutut,OK,OK
+S22,Andrzej Manderla/294692-5-unique-foreign.txt,O,iPhone'em,ajfonem,iphone|ajfon,OK,OK
+S22,Andrzej Manderla/294692-5-unique-foreign.txt,O,MacBookiem,makbukiem,macbook|makbuk,OK,OK
+S22,Andrzej Manderla/294692-5-unique-foreign.txt,O,equalizer,ekwalajzer / ikłalajzer,equaliz|ekwal|ikwal,OK,OK
+S23,Kacper Kubiak/272636-5-unique-foreign.txt,O,Crème brûlée,krem brule,cr[eè]me|krem,OK,OK
+S23,Kacper Kubiak/272636-5-unique-foreign.txt,O,Piña Colada,pinia kolada,pi[nñ]i?a colad|pinia kolad|pina kolad,OK,OK
+S23,Kacper Kubiak/272636-5-unique-foreign.txt,O,barbeque,barbekju,barbe(cue|que|kju|kiu),OK,BŁĄD?
+S23,Kacper Kubiak/272636-5-unique-foreign.txt,O,Oui Oui,łi łi,\boui\b|łi łi|wi wi,BŁĄD?,BŁĄD?
+S23,Kacper Kubiak/272636-5-unique-foreign.txt,N,Coca Cola,koka kola,coca cola|koka kola,OK,OK
+S24,Wiktor Piekarski/272726-5-unique-foreign.txt,N,Peugeot 3008,peżo trzy tysiące osiem,peugeot|pe[żz]o,OK,BŁĄD?
+S24,Wiktor Piekarski/272726-5-unique-foreign.txt,L,3008,trzy tysiące osiem / trzy zero zero osiem,trzy tysiące osiem|trzy zero zero osiem|trzydzieści zero osiem,OK,OK
+S24,Wiktor Piekarski/272726-5-unique-foreign.txt,O,i-Cockpit,aj kokpit,cockpit|kokpit,OK,OK
+S24,Wiktor Piekarski/272726-5-unique-foreign.txt,O,Apple CarPlay,epl karplej,carplay|car play|karplej,OK,OK
+S24,Wiktor Piekarski/272726-5-unique-foreign.txt,N,Volkswagena Tiguana,folkswagena tiguana,tiguan,BŁĄD?,OK
+S24,Wiktor Piekarski/272726-5-unique-foreign.txt,N,Škodę Kodiaq,szkodę kodiak,kodiaq|kodiak,BŁĄD?,OK
+S24,Wiktor Piekarski/272726-5-unique-foreign.txt,N,Laurin & Klement,laurin i klement,laurin (i )?[kc]lement,OK,OK
+S25,Natalia Suda/294696-5-unique-foreign.txt,S,B2,be dwa,\bbe? dwa,OK,OK
+S25,Natalia Suda/294696-5-unique-foreign.txt,N,GitHub,githab,github|githab|gitchab,OK,OK
+S25,Natalia Suda/294696-5-unique-foreign.txt,O,Why should we hire you?,łaj szud łi hajer ju,why should we hire you,BŁĄD?,OK
+S26,Additional/add01-3-skroty.txt,S,ul.,ulicy,ulic,BŁĄD?,OK
+S26,Additional/add01-3-skroty.txt,S,pl.,placu,plac,OK,BŁĄD?
+S26,Additional/add01-3-skroty.txt,S,pn.–pt.,od poniedziałku do piątku,poniedział\w* do piąt,BŁĄD?,BŁĄD?
+S26,Additional/add01-3-skroty.txt,D,9:00–18:00,od dziewiątej do osiemnastej,dziewi\w* do osiemn\w*,BŁĄD?,BŁĄD?
+S26,Additional/add01-3-skroty.txt,S,sob.,w soboty,sobot,BŁĄD?,OK
+S26,Additional/add01-3-skroty.txt,S,dr inż.,doktor inżynier,doktor inżynier,OK,BŁĄD?
+S26,Additional/add01-3-skroty.txt,S,m.in.,między innymi,między innymi,OK,BŁĄD?
+S26,Additional/add01-3-skroty.txt,S,temp.,temperatury,temperatur,OK,BŁĄD?
+S26,Additional/add01-3-skroty.txt,S,CPU i GPU,ce pe u i gie pe u,\bcpu\b|ce pe u,BŁĄD?,BŁĄD?
+S26,Additional/add01-3-skroty.txt,S,ok.,około,około,OK,BŁĄD?
+S26,Additional/add01-3-skroty.txt,L,8 kg,osiem kilogramów,osiem kilogram,BŁĄD?,OK
+S26,Additional/add01-3-skroty.txt,S,tj.,to jest,to jest,BŁĄD?,BŁĄD?
+S26,Additional/add01-3-skroty.txt,S,np.,na przykład,na przykład,OK,BŁĄD?
+S26,Additional/add01-3-skroty.txt,S,itp.,i tym podobne,i tym podobne,OK,BŁĄD?
+S26,Additional/add01-3-skroty.txt,S,str. pd.,od strony południowej,stron\w* południow,BŁĄD?,BŁĄD?
+S27,Additional/add02-5-akronimy-nazwy.txt,N,BLIK-iem,blikiem,blik,OK,OK
+S27,Additional/add02-5-akronimy-nazwy.txt,S,PKO BP,pe ka o be pe,\bpko\b|pe ka o,OK,BŁĄD?
+S27,Additional/add02-5-akronimy-nazwy.txt,S,AMD,a em de,\bamd\b|a em de,OK,OK
+S27,Additional/add02-5-akronimy-nazwy.txt,L,7800X3D,siedem tysięcy osiemset iks trzy de,siedem tysięcy osiemset|siedemdziesiąt osiem,OK,OK
+S27,Additional/add02-5-akronimy-nazwy.txt,S,MSI,em es i,\bmsi\b|em es i,OK,OK
+S27,Additional/add02-5-akronimy-nazwy.txt,N,GeForce,dżifors,geforce|d[żz]ifors|ge force,BŁĄD?,OK
+S27,Additional/add02-5-akronimy-nazwy.txt,L,RTX 4070 Ti,er te iks czterdzieści siedemdziesiąt ti,(cztery tysiące|czterdzieści) siedemdziesiąt,OK,BŁĄD?
+S27,Additional/add02-5-akronimy-nazwy.txt,N,ASUS ROG Strix,asus rog striks,strix|striks,OK,OK
+S27,Additional/add02-5-akronimy-nazwy.txt,L,B650E-F,be sześćset pięćdziesiąt e ef,sześćset pięćdziesiąt,OK,OK
+S27,Additional/add02-5-akronimy-nazwy.txt,O,Wi-Fi 6E,łifi sześć e,wi ?fi|łi ?fi|waj ?faj,OK,OK
+S27,Additional/add02-5-akronimy-nazwy.txt,S,USB-C,u es be ce,\busb\b|u es be,OK,OK
+S27,Additional/add02-5-akronimy-nazwy.txt,S,HDMI 2.1,ha de em i dwa jeden,\bhdmi\b|ha de em i,OK,OK
+S27,Additional/add02-5-akronimy-nazwy.txt,S,SSD NVMe,es es de en wu em e,\bssd\b|es es de,OK,BŁĄD?
+S27,Additional/add02-5-akronimy-nazwy.txt,S,M.2,em dwa,\bm dwa|\bem dwa,OK,BŁĄD?
+S27,Additional/add02-5-akronimy-nazwy.txt,N,InPost,inpost,inpost|in post,OK,OK
+S27,Additional/add02-5-akronimy-nazwy.txt,S,DPD,de pe de,\bdpd\b|de pe de,OK,BŁĄD?
+S28,Additional/add03-3-duze-liczby.txt,L,943 492 412,dziewięćset czterdzieści trzy miliony czterysta dziewięćdziesiąt dwa tysiące czterysta dwanaście,dziewięćset czterdzieści trzy milion\w* czterysta dziewięćdziesiąt dwa tysi\w* czterysta dwanaście,OK,BŁĄD?
+S28,Additional/add03-3-duze-liczby.txt,L,43 436 324,czterdzieści trzy miliony czterysta trzydzieści sześć tysięcy trzysta dwadzieścia cztery,czterdzieści trzy milion\w* czterysta trzydzieści sześć tysi\w* trzysta dwadzieścia cztery,OK,OK
+S28,Additional/add03-3-duze-liczby.txt,L,16384,szesnaście tysięcy trzysta osiemdziesiąt cztery,szesnaście tysięcy trzysta osiemdziesiąt cztery,OK,OK
+S28,Additional/add03-3-duze-liczby.txt,L,21 760 000 000,dwadzieścia jeden miliardów siedemset sześćdziesiąt milionów,dwadzieścia jeden miliard,OK,BŁĄD?
+S28,Additional/add03-3-duze-liczby.txt,L,"5,7 GHz",pięć przecinek siedem gigaherca,pięć (przecinek|i) siedem giga,OK,BŁĄD?
+S28,Additional/add03-3-duze-liczby.txt,L,2 × 16 GB,dwa razy szesnaście gigabajtów,dwa razy szesnaście,OK,BŁĄD?
+S28,Additional/add03-3-duze-liczby.txt,L,6000 MHz,sześć tysięcy megaherców,sześć tysięcy mega,BŁĄD?,BŁĄD?
+S28,Additional/add03-3-duze-liczby.txt,L,"489,99 zł",czterysta osiemdziesiąt dziewięć złotych dziewięćdziesiąt dziewięć groszy,czterysta osiemdziesiąt dziewięć,OK,OK
+S28,Additional/add03-3-duze-liczby.txt,L,12 499 zł,dwanaście tysięcy czterysta dziewięćdziesiąt dziewięć złotych,dwanaście tysięcy czterysta dziewięćdziesiąt dziewięć,OK,BŁĄD?
+S29,Additional/add04-2-konotacja-intonacja.txt,W,tylko,tylko,\btylko\b,OK,OK
+S29,Additional/add04-2-konotacja-intonacja.txt,W,aż,aż,\baż\b,OK,OK
+S29,Additional/add04-2-konotacja-intonacja.txt,W,ledwo,ledwo,\bledwo\b,OK,OK
+S29,Additional/add04-2-konotacja-intonacja.txt,W,raczej nie polecam,raczej nie polecam,raczej nie polecam,OK,OK
+S29,Additional/add04-2-konotacja-intonacja.txt,W,Niestety,niestety,\bniestety\b,OK,OK
+S29,Additional/add04-2-konotacja-intonacja.txt,W,Na szczęście,na szczęście,na szczęście,OK,OK
+S30,Additional/add05-5-spolszczone.txt,O,upgrade'zie,apgrejdzie,upgrad|apgrejd|upgrejd,BŁĄD?,OK
+S30,Additional/add05-5-spolszczone.txt,S,RAM-u,ramu,\bram,OK,OK
+S30,Additional/add05-5-spolszczone.txt,S,BIOS-u,biosu / bajosu,\bbios|\bbajos,OK,OK
+S30,Additional/add05-5-spolszczone.txt,O,overclockingu,owerklokingu,overclock|owerklok,BŁĄD?,OK
+S30,Additional/add05-5-spolszczone.txt,N,Windowsa 11 Pro,łindołsa jedenaście pro,windows\w* jedenaście,OK,OK
+S30,Additional/add05-5-spolszczone.txt,O,streamowania,strimowania,stream|strim,BŁĄD?,OK
+S30,Additional/add05-5-spolszczone.txt,N,Twitchu,tłiczu,twitch|tłicz,BŁĄD?,BŁĄD?
+S30,Additional/add05-5-spolszczone.txt,N,YouTubie,jutubie,youtub|jutub,OK,OK
+S30,Additional/add05-5-spolszczone.txt,S,OBS-a,o be esa,\bobs|o be es,OK,OK
+S30,Additional/add05-5-spolszczone.txt,O,benchmarku,benczmarku,benchmark|benczmark,BŁĄD?,OK
+S30,Additional/add05-5-spolszczone.txt,N,Cinebench,sinebencz,cinebench|sinebencz|sinebench,BŁĄD?,OK
+S30,Additional/add05-5-spolszczone.txt,N,Cyberpunku 2077,sajberpanku dwa tysiące siedemdziesiąt siedem,(cyberpunk|cyberpank|sajberpank)\w* (dwa tysiące|dwadzieścia) siedemdziesiąt siedem,BŁĄD?,OK
+S30,Additional/add05-5-spolszczone.txt,S,DLSS-em,de el es esem,\bdlss|de el es es,OK,OK

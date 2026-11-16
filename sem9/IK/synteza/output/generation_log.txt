@@ -1,0 +1,384 @@
+
+[piper] załadowanie modelu: 1.083 s (CPU)
+rozgrzewka (poza pomiarami): 0.136 s
+
+=== piper: 160 plików, 3 pomiar(y) na plik ===
+[piper] Additional/add01-3-skroty.txt -> Additional-add01-3-skroty-piper.wav | 423 znaków | czas 1.060 s (min 1.003, max 1.121) | audio 40.65 s | RTF 0.026
+[piper] Additional/add02-5-akronimy-nazwy.txt -> Additional-add02-5-akronimy-nazwy-piper.wav | 321 znaków | czas 0.813 s (min 0.735, max 0.849) | audio 30.49 s | RTF 0.027
+[piper] Additional/add03-3-duze-liczby.txt -> Additional-add03-3-duze-liczby-piper.wav | 303 znaków | czas 1.015 s (min 0.987, max 1.016) | audio 38.87 s | RTF 0.026
+[piper] Additional/add04-2-konotacja-intonacja.txt -> Additional-add04-2-konotacja-intonacja-piper.wav | 314 znaków | czas 0.491 s (min 0.489, max 0.556) | audio 21.30 s | RTF 0.023
+[piper] Additional/add05-5-spolszczone.txt -> Additional-add05-5-spolszczone-piper.wav | 291 znaków | czas 0.543 s (min 0.475, max 0.593) | audio 21.90 s | RTF 0.025
+[piper] Aleksander Stepaniuk/272644-1-info.txt -> Aleksander Stepaniuk-272644-1-info-piper.wav | 70 znaków | czas 0.124 s (min 0.122, max 0.129) | audio 5.14 s | RTF 0.024
+[piper] Aleksander Stepaniuk/272644-2-qna.txt -> Aleksander Stepaniuk-272644-2-qna-piper.wav | 114 znaków | czas 0.184 s (min 0.176, max 0.221) | audio 7.35 s | RTF 0.025
+[piper] Aleksander Stepaniuk/272644-3-numbers.txt -> Aleksander Stepaniuk-272644-3-numbers-piper.wav | 106 znaków | czas 0.141 s (min 0.138, max 0.144) | audio 6.69 s | RTF 0.021
+[piper] Aleksander Stepaniuk/272644-4-long.txt -> Aleksander Stepaniuk-272644-4-long-piper.wav | 184 znaków | czas 0.261 s (min 0.256, max 0.267) | audio 12.18 s | RTF 0.021
+[piper] Aleksander Stepaniuk/272644-5-unique-foreign.txt -> Aleksander Stepaniuk-272644-5-unique-foreign-piper.wav | 109 znaków | czas 0.143 s (min 0.128, max 0.156) | audio 6.57 s | RTF 0.022
+[piper] Andrzej Manderla/294692-1-info.txt -> Andrzej Manderla-294692-1-info-piper.wav | 130 znaków | czas 0.189 s (min 0.181, max 0.207) | audio 9.01 s | RTF 0.021
+[piper] Andrzej Manderla/294692-2-qna.txt -> Andrzej Manderla-294692-2-qna-piper.wav | 126 znaków | czas 0.192 s (min 0.178, max 0.234) | audio 8.67 s | RTF 0.022
+[piper] Andrzej Manderla/294692-3-numbers.txt -> Andrzej Manderla-294692-3-numbers-piper.wav | 152 znaków | czas 0.434 s (min 0.406, max 0.471) | audio 18.33 s | RTF 0.024
+[piper] Andrzej Manderla/294692-4-long.txt -> Andrzej Manderla-294692-4-long-piper.wav | 345 znaków | czas 0.532 s (min 0.442, max 0.570) | audio 20.72 s | RTF 0.026
+[piper] Andrzej Manderla/294692-5-unique-foreign.txt -> Andrzej Manderla-294692-5-unique-foreign-piper.wav | 209 znaków | czas 0.396 s (min 0.394, max 0.407) | audio 14.68 s | RTF 0.027
+[piper] Dariusz Szypka/272678-1-info.txt -> Dariusz Szypka-272678-1-info-piper.wav | 91 znaków | czas 0.177 s (min 0.172, max 0.245) | audio 7.11 s | RTF 0.025
+[piper] Dariusz Szypka/272678-2-qna.txt -> Dariusz Szypka-272678-2-qna-piper.wav | 145 znaków | czas 0.283 s (min 0.264, max 0.409) | audio 9.98 s | RTF 0.028
+[piper] Dariusz Szypka/272678-3-numbers.txt -> Dariusz Szypka-272678-3-numbers-piper.wav | 145 znaków | czas 0.330 s (min 0.288, max 0.343) | audio 13.71 s | RTF 0.024
+[piper] Dariusz Szypka/272678-4-long.txt -> Dariusz Szypka-272678-4-long-piper.wav | 191 znaków | czas 0.299 s (min 0.280, max 0.317) | audio 12.90 s | RTF 0.023
+[piper] Dariusz Szypka/272678-5-unique-foreign.txt -> Dariusz Szypka-272678-5-unique-foreign-piper.wav | 115 znaków | czas 0.170 s (min 0.166, max 0.178) | audio 7.85 s | RTF 0.022
+[piper] Hubert Tański/272326-1-info.txt -> Hubert Tański-272326-1-info-piper.wav | 97 znaków | czas 0.211 s (min 0.177, max 0.217) | audio 6.97 s | RTF 0.030
+[piper] Hubert Tański/272326-2-qna.txt -> Hubert Tański-272326-2-qna-piper.wav | 112 znaków | czas 0.160 s (min 0.146, max 0.166) | audio 6.59 s | RTF 0.024
+[piper] Hubert Tański/272326-3-numbers.txt -> Hubert Tański-272326-3-numbers-piper.wav | 88 znaków | czas 0.217 s (min 0.214, max 0.236) | audio 9.40 s | RTF 0.023
+[piper] Hubert Tański/272326-4-long.txt -> Hubert Tański-272326-4-long-piper.wav | 196 znaków | czas 0.271 s (min 0.258, max 0.275) | audio 11.53 s | RTF 0.024
+[piper] Hubert Tański/272326-5-unique-foreign.txt -> Hubert Tański-272326-5-unique-foreign-piper.wav | 86 znaków | czas 0.154 s (min 0.141, max 0.169) | audio 5.68 s | RTF 0.027
+[piper] Igor Wojtun/272652-1-info.txt -> Igor Wojtun-272652-1-info-piper.wav | 157 znaków | czas 0.233 s (min 0.230, max 0.240) | audio 9.45 s | RTF 0.025
+[piper] Igor Wojtun/272652-2-qna.txt -> Igor Wojtun-272652-2-qna-piper.wav | 182 znaków | czas 0.374 s (min 0.357, max 0.386) | audio 13.64 s | RTF 0.027
+[piper] Igor Wojtun/272652-3-numbers.txt -> Igor Wojtun-272652-3-numbers-piper.wav | 178 znaków | czas 0.506 s (min 0.487, max 0.517) | audio 19.88 s | RTF 0.025
+[piper] Igor Wojtun/272652-4-long.txt -> Igor Wojtun-272652-4-long-piper.wav | 323 znaków | czas 0.468 s (min 0.452, max 0.495) | audio 19.47 s | RTF 0.024
+[piper] Igor Wojtun/272652-5-unique-foreign.txt -> Igor Wojtun-272652-5-unique-foreign-piper.wav | 254 znaków | czas 0.494 s (min 0.462, max 0.498) | audio 18.83 s | RTF 0.026
+[piper] Jakub Borsuk/272646-1-info.txt -> Jakub Borsuk-272646-1-info-piper.wav | 184 znaków | czas 0.396 s (min 0.394, max 0.397) | audio 13.83 s | RTF 0.029
+[piper] Jakub Borsuk/272646-2-qna.txt -> Jakub Borsuk-272646-2-qna-piper.wav | 206 znaków | czas 0.388 s (min 0.367, max 0.408) | audio 14.26 s | RTF 0.027
+[piper] Jakub Borsuk/272646-3-numbers.txt -> Jakub Borsuk-272646-3-numbers-piper.wav | 224 znaków | czas 0.594 s (min 0.553, max 0.602) | audio 22.83 s | RTF 0.026
+[piper] Jakub Borsuk/272646-4-long.txt -> Jakub Borsuk-272646-4-long-piper.wav | 326 znaków | czas 0.539 s (min 0.530, max 0.565) | audio 20.62 s | RTF 0.026
+[piper] Jakub Borsuk/272646-5-unique-foreign.txt -> Jakub Borsuk-272646-5-unique-foreign-piper.wav | 179 znaków | czas 0.373 s (min 0.297, max 0.376) | audio 12.67 s | RTF 0.029
+[piper] Jakub Śliwka/272649-1-info.txt_ -> Jakub Śliwka-272649-1-info-piper.wav | 94 znaków | czas 0.172 s (min 0.172, max 0.174) | audio 7.36 s | RTF 0.023
+[piper] Jakub Śliwka/272649-2-qna.txt -> Jakub Śliwka-272649-2-qna-piper.wav | 102 znaków | czas 0.211 s (min 0.201, max 0.225) | audio 7.85 s | RTF 0.027
+[piper] Jakub Śliwka/272649-3-numbers.txt -> Jakub Śliwka-272649-3-numbers-piper.wav | 78 znaków | czas 0.213 s (min 0.168, max 0.214) | audio 7.47 s | RTF 0.029
+[piper] Jakub Śliwka/272649-4-long.txt -> Jakub Śliwka-272649-4-long-piper.wav | 240 znaków | czas 0.431 s (min 0.414, max 0.476) | audio 16.40 s | RTF 0.026
+[piper] Jakub Śliwka/272649-5-unique-foreign.txt -> Jakub Śliwka-272649-5-unique-foreign-piper.wav | 93 znaków | czas 0.180 s (min 0.168, max 0.217) | audio 6.21 s | RTF 0.029
+[piper] Jan Powęski/272648-1-info.txt -> Jan Powęski-272648-1-info-piper.wav | 105 znaków | czas 0.181 s (min 0.155, max 0.212) | audio 6.46 s | RTF 0.028
+[piper] Jan Powęski/272648-2-qna.txt -> Jan Powęski-272648-2-qna-piper.wav | 174 znaków | czas 0.301 s (min 0.285, max 0.310) | audio 11.76 s | RTF 0.026
+[piper] Jan Powęski/272648-3-numbers.txt -> Jan Powęski-272648-3-numbers-piper.wav | 146 znaków | czas 0.291 s (min 0.272, max 0.309) | audio 10.94 s | RTF 0.027
+[piper] Jan Powęski/272648-4-long.txt -> Jan Powęski-272648-4-long-piper.wav | 700 znaków | czas 1.177 s (min 1.110, max 1.266) | audio 43.31 s | RTF 0.027
+[piper] Jan Powęski/272648-5-unique-foreign.txt -> Jan Powęski-272648-5-unique-foreign-piper.wav | 307 znaków | czas 0.549 s (min 0.538, max 0.690) | audio 19.67 s | RTF 0.028
+[piper] Julia Kroczek/266853-1-info.txt -> Julia Kroczek-266853-1-info-piper.wav | 185 znaków | czas 0.361 s (min 0.359, max 0.381) | audio 14.54 s | RTF 0.025
+[piper] Julia Kroczek/266853-2-qna.txt -> Julia Kroczek-266853-2-qna-piper.wav | 208 znaków | czas 0.495 s (min 0.475, max 0.509) | audio 19.90 s | RTF 0.025
+[piper] Julia Kroczek/266853-3-numbers.txt -> Julia Kroczek-266853-3-numbers-piper.wav | 317 znaków | czas 1.262 s (min 1.186, max 1.287) | audio 48.45 s | RTF 0.026
+[piper] Julia Kroczek/266853-4-long.txt -> Julia Kroczek-266853-4-long-piper.wav | 310 znaków | czas 0.727 s (min 0.704, max 0.734) | audio 29.68 s | RTF 0.024
+[piper] Julia Kroczek/266853-5-unique-foreign.txt -> Julia Kroczek-266853-5-unique-foreign-piper.wav | 373 znaków | czas 0.980 s (min 0.926, max 1.041) | audio 36.49 s | RTF 0.027
+[piper] Kacper Kawecki/272663-1-info.txt -> Kacper Kawecki-272663-1-info-piper.wav | 85 znaków | czas 0.171 s (min 0.159, max 0.182) | audio 6.55 s | RTF 0.026
+[piper] Kacper Kawecki/272663-2-qna.txt -> Kacper Kawecki-272663-2-qna-piper.wav | 104 znaków | czas 0.194 s (min 0.172, max 0.259) | audio 7.91 s | RTF 0.025
+[piper] Kacper Kawecki/272663-3-numbers.txt -> Kacper Kawecki-272663-3-numbers-piper.wav | 111 znaków | czas 0.203 s (min 0.197, max 0.250) | audio 9.66 s | RTF 0.021
+[piper] Kacper Kawecki/272663-4-long.txt -> Kacper Kawecki-272663-4-long-piper.wav | 196 znaków | czas 0.290 s (min 0.266, max 0.325) | audio 13.36 s | RTF 0.022
+[piper] Kacper Kawecki/272663-5-unique-foreign.txt -> Kacper Kawecki-272663-5-unique-foreign-piper.wav | 94 znaków | czas 0.176 s (min 0.164, max 0.179) | audio 7.86 s | RTF 0.022
+[piper] Kacper Kubiak/272636-1-info.txt -> Kacper Kubiak-272636-1-info-piper.wav | 181 znaków | czas 0.327 s (min 0.270, max 0.364) | audio 13.29 s | RTF 0.025
+[piper] Kacper Kubiak/272636-2-qna.txt -> Kacper Kubiak-272636-2-qna-piper.wav | 241 znaków | czas 0.398 s (min 0.385, max 0.444) | audio 16.79 s | RTF 0.024
+[piper] Kacper Kubiak/272636-3-numbers.txt -> Kacper Kubiak-272636-3-numbers-piper.wav | 293 znaków | czas 0.681 s (min 0.614, max 0.707) | audio 27.95 s | RTF 0.024
+[piper] Kacper Kubiak/272636-4-long.txt -> Kacper Kubiak-272636-4-long-piper.wav | 869 znaków | czas 1.366 s (min 1.350, max 1.432) | audio 58.96 s | RTF 0.023
+[piper] Kacper Kubiak/272636-5-unique-foreign.txt -> Kacper Kubiak-272636-5-unique-foreign-piper.wav | 219 znaków | czas 0.390 s (min 0.348, max 0.399) | audio 16.57 s | RTF 0.024
+[piper] Kacper Tomczyk/272650-1-info.txt -> Kacper Tomczyk-272650-1-info-piper.wav | 92 znaków | czas 0.189 s (min 0.177, max 0.191) | audio 6.93 s | RTF 0.027
+[piper] Kacper Tomczyk/272650-2-qna.txt -> Kacper Tomczyk-272650-2-qna-piper.wav | 100 znaków | czas 0.152 s (min 0.144, max 0.169) | audio 6.28 s | RTF 0.024
+[piper] Kacper Tomczyk/272650-3-numbers.txt -> Kacper Tomczyk-272650-3-numbers-piper.wav | 78 znaków | czas 0.263 s (min 0.231, max 0.285) | audio 10.79 s | RTF 0.024
+[piper] Kacper Tomczyk/272650-4-long.txt -> Kacper Tomczyk-272650-4-long-piper.wav | 194 znaków | czas 0.285 s (min 0.272, max 0.360) | audio 10.47 s | RTF 0.027
+[piper] Kacper Tomczyk/272650-5-unique-foreign.txt -> Kacper Tomczyk-272650-5-unique-foreign-piper.wav | 74 znaków | czas 0.133 s (min 0.132, max 0.151) | audio 5.13 s | RTF 0.026
+[piper] Karol Zając/276263-1-info.txt -> Karol Zając-276263-1-info-piper.wav | 82 znaków | czas 0.165 s (min 0.156, max 0.175) | audio 6.14 s | RTF 0.027
+[piper] Karol Zając/276263-2-qna.txt -> Karol Zając-276263-2-qna-piper.wav | 79 znaków | czas 0.127 s (min 0.105, max 0.155) | audio 4.76 s | RTF 0.027
+[piper] Karol Zając/276263-3-numbers.txt -> Karol Zając-276263-3-numbers-piper.wav | 107 znaków | czas 0.307 s (min 0.268, max 0.364) | audio 12.88 s | RTF 0.024
+[piper] Karol Zając/276263-4-long.txt -> Karol Zając-276263-4-long-piper.wav | 175 znaków | czas 0.288 s (min 0.252, max 0.344) | audio 10.99 s | RTF 0.026
+[piper] Karol Zając/276263-5-unique-foreign.txt -> Karol Zając-276263-5-unique-foreign-piper.wav | 75 znaków | czas 0.119 s (min 0.119, max 0.128) | audio 5.05 s | RTF 0.024
+[piper] Leszek Kryzar/266877-1-info.txt -> Leszek Kryzar-266877-1-info-piper.wav | 81 znaków | czas 0.182 s (min 0.144, max 0.187) | audio 5.74 s | RTF 0.032
+[piper] Leszek Kryzar/266877-2-qna.txt -> Leszek Kryzar-266877-2-qna-piper.wav | 137 znaków | czas 0.269 s (min 0.222, max 0.295) | audio 9.11 s | RTF 0.030
+[piper] Leszek Kryzar/266877-3-numbers.txt -> Leszek Kryzar-266877-3-numbers-piper.wav | 170 znaków | czas 0.551 s (min 0.475, max 0.603) | audio 20.76 s | RTF 0.027
+[piper] Leszek Kryzar/266877-4-long.txt -> Leszek Kryzar-266877-4-long-piper.wav | 310 znaków | czas 0.427 s (min 0.421, max 0.443) | audio 17.35 s | RTF 0.025
+[piper] Leszek Kryzar/266877-5-unique-foreign.txt -> Leszek Kryzar-266877-5-unique-foreign-piper.wav | 180 znaków | czas 0.345 s (min 0.314, max 0.349) | audio 12.00 s | RTF 0.029
+[piper] Marcin Borkowski/272974-1-info.txt -> Marcin Borkowski-272974-1-info-piper.wav | 97 znaków | czas 0.216 s (min 0.152, max 0.218) | audio 7.04 s | RTF 0.031
+[piper] Marcin Borkowski/272974-2-qna.txt -> Marcin Borkowski-272974-2-qna-piper.wav | 107 znaków | czas 0.181 s (min 0.181, max 0.207) | audio 7.63 s | RTF 0.024
+[piper] Marcin Borkowski/272974-3-numbers.txt -> Marcin Borkowski-272974-3-numbers-piper.wav | 135 znaków | czas 0.473 s (min 0.429, max 0.510) | audio 17.89 s | RTF 0.026
+[piper] Marcin Borkowski/272974-4-long.txt -> Marcin Borkowski-272974-4-long-piper.wav | 261 znaków | czas 0.408 s (min 0.397, max 0.410) | audio 16.37 s | RTF 0.025
+[piper] Marcin Borkowski/272974-5-unique-foreign.txt -> Marcin Borkowski-272974-5-unique-foreign-piper.wav | 178 znaków | czas 0.304 s (min 0.302, max 0.430) | audio 11.51 s | RTF 0.026
+[piper] Marcin Goliasz/273185-1-info.txt -> Marcin Goliasz-273185-1-info-piper.wav | 103 znaków | czas 0.162 s (min 0.151, max 0.211) | audio 6.61 s | RTF 0.025
+[piper] Marcin Goliasz/273185-2-qna.txt -> Marcin Goliasz-273185-2-qna-piper.wav | 239 znaków | czas 0.403 s (min 0.344, max 0.426) | audio 15.13 s | RTF 0.027
+[piper] Marcin Goliasz/273185-3-numbers.txt -> Marcin Goliasz-273185-3-numbers-piper.wav | 184 znaków | czas 0.343 s (min 0.289, max 0.364) | audio 11.17 s | RTF 0.031
+[piper] Marcin Goliasz/273185-4-long.txt -> Marcin Goliasz-273185-4-long-piper.wav | 385 znaków | czas 0.586 s (min 0.574, max 0.614) | audio 22.21 s | RTF 0.026
+[piper] Marcin Goliasz/273185-5-unique-foreign.txt -> Marcin Goliasz-273185-5-unique-foreign-piper.wav | 260 znaków | czas 0.435 s (min 0.425, max 0.436) | audio 16.21 s | RTF 0.027
+[piper] Mateusz Dejewski/272691-1-info.txt -> Mateusz Dejewski-272691-1-info-piper.wav | 76 znaków | czas 0.127 s (min 0.127, max 0.143) | audio 5.57 s | RTF 0.023
+[piper] Mateusz Dejewski/272691-2-qna.txt -> Mateusz Dejewski-272691-2-qna-piper.wav | 122 znaków | czas 0.195 s (min 0.160, max 0.209) | audio 8.09 s | RTF 0.024
+[piper] Mateusz Dejewski/272691-3-numbers.txt -> Mateusz Dejewski-272691-3-numbers-piper.wav | 187 znaków | czas 0.530 s (min 0.503, max 0.646) | audio 19.85 s | RTF 0.027
+[piper] Mateusz Dejewski/272691-4-long.txt -> Mateusz Dejewski-272691-4-long-piper.wav | 501 znaków | czas 0.871 s (min 0.826, max 1.058) | audio 34.56 s | RTF 0.025
+[piper] Mateusz Dejewski/272691-5-unique-foreign.txt -> Mateusz Dejewski-272691-5-unique-foreign-piper.wav | 263 znaków | czas 0.450 s (min 0.385, max 0.503) | audio 17.15 s | RTF 0.026
+[piper] Mateusz Gawłowski/264463-1-info.txt -> Mateusz Gawłowski-264463-1-info-piper.wav | 133 znaków | czas 0.214 s (min 0.211, max 0.286) | audio 9.08 s | RTF 0.024
+[piper] Mateusz Gawłowski/264463-2-qna.txt -> Mateusz Gawłowski-264463-2-qna-piper.wav | 179 znaków | czas 0.313 s (min 0.301, max 0.328) | audio 11.91 s | RTF 0.026
+[piper] Mateusz Gawłowski/264463-3-numbers.txt -> Mateusz Gawłowski-264463-3-numbers-piper.wav | 203 znaków | czas 0.612 s (min 0.560, max 0.744) | audio 23.01 s | RTF 0.027
+[piper] Mateusz Gawłowski/264463-4-long.txt -> Mateusz Gawłowski-264463-4-long-piper.wav | 371 znaków | czas 0.661 s (min 0.659, max 0.702) | audio 24.18 s | RTF 0.027
+[piper] Mateusz Gawłowski/264463-5-unique-foreign.txt -> Mateusz Gawłowski-264463-5-unique-foreign-piper.wav | 241 znaków | czas 0.465 s (min 0.461, max 0.471) | audio 18.23 s | RTF 0.026
+[piper] Michał Sosnowski/272642-1-info.txt -> Michał Sosnowski-272642-1-info-piper.wav | 168 znaków | czas 0.287 s (min 0.286, max 0.313) | audio 10.86 s | RTF 0.026
+[piper] Michał Sosnowski/272642-2-qna.txt -> Michał Sosnowski-272642-2-qna-piper.wav | 190 znaków | czas 0.298 s (min 0.273, max 0.310) | audio 11.89 s | RTF 0.025
+[piper] Michał Sosnowski/272642-3-numbers.txt -> Michał Sosnowski-272642-3-numbers-piper.wav | 208 znaków | czas 0.538 s (min 0.504, max 0.547) | audio 20.45 s | RTF 0.026
+[piper] Michał Sosnowski/272642-4-long.txt -> Michał Sosnowski-272642-4-long-piper.wav | 250 znaków | czas 0.433 s (min 0.428, max 0.440) | audio 15.67 s | RTF 0.028
+[piper] Michał Sosnowski/272642-5-unique-foreign.txt -> Michał Sosnowski-272642-5-unique-foreign-piper.wav | 222 znaków | czas 0.399 s (min 0.363, max 0.416) | audio 15.42 s | RTF 0.026
+[piper] Michał Wąsiński/272674-1-info.txt -> Michał Wąsiński-272674-1-info-piper.wav | 78 znaków | czas 0.141 s (min 0.139, max 0.177) | audio 5.72 s | RTF 0.025
+[piper] Michał Wąsiński/272674-2-qna.txt -> Michał Wąsiński-272674-2-qna-piper.wav | 97 znaków | czas 0.165 s (min 0.131, max 0.176) | audio 6.15 s | RTF 0.027
+[piper] Michał Wąsiński/272674-3-numbers.txt -> Michał Wąsiński-272674-3-numbers-piper.wav | 252 znaków | czas 0.513 s (min 0.510, max 0.538) | audio 21.04 s | RTF 0.024
+[piper] Michał Wąsiński/272674-4-long.txt -> Michał Wąsiński-272674-4-long-piper.wav | 982 znaków | czas 1.526 s (min 1.427, max 1.560) | audio 57.33 s | RTF 0.027
+[piper] Michał Wąsiński/272674-5-unique-foreign.txt -> Michał Wąsiński-272674-5-unique-foreign-piper.wav | 420 znaków | czas 0.900 s (min 0.813, max 0.903) | audio 27.72 s | RTF 0.032
+[piper] Mieszko Szczekla/272688-1-info.txt -> Mieszko Szczekla-272688-1-info-piper.wav | 61 znaków | czas 0.243 s (min 0.192, max 0.308) | audio 4.79 s | RTF 0.051
+[piper] Mieszko Szczekla/272688-2-qna.txt -> Mieszko Szczekla-272688-2-qna-piper.wav | 96 znaków | czas 0.252 s (min 0.201, max 0.331) | audio 6.61 s | RTF 0.038
+[piper] Mieszko Szczekla/272688-3-numbers.txt -> Mieszko Szczekla-272688-3-numbers-piper.wav | 86 znaków | czas 0.122 s (min 0.114, max 0.144) | audio 4.41 s | RTF 0.028
+[piper] Mieszko Szczekla/272688-4-long.txt -> Mieszko Szczekla-272688-4-long-piper.wav | 169 znaków | czas 0.272 s (min 0.264, max 0.281) | audio 10.01 s | RTF 0.027
+[piper] Mieszko Szczekla/272688-5-unique-foreign.txt -> Mieszko Szczekla-272688-5-unique-foreign-piper.wav | 109 znaków | czas 0.202 s (min 0.190, max 0.220) | audio 7.56 s | RTF 0.027
+[piper] Myroslav Hryniuka/294863-1-info.txt -> Myroslav Hryniuka-294863-1-info-piper.wav | 83 znaków | czas 0.209 s (min 0.176, max 0.210) | audio 6.49 s | RTF 0.032
+[piper] Myroslav Hryniuka/294863-2-qna.txt -> Myroslav Hryniuka-294863-2-qna-piper.wav | 104 znaków | czas 0.206 s (min 0.189, max 0.262) | audio 8.06 s | RTF 0.026
+[piper] Myroslav Hryniuka/294863-3-numbers.txt -> Myroslav Hryniuka-294863-3-numbers-piper.wav | 82 znaków | czas 0.370 s (min 0.339, max 0.390) | audio 12.74 s | RTF 0.029
+[piper] Myroslav Hryniuka/294863-4-long.txt -> Myroslav Hryniuka-294863-4-long-piper.wav | 156 znaków | czas 0.262 s (min 0.228, max 0.267) | audio 9.67 s | RTF 0.027
+[piper] Myroslav Hryniuka/294863-5-unique-foreign.txt -> Myroslav Hryniuka-294863-5-unique-foreign-piper.wav | 169 znaków | czas 0.293 s (min 0.291, max 0.305) | audio 10.87 s | RTF 0.027
+[piper] Natalia Malinowska/272669-1-info.txt -> Natalia Malinowska-272669-1-info-piper.wav | 89 znaków | czas 0.188 s (min 0.154, max 0.190) | audio 6.10 s | RTF 0.031
+[piper] Natalia Malinowska/272669-2-qna.txt -> Natalia Malinowska-272669-2-qna-piper.wav | 68 znaków | czas 0.156 s (min 0.137, max 0.179) | audio 5.71 s | RTF 0.027
+[piper] Natalia Malinowska/272669-3-numbers.txt -> Natalia Malinowska-272669-3-numbers-piper.wav | 134 znaków | czas 0.233 s (min 0.214, max 0.275) | audio 8.49 s | RTF 0.027
+[piper] Natalia Malinowska/272669-4-long.txt -> Natalia Malinowska-272669-4-long-piper.wav | 228 znaków | czas 0.362 s (min 0.352, max 0.380) | audio 13.87 s | RTF 0.026
+[piper] Natalia Malinowska/272669-5-unique-foreign.txt -> Natalia Malinowska-272669-5-unique-foreign-piper.wav | 179 znaków | czas 0.282 s (min 0.268, max 0.351) | audio 12.16 s | RTF 0.023
+[piper] Natalia Marszałek/272683-1-info.txt -> Natalia Marszałek-272683-1-info-piper.wav | 172 znaków | czas 0.345 s (min 0.311, max 0.358) | audio 12.69 s | RTF 0.027
+[piper] Natalia Marszałek/272683-2-qna.txt -> Natalia Marszałek-272683-2-qna-piper.wav | 175 znaków | czas 0.270 s (min 0.249, max 0.315) | audio 10.67 s | RTF 0.025
+[piper] Natalia Marszałek/272683-3-numbers.txt -> Natalia Marszałek-272683-3-numbers-piper.wav | 217 znaków | czas 0.527 s (min 0.406, max 0.559) | audio 19.70 s | RTF 0.027
+[piper] Natalia Marszałek/272683-4-long.txt -> Natalia Marszałek-272683-4-long-piper.wav | 272 znaków | czas 0.470 s (min 0.430, max 0.508) | audio 16.42 s | RTF 0.029
+[piper] Natalia Marszałek/272683-5-unique-foreign.txt -> Natalia Marszałek-272683-5-unique-foreign-piper.wav | 218 znaków | czas 0.456 s (min 0.374, max 0.542) | audio 14.62 s | RTF 0.031
+[piper] Natalia Suda/294696-1-info.txt -> Natalia Suda-294696-1-info-piper.wav | 197 znaków | czas 0.328 s (min 0.315, max 0.354) | audio 13.11 s | RTF 0.025
+[piper] Natalia Suda/294696-2-qna.txt -> Natalia Suda-294696-2-qna-piper.wav | 116 znaków | czas 0.209 s (min 0.203, max 0.254) | audio 7.52 s | RTF 0.028
+[piper] Natalia Suda/294696-3-numbers.txt -> Natalia Suda-294696-3-numbers-piper.wav | 205 znaków | czas 0.402 s (min 0.381, max 0.564) | audio 15.87 s | RTF 0.025
+[piper] Natalia Suda/294696-4-long.txt -> Natalia Suda-294696-4-long-piper.wav | 352 znaków | czas 0.679 s (min 0.627, max 0.680) | audio 23.16 s | RTF 0.029
+[piper] Natalia Suda/294696-5-unique-foreign.txt -> Natalia Suda-294696-5-unique-foreign-piper.wav | 320 znaków | czas 0.548 s (min 0.526, max 0.578) | audio 20.99 s | RTF 0.026
+[piper] Piotr Bogacki/272753-1-info.txt -> Piotr Bogacki-272753-1-info-piper.wav | 94 znaków | czas 0.169 s (min 0.165, max 0.195) | audio 6.50 s | RTF 0.026
+[piper] Piotr Bogacki/272753-2-qna.txt -> Piotr Bogacki-272753-2-qna-piper.wav | 134 znaków | czas 0.251 s (min 0.232, max 0.286) | audio 10.18 s | RTF 0.025
+[piper] Piotr Bogacki/272753-3-numbers.txt -> Piotr Bogacki-272753-3-numbers-piper.wav | 157 znaków | czas 0.360 s (min 0.358, max 0.367) | audio 15.07 s | RTF 0.024
+[piper] Piotr Bogacki/272753-4-long.txt -> Piotr Bogacki-272753-4-long-piper.wav | 223 znaków | czas 0.300 s (min 0.297, max 0.375) | audio 12.18 s | RTF 0.025
+[piper] Piotr Bogacki/272753-5-unique-foreign.txt -> Piotr Bogacki-272753-5-unique-foreign-piper.wav | 144 znaków | czas 0.248 s (min 0.231, max 0.318) | audio 10.19 s | RTF 0.024
+[piper] Piotr Strycharczyk/272995-1-info.txt -> Piotr Strycharczyk-272995-1-info-piper.wav | 128 znaków | czas 0.266 s (min 0.236, max 0.328) | audio 10.18 s | RTF 0.026
+[piper] Piotr Strycharczyk/272995-2-qna.txt -> Piotr Strycharczyk-272995-2-qna-piper.wav | 139 znaków | czas 0.252 s (min 0.237, max 0.269) | audio 9.35 s | RTF 0.027
+[piper] Piotr Strycharczyk/272995-3-numbers.txt -> Piotr Strycharczyk-272995-3-numbers-piper.wav | 151 znaków | czas 0.560 s (min 0.485, max 0.563) | audio 20.04 s | RTF 0.028
+[piper] Piotr Strycharczyk/272995-4-long.txt -> Piotr Strycharczyk-272995-4-long-piper.wav | 234 znaków | czas 0.387 s (min 0.332, max 0.390) | audio 14.23 s | RTF 0.027
+[piper] Piotr Strycharczyk/272995-5-unique-foreign.txt -> Piotr Strycharczyk-272995-5-unique-foreign-piper.wav | 197 znaków | czas 0.308 s (min 0.307, max 0.324) | audio 13.17 s | RTF 0.023
+[piper] Wiktor Kubera/266539-1-info.txt -> Wiktor Kubera-266539-1-info-piper.wav | 103 znaków | czas 0.186 s (min 0.157, max 0.224) | audio 6.84 s | RTF 0.027
+[piper] Wiktor Kubera/266539-2-qna.txt -> Wiktor Kubera-266539-2-qna-piper.wav | 172 znaków | czas 0.296 s (min 0.292, max 0.328) | audio 11.15 s | RTF 0.027
+[piper] Wiktor Kubera/266539-3-numbers.txt -> Wiktor Kubera-266539-3-numbers-piper.wav | 142 znaków | czas 0.667 s (min 0.638, max 0.700) | audio 25.45 s | RTF 0.026
+[piper] Wiktor Kubera/266539-4-long.txt -> Wiktor Kubera-266539-4-long-piper.wav | 307 znaków | czas 0.563 s (min 0.454, max 0.584) | audio 18.00 s | RTF 0.031
+[piper] Wiktor Kubera/266539-5-unique-foreign.txt -> Wiktor Kubera-266539-5-unique-foreign-piper.wav | 159 znaków | czas 0.336 s (min 0.333, max 0.337) | audio 10.80 s | RTF 0.031
+[piper] Wiktor Piekarski/272726-1-info.txt -> Wiktor Piekarski-272726-1-info-piper.wav | 133 znaków | czas 0.233 s (min 0.231, max 0.318) | audio 10.03 s | RTF 0.023
+[piper] Wiktor Piekarski/272726-2-qna.txt -> Wiktor Piekarski-272726-2-qna-piper.wav | 178 znaków | czas 0.320 s (min 0.294, max 0.356) | audio 12.41 s | RTF 0.026
+[piper] Wiktor Piekarski/272726-3-numbers.txt -> Wiktor Piekarski-272726-3-numbers-piper.wav | 169 znaków | czas 0.493 s (min 0.463, max 0.606) | audio 18.92 s | RTF 0.026
+[piper] Wiktor Piekarski/272726-4-long.txt -> Wiktor Piekarski-272726-4-long-piper.wav | 341 znaków | czas 0.530 s (min 0.505, max 0.534) | audio 20.40 s | RTF 0.026
+[piper] Wiktor Piekarski/272726-5-unique-foreign.txt -> Wiktor Piekarski-272726-5-unique-foreign-piper.wav | 215 znaków | czas 0.464 s (min 0.424, max 0.667) | audio 15.30 s | RTF 0.030
+[piper] Wojciech Krzos/276264-1-info.txt -> Wojciech Krzos-276264-1-info-piper.wav | 76 znaków | czas 0.160 s (min 0.154, max 0.185) | audio 5.69 s | RTF 0.028
+[piper] Wojciech Krzos/276264-2-qna.txt -> Wojciech Krzos-276264-2-qna-piper.wav | 79 znaków | czas 0.198 s (min 0.192, max 0.246) | audio 5.78 s | RTF 0.034
+[piper] Wojciech Krzos/276264-3-numbers.txt -> Wojciech Krzos-276264-3-numbers-piper.wav | 171 znaków | czas 0.375 s (min 0.324, max 0.516) | audio 10.73 s | RTF 0.035
+[piper] Wojciech Krzos/276264-4-long.txt -> Wojciech Krzos-276264-4-long-piper.wav | 219 znaków | czas 0.367 s (min 0.331, max 0.376) | audio 13.89 s | RTF 0.026
+[piper] Wojciech Krzos/276264-5-unique-foreign.txt -> Wojciech Krzos-276264-5-unique-foreign-piper.wav | 173 znaków | czas 0.332 s (min 0.230, max 0.368) | audio 11.28 s | RTF 0.029
+[piper] Yevhenii Lukianenko/294861-1-info.txt -> Yevhenii Lukianenko-294861-1-info-piper.wav | 79 znaków | czas 0.238 s (min 0.205, max 0.314) | audio 6.90 s | RTF 0.035
+[piper] Yevhenii Lukianenko/294861-2-qna.txt -> Yevhenii Lukianenko-294861-2-qna-piper.wav | 108 znaków | czas 0.206 s (min 0.191, max 0.327) | audio 8.05 s | RTF 0.026
+[piper] Yevhenii Lukianenko/294861-3-numbers.txt -> Yevhenii Lukianenko-294861-3-numbers-piper.wav | 149 znaków | czas 0.424 s (min 0.311, max 0.480) | audio 15.51 s | RTF 0.027
+[piper] Yevhenii Lukianenko/294861-4-long.txt -> Yevhenii Lukianenko-294861-4-long-piper.wav | 251 znaków | czas 0.406 s (min 0.385, max 0.444) | audio 15.35 s | RTF 0.026
+[piper] Yevhenii Lukianenko/294861-5-unique-foreign.txt -> Yevhenii Lukianenko-294861-5-unique-foreign-piper.wav | 156 znaków | czas 0.233 s (min 0.230, max 0.264) | audio 10.04 s | RTF 0.023
+[piper] razem 59.843 s, średnio 0.374 s/plik
+[piper] pomiary zapisane: /home/zawodev/Dokumenty/github/ik-synteza/output/timings_piper.csv
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 2732.05it/s]
+[transformers] Model config: bos_token_id must be `None` or an integer within the vocabulary (between 0 and 255), got 50256. This may result in unexpected behavior.
+[transformers] Model config: eos_token_id must be `None` or an integer within the vocabulary (between 0 and 255), got 50256. This may result in unexpected behavior.
+[transformers] Model config: bos_token_id must be `None` or an integer within the vocabulary (between 0 and 607), got 50256. This may result in unexpected behavior.
+[transformers] Model config: eos_token_id must be `None` or an integer within the vocabulary (between 0 and 607), got 50256. This may result in unexpected behavior.
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: jeżeli nie masz pewności, czy wybrana pompa wody b...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: jeżeli nie masz pewności, czy wybrana pompa wody b...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: jeżeli nie masz pewności, czy wybrana pompa wody b...
+
+[xtts] załadowanie modelu: 13.867 s (cuda)
+rozgrzewka (poza pomiarami): 2.251 s
+
+=== xtts: 160 plików, 3 pomiar(y) na plik ===
+[xtts] Additional/add01-3-skroty.txt -> Additional-add01-3-skroty-xtts.wav | 423 znaków | czas 16.056 s (min 15.690, max 17.761) | audio 54.92 s | RTF 0.292
+[xtts] Additional/add02-5-akronimy-nazwy.txt -> Additional-add02-5-akronimy-nazwy-xtts.wav | 321 znaków | czas 12.548 s (min 11.316, max 13.413) | audio 40.65 s | RTF 0.309
+[xtts] Additional/add03-3-duze-liczby.txt -> Additional-add03-3-duze-liczby-xtts.wav | 303 znaków | czas 17.470 s (min 16.841, max 19.052) | audio 52.35 s | RTF 0.334
+[xtts] Additional/add04-2-konotacja-intonacja.txt -> Additional-add04-2-konotacja-intonacja-xtts.wav | 314 znaków | czas 7.973 s (min 7.966, max 8.297) | audio 27.35 s | RTF 0.291
+[xtts] Additional/add05-5-spolszczone.txt -> Additional-add05-5-spolszczone-xtts.wav | 291 znaków | czas 9.054 s (min 8.291, max 9.844) | audio 27.43 s | RTF 0.330
+[xtts] Aleksander Stepaniuk/272644-1-info.txt -> Aleksander Stepaniuk-272644-1-info-xtts.wav | 70 znaków | czas 1.735 s (min 1.727, max 1.813) | audio 5.74 s | RTF 0.302
+[xtts] Aleksander Stepaniuk/272644-2-qna.txt -> Aleksander Stepaniuk-272644-2-qna-xtts.wav | 114 znaków | czas 2.857 s (min 2.557, max 2.925) | audio 9.42 s | RTF 0.303
+[xtts] Aleksander Stepaniuk/272644-3-numbers.txt -> Aleksander Stepaniuk-272644-3-numbers-xtts.wav | 106 znaków | czas 2.472 s (min 2.467, max 2.610) | audio 7.88 s | RTF 0.314
+[xtts] Aleksander Stepaniuk/272644-4-long.txt -> Aleksander Stepaniuk-272644-4-long-xtts.wav | 184 znaków | czas 4.346 s (min 3.842, max 4.969) | audio 13.18 s | RTF 0.330
+[xtts] Aleksander Stepaniuk/272644-5-unique-foreign.txt -> Aleksander Stepaniuk-272644-5-unique-foreign-xtts.wav | 109 znaków | czas 2.758 s (min 2.534, max 2.808) | audio 7.47 s | RTF 0.369
+[xtts] Andrzej Manderla/294692-1-info.txt -> Andrzej Manderla-294692-1-info-xtts.wav | 130 znaków | czas 3.120 s (min 2.980, max 3.277) | audio 10.02 s | RTF 0.311
+[xtts] Andrzej Manderla/294692-2-qna.txt -> Andrzej Manderla-294692-2-qna-xtts.wav | 126 znaków | czas 3.002 s (min 2.838, max 3.556) | audio 9.64 s | RTF 0.311
+[xtts] Andrzej Manderla/294692-3-numbers.txt -> Andrzej Manderla-294692-3-numbers-xtts.wav | 152 znaków | czas 7.321 s (min 7.081, max 7.711) | audio 24.77 s | RTF 0.296
+[xtts] Andrzej Manderla/294692-4-long.txt -> Andrzej Manderla-294692-4-long-xtts.wav | 345 znaków | czas 7.543 s (min 7.426, max 7.984) | audio 24.10 s | RTF 0.313
+[xtts] Andrzej Manderla/294692-5-unique-foreign.txt -> Andrzej Manderla-294692-5-unique-foreign-xtts.wav | 209 znaków | czas 5.094 s (min 4.750, max 5.298) | audio 17.22 s | RTF 0.296
+[xtts] Dariusz Szypka/272678-1-info.txt -> Dariusz Szypka-272678-1-info-xtts.wav | 91 znaków | czas 2.303 s (min 1.975, max 2.318) | audio 7.37 s | RTF 0.312
+[xtts] Dariusz Szypka/272678-2-qna.txt -> Dariusz Szypka-272678-2-qna-xtts.wav | 145 znaków | czas 3.874 s (min 3.474, max 3.980) | audio 11.50 s | RTF 0.337
+[xtts] Dariusz Szypka/272678-3-numbers.txt -> Dariusz Szypka-272678-3-numbers-xtts.wav | 145 znaków | czas 5.218 s (min 4.874, max 5.283) | audio 16.94 s | RTF 0.308
+[xtts] Dariusz Szypka/272678-4-long.txt -> Dariusz Szypka-272678-4-long-xtts.wav | 191 znaków | czas 4.594 s (min 4.576, max 5.213) | audio 15.46 s | RTF 0.297
+[xtts] Dariusz Szypka/272678-5-unique-foreign.txt -> Dariusz Szypka-272678-5-unique-foreign-xtts.wav | 115 znaków | czas 2.740 s (min 2.681, max 3.085) | audio 10.02 s | RTF 0.273
+[xtts] Hubert Tański/272326-1-info.txt -> Hubert Tański-272326-1-info-xtts.wav | 97 znaków | czas 2.482 s (min 2.426, max 2.621) | audio 8.72 s | RTF 0.285
+[xtts] Hubert Tański/272326-2-qna.txt -> Hubert Tański-272326-2-qna-xtts.wav | 112 znaków | czas 2.442 s (min 2.327, max 2.488) | audio 7.47 s | RTF 0.327
+[xtts] Hubert Tański/272326-3-numbers.txt -> Hubert Tański-272326-3-numbers-xtts.wav | 88 znaków | czas 4.484 s (min 4.455, max 4.845) | audio 15.54 s | RTF 0.288
+[xtts] Hubert Tański/272326-4-long.txt -> Hubert Tański-272326-4-long-xtts.wav | 196 znaków | czas 4.343 s (min 4.055, max 4.382) | audio 13.97 s | RTF 0.311
+[xtts] Hubert Tański/272326-5-unique-foreign.txt -> Hubert Tański-272326-5-unique-foreign-xtts.wav | 86 znaków | czas 1.901 s (min 1.892, max 2.341) | audio 6.22 s | RTF 0.306
+[xtts] Igor Wojtun/272652-1-info.txt -> Igor Wojtun-272652-1-info-xtts.wav | 157 znaków | czas 3.768 s (min 3.616, max 3.831) | audio 11.87 s | RTF 0.317
+[xtts] Igor Wojtun/272652-2-qna.txt -> Igor Wojtun-272652-2-qna-xtts.wav | 182 znaków | czas 5.138 s (min 5.013, max 5.431) | audio 17.19 s | RTF 0.299
+[xtts] Igor Wojtun/272652-3-numbers.txt -> Igor Wojtun-272652-3-numbers-xtts.wav | 178 znaków | czas 9.182 s (min 7.655, max 9.413) | audio 29.55 s | RTF 0.311
+[xtts] Igor Wojtun/272652-4-long.txt -> Igor Wojtun-272652-4-long-xtts.wav | 323 znaków | czas 6.660 s (min 6.214, max 7.488) | audio 23.72 s | RTF 0.281
+[xtts] Igor Wojtun/272652-5-unique-foreign.txt -> Igor Wojtun-272652-5-unique-foreign-xtts.wav | 254 znaków | czas 6.827 s (min 6.200, max 7.214) | audio 22.19 s | RTF 0.308
+[xtts] Jakub Borsuk/272646-1-info.txt -> Jakub Borsuk-272646-1-info-xtts.wav | 184 znaków | czas 4.308 s (min 4.213, max 4.670) | audio 14.47 s | RTF 0.298
+[xtts] Jakub Borsuk/272646-2-qna.txt -> Jakub Borsuk-272646-2-qna-xtts.wav | 206 znaków | czas 5.357 s (min 5.162, max 5.387) | audio 17.25 s | RTF 0.311
+[xtts] Jakub Borsuk/272646-3-numbers.txt -> Jakub Borsuk-272646-3-numbers-xtts.wav | 224 znaków | czas 7.511 s (min 7.239, max 8.490) | audio 25.36 s | RTF 0.296
+[xtts] Jakub Borsuk/272646-4-long.txt -> Jakub Borsuk-272646-4-long-xtts.wav | 326 znaków | czas 7.650 s (min 7.016, max 12.615) | audio 23.52 s | RTF 0.325
+[xtts] Jakub Borsuk/272646-5-unique-foreign.txt -> Jakub Borsuk-272646-5-unique-foreign-xtts.wav | 179 znaków | czas 4.437 s (min 4.276, max 4.579) | audio 14.79 s | RTF 0.300
+[xtts] Jakub Śliwka/272649-1-info.txt_ -> Jakub Śliwka-272649-1-info-xtts.wav | 94 znaków | czas 2.523 s (min 2.308, max 2.583) | audio 8.53 s | RTF 0.296
+[xtts] Jakub Śliwka/272649-2-qna.txt -> Jakub Śliwka-272649-2-qna-xtts.wav | 102 znaków | czas 2.566 s (min 2.497, max 2.687) | audio 8.66 s | RTF 0.296
+[xtts] Jakub Śliwka/272649-3-numbers.txt -> Jakub Śliwka-272649-3-numbers-xtts.wav | 78 znaków | czas 2.814 s (min 2.728, max 2.916) | audio 9.00 s | RTF 0.313
+[xtts] Jakub Śliwka/272649-4-long.txt -> Jakub Śliwka-272649-4-long-xtts.wav | 240 znaków | czas 6.069 s (min 6.053, max 6.323) | audio 19.29 s | RTF 0.315
+[xtts] Jakub Śliwka/272649-5-unique-foreign.txt -> Jakub Śliwka-272649-5-unique-foreign-xtts.wav | 93 znaków | czas 2.367 s (min 2.334, max 2.570) | audio 7.61 s | RTF 0.311
+[xtts] Jan Powęski/272648-1-info.txt -> Jan Powęski-272648-1-info-xtts.wav | 105 znaków | czas 2.351 s (min 2.332, max 2.773) | audio 7.24 s | RTF 0.325
+[xtts] Jan Powęski/272648-2-qna.txt -> Jan Powęski-272648-2-qna-xtts.wav | 174 znaków | czas 4.174 s (min 4.059, max 4.522) | audio 14.47 s | RTF 0.289
+[xtts] Jan Powęski/272648-3-numbers.txt -> Jan Powęski-272648-3-numbers-xtts.wav | 146 znaków | czas 4.021 s (min 3.987, max 4.149) | audio 12.62 s | RTF 0.319
+[xtts] Jan Powęski/272648-4-long.txt -> Jan Powęski-272648-4-long-xtts.wav | 700 znaków | czas 14.223 s (min 14.145, max 14.705) | audio 46.41 s | RTF 0.306
+[xtts] Jan Powęski/272648-5-unique-foreign.txt -> Jan Powęski-272648-5-unique-foreign-xtts.wav | 307 znaków | czas 6.706 s (min 6.391, max 7.090) | audio 21.58 s | RTF 0.311
+[xtts] Julia Kroczek/266853-1-info.txt -> Julia Kroczek-266853-1-info-xtts.wav | 185 znaków | czas 6.965 s (min 6.315, max 7.040) | audio 21.09 s | RTF 0.330
+[xtts] Julia Kroczek/266853-2-qna.txt -> Julia Kroczek-266853-2-qna-xtts.wav | 208 znaków | czas 7.339 s (min 6.758, max 7.870) | audio 22.63 s | RTF 0.324
+[xtts] Julia Kroczek/266853-3-numbers.txt -> Julia Kroczek-266853-3-numbers-xtts.wav | 317 znaków | czas 21.621 s (min 21.372, max 22.755) | audio 67.47 s | RTF 0.320
+[xtts] Julia Kroczek/266853-4-long.txt -> Julia Kroczek-266853-4-long-xtts.wav | 310 znaków | czas 11.882 s (min 11.458, max 13.838) | audio 40.56 s | RTF 0.293The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: oto historia naszej sieci: kfc corporation (dawnie...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: oto historia naszej sieci: kfc corporation (dawnie...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: oto historia naszej sieci: kfc corporation (dawnie...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: jeśli pierwszy pociąg spóźni się o więcej niż dwad...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: jeśli pierwszy pociąg spóźni się o więcej niż dwad...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: jeśli pierwszy pociąg spóźni się o więcej niż dwad...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: aby zwiększyć limit transakcji internetowych, zalo...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: aby zwiększyć limit transakcji internetowych, zalo...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: aby zwiększyć limit transakcji internetowych, zalo...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: ponieważ oryginalne tarcze hamulcowe do lexusa rx ...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: ponieważ oryginalne tarcze hamulcowe do lexusa rx ...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: ponieważ oryginalne tarcze hamulcowe do lexusa rx ...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: znalazłem kilka przepisów, które pasują do składni...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: znalazłem kilka przepisów, które pasują do składni...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: znalazłem kilka przepisów, które pasują do składni...
+
+[xtts] Julia Kroczek/266853-5-unique-foreign.txt -> Julia Kroczek-266853-5-unique-foreign-xtts.wav | 373 znaków | czas 14.048 s (min 13.354, max 15.348) | audio 45.32 s | RTF 0.310
+[xtts] Kacper Kawecki/272663-1-info.txt -> Kacper Kawecki-272663-1-info-xtts.wav | 85 znaków | czas 2.305 s (min 2.294, max 2.432) | audio 7.84 s | RTF 0.294
+[xtts] Kacper Kawecki/272663-2-qna.txt -> Kacper Kawecki-272663-2-qna-xtts.wav | 104 znaków | czas 2.757 s (min 2.621, max 3.164) | audio 9.45 s | RTF 0.292
+[xtts] Kacper Kawecki/272663-3-numbers.txt -> Kacper Kawecki-272663-3-numbers-xtts.wav | 111 znaków | czas 3.264 s (min 3.095, max 3.723) | audio 11.41 s | RTF 0.286
+[xtts] Kacper Kawecki/272663-4-long.txt -> Kacper Kawecki-272663-4-long-xtts.wav | 196 znaków | czas 4.378 s (min 4.197, max 4.488) | audio 14.57 s | RTF 0.300
+[xtts] Kacper Kawecki/272663-5-unique-foreign.txt -> Kacper Kawecki-272663-5-unique-foreign-xtts.wav | 94 znaków | czas 2.459 s (min 2.408, max 3.177) | audio 9.84 s | RTF 0.250
+[xtts] Kacper Kubiak/272636-1-info.txt -> Kacper Kubiak-272636-1-info-xtts.wav | 181 znaków | czas 5.149 s (min 4.180, max 5.658) | audio 16.82 s | RTF 0.306
+[xtts] Kacper Kubiak/272636-2-qna.txt -> Kacper Kubiak-272636-2-qna-xtts.wav | 241 znaków | czas 6.121 s (min 6.071, max 6.413) | audio 19.84 s | RTF 0.308
+[xtts] Kacper Kubiak/272636-3-numbers.txt -> Kacper Kubiak-272636-3-numbers-xtts.wav | 293 znaków | czas 8.640 s (min 8.500, max 8.700) | audio 30.02 s | RTF 0.288
+[xtts] Kacper Kubiak/272636-4-long.txt -> Kacper Kubiak-272636-4-long-xtts.wav | 869 znaków | czas 20.530 s (min 20.209, max 23.083) | audio 68.38 s | RTF 0.300
+[xtts] Kacper Kubiak/272636-5-unique-foreign.txt -> Kacper Kubiak-272636-5-unique-foreign-xtts.wav | 219 znaków | czas 6.268 s (min 5.318, max 6.665) | audio 22.63 s | RTF 0.277
+[xtts] Kacper Tomczyk/272650-1-info.txt -> Kacper Tomczyk-272650-1-info-xtts.wav | 92 znaków | czas 2.400 s (min 2.341, max 2.600) | audio 7.65 s | RTF 0.314
+[xtts] Kacper Tomczyk/272650-2-qna.txt -> Kacper Tomczyk-272650-2-qna-xtts.wav | 100 znaków | czas 2.051 s (min 1.959, max 2.164) | audio 6.44 s | RTF 0.318
+[xtts] Kacper Tomczyk/272650-3-numbers.txt -> Kacper Tomczyk-272650-3-numbers-xtts.wav | 78 znaków | czas 4.500 s (min 4.337, max 5.092) | audio 15.07 s | RTF 0.298
+[xtts] Kacper Tomczyk/272650-4-long.txt -> Kacper Tomczyk-272650-4-long-xtts.wav | 194 znaków | czas 3.871 s (min 3.735, max 4.048) | audio 12.63 s | RTF 0.306
+[xtts] Kacper Tomczyk/272650-5-unique-foreign.txt -> Kacper Tomczyk-272650-5-unique-foreign-xtts.wav | 74 znaków | czas 1.596 s (min 1.535, max 1.820) | audio 5.71 s | RTF 0.280
+[xtts] Karol Zając/276263-1-info.txt -> Karol Zając-276263-1-info-xtts.wav | 82 znaków | czas 1.960 s (min 1.900, max 2.195) | audio 7.00 s | RTF 0.280
+[xtts] Karol Zając/276263-2-qna.txt -> Karol Zając-276263-2-qna-xtts.wav | 79 znaków | czas 1.605 s (min 1.382, max 1.640) | audio 4.82 s | RTF 0.333
+[xtts] Karol Zając/276263-3-numbers.txt -> Karol Zając-276263-3-numbers-xtts.wav | 107 znaków | czas 5.350 s (min 5.338, max 6.594) | audio 19.11 s | RTF 0.280
+[xtts] Karol Zając/276263-4-long.txt -> Karol Zając-276263-4-long-xtts.wav | 175 znaków | czas 3.964 s (min 3.689, max 3.977) | audio 12.20 s | RTF 0.325
+[xtts] Karol Zając/276263-5-unique-foreign.txt -> Karol Zając-276263-5-unique-foreign-xtts.wav | 75 znaków | czas 1.844 s (min 1.638, max 2.046) | audio 5.80 s | RTF 0.318
+[xtts] Leszek Kryzar/266877-1-info.txt -> Leszek Kryzar-266877-1-info-xtts.wav | 81 znaków | czas 1.881 s (min 1.853, max 2.371) | audio 8.30 s | RTF 0.227
+[xtts] Leszek Kryzar/266877-2-qna.txt -> Leszek Kryzar-266877-2-qna-xtts.wav | 137 znaków | czas 3.105 s (min 2.837, max 3.129) | audio 10.15 s | RTF 0.306
+[xtts] Leszek Kryzar/266877-3-numbers.txt -> Leszek Kryzar-266877-3-numbers-xtts.wav | 170 znaków | czas 8.850 s (min 8.442, max 9.538) | audio 31.82 s | RTF 0.278
+[xtts] Leszek Kryzar/266877-4-long.txt -> Leszek Kryzar-266877-4-long-xtts.wav | 310 znaków | czas 8.241 s (min 6.992, max 8.775) | audio 26.28 s | RTF 0.314
+[xtts] Leszek Kryzar/266877-5-unique-foreign.txt -> Leszek Kryzar-266877-5-unique-foreign-xtts.wav | 180 znaków | czas 4.084 s (min 3.845, max 4.263) | audio 14.09 s | RTF 0.290
+[xtts] Marcin Borkowski/272974-1-info.txt -> Marcin Borkowski-272974-1-info-xtts.wav | 97 znaków | czas 2.461 s (min 2.301, max 2.664) | audio 9.13 s | RTF 0.269
+[xtts] Marcin Borkowski/272974-2-qna.txt -> Marcin Borkowski-272974-2-qna-xtts.wav | 107 znaków | czas 2.673 s (min 2.426, max 3.069) | audio 9.69 s | RTF 0.276
+[xtts] Marcin Borkowski/272974-3-numbers.txt -> Marcin Borkowski-272974-3-numbers-xtts.wav | 135 znaków | czas 6.585 s (min 6.505, max 6.830) | audio 22.82 s | RTF 0.289
+[xtts] Marcin Borkowski/272974-4-long.txt -> Marcin Borkowski-272974-4-long-xtts.wav | 261 znaków | czas 5.419 s (min 5.311, max 5.649) | audio 16.72 s | RTF 0.324
+[xtts] Marcin Borkowski/272974-5-unique-foreign.txt -> Marcin Borkowski-272974-5-unique-foreign-xtts.wav | 178 znaków | czas 4.085 s (min 3.944, max 4.230) | audio 12.58 s | RTF 0.325
+[xtts] Marcin Goliasz/273185-1-info.txt -> Marcin Goliasz-273185-1-info-xtts.wav | 103 znaków | czas 2.483 s (min 2.290, max 2.528) | audio 7.84 s | RTF 0.317
+[xtts] Marcin Goliasz/273185-2-qna.txt -> Marcin Goliasz-273185-2-qna-xtts.wav | 239 znaków | czas 5.078 s (min 4.789, max 5.329) | audio 16.32 s | RTF 0.311
+[xtts] Marcin Goliasz/273185-3-numbers.txt -> Marcin Goliasz-273185-3-numbers-xtts.wav | 184 znaków | czas 3.439 s (min 3.254, max 3.469) | audio 11.14 s | RTF 0.309
+[xtts] Marcin Goliasz/273185-4-long.txt -> Marcin Goliasz-273185-4-long-xtts.wav | 385 znaków | czas 8.094 s (min 8.053, max 8.308) | audio 26.64 s | RTF 0.304
+[xtts] Marcin Goliasz/273185-5-unique-foreign.txt -> Marcin Goliasz-273185-5-unique-foreign-xtts.wav | 260 znaków | czas 5.217 s (min 5.089, max 5.249) | audio 17.87 s | RTF 0.292
+[xtts] Mateusz Dejewski/272691-1-info.txt -> Mateusz Dejewski-272691-1-info-xtts.wav | 76 znaków | czas 1.726 s (min 1.502, max 1.934) | audio 5.56 s | RTF 0.310
+[xtts] Mateusz Dejewski/272691-2-qna.txt -> Mateusz Dejewski-272691-2-qna-xtts.wav | 122 znaków | czas 3.946 s (min 2.802, max 3.984) | audio 9.23 s | RTF 0.428
+[xtts] Mateusz Dejewski/272691-3-numbers.txt -> Mateusz Dejewski-272691-3-numbers-xtts.wav | 187 znaków | czas 8.210 s (min 7.992, max 9.280) | audio 26.87 s | RTF 0.306
+[xtts] Mateusz Dejewski/272691-4-long.txt -> Mateusz Dejewski-272691-4-long-xtts.wav | 501 znaków | czas 11.059 s (min 10.605, max 11.226) | audio 36.47 s | RTF 0.303
+[xtts] Mateusz Dejewski/272691-5-unique-foreign.txt -> Mateusz Dejewski-272691-5-unique-foreign-xtts.wav | 263 znaków | czas 6.714 s (min 6.338, max 7.103) | audio 20.50 s | RTF 0.327
+[xtts] Mateusz Gawłowski/264463-1-info.txt -> Mateusz Gawłowski-264463-1-info-xtts.wav | 133 znaków | czas 2.999 s (min 2.768, max 3.377) | audio 9.31 s | RTF 0.322
+[xtts] Mateusz Gawłowski/264463-2-qna.txt -> Mateusz Gawłowski-264463-2-qna-xtts.wav | 179 znaków | czas 4.136 s (min 3.908, max 4.429) | audio 13.45 s | RTF 0.307
+[xtts] Mateusz Gawłowski/264463-3-numbers.txt -> Mateusz Gawłowski-264463-3-numbers-xtts.wav | 203 znaków | czas 11.552 s (min 10.845, max 12.813) | audio 36.37 s | RTF 0.318
+[xtts] Mateusz Gawłowski/264463-4-long.txt -> Mateusz Gawłowski-264463-4-long-xtts.wav | 371 znaków | czas 6.805 s (min 1.476, max 7.905) | audio 24.37 s | RTF 0.279
+[xtts] Mateusz Gawłowski/264463-5-unique-foreign.txt -> Mateusz Gawłowski-264463-5-unique-foreign-xtts.wav | 241 znaków | czas 5.093 s (min 4.951, max 5.237) | audio 19.77 s | RTF 0.258
+[xtts] Michał Sosnowski/272642-1-info.txt -> Michał Sosnowski-272642-1-info-xtts.wav | 168 znaków | czas 3.098 s (min 2.997, max 3.547) | audio 12.25 s | RTF 0.253
+[xtts] Michał Sosnowski/272642-2-qna.txt -> Michał Sosnowski-272642-2-qna-xtts.wav | 190 znaków | czas 3.324 s (min 3.225, max 3.725) | audio 13.25 s | RTF 0.251
+[xtts] Michał Sosnowski/272642-3-numbers.txt -> Michał Sosnowski-272642-3-numbers-xtts.wav | 208 znaków | czas 9.016 s (min 8.019, max 9.181) | audio 24.44 s | RTF 0.369
+[xtts] Michał Sosnowski/272642-4-long.txt -> Michał Sosnowski-272642-4-long-xtts.wav | 250 znaków | czas 4.423 s (min 4.304, max 5.699) | audio 15.79 s | RTF 0.280The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: kiedy na szerokiej patelni o grubym dnie rozgrzeje...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: do tak przygotowanej bazy dodaj pokrojone w równą ...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: następnie, gdy wszystkie elementy zaczną delikatni...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: kiedy na szerokiej patelni o grubym dnie rozgrzeje...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: do tak przygotowanej bazy dodaj pokrojone w równą ...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: następnie, gdy wszystkie elementy zaczną delikatni...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: kiedy na szerokiej patelni o grubym dnie rozgrzeje...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: do tak przygotowanej bazy dodaj pokrojone w równą ...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: następnie, gdy wszystkie elementy zaczną delikatni...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: pacjentka zgłasza okresowe zawroty głowy, które po...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: pacjentka zgłasza okresowe zawroty głowy, które po...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: pacjentka zgłasza okresowe zawroty głowy, które po...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: zanim przystąpisz do nakładania drugiej warstwy la...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: zanim przystąpisz do nakładania drugiej warstwy la...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: zanim przystąpisz do nakładania drugiej warstwy la...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: jeżeli przesiadka w poznaniu okaże się za krótka, ...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: jeżeli przesiadka w poznaniu okaże się za krótka, ...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: jeżeli przesiadka w poznaniu okaże się za krótka, ...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: najbliższy pociąg z wrocławia głównego do poznania...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: najbliższy pociąg z wrocławia głównego do poznania...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: najbliższy pociąg z wrocławia głównego do poznania...
+
+[xtts] Michał Sosnowski/272642-5-unique-foreign.txt -> Michał Sosnowski-272642-5-unique-foreign-xtts.wav | 222 znaków | czas 5.961 s (min 5.926, max 6.427) | audio 18.18 s | RTF 0.328
+[xtts] Michał Wąsiński/272674-1-info.txt -> Michał Wąsiński-272674-1-info-xtts.wav | 78 znaków | czas 2.038 s (min 1.946, max 2.135) | audio 6.03 s | RTF 0.338
+[xtts] Michał Wąsiński/272674-2-qna.txt -> Michał Wąsiński-272674-2-qna-xtts.wav | 97 znaków | czas 2.321 s (min 2.218, max 2.354) | audio 7.37 s | RTF 0.315
+[xtts] Michał Wąsiński/272674-3-numbers.txt -> Michał Wąsiński-272674-3-numbers-xtts.wav | 252 znaków | czas 8.289 s (min 6.965, max 8.728) | audio 24.44 s | RTF 0.339
+[xtts] Michał Wąsiński/272674-4-long.txt -> Michał Wąsiński-272674-4-long-xtts.wav | 982 znaków | czas 22.822 s (min 22.175, max 25.961) | audio 83.94 s | RTF 0.272
+[xtts] Michał Wąsiński/272674-5-unique-foreign.txt -> Michał Wąsiński-272674-5-unique-foreign-xtts.wav | 420 znaków | czas 10.688 s (min 8.820, max 11.026) | audio 33.89 s | RTF 0.315
+[xtts] Mieszko Szczekla/272688-1-info.txt -> Mieszko Szczekla-272688-1-info-xtts.wav | 61 znaków | czas 1.522 s (min 1.454, max 1.818) | audio 5.10 s | RTF 0.298
+[xtts] Mieszko Szczekla/272688-2-qna.txt -> Mieszko Szczekla-272688-2-qna-xtts.wav | 96 znaków | czas 2.044 s (min 1.886, max 2.158) | audio 6.86 s | RTF 0.298
+[xtts] Mieszko Szczekla/272688-3-numbers.txt -> Mieszko Szczekla-272688-3-numbers-xtts.wav | 86 znaków | czas 1.954 s (min 1.796, max 2.145) | audio 6.82 s | RTF 0.287
+[xtts] Mieszko Szczekla/272688-4-long.txt -> Mieszko Szczekla-272688-4-long-xtts.wav | 169 znaków | czas 3.967 s (min 3.965, max 4.963) | audio 15.41 s | RTF 0.257
+[xtts] Mieszko Szczekla/272688-5-unique-foreign.txt -> Mieszko Szczekla-272688-5-unique-foreign-xtts.wav | 109 znaków | czas 2.619 s (min 2.526, max 2.689) | audio 8.03 s | RTF 0.326
+[xtts] Myroslav Hryniuka/294863-1-info.txt -> Myroslav Hryniuka-294863-1-info-xtts.wav | 83 znaków | czas 2.526 s (min 2.509, max 2.716) | audio 8.77 s | RTF 0.288
+[xtts] Myroslav Hryniuka/294863-2-qna.txt -> Myroslav Hryniuka-294863-2-qna-xtts.wav | 104 znaków | czas 3.073 s (min 2.702, max 3.383) | audio 9.41 s | RTF 0.327
+[xtts] Myroslav Hryniuka/294863-3-numbers.txt -> Myroslav Hryniuka-294863-3-numbers-xtts.wav | 82 znaków | czas 5.474 s (min 4.765, max 6.560) | audio 15.81 s | RTF 0.346
+[xtts] Myroslav Hryniuka/294863-4-long.txt -> Myroslav Hryniuka-294863-4-long-xtts.wav | 156 znaków | czas 3.243 s (min 3.082, max 3.949) | audio 9.89 s | RTF 0.328
+[xtts] Myroslav Hryniuka/294863-5-unique-foreign.txt -> Myroslav Hryniuka-294863-5-unique-foreign-xtts.wav | 169 znaków | czas 3.756 s (min 3.690, max 4.153) | audio 12.48 s | RTF 0.301
+[xtts] Natalia Malinowska/272669-1-info.txt -> Natalia Malinowska-272669-1-info-xtts.wav | 89 znaków | czas 2.481 s (min 2.109, max 2.488) | audio 8.16 s | RTF 0.304
+[xtts] Natalia Malinowska/272669-2-qna.txt -> Natalia Malinowska-272669-2-qna-xtts.wav | 68 znaków | czas 1.485 s (min 1.434, max 1.699) | audio 5.23 s | RTF 0.284
+[xtts] Natalia Malinowska/272669-3-numbers.txt -> Natalia Malinowska-272669-3-numbers-xtts.wav | 134 znaków | czas 2.831 s (min 2.695, max 2.882) | audio 9.19 s | RTF 0.308
+[xtts] Natalia Malinowska/272669-4-long.txt -> Natalia Malinowska-272669-4-long-xtts.wav | 228 znaków | czas 4.959 s (min 4.550, max 5.815) | audio 17.69 s | RTF 0.280
+[xtts] Natalia Malinowska/272669-5-unique-foreign.txt -> Natalia Malinowska-272669-5-unique-foreign-xtts.wav | 179 znaków | czas 4.521 s (min 4.375, max 4.522) | audio 13.69 s | RTF 0.330
+[xtts] Natalia Marszałek/272683-1-info.txt -> Natalia Marszałek-272683-1-info-xtts.wav | 172 znaków | czas 4.874 s (min 4.747, max 5.121) | audio 14.88 s | RTF 0.327
+[xtts] Natalia Marszałek/272683-2-qna.txt -> Natalia Marszałek-272683-2-qna-xtts.wav | 175 znaków | czas 4.136 s (min 3.746, max 4.143) | audio 11.83 s | RTF 0.350
+[xtts] Natalia Marszałek/272683-3-numbers.txt -> Natalia Marszałek-272683-3-numbers-xtts.wav | 217 znaków | czas 7.910 s (min 7.452, max 8.102) | audio 24.72 s | RTF 0.320
+[xtts] Natalia Marszałek/272683-4-long.txt -> Natalia Marszałek-272683-4-long-xtts.wav | 272 znaków | czas 6.293 s (min 6.261, max 6.335) | audio 19.54 s | RTF 0.322
+[xtts] Natalia Marszałek/272683-5-unique-foreign.txt -> Natalia Marszałek-272683-5-unique-foreign-xtts.wav | 218 znaków | czas 5.576 s (min 5.012, max 5.851) | audio 16.79 s | RTF 0.332
+[xtts] Natalia Suda/294696-1-info.txt -> Natalia Suda-294696-1-info-xtts.wav | 197 znaków | czas 4.459 s (min 4.345, max 5.229) | audio 16.36 s | RTF 0.272
+[xtts] Natalia Suda/294696-2-qna.txt -> Natalia Suda-294696-2-qna-xtts.wav | 116 znaków | czas 2.488 s (min 2.268, max 2.600) | audio 7.33 s | RTF 0.339
+[xtts] Natalia Suda/294696-3-numbers.txt -> Natalia Suda-294696-3-numbers-xtts.wav | 205 znaków | czas 5.441 s (min 5.423, max 6.348) | audio 17.96 s | RTF 0.303
+[xtts] Natalia Suda/294696-4-long.txt -> Natalia Suda-294696-4-long-xtts.wav | 352 znaków | czas 8.189 s (min 7.364, max 8.762) | audio 24.23 s | RTF 0.338
+[xtts] Natalia Suda/294696-5-unique-foreign.txt -> Natalia Suda-294696-5-unique-foreign-xtts.wav | 320 znaków | czas 7.902 s (min 7.202, max 9.023) | audio 26.44 s | RTF 0.299
+[xtts] Piotr Bogacki/272753-1-info.txt -> Piotr Bogacki-272753-1-info-xtts.wav | 94 znaków | czas 2.384 s (min 2.145, max 2.664) | audio 9.04 s | RTF 0.264
+[xtts] Piotr Bogacki/272753-2-qna.txt -> Piotr Bogacki-272753-2-qna-xtts.wav | 134 znaków | czas 3.469 s (min 3.447, max 3.496) | audio 11.87 s | RTF 0.292
+[xtts] Piotr Bogacki/272753-3-numbers.txt -> Piotr Bogacki-272753-3-numbers-xtts.wav | 157 znaków | czas 5.486 s (min 5.229, max 5.805) | audio 15.87 s | RTF 0.346
+[xtts] Piotr Bogacki/272753-4-long.txt -> Piotr Bogacki-272753-4-long-xtts.wav | 223 znaków | czas 4.768 s (min 4.297, max 5.145) | audio 13.97 s | RTF 0.341
+[xtts] Piotr Bogacki/272753-5-unique-foreign.txt -> Piotr Bogacki-272753-5-unique-foreign-xtts.wav | 144 znaków | czas 3.666 s (min 3.129, max 3.800) | audio 12.25 s | RTF 0.299
+[xtts] Piotr Strycharczyk/272995-1-info.txt -> Piotr Strycharczyk-272995-1-info-xtts.wav | 128 znaków | czas 4.091 s (min 3.833, max 4.111) | audio 12.89 s | RTF 0.317
+[xtts] Piotr Strycharczyk/272995-2-qna.txt -> Piotr Strycharczyk-272995-2-qna-xtts.wav | 139 znaków | czas 3.349 s (min 3.158, max 3.582) | audio 11.28 s | RTF 0.297
+[xtts] Piotr Strycharczyk/272995-3-numbers.txt -> Piotr Strycharczyk-272995-3-numbers-xtts.wav | 151 znaków | czas 8.587 s (min 7.887, max 9.654) | audio 26.01 s | RTF 0.330
+[xtts] Piotr Strycharczyk/272995-4-long.txt -> Piotr Strycharczyk-272995-4-long-xtts.wav | 234 znaków | czas 5.210 s (min 4.712, max 6.017) | audio 18.16 s | RTF 0.287
+[xtts] Piotr Strycharczyk/272995-5-unique-foreign.txt -> Piotr Strycharczyk-272995-5-unique-foreign-xtts.wav | 197 znaków | czas 4.549 s (min 4.434, max 4.868) | audio 14.75 s | RTF 0.308
+[xtts] Wiktor Kubera/266539-1-info.txt -> Wiktor Kubera-266539-1-info-xtts.wav | 103 znaków | czas 2.513 s (min 2.344, max 2.569) | audio 8.16 s | RTF 0.308
+[xtts] Wiktor Kubera/266539-2-qna.txt -> Wiktor Kubera-266539-2-qna-xtts.wav | 172 znaków | czas 3.826 s (min 3.650, max 3.897) | audio 12.48 s | RTF 0.307
+[xtts] Wiktor Kubera/266539-3-numbers.txt -> Wiktor Kubera-266539-3-numbers-xtts.wav | 142 znaków | czas 11.503 s (min 11.302, max 12.971) | audio 36.46 s | RTF 0.315
+[xtts] Wiktor Kubera/266539-4-long.txt -> Wiktor Kubera-266539-4-long-xtts.wav | 307 znaków | czas 6.754 s (min 6.375, max 7.165) | audio 19.13 s | RTF 0.353
+[xtts] Wiktor Kubera/266539-5-unique-foreign.txt -> Wiktor Kubera-266539-5-unique-foreign-xtts.wav | 159 znaków | czas 4.099 s (min 3.341, max 4.855) | audio 15.45 s | RTF 0.265
+[xtts] Wiktor Piekarski/272726-1-info.txt -> Wiktor Piekarski-272726-1-info-xtts.wav | 133 znaków | czas 3.639 s (min 3.417, max 3.659) | audio 11.46 s | RTF 0.318
+[xtts] Wiktor Piekarski/272726-2-qna.txt -> Wiktor Piekarski-272726-2-qna-xtts.wav | 178 znaków | czas 4.001 s (min 3.577, max 4.243) | audio 12.75 s | RTF 0.314
+[xtts] Wiktor Piekarski/272726-3-numbers.txt -> Wiktor Piekarski-272726-3-numbers-xtts.wav | 169 znaków | czas 7.813 s (min 7.539, max 8.366) | audio 25.65 s | RTF 0.305The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: biorąc pod uwagę twój budżet, to, że często wozisz...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: biorąc pod uwagę twój budżet, to, że często wozisz...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: biorąc pod uwagę twój budżet, to, że często wozisz...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: gdy powiesz „zgłoś problem”, asystent zapyta, w kt...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: gdy powiesz „zgłoś problem”, asystent zapyta, w kt...
+The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio: gdy powiesz „zgłoś problem”, asystent zapyta, w kt...
+
+[xtts] Wiktor Piekarski/272726-4-long.txt -> Wiktor Piekarski-272726-4-long-xtts.wav | 341 znaków | czas 8.332 s (min 6.785, max 8.485) | audio 26.74 s | RTF 0.312
+[xtts] Wiktor Piekarski/272726-5-unique-foreign.txt -> Wiktor Piekarski-272726-5-unique-foreign-xtts.wav | 215 znaków | czas 5.729 s (min 5.683, max 6.258) | audio 19.25 s | RTF 0.298
+[xtts] Wojciech Krzos/276264-1-info.txt -> Wojciech Krzos-276264-1-info-xtts.wav | 76 znaków | czas 2.101 s (min 1.897, max 2.147) | audio 7.14 s | RTF 0.294
+[xtts] Wojciech Krzos/276264-2-qna.txt -> Wojciech Krzos-276264-2-qna-xtts.wav | 79 znaków | czas 2.325 s (min 2.189, max 2.475) | audio 7.84 s | RTF 0.297
+[xtts] Wojciech Krzos/276264-3-numbers.txt -> Wojciech Krzos-276264-3-numbers-xtts.wav | 171 znaków | czas 3.964 s (min 3.634, max 4.315) | audio 12.02 s | RTF 0.330
+[xtts] Wojciech Krzos/276264-4-long.txt -> Wojciech Krzos-276264-4-long-xtts.wav | 219 znaków | czas 5.197 s (min 4.997, max 5.350) | audio 15.00 s | RTF 0.347
+[xtts] Wojciech Krzos/276264-5-unique-foreign.txt -> Wojciech Krzos-276264-5-unique-foreign-xtts.wav | 173 znaków | czas 4.746 s (min 4.615, max 5.548) | audio 15.13 s | RTF 0.314
+[xtts] Yevhenii Lukianenko/294861-1-info.txt -> Yevhenii Lukianenko-294861-1-info-xtts.wav | 79 znaków | czas 2.675 s (min 2.291, max 3.231) | audio 10.94 s | RTF 0.245
+[xtts] Yevhenii Lukianenko/294861-2-qna.txt -> Yevhenii Lukianenko-294861-2-qna-xtts.wav | 108 znaków | czas 2.989 s (min 2.928, max 3.352) | audio 9.77 s | RTF 0.306
+[xtts] Yevhenii Lukianenko/294861-3-numbers.txt -> Yevhenii Lukianenko-294861-3-numbers-xtts.wav | 149 znaków | czas 6.737 s (min 5.760, max 8.393) | audio 26.39 s | RTF 0.255
+[xtts] Yevhenii Lukianenko/294861-4-long.txt -> Yevhenii Lukianenko-294861-4-long-xtts.wav | 251 znaków | czas 5.639 s (min 5.392, max 6.711) | audio 18.02 s | RTF 0.313
+[xtts] Yevhenii Lukianenko/294861-5-unique-foreign.txt -> Yevhenii Lukianenko-294861-5-unique-foreign-xtts.wav | 156 znaków | czas 3.604 s (min 3.573, max 4.123) | audio 11.08 s | RTF 0.325
+[xtts] razem 852.631 s, średnio 5.329 s/plik
+[xtts] pomiary zapisane: /home/zawodev/Dokumenty/github/ik-synteza/output/timings_xtts.csv

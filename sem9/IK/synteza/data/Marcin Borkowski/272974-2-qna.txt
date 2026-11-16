@@ -1,0 +1,1 @@
+Czy na pewno chcesz anulować to zlecenie stałe? Tej operacji nie da się cofnąć. Odpowiedz „tak” albo „nie”.

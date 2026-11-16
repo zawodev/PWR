@@ -1,0 +1,1 @@
+Przed rozpoczęciem procedury upewnij się, że urządzenie jest podłączone do zasilania, a następnie przytrzymaj przycisk uruchamiania przez pięć sekund, aż wskaźnik LED zacznie migać na niebiesko.

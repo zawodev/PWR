@@ -1,0 +1,61 @@
+id,system,plik_tekstu
+S01_A,XTTS-v2,Aleksander Stepaniuk/272644-1-info.txt
+S01_B,Piper,Aleksander Stepaniuk/272644-1-info.txt
+S02_A,Piper,Aleksander Stepaniuk/272644-2-qna.txt
+S02_B,XTTS-v2,Aleksander Stepaniuk/272644-2-qna.txt
+S03_A,XTTS-v2,Aleksander Stepaniuk/272644-3-numbers.txt
+S03_B,Piper,Aleksander Stepaniuk/272644-3-numbers.txt
+S04_A,XTTS-v2,Aleksander Stepaniuk/272644-4-long.txt
+S04_B,Piper,Aleksander Stepaniuk/272644-4-long.txt
+S05_A,Piper,Aleksander Stepaniuk/272644-5-unique-foreign.txt
+S05_B,XTTS-v2,Aleksander Stepaniuk/272644-5-unique-foreign.txt
+S06_A,Piper,Mieszko Szczekla/272688-1-info.txt
+S06_B,XTTS-v2,Mieszko Szczekla/272688-1-info.txt
+S07_A,Piper,Mieszko Szczekla/272688-2-qna.txt
+S07_B,XTTS-v2,Mieszko Szczekla/272688-2-qna.txt
+S08_A,XTTS-v2,Mieszko Szczekla/272688-3-numbers.txt
+S08_B,Piper,Mieszko Szczekla/272688-3-numbers.txt
+S09_A,XTTS-v2,Mieszko Szczekla/272688-4-long.txt
+S09_B,Piper,Mieszko Szczekla/272688-4-long.txt
+S10_A,XTTS-v2,Mieszko Szczekla/272688-5-unique-foreign.txt
+S10_B,Piper,Mieszko Szczekla/272688-5-unique-foreign.txt
+S11_A,XTTS-v2,Yevhenii Lukianenko/294861-1-info.txt
+S11_B,Piper,Yevhenii Lukianenko/294861-1-info.txt
+S12_A,Piper,Igor Wojtun/272652-2-qna.txt
+S12_B,XTTS-v2,Igor Wojtun/272652-2-qna.txt
+S13_A,XTTS-v2,Marcin Borkowski/272974-2-qna.txt
+S13_B,Piper,Marcin Borkowski/272974-2-qna.txt
+S14_A,Piper,Julia Kroczek/266853-3-numbers.txt
+S14_B,XTTS-v2,Julia Kroczek/266853-3-numbers.txt
+S15_A,XTTS-v2,Julia Kroczek/266853-4-long.txt
+S15_B,Piper,Julia Kroczek/266853-4-long.txt
+S16_A,Piper,Kacper Tomczyk/272650-3-numbers.txt
+S16_B,XTTS-v2,Kacper Tomczyk/272650-3-numbers.txt
+S17_A,Piper,Wiktor Kubera/266539-3-numbers.txt
+S17_B,XTTS-v2,Wiktor Kubera/266539-3-numbers.txt
+S18_A,XTTS-v2,Andrzej Manderla/294692-3-numbers.txt
+S18_B,Piper,Andrzej Manderla/294692-3-numbers.txt
+S19_A,Piper,Wiktor Piekarski/272726-3-numbers.txt
+S19_B,XTTS-v2,Wiktor Piekarski/272726-3-numbers.txt
+S20_A,Piper,Kacper Kubiak/272636-4-long.txt
+S20_B,XTTS-v2,Kacper Kubiak/272636-4-long.txt
+S21_A,Piper,Michał Wąsiński/272674-4-long.txt
+S21_B,XTTS-v2,Michał Wąsiński/272674-4-long.txt
+S22_A,Piper,Andrzej Manderla/294692-5-unique-foreign.txt
+S22_B,XTTS-v2,Andrzej Manderla/294692-5-unique-foreign.txt
+S23_A,Piper,Kacper Kubiak/272636-5-unique-foreign.txt
+S23_B,XTTS-v2,Kacper Kubiak/272636-5-unique-foreign.txt
+S24_A,XTTS-v2,Wiktor Piekarski/272726-5-unique-foreign.txt
+S24_B,Piper,Wiktor Piekarski/272726-5-unique-foreign.txt
+S25_A,Piper,Natalia Suda/294696-5-unique-foreign.txt
+S25_B,XTTS-v2,Natalia Suda/294696-5-unique-foreign.txt
+S26_A,XTTS-v2,Additional/add01-3-skroty.txt
+S26_B,Piper,Additional/add01-3-skroty.txt
+S27_A,Piper,Additional/add02-5-akronimy-nazwy.txt
+S27_B,XTTS-v2,Additional/add02-5-akronimy-nazwy.txt
+S28_A,Piper,Additional/add03-3-duze-liczby.txt
+S28_B,XTTS-v2,Additional/add03-3-duze-liczby.txt
+S29_A,Piper,Additional/add04-2-konotacja-intonacja.txt
+S29_B,XTTS-v2,Additional/add04-2-konotacja-intonacja.txt
+S30_A,XTTS-v2,Additional/add05-5-spolszczone.txt
+S30_B,Piper,Additional/add05-5-spolszczone.txt

@@ -1,0 +1,336 @@
+320 nagrań, do transkrypcji: 320
+Loading weights:   0%|          | 0/1259 [00:00<?, ?it/s]Loading weights:  63%|██████▎   | 798/1259 [00:00<00:00, 7979.38it/s]Loading weights: 100%|██████████| 1259/1259 [00:00<00:00, 7983.79it/s]
+[transformers] Passing `generation_config` together with generation-related arguments=({'begin_suppress_tokens', 'suppress_tokens'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+[transformers] Ignoring clean_up_tokenization_spaces=True for BPE tokenizer WhisperTokenizer. The clean_up_tokenization post-processing step is designed for WordPiece tokenizers and is destructive for BPE (it strips spaces before punctuation). Set clean_up_tokenization_spaces=False to suppress this warning, or set clean_up_tokenization_spaces_for_bpe_even_though_it_will_corrupt_output=True to force cleanup anyway.
+[transformers] Whisper did not predict an ending timestamp, which can happen if audio is cut off in the middle of a word. Also make sure WhisperTimeStampLogitsProcessor was used during generation.
+[transformers] Whisper did not predict an ending timestamp, which can happen if audio is cut off in the middle of a word. Also make sure WhisperTimeStampLogitsProcessor was used during generation.
+[transformers] You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+[transformers] Whisper did not predict an ending timestamp, which can happen if audio is cut off in the middle of a word. Also make sure WhisperTimeStampLogitsProcessor was used during generation.
+[1/320] piper Additional-add01-3-skroty-piper.wav (7.6 s): Odbiór zestawu jest możliwy w salonie przy U. Kościuszki 12 lub w punkcie na PL. Brun Wład
+[2/320] piper Additional-add02-5-akronimy-nazwy-piper.wav (3.1 s): Za zestaw zapłacisz kartą VISA, blikiem lub przelewem z PKO BP. W konfiguracji jest proces
+[3/320] piper Additional-add03-3-duze-liczby-piper.wav (2.8 s): W tym roku nasz asystent pomógł skonfigurować 943 492 412 komputerów, a w ubiegłym roku 43
+[4/320] piper Additional-add04-2-konotacja-intonacja-piper.wav (2.3 s): Czy na pewno nie chcesz chłodzenia wodnego? Na pewno nie chcesz chłodzenia wodnego. Ta kar
+[5/320] piper Additional-add05-5-spolszczone-piper.wav (2.5 s): Po UBRadezie RAM-u do 32 GB i aktualizacji BIOS-u możesz spróbować Overslots Kingu. Zainst
+[6/320] piper Aleksander Stepaniuk-272644-1-info-piper.wav (0.6 s): Twoje zamówienie zostało przyjęte do realizacji. Dziękujemy za zakupy!
+[7/320] piper Aleksander Stepaniuk-272644-2-qna-piper.wav (1.0 s): Czy zależy Ci na cichiej pracy komputera? Rozumiem, szukam teraz najcichszych wentylatorów
+[8/320] piper Aleksander Stepaniuk-272644-3-numbers-piper.wav (0.7 s): Twoje zamówienie dotrze do Ciebie 14 listopada między godziną 8 a 12.35.
+[9/320] piper Aleksander Stepaniuk-272644-4-long-piper.wav (1.4 s): Rozumiem Twoje obawy, jednak pomimo faktu, że ten procesor jest nieco droższy, oferuje on 
+[10/320] piper Aleksander Stepaniuk-272644-5-unique-foreign-piper.wav (0.7 s): Do tej konfiguracji pasuje dysk Samsung 980 Pro oraz pamięć Corsair w engrance DDE5.
+[11/320] piper Andrzej Manderla-294692-1-info-piper.wav (1.1 s): Twoje zamówienie zostało przyjęte do realizacji. Laptop Lenovo IdeaPad będzie gotowy do od
+[12/320] piper Andrzej Manderla-294692-2-qna-piper.wav (1.2 s): Czy chcesz dokupić do telefonu etui i szkło ochronne? Mogę też dodać przedłużoną gwarancję
+[13/320] piper Andrzej Manderla-294692-3-numbers-piper.wav (1.4 s): Monitor 27 z rozdzielczością 4K kosztuje 1499,99 zł. Przy zakupie na raty 0% zapłacisz 10 
+[14/320] piper Andrzej Manderla-294692-4-long-piper.wav (2.4 s): Jeśli szukasz aparatu do fotografowania podróży, warto wybrać bezlusterkowiec z wymienną o
+[15/320] piper Andrzej Manderla-294692-5-unique-foreign-piper.wav (1.5 s): Polecamy słuchawki Sony WH-1000XM6 z funkcją Active Noise Cancelling. Można je sparować pr
+[16/320] piper Dariusz Szypka-272678-1-info-piper.wav (0.8 s): Rezerwacja została pomyślnie potwierdzona. Pokój numer 304 jest gotowy na Państwa przyjazd
+[17/320] piper Dariusz Szypka-272678-2-qna-piper.wav (1.2 s): Czy życzą sobie Państwo śniadanie wliczone w cenę pobytu? Tak, śniadanie serwujemy codzien
+[18/320] piper Dariusz Szypka-272678-3-numbers-piper.wav (1.5 s): Doba fotelowa rozpoczyna się 15 maja o godzinie 14.00, a kończy 20 maja o godzinie 11.00. 
+[19/320] piper Dariusz Szypka-272678-4-long-piper.wav (1.5 s): Przypominamy, że strefa SPA oraz basen są otwarte do godziny 22.00. Jednak jeśli planują P
+[20/320] piper Dariusz Szypka-272678-5-unique-foreign-piper.wav (0.9 s): Witamy w hotelu Grand Royal Resort! Serdecznie zapraszamy do skorzystania z usługi Express
+[21/320] piper Hubert Tański-272326-1-info-piper.wav (0.9 s): Twoje zamówienie na płyty meblowe zostało skompletowane. Kod odbioru wysłaliśmy w wiadomoś
+[22/320] piper Hubert Tański-272326-2-qna-piper.wav (1.0 s): Czy chcesz potwierdzić termin przeglądu technicznego pojazdu Marka, czy wolisz połączyć si
+[23/320] piper Hubert Tański-272326-3-numbers-piper.wav (0.9 s): Dostawę profili aluminiowych zaplanowano na 15.11.2026 R.O.GOC 9.30 na budowie NR4.
+[24/320] piper Hubert Tański-272326-4-long-piper.wav (1.5 s): Przed nałożeniem warstwy tynku upewnij się, że ściana jest odpowiednio zaglądowana, a nast
+[25/320] piper Hubert Tański-272326-5-unique-foreign-piper.wav (0.8 s): Nowy model ukośnicy Makita jest już dostępny w systemie zamówień B2B oraz w aplikacji.
+[26/320] piper Igor Wojtun-272652-1-info-piper.wav (1.2 s): Twoje zamówienie na zestaw wycieraczek do Toyota Yaris zostało przyjęte. Kiedy części będą
+[27/320] piper Igor Wojtun-272652-2-qna-piper.wav (1.6 s): Czy potrzebujesz lewego czy prawego lusterka do Toyota CH-R? Prawego. Rozumiem. Czy ma być
+[28/320] piper Igor Wojtun-272652-3-numbers-piper.wav (1.5 s): Zamówienie NERV 482 w liście 16 obejmuje 4 świece płonowych do Toyota Avensis 2016 R. Cena
+[29/320] piper Igor Wojtun-272652-4-long-piper.wav (2.1 s): Jeżeli nie masz pewności, czy wybrana pompa wody będzie pasować do silnika Twojej Toyoty, 
+[30/320] piper Igor Wojtun-272652-5-unique-foreign-piper.wav (1.9 s): Do Lexusa NX 350h mogę sprawdzić części marek Aisin, KIP i NGK, w tym serię Laser i Rigium
+[31/320] piper Jakub Borsuk-272646-1-info-piper.wav (1.7 s): Witaj w cięgarni Bokuś. Dodano wybraną książkę do twojego koszyka. Czy chcesz kontynuować 
+[32/320] piper Jakub Borsuk-272646-2-qna-piper.wav (1.9 s): Szukasz kryminału z wciągającą fabułą na weekend? Polecam najnowszy bestseller, który trzy
+[33/320] piper Jakub Borsuk-272646-3-numbers-piper.wav (2.0 s): Spotkanie autorskie odbędzie się 24 maja 2026 e. Ogoc, 18.00 w naszej fili przy UL, do UB 
+[34/320] piper Jakub Borsuk-272646-4-long-piper.wav (2.5 s): Jeśli lubisz powieści historyczne, które szczegółowo opisują dawne obyczaje, ta pozycja z 
+[35/320] piper Jakub Borsuk-272646-5-unique-foreign-piper.wav (1.5 s): Szukasz książek z gatunku Jung Adult wydanych przez HarperCollins? Mamy w ofercie najnowsz
+[36/320] piper Jakub Śliwka-272649-1-info-piper.wav (0.9 s): Książka Stanisława Lema pod tytułem Niezwyciężony z wydawnictwa literackiego ma 260 stron.
+[37/320] piper Jakub Śliwka-272649-2-qna-piper.wav (0.8 s): Jaki gatunek literacki lubisz najbardziej? Kryminał, fantastykę czy może klasykę literatur
+[38/320] piper Jakub Śliwka-272649-3-numbers-piper.wav (0.7 s): Ta książka kosztuje 39,99 zł, a z kodem rabatowym zaoszczędzi dodatkowe 15%.
+[39/320] piper Jakub Śliwka-272649-4-long-piper.wav (1.8 s): Zgodnie z naszym regulaminem masz 14 dni na zwrot. Towar nie może być uszkodzony. Ważne je
+[40/320] piper Jakub Śliwka-272649-5-unique-foreign-piper.wav (0.7 s): Najnowsza książka Lee Hilda to Exit Strategie, którą napisał razem z synem Andrew Hildem.
+[41/320] piper Jan Powęski-272648-1-info-piper.wav (0.9 s): Przed rozpoczęciem podróży sprawdź poziom oleju silnikowego, płynu chłodniczego oraz ciśni
+[42/320] piper Jan Powęski-272648-2-qna-piper.wav (1.5 s): Czy samochód hybrydowy wymaga ładowania z gniazdka? Nie, klasyczna hybryda ładuje akumulat
+[43/320] piper Jan Powęski-272648-3-numbers-piper.wav (1.2 s): Przegląd okresowy zaleca się wykonywać co 12 miesięcy lub po przejechaniu 15 tys. km. Kosz
+[44/320] piper Jan Powęski-272648-4-long-piper.wav (5.1 s): Wybór samochodu rodzinnego powinien uwzględniać nie tylko cenę zakupu, ale również zużycie
+[45/320] piper Jan Powęski-272648-5-unique-foreign-piper.wav (2.1 s): Podczas tegorocznych targów motoryzacyjnych Deneva International Motor Show zaprezentowano
+[46/320] piper Julia Kroczek-266853-1-info-piper.wav (1.7 s): Nowe akwarium potrzebuje około 4-6 tyk na tezłodwudojrzewania. W tym czasie rozwijają się 
+[47/320] piper Julia Kroczek-266853-2-qna-piper.wav (2.2 s): Woda jest już gotowa na ryby? Jeszcze nie. Woda jest już czysta, ale E na 2 wynosi 0,5 mg 
+[48/320] piper Julia Kroczek-266853-3-numbers-piper.wav (4.1 s): Polecam sklep Akwaświat przy U. Legnicki 58-3 we Wrocławiu. Czynny.pn.pet 1001900.sop 9001
+[49/320] piper Julia Kroczek-266853-4-long-piper.wav (3.3 s): Uwaga! Czy w wyniku NO2 powyżej 0,3mSL nie dokupuj ryb. W 1 tygodniu podmieniaj codziennie
+[50/320] piper Julia Kroczek-266853-5-unique-foreign-piper.wav (3.6 s): Moje topczy akwaria dla początkujących 1. Agwal LED-60 Dian NICT 54L 60x30x30 CM2 Juwel Li
+[51/320] piper Kacper Kawecki-272663-1-info-piper.wav (0.9 s): Twoje zamówienie to 4 duże hamburgery, 4 razy średnie frytki oraz 2 duże kubki coli.
+[52/320] piper Kacper Kawecki-272663-2-qna-piper.wav (1.1 s): Dostępne dodatki to bekon oraz dodatkowy ser. Czy do zamówienia dodać któryś z nich? Czy m[transformers] Whisper did not predict an ending timestamp, which can happen if audio is cut off in the middle of a word. Also make sure WhisperTimeStampLogitsProcessor was used during generation.
+[transformers] Whisper did not predict an ending timestamp, which can happen if audio is cut off in the middle of a word. Also make sure WhisperTimeStampLogitsProcessor was used during generation.
+
+[53/320] piper Kacper Kawecki-272663-3-numbers-piper.wav (1.0 s): Razem to będzie 67,54 zł. Proszę przyłożyć kartę do terminala poniżej, a następnie podjech
+[54/320] piper Kacper Kawecki-272663-4-long-piper.wav (1.6 s): W menu znajdują się burbery, kebaby, dodatki, które są tańsze w zestawie z daniem głównym 
+[55/320] piper Kacper Kawecki-272663-5-unique-foreign-piper.wav (0.9 s): Dostępne sosy to sos czosnkowy, musztarda, ketup, sos tysiąca wysp, jalapeno oraz tzatziki
+[56/320] piper Kacper Kubiak-272636-1-info-piper.wav (1.4 s): Dzień dobry. Z tej strony automatyczny asystent restauracji MC Donald. Obowiązuje dzisiaj 
+[57/320] piper Kacper Kubiak-272636-2-qna-piper.wav (2.0 s): Tak, jak najbardziej. Dostępne są u nas cztery smaki lodów. Truskawkowe, śmietanowe, czeko
+[58/320] piper Kacper Kubiak-272636-3-numbers-piper.wav (2.5 s): Jest obecnie 21 października 2028 roku. Godzina to 5.30 rano. W naszej restauracji oferowa
+[59/320] piper Kacper Kubiak-272636-4-long-piper.wav (6.8 s): Oto historia naszej sieci. Kasta korporatent dawniej kentucky Friat Itzken to amerykańska 
+[60/320] piper Kacper Kubiak-272636-5-unique-foreign-piper.wav (2.0 s): Podsumowując, dwa wrapy el kurczako, jeden dodatkowo z sosem barbeque, drugi z kremem brul
+[61/320] piper Kacper Tomczyk-272650-1-info-piper.wav (0.9 s): Twój bilet na Seans został pomyślnie zarezerwowany. Kod odbioru wysłaliśmy w wiadomości SM
+[62/320] piper Kacper Tomczyk-272650-2-qna-piper.wav (0.9 s): Czy chcesz anulować te subskrypcje i powrócić do menu głównego? Czy potrzebujesz pomocy ko
+[63/320] piper Kacper Tomczyk-272650-3-numbers-piper.wav (0.9 s): Spotkanie z Drem Kowalskim przełożono na 15.03.2026 e. OGOC. 14.30.2024
+[64/320] piper Kacper Tomczyk-272650-4-long-piper.wav (1.6 s): Przed rozpoczęciem procedury upewnij się, że urządzenie jest podłączone do zasilania, a na
+[65/320] piper Kacper Tomczyk-272650-5-unique-foreign-piper.wav (0.5 s): Nowy update aplikacji Spotify jest już dostępny w App Store i Google Play.
+[66/320] piper Karol Zając-276263-1-info-piper.wav (0.8 s): Operacja zakończona sukcesem! Twoje ustawienia prywatności zostały zaktualizowane.
+[67/320] piper Karol Zając-276263-2-qna-piper.wav (0.8 s): Czy chcesz zapisać zmiany przed wyjściem, czy odrzucić wprowadzane modyfikacje?
+[68/320] piper Karol Zając-276263-3-numbers-piper.wav (1.3 s): Od 01.12.2026 ECHE wpłata w Wys. 350,50 zł musi wpłynąć do GOC. 12.00 poteniaje konta poda
+[69/320] piper Karol Zając-276263-4-long-piper.wav (1.4 s): Gdy połączenie z serwerem zostanie zerwane, system automatycznie podejmie próbę ponownej s
+[70/320] piper Karol Zając-276263-5-unique-foreign-piper.wav (0.7 s): Włącz tryb Bluetooth i sparuj słuchawki z urządzeniem MatBok Pro lub iPad.
+[71/320] piper Leszek Kryzar-266877-1-info-piper.wav (0.9 s): Twój bilet został zwrócony. Pieniądze wrócą na konto w ciągu kilku dni roboczych.
+[72/320] piper Leszek Kryzar-266877-2-qna-piper.wav (1.4 s): Na którym peronie stoi pociąg do Gdyni Głównej? Pociąg stoi przy peronie drugim przy torze
+[73/320] piper Leszek Kryzar-266877-3-numbers-piper.wav (2.2 s): Pociąg TLK NS-123 Relacji Gędzierzyn-Koźle, Rzeszów G. Odjeźdź 28.10.2026 E. Ogoc. 23.15. 
+[74/320] piper Leszek Kryzar-266877-4-long-piper.wav (2.1 s): Jeśli pierwszy pociąg spóźni się o więcej niż 20 minut, nie zdążysz na przesiadkę w łodzi 
+[75/320] piper Leszek Kryzar-266877-5-unique-foreign-piper.wav (1.6 s): Bilet na Pendoliną z Katowic do Jeleniej Góry zapłacisz w aplikacji przez GoWePay albo Bli
+[76/320] piper Marcin Borkowski-272974-1-info-piper.wav (0.9 s): Twoja karta została tymczasowo zablokowana. Odblokujesz ją w aplikacji mobilnej w zakładce
+[77/320] piper Marcin Borkowski-272974-2-qna-piper.wav (1.1 s): Czy na pewno chcesz anulować to zlecenie stałe? Tej operacji nie da się cofnąć. Odpowiedz 
+[78/320] piper Marcin Borkowski-272974-3-numbers-piper.wav (1.5 s): Rata kredytu wynosi 1587,34 zł, a RSO to 9,87%. Najbliższa spłata przypada 10.01.2027R. Tw
+[79/320] piper Marcin Borkowski-272974-4-long-piper.wav (2.0 s): Aby zwiększyć limit transakcji internetowych, zaloguj się do bankowości elektronicznej, pr
+[80/320] piper Marcin Borkowski-272974-5-unique-foreign-piper.wav (1.5 s): Do karty możesz dodać Apple Pay lub Google Pay, a płatności zbliżeniowe działają też w zeg
+[81/320] piper Marcin Goliasz-273185-1-info-piper.wav (0.8 s): Państwa rezerwacja na 19 listopada została przyjęta. Proszę przybyć przed godziną 12.
+[82/320] piper Marcin Goliasz-273185-2-qna-piper.wav (2.0 s): Przepraszam najmocniej nie usłyszałem. Chcą Państwo pokój czteroosobowy na tydzień zaczyna
+[83/320] piper Marcin Goliasz-273185-3-numbers-piper.wav (1.4 s): Dzień dobry, czy Państwa hotel obsługuje zameldowanie w godzinach popołudniowych? Bylibyśm
+[84/320] piper Marcin Goliasz-273185-4-long-piper.wav (2.9 s): Droga Pani, pełna karta alergenów jest dostępna na stronie naszej restauracji, jak i dostę
+[85/320] piper Marcin Goliasz-273185-5-unique-foreign-piper.wav (1.9 s): Jeżeli chodzi o dojazd z lotniska, to możemy Państwu zaproponować szutkę bezpośrednio do h
+[86/320] piper Mateusz Dejewski-272691-1-info-piper.wav (0.9 s): Witamy w hotelu Gwiazda Morza. Śniadanie serwujemy od siódmej do dziesiątej.
+[87/320] piper Mateusz Dejewski-272691-2-qna-piper.wav (1.0 s): Czy w pakiecie All-Inclusive są napoje alkoholowe? Tak, są dostępne w barze głównym od 10 
+[88/320] piper Mateusz Dejewski-272691-3-numbers-piper.wav (1.8 s): Państwa pobyt potrwa od 15.07.2026 do 22.07.2026, a w pokoju NR 214 można się zameldować j
+[89/320] piper Mateusz Dejewski-272691-4-long-piper.wav (4.0 s): Jeśli chcą Państwo skorzystać z pakietu All-Inclusive, wystarczy odebrać opaskę w recepcji
+[90/320] piper Mateusz Dejewski-272691-5-unique-foreign-piper.wav (2.2 s): Zapraszamy do Bech Barona Drinka, a po nim do strefy Spa & Wellness w hotelu Gwiazda Morza
+[91/320] piper Mateusz Gawłowski-264463-1-info-piper.wav (1.1 s): Znalazłem cztery zamienniki filtra kabinowego pasujące do Twojego samochodu. Dwa z nich są
+[92/320] piper Mateusz Gawłowski-264463-2-qna-piper.wav (1.5 s): Czy szukasz klocków hamulcowych na przednią czy na tylną oś? Na przednią? W takim razie po
+[93/320] piper Mateusz Gawłowski-264463-3-numbers-piper.wav (1.9 s): Filtr kabinowy NR-CAT 8713950100 kosztuje 89,90 zł netto, czyli 110,58 zł z VAT. Na stanie
+[94/320] piper Mateusz Gawłowski-264463-4-long-piper.wav (2.7 s): Ponieważ oryginalne tarcze hamulcowe do Lexusa RX450H są chwilowo niedostępne w magazynie 
+[95/320] piper Mateusz Gawłowski-264463-5-unique-foreign-piper.wav (2.0 s): Do Toyota RAV4 Hybrid mają oryginalne części Toyota Genuine Parts, a z zamienników klocki 
+[96/320] piper Michał Sosnowski-272642-1-info-piper.wav (1.3 s): Znalazłem 12 przepisów na szarlotkę. Najwyżej oceniany z nich wymaga godziny pieczenia i 9
+[97/320] piper Michał Sosnowski-272642-2-qna-piper.wav (1.4 s): Ile potrzeba cukru do tego ciasta? Do ciasta potrzebujesz 150 g cukru, a do kruszonki doda
+[98/320] piper Michał Sosnowski-272642-3-numbers-piper.wav (2.0 s): Ciasto piecz około 50 min w temp, 175 stopni C, a po wyjęciu z piekarnika zostaw je w form
+[99/320] piper Michał Sosnowski-272642-4-long-piper.wav (1.8 s): Znalazłem kilka przepisów, które pasują do składników jakie masz w lodówce, ale tylko dwa 
+[100/320] piper Michał Sosnowski-272642-5-unique-foreign-piper.wav (2.2 s): Znalazłem przepis na ciasto z Sahartortem z Wiednia oraz na tiramisu z Mastrapone z Wenecj
+[101/320] piper Michał Wąsiński-272674-1-info-piper.wav (0.8 s): Usmaż placki na złoto i podaj ze śmietaną lub ulubionym sosem na pyszny obiad.
+[102/320] piper Michał Wąsiński-272674-2-qna-piper.wav (0.9 s): Czy danie, które chcesz przyrządzić może zawierać mięso? Czy interesuje Cię wersja wegetar
+[103/320] piper Michał Wąsiński-272674-3-numbers-piper.wav (2.1 s): Brytfanę zgęsią wstaw do dobrze nagrzanego piekarnika. Piecz ją przez 25 minut w 220 stopn
+[104/320] piper Michał Wąsiński-272674-4-long-piper.wav (8.2 s): Rozpoślij od starannego płukania świeżych warzyw pod bieżącą wodą, a następnie osusz je de
+[105/320] piper Michał Wąsiński-272674-5-unique-foreign-piper.wav (3.5 s): Marynowane jajka Aitsukę tamago Aitama najczęściej podaje się jako dodatek do ramenu, gdzi
+[106/320] piper Mieszko Szczekla-272688-1-info-piper.wav (0.6 s): Uwaga! Wybrana płyta główna nie jest godna z tym procesorem.
+[107/320] piper Mieszko Szczekla-272688-2-qna-piper.wav (0.9 s): Czy na pewno chcesz usunąć kartę graficzną z koszyka? Produkt został usunięty z Twojego ko
+[108/320] piper Mieszko Szczekla-272688-3-numbers-piper.wav (0.4 s): Cena tego zestawu wynosi 4999 zł.
+[109/320] piper Mieszko Szczekla-272688-4-long-piper.wav (1.4 s): Wybrana przez Ciebie płyta główna obsługuje tylko pamięci DDL4, dlatego wybrane moduły DDL
+[110/320] piper Mieszko Szczekla-272688-5-unique-foreign-piper.wav (0.7 s): Płyta główna Gigabyte X570 Aorus Elite obsługuje standard PCI Express czwartej generacji.
+[111/320] piper Myroslav Hryniuka-294863-1-info-piper.wav (0.8 s): Winda w budynku C13 jest dziś nieczynna. Skorzystaj z podjazdu od strony parkingu.
+[112/320] piper Myroslav Hryniuka-294863-2-qna-piper.wav (0.9 s): Czy w budynku D20 działa winda? Tak, winda działa, a wejście bez progów znajduje się od st
+[113/320] piper Myroslav Hryniuka-294863-3-numbers-piper.wav (0.9 s): Zgłoszenie NF1055 przyjęto 12.11.2026 e. ogoc. 14.30. Naprawa potrwa około 3 dni.
+[114/320] piper Myroslav Hryniuka-294863-4-long-piper.wav (1.4 s): Jeżeli poruszasz się na wózku i chcesz dostać się do biblioteki, wybierz wejście od ulicy 
+[115/320] piper Myroslav Hryniuka-294863-5-unique-foreign-piper.wav (1.7 s): Połącz się z siecią e-doron, otwórz gołbę MAPS i sprawdź trasę do budynku Politechniki Wro
+[116/320] piper Natalia Malinowska-272669-1-info-piper.wav (0.7 s): Wizyta została zapisana. Sprawdź podsumowanie przed dodaniem go do dokumentacji pacjenta.
+[117/320] piper Natalia Malinowska-272669-2-qna-piper.wav (0.7 s): Od kiedy pojawia się kaszel? Od ubiegłego piątku, głównie wieczorem.
+[118/320] piper Natalia Malinowska-272669-3-numbers-piper.wav (0.8 s): Temperatura wynosi 38,2 stopnia. Objawy zaczęły się 12 listopada o godzinie 6.30.
+[119/320] piper Natalia Malinowska-272669-4-long-piper.wav (1.9 s): Pacjentka zgłasza okresowe zawroty głowy, które pojawiają się po szybkim wstaniu z łóżka, 
+[120/320] piper Natalia Malinowska-272669-5-unique-foreign-piper.wav (1.5 s): W systemie MedNotę zapisano, że pacjentka wykonała badanie USG w Centrum Diagnostyka Plus.
+[121/320] piper Natalia Marszałek-272683-1-info-piper.wav (1.6 s): Bateria we wkrętarce jest w pełni naładowana i gotowa do pracy. Uwaga! Lutownica osiągnęła
+[122/320] piper Natalia Marszałek-272683-2-qna-piper.wav (1.4 s): Czy na pewno odłączyłeś zasilanie w skrzynce bezpieczników przed demontażem gniazdka? Tak,
+[123/320] piper Natalia Marszałek-272683-3-numbers-piper.wav (2.2 s): Do montażu półki potrzebujesz dokładnie 12 wkrętów o wymiarach 4,5x60 mm oraz wiertła NE8.
+[124/320] piper Natalia Marszałek-272683-4-long-piper.wav (2.4 s): Zanim przystąpisz do nakładania drugiej warstwy lakieru bezbarwnego, upewnij się, że poprz
+[125/320] piper Natalia Marszałek-272683-5-unique-foreign-piper.wav (1.9 s): Wyszukałem w bazie instrukcję obsługi wyrzynarki Bosch PST900PL oraz zamiennik akumulatora
+[126/320] piper Natalia Suda-294696-1-info-piper.wav (1.5 s): Dziękuję za dołączenie do rozmowy. Nasze spotkanie potrwa około 20 minut. Na początku zada
+[127/320] piper Natalia Suda-294696-2-qna-piper.wav (0.9 s): Co skłoniło Cię do aplikowania na to stanowisko? Czy jest coś szczególnego w naszej firmie
+[128/320] piper Natalia Suda-294696-3-numbers-piper.wav (1.8 s): W ogłoszeniu o pracę wskazaliśmy wynagrodzenie w przedziale od 6500 do 8500 zł brutto. Pra
+[129/320] piper Natalia Suda-294696-4-long-piper.wav (2.6 s): Na tym stanowisku szczególnie ważna jest umiejętność pracy zespołowej, samodzielnego rozwi
+[130/320] piper Natalia Suda-294696-5-unique-foreign-piper.wav (2.4 s): Wspomniała Pani o znajomości języka angielskiego na poziomie B2 oraz doświadczeniu w pracy
+[131/320] piper Piotr Bogacki-272753-1-info-piper.wav (0.8 s): Uwaga! Pijanie wód mineralnych będzie jutro nieczynne ze względu na trwające prace remonto
+[132/320] piper Piotr Bogacki-272753-2-qna-piper.wav (1.1 s): Jakie interesują Pana sporty zimowe? Rozumiem. W okolicy znajduje się 6 tras narciarskich 
+[133/320] piper Piotr Bogacki-272753-3-numbers-piper.wav (1.3 s): W piątek 13 listopada o godzinie 19 odbędzie się koncert relaksacyjny, na który zapraszamy
+[134/320] piper Piotr Bogacki-272753-4-long-piper.wav (1.6 s): Szlak jest obecnie remontowany, przez co jest wyłączony z ruchu, natomiast kolejka gondolo
+[135/320] piper Piotr Bogacki-272753-5-unique-foreign-piper.wav (1.1 s): W restauracji Lingua Franca odbędzie się dzisiaj wieczór włoski. Serwowane będzie penne al
+[136/320] piper Piotr Strycharczyk-272995-1-info-piper.wav (1.2 s): Pociąg Intercity Sobieski do Krakowa Głównego odjedzie z peronu 3 przy torze 5. Uwaga! Poc
+[137/320] piper Piotr Strycharczyk-272995-2-qna-piper.wav (1.1 s): Czy chcesz kupić bilet w obie strony? W drodze powrotnej zostały wolne miejsca tylko w wag
+[138/320] piper Piotr Strycharczyk-272995-3-numbers-piper.wav (1.9 s): Bilet normalny na trasie Wrocław-DL. Gdańsk-DL kosztuje 189,50 zł. Odjazd 23.12.2026 R.O.G
+[139/320] piper Piotr Strycharczyk-272995-4-long-piper.wav (1.9 s): Jeżeli przysiadka w Poznaniu okaże się za krótka, bo pierwszy pociąg przyjedzie z opóźnien
+[140/320] piper Piotr Strycharczyk-272995-5-unique-foreign-piper.wav (1.6 s): Na lotnisko Chopina dojedziesz linią S2 szybkiej kolei miejskiej. Jeśli lecisz ranerem alb
+[141/320] piper Wiktor Kubera-266539-1-info-piper.wav (0.9 s): Pociąg do opola głównego odjedzie zgodnie z rozkładem. Prosimy o zachowanie ostrożności pr
+[142/320] piper Wiktor Kubera-266539-2-qna-piper.wav (1.5 s): Czy pociąg do Krakowa o 16.20 jest opóźniony? Tak, opóźnienie wynosi około 10 minut. Czy c
+[143/320] piper Wiktor Kubera-266539-3-numbers-piper.wav (1.7 s): Bilety ulgowe 37% na IC148 Wrocław Giełch. Warszawa Centr 15-11-2026 R.O.D. 7,55 W.C.M. 42
+[144/320] piper Wiktor Kubera-266539-4-long-piper.wav (2.3 s): Najbliższy pociąg z Wrocławia Głównego do Poznania Głównego odjeżdża za kwadrans, ale poni
+[145/320] piper Wiktor Kubera-266539-5-unique-foreign-piper.wav (1.5 s): Ekspres Intercity Premium do Gdańska głównego ma wagon Warsmenu o ciężcie lacarte, a w Sop
+[146/320] piper Wiktor Piekarski-272726-1-info-piper.wav (1.3 s): Znalazłem trzy modele, które spełniają Twoje kryteria. Wyniki posortowałem od najtańszego.
+[147/320] piper Wiktor Piekarski-272726-2-qna-piper.wav (1.7 s): Czy wolisz napęd hybrydowy czy w pełni elektryczny? Jeśli jeździsz głównie po mieście, pol
+[148/320] piper Wiktor Piekarski-272726-3-numbers-piper.wav (1.6 s): Toyota Corolla 1.8 Hibis 2024 R kosztuje 129 900 zł i spala średnio 4,5 l z też stokami. J
+[149/320] piper Wiktor Piekarski-272726-4-long-piper.wav (2.7 s): Biorąc pod uwagę Twój budżet, to że często wożysz dzieci oraz to, że w weekendy wyjeżdżasz
+[150/320] piper Wiktor Piekarski-272726-5-unique-foreign-piper.wav (1.6 s): Peugeot 3008 ma cockpit i cockpit, a Hyundai Tucson obsługuje Apple CarPlay i Android Auto
+[151/320] piper Wojciech Krzos-276264-1-info-piper.wav (0.8 s): Rozpoczynamy nagrywanie wizyty. Możesz teraz opisać główny problem pacjenta.
+[152/320] piper Wojciech Krzos-276264-2-qna-piper.wav (0.7 s): Czy odczuwa pan ból podczas chodzenia? Tak, najbardziej boli mnie prawe kolano.
+[153/320] piper Wojciech Krzos-276264-3-numbers-piper.wav (1.0 s): Pacjent przyjmuje lek dwa razy dziennie, o 8 rano i o 20. Kontrola została zaplanowana na 
+[154/320] piper Wojciech Krzos-276264-4-long-piper.wav (1.7 s): Od około 3 tygodni pacjent odczuwa narastające zmęczenie, które nasila się po południu, a 
+[155/320] piper Wojciech Krzos-276264-5-unique-foreign-piper.wav (1.5 s): Pacjent przyniósł wynik badania z placówki Medicower przy ulicy Grunwaldzkiej. W dokumenta
+[156/320] piper Yevhenii Lukianenko-294861-1-info-piper.wav (0.8 s): Uwaga! Podjazd przy wejściu do budynku B4 jest oblodzony. Zachowaj ostrożność!
+[157/320] piper Yevhenii Lukianenko-294861-2-qna-piper.wav (0.9 s): Czy mogę zgłosić problem anonimowo? Oczywiście! Wystarczy, że nie podasz swojego imienia a
+[158/320] piper Yevhenii Lukianenko-294861-3-numbers-piper.wav (1.4 s): Od 1 grudnia do 6 stycznia winda w budynku C6 będzie trzymna tylko w Goc. 800 16 00 TJ prz
+[159/320] piper Yevhenii Lukianenko-294861-4-long-piper.wav (1.8 s): Gdy powiesz zgłoś problem, asystent zapyta, w którym budynku się znajdujesz, czego dotyczy
+[160/320] piper Yevhenii Lukianenko-294861-5-unique-foreign-piper.wav (1.4 s): Przy wejściu do geocentrum stoi FOT Trusk, a obok jest parking dla hulajnóg Bolt i Lima. D
+[161/320] xtts Additional-add01-3-skroty-xtts.wav (5.0 s): Odbiór zestawu jest możliwy w salonie przy UL. Kościuszki 12 lub w punkcie na pleuno. Grun
+[162/320] xtts Additional-add02-5-akronimy-nazwy-xtts.wav (3.7 s): Za zestaw zapłacisz kartą VISA, blikiem lub przelewem z PKOB-u przytykszyń. W konfiguracji
+[163/320] xtts Additional-add03-3-duze-liczby-xtts.wav (3.0 s): W tym roku nasz asystent pomógł skonfigurować 943 490, 2 412 komputerów, a w ubiegłym roku
+[164/320] xtts Additional-add04-2-konotacja-intonacja-xtts.wav (2.5 s): Czy na pewno nie chcesz chłodzenia wodnego? Na pewno nie chcesz chłodzenia wodnego, Onigyn
+[165/320] xtts Additional-add05-5-spolszczone-xtts.wav (2.3 s): Po upgrade z RAM-u do 32 GB i aktualizacji BIOS-u możesz spróbować overclockingu. Zainstal
+[166/320] xtts Aleksander Stepaniuk-272644-1-info-xtts.wav (0.6 s): Twoje zamówienie zostało przyjęte do realizacji. Dziękujemy za zakupy.
+[167/320] xtts Aleksander Stepaniuk-272644-2-qna-xtts.wav (1.1 s): Czy zależy ci na cichej pracy komputera? Rozumiem. Szukam teraz najciwszych wentylatorów i
+[168/320] xtts Aleksander Stepaniuk-272644-3-numbers-xtts.wav (0.7 s): Twoje zamówienie dotrze do ciebie 14 listopada, między godziną 8 a 12.35.
+[169/320] xtts Aleksander Stepaniuk-272644-4-long-xtts.wav (1.5 s): Rozumiem twoje obawy, jednak pomimo faktu, że ten procesor jest nieco droższy, oferuje on 
+[170/320] xtts Aleksander Stepaniuk-272644-5-unique-foreign-xtts.wav (0.7 s): Do tej konfiguracji pasuje dysk Samsung 980 Pro oraz pamięć Corsair Vengance DDR5.
+[171/320] xtts Andrzej Manderla-294692-1-info-xtts.wav (1.1 s): Twoje zamówienie zostało przyjęte do realizacji. Laptop Lenovo IdeaPad będzie gotowy do od
+[172/320] xtts Andrzej Manderla-294692-2-qna-xtts.wav (1.2 s): Czy chcesz dokupić do telefonu etui i szkło ochronne? Mogę też dodać przedłużoną gwarancję
+[173/320] xtts Andrzej Manderla-294692-3-numbers-xtts.wav (1.7 s): Monitor 27 z rozdzielczością 4 kosztuje 1499,99 zł. Przy zakupie na raty 0% zapłacisz 10 r
+[174/320] xtts Andrzej Manderla-294692-4-long-xtts.wav (2.4 s): Jeśli szukasz aparatu do fotografowania podróży, warto wybrać bezlusterkowiec z wymienną o
+[175/320] xtts Andrzej Manderla-294692-5-unique-foreign-xtts.wav (1.4 s): Polecamy słuchawki Sony World Windchance M6 z funkcją Active Noise Cancelling. Można je sp
+[176/320] xtts Dariusz Szypka-272678-1-info-xtts.wav (0.8 s): Rezerwacja została pomyślnie potwierdzona. Pokój numer 304 jest gotowy na Państwa przyjazd
+[177/320] xtts Dariusz Szypka-272678-2-qna-xtts.wav (1.3 s): Czy życzą sobie Państwo śniadanie wliczone w cenę pobytu? Tak, śniadanie serwujemy codzien
+[178/320] xtts Dariusz Szypka-272678-3-numbers-xtts.wav (1.3 s): Doba hotelowa rozpoczyna się 15 maja o godzinie 14.00, a kończy 20 maja o godzinie 11.00. 
+[179/320] xtts Dariusz Szypka-272678-4-long-xtts.wav (1.5 s): Przypominamy, że strefa spa oraz basen są otwarte do godziny 22.00. Jednak jeśli planują P
+[180/320] xtts Dariusz Szypka-272678-5-unique-foreign-xtts.wav (0.9 s): Witamy w hotelu Grand Royal Resort. Serdecznie zapraszamy do skorzystania z usługi Express
+[181/320] xtts Hubert Tański-272326-1-info-xtts.wav (0.9 s): Twoje zamówienie na płyty meblowe zostało skompletowane. Kod odbioru wysłaliśmy wiadomości
+[182/320] xtts Hubert Tański-272326-2-qna-xtts.wav (1.0 s): Czy chcesz potwierdzić termin przeglądu technicznego pojazdu? Marka. Czy wolisz połączyć s
+[183/320] xtts Hubert Tański-272326-3-numbers-xtts.wav (1.0 s): Dostawę profili aluminiowych zaplanowano na 15,11.2026 R. Ogodzenie. 9.30 na budowie nr 4.
+[184/320] xtts Hubert Tański-272326-4-long-xtts.wav (1.5 s): Przed nałożeniem warstwy tynku upewnij się, że ściana jest odpowiednio zagruntowana. A nas
+[185/320] xtts Hubert Tański-272326-5-unique-foreign-xtts.wav (0.8 s): Nowy model ukośnicy Makita jest już dostępny w systemie zamówień Bydwab oraz w aplikacji.
+[186/320] xtts Igor Wojtun-272652-1-info-xtts.wav (1.2 s): Twoje zamówienie na zestaw wycieraczek do Toyota Yaris zostało przyjęte. Kiedy części będą
+[187/320] xtts Igor Wojtun-272652-2-qna-xtts.wav (1.7 s): Czy potrzebujesz lewego, czy prawego lusterka do Toyota Cech? Prawego? Rozumiem. Czy ma by
+[188/320] xtts Igor Wojtun-272652-3-numbers-xtts.wav (1.8 s): Zamówienie NONER 48216 obejmuje 4 szt. Świec zapłonowych do Toyota Avensis z 2016 R. Cena 
+[189/320] xtts Igor Wojtun-272652-4-long-xtts.wav (2.2 s): Jeżeli nie masz pewności, czy wybrana pompa wody będzie pasować do silnika Twojej Toyota, 
+[190/320] xtts Igor Wojtun-272652-5-unique-foreign-xtts.wav (1.8 s): Do Lexusa Now z 350 mogę sprawdzić części marek iShim, Kip, Ink, w tym serię Laser Iridium
+[191/320] xtts Jakub Borsuk-272646-1-info-xtts.wav (1.8 s): Witaj w księgarni Bukuś! Dodano wybraną książkę do twojego koszyka. Czy chcesz kontynuować
+[192/320] xtts Jakub Borsuk-272646-2-qna-xtts.wav (1.8 s): Szukasz kryminału z wciągającą fabułą na weekend? Polecam najnowszy bestseller, który trzy
+[193/320] xtts Jakub Borsuk-272646-3-numbers-xtts.wav (2.0 s): Spotkanie autorskie odbędzie się 24 maja 2026 r. Ogodzinuń? 18. Zero w naszej filii przy U
+[194/320] xtts Jakub Borsuk-272646-4-long-xtts.wav (2.5 s): Jeśli lubisz powieści historyczne, które szczegółowo opisują dawne obyczaje, ta pozycja z 
+[195/320] xtts Jakub Borsuk-272646-5-unique-foreign-xtts.wav (1.6 s): Szukasz książek z gatunku Young Adult wydanych przez HarperCollins? Mamy w ofercie najnows
+[196/320] xtts Jakub Śliwka-272649-1-info-xtts.wav (1.0 s): Książka Stanisława Lema pod tytułem Niezwyciężony. Z wydawnictwa literackiego. Ma 260 stro
+[197/320] xtts Jakub Śliwka-272649-2-qna-xtts.wav (1.0 s): Jaki gatunek literacki lubisz najbardziej? Kryminał, fantastykę, czy może klasykę literatu
+[198/320] xtts Jakub Śliwka-272649-3-numbers-xtts.wav (0.8 s): Ta książka kosztuje 39,99 zł, a z kodem rabatowym zaoszczędzisz dodatkowe 15%.
+[199/320] xtts Jakub Śliwka-272649-4-long-xtts.wav (1.9 s): Zgodnie z naszym regulaminem masz 14 dni na zwrot pontu. Towar nie może być uszkodzony. Wa
+[200/320] xtts Jakub Śliwka-272649-5-unique-foreign-xtts.wav (0.8 s): Najnowsza książka Lee, Silda to exit strategii, którą napisał razem z synem, Andrew Chydem
+[201/320] xtts Jan Powęski-272648-1-info-xtts.wav (0.9 s): Przed rozpoczęciem podróży sprawdź poziom oleju silnikowego, płynu chłodniczego oraz ciśni
+[202/320] xtts Jan Powęski-272648-2-qna-xtts.wav (1.6 s): Czy samochód hybrydowy wymaga ładowania z gniazdka? Nie. Klasyczna hybryda ładuje akumulat
+[203/320] xtts Jan Powęski-272648-3-numbers-xtts.wav (1.4 s): Przegląd okresowy zaleca się wykonywać co 12 miesięcy lub po przejechaniu 15,0 km. Koszt w
+[204/320] xtts Jan Powęski-272648-4-long-xtts.wav (5.3 s): Wybór samochodu rodzinnego powinien uwzględniać nie tylko cenę zakupu, ale również zużycie
+[205/320] xtts Jan Powęski-272648-5-unique-foreign-xtts.wav (2.1 s): Podczas tegorocznych targów motoryzacyjnych Geneva International Motor Show zaprezentowano
+[206/320] xtts Julia Kroczek-266853-1-info-xtts.wav (1.7 s): Nowe akwarium potrzebuje ok. 4-6 tyg. Na tak zamantyjał. Dojrzewanie. W tym czasie rozwija
+[207/320] xtts Julia Kroczek-266853-2-qna-xtts.wav (2.2 s): Woda jest już gotowa na ryby? Jeszcze nie. Woda jest już czysta, ale no wynosi 0,5 muglent
+[208/320] xtts Julia Kroczek-266853-3-numbers-xtts.wav (4.3 s): Polecam sklep Akwa Świat przy Ul. Legnickiej 58.3 we Wrocławiu. Czynny pnięta. Ptyn. Pani [transformers] Whisper did not predict an ending timestamp, which can happen if audio is cut off in the middle of a word. Also make sure WhisperTimeStampLogitsProcessor was used during generation.
+[transformers] Whisper did not predict an ending timestamp, which can happen if audio is cut off in the middle of a word. Also make sure WhisperTimeStampLogitsProcessor was used during generation.
+[transformers] Whisper did not predict an ending timestamp, which can happen if audio is cut off in the middle of a word. Also make sure WhisperTimeStampLogitsProcessor was used during generation.
+
+[209/320] xtts Julia Kroczek-266853-4-long-xtts.wav (3.2 s): Uwaga! Przy wyniku no powyżej 0,3 mglel nie dokupuj ryb. W 1 tygodniu podmieniaj codzienni
+[210/320] xtts Julia Kroczek-266853-5-unique-foreign-xtts.wav (3.3 s): Moje top 3 akwaria dla początkujących. 1. Aqualedy 60 Day i Night 54L 60AU30AU30 Cymetros 
+[211/320] xtts Kacper Kawecki-272663-1-info-xtts.wav (0.9 s): Twoje zamówienie to cztery duże hamburgery, cztery razy średnie frytki oraz dwa duże kubki
+[212/320] xtts Kacper Kawecki-272663-2-qna-xtts.wav (1.0 s): Dostępne dodatki to bekon oraz dodatkowy ser. Czy do zamówienia dodać któryś z nich? Czy m
+[213/320] xtts Kacper Kawecki-272663-3-numbers-xtts.wav (1.1 s): Razem to będzie 67,54 zł. Proszę przyłożyć kartę do terminala poniżej, a następnie podjech
+[214/320] xtts Kacper Kawecki-272663-4-long-xtts.wav (1.6 s): W menu znajdują się burgery, kebaby, dodatki, które są tańsze w zestawie z daniem głównym 
+[215/320] xtts Kacper Kawecki-272663-5-unique-foreign-xtts.wav (1.0 s): Dostępne sosy to sos czosnowy, musztarda, ket-hub, sos tysiąca wysp, jalapeno oraz zaciki.
+[216/320] xtts Kacper Kubiak-272636-1-info-xtts.wav (1.8 s): Dzień dobry! Z tej strony automatyczny asystent rezuracji McDonald's. Obowiązuje dzisiaj u
+[217/320] xtts Kacper Kubiak-272636-2-qna-xtts.wav (2.0 s): Tak jak najbardziej. Dostępne są u nas cztery smaki lodów. Truskawkowe, śmietanowe, czekol
+[218/320] xtts Kacper Kubiak-272636-3-numbers-xtts.wav (3.1 s): Jest obecnie 21 października 2028 roku. Godzina to 5.30 rano. W naszej restauracji oferowa
+[219/320] xtts Kacper Kubiak-272636-4-long-xtts.wav (6.6 s): Oto historia naszej sieci. Kefcy Corporation, dawniej kentucki Fried Chicken, to amerykańs
+[220/320] xtts Kacper Kubiak-272636-5-unique-foreign-xtts.wav (2.1 s): Podsumowując. Dwa wrapelle kurczako, jeden dodatkowo sosem barbec, drugi z crème brûlée, j
+[221/320] xtts Kacper Tomczyk-272650-1-info-xtts.wav (0.9 s): Twój bilet na seans został po myszy niezarezerwowany. Kod odbioru wysłaliśmy w wiadomości 
+[222/320] xtts Kacper Tomczyk-272650-2-qna-xtts.wav (0.9 s): Czy chcesz anulować tę subskrypcję i powrócić do menu głównego? Czy potrzebujesz pomocy ko
+[223/320] xtts Kacper Tomczyk-272650-3-numbers-xtts.wav (1.1 s): Spotkanie z Drem Kowalskim przełożono na 15,032 1026. R. O. Godz. 14.30 w NO. S. 204.
+[224/320] xtts Kacper Tomczyk-272650-4-long-xtts.wav (1.5 s): Przed rozpoczęciem procedury upewnij się, że urządzenie jest podłączone do zasilania, a na
+[225/320] xtts Kacper Tomczyk-272650-5-unique-foreign-xtts.wav (0.5 s): Nowy update aplikacji Spotify jest już dostępny w App Store i Google Play.
+[226/320] xtts Karol Zając-276263-1-info-xtts.wav (0.8 s): Operacja zakończona sukcesem. Twoje ustawienia prywatności zostały zaktualizowane.
+[227/320] xtts Karol Zając-276263-2-qna-xtts.wav (0.7 s): Czy chcesz zapisać zmiany przed wyjściem czy odrzucić wprowadzane modyfikacje?
+[228/320] xtts Karol Zając-276263-3-numbers-xtts.wav (1.6 s): Od 1,12 do 2026 R. Wpłata w Wys. 350 zł 50 gr. Musi wpłynąć do godzintni. 12.0 pod nonerty
+[229/320] xtts Karol Zając-276263-4-long-xtts.wav (1.4 s): Gdy połączenie z serwerem zostanie zerwane, system automatycznie podejmie próbę ponownej s
+[230/320] xtts Karol Zając-276263-5-unique-foreign-xtts.wav (0.7 s): Włącz tryb Bluetooth i sparuj słuchawki z urządzeniem MacBook, Pro lub iPad.
+[231/320] xtts Leszek Kryzar-266877-1-info-xtts.wav (0.9 s): Twój bilet został zwrócony. Pieniądze wrócą na konto w ciągu kilku dni roboczych.
+[232/320] xtts Leszek Kryzar-266877-2-qna-xtts.wav (1.3 s): Na którym peronie stoi pociąg do Gdyni Głównej? Pociąg stoi przy peronie drugim przy torze
+[233/320] xtts Leszek Kryzar-266877-3-numbers-xtts.wav (2.4 s): Pociąg Tlok nr 100, 23 relacji, Kędzierzyn-Koźle, Rzeszów Gł. Odjedzie 28,1 2026 R. Ogo dz
+[234/320] xtts Leszek Kryzar-266877-4-long-xtts.wav (2.6 s): Jeśli pierwszy pociąg spóźni się o więcej niż 20 minut, nie zdążysz na przesiadkę w łodzi 
+[235/320] xtts Leszek Kryzar-266877-5-unique-foreign-xtts.wav (1.5 s): Bilet na Pendolino z Katowic do Jeleniej Góry zapłacisz w aplikacji przez Google Pay albo 
+[236/320] xtts Marcin Borkowski-272974-1-info-xtts.wav (0.9 s): Twoja karta została tymczasowo zablokowana. Odblokujesz ją w aplikacji mobilnej w zakładce
+[237/320] xtts Marcin Borkowski-272974-2-qna-xtts.wav (1.0 s): Czy na pewno chcesz anulować to zlecenie stałe? Tej operacji nie da się cofnąć. Odpowiedz 
+[238/320] xtts Marcin Borkowski-272974-3-numbers-xtts.wav (1.5 s): Rata kredytu wynosi 1287,34 zł, a RSO to 9,87%. Najbliższa spłata przypada 10,01-2027-R. T
+[239/320] xtts Marcin Borkowski-272974-4-long-xtts.wav (1.9 s): Aby zwiększyć limit transakcji internetowych, zaloguj się do bankowości elektronicznej, pr
+[240/320] xtts Marcin Borkowski-272974-5-unique-foreign-xtts.wav (1.5 s): Do karty możesz dodać Apple Pay lub Google Pay, a płatności zbliżeniowe działają też w zeg
+[241/320] xtts Marcin Goliasz-273185-1-info-xtts.wav (0.8 s): Państwa rezerwacja na 19 listopada została przyjęta. Proszę przybyć przed godziną 12.
+[242/320] xtts Marcin Goliasz-273185-2-qna-xtts.wav (1.9 s): Przepraszam, najmocniej nie usłyszałem. Chcą państwo pokój czteroosobowy na tydzień, zaczy
+[243/320] xtts Marcin Goliasz-273185-3-numbers-xtts.wav (1.2 s): Dzień dobry. Czy państwa hotel obsługuje zameldowanie w godzinach popołudniowych? Bylibyśm
+[244/320] xtts Marcin Goliasz-273185-4-long-xtts.wav (2.8 s): Droga Pani, pełna karta alergenów jest dostępna na stronie naszej restauracji, jak i dostę
+[245/320] xtts Marcin Goliasz-273185-5-unique-foreign-xtts.wav (1.9 s): Jeżeli chodzi o dojazd z lotniska, to możemy Państwu zaproponować szatlę bezpośrednio do h
+[246/320] xtts Mateusz Dejewski-272691-1-info-xtts.wav (0.7 s): Witamy w hotelu Gwiazda Morza. Śniadanie serwujemy od 7 do 10.
+[247/320] xtts Mateusz Dejewski-272691-2-qna-xtts.wav (0.9 s): Czy w pakiecie All Inclusive są napoje alkoholowe? Tak, są dostępne w barze głównym od 10 
+[248/320] xtts Mateusz Dejewski-272691-3-numbers-xtts.wav (1.8 s): Państwa pobyt potrwa od 15,072 1026 do 22,072 1026, a w pokoju numer 214 można się zameldo
+[249/320] xtts Mateusz Dejewski-272691-4-long-xtts.wav (4.0 s): Jeśli chcą Państwo skorzystać z pakietu All Inclusive, wystarczy odebrać opaskę w recepcji
+[250/320] xtts Mateusz Dejewski-272691-5-unique-foreign-xtts.wav (2.1 s): Zapraszamy do Big Baru na drinka, a po nim do strefy spa i wellness w hotelu Gwiazda Morza
+[251/320] xtts Mateusz Gawłowski-264463-1-info-xtts.wav (1.2 s): Znalazłem cztery zamienniki filtra kabinowego pasujące do twojego samochodu. Dwa z nich są
+[252/320] xtts Mateusz Gawłowski-264463-2-qna-xtts.wav (1.6 s): Czy szukasz klocków hamulcowych na przednią czy na tylną oś? Na przednią? W takim razie po
+[253/320] xtts Mateusz Gawłowski-264463-3-numbers-xtts.wav (2.1 s): Filtr kabinowy NRKAT 8713950100 kosztuje 89,9 zł netto, czyli 110,58 zł z VAT. Na stanie j
+[254/320] xtts Mateusz Gawłowski-264463-4-long-xtts.wav (2.7 s): Ponieważ oryginalne tarcze hamulcowe do Lexusa Lex 450 są chwilowo niedostępne w magazynie
+[255/320] xtts Mateusz Gawłowski-264463-5-unique-foreign-xtts.wav (2.1 s): Do Toyota RAV4 Hybrid mamy oryginalne części Toyota Genuine Parts, a z zamienników klocki 
+[256/320] xtts Michał Sosnowski-272642-1-info-xtts.wav (1.5 s): Znalazłem dwanaście przepisów na szarlotkę. Najwyżej oceniany z nich wymaga godziny piecze
+[257/320] xtts Michał Sosnowski-272642-2-qna-xtts.wav (1.3 s): Ile potrzeba cukru do tego ciasta? Do ciasta potrzebujesz 150 g cukru, a do kruszonki doda
+[258/320] xtts Michał Sosnowski-272642-3-numbers-xtts.wav (2.4 s): Ciasto piecz OK-WANG. 50 min w tem pęcie. 175 stopnie C. A po wyjęciu z piekarnika zostaw 
+[259/320] xtts Michał Sosnowski-272642-4-long-xtts.wav (1.7 s): Znalazłem kilka przepisów, które pasują do składników, jakie masz w lodówce, ale tylko dwa
+[260/320] xtts Michał Sosnowski-272642-5-unique-foreign-xtts.wav (2.0 s): Znalazłem przepis na ciasto sachertorte z Wiednia oraz na tiramisu z Mascarpone z Wenecji.[transformers] Whisper did not predict an ending timestamp, which can happen if audio is cut off in the middle of a word. Also make sure WhisperTimeStampLogitsProcessor was used during generation.
+[transformers] Whisper did not predict an ending timestamp, which can happen if audio is cut off in the middle of a word. Also make sure WhisperTimeStampLogitsProcessor was used during generation.
+
+[261/320] xtts Michał Wąsiński-272674-1-info-xtts.wav (0.8 s): Usmaż placki na złoto i podaj ze śmietaną lub ulubionym sosem na pyszny obiad.
+[262/320] xtts Michał Wąsiński-272674-2-qna-xtts.wav (1.0 s): Czy danie, które chcesz przyrządzić może zawierać mięso? Czy interesuje Cię wersja wegetar
+[263/320] xtts Michał Wąsiński-272674-3-numbers-xtts.wav (1.8 s): Brytfannę z gęsią wstaw do dobrze nagrzanego piekarnika. Piecz ją przez 25 minut w 220 sto
+[264/320] xtts Michał Wąsiński-272674-4-long-xtts.wav (6.2 s): Rozpocznij od starannego opłukania świeżych warzyw pod bieżącą wodą, a następnie osusz je 
+[265/320] xtts Michał Wąsiński-272674-5-unique-foreign-xtts.wav (3.8 s): Marynowane jajka ajitsuke, tamago, aitama, najczęściej podaje się jako dodatek do ramenu, 
+[266/320] xtts Mieszko Szczekla-272688-1-info-xtts.wav (0.6 s): Uwaga! Wybrana płyta główna nie jest zgodna z tym procesorem.
+[267/320] xtts Mieszko Szczekla-272688-2-qna-xtts.wav (0.9 s): Czy na pewno chcesz usunąć kartę graficzną z koszyka? Produkt został usunięty z Twojego ko
+[268/320] xtts Mieszko Szczekla-272688-3-numbers-xtts.wav (0.4 s): Cena tego zestawu wynosi 4999 zł.
+[269/320] xtts Mieszko Szczekla-272688-4-long-xtts.wav (1.4 s): Wybrana przez ciebie płyta główna obsługuje tylko pamięci DAR-4. Dlatego wybrane moduły Dy
+[270/320] xtts Mieszko Szczekla-272688-5-unique-foreign-xtts.wav (0.8 s): Płyta główna Gigabyte X570 Aorus Elite obsługuje standard PCI Express czwartej generacji.
+[271/320] xtts Myroslav Hryniuka-294863-1-info-xtts.wav (0.8 s): Winda w budynku C13 jest dziś nieczynna. Skorzystaj z podjazdu od strony parkingu.
+[272/320] xtts Myroslav Hryniuka-294863-2-qna-xtts.wav (0.9 s): Czy w budynku 20 działa winda? Tak, winda działa, a wejście bez progów znajduje się od str
+[273/320] xtts Myroslav Hryniuka-294863-3-numbers-xtts.wav (1.1 s): Zgłoszenie nr 1245 przyjęto 12,11. O godzinu. 14.30. Naprawa potrwa ok. 3 dni.
+[274/320] xtts Myroslav Hryniuka-294863-4-long-xtts.wav (1.4 s): Jeżeli poruszasz się na wózku i chcesz dostać się do biblioteki, wybierz wejście od ulicy 
+[275/320] xtts Myroslav Hryniuka-294863-5-unique-foreign-xtts.wav (1.7 s): Połącz się z siecią Eduroam. Otwórz Google Maps i sprawdź trasę do budynku Politechniki Wr
+[276/320] xtts Natalia Malinowska-272669-1-info-xtts.wav (0.8 s): Wizyta została zapisana. Sprawdź podsumowanie przed dodaniem go do dokumentacji pacjenta.
+[277/320] xtts Natalia Malinowska-272669-2-qna-xtts.wav (0.8 s): Od kiedy pojawia się kaszel? Od ubiegłego piątku, głównie wieczorem.
+[278/320] xtts Natalia Malinowska-272669-3-numbers-xtts.wav (0.8 s): Temperatura wynosi 38,2 stopnia. Objawy zaczęły się 12 listopada o godzinie 6.30.
+[279/320] xtts Natalia Malinowska-272669-4-long-xtts.wav (1.8 s): Pacjentka zgłasza okresowe zawroty głowy, które pojawiają się po szybkim wstaniu z łóżka, 
+[280/320] xtts Natalia Malinowska-272669-5-unique-foreign-xtts.wav (1.4 s): W systemie MedNote zapisano, że pacjentka wykonała badanie łusk w Centrum Diagnostyka Plus
+[281/320] xtts Natalia Marszałek-272683-1-info-xtts.wav (1.6 s): Bateria we wkrętarce jest w pełni naładowana i gotowa do pracy Penty. Uwaga! Lutownica osi
+[282/320] xtts Natalia Marszałek-272683-2-qna-xtts.wav (1.5 s): Czy na pewno odłączyłeś zasilanie w skrzynce bezpieczników przed demontażem gniazdka? Tak,
+[283/320] xtts Natalia Marszałek-272683-3-numbers-xtts.wav (2.1 s): Do montażu półki potrzebujesz dokładnie 12 wkrętów o wymiarach 4,5x60mm oraz wiertła. Prze
+[284/320] xtts Natalia Marszałek-272683-4-long-xtts.wav (2.2 s): Zanim przystąpisz do nakładania drugiej warstwy lakieru bezbarwnego, upewnij się, że poprz
+[285/320] xtts Natalia Marszałek-272683-5-unique-foreign-xtts.wav (1.9 s): Wyszukałem w bazie instrukcję obsługi wyrzynarki Bosch Pest 900 Pel oraz zamiennik akumula
+[286/320] xtts Natalia Suda-294696-1-info-xtts.wav (1.6 s): Dziękuję za dołączenie do rozmowy. Nasze spotkanie potrwa około 20 minut. Na początku zada
+[287/320] xtts Natalia Suda-294696-2-qna-xtts.wav (0.9 s): Co skłoniło cię do aplikowania na to stanowisko? Czy jest coś szczególnego w naszej firmie
+[288/320] xtts Natalia Suda-294696-3-numbers-xtts.wav (1.8 s): W ogłoszeniu o pracę wskazaliśmy wynagrodzenie w przedziale od 6500 do 8500 zł brutto nudo
+[289/320] xtts Natalia Suda-294696-4-long-xtts.wav (2.5 s): Na tym stanowisku szczególnie ważna jest umiejętność pracy zespołowej, samodzielnego rozwi
+[290/320] xtts Natalia Suda-294696-5-unique-foreign-xtts.wav (2.4 s): Wspomniała pani o znajomości języka angielskiego na poziomie B2 oraz doświadczeniu w pracy
+[291/320] xtts Piotr Bogacki-272753-1-info-xtts.wav (0.9 s): Uwaga! Pijalnia wód mineralnych będzie jutro nieczynna ze względu na trwające prace remont
+[292/320] xtts Piotr Bogacki-272753-2-qna-xtts.wav (1.1 s): Jakie interesują pana sporty zimowe? Rozumiem. W okolicy znajduje się sześć tras narciarsk
+[293/320] xtts Piotr Bogacki-272753-3-numbers-xtts.wav (1.3 s): W piątek 13 listopada o godzinie 19 odbędzie się koncert relaksacyjny, na który zapraszamy
+[294/320] xtts Piotr Bogacki-272753-4-long-xtts.wav (1.6 s): Szlak jest obecnie remontowany przez co jest wyłączony z ruchu, natomiast kolejka gondolow
+[295/320] xtts Piotr Bogacki-272753-5-unique-foreign-xtts.wav (1.2 s): W restauracji Lingua Franca odbędzie się dzisiaj wieczór włoski. Serwowane będzie penna al
+[296/320] xtts Piotr Strycharczyk-272995-1-info-xtts.wav (1.3 s): Pociąg Intercity Sobieski do Krakowa Głównego odjedzie z peronu 3 przy torze 5. Torze. Uwa
+[297/320] xtts Piotr Strycharczyk-272995-2-qna-xtts.wav (1.2 s): Czy chcesz kupić bilet w obie strony? W drodze powrotnej zostały wolne miejsca, tylko w wa
+[298/320] xtts Piotr Strycharczyk-272995-3-numbers-xtts.wav (1.9 s): Bilet normalny na trasie Wrocław-Gunnej. Gdańsk-Gun. Kosztuje 189,5 zł. Odjazd 23,12 tł 2,
+[299/320] xtts Piotr Strycharczyk-272995-4-long-xtts.wav (2.0 s): Jeżeli przesiadka w Poznaniu okaże się za krótka, bo pierwszy pociąg przyjedzie z opóźnien
+[300/320] xtts Piotr Strycharczyk-272995-5-unique-foreign-xtts.wav (1.6 s): Na lotnisko Szopina dojedziesz linią z dwa szybkiej kolei miejskiej. Jeśli lecisz Ryan-Ire
+[301/320] xtts Wiktor Kubera-266539-1-info-xtts.wav (0.9 s): Pociąg do Opola Głównego odjedzie, zgodnie z rozkładem. Prosimy o zachowanie ostrożności p
+[302/320] xtts Wiktor Kubera-266539-2-qna-xtts.wav (1.4 s): Czy pociąg do Krakowa o 16.20 jest opóźniony? Tak, opóźnienie wynosi około 10 minut. Czy c
+[303/320] xtts Wiktor Kubera-266539-3-numbers-xtts.wav (2.4 s): Bilety ulgowe 37% na ITZ 148, Wrocław Głównie Miścieli. Warszawa, Centr Punti. 15,11 T2 10
+[304/320] xtts Wiktor Kubera-266539-4-long-xtts.wav (2.4 s): Najbliższy pociąg z Wrocławia Głównego do Poznania Głównego odjeżdża za kwadrans, ale poni
+[305/320] xtts Wiktor Kubera-266539-5-unique-foreign-xtts.wav (1.5 s): Ekspres Intercity Premium. Do Gdańska Głównego. Ma wagon warsmenu à la carte. A w Sopocie 
+[306/320] xtts Wiktor Piekarski-272726-1-info-xtts.wav (1.2 s): Znalazłem trzy modele, które spełniają Twoje kryteria. Wyniki posortowałem od najtańszego.
+[307/320] xtts Wiktor Piekarski-272726-2-qna-xtts.wav (1.6 s): Czy wolisz napęd hybrydowy czy w pełni elektryczny? Jeśli jeździsz głównie po mieście, pol
+[308/320] xtts Wiktor Piekarski-272726-3-numbers-xtts.wav (1.9 s): Toyota Corolla 1,8 Hybrid z 2024 R-ne. Kosztuje 129,900 zł i spala średnio 4,5 ls 100 km. 
+[309/320] xtts Wiktor Piekarski-272726-4-long-xtts.wav (3.1 s): Biorąc pod uwagę twój budżet, to, że często wozisz dzieci oraz to, że w weekendy wyjeżdżas
+[310/320] xtts Wiktor Piekarski-272726-5-unique-foreign-xtts.wav (1.6 s): Pagod 3008 ma kokpit pierstokpit, a Hyundai A2C obsługuje Apple CarPlay i Android Auto. Je
+[311/320] xtts Wojciech Krzos-276264-1-info-xtts.wav (0.7 s): Rozpoczynamy nagrywanie wizyty. Możesz teraz opisać główny problem pacjenta.
+[312/320] xtts Wojciech Krzos-276264-2-qna-xtts.wav (0.7 s): Czy odczuwa pan ból podczas chodzenia? Tak, najbardziej boli mnie prawe kolano.
+[313/320] xtts Wojciech Krzos-276264-3-numbers-xtts.wav (1.0 s): Pacjent przyjmuje lek dwa razy dziennie, o 8 rano i o 20. Kontrola została zaplanowana na 
+[314/320] xtts Wojciech Krzos-276264-4-long-xtts.wav (1.7 s): Od około trzech tygodni pacjent odczuwa narastające zmęczenie, które nasila się po południ
+[315/320] xtts Wojciech Krzos-276264-5-unique-foreign-xtts.wav (1.5 s): Pacjent przyniósł wynik badania z placówki Medicower przy ulicy Grunwaldzkiej, Dziamnia. W
+[316/320] xtts Yevhenii Lukianenko-294861-1-info-xtts.wav (0.9 s): Uwaga! Daj naka, sył. Podjazd przy wejściu do budynku B4 jest oblodzony. Zachowaj ostrożno
+[317/320] xtts Yevhenii Lukianenko-294861-2-qna-xtts.wav (0.9 s): Czy mogę zgłosić problem anonimowo? Oczywiście. Wystarczy, że nie podasz swojego imienia, 
+[318/320] xtts Yevhenii Lukianenko-294861-3-numbers-xtts.wav (2.1 s): Od 1 grudnia do 6 stycznia winda w budynku C6 będzie czynna tylko w gotszczej. 8 0 16 0 te
+[319/320] xtts Yevhenii Lukianenko-294861-4-long-xtts.wav (2.0 s): Gdy powiesz, zgłoś problem, asystent zapyta, w którym budynku się znajdujesz, czego dotycz
+[320/320] xtts Yevhenii Lukianenko-294861-5-unique-foreign-xtts.wav (1.3 s): Przy wejściu do geocentrum stoi food truck, a obok jest parking dla Hulajnuk Bolt i Lime. 
+Gotowe w 532 s -> /home/zawodev/Dokumenty/github/ik-synteza/output/transcripts.csv

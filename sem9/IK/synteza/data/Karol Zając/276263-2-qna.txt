@@ -1,0 +1,1 @@
+Czy chcesz zapisać zmiany przed wyjściem, czy odrzucić wprowadzane modyfikacje?

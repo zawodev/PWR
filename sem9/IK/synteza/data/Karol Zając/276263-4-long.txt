@@ -1,0 +1,1 @@
+Gdy połączenie z serwerem zostanie zerwane, system automatycznie podejmie próbę ponownej synchronizacji danych, pamiętaj jednak, że niestabilne łącze może wydłużyć ten proces.
