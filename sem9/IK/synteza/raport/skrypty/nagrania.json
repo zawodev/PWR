@@ -1,0 +1,98 @@
+[
+ {
+  "nr": 1,
+  "plik": "Nagranie_01_Piper_skroty_pn-pt.wav",
+  "sample": "S14",
+  "system": "Piper",
+  "opis": "skróty „ul.”, „pn.–pt.”, „sob.” – czytane jako litery/„kropka”",
+  "tekst": "Polecam sklep Akwa-Świat przy ul. Legnickiej 58/3 we Wrocławiu, czynny pn.–pt. 10:00–19:00, sob. 9:00–14:00. Tel. 71 345 67 89 lub +48 601 234 567. Zestaw startowy 54 l kosztuje 349,99 zł, a przy przedpłacie na konto nr 12 1020 3040 0000 1234 5678 9012 dostaniesz 5% rabatu. Wysyłka 24/7, więcej na www.akwa-swiat.pl."
+ },
+ {
+  "nr": 2,
+  "plik": "Nagranie_02_XTTS_skroty_pn-pt.wav",
+  "sample": "S14",
+  "system": "XTTS-v2",
+  "opis": "skróty „pn.–pt.” – zamiast słów losowe dźwięki",
+  "tekst": "Polecam sklep Akwa-Świat przy ul. Legnickiej 58/3 we Wrocławiu, czynny pn.–pt. 10:00–19:00, sob. 9:00–14:00. Tel. 71 345 67 89 lub +48 601 234 567. Zestaw startowy 54 l kosztuje 349,99 zł, a przy przedpłacie na konto nr 12 1020 3040 0000 1234 5678 9012 dostaniesz 5% rabatu. Wysyłka 24/7, więcej na www.akwa-swiat.pl."
+ },
+ {
+  "nr": 3,
+  "plik": "Nagranie_03_Piper_data.wav",
+  "sample": "S17",
+  "system": "Piper",
+  "opis": "data „15.11.2026 r.” – liczebniki, końcówka „er”",
+  "tekst": "Bilety ulgowe 37% na IC 148 Wrocław Gł. – Warszawa Centr., 15.11.2026 r., odj. 7:55, wag. 3, m. 42 i 43. Do zapłaty: 2 × 64,26 zł = 128,52 zł."
+ },
+ {
+  "nr": 4,
+  "plik": "Nagranie_04_XTTS_data.wav",
+  "sample": "S17",
+  "system": "XTTS-v2",
+  "opis": "data „15.11.2026 r.” – czytana jak ułamek („przecinek”)",
+  "tekst": "Bilety ulgowe 37% na IC 148 Wrocław Gł. – Warszawa Centr., 15.11.2026 r., odj. 7:55, wag. 3, m. 42 i 43. Do zapłaty: 2 × 64,26 zł = 128,52 zł."
+ },
+ {
+  "nr": 5,
+  "plik": "Nagranie_05_Piper_duze_liczby.wav",
+  "sample": "S28",
+  "system": "Piper",
+  "opis": "„943 492 412” – poprawnie, z milionami i tysiącami",
+  "tekst": "W tym roku nasz asystent pomógł skonfigurować 943 492 412 komputerów, a w ubiegłym roku 43 436 324. Ta karta graficzna ma 16384 rdzenie CUDA i 21 760 000 000 tranzystorów, a procesor osiąga taktowanie 5,7 GHz. Zestaw pamięci 32 GB (2 × 16 GB) DDR5 6000 MHz kosztuje 489,99 zł, a cały komputer 12 499 zł."
+ },
+ {
+  "nr": 6,
+  "plik": "Nagranie_06_XTTS_duze_liczby.wav",
+  "sample": "S28",
+  "system": "XTTS-v2",
+  "opis": "„943 492 412” – trzy osobne grupy cyfr",
+  "tekst": "W tym roku nasz asystent pomógł skonfigurować 943 492 412 komputerów, a w ubiegłym roku 43 436 324. Ta karta graficzna ma 16384 rdzenie CUDA i 21 760 000 000 tranzystorów, a procesor osiąga taktowanie 5,7 GHz. Zestaw pamięci 32 GB (2 × 16 GB) DDR5 6000 MHz kosztuje 489,99 zł, a cały komputer 12 499 zł."
+ },
+ {
+  "nr": 7,
+  "plik": "Nagranie_07_Piper_wyrazy_obce.wav",
+  "sample": "S23",
+  "system": "Piper",
+  "opis": "„Crème brûlée”, „barbeque” – czytane po polsku",
+  "tekst": "Podsumowując. Dwa wrapy El Kurczako, jeden dodatkowo sosem barbeque, drugi z Crème brûlée. Jedna rolada francuska ala Oui Oui. Do tego napój Coca Cola oraz Szatańsko Dobra Piña Colada. Czy pańskie zamówienie się zgadza?"
+ },
+ {
+  "nr": 8,
+  "plik": "Nagranie_08_XTTS_wyrazy_obce.wav",
+  "sample": "S23",
+  "system": "XTTS-v2",
+  "opis": "„Crème brûlée”, „Piña Colada” – wymowa zbliżona do oryginału",
+  "tekst": "Podsumowując. Dwa wrapy El Kurczako, jeden dodatkowo sosem barbeque, drugi z Crème brûlée. Jedna rolada francuska ala Oui Oui. Do tego napój Coca Cola oraz Szatańsko Dobra Piña Colada. Czy pańskie zamówienie się zgadza?"
+ },
+ {
+  "nr": 9,
+  "plik": "Nagranie_09_Piper_spolszczenia.wav",
+  "sample": "S30",
+  "system": "Piper",
+  "opis": "„overclockingu”, „Twitchu” – czytane po polsku, litera po literze",
+  "tekst": "Po upgrade'zie RAM-u do 32 GB i aktualizacji BIOS-u możesz spróbować overclockingu. Zainstalujemy też Windowsa 11 Pro, a do streamowania na Twitchu i YouTubie polecam OBS-a. W benchmarku Cinebench ten zestaw wypada świetnie, a w Cyberpunku 2077 z DLSS-em utrzyma ponad sto klatek na sekundę."
+ },
+ {
+  "nr": 10,
+  "plik": "Nagranie_10_XTTS_spolszczenia.wav",
+  "sample": "S30",
+  "system": "XTTS-v2",
+  "opis": "„overclockingu”, „Twitchu” – wymowa angielska",
+  "tekst": "Po upgrade'zie RAM-u do 32 GB i aktualizacji BIOS-u możesz spróbować overclockingu. Zainstalujemy też Windowsa 11 Pro, a do streamowania na Twitchu i YouTubie polecam OBS-a. W benchmarku Cinebench ten zestaw wypada świetnie, a w Cyberpunku 2077 z DLSS-em utrzyma ponad sto klatek na sekundę."
+ },
+ {
+  "nr": 11,
+  "plik": "Nagranie_11_Piper_akronimy_M2.wav",
+  "sample": "S27",
+  "system": "Piper",
+  "opis": "„PKO BP”, „M.2”, „GeForce” – akronimy",
+  "tekst": "Za zestaw zapłacisz kartą Visa, BLIK-iem lub przelewem z PKO BP. W konfiguracji jest procesor AMD Ryzen 7 7800X3D, karta graficzna MSI GeForce RTX 4070 Ti SUPER oraz płyta główna ASUS ROG Strix B650E-F z obsługą Wi-Fi 6E, USB-C i HDMI 2.1. Dysk SSD NVMe podłączymy do złącza M.2, a całość wyślemy kurierem InPost lub DPD."
+ },
+ {
+  "nr": 12,
+  "plik": "Nagranie_12_XTTS_akronimy_M2.wav",
+  "sample": "S27",
+  "system": "XTTS-v2",
+  "opis": "„M.2” zamienione przez normalizację XTTS na „pan dwa”",
+  "tekst": "Za zestaw zapłacisz kartą Visa, BLIK-iem lub przelewem z PKO BP. W konfiguracji jest procesor AMD Ryzen 7 7800X3D, karta graficzna MSI GeForce RTX 4070 Ti SUPER oraz płyta główna ASUS ROG Strix B650E-F z obsługą Wi-Fi 6E, USB-C i HDMI 2.1. Dysk SSD NVMe podłączymy do złącza M.2, a całość wyślemy kurierem InPost lub DPD."
+ }
+]
